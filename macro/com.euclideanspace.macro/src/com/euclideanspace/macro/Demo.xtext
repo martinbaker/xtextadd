@@ -1,0 +1,22 @@
+grammar com.euclideanspace.macro.Demo with org.eclipse.xtext.common.Terminals
+
+generate demo "http://www.euclideanspace.com/macro/Demo"
+
+/*
+ * Overview of this project here:
+ * https://github.com/martinbaker/xtextadd/tree/master/macro
+ */
+Model:
+  contents+=Recurse;
+
+Recurse:
+  {Recurse}(
+    md+=MacroDef
+    |('{' r+=Recurse '}')
+    | n+=ID
+  )+
+;
+
+MacroDef:
+	'macro' mn=ID m=Recurse 'endmacro'
+;
