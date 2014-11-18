@@ -1,0 +1,55 @@
+/*
+ * I would like to use a variation of common.Terminals but I don't know how to create such a sub project.
+ */
+//grammar com.euclideanspace.whitespaceblock.Demo with com.euclideanspace.whitespaceblock.common2.PythonTerminals
+grammar com.euclideanspace.whitespaceblock.Demo
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate demo "http://www.euclideanspace.com/whitespaceblock/Demo"
+
+Model:
+  contents+=Recurse;
+
+/*
+ * Since I don't know how to compile common2.PythonTerminals I will temporarily put the terminals here
+ */
+/////////////////////////// start of temporary terminals /////////////////////////
+terminal ID  		: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal INT returns ecore::EInt: ('0'..'9')+;
+terminal STRING	: 
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		; 
+
+/* phantom tokens:
+ * use something other than '{' and '}' to avoid clash in Python so we use '{|' and '|}' 
+ * TODO Should really use something more obscure to avoid clash in any user language
+ */
+terminal BEGIN : '{|';
+terminal END : '|}';
+
+/* if newline follows this then ignore indent changes */
+terminal LINECONTINUATION : '\\';
+
+/*
+ * Comments start with hash.
+ * We need to specify that here because we want to allow comments with any indent
+ * and to avoid them being wrapped in a block.
+ */
+terminal SL_COMMENT 	: '#' !('\n'|'\r')* ('\r'? '\n')?;
+
+/*
+ * We also don't want lines that contain only whitespace to affect the indent.
+ */
+terminal WS : (' '|'\t'|'\r'|'\n')+;
+
+terminal ANY_OTHER: .;
+/////////////////////////// end of temporary terminals /////////////////////////
+
+Recurse hidden(WS,SL_COMMENT,LINECONTINUATION):
+  {Recurse}(
+    n+=ID
+    | (BEGIN r+=Recurse END)
+  )+
+;
