@@ -24,7 +24,7 @@ public class PhantomToken extends CommonToken {
 
 	/**
 	 * Construct a token to which is not linked to any text in the editor but will be
-	 * parsed. The stop and start indexes are both set to the 
+	 * parsed. The stop and start indexes are both set to the stop index of the previous token
 	 * @param type A token type defined in the Internal Lexer
 	 * @param previousToken A reference to the token immediately preceding this in the token stream
 	 * @author Martin Baker
@@ -35,6 +35,25 @@ public class PhantomToken extends CommonToken {
 			previousToken.getChannel(),
 			previousToken.getStopIndex(), // start index set to STOP index of previous
 			previousToken.getStopIndex()); // stop index also set to stop index of previous
+	}
+
+	/**
+	 * An alternative constructor which takes its type from a template token and puts it after
+	 * previousToken in character stream.
+	 * 
+	 * This is not very useful at the moment because it looses textual content of the token.
+	 * 
+	 * @param template The token which specifies the type
+	 * @param previousToken A reference to the token immediately preceding this in the token stream
+	 * @author Martin Baker
+	 */
+	public PhantomToken(CommonToken template,CommonToken previousToken) {
+		super(template.getInputStream(),			
+			template.getType(),
+			previousToken.getChannel(),
+			previousToken.getStopIndex(), // start index set to STOP index of previous
+			previousToken.getStopIndex()); // stop index also set to stop index of previous
+		// setText(template.getText()); // causes error in editor
 	}
 
 	/** Text value is irrelevant since we always return "".

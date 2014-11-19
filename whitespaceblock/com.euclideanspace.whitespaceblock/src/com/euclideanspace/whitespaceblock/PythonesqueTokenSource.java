@@ -9,7 +9,7 @@ import org.eclipse.xtext.parser.antlr.ITokenAcceptor;
 import com.euclideanspace.whitespaceblock.parser.antlr.internal.InternalDemoLexer;
 
 /**
- * Provides a token source for a language that uses whitespace to deleneate
+ * Provides a token source for a language that uses whitespace to delineate
  * blocks, in a similar way to the Python language. 
  * @author Martin Baker
  *
@@ -26,7 +26,7 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
   
   /**
    * state tells us what part of the line are we currently reading:
-   * FIRSTLINE - when reading firstline don't insert BEGIN because we don't need BEGIN-END round whole program.
+   * FIRSTLINE - when reading first line don't insert BEGIN because we don't need BEGIN-END round whole program.
    * INDENT - where we count the number of spaces or tabs to update indent
    * BODY - we have read a non-space since last newline so we are no longer in indent
    * CONTINUATION - we have just read a continuation token so next line does not alter indent
