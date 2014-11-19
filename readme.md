@@ -74,7 +74,7 @@
   <li>I have put an enhancement request for this on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">Eclipse bug tracking system</a>. </li>
 </ul>
 <h3>Macro</h3>
-<p>I would like better support to help DSLs that require macros.</p>
+<p>I would like better support to help DSLs that contain macros.</p>
 <p>Note: I had a look at <a href="https://github.com/eclipse/xtext/tree/master/plugins/org.eclipse.xtend.lib.macro">xtend implementation of macros</a> and it looks very complicated, I am looking for something very simple which can be customised for different DSLs.</p>
 <p>I have drafted an implementation <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>, which partly works, but there are some issues which I think need some changes to Xtext. </p>
 <p>This code runs between the lexer and the parser, this is similar to the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">support for Python-like syntax request</a>, so I think it is worth at least considering this at the same time.</p>
@@ -109,7 +109,7 @@ e a b c</pre></td>
 <p>More details:</p>
 <ul>
   <li>The code is <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>. </li>
-  <li>I will put an enhancement request for this on Eclipse bug tracking system. </li>
+  <li>I have put an enhancement request for this on<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=452232"> Eclipse bug tracking system</a>.</li>
 </ul>
 <h3>Preprocessor</h3>
 <p>The above projects may need to be used in combination and they may need to be customised to change the syntax slightly to suit the specific DSL. So it would be better if they were part of a more general preprocessor designed to run after the lexer and before the  parser. This is for situations where we don't want to write the lexer or parser completely by hand, we still want to use the grammar, but we want more customisation than is currently possible.</p>

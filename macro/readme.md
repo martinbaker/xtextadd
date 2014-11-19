@@ -2,7 +2,7 @@
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities in Xtext.</p>
 <p>On this site a have added some small stand-alone projects with capabilities that I would like to see built-in to Xtext. </p>
 <h3>Macro</h3>
-<p>I would like better support to help DSLs that require macros.</p>
+<p>I would like better support to help DSLs that contain macros.</p>
 <p>Note: I had a look at <a href="https://github.com/eclipse/xtext/tree/master/plugins/org.eclipse.xtend.lib.macro">xtend implementation of macros</a> and it looks very complicated, I am looking for something very simple which can be customised for different DSLs.</p>
 <p>I have drafted an implementation <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>, which partly works, but there are some issues which I think need some changes to Xtext. </p>
 <p>This code runs between the lexer and the parser, this is similar to the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">support for Python-like syntax request</a>, so I think it is worth at least considering this at the same time.</p>
@@ -37,7 +37,7 @@ e a b c</pre></td>
 <p>More details:</p>
 <ul>
   <li>The code is <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>. </li>
-  <li>I will put an enhancement request for this on Eclipse bug tracking system. </li>
+  <li>I have put an enhancement request for this on<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=452232"> Eclipse bug tracking system</a>. </li>
 </ul>
 <h3>Other Projects</h3>
 <p>I have some other projects related to this, see <a href="https://github.com/martinbaker/xtextadd">this page</a>. </p>
