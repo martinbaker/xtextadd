@@ -8,6 +8,7 @@ import org.eclipse.xtext.parser.antlr.AbstractSplittingTokenSource;
 import org.eclipse.xtext.parser.antlr.ITokenAcceptor;
 
 import com.euclideanspace.macro.parser.antlr.internal.InternalDemoLexer;
+import com.euclideanspace.macro.PhantomToken;
 
 /**
  * Provides a token source for a language that uses macros. 
@@ -66,7 +67,7 @@ public class MacroTokenSource extends AbstractSplittingTokenSource {
 		if (token instanceof CommonToken) thisToken = (CommonToken)token;
 		switch (state) {
 		  case CONTENT:
-			// We first look for a macro definition, then we check for a posible macro call.
+			// We first look for a macro definition, then we check for a possible macro call.
 			// is this 'macro' token (T__13)
 			// FIXME this is not a good way to do it, a change to the grammar could break this.
 			// how should this be made safe.
@@ -133,11 +134,13 @@ public class MacroTokenSource extends AbstractSplittingTokenSource {
   @Override
   protected void doSplitToken(Token token, ITokenAcceptor result) {
 	token.setChannel(Token.HIDDEN_CHANNEL); // hide macro call
-	result.accept(token);
+	// I don't know if its best to hide macro call or not include it
+	// in the token stream at all. Needs more testing.
+	//result.accept(token);
 	if (macroFound!=null) {
 		List<CommonToken> content=macroFound.getContent();
 		for (CommonToken tok: content) {
-			result.accept(tok);
+			result.accept(new PhantomToken(tok,thisToken));
 		}
 	}
   }
