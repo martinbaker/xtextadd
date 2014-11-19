@@ -2,11 +2,21 @@
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities in Xtext.</p>
 <p>On this site a have added some small stand-alone projects with capabilities that I would like to see built-in to Xtext. </p>
 <h3>Macro</h3>
-<p>I have some code under construction which is eventually intended to support DSLs that require macros.</p>
+<p>I would like better support to help DSLs that require macros.</p>
+<p>Note: I had a look at <a href="https://github.com/eclipse/xtext/tree/master/plugins/org.eclipse.xtend.lib.macro">xtend implementation of macros</a> and it looks very complicated, I am looking for something very simple which can be customised for different DSLs.</p>
+<p>I have drafted an implementation <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>, which partly works, but there are some issues which I think need some changes to Xtext. </p>
+<p>This code runs between the lexer and the parser, this is similar to the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">support for Python-like syntax request</a>, so I think it is worth at least considering this at the same time.</p>
+<p>Because of this the implementation of macros is very simple:</p>
+<ul>
+  <li>It works on the token stream and not the character stream. This means that the macro must contain whole tokens and not partial tokens. So we can't have a macro to substitute the contents of strings, for example. </li>
+  <li>These macros don't have a scope and will be applied at any point in the source after they are defined. </li>
+  <li>These macros don't have parameters, it is just a simple substitution.</li>
+</ul>
+<p>So it works like this: </p>
 <p>The first line is supposed to show a macro definition, this defines a macro 'x' which has the value 'a b c' </p>
 <table border="1">
   <tr>
-    <td><pre>macro x a b c
+    <td><pre>macro x a b c endmacro
 d x
 e x</pre></td>
   </tr>
@@ -18,8 +28,12 @@ e x</pre></td>
 e a b c</pre></td>
   </tr>
 </table>
-<p>This code runs between the lexer and the parser which means the macro  works on the token stream and not the character stream. This means that the macro must contain whole tokens and not partial tokens. So we can't have a macro to substitute the contents of strings, for example. </p>
-<p>Note: I had a look at <a href="https://github.com/eclipse/xtext/tree/master/plugins/org.eclipse.xtend.lib.macro">xtend implementation of macros</a> and it looks very complcated, I am looking for somthing very simple which can be customised for different DSLs. But There is problem of defining macros between the lexer and parser if you need to have macros that can go out of scope. </p>
+<p>Although this is very simple, it is good enough for my application and it may be a good starting point for other people also. </p>
+<p>However this is a bit more complicated than the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">support for Python-like syntax request</a> and this causes some problems. It is more complicated because:</p>
+<ul>
+  <li>In the Python case only simple PhantomTokens (begin block and end block) are added into the text stream, these don't need to carry any extra textual information. In the macro case we need to add phantom tokens with textual information. I think this need changes to Xtext to implement. </li>
+  <li>We also need to remove tokens  from the token stream. I'm not sure of the best way to do this: make them hidden or leave them out altogether? (need to do some tests).</li>
+</ul>
 <p>More details:</p>
 <ul>
   <li>The code is <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>. </li>

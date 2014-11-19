@@ -78,4 +78,3 @@
 </table>
 <h3>Other Projects</h3>
 <p>I have some other projects related to this, see <a href="https://github.com/martinbaker/xtextadd">this page</a>.</p>
-<p>&nbsp;</p>
