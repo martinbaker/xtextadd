@@ -3,11 +3,12 @@
 <p>These pages are looking at the possibilities for customising between the lexer and the parser. Examples or the need for this include:</p>
 <ul>
   <li>When we are adapting an existing grammar to use with xtext (for example in one of my projects I need virtual semicolons inserted after some closing braces).</li>
-  <li> When we need to<a href="https://github.com/martinbaker/xtextadd/tree/master/macro"> implement macros in out language</a>.</li>
-  <li> When indents <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">(whitespace) is used to indicate blocks</a>.</li>
+  <li> When we need to<a href="https://github.com/martinbaker/xtextadd/tree/master/macro"> implement macros in our DSL </a>.</li>
+  <li> When indents <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">(whitespace) is used to indicate blocks</a> in our DSL.</li>
 </ul>
 <p>We could write a lexer completely by hand but usually we want the lexer to be derived from the grammar but in a more customised way than currently allowed by Xtext.</p>
 <h3>Python-like syntax</h3>
+<p>If we were going to implement this purely in the grammar definition this would be very difficult to implement. We would have to implement rules to count the number of spaces which would be horrible. However Xtext allows us to customise 'TokenSource', this means that the grammar can be written in a very similar way to the way that we would implement a java-like synatx.</p>
 <p>I have drafted out code to do this in this project. It contains:</p>
 <ul>
   <li>An alternative common.Terminals <a href="https://github.com/martinbaker/xtextadd/blob/master/whitespaceblock/com.euclideanspace.whitespaceblock/src/com/euclideanspace/whitespaceblock/common2/PythonTerminals.xtext">here</a></li>
