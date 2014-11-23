@@ -12,7 +12,7 @@ package com.euclideanspace.pbase.ui.quickfix
  *
  * see http://www.eclipse.org/Xtext/documentation.html#quickfixes
  */
-class TutorialQuickfixProvider extends org.eclipse.xtext.xbase.ui.quickfix.XtypeQuickfixProvider {
+class TutorialQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
 
 //	@Fix(MyDslValidator::INVALID_NAME)
 //	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.euclideanspace.pbase/src-gen" editDirectory="/com.euclideanspace.pbase.edit/src"
+    editorDirectory="/com.euclideanspace.pbase.editor/src" modelPluginID="com.euclideanspace.pbase"
+    forceOverwrite="true" modelName="Tutorial" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.euclideanspace.pbase.edit"
+    editorPluginID="com.euclideanspace.pbase.editor" runtimeVersion="2.10">
+  <genPackages prefix="Demo" basePackage="com.euclideanspace.pbase" disposableProviderFactory="true"
+      fileExtensions="pyt" ecorePackage="Tutorial.ecore#/">
+    <genClasses ecoreClass="Tutorial.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//Model/m"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//EuclidMember">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/extension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/final"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/name1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/static"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/name2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//EuclidMember/initialValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/typeParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/extends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/implements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//EuclidMember/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/override"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/dispatch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/returnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/name3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/name4"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//EuclidMember/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidMember/exceptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//EuclidMember/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//EuclidParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidParameter/parameterType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidParameter/varArg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//EuclidParameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XExpression"/>
+    <genClasses ecoreClass="Tutorial.ecore#//XCollectionLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XCollectionLiteral/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XSetLiteral"/>
+    <genClasses ecoreClass="Tutorial.ecore#//XListLiteral"/>
+    <genClasses ecoreClass="Tutorial.ecore#//XCasePart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XCasePart/typeGuard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XCasePart/case"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XCasePart/then"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XCasePart/fallThrough"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XCatchClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XCatchClause/declaredParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XCatchClause/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XAssignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XAssignment/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XAssignment/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XAssignment/assignable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XAssignment/explicitStatic"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XBinaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBinaryOperation/leftOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XBinaryOperation/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBinaryOperation/rightOperand"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XInstanceOfExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XInstanceOfExpression/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XInstanceOfExpression/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XUnaryOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XUnaryOperation/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XUnaryOperation/operand"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XCastedExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XCastedExpression/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XCastedExpression/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XPostfixOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XPostfixOperation/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XPostfixOperation/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XMemberFeatureCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XMemberFeatureCall/memberCallTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XMemberFeatureCall/nullSafe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XMemberFeatureCall/explicitStatic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XMemberFeatureCall/typeArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XMemberFeatureCall/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XMemberFeatureCall/explicitOperationCall"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XMemberFeatureCall/memberCallArguments"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XClosure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XClosure/declaredFormalParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XClosure/explicitSyntax"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XClosure/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XBlockExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBlockExpression/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XIfExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XIfExpression/if"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XIfExpression/then"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XIfExpression/else"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XSwitchExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XSwitchExpression/declaredParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XSwitchExpression/switch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XSwitchExpression/cases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XSwitchExpression/default"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XForLoopExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XForLoopExpression/declaredParam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XForLoopExpression/forExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XForLoopExpression/eachExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XBasicForLoopExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBasicForLoopExpression/initExpressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBasicForLoopExpression/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBasicForLoopExpression/updateExpressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XBasicForLoopExpression/eachExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XWhileExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XWhileExpression/predicate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XWhileExpression/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XDoWhileExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XDoWhileExpression/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XDoWhileExpression/predicate"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XVariableDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XVariableDeclaration/writeable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XVariableDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XVariableDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XVariableDeclaration/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XFeatureCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XFeatureCall/typeArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XFeatureCall/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XFeatureCall/explicitOperationCall"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XFeatureCall/featureCallArguments"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XConstructorCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XConstructorCall/constructor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XConstructorCall/typeArguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XConstructorCall/explicitConstructorCall"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XConstructorCall/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XBooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XBooleanLiteral/isTrue"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XNullLiteral"/>
+    <genClasses ecoreClass="Tutorial.ecore#//XNumberLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XNumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XStringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XStringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XTypeLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XTypeLiteral/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Tutorial.ecore#//XTypeLiteral/arrayDimensions"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XThrowExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XThrowExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XReturnExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XReturnExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XTryCatchFinallyExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XTryCatchFinallyExpression/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XTryCatchFinallyExpression/catchClauses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XTryCatchFinallyExpression/finallyExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="Tutorial.ecore#//XSynchronizedExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XSynchronizedExpression/param"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Tutorial.ecore#//XSynchronizedExpression/expression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

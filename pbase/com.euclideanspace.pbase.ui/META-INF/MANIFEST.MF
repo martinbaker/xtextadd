@@ -15,7 +15,6 @@ Require-Bundle: com.euclideanspace.pbase;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
- org.eclipse.xtext.xbase.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j

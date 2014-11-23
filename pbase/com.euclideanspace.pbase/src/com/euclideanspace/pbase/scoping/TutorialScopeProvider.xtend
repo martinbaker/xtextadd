@@ -10,6 +10,6 @@ package com.euclideanspace.pbase.scoping
  * on how and when to use it 
  *
  */
-class TutorialScopeProvider extends org.eclipse.xtext.xbase.scoping.XtypeScopeProvider {
+class TutorialScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
 
 }
