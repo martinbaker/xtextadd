@@ -96,4 +96,120 @@ we have: while a &lt; n:</p></td>
     <td bgcolor="#FFFF00">&nbsp;</td>
   </tr>
 </table>
-
+<p><a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step1/Tutorial.xtext">Here is a pointer</a> to the grammar so far. </p>
+<p>But this just implements the grammar for Xbase, to have a fully working Xbase requires a lot of extra code. To explain all about that in this tutorial would take a lot of time and that is not really what this tutorial is about. All I want to do here is explain how to implement a Python-like syntax. So I am going to cheat and take out some of the implementation stuff, this tutorial wont produce a fully working program but it will show how to produce Python-like syntax. The grammar uses jvm types and without exter </p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">before</th>
+    <th bgcolor="#FFFF00">after</th>
+  </tr>
+  <tr>
+    <td>import &quot;http://www.eclipse.org/xtext/common/JavaVMTypes&quot; as types</td>
+    <td>removed</td>
+  </tr>
+  <tr>
+    <td>types::JvmIdentifiableElement</td>
+    <td>ID</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h2>Modifing the Syntax</h2>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">Java-like</th>
+    <th bgcolor="#FFFF00">Python-like</th>
+  </tr>
+  <tr>
+    <td><pre>grammar org.eclipse.xtext.common.Terminals</pre></td>
+    <td><pre>grammar org.eclipse.xtext.common2.PythonTerminals</pre></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h3>Blocks</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">Java-like</th>
+    <th bgcolor="#FFFF00">Python-like</th>
+  </tr>
+  <tr>
+    <td><pre>XBlockExpression returns XExpression hidden(SL_COMMENT,WS): 
+	{XBlockExpression}
+	<span class="style1">'{'</span>
+		(expressions+=XExpressionOrVarDeclaration ';'?)*
+	<span class="style1">'}'</span>;</pre></td>
+    <td><pre>XBlockExpression returns XExpression hidden(SL_COMMENT,WS): 
+	{XBlockExpression}
+	<span class="style1">BEGIN</span>
+		(expressions+=XExpressionOrVarDeclaration ';'?)*
+	<span class="style1">END</span>;</pre></td>
+  </tr>
+</table>
+<p></p>
+<h3>Terminating Statements</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">Java-like</th>
+    <th bgcolor="#FFFF00">Python-like</th>
+  </tr>
+  <tr>
+    <td><pre>XBlockExpression returns XExpression hidden(SL_COMMENT,WS): 
+	{XBlockExpression}
+	'{'
+		(expressions+=XExpressionOrVarDeclaration <span class="style1">';'</span>?)*
+	'}';</pre></td>
+    <td><pre>XBlockExpression returns XExpression hidden(SL_COMMENT,WS): 
+	{XBlockExpression}
+	BEGIN
+		(expressions+=XExpressionOrVarDeclaration 
+		<span class="style1">('\r'|'\n')</span>?)*
+	END;</pre></td>
+  </tr>
+</table>
+<p></p>
+<h3>Line Continuation</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">Java-like</th>
+    <th bgcolor="#FFFF00">Python-like</th>
+  </tr>
+  <tr>
+    <td><pre></pre></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p></p>
+<h3>Comments</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <th bgcolor="#FFFF00">Java-like</th>
+    <th bgcolor="#FFFF00">Python-like</th>
+  </tr>
+  <tr>
+    <td><pre>// single line comment</pre></td>
+    <td><pre># single line comment</pre></td>
+  </tr>
+</table>
