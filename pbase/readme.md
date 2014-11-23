@@ -132,6 +132,14 @@ we have: while a &lt; n:</p></td>
     <td>&nbsp;</td>
   </tr>
 </table>
+<p>&nbsp;</p>
+<table>
+  <tr>
+    <td>I have not yet got this to parse properly yet. </td>
+    <td><img src="pbase1.png" alt="image" width="291" height="222" /></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
 <h2>Modifing the Syntax</h2>
 <p>&nbsp;</p>
 <table border="1">
