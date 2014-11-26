@@ -47,8 +47,6 @@ public class PhantomToken extends CommonToken {
 	 * An alternative constructor which takes its type from a template token and puts it after
 	 * previousToken in character stream.
 	 * 
-	 * This is not very useful at the moment because it looses textual content of the token.
-	 * 
 	 * @param template The token which specifies the type
 	 * @param previousToken A reference to the token immediately preceding this in the token stream
 	 * @author Martin Baker
