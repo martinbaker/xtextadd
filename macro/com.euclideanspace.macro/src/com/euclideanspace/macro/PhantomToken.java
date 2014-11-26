@@ -59,7 +59,7 @@ public class PhantomToken extends CommonToken {
 			previousToken.getChannel(),
 			previousToken.getStopIndex(), // start index set to STOP index of previous
 			previousToken.getStopIndex()); // stop index also set to stop index of previous
-		// setText(template.getText()); // causes error in editor
+	     setText(template.getText()); // causes error in editor
 	}
 
 	/** Text value is irrelevant since we always return "".
