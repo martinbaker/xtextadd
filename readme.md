@@ -1,4 +1,4 @@
-<p>This contains some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
+<<p>This contains some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities in Xtext.</p>
 <p>On this site a have added some small stand-alone projects with capabilities that I would like to see built-in to Xtext. </p>
 <h3>Python-like syntax</h3>
@@ -114,3 +114,61 @@ e a b c</pre></td>
 <h3>Preprocessor</h3>
 <p>The above projects may need to be used in combination and they may need to be customised to change the syntax slightly to suit the specific DSL. So it would be better if they were part of a more general preprocessor designed to run after the lexer and before the  parser. This is for situations where we don't want to write the lexer or parser completely by hand, we still want to use the grammar, but we want more customisation than is currently possible.</p>
 <p>Ideally this would have a two-way mapping between the text stream used in the editor and the indexes used in the nodeModel.  </p>
+<h3>Technical Background</h3>
+<p>Here are some technical notes which might help in understanding the code. </p>
+<p>The output of the Xtext parser is two separate tree structures:</p>
+<ul>
+  <li>EMF model (semantic model) - used for validation and eventually code generation - I think this is the equivalent to the AST.</li>
+  <li>Node Model - This is read by the Eclipse JFace text editor component to display and enter the text. Leaves in this tree are tokens which point to a chunk of text stream which must be contiguous and non-overlapping with other tokens.</li>
+</ul>
+<p>Each token can refer to two separate text values:</p>
+<ul>
+  <li>A start and end index into the text stream. This value will be used for the NodeModel. </li>
+  <li>An explicit text value.   This will be used for the EMF model.</li>
+</ul>
+<p>So each token can have two values. So if we take the macro example, the index for the macro will point to the macro name and the text value will contain the expansion of the macro. </p>
+<h4>PhantomToken</h4>
+<p>There is not an explicit mechanism for tokens which need to be used in the parser and will affect the EMF, but do not exist anywhere in the editor, such as the inserted curly brackets in the Python-like example above.</p>
+<p>However we can cheat by making the start and stop indexes the same, this means that the token has little effect on the  NodeModel. It is still important that the index values are contiguous with the tokens before and after it.</p>
+<p>The best way to understand the indexes into the text stream is to think of the indexes as representing the spaces between the characters, not the characters, like this:  </p>
+<table>
+  <tr>
+    <td>Index:</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2</td>
+    <td>&nbsp;</td>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td>4</td>
+    <td>&nbsp;</td>
+    <td>5</td>
+    <td>&nbsp;</td>
+    <td>6</td>
+    <td>&nbsp;</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>text stream:</td>
+    <td>&nbsp;</td>
+    <td>{</td>
+    <td>&nbsp;</td>
+    <td>{</td>
+    <td>&nbsp;</td>
+    <td>{</td>
+    <td>&nbsp;</td>
+    <td>a</td>
+    <td>&nbsp;</td>
+    <td>}</td>
+    <td>&nbsp;</td>
+    <td>}</td>
+    <td>&nbsp;</td>
+    <td>}</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>So the first character has index 0:1</p>
+<p>The second 1:2 and so on.</p>
+<p>This makes it easier to work out the indexes for composite nodes as well as leaf nodes. So, for example, the composite node holding the outer brackets is 0:7. The inner brackets are 2:5.  </p>
