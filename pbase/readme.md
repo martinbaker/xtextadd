@@ -90,20 +90,39 @@ we have: while a &lt; n:</p></td>
 </ul>
 <p><a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step2/Tutorial.xtext">Here is a pointer</a> to the resulting grammar. </p>
 <h3>Try the Code so far. </h3>
-<p>So start by creating a new Xtext project (in Eclipse goto File-&gt;New-&gt;Xtext -&gt;Xtext project).</p>
-<ul>
-  <li>Go through the wizard and set the project up as usual.</li>
-  <li>Copy the contents of the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step2/Tutorial.xtext">grammar discussed above from here </a>  to the xtext grammar file in the project.</li>
-  <li>Run mwe2 to build the project.</li>
-  <li>Run the project in new Eclipse window.   </li>
-</ul>
 <table>
   <tr>
-    <td>I have not yet got this to work with all constructs (as you can see in screenshot, 'while' construct does not work) </td>
-    <td><img src="pbase1.png" alt="image" width="291" height="222" /></td>
+    <td><p>So start by creating a new Xtext project (in Eclipse goto File-&gt;New-&gt;Xtext -&gt;Xtext project).</p>
+      <ul>
+        <li>Go through the wizard and set the project up as usual.</li>
+        <li>Copy the contents of the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step2/Tutorial.xtext">grammar discussed above from here </a> to the xtext grammar file in the project.</li>
+        <li>Run mwe2 to build the project. Choose an extension for your project, I chose 'pyt' . </li>
+        <li>Run the project in new Eclipse window.</li>
+        <li>Create a new file with the extension you chose (in my case 'pyt') and enter a method with java syntax like this: </li>
+    </ul></td>
+    <td><table border="1">
+      <tr>
+        <td><pre>def void Fibonacci(int n) {
+    var int a=0;
+    var int b = 1;
+    while (a &lt; n) {
+      println(a);
+      a=b;
+      b = a+b;
+    }
+    println();
+} </pre></td>
+      </tr>
+    </table></td>
   </tr>
 </table>
-<p>When I get this working with Java syntax I will then start to modify for Python syntax. </p>
+<table>
+  <tr>
+    <td>Confirm that this does not have any errors:  </td>
+    <td><img src="pbase1.png" alt="image" width="438" height="190" /></td>
+  </tr>
+</table>
+<p>We can now start gradually converting this  Java syntax to Python syntax. </p>
 <h2>Modifying the Syntax</h2>
 <p>In order to do move toward Python we first need to change the terminals as discussed on <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">page here</a>. </p>
 <table border="1">
