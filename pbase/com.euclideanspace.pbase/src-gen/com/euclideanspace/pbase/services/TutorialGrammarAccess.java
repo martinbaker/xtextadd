@@ -3013,7 +3013,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeArgumentsIDTerminalRuleCall_1_2_1_0 = (RuleCall)cTypeArgumentsAssignment_1_2_1.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Assignment cFeatureAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFeatureIDTerminalRuleCall_2_0 = (RuleCall)cFeatureAssignment_2.eContents().get(0);
+		private final RuleCall cFeatureIdOrSuperParserRuleCall_2_0 = (RuleCall)cFeatureAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cExplicitOperationCallAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final Keyword cExplicitOperationCallLeftParenthesisKeyword_3_0_0 = (Keyword)cExplicitOperationCallAssignment_3_0.eContents().get(0);
@@ -3036,12 +3036,12 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//	
 		//FullID returns types::jvmFormalParameter:
 		//	parameterType=JvmTypeReference name=ValidID;* / XFeatureCall returns XExpression hidden(SL_COMMENT, WS):
-		//	{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=ID (=> explicitOperationCall?="("
+		//	{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=IdOrSuper (=> explicitOperationCall?="("
 		//	(featureCallArguments+=XShortClosure | featureCallArguments+=XExpression ("," featureCallArguments+=XExpression)*)?
 		//	")")? featureCallArguments+=XClosure?;
 		public ParserRule getRule() { return rule; }
 
-		//{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=ID (=> explicitOperationCall?="("
+		//{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=IdOrSuper (=> explicitOperationCall?="("
 		//(featureCallArguments+=XShortClosure | featureCallArguments+=XExpression ("," featureCallArguments+=XExpression)*)?
 		//")")? featureCallArguments+=XClosure?
 		public Group getGroup() { return cGroup; }
@@ -3076,11 +3076,11 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//">"
 		public Keyword getGreaterThanSignKeyword_1_3() { return cGreaterThanSignKeyword_1_3; }
 
-		//feature=ID
+		//feature=IdOrSuper
 		public Assignment getFeatureAssignment_2() { return cFeatureAssignment_2; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_2_0() { return cFeatureIDTerminalRuleCall_2_0; }
+		//IdOrSuper
+		public RuleCall getFeatureIdOrSuperParserRuleCall_2_0() { return cFeatureIdOrSuperParserRuleCall_2_0; }
 
 		//(=> explicitOperationCall?="(" (featureCallArguments+=XShortClosure | featureCallArguments+=XExpression (","
 		//featureCallArguments+=XExpression)*)? ")")?
@@ -4504,7 +4504,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	//	
 	//FullID returns types::jvmFormalParameter:
 	//	parameterType=JvmTypeReference name=ValidID;* / XFeatureCall returns XExpression hidden(SL_COMMENT, WS):
-	//	{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=ID (=> explicitOperationCall?="("
+	//	{XFeatureCall} ("<" typeArguments+=ID ("," typeArguments+=ID)* ">")? feature=IdOrSuper (=> explicitOperationCall?="("
 	//	(featureCallArguments+=XShortClosure | featureCallArguments+=XExpression ("," featureCallArguments+=XExpression)*)?
 	//	")")? featureCallArguments+=XClosure?;
 	public XFeatureCallElements getXFeatureCallAccess() {

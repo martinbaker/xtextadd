@@ -293,7 +293,7 @@ FullID returns types::jvmFormalParameter:
 XFeatureCall returns XExpression hidden(SL_COMMENT,WS):
 	{XFeatureCall}
 	('<' typeArguments+=ID (',' typeArguments+=ID)* '>')? 
-	feature=ID 
+	feature=IdOrSuper 
 	(=>explicitOperationCall?='(' 
 		(
 		    featureCallArguments+=XShortClosure

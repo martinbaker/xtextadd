@@ -5102,19 +5102,19 @@ ruleXFeatureCall returns [EObject current=null]
     }
 )?(
 (
-		lv_feature_6_0=RULE_ID
-		{
-			newLeafNode(lv_feature_6_0, grammarAccess.getXFeatureCallAccess().getFeatureIDTerminalRuleCall_2_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureIdOrSuperParserRuleCall_2_0()); 
+	    }
+		lv_feature_6_0=ruleIdOrSuper		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getXFeatureCallRule());
+	            $current = createModelElementForParent(grammarAccess.getXFeatureCallRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"feature",
         		lv_feature_6_0, 
-        		"ID");
+        		"IdOrSuper");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -5307,6 +5307,43 @@ ruleFeatureCallID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleT
     ;
 
 
+
+
+
+// Entry rule entryRuleIdOrSuper
+entryRuleIdOrSuper returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getIdOrSuperRule()); } 
+	 iv_ruleIdOrSuper=ruleIdOrSuper 
+	 { $current=$iv_ruleIdOrSuper.current.getText(); }  
+	 EOF 
+;
+
+// Rule IdOrSuper
+ruleIdOrSuper returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getIdOrSuperAccess().getFeatureCallIDParserRuleCall_0()); 
+    }
+    this_FeatureCallID_0=ruleFeatureCallID    {
+		$current.merge(this_FeatureCallID_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+	kw='super' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getIdOrSuperAccess().getSuperKeyword_1()); 
+    }
+)
+    ;
 
 
 
@@ -5933,6 +5970,11 @@ ruleXReturnExpression returns [EObject current=null]
  | 	'switch' 
  | 	'synchronized' 
  | 	'<' 
+ | 	'extends' 
+ | 	'static' 
+ | 	'import' 
+ | 	'extension' 
+ | 	'super' 
  | 	'#' 
  | 	'[' 
  | 	'false' 

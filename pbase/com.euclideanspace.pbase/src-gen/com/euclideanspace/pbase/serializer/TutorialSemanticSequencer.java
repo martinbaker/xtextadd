@@ -1304,7 +1304,7 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Constraint:
 	 *     (
 	 *         (typeArguments+=ID typeArguments+=ID*)? 
-	 *         feature=ID 
+	 *         feature=IdOrSuper 
 	 *         (explicitOperationCall?='(' (featureCallArguments+=XShortClosure | (featureCallArguments+=XExpression featureCallArguments+=XExpression*))?)? 
 	 *         featureCallArguments+=XClosure?
 	 *     )
