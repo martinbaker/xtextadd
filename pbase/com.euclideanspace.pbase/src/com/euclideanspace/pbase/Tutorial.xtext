@@ -70,7 +70,7 @@ XExpression hidden(SL_COMMENT,WS) /*returns XExpression*/ :
 XAssignment returns XExpression hidden(SL_COMMENT,WS):
 	{XAssignment} feature=ID OpSingleAssign value=XAssignment |	
 	XOrExpression (
-		=>({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAssignment
+		=>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
 	)?;
 
 OpSingleAssign hidden(SL_COMMENT,WS):
@@ -83,19 +83,19 @@ OpMultiAssign hidden(SL_COMMENT,WS):
 	'>' '>'? '>=';
 
 XOrExpression returns XExpression hidden(SL_COMMENT,WS):
-	XAndExpression (=>({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAndExpression)*;
+	XAndExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*;
 
 OpOr:
 	'||';
 
 XAndExpression returns XExpression hidden(SL_COMMENT,WS):
-	XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XEqualityExpression)*;
+	XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*;
 
 OpAnd:
 	'&&';
 
 XEqualityExpression returns XExpression hidden(SL_COMMENT,WS):
-	XRelationalExpression (=>({XBinaryOperation.leftOperand=current} feature=ID)
+	XRelationalExpression (=>({XBinaryOperation.leftOperand=current} feature=OpEquality)
 	rightOperand=XRelationalExpression)*;
 
 OpEquality:
@@ -104,13 +104,13 @@ OpEquality:
 XRelationalExpression returns XExpression hidden(SL_COMMENT,WS):
 	XOtherOperatorExpression
 	(=>({XInstanceOfExpression.expression=current} 'instanceof') type=ID |
-	 =>({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XOtherOperatorExpression)*;
+	 =>({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression)*;
 
 OpCompare:
 	'>=' | '<' '=' | '>' | '<' ;
 
 XOtherOperatorExpression returns XExpression hidden(SL_COMMENT,WS):
-	XAdditiveExpression (=>({XBinaryOperation.leftOperand=current} feature=ID)
+	XAdditiveExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOther)
 	rightOperand=XAdditiveExpression)*;
 
 OpOther:
@@ -125,20 +125,20 @@ OpOther:
 	| '?:';
 
 XAdditiveExpression returns XExpression hidden(SL_COMMENT,WS):
-	XMultiplicativeExpression (=>({XBinaryOperation.leftOperand=current} feature=ID)
+	XMultiplicativeExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAdd)
 	rightOperand=XMultiplicativeExpression)*;
 
 OpAdd:
 	'+' | '-';
 
 XMultiplicativeExpression returns XExpression hidden(SL_COMMENT,WS):
-	XUnaryOperation (=>({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XUnaryOperation)*;
+	XUnaryOperation (=>({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*;
 
 OpMulti:
 	'*' | '**' | '/' | '%';
 
 XUnaryOperation returns XExpression hidden(SL_COMMENT,WS):
-	{XUnaryOperation} feature=ID operand=XUnaryOperation
+	{XUnaryOperation} feature=OpUnary operand=XUnaryOperation
 	| =>XCastedExpression;
 
 OpUnary:
@@ -149,7 +149,7 @@ XCastedExpression returns XExpression hidden(SL_COMMENT,WS):
 ;
 
 XPostfixOperation returns XExpression hidden(SL_COMMENT,WS):
-	XMemberFeatureCall =>({XPostfixOperation.operand=current} feature=ID)?
+	XMemberFeatureCall =>({XPostfixOperation.operand=current} feature=OpPostfix)?
 ;
 
 OpPostfix hidden(SL_COMMENT,WS):

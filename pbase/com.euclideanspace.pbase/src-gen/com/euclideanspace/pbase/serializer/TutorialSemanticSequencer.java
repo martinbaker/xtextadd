@@ -1146,14 +1146,14 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         (leftOperand=XAdditiveExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XMultiplicativeExpression) | 
-	 *         (leftOperand=XMultiplicativeExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XUnaryOperation) | 
-	 *         (leftOperand=XOtherOperatorExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XAdditiveExpression) | 
-	 *         (leftOperand=XRelationalExpression_XBinaryOperation_1_1_0_0_0 feature=ID rightOperand=XOtherOperatorExpression) | 
-	 *         (leftOperand=XEqualityExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XRelationalExpression) | 
-	 *         (leftOperand=XAndExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XEqualityExpression) | 
-	 *         (leftOperand=XOrExpression_XBinaryOperation_1_0_0_0 feature=ID rightOperand=XAndExpression) | 
-	 *         (leftOperand=XAssignment_XBinaryOperation_1_1_0_0_0 feature=ID rightOperand=XAssignment)
+	 *         (leftOperand=XAdditiveExpression_XBinaryOperation_1_0_0_0 feature=OpAdd rightOperand=XMultiplicativeExpression) | 
+	 *         (leftOperand=XMultiplicativeExpression_XBinaryOperation_1_0_0_0 feature=OpMulti rightOperand=XUnaryOperation) | 
+	 *         (leftOperand=XOtherOperatorExpression_XBinaryOperation_1_0_0_0 feature=OpOther rightOperand=XAdditiveExpression) | 
+	 *         (leftOperand=XRelationalExpression_XBinaryOperation_1_1_0_0_0 feature=OpCompare rightOperand=XOtherOperatorExpression) | 
+	 *         (leftOperand=XEqualityExpression_XBinaryOperation_1_0_0_0 feature=OpEquality rightOperand=XRelationalExpression) | 
+	 *         (leftOperand=XAndExpression_XBinaryOperation_1_0_0_0 feature=OpAnd rightOperand=XEqualityExpression) | 
+	 *         (leftOperand=XOrExpression_XBinaryOperation_1_0_0_0 feature=OpOr rightOperand=XAndExpression) | 
+	 *         (leftOperand=XAssignment_XBinaryOperation_1_1_0_0_0 feature=OpMultiAssign rightOperand=XAssignment)
 	 *     )
 	 */
 	protected void sequence_XAdditiveExpression_XAndExpression_XAssignment_XEqualityExpression_XMultiplicativeExpression_XOrExpression_XOtherOperatorExpression_XRelationalExpression(EObject context, XBinaryOperation semanticObject) {
@@ -1397,7 +1397,7 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (operand=XPostfixOperation_XPostfixOperation_1_0_0 feature=ID)
+	 *     (operand=XPostfixOperation_XPostfixOperation_1_0_0 feature=OpPostfix)
 	 */
 	protected void sequence_XPostfixOperation(EObject context, XPostfixOperation semanticObject) {
 		if(errorAcceptor != null) {
@@ -1409,7 +1409,7 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getXPostfixOperationAccess().getXPostfixOperationOperandAction_1_0_0(), semanticObject.getOperand());
-		feeder.accept(grammarAccess.getXPostfixOperationAccess().getFeatureIDTerminalRuleCall_1_0_1_0(), semanticObject.getFeature());
+		feeder.accept(grammarAccess.getXPostfixOperationAccess().getFeatureOpPostfixParserRuleCall_1_0_1_0(), semanticObject.getFeature());
 		feeder.finish();
 	}
 	
@@ -1540,7 +1540,7 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (feature=ID operand=XUnaryOperation)
+	 *     (feature=OpUnary operand=XUnaryOperation)
 	 */
 	protected void sequence_XUnaryOperation(EObject context, XUnaryOperation semanticObject) {
 		if(errorAcceptor != null) {
@@ -1551,7 +1551,7 @@ public class TutorialSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getXUnaryOperationAccess().getFeatureIDTerminalRuleCall_0_1_0(), semanticObject.getFeature());
+		feeder.accept(grammarAccess.getXUnaryOperationAccess().getFeatureOpUnaryParserRuleCall_0_1_0(), semanticObject.getFeature());
 		feeder.accept(grammarAccess.getXUnaryOperationAccess().getOperandXUnaryOperationParserRuleCall_0_2_0(), semanticObject.getOperand());
 		feeder.finish();
 	}

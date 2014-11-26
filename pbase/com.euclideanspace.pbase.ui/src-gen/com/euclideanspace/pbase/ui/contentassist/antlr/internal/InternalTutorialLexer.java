@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class InternalTutorialLexer extends Lexer {
     public static final int RULE_HEX=5;
     public static final int T__50=50;
+    public static final int T__90=90;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__59=59;
@@ -40,39 +41,65 @@ public class InternalTutorialLexer extends Lexer {
     public static final int RULE_INT=6;
     public static final int T__29=29;
     public static final int T__22=22;
+    public static final int T__66=66;
     public static final int RULE_ML_COMMENT=9;
     public static final int T__23=23;
+    public static final int T__67=67;
     public static final int T__24=24;
+    public static final int T__68=68;
     public static final int T__25=25;
+    public static final int T__69=69;
     public static final int T__62=62;
     public static final int T__63=63;
     public static final int T__20=20;
+    public static final int T__64=64;
     public static final int T__21=21;
+    public static final int T__65=65;
+    public static final int T__70=70;
+    public static final int T__71=71;
+    public static final int T__72=72;
     public static final int RULE_STRING=8;
     public static final int RULE_SL_COMMENT=10;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int T__33=33;
+    public static final int T__77=77;
     public static final int T__34=34;
+    public static final int T__78=78;
     public static final int T__35=35;
+    public static final int T__79=79;
     public static final int T__36=36;
+    public static final int T__73=73;
     public static final int EOF=-1;
     public static final int T__30=30;
+    public static final int T__74=74;
     public static final int T__31=31;
+    public static final int T__75=75;
     public static final int T__32=32;
+    public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
     public static final int RULE_WS=11;
     public static final int RULE_ANY_OTHER=12;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
+    public static final int T__88=88;
     public static final int T__45=45;
+    public static final int T__89=89;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
+    public static final int T__84=84;
     public static final int T__41=41;
+    public static final int T__85=85;
     public static final int T__42=42;
+    public static final int T__86=86;
     public static final int T__43=43;
+    public static final int T__87=87;
 
     // delegates
     // delegators
@@ -112,10 +139,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:12:7: ( 'var' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:12:9: 'var'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:12:7: ( '||' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:12:9: '||'
             {
-            match("var"); 
+            match("||"); 
 
 
             }
@@ -133,10 +160,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:13:7: ( 'def' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:13:9: 'def'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:13:7: ( '&&' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:13:9: '&&'
             {
-            match("def"); 
+            match("&&"); 
 
 
             }
@@ -154,10 +181,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:14:7: ( '.' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:14:9: '.'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:14:7: ( 'var' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:14:9: 'var'
             {
-            match('.'); 
+            match("var"); 
+
 
             }
 
@@ -174,10 +202,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:15:7: ( 'val' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:15:9: 'val'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:15:7: ( 'def' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:15:9: 'def'
             {
-            match("val"); 
+            match("def"); 
 
 
             }
@@ -195,10 +223,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:16:7: ( 'extends' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:16:9: 'extends'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:16:7: ( '+=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:16:9: '+='
             {
-            match("extends"); 
+            match("+="); 
 
 
             }
@@ -216,10 +244,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:17:7: ( 'static' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:17:9: 'static'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:17:7: ( '-=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:17:9: '-='
             {
-            match("static"); 
+            match("-="); 
 
 
             }
@@ -237,10 +265,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18:7: ( 'import' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18:9: 'import'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18:7: ( '*=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18:9: '*='
             {
-            match("import"); 
+            match("*="); 
 
 
             }
@@ -258,10 +286,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19:7: ( 'extension' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19:9: 'extension'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19:7: ( '/=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19:9: '/='
             {
-            match("extension"); 
+            match("/="); 
 
 
             }
@@ -279,10 +307,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:20:7: ( 'false' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:20:9: 'false'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:20:7: ( '%=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:20:9: '%='
             {
-            match("false"); 
+            match("%="); 
 
 
             }
@@ -300,10 +328,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:21:7: ( ';' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:21:9: ';'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:21:7: ( '==' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:21:9: '=='
             {
-            match(';'); 
+            match("=="); 
+
 
             }
 
@@ -320,10 +349,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:22:7: ( 'class' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:22:9: 'class'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:22:7: ( '!=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:22:9: '!='
             {
-            match("class"); 
+            match("!="); 
 
 
             }
@@ -341,10 +370,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:23:7: ( '{' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:23:9: '{'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:23:7: ( '===' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:23:9: '==='
             {
-            match('{'); 
+            match("==="); 
+
 
             }
 
@@ -361,10 +391,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:24:7: ( '}' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:24:9: '}'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:24:7: ( '!==' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:24:9: '!=='
             {
-            match('}'); 
+            match("!=="); 
+
 
             }
 
@@ -381,10 +412,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:25:7: ( '<' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:25:9: '<'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:25:7: ( '>=' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:25:9: '>='
             {
-            match('<'); 
+            match(">="); 
+
 
             }
 
@@ -421,10 +453,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:27:7: ( ',' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:27:9: ','
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:27:7: ( '<' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:27:9: '<'
             {
-            match(','); 
+            match('<'); 
 
             }
 
@@ -441,10 +473,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:28:7: ( 'implements' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:28:9: 'implements'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:28:7: ( '->' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:28:9: '->'
             {
-            match("implements"); 
+            match("->"); 
 
 
             }
@@ -462,10 +494,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:29:7: ( ')' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:29:9: ')'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:29:7: ( '..<' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:29:9: '..<'
             {
-            match(')'); 
+            match("..<"); 
+
 
             }
 
@@ -482,10 +515,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:30:7: ( '(' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:30:9: '('
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:30:7: ( '..' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:30:9: '..'
             {
-            match('('); 
+            match(".."); 
+
 
             }
 
@@ -502,10 +536,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:31:7: ( 'throws' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:31:9: 'throws'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:31:7: ( '=>' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:31:9: '=>'
             {
-            match("throws"); 
+            match("=>"); 
 
 
             }
@@ -523,10 +557,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:32:7: ( 'new' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:32:9: 'new'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:32:7: ( '<>' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:32:9: '<>'
             {
-            match("new"); 
+            match("<>"); 
 
 
             }
@@ -544,10 +578,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:33:7: ( 'instanceof' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:33:9: 'instanceof'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:33:7: ( '?:' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:33:9: '?:'
             {
-            match("instanceof"); 
+            match("?:"); 
 
 
             }
@@ -565,11 +599,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:34:7: ( 'as' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:34:9: 'as'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:34:7: ( '+' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:34:9: '+'
             {
-            match("as"); 
-
+            match('+'); 
 
             }
 
@@ -586,10 +619,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:35:7: ( '#' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:35:9: '#'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:35:7: ( '-' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:35:9: '-'
             {
-            match('#'); 
+            match('-'); 
 
             }
 
@@ -606,10 +639,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:36:7: ( '[' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:36:9: '['
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:36:7: ( '*' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:36:9: '*'
             {
-            match('['); 
+            match('*'); 
 
             }
 
@@ -626,10 +659,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:37:7: ( ']' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:37:9: ']'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:37:7: ( '**' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:37:9: '**'
             {
-            match(']'); 
+            match("**"); 
+
 
             }
 
@@ -646,11 +680,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:38:7: ( 'if' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:38:9: 'if'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:38:7: ( '/' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:38:9: '/'
             {
-            match("if"); 
-
+            match('/'); 
 
             }
 
@@ -667,11 +700,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:39:7: ( 'else' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:39:9: 'else'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:39:7: ( '%' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:39:9: '%'
             {
-            match("else"); 
-
+            match('%'); 
 
             }
 
@@ -688,11 +720,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:40:7: ( 'switch' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:40:9: 'switch'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:40:7: ( '!' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:40:9: '!'
             {
-            match("switch"); 
-
+            match('!'); 
 
             }
 
@@ -709,10 +740,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:41:7: ( ':' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:41:9: ':'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:41:7: ( '++' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:41:9: '++'
             {
-            match(':'); 
+            match("++"); 
+
 
             }
 
@@ -729,10 +761,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:42:7: ( 'default' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:42:9: 'default'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:42:7: ( '--' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:42:9: '--'
             {
-            match("default"); 
+            match("--"); 
 
 
             }
@@ -750,11 +782,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:43:7: ( 'case' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:43:9: 'case'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:43:7: ( '.' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:43:9: '.'
             {
-            match("case"); 
-
+            match('.'); 
 
             }
 
@@ -771,10 +802,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:44:7: ( 'for' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:44:9: 'for'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:44:7: ( 'val' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:44:9: 'val'
             {
-            match("for"); 
+            match("val"); 
 
 
             }
@@ -792,10 +823,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:45:7: ( 'while' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:45:9: 'while'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:45:7: ( 'extends' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:45:9: 'extends'
             {
-            match("while"); 
+            match("extends"); 
 
 
             }
@@ -813,10 +844,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:46:7: ( 'do' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:46:9: 'do'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:46:7: ( 'static' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:46:9: 'static'
             {
-            match("do"); 
+            match("static"); 
 
 
             }
@@ -834,10 +865,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:47:7: ( 'null' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:47:9: 'null'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:47:7: ( 'import' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:47:9: 'import'
             {
-            match("null"); 
+            match("import"); 
 
 
             }
@@ -855,10 +886,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:48:7: ( 'typeof' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:48:9: 'typeof'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:48:7: ( 'extension' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:48:9: 'extension'
             {
-            match("typeof"); 
+            match("extension"); 
 
 
             }
@@ -876,10 +907,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:49:7: ( 'throw' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:49:9: 'throw'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:49:7: ( 'false' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:49:9: 'false'
             {
-            match("throw"); 
+            match("false"); 
 
 
             }
@@ -897,11 +928,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:50:7: ( 'return' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:50:9: 'return'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:50:7: ( ';' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:50:9: ';'
             {
-            match("return"); 
-
+            match(';'); 
 
             }
 
@@ -918,10 +948,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:51:7: ( 'try' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:51:9: 'try'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:51:7: ( 'class' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:51:9: 'class'
             {
-            match("try"); 
+            match("class"); 
 
 
             }
@@ -939,11 +969,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:52:7: ( 'finally' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:52:9: 'finally'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:52:7: ( '{' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:52:9: '{'
             {
-            match("finally"); 
-
+            match('{'); 
 
             }
 
@@ -960,11 +989,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:53:7: ( 'synchronized' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:53:9: 'synchronized'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:53:7: ( '}' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:53:9: '}'
             {
-            match("synchronized"); 
-
+            match('}'); 
 
             }
 
@@ -981,11 +1009,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:54:7: ( 'catch' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:54:9: 'catch'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:54:7: ( ',' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:54:9: ','
             {
-            match("catch"); 
-
+            match(','); 
 
             }
 
@@ -1002,10 +1029,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:55:7: ( 'override' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:55:9: 'override'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:55:7: ( 'implements' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:55:9: 'implements'
             {
-            match("override"); 
+            match("implements"); 
 
 
             }
@@ -1023,11 +1050,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:56:7: ( 'dispatch' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:56:9: 'dispatch'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:56:7: ( ')' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:56:9: ')'
             {
-            match("dispatch"); 
-
+            match(')'); 
 
             }
 
@@ -1044,11 +1070,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:57:7: ( '...' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:57:9: '...'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:57:7: ( '(' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:57:9: '('
             {
-            match("..."); 
-
+            match('('); 
 
             }
 
@@ -1065,10 +1090,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:58:7: ( '::' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:58:9: '::'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:58:7: ( 'throws' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:58:9: 'throws'
             {
-            match("::"); 
+            match("throws"); 
 
 
             }
@@ -1086,10 +1111,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:59:7: ( '?.' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:59:9: '?.'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:59:7: ( 'new' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:59:9: 'new'
             {
-            match("?."); 
+            match("new"); 
 
 
             }
@@ -1107,10 +1132,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:60:7: ( '|' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:60:9: '|'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:60:7: ( 'instanceof' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:60:9: 'instanceof'
             {
-            match('|'); 
+            match("instanceof"); 
+
 
             }
 
@@ -1127,10 +1153,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:61:7: ( 'true' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:61:9: 'true'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:61:7: ( 'as' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:61:9: 'as'
             {
-            match("true"); 
+            match("as"); 
 
 
             }
@@ -1143,15 +1169,577 @@ public class InternalTutorialLexer extends Lexer {
     }
     // $ANTLR end "T__63"
 
+    // $ANTLR start "T__64"
+    public final void mT__64() throws RecognitionException {
+        try {
+            int _type = T__64;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:62:7: ( '#' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:62:9: '#'
+            {
+            match('#'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__64"
+
+    // $ANTLR start "T__65"
+    public final void mT__65() throws RecognitionException {
+        try {
+            int _type = T__65;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:63:7: ( '[' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:63:9: '['
+            {
+            match('['); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__65"
+
+    // $ANTLR start "T__66"
+    public final void mT__66() throws RecognitionException {
+        try {
+            int _type = T__66;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:64:7: ( ']' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:64:9: ']'
+            {
+            match(']'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__66"
+
+    // $ANTLR start "T__67"
+    public final void mT__67() throws RecognitionException {
+        try {
+            int _type = T__67;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:65:7: ( 'if' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:65:9: 'if'
+            {
+            match("if"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__67"
+
+    // $ANTLR start "T__68"
+    public final void mT__68() throws RecognitionException {
+        try {
+            int _type = T__68;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:66:7: ( 'else' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:66:9: 'else'
+            {
+            match("else"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__68"
+
+    // $ANTLR start "T__69"
+    public final void mT__69() throws RecognitionException {
+        try {
+            int _type = T__69;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:67:7: ( 'switch' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:67:9: 'switch'
+            {
+            match("switch"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__69"
+
+    // $ANTLR start "T__70"
+    public final void mT__70() throws RecognitionException {
+        try {
+            int _type = T__70;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:68:7: ( ':' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:68:9: ':'
+            {
+            match(':'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__70"
+
+    // $ANTLR start "T__71"
+    public final void mT__71() throws RecognitionException {
+        try {
+            int _type = T__71;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:69:7: ( 'default' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:69:9: 'default'
+            {
+            match("default"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__71"
+
+    // $ANTLR start "T__72"
+    public final void mT__72() throws RecognitionException {
+        try {
+            int _type = T__72;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:70:7: ( 'case' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:70:9: 'case'
+            {
+            match("case"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__72"
+
+    // $ANTLR start "T__73"
+    public final void mT__73() throws RecognitionException {
+        try {
+            int _type = T__73;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:71:7: ( 'for' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:71:9: 'for'
+            {
+            match("for"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__73"
+
+    // $ANTLR start "T__74"
+    public final void mT__74() throws RecognitionException {
+        try {
+            int _type = T__74;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:72:7: ( 'while' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:72:9: 'while'
+            {
+            match("while"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__74"
+
+    // $ANTLR start "T__75"
+    public final void mT__75() throws RecognitionException {
+        try {
+            int _type = T__75;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:73:7: ( 'do' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:73:9: 'do'
+            {
+            match("do"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__75"
+
+    // $ANTLR start "T__76"
+    public final void mT__76() throws RecognitionException {
+        try {
+            int _type = T__76;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:74:7: ( 'null' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:74:9: 'null'
+            {
+            match("null"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__76"
+
+    // $ANTLR start "T__77"
+    public final void mT__77() throws RecognitionException {
+        try {
+            int _type = T__77;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:75:7: ( 'typeof' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:75:9: 'typeof'
+            {
+            match("typeof"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__77"
+
+    // $ANTLR start "T__78"
+    public final void mT__78() throws RecognitionException {
+        try {
+            int _type = T__78;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:76:7: ( 'throw' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:76:9: 'throw'
+            {
+            match("throw"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__78"
+
+    // $ANTLR start "T__79"
+    public final void mT__79() throws RecognitionException {
+        try {
+            int _type = T__79;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:77:7: ( 'return' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:77:9: 'return'
+            {
+            match("return"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__79"
+
+    // $ANTLR start "T__80"
+    public final void mT__80() throws RecognitionException {
+        try {
+            int _type = T__80;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:78:7: ( 'try' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:78:9: 'try'
+            {
+            match("try"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__80"
+
+    // $ANTLR start "T__81"
+    public final void mT__81() throws RecognitionException {
+        try {
+            int _type = T__81;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:79:7: ( 'finally' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:79:9: 'finally'
+            {
+            match("finally"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__81"
+
+    // $ANTLR start "T__82"
+    public final void mT__82() throws RecognitionException {
+        try {
+            int _type = T__82;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:80:7: ( 'synchronized' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:80:9: 'synchronized'
+            {
+            match("synchronized"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__82"
+
+    // $ANTLR start "T__83"
+    public final void mT__83() throws RecognitionException {
+        try {
+            int _type = T__83;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:81:7: ( 'catch' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:81:9: 'catch'
+            {
+            match("catch"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__83"
+
+    // $ANTLR start "T__84"
+    public final void mT__84() throws RecognitionException {
+        try {
+            int _type = T__84;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:82:7: ( 'override' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:82:9: 'override'
+            {
+            match("override"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__84"
+
+    // $ANTLR start "T__85"
+    public final void mT__85() throws RecognitionException {
+        try {
+            int _type = T__85;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:83:7: ( 'dispatch' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:83:9: 'dispatch'
+            {
+            match("dispatch"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__85"
+
+    // $ANTLR start "T__86"
+    public final void mT__86() throws RecognitionException {
+        try {
+            int _type = T__86;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:84:7: ( '...' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:84:9: '...'
+            {
+            match("..."); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__86"
+
+    // $ANTLR start "T__87"
+    public final void mT__87() throws RecognitionException {
+        try {
+            int _type = T__87;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:85:7: ( '::' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:85:9: '::'
+            {
+            match("::"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__87"
+
+    // $ANTLR start "T__88"
+    public final void mT__88() throws RecognitionException {
+        try {
+            int _type = T__88;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:86:7: ( '?.' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:86:9: '?.'
+            {
+            match("?."); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__88"
+
+    // $ANTLR start "T__89"
+    public final void mT__89() throws RecognitionException {
+        try {
+            int _type = T__89;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:87:7: ( '|' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:87:9: '|'
+            {
+            match('|'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__89"
+
+    // $ANTLR start "T__90"
+    public final void mT__90() throws RecognitionException {
+        try {
+            int _type = T__90;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:88:7: ( 'true' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:88:9: 'true'
+            {
+            match("true"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__90"
+
     // $ANTLR start "RULE_STRING"
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1169,10 +1757,10 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop1:
                     do {
                         int alt1=3;
@@ -1188,7 +1776,7 @@ public class InternalTutorialLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:21: '\\\\' .
+                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1196,7 +1784,7 @@ public class InternalTutorialLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1221,10 +1809,10 @@ public class InternalTutorialLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop2:
                     do {
                         int alt2=3;
@@ -1240,7 +1828,7 @@ public class InternalTutorialLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:54: '\\\\' .
+                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1248,7 +1836,7 @@ public class InternalTutorialLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18667:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19973:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1291,10 +1879,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18669:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18669:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19975:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19975:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18669:11: ( '^' )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19975:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1303,7 +1891,7 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18669:11: '^'
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19975:11: '^'
                     {
                     match('^'); 
 
@@ -1321,7 +1909,7 @@ public class InternalTutorialLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18669:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19975:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -1370,10 +1958,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             {
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:12: ( '0x' | '0X' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:12: ( '0x' | '0X' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1401,7 +1989,7 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:13: '0x'
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:13: '0x'
                     {
                     match("0x"); 
 
@@ -1409,7 +1997,7 @@ public class InternalTutorialLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:18: '0X'
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:18: '0X'
                     {
                     match("0X"); 
 
@@ -1419,7 +2007,7 @@ public class InternalTutorialLexer extends Lexer {
 
             }
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
             int cnt7=0;
             loop7:
             do {
@@ -1457,7 +2045,7 @@ public class InternalTutorialLexer extends Lexer {
                 cnt7++;
             } while (true);
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1466,10 +2054,10 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     {
                     match('#'); 
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1487,7 +2075,7 @@ public class InternalTutorialLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:64: ( 'b' | 'B' ) ( 'i' | 'I' )
+                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:64: ( 'b' | 'B' ) ( 'i' | 'I' )
                             {
                             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                                 input.consume();
@@ -1511,7 +2099,7 @@ public class InternalTutorialLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18671:84: ( 'l' | 'L' )
+                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19977:84: ( 'l' | 'L' )
                             {
                             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                                 input.consume();
@@ -1550,11 +2138,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18673:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18673:12: '0' .. '9' ( '0' .. '9' | '_' )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19979:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19979:12: '0' .. '9' ( '0' .. '9' | '_' )*
             {
             matchRange('0','9'); 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18673:21: ( '0' .. '9' | '_' )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19979:21: ( '0' .. '9' | '_' )*
             loop10:
             do {
                 int alt10=2;
@@ -1603,11 +2191,11 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             {
             mRULE_INT(); 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1616,7 +2204,7 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -1627,7 +2215,7 @@ public class InternalTutorialLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:36: ( '+' | '-' )?
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:36: ( '+' | '-' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1660,7 +2248,7 @@ public class InternalTutorialLexer extends Lexer {
 
             }
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             int alt13=3;
             int LA13_0 = input.LA(1);
 
@@ -1672,7 +2260,7 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
                     {
                     if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                         input.consume();
@@ -1696,7 +2284,7 @@ public class InternalTutorialLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18675:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19981:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
                     {
                     if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='d'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                         input.consume();
@@ -1729,12 +2317,12 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18677:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18677:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19983:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19983:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18677:24: ( options {greedy=false; } : . )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19983:24: ( options {greedy=false; } : . )*
             loop14:
             do {
                 int alt14=2;
@@ -1759,7 +2347,7 @@ public class InternalTutorialLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18677:52: .
+            	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19983:52: .
             	    {
             	    matchAny(); 
 
@@ -1789,12 +2377,12 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop15:
             do {
                 int alt15=2;
@@ -1807,7 +2395,7 @@ public class InternalTutorialLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1827,7 +2415,7 @@ public class InternalTutorialLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:40: ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:40: ( ( '\\r' )? '\\n' )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1836,9 +2424,9 @@ public class InternalTutorialLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:41: ( '\\r' )? '\\n'
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:41: ( '\\r' )?
+                    // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:41: ( '\\r' )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -1847,7 +2435,7 @@ public class InternalTutorialLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18679:41: '\\r'
+                            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19985:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1879,10 +2467,10 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18681:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18681:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19987:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19987:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18681:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19987:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt18=0;
             loop18:
             do {
@@ -1936,8 +2524,8 @@ public class InternalTutorialLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18683:16: ( . )
-            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:18683:18: .
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19989:16: ( . )
+            // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:19989:18: .
             {
             matchAny(); 
 
@@ -1952,8 +2540,8 @@ public class InternalTutorialLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | RULE_STRING | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt19=60;
+        // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | RULE_STRING | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt19=87;
         alt19 = dfa19.predict(input);
         switch (alt19) {
             case 1 :
@@ -2314,63 +2902,252 @@ public class InternalTutorialLexer extends Lexer {
                 }
                 break;
             case 52 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:316: RULE_STRING
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:316: T__64
+                {
+                mT__64(); 
+
+                }
+                break;
+            case 53 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:322: T__65
+                {
+                mT__65(); 
+
+                }
+                break;
+            case 54 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:328: T__66
+                {
+                mT__66(); 
+
+                }
+                break;
+            case 55 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:334: T__67
+                {
+                mT__67(); 
+
+                }
+                break;
+            case 56 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:340: T__68
+                {
+                mT__68(); 
+
+                }
+                break;
+            case 57 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:346: T__69
+                {
+                mT__69(); 
+
+                }
+                break;
+            case 58 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:352: T__70
+                {
+                mT__70(); 
+
+                }
+                break;
+            case 59 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:358: T__71
+                {
+                mT__71(); 
+
+                }
+                break;
+            case 60 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:364: T__72
+                {
+                mT__72(); 
+
+                }
+                break;
+            case 61 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:370: T__73
+                {
+                mT__73(); 
+
+                }
+                break;
+            case 62 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:376: T__74
+                {
+                mT__74(); 
+
+                }
+                break;
+            case 63 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:382: T__75
+                {
+                mT__75(); 
+
+                }
+                break;
+            case 64 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:388: T__76
+                {
+                mT__76(); 
+
+                }
+                break;
+            case 65 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:394: T__77
+                {
+                mT__77(); 
+
+                }
+                break;
+            case 66 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:400: T__78
+                {
+                mT__78(); 
+
+                }
+                break;
+            case 67 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:406: T__79
+                {
+                mT__79(); 
+
+                }
+                break;
+            case 68 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:412: T__80
+                {
+                mT__80(); 
+
+                }
+                break;
+            case 69 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:418: T__81
+                {
+                mT__81(); 
+
+                }
+                break;
+            case 70 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:424: T__82
+                {
+                mT__82(); 
+
+                }
+                break;
+            case 71 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:430: T__83
+                {
+                mT__83(); 
+
+                }
+                break;
+            case 72 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:436: T__84
+                {
+                mT__84(); 
+
+                }
+                break;
+            case 73 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:442: T__85
+                {
+                mT__85(); 
+
+                }
+                break;
+            case 74 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:448: T__86
+                {
+                mT__86(); 
+
+                }
+                break;
+            case 75 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:454: T__87
+                {
+                mT__87(); 
+
+                }
+                break;
+            case 76 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:460: T__88
+                {
+                mT__88(); 
+
+                }
+                break;
+            case 77 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:466: T__89
+                {
+                mT__89(); 
+
+                }
+                break;
+            case 78 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:472: T__90
+                {
+                mT__90(); 
+
+                }
+                break;
+            case 79 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:478: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 53 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:328: RULE_ID
+            case 80 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:490: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 54 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:336: RULE_HEX
+            case 81 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:498: RULE_HEX
                 {
                 mRULE_HEX(); 
 
                 }
                 break;
-            case 55 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:345: RULE_INT
+            case 82 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:507: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 56 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:354: RULE_DECIMAL
+            case 83 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:516: RULE_DECIMAL
                 {
                 mRULE_DECIMAL(); 
 
                 }
                 break;
-            case 57 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:367: RULE_ML_COMMENT
+            case 84 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:529: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 58 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:383: RULE_SL_COMMENT
+            case 85 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:545: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 59 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:399: RULE_WS
+            case 86 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:561: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 60 :
-                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:407: RULE_ANY_OTHER
+            case 87 :
+                // ../com.euclideanspace.pbase.ui/src-gen/com/euclideanspace/pbase/ui/contentassist/antlr/internal/InternalTutorial.g:1:569: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2384,247 +3161,283 @@ public class InternalTutorialLexer extends Lexer {
 
     protected DFA19 dfa19 = new DFA19(this);
     static final String DFA19_eotS =
-        "\2\uffff\2\51\1\56\4\51\1\uffff\1\51\7\uffff\3\51\3\uffff\1\116\3\51\1\46\1\uffff\3\46\1\uffff\2\127\1\46\3\uffff\1\51\1\uffff\1\51\1\137\1\51\2\uffff\7\51\1\150\3\51\1\uffff\2\51\7\uffff\5\51\1\165\5\uffff\3\51\4\uffff\1\127\5\uffff\1\171\1\172\1\174\1\uffff\10\51\1\uffff\1\51\1\u0087\6\51\1\u008e\1\51\1\u0090\1\51\1\uffff\3\51\2\uffff\1\51\1\uffff\2\51\1\u0098\7\51\1\uffff\2\51\1\u00a2\3\51\1\uffff\1\u00a6\1\uffff\1\u00a7\6\51\1\uffff\6\51\1\u00b5\1\51\1\u00b7\1\uffff\1\u00b8\1\u00ba\1\51\2\uffff\1\u00bc\6\51\1\u00c3\1\u00c4\1\51\1\u00c6\2\51\1\uffff\1\51\2\uffff\1\u00ca\1\uffff\1\u00cb\1\uffff\1\u00cc\1\51\1\u00ce\1\51\1\u00d0\1\51\2\uffff\1\51\1\uffff\2\51\1\u00d5\3\uffff\1\51\1\uffff\1\u00d7\1\uffff\4\51\1\uffff\1\u00dc\1\uffff\1\u00dd\3\51\2\uffff\1\51\1\u00e2\1\u00e3\1\51\2\uffff\1\u00e5\1\uffff";
+        "\1\uffff\1\57\1\61\1\54\2\64\1\72\1\76\1\101\1\105\1\107\1\111\1\113\1\115\1\117\1\54\4\64\1\uffff\1\64\5\uffff\3\64\3\uffff\1\157\3\64\3\54\1\uffff\2\166\2\uffff\1\172\5\uffff\1\64\1\uffff\1\64\1\176\1\64\20\uffff\1\u0081\5\uffff\1\u0084\3\uffff\7\64\1\u008c\3\64\1\uffff\2\64\5\uffff\5\64\1\u0099\5\uffff\3\64\2\uffff\1\166\5\uffff\1\u009d\1\u009e\1\u00a0\1\uffff\1\64\5\uffff\7\64\1\uffff\1\64\1\u00ab\6\64\1\u00b2\1\64\1\u00b4\1\64\1\uffff\3\64\2\uffff\1\64\1\uffff\2\64\1\u00bc\7\64\1\uffff\2\64\1\u00c6\3\64\1\uffff\1\u00ca\1\uffff\1\u00cb\6\64\1\uffff\6\64\1\u00d9\1\64\1\u00db\1\uffff\1\u00dc\1\u00de\1\64\2\uffff\1\u00e0\6\64\1\u00e7\1\u00e8\1\64\1\u00ea\2\64\1\uffff\1\64\2\uffff\1\u00ee\1\uffff\1\u00ef\1\uffff\1\u00f0\1\64\1\u00f2\1\64\1\u00f4\1\64\2\uffff\1\64\1\uffff\2\64\1\u00f9\3\uffff\1\64\1\uffff\1\u00fb\1\uffff\4\64\1\uffff\1\u0100\1\uffff\1\u0101\3\64\2\uffff\1\64\1\u0106\1\u0107\1\64\2\uffff\1\u0109\1\uffff";
     static final String DFA19_eofS =
-        "\u00e6\uffff";
+        "\u010a\uffff";
     static final String DFA19_minS =
-        "\1\0\1\uffff\1\141\1\145\1\56\1\154\1\164\1\146\1\141\1\uffff\1\141\7\uffff\1\150\1\145\1\163\3\uffff\1\72\1\150\1\145\1\166\1\56\1\uffff\2\0\1\101\1\uffff\2\60\1\52\3\uffff\1\154\1\uffff\1\146\1\60\1\163\2\uffff\1\164\1\163\1\141\1\151\1\156\1\160\1\163\1\60\1\154\1\162\1\156\1\uffff\1\141\1\163\7\uffff\1\162\1\160\1\165\1\167\1\154\1\60\5\uffff\1\151\1\164\1\145\4\uffff\1\60\5\uffff\3\60\1\uffff\1\160\2\145\2\164\1\143\1\154\1\164\1\uffff\1\163\1\60\1\141\1\163\1\145\1\143\1\157\1\145\1\60\1\145\1\60\1\154\1\uffff\1\154\1\165\1\162\2\uffff\1\165\1\uffff\1\141\1\156\1\60\1\151\1\143\1\150\1\162\1\145\1\141\1\145\1\uffff\1\154\1\163\1\60\1\150\1\167\1\157\1\uffff\1\60\1\uffff\1\60\1\145\2\162\1\154\1\164\1\144\1\uffff\1\143\1\150\1\162\1\164\1\155\1\156\1\60\1\154\1\60\1\uffff\2\60\1\146\2\uffff\1\60\1\156\1\151\1\164\1\143\1\163\1\151\2\60\1\157\1\60\1\145\1\143\1\uffff\1\171\2\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\144\1\60\1\150\1\60\1\157\2\uffff\1\156\1\uffff\1\156\1\145\1\60\3\uffff\1\145\1\uffff\1\60\1\uffff\1\156\1\151\1\164\1\157\1\uffff\1\60\1\uffff\1\60\1\172\1\163\1\146\2\uffff\1\145\2\60\1\144\2\uffff\1\60\1\uffff";
+        "\1\0\1\75\1\174\1\46\1\141\1\145\1\53\1\55\2\52\3\75\1\76\2\56\1\154\1\164\1\146\1\141\1\uffff\1\141\5\uffff\1\150\1\145\1\163\3\uffff\1\72\1\150\1\145\1\166\2\0\1\101\1\uffff\2\60\2\uffff\1\75\5\uffff\1\154\1\uffff\1\146\1\60\1\163\20\uffff\1\75\5\uffff\1\56\3\uffff\1\164\1\163\1\141\1\151\1\156\1\160\1\163\1\60\1\154\1\162\1\156\1\uffff\1\141\1\163\5\uffff\1\162\1\160\1\165\1\167\1\154\1\60\5\uffff\1\151\1\164\1\145\2\uffff\1\60\5\uffff\3\60\1\uffff\1\160\5\uffff\2\145\2\164\1\143\1\154\1\164\1\uffff\1\163\1\60\1\141\1\163\1\145\1\143\1\157\1\145\1\60\1\145\1\60\1\154\1\uffff\1\154\1\165\1\162\2\uffff\1\165\1\uffff\1\141\1\156\1\60\1\151\1\143\1\150\1\162\1\145\1\141\1\145\1\uffff\1\154\1\163\1\60\1\150\1\167\1\157\1\uffff\1\60\1\uffff\1\60\1\145\2\162\1\154\1\164\1\144\1\uffff\1\143\1\150\1\162\1\164\1\155\1\156\1\60\1\154\1\60\1\uffff\2\60\1\146\2\uffff\1\60\1\156\1\151\1\164\1\143\1\163\1\151\2\60\1\157\1\60\1\145\1\143\1\uffff\1\171\2\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\144\1\60\1\150\1\60\1\157\2\uffff\1\156\1\uffff\1\156\1\145\1\60\3\uffff\1\145\1\uffff\1\60\1\uffff\1\156\1\151\1\164\1\157\1\uffff\1\60\1\uffff\1\60\1\172\1\163\1\146\2\uffff\1\145\2\60\1\144\2\uffff\1\60\1\uffff";
     static final String DFA19_maxS =
-        "\1\uffff\1\uffff\1\141\1\157\1\56\1\170\1\171\1\156\1\157\1\uffff\1\154\7\uffff\1\171\1\165\1\163\3\uffff\1\72\1\150\1\145\1\166\1\56\1\uffff\2\uffff\1\172\1\uffff\1\170\1\154\1\57\3\uffff\1\162\1\uffff\1\146\1\172\1\163\2\uffff\1\164\1\163\1\141\1\151\1\156\1\160\1\163\1\172\1\154\1\162\1\156\1\uffff\1\141\1\164\7\uffff\1\162\1\160\1\171\1\167\1\154\1\172\5\uffff\1\151\1\164\1\145\4\uffff\1\154\5\uffff\3\172\1\uffff\1\160\2\145\2\164\1\143\1\157\1\164\1\uffff\1\163\1\172\1\141\1\163\1\145\1\143\1\157\1\145\1\172\1\145\1\172\1\154\1\uffff\1\154\1\165\1\162\2\uffff\1\165\1\uffff\1\141\1\156\1\172\1\151\1\143\1\150\1\162\1\145\1\141\1\145\1\uffff\1\154\1\163\1\172\1\150\1\167\1\157\1\uffff\1\172\1\uffff\1\172\1\145\2\162\1\154\1\164\1\163\1\uffff\1\143\1\150\1\162\1\164\1\155\1\156\1\172\1\154\1\172\1\uffff\2\172\1\146\2\uffff\1\172\1\156\1\151\1\164\1\143\1\163\1\151\2\172\1\157\1\172\1\145\1\143\1\uffff\1\171\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\144\1\172\1\150\1\172\1\157\2\uffff\1\156\1\uffff\1\156\1\145\1\172\3\uffff\1\145\1\uffff\1\172\1\uffff\1\156\1\151\1\164\1\157\1\uffff\1\172\1\uffff\2\172\1\163\1\146\2\uffff\1\145\2\172\1\144\2\uffff\1\172\1\uffff";
+        "\1\uffff\1\76\1\174\1\46\1\141\1\157\1\75\1\76\5\75\1\76\1\56\1\72\1\170\1\171\1\156\1\157\1\uffff\1\154\5\uffff\1\171\1\165\1\163\3\uffff\1\72\1\150\1\145\1\166\2\uffff\1\172\1\uffff\1\170\1\154\2\uffff\1\75\5\uffff\1\162\1\uffff\1\146\1\172\1\163\20\uffff\1\75\5\uffff\1\74\3\uffff\1\164\1\163\1\141\1\151\1\156\1\160\1\163\1\172\1\154\1\162\1\156\1\uffff\1\141\1\164\5\uffff\1\162\1\160\1\171\1\167\1\154\1\172\5\uffff\1\151\1\164\1\145\2\uffff\1\154\5\uffff\3\172\1\uffff\1\160\5\uffff\2\145\2\164\1\143\1\157\1\164\1\uffff\1\163\1\172\1\141\1\163\1\145\1\143\1\157\1\145\1\172\1\145\1\172\1\154\1\uffff\1\154\1\165\1\162\2\uffff\1\165\1\uffff\1\141\1\156\1\172\1\151\1\143\1\150\1\162\1\145\1\141\1\145\1\uffff\1\154\1\163\1\172\1\150\1\167\1\157\1\uffff\1\172\1\uffff\1\172\1\145\2\162\1\154\1\164\1\163\1\uffff\1\143\1\150\1\162\1\164\1\155\1\156\1\172\1\154\1\172\1\uffff\2\172\1\146\2\uffff\1\172\1\156\1\151\1\164\1\143\1\163\1\151\2\172\1\157\1\172\1\145\1\143\1\uffff\1\171\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\144\1\172\1\150\1\172\1\157\2\uffff\1\156\1\uffff\1\156\1\145\1\172\3\uffff\1\145\1\uffff\1\172\1\uffff\1\156\1\151\1\164\1\157\1\uffff\1\172\1\uffff\2\172\1\163\1\146\2\uffff\1\145\2\172\1\144\2\uffff\1\172\1\uffff";
     static final String DFA19_acceptS =
-        "\1\uffff\1\1\7\uffff\1\13\1\uffff\1\15\1\16\1\17\1\20\1\21\1\23\1\24\3\uffff\1\31\1\32\1\33\5\uffff\1\62\3\uffff\1\65\3\uffff\1\73\1\74\1\1\1\uffff\1\65\3\uffff\1\57\1\4\13\uffff\1\13\2\uffff\1\15\1\16\1\17\1\20\1\21\1\23\1\24\6\uffff\1\31\1\32\1\33\1\60\1\37\3\uffff\1\61\1\62\1\64\1\66\1\uffff\1\67\1\70\1\71\1\72\1\73\3\uffff\1\44\10\uffff\1\34\14\uffff\1\30\3\uffff\1\2\1\5\1\uffff\1\3\12\uffff\1\42\6\uffff\1\51\1\uffff\1\26\7\uffff\1\35\11\uffff\1\41\3\uffff\1\63\1\45\15\uffff\1\12\1\uffff\1\14\1\54\1\uffff\1\47\1\uffff\1\43\6\uffff\1\7\1\36\1\uffff\1\10\3\uffff\1\25\1\46\1\50\1\uffff\1\40\1\uffff\1\6\4\uffff\1\52\1\uffff\1\56\4\uffff\1\55\1\11\4\uffff\1\22\1\27\1\uffff\1\53";
+        "\24\uffff\1\50\1\uffff\1\52\1\53\1\54\1\56\1\57\3\uffff\1\64\1\65\1\66\7\uffff\1\120\2\uffff\1\126\1\127\1\uffff\1\25\1\1\1\2\1\115\1\3\1\uffff\1\120\3\uffff\1\6\1\37\1\30\1\7\1\22\1\40\1\31\1\10\1\33\1\32\1\11\1\124\1\125\1\34\1\12\1\35\1\uffff\1\36\1\17\1\20\1\26\1\21\1\uffff\1\41\1\27\1\114\13\uffff\1\50\2\uffff\1\52\1\53\1\54\1\56\1\57\6\uffff\1\64\1\65\1\66\1\113\1\72\3\uffff\1\117\1\121\1\uffff\1\122\1\123\1\126\1\15\1\13\3\uffff\1\77\1\uffff\1\16\1\14\1\23\1\112\1\24\7\uffff\1\67\14\uffff\1\63\3\uffff\1\4\1\42\1\uffff\1\5\12\uffff\1\75\6\uffff\1\104\1\uffff\1\61\7\uffff\1\70\11\uffff\1\74\3\uffff\1\116\1\100\15\uffff\1\47\1\uffff\1\51\1\107\1\uffff\1\102\1\uffff\1\76\6\uffff\1\44\1\71\1\uffff\1\45\3\uffff\1\60\1\101\1\103\1\uffff\1\73\1\uffff\1\43\4\uffff\1\105\1\uffff\1\111\4\uffff\1\110\1\46\4\uffff\1\55\1\62\1\uffff\1\106";
     static final String DFA19_specialS =
-        "\1\0\35\uffff\1\1\1\2\u00c6\uffff}>";
+        "\1\2\44\uffff\1\0\1\1\u00e3\uffff}>";
     static final String[] DFA19_transitionS = {
-            "\11\46\2\45\2\46\1\45\22\46\1\45\1\46\1\36\1\25\3\46\1\37\1\21\1\20\2\46\1\17\1\46\1\4\1\44\1\42\11\43\1\30\1\11\1\15\1\1\1\16\1\34\1\46\32\41\1\26\1\46\1\27\1\40\1\41\1\46\1\24\1\41\1\12\1\3\1\5\1\10\2\41\1\7\4\41\1\23\1\33\2\41\1\32\1\6\1\22\1\41\1\2\1\31\3\41\1\13\1\35\1\14\uff82\46",
+            "\11\54\2\53\2\54\1\53\22\54\1\53\1\13\1\45\1\36\1\54\1\12\1\3\1\46\1\32\1\31\1\10\1\6\1\30\1\7\1\16\1\11\1\51\11\52\1\41\1\24\1\15\1\1\1\14\1\17\1\54\32\50\1\37\1\54\1\40\1\47\1\50\1\54\1\35\1\50\1\25\1\5\1\20\1\23\2\50\1\22\4\50\1\34\1\44\2\50\1\43\1\21\1\33\1\50\1\4\1\42\3\50\1\26\1\2\1\27\uff82\54",
+            "\1\55\1\56",
+            "\1\60",
+            "\1\62",
+            "\1\63",
+            "\1\65\3\uffff\1\67\5\uffff\1\66",
+            "\1\71\21\uffff\1\70",
+            "\1\75\17\uffff\1\73\1\74",
+            "\1\100\22\uffff\1\77",
+            "\1\103\4\uffff\1\104\15\uffff\1\102",
+            "\1\106",
+            "\1\110",
+            "\1\112",
+            "\1\114",
+            "\1\116",
+            "\1\121\13\uffff\1\120",
+            "\1\123\13\uffff\1\122",
+            "\1\124\2\uffff\1\125\1\uffff\1\126",
+            "\1\131\6\uffff\1\127\1\130",
+            "\1\132\7\uffff\1\134\5\uffff\1\133",
             "",
-            "\1\50",
-            "\1\52\3\uffff\1\54\5\uffff\1\53",
-            "\1\55",
-            "\1\60\13\uffff\1\57",
-            "\1\61\2\uffff\1\62\1\uffff\1\63",
-            "\1\66\6\uffff\1\64\1\65",
-            "\1\67\7\uffff\1\71\5\uffff\1\70",
-            "",
-            "\1\74\12\uffff\1\73",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\104\11\uffff\1\106\6\uffff\1\105",
-            "\1\107\17\uffff\1\110",
-            "\1\111",
-            "",
-            "",
-            "",
-            "\1\115",
-            "\1\117",
-            "\1\120",
-            "\1\121",
-            "\1\122",
-            "",
-            "\0\124",
-            "\0\124",
-            "\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "\12\126\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\13\uffff\1\125\6\uffff\1\126\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130\13\uffff\1\125",
-            "\12\126\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff\1\126\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "\1\131\4\uffff\1\132",
+            "\1\137\12\uffff\1\136",
             "",
             "",
             "",
-            "\1\135\5\uffff\1\134",
-            "",
-            "\1\136",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\140",
             "",
             "",
-            "\1\141",
-            "\1\142",
-            "\1\143",
-            "\1\144",
-            "\1\145",
-            "\1\146",
-            "\1\147",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\151",
+            "\1\145\11\uffff\1\147\6\uffff\1\146",
+            "\1\150\17\uffff\1\151",
             "\1\152",
-            "\1\153",
-            "",
-            "\1\154",
-            "\1\155\1\156",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\1\157",
+            "\1\156",
             "\1\160",
-            "\1\162\3\uffff\1\161",
-            "\1\163",
-            "\1\164",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\161",
+            "\1\162",
+            "\0\163",
+            "\0\163",
+            "\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\12\165\10\uffff\1\167\1\uffff\3\167\5\uffff\1\167\13\uffff\1\164\6\uffff\1\165\2\uffff\1\167\1\uffff\3\167\5\uffff\1\167\13\uffff\1\164",
+            "\12\165\10\uffff\1\167\1\uffff\3\167\5\uffff\1\167\22\uffff\1\165\2\uffff\1\167\1\uffff\3\167\5\uffff\1\167",
+            "",
+            "",
+            "\1\171",
             "",
             "",
             "",
             "",
             "",
-            "\1\166",
-            "\1\167",
-            "\1\170",
-            "",
-            "",
-            "",
-            "",
-            "\12\126\10\uffff\1\130\1\uffff\3\130\5\uffff\1\130\22\uffff\1\126\2\uffff\1\130\1\uffff\3\130\5\uffff\1\130",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\1\173\31\51",
+            "\1\174\5\uffff\1\173",
             "",
             "\1\175",
-            "\1\176",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\177",
-            "\1\u0080",
-            "\1\u0081",
-            "\1\u0082",
-            "\1\u0084\2\uffff\1\u0083",
-            "\1\u0085",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u0080",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u0083\15\uffff\1\u0082",
+            "",
+            "",
+            "",
+            "\1\u0085",
             "\1\u0086",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u0087",
             "\1\u0088",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
-            "\1\u008c",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u008d",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u008e",
             "\1\u008f",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u0091",
             "",
-            "\1\u0092",
+            "\1\u0090",
+            "\1\u0091\1\u0092",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u0093",
             "\1\u0094",
-            "",
-            "",
-            "\1\u0095",
-            "",
-            "\1\u0096",
+            "\1\u0096\3\uffff\1\u0095",
             "\1\u0097",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u0099",
+            "\1\u0098",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u009a",
             "\1\u009b",
             "\1\u009c",
-            "\1\u009d",
-            "\1\u009e",
-            "\1\u009f",
             "",
-            "\1\u00a0",
+            "",
+            "\12\165\10\uffff\1\167\1\uffff\3\167\5\uffff\1\167\22\uffff\1\165\2\uffff\1\167\1\uffff\3\167\5\uffff\1\167",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\1\u009f\31\64",
+            "",
             "\1\u00a1",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u00a2",
             "\1\u00a3",
             "\1\u00a4",
             "\1\u00a5",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00a8",
+            "\1\u00a6",
+            "\1\u00a8\2\uffff\1\u00a7",
             "\1\u00a9",
-            "\1\u00aa",
-            "\1\u00ab",
-            "\1\u00ac",
-            "\1\u00ad\16\uffff\1\u00ae",
             "",
+            "\1\u00aa",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00ac",
+            "\1\u00ad",
+            "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
-            "\1\u00b2",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00b3",
-            "\1\u00b4",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00b5",
+            "",
             "\1\u00b6",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00b7",
+            "\1\u00b8",
             "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\22\51\1\u00b9\7\51",
+            "",
+            "\1\u00b9",
+            "",
+            "\1\u00ba",
             "\1\u00bb",
-            "",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00bd",
             "\1\u00be",
             "\1\u00bf",
             "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00c3",
+            "",
+            "\1\u00c4",
             "\1\u00c5",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00c7",
             "\1\u00c8",
-            "",
             "\1\u00c9",
             "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00cc",
             "\1\u00cd",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00ce",
             "\1\u00cf",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00d1",
-            "",
-            "",
-            "\1\u00d2",
+            "\1\u00d0",
+            "\1\u00d1\16\uffff\1\u00d2",
             "",
             "\1\u00d3",
             "\1\u00d4",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "",
-            "",
+            "\1\u00d5",
             "\1\u00d6",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
+            "\1\u00d7",
             "\1\u00d8",
-            "\1\u00d9",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00da",
-            "\1\u00db",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00de",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\22\64\1\u00dd\7\64",
             "\1\u00df",
-            "\1\u00e0",
             "",
             "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00e1",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00e2",
+            "\1\u00e3",
             "\1\u00e4",
+            "\1\u00e5",
+            "\1\u00e6",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00e9",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00eb",
+            "\1\u00ec",
+            "",
+            "\1\u00ed",
             "",
             "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00f1",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00f3",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00f5",
+            "",
+            "",
+            "\1\u00f6",
+            "",
+            "\1\u00f7",
+            "\1\u00f8",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "",
+            "",
+            "\1\u00fa",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\1\u00fc",
+            "\1\u00fd",
+            "\1\u00fe",
+            "\1\u00ff",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0102",
+            "\1\u0103",
+            "\1\u0104",
+            "",
+            "",
+            "\1\u0105",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0108",
+            "",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             ""
     };
 
@@ -2658,111 +3471,123 @@ public class InternalTutorialLexer extends Lexer {
             this.transition = DFA19_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | RULE_STRING | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | RULE_STRING | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA19_37 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA19_37>='\u0000' && LA19_37<='\uFFFF')) ) {s = 115;}
+
+                        else s = 44;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA19_38 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA19_38>='\u0000' && LA19_38<='\uFFFF')) ) {s = 115;}
+
+                        else s = 44;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA19_0 = input.LA(1);
 
                         s = -1;
                         if ( (LA19_0=='=') ) {s = 1;}
 
-                        else if ( (LA19_0=='v') ) {s = 2;}
+                        else if ( (LA19_0=='|') ) {s = 2;}
 
-                        else if ( (LA19_0=='d') ) {s = 3;}
+                        else if ( (LA19_0=='&') ) {s = 3;}
 
-                        else if ( (LA19_0=='.') ) {s = 4;}
+                        else if ( (LA19_0=='v') ) {s = 4;}
 
-                        else if ( (LA19_0=='e') ) {s = 5;}
+                        else if ( (LA19_0=='d') ) {s = 5;}
 
-                        else if ( (LA19_0=='s') ) {s = 6;}
+                        else if ( (LA19_0=='+') ) {s = 6;}
 
-                        else if ( (LA19_0=='i') ) {s = 7;}
+                        else if ( (LA19_0=='-') ) {s = 7;}
 
-                        else if ( (LA19_0=='f') ) {s = 8;}
+                        else if ( (LA19_0=='*') ) {s = 8;}
 
-                        else if ( (LA19_0==';') ) {s = 9;}
+                        else if ( (LA19_0=='/') ) {s = 9;}
 
-                        else if ( (LA19_0=='c') ) {s = 10;}
+                        else if ( (LA19_0=='%') ) {s = 10;}
 
-                        else if ( (LA19_0=='{') ) {s = 11;}
+                        else if ( (LA19_0=='!') ) {s = 11;}
 
-                        else if ( (LA19_0=='}') ) {s = 12;}
+                        else if ( (LA19_0=='>') ) {s = 12;}
 
                         else if ( (LA19_0=='<') ) {s = 13;}
 
-                        else if ( (LA19_0=='>') ) {s = 14;}
+                        else if ( (LA19_0=='.') ) {s = 14;}
 
-                        else if ( (LA19_0==',') ) {s = 15;}
+                        else if ( (LA19_0=='?') ) {s = 15;}
 
-                        else if ( (LA19_0==')') ) {s = 16;}
+                        else if ( (LA19_0=='e') ) {s = 16;}
 
-                        else if ( (LA19_0=='(') ) {s = 17;}
+                        else if ( (LA19_0=='s') ) {s = 17;}
 
-                        else if ( (LA19_0=='t') ) {s = 18;}
+                        else if ( (LA19_0=='i') ) {s = 18;}
 
-                        else if ( (LA19_0=='n') ) {s = 19;}
+                        else if ( (LA19_0=='f') ) {s = 19;}
 
-                        else if ( (LA19_0=='a') ) {s = 20;}
+                        else if ( (LA19_0==';') ) {s = 20;}
 
-                        else if ( (LA19_0=='#') ) {s = 21;}
+                        else if ( (LA19_0=='c') ) {s = 21;}
 
-                        else if ( (LA19_0=='[') ) {s = 22;}
+                        else if ( (LA19_0=='{') ) {s = 22;}
 
-                        else if ( (LA19_0==']') ) {s = 23;}
+                        else if ( (LA19_0=='}') ) {s = 23;}
 
-                        else if ( (LA19_0==':') ) {s = 24;}
+                        else if ( (LA19_0==',') ) {s = 24;}
 
-                        else if ( (LA19_0=='w') ) {s = 25;}
+                        else if ( (LA19_0==')') ) {s = 25;}
 
-                        else if ( (LA19_0=='r') ) {s = 26;}
+                        else if ( (LA19_0=='(') ) {s = 26;}
 
-                        else if ( (LA19_0=='o') ) {s = 27;}
+                        else if ( (LA19_0=='t') ) {s = 27;}
 
-                        else if ( (LA19_0=='?') ) {s = 28;}
+                        else if ( (LA19_0=='n') ) {s = 28;}
 
-                        else if ( (LA19_0=='|') ) {s = 29;}
+                        else if ( (LA19_0=='a') ) {s = 29;}
 
-                        else if ( (LA19_0=='\"') ) {s = 30;}
+                        else if ( (LA19_0=='#') ) {s = 30;}
 
-                        else if ( (LA19_0=='\'') ) {s = 31;}
+                        else if ( (LA19_0=='[') ) {s = 31;}
 
-                        else if ( (LA19_0=='^') ) {s = 32;}
+                        else if ( (LA19_0==']') ) {s = 32;}
 
-                        else if ( ((LA19_0>='A' && LA19_0<='Z')||LA19_0=='_'||LA19_0=='b'||(LA19_0>='g' && LA19_0<='h')||(LA19_0>='j' && LA19_0<='m')||(LA19_0>='p' && LA19_0<='q')||LA19_0=='u'||(LA19_0>='x' && LA19_0<='z')) ) {s = 33;}
+                        else if ( (LA19_0==':') ) {s = 33;}
 
-                        else if ( (LA19_0=='0') ) {s = 34;}
+                        else if ( (LA19_0=='w') ) {s = 34;}
 
-                        else if ( ((LA19_0>='1' && LA19_0<='9')) ) {s = 35;}
+                        else if ( (LA19_0=='r') ) {s = 35;}
 
-                        else if ( (LA19_0=='/') ) {s = 36;}
+                        else if ( (LA19_0=='o') ) {s = 36;}
 
-                        else if ( ((LA19_0>='\t' && LA19_0<='\n')||LA19_0=='\r'||LA19_0==' ') ) {s = 37;}
+                        else if ( (LA19_0=='\"') ) {s = 37;}
 
-                        else if ( ((LA19_0>='\u0000' && LA19_0<='\b')||(LA19_0>='\u000B' && LA19_0<='\f')||(LA19_0>='\u000E' && LA19_0<='\u001F')||LA19_0=='!'||(LA19_0>='$' && LA19_0<='&')||(LA19_0>='*' && LA19_0<='+')||LA19_0=='-'||LA19_0=='@'||LA19_0=='\\'||LA19_0=='`'||(LA19_0>='~' && LA19_0<='\uFFFF')) ) {s = 38;}
+                        else if ( (LA19_0=='\'') ) {s = 38;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA19_30 = input.LA(1);
+                        else if ( (LA19_0=='^') ) {s = 39;}
 
-                        s = -1;
-                        if ( ((LA19_30>='\u0000' && LA19_30<='\uFFFF')) ) {s = 84;}
+                        else if ( ((LA19_0>='A' && LA19_0<='Z')||LA19_0=='_'||LA19_0=='b'||(LA19_0>='g' && LA19_0<='h')||(LA19_0>='j' && LA19_0<='m')||(LA19_0>='p' && LA19_0<='q')||LA19_0=='u'||(LA19_0>='x' && LA19_0<='z')) ) {s = 40;}
 
-                        else s = 38;
+                        else if ( (LA19_0=='0') ) {s = 41;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA19_31 = input.LA(1);
+                        else if ( ((LA19_0>='1' && LA19_0<='9')) ) {s = 42;}
 
-                        s = -1;
-                        if ( ((LA19_31>='\u0000' && LA19_31<='\uFFFF')) ) {s = 84;}
+                        else if ( ((LA19_0>='\t' && LA19_0<='\n')||LA19_0=='\r'||LA19_0==' ') ) {s = 43;}
 
-                        else s = 38;
+                        else if ( ((LA19_0>='\u0000' && LA19_0<='\b')||(LA19_0>='\u000B' && LA19_0<='\f')||(LA19_0>='\u000E' && LA19_0<='\u001F')||LA19_0=='$'||LA19_0=='@'||LA19_0=='\\'||LA19_0=='`'||(LA19_0>='~' && LA19_0<='\uFFFF')) ) {s = 44;}
 
                         if ( s>=0 ) return s;
                         break;

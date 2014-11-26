@@ -699,17 +699,17 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_1_0_0 = (Group)cGroup_1_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_1_0_0_0 = (Action)cGroup_1_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_1_0_0_1 = (Assignment)cGroup_1_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpMultiAssignParserRuleCall_1_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
 		private final RuleCall cRightOperandXAssignmentParserRuleCall_1_1_1_0 = (RuleCall)cRightOperandAssignment_1_1_1.eContents().get(0);
 		
 		//XAssignment returns XExpression hidden(SL_COMMENT, WS):
 		//	{XAssignment} feature=ID OpSingleAssign value=XAssignment | XOrExpression (=> ({XBinaryOperation.leftOperand=current}
-		//	feature=ID) rightOperand=XAssignment)?;
+		//	feature=OpMultiAssign) rightOperand=XAssignment)?;
 		public ParserRule getRule() { return rule; }
 
 		//{XAssignment} feature=ID OpSingleAssign value=XAssignment | XOrExpression (=> ({XBinaryOperation.leftOperand=current}
-		//feature=ID) rightOperand=XAssignment)?
+		//feature=OpMultiAssign) rightOperand=XAssignment)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{XAssignment} feature=ID OpSingleAssign value=XAssignment
@@ -733,29 +733,29 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//XAssignment
 		public RuleCall getValueXAssignmentParserRuleCall_0_3_0() { return cValueXAssignmentParserRuleCall_0_3_0; }
 
-		//XOrExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAssignment)?
+		//XOrExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//XOrExpression
 		public RuleCall getXOrExpressionParserRuleCall_1_0() { return cXOrExpressionParserRuleCall_1_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAssignment)?
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment)?
 		public Group getGroup_1_1() { return cGroup_1_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpMultiAssign)
 		public Group getGroup_1_1_0() { return cGroup_1_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpMultiAssign
 		public Group getGroup_1_1_0_0() { return cGroup_1_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpMultiAssign
 		public Assignment getFeatureAssignment_1_1_0_0_1() { return cFeatureAssignment_1_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_1_0_0_1_0; }
+		//OpMultiAssign
+		public RuleCall getFeatureOpMultiAssignParserRuleCall_1_1_0_0_1_0() { return cFeatureOpMultiAssignParserRuleCall_1_1_0_0_1_0; }
 
 		//rightOperand=XAssignment
 		public Assignment getRightOperandAssignment_1_1_1() { return cRightOperandAssignment_1_1_1; }
@@ -849,37 +849,37 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpOrParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXAndExpressionParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XOrExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAndExpression)*;
+		//	XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAndExpression)*
+		//XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XAndExpression
 		public RuleCall getXAndExpressionParserRuleCall_0() { return cXAndExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAndExpression)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpOr)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpOr
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpOr
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpOr
+		public RuleCall getFeatureOpOrParserRuleCall_1_0_0_1_0() { return cFeatureOpOrParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XAndExpression
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -909,37 +909,37 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpAndParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXEqualityExpressionParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XAndExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XEqualityExpression)*;
+		//	XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XEqualityExpression)*
+		//XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XEqualityExpression
 		public RuleCall getXEqualityExpressionParserRuleCall_0() { return cXEqualityExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XEqualityExpression)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpAnd)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpAnd
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpAnd
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpAnd
+		public RuleCall getFeatureOpAndParserRuleCall_1_0_0_1_0() { return cFeatureOpAndParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XEqualityExpression
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -969,37 +969,39 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpEqualityParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXRelationalExpressionParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XEqualityExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XRelationalExpression)*;
+		//	XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpEquality)
+		//	rightOperand=XRelationalExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XRelationalExpression)*
+		//XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpEquality)
+		//rightOperand=XRelationalExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XRelationalExpression
 		public RuleCall getXRelationalExpressionParserRuleCall_0() { return cXRelationalExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XRelationalExpression)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpEquality) rightOperand=XRelationalExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpEquality)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpEquality
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpEquality
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpEquality
+		public RuleCall getFeatureOpEqualityParserRuleCall_1_0_0_1_0() { return cFeatureOpEqualityParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XRelationalExpression
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -1053,24 +1055,24 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_1_0_0 = (Group)cGroup_1_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_1_0_0_0 = (Action)cGroup_1_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_1_0_0_1 = (Assignment)cGroup_1_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpCompareParserRuleCall_1_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
 		private final RuleCall cRightOperandXOtherOperatorExpressionParserRuleCall_1_1_1_0 = (RuleCall)cRightOperandAssignment_1_1_1.eContents().get(0);
 		
 		//XRelationalExpression returns XExpression hidden(SL_COMMENT, WS):
 		//	XOtherOperatorExpression (=> ({XInstanceOfExpression.expression=current} "instanceof") type=ID | =>
-		//	({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XOtherOperatorExpression)*;
+		//	({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression)*;
 		public ParserRule getRule() { return rule; }
 
 		//XOtherOperatorExpression (=> ({XInstanceOfExpression.expression=current} "instanceof") type=ID | =>
-		//({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XOtherOperatorExpression)*
+		//({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XOtherOperatorExpression
 		public RuleCall getXOtherOperatorExpressionParserRuleCall_0() { return cXOtherOperatorExpressionParserRuleCall_0; }
 
 		//(=> ({XInstanceOfExpression.expression=current} "instanceof") type=ID | => ({XBinaryOperation.leftOperand=current}
-		//feature=ID) rightOperand=XOtherOperatorExpression)*
+		//feature=OpCompare) rightOperand=XOtherOperatorExpression)*
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//=> ({XInstanceOfExpression.expression=current} "instanceof") type=ID
@@ -1094,23 +1096,23 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getTypeIDTerminalRuleCall_1_0_1_0() { return cTypeIDTerminalRuleCall_1_0_1_0; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XOtherOperatorExpression
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression
 		public Group getGroup_1_1() { return cGroup_1_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpCompare)
 		public Group getGroup_1_1_0() { return cGroup_1_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpCompare
 		public Group getGroup_1_1_0_0() { return cGroup_1_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpCompare
 		public Assignment getFeatureAssignment_1_1_0_0_1() { return cFeatureAssignment_1_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_1_0_0_1_0; }
+		//OpCompare
+		public RuleCall getFeatureOpCompareParserRuleCall_1_1_0_0_1_0() { return cFeatureOpCompareParserRuleCall_1_1_0_0_1_0; }
 
 		//rightOperand=XOtherOperatorExpression
 		public Assignment getRightOperandAssignment_1_1_1() { return cRightOperandAssignment_1_1_1; }
@@ -1164,37 +1166,37 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpOtherParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXAdditiveExpressionParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XOtherOperatorExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAdditiveExpression)*;
+		//	XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOther) rightOperand=XAdditiveExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAdditiveExpression)*
+		//XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOther) rightOperand=XAdditiveExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XAdditiveExpression
 		public RuleCall getXAdditiveExpressionParserRuleCall_0() { return cXAdditiveExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAdditiveExpression)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpOther) rightOperand=XAdditiveExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpOther)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpOther
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpOther
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpOther
+		public RuleCall getFeatureOpOtherParserRuleCall_1_0_0_1_0() { return cFeatureOpOtherParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XAdditiveExpression
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -1328,39 +1330,39 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpAddParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXMultiplicativeExpressionParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XAdditiveExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//	XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAdd)
 		//	rightOperand=XMultiplicativeExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAdd)
 		//rightOperand=XMultiplicativeExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//XMultiplicativeExpression
 		public RuleCall getXMultiplicativeExpressionParserRuleCall_0() { return cXMultiplicativeExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XMultiplicativeExpression)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpAdd) rightOperand=XMultiplicativeExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpAdd)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpAdd
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpAdd
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpAdd
+		public RuleCall getFeatureOpAddParserRuleCall_1_0_0_1_0() { return cFeatureOpAddParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XMultiplicativeExpression
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -1398,37 +1400,37 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
 		private final Action cXBinaryOperationLeftOperandAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpMultiParserRuleCall_1_0_0_1_0 = (RuleCall)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightOperandAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightOperandXUnaryOperationParserRuleCall_1_1_0 = (RuleCall)cRightOperandAssignment_1_1.eContents().get(0);
 		
 		//XMultiplicativeExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XUnaryOperation)*;
+		//	XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*;
 		public ParserRule getRule() { return rule; }
 
-		//XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XUnaryOperation)*
+		//XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*
 		public Group getGroup() { return cGroup; }
 
 		//XUnaryOperation
 		public RuleCall getXUnaryOperationParserRuleCall_0() { return cXUnaryOperationParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XUnaryOperation)*
+		//(=> ({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.leftOperand=current} feature=ID)
+		//=> ({XBinaryOperation.leftOperand=current} feature=OpMulti)
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.leftOperand=current} feature=ID
+		//{XBinaryOperation.leftOperand=current} feature=OpMulti
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
 		//{XBinaryOperation.leftOperand=current}
 		public Action getXBinaryOperationLeftOperandAction_1_0_0_0() { return cXBinaryOperationLeftOperandAction_1_0_0_0; }
 
-		//feature=ID
+		//feature=OpMulti
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_0_1_0; }
+		//OpMulti
+		public RuleCall getFeatureOpMultiParserRuleCall_1_0_0_1_0() { return cFeatureOpMultiParserRuleCall_1_0_0_1_0; }
 
 		//rightOperand=XUnaryOperation
 		public Assignment getRightOperandAssignment_1_1() { return cRightOperandAssignment_1_1; }
@@ -1471,29 +1473,29 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cXUnaryOperationAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_0_1_0 = (RuleCall)cFeatureAssignment_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpUnaryParserRuleCall_0_1_0 = (RuleCall)cFeatureAssignment_0_1.eContents().get(0);
 		private final Assignment cOperandAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cOperandXUnaryOperationParserRuleCall_0_2_0 = (RuleCall)cOperandAssignment_0_2.eContents().get(0);
 		private final RuleCall cXCastedExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//XUnaryOperation returns XExpression hidden(SL_COMMENT, WS):
-		//	{XUnaryOperation} feature=ID operand=XUnaryOperation | => XCastedExpression;
+		//	{XUnaryOperation} feature=OpUnary operand=XUnaryOperation | => XCastedExpression;
 		public ParserRule getRule() { return rule; }
 
-		//{XUnaryOperation} feature=ID operand=XUnaryOperation | => XCastedExpression
+		//{XUnaryOperation} feature=OpUnary operand=XUnaryOperation | => XCastedExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//{XUnaryOperation} feature=ID operand=XUnaryOperation
+		//{XUnaryOperation} feature=OpUnary operand=XUnaryOperation
 		public Group getGroup_0() { return cGroup_0; }
 
 		//{XUnaryOperation}
 		public Action getXUnaryOperationAction_0_0() { return cXUnaryOperationAction_0_0; }
 
-		//feature=ID
+		//feature=OpUnary
 		public Assignment getFeatureAssignment_0_1() { return cFeatureAssignment_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_0_1_0() { return cFeatureIDTerminalRuleCall_0_1_0; }
+		//OpUnary
+		public RuleCall getFeatureOpUnaryParserRuleCall_0_1_0() { return cFeatureOpUnaryParserRuleCall_0_1_0; }
 
 		//operand=XUnaryOperation
 		public Assignment getOperandAssignment_0_2() { return cOperandAssignment_0_2; }
@@ -1581,32 +1583,32 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Action cXPostfixOperationOperandAction_1_0_0 = (Action)cGroup_1_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
-		private final RuleCall cFeatureIDTerminalRuleCall_1_0_1_0 = (RuleCall)cFeatureAssignment_1_0_1.eContents().get(0);
+		private final RuleCall cFeatureOpPostfixParserRuleCall_1_0_1_0 = (RuleCall)cFeatureAssignment_1_0_1.eContents().get(0);
 		
 		//XPostfixOperation returns XExpression hidden(SL_COMMENT, WS):
-		//	XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=ID)?;
+		//	XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=OpPostfix)?;
 		public ParserRule getRule() { return rule; }
 
-		//XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=ID)?
+		//XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=OpPostfix)?
 		public Group getGroup() { return cGroup; }
 
 		//XMemberFeatureCall
 		public RuleCall getXMemberFeatureCallParserRuleCall_0() { return cXMemberFeatureCallParserRuleCall_0; }
 
-		//=> ({XPostfixOperation.operand=current} feature=ID)?
+		//=> ({XPostfixOperation.operand=current} feature=OpPostfix)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{XPostfixOperation.operand=current} feature=ID
+		//{XPostfixOperation.operand=current} feature=OpPostfix
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
 		//{XPostfixOperation.operand=current}
 		public Action getXPostfixOperationOperandAction_1_0_0() { return cXPostfixOperationOperandAction_1_0_0; }
 
-		//feature=ID
+		//feature=OpPostfix
 		public Assignment getFeatureAssignment_1_0_1() { return cFeatureAssignment_1_0_1; }
 
-		//ID
-		public RuleCall getFeatureIDTerminalRuleCall_1_0_1_0() { return cFeatureIDTerminalRuleCall_1_0_1_0; }
+		//OpPostfix
+		public RuleCall getFeatureOpPostfixParserRuleCall_1_0_1_0() { return cFeatureOpPostfixParserRuleCall_1_0_1_0; }
 	}
 
 	public class OpPostfixElements extends AbstractParserRuleElementFinder {
@@ -4064,7 +4066,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 
 	//XAssignment returns XExpression hidden(SL_COMMENT, WS):
 	//	{XAssignment} feature=ID OpSingleAssign value=XAssignment | XOrExpression (=> ({XBinaryOperation.leftOperand=current}
-	//	feature=ID) rightOperand=XAssignment)?;
+	//	feature=OpMultiAssign) rightOperand=XAssignment)?;
 	public XAssignmentElements getXAssignmentAccess() {
 		return pXAssignment;
 	}
@@ -4094,7 +4096,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XOrExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAndExpression)*;
+	//	XAndExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*;
 	public XOrExpressionElements getXOrExpressionAccess() {
 		return pXOrExpression;
 	}
@@ -4114,7 +4116,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XAndExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XEqualityExpression)*;
+	//	XEqualityExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*;
 	public XAndExpressionElements getXAndExpressionAccess() {
 		return pXAndExpression;
 	}
@@ -4134,7 +4136,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XEqualityExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XRelationalExpression)*;
+	//	XRelationalExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpEquality)
+	//	rightOperand=XRelationalExpression)*;
 	public XEqualityExpressionElements getXEqualityExpressionAccess() {
 		return pXEqualityExpression;
 	}
@@ -4155,7 +4158,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 
 	//XRelationalExpression returns XExpression hidden(SL_COMMENT, WS):
 	//	XOtherOperatorExpression (=> ({XInstanceOfExpression.expression=current} "instanceof") type=ID | =>
-	//	({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XOtherOperatorExpression)*;
+	//	({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression)*;
 	public XRelationalExpressionElements getXRelationalExpressionAccess() {
 		return pXRelationalExpression;
 	}
@@ -4175,7 +4178,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XOtherOperatorExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XAdditiveExpression)*;
+	//	XAdditiveExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpOther) rightOperand=XAdditiveExpression)*;
 	public XOtherOperatorExpressionElements getXOtherOperatorExpressionAccess() {
 		return pXOtherOperatorExpression;
 	}
@@ -4195,7 +4198,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XAdditiveExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=ID)
+	//	XMultiplicativeExpression (=> ({XBinaryOperation.leftOperand=current} feature=OpAdd)
 	//	rightOperand=XMultiplicativeExpression)*;
 	public XAdditiveExpressionElements getXAdditiveExpressionAccess() {
 		return pXAdditiveExpression;
@@ -4216,7 +4219,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XMultiplicativeExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=ID) rightOperand=XUnaryOperation)*;
+	//	XUnaryOperation (=> ({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*;
 	public XMultiplicativeExpressionElements getXMultiplicativeExpressionAccess() {
 		return pXMultiplicativeExpression;
 	}
@@ -4236,7 +4239,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XUnaryOperation returns XExpression hidden(SL_COMMENT, WS):
-	//	{XUnaryOperation} feature=ID operand=XUnaryOperation | => XCastedExpression;
+	//	{XUnaryOperation} feature=OpUnary operand=XUnaryOperation | => XCastedExpression;
 	public XUnaryOperationElements getXUnaryOperationAccess() {
 		return pXUnaryOperation;
 	}
@@ -4266,7 +4269,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XPostfixOperation returns XExpression hidden(SL_COMMENT, WS):
-	//	XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=ID)?;
+	//	XMemberFeatureCall => ({XPostfixOperation.operand=current} feature=OpPostfix)?;
 	public XPostfixOperationElements getXPostfixOperationAccess() {
 		return pXPostfixOperation;
 	}
