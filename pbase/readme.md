@@ -184,8 +184,8 @@ terminal END : '|}';
 <table>
   <tr>
     <td><p>We can then run our code in a new instance of Eclipse, remove the curly brackets and confirm that this parses correctly:</p>
-    <p>OOPS somthing wrong here - The code is not quite correct, I need to sort this out.  </p></td>
-    <td><img src="pbase2.png" alt="image" width="403" height="285" /></td>
+    </td>
+    <td><img src="pbase2.png" alt="image" width="363" height="200" /></td>
   </tr>
 </table>
 <h3>Terminating Statements</h3>
