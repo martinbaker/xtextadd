@@ -135,10 +135,13 @@ we have: while a &lt; n:</p></td>
     <td><pre>grammar org.eclipse.xtext.common2.PythonTerminals</pre></td>
   </tr>
 </table>
-<p>We also need to use a <a href="https://github.com/martinbaker/xtextadd/blob/master/whitespaceblock/com.euclideanspace.whitespaceblock/src/com/euclideanspace/whitespaceblock/PythonesqueTokenSource.java">cutomised token source</a> also  discussed on <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">page here</a>. </p>
-<p>I am hoping this will eventually be built into Xtext and I am hoping that using the PythonTerminals grammar will automatically install the customised TokenSource but, for now, we will have to add it in manually. </p>
+<p>We also need to use a <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PythonesqueTokenSource.java">customised token source</a> also  discussed on <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">page here</a>. I am hoping this will eventually be built into Xtext and I am hoping that using the PythonTerminals grammar will automatically install the customised TokenSource but, for now, we will have to add it in manually.</p>
+<p>We therefore add a class to represent 'phantom' tokens this class is here: <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PhantomToken.java">PhantomToken</a>. Add it to your project.</p>
+<p>Next we need to  add the code that inserts these phantom tokens when needed, this is the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PythonesqueTokenSource.java">customised token source</a> so you also need to add that to your project.</p>
+<p>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java">TutorialRuntimeModule.java</a> / <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialStandaloneSetup.java">TutorialStandaloneSetup.java</a> . Make sure the modified versions of all these are in your project. </p>
+<p>We gan now go on to modify the grammar syntax: </p>
 <h3>Blocks</h3>
-<p>The main thing we want to do is delineate blocks using whitespace. As discussed already, most of the work for this is done in the customised TokenSource. In the grammar we replace '{' and '}' by BEGIN and END. Of course the user does not have to type BEGIN and END, these are added automatically by our TokenSource class when the indent level changes. Each time we increase the indent TokenSource puts this on a stack (pile) to make sure that the indents are unwound correctly. </p>
+<p>The main thing we want to do is delineate blocks using whitespace. As discussed already, most of the work for this is done in the customised TokenSource.</p>
 <table border="1">
   <tr>
     <th bgcolor="#FFFF00">Java-like</th>
@@ -157,6 +160,25 @@ we have: while a &lt; n:</p></td>
 	<span class="style1">END</span>;</pre></td>
   </tr>
 </table>
+<p>In the grammar we replace '{' and '}' by BEGIN and END. Of course the user does not have to type BEGIN and END, these are added automatically by our TokenSource class when the indent level changes. Each time we increase the indent TokenSource puts this on a stack (pile) to make sure that the indents are unwound correctly. </p>
+<table>
+  <tr>
+    <td>So, to implement this add somthing like this:<br />
+    into your grammar file. Then change '{' and '}' to BEGIN and END as discussed above. </td>
+    <td><table border="1">
+      <tr>
+        <td><pre>/* phantom tokens:
+ * use something other than '{' and '}' to avoid clash in Python so we use '{|' and '|}' 
+ * TODO Should really use something more obscure to avoid clash in any user language
+ */
+terminal BEGIN : '{|';
+terminal END : '|}';
+</pre></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
 <h3>Terminating Statements</h3>
 <p>Java-like languages use a semicolon ';' to mark the termination of a statement. In a more Python-like DSL we may want a new-line to mark the termination of a statement. One way to approach this is to split the terminal WS (whitespace) into two parts: SP for space and tab and NL for newline and carriage return. We can the replace ';' in the grammar by NL. This is shown in the following example: </p>
 <table border="1">

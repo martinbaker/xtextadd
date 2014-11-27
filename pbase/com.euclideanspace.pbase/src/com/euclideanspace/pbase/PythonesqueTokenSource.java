@@ -85,9 +85,9 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
 		} else if (token.getType() == InternalTutorialLexer.RULE_SL_COMMENT) {
 		  indent=0; // comment contains new line
 		  return false;
-		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
-		  state = StateValues.CONTINUATION;
-		  return false;
+//		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
+//		  state = StateValues.CONTINUATION;
+//		  return false;
 		} else {
 		  state = StateValues.BODY;
 		  initialIndent=indent;
@@ -100,9 +100,9 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
 		} else if (token.getType() == InternalTutorialLexer.RULE_SL_COMMENT) {
 		  indent=0; // comment contains new line
 		  return false;
-		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
-		  state = StateValues.CONTINUATION;
-		  return false;
+//		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
+//		  state = StateValues.CONTINUATION;
+//		  return false;
 		} else {
 		  state = StateValues.BODY;
 		  int peek =initialIndent; // if pile is empty use initialIndent
@@ -131,9 +131,9 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
 	    } else if (token.getType() == InternalTutorialLexer.RULE_SL_COMMENT) {
 	    	indent = 0;
 	    	state = StateValues.INDENT;
-		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
-			state = StateValues.CONTINUATION;
-			return false;
+//		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
+//			state = StateValues.CONTINUATION;
+//			return false;
 		} else {
 			return false;
 		}
@@ -149,9 +149,9 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
     		// if comment follows CONTINUATION then don't change indent on new line
     		state = StateValues.BODY;
     		return false;
-		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
-			// changes nothing
-			return false;
+//		} else if (token.getType() == InternalTutorialLexer.RULE_LINECONTINUATION) {
+//			// changes nothing
+//			return false;
 		} else {
 			return false;
 		}
@@ -163,11 +163,11 @@ public class PythonesqueTokenSource extends AbstractSplittingTokenSource {
   @Override
   protected void doSplitToken(Token token, ITokenAcceptor result) {
 	while (indentIncrement>0) {
-		result.accept(new PhantomToken(InternalTutorialLexer.RULE_BEGIN,lastToken));
+//		result.accept(new PhantomToken(InternalTutorialLexer.RULE_BEGIN,lastToken));
 		indentIncrement--;
 	}
 	while (indentDecrement>0) {
-		result.accept(new PhantomToken(InternalTutorialLexer.RULE_END,lastToken));
+//		result.accept(new PhantomToken(InternalTutorialLexer.RULE_END,lastToken));
 		indentDecrement--;
 	}
     result.accept(token);
