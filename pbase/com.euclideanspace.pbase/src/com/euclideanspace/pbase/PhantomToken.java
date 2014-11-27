@@ -54,13 +54,14 @@ public class PhantomToken extends CommonToken {
 		setText(template.getText());
 	}
 
-	/** Text value is irrelevant since we always return "".
+	/** We need to override default behavior because, if text value is left at null, then
+	 * text will be fetched from character stream which is not what we want.
 	 * @author Martin Baker
 	 */
-	//@Override
-	//public String getText() {
-	//	return "";
-	//}
+	@Override
+	public String getText() {
+		return "";
+	}
 
 	@Override
 	public String toString() {
