@@ -425,9 +425,9 @@ this_ID_25=RULE_ID
     { 
     newLeafNode(this_ID_25, grammarAccess.getMemberAccess().getIDTerminalRuleCall_0_7_2_1()); 
     }
-)*)?	otherlv_26='{' 
-    {
-    	newLeafNode(otherlv_26, grammarAccess.getMemberAccess().getLeftCurlyBracketKeyword_0_8());
+)*)?this_BEGIN_26=RULE_BEGIN
+    { 
+    newLeafNode(this_BEGIN_26, grammarAccess.getMemberAccess().getBEGINTerminalRuleCall_0_8()); 
     }
 (
 (
@@ -447,9 +447,9 @@ this_ID_25=RULE_ID
 	    }
 
 )
-)*	otherlv_28='}' 
-    {
-    	newLeafNode(otherlv_28, grammarAccess.getMemberAccess().getRightCurlyBracketKeyword_0_10());
+)*this_END_28=RULE_END
+    { 
+    newLeafNode(this_END_28, grammarAccess.getMemberAccess().getENDTerminalRuleCall_0_10()); 
     }
 )
     |((	otherlv_29='def' 
@@ -3365,9 +3365,9 @@ ruleXSetLiteral returns [EObject current=null]
     {
     	newLeafNode(otherlv_1, grammarAccess.getXSetLiteralAccess().getNumberSignKeyword_1());
     }
-	otherlv_2='{' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getXSetLiteralAccess().getLeftCurlyBracketKeyword_2());
+this_BEGIN_2=RULE_BEGIN
+    { 
+    newLeafNode(this_BEGIN_2, grammarAccess.getXSetLiteralAccess().getBEGINTerminalRuleCall_2()); 
     }
 ((
 (
@@ -3409,9 +3409,9 @@ ruleXSetLiteral returns [EObject current=null]
 	    }
 
 )
-))*)?	otherlv_6='}' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getXSetLiteralAccess().getRightCurlyBracketKeyword_4());
+))*)?this_END_6=RULE_END
+    { 
+    newLeafNode(this_END_6, grammarAccess.getXSetLiteralAccess().getENDTerminalRuleCall_4()); 
     }
 )
 ;
@@ -4125,9 +4125,9 @@ RULE_ID
 	    }
 
 )
-)))	otherlv_10='{' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getXSwitchExpressionAccess().getLeftCurlyBracketKeyword_3());
+)))this_BEGIN_10=RULE_BEGIN
+    { 
+    newLeafNode(this_BEGIN_10, grammarAccess.getXSwitchExpressionAccess().getBEGINTerminalRuleCall_3()); 
     }
 (
 (
@@ -4173,9 +4173,9 @@ RULE_ID
 	    }
 
 )
-))?	otherlv_15='}' 
-    {
-    	newLeafNode(otherlv_15, grammarAccess.getXSwitchExpressionAccess().getRightCurlyBracketKeyword_6());
+))?this_END_15=RULE_END
+    { 
+    newLeafNode(this_END_15, grammarAccess.getXSwitchExpressionAccess().getENDTerminalRuleCall_6()); 
     }
 )
 ;
@@ -4792,9 +4792,9 @@ ruleXBlockExpression returns [EObject current=null]
             grammarAccess.getXBlockExpressionAccess().getXBlockExpressionAction_0(),
             $current);
     }
-)	otherlv_1='{' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getXBlockExpressionAccess().getLeftCurlyBracketKeyword_1());
+)this_BEGIN_1=RULE_BEGIN
+    { 
+    newLeafNode(this_BEGIN_1, grammarAccess.getXBlockExpressionAccess().getBEGINTerminalRuleCall_1()); 
     }
 ((
 (
@@ -4818,9 +4818,9 @@ ruleXBlockExpression returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getXBlockExpressionAccess().getSemicolonKeyword_2_1());
     }
-)?)*	otherlv_4='}' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getXBlockExpressionAccess().getRightCurlyBracketKeyword_3());
+)?)*this_END_4=RULE_END
+    { 
+    newLeafNode(this_END_4, grammarAccess.getXBlockExpressionAccess().getENDTerminalRuleCall_3()); 
     }
 )
 ;
@@ -5966,7 +5966,6 @@ ruleXReturnExpression returns [EObject current=null]
  | 	'-' 
  | 	'+' 
  | 	'new' 
- | 	'{' 
  | 	'switch' 
  | 	'synchronized' 
  | 	'<' 
@@ -5989,7 +5988,7 @@ ruleXReturnExpression returns [EObject current=null]
  | 	'return' 
  | 	'try' 
  | 	'(' 
- | 	RULE_ID | 	RULE_HEX | 	RULE_INT | 	RULE_DECIMAL | 	RULE_STRING)=>
+ | 	RULE_ID | 	RULE_BEGIN | 	RULE_HEX | 	RULE_INT | 	RULE_DECIMAL | 	RULE_STRING)=>
 (
 		{ 
 	        newCompositeNode(grammarAccess.getXReturnExpressionAccess().getExpressionXExpressionParserRuleCall_2_0()); 
@@ -6486,9 +6485,13 @@ RULE_INT : '0'..'9' ('0'..'9'|'_')*;
 
 RULE_DECIMAL : RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)? (('b'|'B') ('i'|'I'|'d'|'D')|('l'|'L'|'d'|'D'|'f'|'F'))?;
 
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
+RULE_BEGIN : '{|';
 
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+RULE_END : '|}';
+
+RULE_LINECONTINUATION : '\\';
+
+RULE_SL_COMMENT : '#' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

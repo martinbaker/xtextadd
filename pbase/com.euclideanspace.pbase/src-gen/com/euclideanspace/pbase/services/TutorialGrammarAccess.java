@@ -89,10 +89,10 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_0_7_2 = (Group)cGroup_0_7.eContents().get(2);
 		private final Keyword cCommaKeyword_0_7_2_0 = (Keyword)cGroup_0_7_2.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_0_7_2_1 = (RuleCall)cGroup_0_7_2.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_0_8 = (Keyword)cGroup_0.eContents().get(8);
+		private final RuleCall cBEGINTerminalRuleCall_0_8 = (RuleCall)cGroup_0.eContents().get(8);
 		private final Assignment cMembersAssignment_0_9 = (Assignment)cGroup_0.eContents().get(9);
 		private final RuleCall cMembersMemberParserRuleCall_0_9_0 = (RuleCall)cMembersAssignment_0_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_0_10 = (Keyword)cGroup_0.eContents().get(10);
+		private final RuleCall cENDTerminalRuleCall_0_10 = (RuleCall)cGroup_0.eContents().get(10);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Alternatives cAlternatives_1_0 = (Alternatives)cGroup_1.eContents().get(0);
 		private final Keyword cDefKeyword_1_0_0 = (Keyword)cAlternatives_1_0.eContents().get(0);
@@ -181,7 +181,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//	(extension?="extension" (final?="val" | "var")? type=ID name1=ValidID? | static?="static"? (type=ID | (final?="val" |
 		//	"var")) name2=ValidID) ("=" initialValue=XExpression)? ";"? //| {EuclidInnerClass.annotationInfo = current}
 		//	"class" name=ValidID ("<" typeParameters+=ID ("," typeParameters+=ID)* ">")? ("extends" extends=ID)? ("implements"
-		//	implements+=ID ("," ID)*)? "{" members+=Member* "}" //{EuclidMember} annotations+=XAnnotation*
+		//	implements+=ID ("," ID)*)? BEGIN members+=Member* END //{EuclidMember} annotations+=XAnnotation*
 		//	//{EuclidField.annotationInfo = current}
 		//	//visibility=Visibility?
 		//	| ("def" //| {EuclidFunction.annotationInfo = current}
@@ -197,7 +197,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//(extension?="extension" (final?="val" | "var")? type=ID name1=ValidID? | static?="static"? (type=ID | (final?="val" |
 		//"var")) name2=ValidID) ("=" initialValue=XExpression)? ";"? //| {EuclidInnerClass.annotationInfo = current}
 		//"class" name=ValidID ("<" typeParameters+=ID ("," typeParameters+=ID)* ">")? ("extends" extends=ID)? ("implements"
-		//implements+=ID ("," ID)*)? "{" members+=Member* "}" //{EuclidMember} annotations+=XAnnotation*
+		//implements+=ID ("," ID)*)? BEGIN members+=Member* END //{EuclidMember} annotations+=XAnnotation*
 		////{EuclidField.annotationInfo = current}
 		////visibility=Visibility?
 		//| ("def" //| {EuclidFunction.annotationInfo = current}
@@ -213,7 +213,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//(extension?="extension" (final?="val" | "var")? type=ID name1=ValidID? | static?="static"? (type=ID | (final?="val" |
 		//"var")) name2=ValidID) ("=" initialValue=XExpression)? ";"? //| {EuclidInnerClass.annotationInfo = current}
 		//"class" name=ValidID ("<" typeParameters+=ID ("," typeParameters+=ID)* ">")? ("extends" extends=ID)? ("implements"
-		//implements+=ID ("," ID)*)? "{" members+=Member* "}"
+		//implements+=ID ("," ID)*)? BEGIN members+=Member* END
 		public Group getGroup_0() { return cGroup_0; }
 
 		//extension?="extension" (final?="val" | "var")? type=ID name1=ValidID? | static?="static"? (type=ID | (final?="val" |
@@ -374,8 +374,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIDTerminalRuleCall_0_7_2_1() { return cIDTerminalRuleCall_0_7_2_1; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_8() { return cLeftCurlyBracketKeyword_0_8; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_0_8() { return cBEGINTerminalRuleCall_0_8; }
 
 		//members+=Member*
 		public Assignment getMembersAssignment_0_9() { return cMembersAssignment_0_9; }
@@ -383,8 +383,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//Member
 		public RuleCall getMembersMemberParserRuleCall_0_9_0() { return cMembersMemberParserRuleCall_0_9_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_0_10() { return cRightCurlyBracketKeyword_0_10; }
+		//END
+		public RuleCall getENDTerminalRuleCall_0_10() { return cENDTerminalRuleCall_0_10; }
 
 		//("def" //| {EuclidFunction.annotationInfo = current}
 		//| override?="override") / *visibility=Visibility?* / static?="static"? dispatch?="dispatch"? ("<" typeParameters+=ID (","
@@ -2006,7 +2006,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cXSetLiteralAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cNumberSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cBEGINTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cElementsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final RuleCall cElementsXExpressionParserRuleCall_3_0_0 = (RuleCall)cElementsAssignment_3_0.eContents().get(0);
@@ -2014,13 +2014,13 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Assignment cElementsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
 		private final RuleCall cElementsXExpressionParserRuleCall_3_1_1_0 = (RuleCall)cElementsAssignment_3_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cENDTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//XSetLiteral hidden(SL_COMMENT, WS):
-		//	{XSetLiteral} "#" "{" (elements+=XExpression ("," elements+=XExpression)*)? "}";
+		//	{XSetLiteral} "#" BEGIN (elements+=XExpression ("," elements+=XExpression)*)? END;
 		public ParserRule getRule() { return rule; }
 
-		//{XSetLiteral} "#" "{" (elements+=XExpression ("," elements+=XExpression)*)? "}"
+		//{XSetLiteral} "#" BEGIN (elements+=XExpression ("," elements+=XExpression)*)? END
 		public Group getGroup() { return cGroup; }
 
 		//{XSetLiteral}
@@ -2029,8 +2029,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//"#"
 		public Keyword getNumberSignKeyword_1() { return cNumberSignKeyword_1; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_2() { return cBEGINTerminalRuleCall_2; }
 
 		//(elements+=XExpression ("," elements+=XExpression)*)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -2053,8 +2053,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//XExpression
 		public RuleCall getElementsXExpressionParserRuleCall_3_1_1_0() { return cElementsXExpressionParserRuleCall_3_1_1_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//END
+		public RuleCall getENDTerminalRuleCall_4() { return cENDTerminalRuleCall_4; }
 	}
 
 	public class XListLiteralElements extends AbstractParserRuleElementFinder {
@@ -2409,7 +2409,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_2_1_0_0_1 = (Keyword)cGroup_2_1_0_0.eContents().get(1);
 		private final Assignment cSwitchAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
 		private final RuleCall cSwitchXExpressionParserRuleCall_2_1_1_0 = (RuleCall)cSwitchAssignment_2_1_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cBEGINTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Assignment cCasesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCasesXCasePartParserRuleCall_4_0 = (RuleCall)cCasesAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
@@ -2417,15 +2417,15 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
 		private final Assignment cDefaultAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
 		private final RuleCall cDefaultXExpressionParserRuleCall_5_2_0 = (RuleCall)cDefaultAssignment_5_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final RuleCall cENDTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		
 		//XSwitchExpression returns XExpression hidden(SL_COMMENT, WS):
 		//	{XSwitchExpression} "switch" (=> ("(" declaredParam=ID ":") switch=XExpression ")" | => (declaredParam=ID ":")?
-		//	switch=XExpression) "{" cases+=XCasePart* ("default" ":" default=XExpression)? "}";
+		//	switch=XExpression) BEGIN cases+=XCasePart* ("default" ":" default=XExpression)? END;
 		public ParserRule getRule() { return rule; }
 
 		//{XSwitchExpression} "switch" (=> ("(" declaredParam=ID ":") switch=XExpression ")" | => (declaredParam=ID ":")?
-		//switch=XExpression) "{" cases+=XCasePart* ("default" ":" default=XExpression)? "}"
+		//switch=XExpression) BEGIN cases+=XCasePart* ("default" ":" default=XExpression)? END
 		public Group getGroup() { return cGroup; }
 
 		//{XSwitchExpression}
@@ -2491,8 +2491,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//XExpression
 		public RuleCall getSwitchXExpressionParserRuleCall_2_1_1_0() { return cSwitchXExpressionParserRuleCall_2_1_1_0; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_3() { return cBEGINTerminalRuleCall_3; }
 
 		//cases+=XCasePart*
 		public Assignment getCasesAssignment_4() { return cCasesAssignment_4; }
@@ -2515,8 +2515,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//XExpression
 		public RuleCall getDefaultXExpressionParserRuleCall_5_2_0() { return cDefaultXExpressionParserRuleCall_5_2_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		//END
+		public RuleCall getENDTerminalRuleCall_6() { return cENDTerminalRuleCall_6; }
 	}
 
 	public class XCasePartElements extends AbstractParserRuleElementFinder {
@@ -2859,25 +2859,25 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "XBlockExpression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cXBlockExpressionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cBEGINTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Assignment cExpressionsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0_0 = (RuleCall)cExpressionsAssignment_2_0.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cENDTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//XBlockExpression returns XExpression hidden(SL_COMMENT, WS):
-		//	{XBlockExpression} "{" (expressions+=XExpressionOrVarDeclaration ";"?)* "}";
+		//	{XBlockExpression} BEGIN (expressions+=XExpressionOrVarDeclaration ";"?)* END;
 		public ParserRule getRule() { return rule; }
 
-		//{XBlockExpression} "{" (expressions+=XExpressionOrVarDeclaration ";"?)* "}"
+		//{XBlockExpression} BEGIN (expressions+=XExpressionOrVarDeclaration ";"?)* END
 		public Group getGroup() { return cGroup; }
 
 		//{XBlockExpression}
 		public Action getXBlockExpressionAction_0() { return cXBlockExpressionAction_0; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_1() { return cBEGINTerminalRuleCall_1; }
 
 		//(expressions+=XExpressionOrVarDeclaration ";"?)*
 		public Group getGroup_2() { return cGroup_2; }
@@ -2891,8 +2891,8 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		//";"?
 		public Keyword getSemicolonKeyword_2_1() { return cSemicolonKeyword_2_1; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		//END
+		public RuleCall getENDTerminalRuleCall_3() { return cENDTerminalRuleCall_3; }
 	}
 
 	public class XExpressionOrVarDeclarationElements extends AbstractParserRuleElementFinder {
@@ -3897,7 +3897,9 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tHEX;
 	private final TerminalRule tINT;
 	private final TerminalRule tDECIMAL;
-	private final TerminalRule tML_COMMENT;
+	private final TerminalRule tBEGIN;
+	private final TerminalRule tEND;
+	private final TerminalRule tLINECONTINUATION;
 	private final TerminalRule tSL_COMMENT;
 	private final TerminalRule tWS;
 	private final TerminalRule tANY_OTHER;
@@ -3977,7 +3979,9 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		this.tHEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HEX");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tDECIMAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DECIMAL");
-		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ML_COMMENT");
+		this.tBEGIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BEGIN");
+		this.tEND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "END");
+		this.tLINECONTINUATION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "LINECONTINUATION");
 		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SL_COMMENT");
 		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS");
 		this.tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER");
@@ -4025,7 +4029,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	//	(extension?="extension" (final?="val" | "var")? type=ID name1=ValidID? | static?="static"? (type=ID | (final?="val" |
 	//	"var")) name2=ValidID) ("=" initialValue=XExpression)? ";"? //| {EuclidInnerClass.annotationInfo = current}
 	//	"class" name=ValidID ("<" typeParameters+=ID ("," typeParameters+=ID)* ">")? ("extends" extends=ID)? ("implements"
-	//	implements+=ID ("," ID)*)? "{" members+=Member* "}" //{EuclidMember} annotations+=XAnnotation*
+	//	implements+=ID ("," ID)*)? BEGIN members+=Member* END //{EuclidMember} annotations+=XAnnotation*
 	//	//{EuclidField.annotationInfo = current}
 	//	//visibility=Visibility?
 	//	| ("def" //| {EuclidFunction.annotationInfo = current}
@@ -4335,7 +4339,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XSetLiteral hidden(SL_COMMENT, WS):
-	//	{XSetLiteral} "#" "{" (elements+=XExpression ("," elements+=XExpression)*)? "}";
+	//	{XSetLiteral} "#" BEGIN (elements+=XExpression ("," elements+=XExpression)*)? END;
 	public XSetLiteralElements getXSetLiteralAccess() {
 		return pXSetLiteral;
 	}
@@ -4408,7 +4412,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 
 	//XSwitchExpression returns XExpression hidden(SL_COMMENT, WS):
 	//	{XSwitchExpression} "switch" (=> ("(" declaredParam=ID ":") switch=XExpression ")" | => (declaredParam=ID ":")?
-	//	switch=XExpression) "{" cases+=XCasePart* ("default" ":" default=XExpression)? "}";
+	//	switch=XExpression) BEGIN cases+=XCasePart* ("default" ":" default=XExpression)? END;
 	public XSwitchExpressionElements getXSwitchExpressionAccess() {
 		return pXSwitchExpression;
 	}
@@ -4470,7 +4474,7 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//XBlockExpression returns XExpression hidden(SL_COMMENT, WS):
-	//	{XBlockExpression} "{" (expressions+=XExpressionOrVarDeclaration ";"?)* "}";
+	//	{XBlockExpression} BEGIN (expressions+=XExpressionOrVarDeclaration ";"?)* END;
 	public XBlockExpressionElements getXBlockExpressionAccess() {
 		return pXBlockExpression;
 	}
@@ -4732,14 +4736,33 @@ public class TutorialGrammarAccess extends AbstractGrammarElementFinder {
 		return tDECIMAL;
 	} 
 
-	//terminal ML_COMMENT:
-	//	"/ *"->"* /";
-	public TerminalRule getML_COMMENTRule() {
-		return tML_COMMENT;
+	/// * phantom tokens:
+	// * use something other than '{' and '}' to avoid clash in Python so we use '{|' and '|}' 
+	// * TODO Should really use something more obscure to avoid clash in any user language
+	// * / terminal BEGIN:
+	//	"{|";
+	public TerminalRule getBEGINRule() {
+		return tBEGIN;
 	} 
 
-	//terminal SL_COMMENT:
-	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
+	//terminal END:
+	//	"|}";
+	public TerminalRule getENDRule() {
+		return tEND;
+	} 
+
+	/// * if newline follows this then ignore indent changes * / terminal LINECONTINUATION:
+	//	"\\";
+	public TerminalRule getLINECONTINUATIONRule() {
+		return tLINECONTINUATION;
+	} 
+
+	/// *
+	// * Comments start with hash.
+	// * We need to specify that here because we want to allow comments with any indent
+	// * and to avoid them being wrapped in a block.
+	// * / terminal SL_COMMENT:
+	//	"#" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return tSL_COMMENT;
 	} 

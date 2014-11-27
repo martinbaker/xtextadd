@@ -10,8 +10,8 @@
 </ul>
 <table width="600">
   <tr>
-    <td><p>In a java-like language we have blocks of code for things like a method declaration or a 'while' construct. We delineate these blocks using curly brackets as shown on the right: </p>
-    <p>That is, when the indent increases then a block starts and when the indent goes back to the previous value the block ends. </p></td>
+    <td><p>In a java-like language we have blocks of code for things like a method declaration or a 'while' construct. We delineate these blocks using curly brackets (also known as braces) as shown on the right: </p>
+      <p>That is, when the indent increases then a block starts and when the indent goes back to the previous value the block ends. </p></td>
     <td><table border="1">
       <tr>
         <td><pre>public void Fibonacci(int n){
@@ -168,8 +168,10 @@ we have: while a &lt; n:</p></td>
     <td><table border="1">
       <tr>
         <td><pre>/* phantom tokens:
- * use something other than '{' and '}' to avoid clash in Python so we use '{|' and '|}' 
- * TODO Should really use something more obscure to avoid clash in any user language
+ * use something other than '{' and '}' to avoid
+ * clash in Python so we use '{|' and '|}' 
+ * TODO Should really use something more
+ * obscure to avoid clash in any user language
  */
 terminal BEGIN : '{|';
 terminal END : '|}';
@@ -178,7 +180,14 @@ terminal END : '|}';
     </table></td>
   </tr>
 </table>
-<p>&nbsp;</p>
+<p>If you don't want to type these changes in by hand, I have put these changes into the  <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step3/Tutorial.xtext">grammar file here</a>.</p>
+<table>
+  <tr>
+    <td><p>We can then run our code in a new instance of Eclipse, remove the curly brackets and confirm that this parses correctly:</p>
+    <p>OOPS somthing wrong here - The code is not quite correct, I need to sort this out.  </p></td>
+    <td><img src="pbase2.png" alt="image" width="403" height="285" /></td>
+  </tr>
+</table>
 <h3>Terminating Statements</h3>
 <p>Java-like languages use a semicolon ';' to mark the termination of a statement. In a more Python-like DSL we may want a new-line to mark the termination of a statement. One way to approach this is to split the terminal WS (whitespace) into two parts: SP for space and tab and NL for newline and carriage return. We can the replace ';' in the grammar by NL. This is shown in the following example: </p>
 <table border="1">
@@ -251,7 +260,11 @@ where:
     <td><pre># single line comment</pre></td>
   </tr>
 </table>
-<p>However there are some variations that we have to be careful of: </p>
+<p>However there are some variations that we have to be careful of:</p>
+<ul>
+  <li>We don't want blocks to be created around comments and we don't want comments to end blocks therefore, if a line contains only a comment, then we ignore its indent in block determination.</li>
+  <li>We handle inline and block comments as described below.  </li>
+</ul>
 <h4>Inline Comments</h4>
 <p>If we allow 'inline comments' in out DSL, that is, comments on same line as the code: </p>
 <table border="1">

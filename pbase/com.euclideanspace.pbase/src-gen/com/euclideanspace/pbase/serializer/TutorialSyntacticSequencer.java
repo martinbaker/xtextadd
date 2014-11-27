@@ -40,11 +40,33 @@ public class TutorialSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getIDRule())
+		if(ruleCall.getRule() == grammarAccess.getBEGINRule())
+			return getBEGINToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getENDRule())
+			return getENDToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getIDRule())
 			return getIDToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getOpSingleAssignRule())
 			return getOpSingleAssignToken(semanticObject, ruleCall, node);
 		return "";
+	}
+	
+	/**
+	 * terminal BEGIN : '{|';
+	 */
+	protected String getBEGINToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "{|";
+	}
+	
+	/**
+	 * terminal END : '|}';
+	 */
+	protected String getENDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "|}";
 	}
 	
 	/**
