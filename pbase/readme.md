@@ -139,7 +139,7 @@ we have: while a &lt; n:</p></td>
 <p>We therefore add a class to represent 'phantom' tokens this class is here: <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PhantomToken.java">PhantomToken</a>. Add it to your project.</p>
 <p>Next we need to  add the code that inserts these phantom tokens when needed, this is the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PythonesqueTokenSource.java">customised token source</a> so you also need to add that to your project.</p>
 <p>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java">TutorialRuntimeModule.java</a> / <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialStandaloneSetup.java">TutorialStandaloneSetup.java</a> . Make sure the modified versions of all these are in your project. </p>
-<p>We gan now go on to modify the grammar syntax: </p>
+<p>We can now go on to modify the grammar syntax: </p>
 <h3>Blocks</h3>
 <p>The main thing we want to do is delineate blocks using whitespace. As discussed already, most of the work for this is done in the customised TokenSource.</p>
 <table border="1">
@@ -163,7 +163,7 @@ we have: while a &lt; n:</p></td>
 <p>In the grammar we replace '{' and '}' by BEGIN and END. Of course the user does not have to type BEGIN and END, these are added automatically by our TokenSource class when the indent level changes. Each time we increase the indent TokenSource puts this on a stack (pile) to make sure that the indents are unwound correctly. </p>
 <table>
   <tr>
-    <td>So, to implement this add somthing like this:<br />
+    <td>So, to implement this add something like this:<br />
     into your grammar file. Then change '{' and '}' to BEGIN and END as discussed above. </td>
     <td><table border="1">
       <tr>
@@ -230,8 +230,17 @@ where:
   <li>Inside parentheses, brackets and braces (see line continuation below).</li>
 </ul>
 <p>However, in order to implement this in TokenSource we need lookahead which is not currently possible in TokenSource.</p>
+<table>
+  <tr>
+    <td><p>For the example we are using in this tutorial no changes are needed to the grammar or TokenSource.</p>
+      <p>So I ran the previous  code in a new instance of Eclipse and removed all the semicolons. The code continued to parse correctly.</p>
+      <p>This is because the code in this tutorial is based on Xbase, in Xbase semicolons are optional.</p>
+      <p>However, in your DSL, it may be difficult to write a grammar without terminators for statements, in which case you may need to change TokenSource as described above. </p></td>
+    <td><img src="pbase3.png" alt="image" width="432" height="291" /></td>
+  </tr>
+</table>
 <h3>Line Continuation</h3>
-<p>It is not good practice to have excessively long lines in our source code. In a Java-like DSL we can insert whitespce wherever we want, but in a Python-like DSL newlines are significant so we need specific mechanisms for inserting lines: </p>
+<p>It is not good practice to have excessively long lines in our source code. In a Java-like DSL we can insert whitespace wherever we want, but in a Python-like DSL newlines are significant so we need specific mechanisms for inserting lines: </p>
 <h4>Backslash continuation </h4>
 <table border="1">
   <tr>
@@ -246,7 +255,7 @@ where:
   </tr>
 </table>
 <h4>Continuation lines</h4>
-<p>If we include a new line  inside parentheses, brackets and braces, then we do not need to expicitly use a backslash. So our custom TokenSource needs to count parentheses, brackets and braces (remember braces in Python don't indicate blocks) to know what is a continuation line. </p>
+<p>If we include a new line  inside parentheses, brackets and braces, then we do not need to explicitly use a backslash. So our custom TokenSource needs to count parentheses, brackets and braces (remember braces in Python don't indicate blocks) to know what is a continuation line. </p>
 <p>A variation of this is 'hanging indentation' where all the lines in a paragraph are indented except the first line. In the context of Python, the term is used to describe a style where the opening parenthesis of a parenthesized statement is the last non-whitespace character of the line, with subsequent lines being indented until the closing parenthesis.</p>
 <h3>Comments</h3>
 <p>Python-like languages use hash '#' to indicate a comment, changing '//' to '#' in the grammar is trivial: </p>
