@@ -57,7 +57,11 @@ import org.antlr.runtime.CommonToken;
  * So the first character has index 0:1
  * The second 1:2 and so on.
  * This makes it easier to work out the indexes for composite nodes as well as leaf nodes. So,
- * for example, the composite node holding the outer brackets is 0:7. The inner brackets are 2:5. 
+ * for example, the composite node holding the outer brackets is 0:7. The inner brackets are 2:5.
+ * 
+ * Known Bugs
+ * ----------
+ * There is a known bug here: https://github.com/martinbaker/xtextadd/issues/1
  * 
  * @author Martin Baker
  */

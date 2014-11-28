@@ -12,6 +12,21 @@ import com.euclideanspace.macro.PhantomToken;
 
 /**
  * Provides a token source for a language that uses macros. 
+ * 
+ * TokenSource lives between the lexer and the parser. When the
+ * parser calls TokenSource.nextToken() then TokenSource will either call
+ * Lexer.nextToken() on or insert a PhantomToken.
+ * 
+ * In this case the TokenSource will insert PhantomTokens into the
+ * token-stream when the macro is substituted.
+ * 
+ * This makes it possible to parse code where it would be difficult or impossible
+ * to define a suitable grammar otherwise.
+ * 
+ * Known Bugs
+ * ----------
+ * There is a known bug here: https://github.com/martinbaker/xtextadd/issues/1
+ * 
  * @author Martin Baker
  *
  */

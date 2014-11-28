@@ -11,6 +11,22 @@ import com.euclideanspace.pbase.parser.antlr.internal.InternalTutorialLexer;
 /**
  * Provides a token source for a language that uses whitespace to delineate
  * blocks, in a similar way to the Python language. 
+ * 
+ * TokenSource lives between the lexer and the parser. When the
+ * parser calls TokenSource.nextToken() then TokenSource will either call
+ * Lexer.nextToken() on or insert a PhantomToken.
+ * 
+ * A typical use-case is Python-like block delineation. Here
+ * the TokenSource will read the whitespace and insert PhantomTokens into the
+ * token-stream to mark the beginning and end of blocks.
+ * 
+ * This makes it possible to parse code where it would be difficult or impossible
+ * to define a suitable grammar otherwise.
+ * 
+ * Known Bugs
+ * ----------
+ * There is a known bug here: https://github.com/martinbaker/xtextadd/issues/1
+ * 
  * @author Martin Baker
  *
  */
