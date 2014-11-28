@@ -72,6 +72,7 @@
 <ul>
   <li>The code is <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">here</a>. </li>
   <li>I have put an enhancement request for this on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">Eclipse bug tracking system</a>. </li>
+  <li>I have put a tutorial for converting your DSL to Python-like syntax <a href="https://github.com/martinbaker/xtextadd/tree/master/pbase">on this page</a>. </li>
 </ul>
 <h3>Macro</h3>
 <p>I would like better support to help DSLs that contain macros.</p>
