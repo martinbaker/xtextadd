@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.euclideanspace.xgener/src-gen" editDirectory="/com.euclideanspace.xgener.edit/src"
+    editorDirectory="/com.euclideanspace.xgener.editor/src" modelPluginID="com.euclideanspace.xgener"
+    forceOverwrite="true" modelName="Gen" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.euclideanspace.xgener.edit"
+    editorPluginID="com.euclideanspace.xgener.editor" runtimeVersion="2.10">
+  <genPackages prefix="Gen" basePackage="com.euclideanspace.xgener" disposableProviderFactory="true"
+      fileExtensions="xgener" ecorePackage="Gen.ecore#/">
+    <genClasses ecoreClass="Gen.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/clas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/proc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/statem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/exp"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//ClassType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/noclass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/blocking"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Procedure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/types"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/rep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/until"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/while"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/do"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/for"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/ex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/par1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/infix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/par2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/infixleft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/bracket"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/braces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/parenthasis"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

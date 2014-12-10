@@ -1,0 +1,46 @@
+grammar com.euclideanspace.xgener.Gen with org.eclipse.xtext.common.Terminals
+
+generate gen "http://www.euclideanspace.com/xgener/Gen"
+
+Model:
+	(clas+=ClassType |proc+=Procedure |statem+=Statement |exp+=Expression)*;
+	
+ClassType:
+	'class' name=ID
+    ( noclass+='noclass' 
+    | ('prefix' prefix += MultID)
+    | ('suffix' suffix += MultID)
+    | ('blocking' blocking+=('braces'|'indent'))
+    )*;
+
+Procedure:
+	'Procedure' name=ID
+    (('prefix' prefix += MultID)
+    | ('suffix' suffix += MultID)
+    | ('types' types+=('colonSeperated'|'spaceSeperated'|'inHeader'|'inferred'|'untyped'))
+    )*;
+
+Statement:
+	'statement' name=ID
+    (('repeat' rep=ID 'until' until=ID)
+    | ('while' while=ID 'do' do=ID)
+    | ('for' for=ID)
+    | ('var' var=ID ('=' ex=ID)?)
+    | ('val' val=ID '=' ex=ID)
+    );
+
+Expression:
+	'expression' name=ID
+    (('prefix' prefix+=MultString par1+=ID)
+    | ('suffix' par1+=ID suffix+=MultString)
+    | ('infix' par1+=ID infix+=MultString par2+=ID)
+    | ('infixleft' par1+=ID infixleft+=MultString par2+=ID)
+    | ('literal' literal+=('int'|'string'|'bool'|'float'))
+    | ('bracket' bracket+=ID)
+    | ('braces' braces+=ID)
+    | ('parenthasis' parenthasis+=ID)
+    )*;
+
+MultID: ID | ('[' ID* ']');
+
+MultString: STRING | ('[' STRING* ']');
