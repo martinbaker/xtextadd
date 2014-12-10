@@ -1,4 +1,4 @@
-<p>This contains some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
+<p>These pages contain some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities in Xtext.</p>
 <p>On this site a have added some small stand-alone projects with capabilities that I would like to see built-in to Xtext. </p>
 <h3>Python-like syntax</h3>
@@ -201,3 +201,16 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 </pre></td>
   </tr>
 </table>
+<h3>Xgener</h3>
+<p>More information abour Xgener on <a href="https://github.com/martinbaker/xtextadd/tree/master/xgener">this page</a>. </p>
+<p>I often find that the DSLs (Domain Specific Languages) that I write have similar constructs, so I end up writing similar grammar rules and other code elements. It would be good to use Xbase but that is often not flexible enough to do what I want.</p>
+<p>I need something inbetween, more flexible than Xbase, but easier than writing a full xtext grammar from scratch. That is why I have started to write Xgener.</p>
+<p>Xgener is intended for languages that are fairly conventional in that they still have concepts like:</p>
+<ul>
+  <li>class</li>
+  <li>procedure/method</li>
+  <li>statement</li>
+  <li>expression</li>
+</ul>
+<p>However,      it will allow certain modifications to these concepts to give the flexibility in the DSLs I need.</p>
+<p>More information abour Xgener on <a href="https://github.com/martinbaker/xtextadd/tree/master/xgener">this page</a>. </p>
