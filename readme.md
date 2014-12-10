@@ -1,6 +1,6 @@
 <p>These pages contain some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities in Xtext.</p>
-<p>On this site a have added some small stand-alone projects with capabilities that I would like to see built-in to Xtext. These projects are:</p>
+<p>These small stand-alone projects, that I would like to see built-in to Xtext, are:</p>
 <ul>
   <li><a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">Whitespaceblock</a> - Adds the ability to define blocks in your DSL using whitespace (indentation). </li>
   <li><a href="https://github.com/martinbaker/xtextadd/tree/master/pbase">Pbase</a> - A tutorial for <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">Whitespaceblock</a></li>
