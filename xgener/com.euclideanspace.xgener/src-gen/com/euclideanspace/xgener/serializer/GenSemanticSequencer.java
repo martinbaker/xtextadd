@@ -4,6 +4,7 @@ import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.Model;
+import com.euclideanspace.xgener.gen.Precidence;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Statement;
 import com.euclideanspace.xgener.services.GenGrammarAccess;
@@ -44,6 +45,12 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GenPackage.PRECIDENCE:
+				if(context == grammarAccess.getPrecidenceRule()) {
+					sequence_Precidence(context, (Precidence) semanticObject); 
+					return; 
+				}
+				else break;
 			case GenPackage.PROCEDURE:
 				if(context == grammarAccess.getProcedureRule()) {
 					sequence_Procedure(context, (Procedure) semanticObject); 
@@ -71,22 +78,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         (
-	 *             (prefix+=MultString par1+=ID) | 
-	 *             (par1+=ID suffix+=MultString) | 
-	 *             (par1+=ID infix+=MultString par2+=ID) | 
-	 *             (par1+=ID infixleft+=MultString par2+=ID) | 
-	 *             literal+='int' | 
-	 *             literal+='string' | 
-	 *             literal+='bool' | 
-	 *             literal+='float' | 
-	 *             bracket+=ID | 
-	 *             braces+=ID | 
-	 *             parenthasis+=ID
-	 *         )*
-	 *     )
+	 *     (name=ID prec+=Precidence*)
 	 */
 	protected void sequence_Expression(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -98,6 +90,24 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (clas+=ClassType | proc+=Procedure | statem+=Statement | exp+=Expression)*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (rule=ID prefix=MultString par1=ID) | 
+	 *         (rule=ID par1=ID suffix=MultString) | 
+	 *         (rule=ID par1=ID infix=MultString par2=ID) | 
+	 *         (rule=ID par1=ID infixleft=MultString par2=ID) | 
+	 *         (rule=ID (literal='int' | literal='string' | literal='bool' | literal='float')) | 
+	 *         (rule=ID bracket=ID) | 
+	 *         (rule=ID braces=ID) | 
+	 *         (rule=ID parenthesis=ID)
+	 *     )
+	 */
+	protected void sequence_Precidence(EObject context, Precidence semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -350,94 +350,13 @@ public interface GenPackage extends EPackage
   int EXPRESSION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Prefix</b></em>' attribute list.
+   * The feature id for the '<em><b>Prec</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__PREFIX = 1;
-
-  /**
-   * The feature id for the '<em><b>Par1</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__PAR1 = 2;
-
-  /**
-   * The feature id for the '<em><b>Suffix</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__SUFFIX = 3;
-
-  /**
-   * The feature id for the '<em><b>Infix</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__INFIX = 4;
-
-  /**
-   * The feature id for the '<em><b>Par2</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__PAR2 = 5;
-
-  /**
-   * The feature id for the '<em><b>Infixleft</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__INFIXLEFT = 6;
-
-  /**
-   * The feature id for the '<em><b>Literal</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__LITERAL = 7;
-
-  /**
-   * The feature id for the '<em><b>Bracket</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__BRACKET = 8;
-
-  /**
-   * The feature id for the '<em><b>Braces</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__BRACES = 9;
-
-  /**
-   * The feature id for the '<em><b>Parenthasis</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__PARENTHASIS = 10;
+  int EXPRESSION__PREC = 1;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -446,7 +365,125 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = 11;
+  int EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl <em>Precidence</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.PrecidenceImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecidence()
+   * @generated
+   */
+  int PRECIDENCE = 5;
+
+  /**
+   * The feature id for the '<em><b>Rule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__RULE = 0;
+
+  /**
+   * The feature id for the '<em><b>Prefix</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__PREFIX = 1;
+
+  /**
+   * The feature id for the '<em><b>Par1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__PAR1 = 2;
+
+  /**
+   * The feature id for the '<em><b>Suffix</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__SUFFIX = 3;
+
+  /**
+   * The feature id for the '<em><b>Infix</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__INFIX = 4;
+
+  /**
+   * The feature id for the '<em><b>Par2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__PAR2 = 5;
+
+  /**
+   * The feature id for the '<em><b>Infixleft</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__INFIXLEFT = 6;
+
+  /**
+   * The feature id for the '<em><b>Literal</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__LITERAL = 7;
+
+  /**
+   * The feature id for the '<em><b>Bracket</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__BRACKET = 8;
+
+  /**
+   * The feature id for the '<em><b>Braces</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__BRACES = 9;
+
+  /**
+   * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE__PARENTHESIS = 10;
+
+  /**
+   * The number of structural features of the '<em>Precidence</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECIDENCE_FEATURE_COUNT = 11;
 
 
   /**
@@ -753,114 +790,146 @@ public interface GenPackage extends EPackage
   EAttribute getExpression_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getPrefix <em>Prefix</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Expression#getPrec <em>Prec</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Prefix</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getPrefix()
+   * @return the meta object for the containment reference list '<em>Prec</em>'.
+   * @see com.euclideanspace.xgener.gen.Expression#getPrec()
    * @see #getExpression()
    * @generated
    */
-  EAttribute getExpression_Prefix();
+  EReference getExpression_Prec();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getPar1 <em>Par1</em>}'.
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Precidence <em>Precidence</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Par1</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getPar1()
-   * @see #getExpression()
+   * @return the meta object for class '<em>Precidence</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence
    * @generated
    */
-  EAttribute getExpression_Par1();
+  EClass getPrecidence();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getRule <em>Rule</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Suffix</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getSuffix()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Rule</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getRule()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Suffix();
+  EAttribute getPrecidence_Rule();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getInfix <em>Infix</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Infix</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getInfix()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Prefix</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getPrefix()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Infix();
+  EAttribute getPrecidence_Prefix();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getPar2 <em>Par2</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar1 <em>Par1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Par2</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getPar2()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Par1</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getPar1()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Par2();
+  EAttribute getPrecidence_Par1();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getInfixleft <em>Infixleft</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Infixleft</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getInfixleft()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Suffix</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getSuffix()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Infixleft();
+  EAttribute getPrecidence_Suffix();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getLiteral <em>Literal</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Literal</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getLiteral()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Infix</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getInfix()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Literal();
+  EAttribute getPrecidence_Infix();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getBracket <em>Bracket</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar2 <em>Par2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Bracket</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getBracket()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Par2</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getPar2()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Bracket();
+  EAttribute getPrecidence_Par2();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getBraces <em>Braces</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Braces</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getBraces()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Infixleft</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getInfixleft()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Braces();
+  EAttribute getPrecidence_Infixleft();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Expression#getParenthasis <em>Parenthasis</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getLiteral <em>Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Parenthasis</em>'.
-   * @see com.euclideanspace.xgener.gen.Expression#getParenthasis()
-   * @see #getExpression()
+   * @return the meta object for the attribute '<em>Literal</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getLiteral()
+   * @see #getPrecidence()
    * @generated
    */
-  EAttribute getExpression_Parenthasis();
+  EAttribute getPrecidence_Literal();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getBracket <em>Bracket</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Bracket</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getBracket()
+   * @see #getPrecidence()
+   * @generated
+   */
+  EAttribute getPrecidence_Bracket();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getBraces <em>Braces</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Braces</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getBraces()
+   * @see #getPrecidence()
+   * @generated
+   */
+  EAttribute getPrecidence_Braces();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getParenthesis <em>Parenthesis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Parenthesis</em>'.
+   * @see com.euclideanspace.xgener.gen.Precidence#getParenthesis()
+   * @see #getPrecidence()
+   * @generated
+   */
+  EAttribute getPrecidence_Parenthesis();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1120,84 +1189,110 @@ public interface GenPackage extends EPackage
     EAttribute EXPRESSION__NAME = eINSTANCE.getExpression_Name();
 
     /**
-     * The meta object literal for the '<em><b>Prefix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Prec</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__PREFIX = eINSTANCE.getExpression_Prefix();
+    EReference EXPRESSION__PREC = eINSTANCE.getExpression_Prec();
 
     /**
-     * The meta object literal for the '<em><b>Par1</b></em>' attribute list feature.
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl <em>Precidence</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.PrecidenceImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecidence()
      * @generated
      */
-    EAttribute EXPRESSION__PAR1 = eINSTANCE.getExpression_Par1();
+    EClass PRECIDENCE = eINSTANCE.getPrecidence();
 
     /**
-     * The meta object literal for the '<em><b>Suffix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Rule</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__SUFFIX = eINSTANCE.getExpression_Suffix();
+    EAttribute PRECIDENCE__RULE = eINSTANCE.getPrecidence_Rule();
 
     /**
-     * The meta object literal for the '<em><b>Infix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__INFIX = eINSTANCE.getExpression_Infix();
+    EAttribute PRECIDENCE__PREFIX = eINSTANCE.getPrecidence_Prefix();
 
     /**
-     * The meta object literal for the '<em><b>Par2</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Par1</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__PAR2 = eINSTANCE.getExpression_Par2();
+    EAttribute PRECIDENCE__PAR1 = eINSTANCE.getPrecidence_Par1();
 
     /**
-     * The meta object literal for the '<em><b>Infixleft</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Suffix</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__INFIXLEFT = eINSTANCE.getExpression_Infixleft();
+    EAttribute PRECIDENCE__SUFFIX = eINSTANCE.getPrecidence_Suffix();
 
     /**
-     * The meta object literal for the '<em><b>Literal</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Infix</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__LITERAL = eINSTANCE.getExpression_Literal();
+    EAttribute PRECIDENCE__INFIX = eINSTANCE.getPrecidence_Infix();
 
     /**
-     * The meta object literal for the '<em><b>Bracket</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Par2</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__BRACKET = eINSTANCE.getExpression_Bracket();
+    EAttribute PRECIDENCE__PAR2 = eINSTANCE.getPrecidence_Par2();
 
     /**
-     * The meta object literal for the '<em><b>Braces</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Infixleft</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__BRACES = eINSTANCE.getExpression_Braces();
+    EAttribute PRECIDENCE__INFIXLEFT = eINSTANCE.getPrecidence_Infixleft();
 
     /**
-     * The meta object literal for the '<em><b>Parenthasis</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EXPRESSION__PARENTHASIS = eINSTANCE.getExpression_Parenthasis();
+    EAttribute PRECIDENCE__LITERAL = eINSTANCE.getPrecidence_Literal();
+
+    /**
+     * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECIDENCE__BRACKET = eINSTANCE.getPrecidence_Bracket();
+
+    /**
+     * The meta object literal for the '<em><b>Braces</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECIDENCE__BRACES = eINSTANCE.getPrecidence_Braces();
+
+    /**
+     * The meta object literal for the '<em><b>Parenthesis</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECIDENCE__PARENTHESIS = eINSTANCE.getPrecidence_Parenthesis();
 
   }
 

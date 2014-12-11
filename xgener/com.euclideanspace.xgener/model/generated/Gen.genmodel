@@ -39,16 +39,20 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/prefix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/par1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/suffix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/infix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/par2"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/infixleft"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/literal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/bracket"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/braces"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/parenthasis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Expression/prec"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Precidence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/rule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/par1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/infix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/par2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/infixleft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/bracket"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/braces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/parenthesis"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

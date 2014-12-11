@@ -69,6 +69,7 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
       case GenPackage.PROCEDURE: return createProcedure();
       case GenPackage.STATEMENT: return createStatement();
       case GenPackage.EXPRESSION: return createExpression();
+      case GenPackage.PRECIDENCE: return createPrecidence();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -127,6 +128,17 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Precidence createPrecidence()
+  {
+    PrecidenceImpl precidence = new PrecidenceImpl();
+    return precidence;
   }
 
   /**

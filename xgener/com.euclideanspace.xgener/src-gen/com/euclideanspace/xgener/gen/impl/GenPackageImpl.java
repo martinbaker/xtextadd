@@ -7,6 +7,7 @@ import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenFactory;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.Model;
+import com.euclideanspace.xgener.gen.Precidence;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Statement;
 
@@ -59,6 +60,13 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * @generated
    */
   private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass precidenceEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -408,9 +416,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Prefix()
+  public EReference getExpression_Prec()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
+    return (EReference)expressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -418,9 +426,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Par1()
+  public EClass getPrecidence()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(2);
+    return precidenceEClass;
   }
 
   /**
@@ -428,9 +436,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Suffix()
+  public EAttribute getPrecidence_Rule()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -438,9 +446,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Infix()
+  public EAttribute getPrecidence_Prefix()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -448,9 +456,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Par2()
+  public EAttribute getPrecidence_Par1()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -458,9 +466,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Infixleft()
+  public EAttribute getPrecidence_Suffix()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -468,9 +476,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Literal()
+  public EAttribute getPrecidence_Infix()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -478,9 +486,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Bracket()
+  public EAttribute getPrecidence_Par2()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -488,9 +496,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Braces()
+  public EAttribute getPrecidence_Infixleft()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(9);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -498,9 +506,39 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExpression_Parenthasis()
+  public EAttribute getPrecidence_Literal()
   {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrecidence_Bracket()
+  {
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrecidence_Braces()
+  {
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrecidence_Parenthesis()
+  {
+    return (EAttribute)precidenceEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -565,16 +603,20 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     expressionEClass = createEClass(EXPRESSION);
     createEAttribute(expressionEClass, EXPRESSION__NAME);
-    createEAttribute(expressionEClass, EXPRESSION__PREFIX);
-    createEAttribute(expressionEClass, EXPRESSION__PAR1);
-    createEAttribute(expressionEClass, EXPRESSION__SUFFIX);
-    createEAttribute(expressionEClass, EXPRESSION__INFIX);
-    createEAttribute(expressionEClass, EXPRESSION__PAR2);
-    createEAttribute(expressionEClass, EXPRESSION__INFIXLEFT);
-    createEAttribute(expressionEClass, EXPRESSION__LITERAL);
-    createEAttribute(expressionEClass, EXPRESSION__BRACKET);
-    createEAttribute(expressionEClass, EXPRESSION__BRACES);
-    createEAttribute(expressionEClass, EXPRESSION__PARENTHASIS);
+    createEReference(expressionEClass, EXPRESSION__PREC);
+
+    precidenceEClass = createEClass(PRECIDENCE);
+    createEAttribute(precidenceEClass, PRECIDENCE__RULE);
+    createEAttribute(precidenceEClass, PRECIDENCE__PREFIX);
+    createEAttribute(precidenceEClass, PRECIDENCE__PAR1);
+    createEAttribute(precidenceEClass, PRECIDENCE__SUFFIX);
+    createEAttribute(precidenceEClass, PRECIDENCE__INFIX);
+    createEAttribute(precidenceEClass, PRECIDENCE__PAR2);
+    createEAttribute(precidenceEClass, PRECIDENCE__INFIXLEFT);
+    createEAttribute(precidenceEClass, PRECIDENCE__LITERAL);
+    createEAttribute(precidenceEClass, PRECIDENCE__BRACKET);
+    createEAttribute(precidenceEClass, PRECIDENCE__BRACES);
+    createEAttribute(precidenceEClass, PRECIDENCE__PARENTHESIS);
   }
 
   /**
@@ -640,16 +682,20 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getExpression_Name(), ecorePackage.getEString(), "name", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Prefix(), ecorePackage.getEString(), "prefix", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Par1(), ecorePackage.getEString(), "par1", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Suffix(), ecorePackage.getEString(), "suffix", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Infix(), ecorePackage.getEString(), "infix", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Par2(), ecorePackage.getEString(), "par2", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Infixleft(), ecorePackage.getEString(), "infixleft", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Literal(), ecorePackage.getEString(), "literal", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Bracket(), ecorePackage.getEString(), "bracket", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Braces(), ecorePackage.getEString(), "braces", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Parenthasis(), ecorePackage.getEString(), "parenthasis", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Prec(), this.getPrecidence(), null, "prec", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(precidenceEClass, Precidence.class, "Precidence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrecidence_Rule(), ecorePackage.getEString(), "rule", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Prefix(), ecorePackage.getEString(), "prefix", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Par1(), ecorePackage.getEString(), "par1", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Suffix(), ecorePackage.getEString(), "suffix", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Infix(), ecorePackage.getEString(), "infix", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Par2(), ecorePackage.getEString(), "par2", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Infixleft(), ecorePackage.getEString(), "infixleft", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Literal(), ecorePackage.getEString(), "literal", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Bracket(), ecorePackage.getEString(), "bracket", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Braces(), ecorePackage.getEString(), "braces", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecidence_Parenthesis(), ecorePackage.getEString(), "parenthesis", null, 0, 1, Precidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

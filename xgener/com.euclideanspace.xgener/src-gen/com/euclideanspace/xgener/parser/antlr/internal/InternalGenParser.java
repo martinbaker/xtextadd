@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGenParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'noclass'", "'prefix'", "'suffix'", "'blocking'", "'braces'", "'indent'", "'procedure'", "'types'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'int'", "'string'", "'bool'", "'float'", "'bracket'", "'parenthasis'", "'['", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'noclass'", "'prefix'", "'suffix'", "'blocking'", "'braces'", "'indent'", "'procedure'", "'types'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'int'", "'string'", "'bool'", "'float'", "'bracket'", "'parenthesis'", "'['", "']'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -1641,50 +1641,23 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:715:1: ruleExpression returns [EObject current=null] : (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )* ) ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:715:1: ruleExpression returns [EObject current=null] : (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (lv_prec_2_0= rulePrecidence ) )* ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
-        Token otherlv_2=null;
-        Token lv_par1_4_0=null;
-        Token otherlv_5=null;
-        Token lv_par1_6_0=null;
-        Token otherlv_8=null;
-        Token lv_par1_9_0=null;
-        Token lv_par2_11_0=null;
-        Token otherlv_12=null;
-        Token lv_par1_13_0=null;
-        Token lv_par2_15_0=null;
-        Token otherlv_16=null;
-        Token lv_literal_17_1=null;
-        Token lv_literal_17_2=null;
-        Token lv_literal_17_3=null;
-        Token lv_literal_17_4=null;
-        Token otherlv_18=null;
-        Token lv_bracket_19_0=null;
-        Token otherlv_20=null;
-        Token lv_braces_21_0=null;
-        Token otherlv_22=null;
-        Token lv_parenthasis_23_0=null;
-        AntlrDatatypeRuleToken lv_prefix_3_0 = null;
-
-        AntlrDatatypeRuleToken lv_suffix_7_0 = null;
-
-        AntlrDatatypeRuleToken lv_infix_10_0 = null;
-
-        AntlrDatatypeRuleToken lv_infixleft_14_0 = null;
+        EObject lv_prec_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:718:28: ( (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )* ) )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:1: (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )* )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:718:28: ( (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (lv_prec_2_0= rulePrecidence ) )* ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:1: (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (lv_prec_2_0= rulePrecidence ) )* )
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:1: (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )* )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:3: otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:1: (otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (lv_prec_2_0= rulePrecidence ) )* )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:719:3: otherlv_0= 'expression' ( (lv_name_1_0= RULE_ID ) ) ( (lv_prec_2_0= rulePrecidence ) )*
             {
             otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleExpression1408); 
 
@@ -1716,76 +1689,29 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:741:2: ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) ) | (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) ) | (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) ) | (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) ) | (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) ) | (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) ) | (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) ) )*
-            loop9:
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:741:2: ( (lv_prec_2_0= rulePrecidence ) )*
+            loop8:
             do {
-                int alt9=9;
-                switch ( input.LA(1) ) {
-                case 13:
-                    {
-                    alt9=1;
-                    }
-                    break;
-                case 14:
-                    {
-                    alt9=2;
-                    }
-                    break;
-                case 35:
-                    {
-                    alt9=3;
-                    }
-                    break;
-                case 36:
-                    {
-                    alt9=4;
-                    }
-                    break;
-                case 37:
-                    {
-                    alt9=5;
-                    }
-                    break;
-                case 42:
-                    {
-                    alt9=6;
-                    }
-                    break;
-                case 16:
-                    {
-                    alt9=7;
-                    }
-                    break;
-                case 43:
-                    {
-                    alt9=8;
-                    }
-                    break;
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
+                if ( ((LA8_0>=13 && LA8_0<=14)||LA8_0==16||(LA8_0>=35 && LA8_0<=37)||(LA8_0>=42 && LA8_0<=43)) ) {
+                    alt8=1;
                 }
 
-                switch (alt9) {
+
+                switch (alt8) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:741:3: (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) )
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:742:1: (lv_prec_2_0= rulePrecidence )
             	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:741:3: (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:741:5: otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultString ) ) ( (lv_par1_4_0= RULE_ID ) )
-            	    {
-            	    otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleExpression1444); 
-
-            	        	newLeafNode(otherlv_2, grammarAccess.getExpressionAccess().getPrefixKeyword_2_0_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:745:1: ( (lv_prefix_3_0= ruleMultString ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:746:1: (lv_prefix_3_0= ruleMultString )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:746:1: (lv_prefix_3_0= ruleMultString )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:747:3: lv_prefix_3_0= ruleMultString
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:742:1: (lv_prec_2_0= rulePrecidence )
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:743:3: lv_prec_2_0= rulePrecidence
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getExpressionAccess().getPrefixMultStringParserRuleCall_2_0_1_0()); 
+            	    	        newCompositeNode(grammarAccess.getExpressionAccess().getPrecPrecidenceParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMultString_in_ruleExpression1465);
-            	    lv_prefix_3_0=ruleMultString();
+            	    pushFollow(FOLLOW_rulePrecidence_in_ruleExpression1451);
+            	    lv_prec_2_0=rulePrecidence();
 
             	    state._fsp--;
 
@@ -1795,566 +1721,11 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
             	    	        }
             	           		add(
             	           			current, 
-            	           			"prefix",
-            	            		lv_prefix_3_0, 
-            	            		"MultString");
+            	           			"prec",
+            	            		lv_prec_2_0, 
+            	            		"Precidence");
             	    	        afterParserOrEnumRuleCall();
             	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:763:2: ( (lv_par1_4_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:764:1: (lv_par1_4_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:764:1: (lv_par1_4_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:765:3: lv_par1_4_0= RULE_ID
-            	    {
-            	    lv_par1_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1482); 
-
-            	    			newLeafNode(lv_par1_4_0, grammarAccess.getExpressionAccess().getPar1IDTerminalRuleCall_2_0_2_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par1",
-            	            		lv_par1_4_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:782:6: (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:782:6: (otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:782:8: otherlv_5= 'suffix' ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) )
-            	    {
-            	    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleExpression1507); 
-
-            	        	newLeafNode(otherlv_5, grammarAccess.getExpressionAccess().getSuffixKeyword_2_1_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:786:1: ( (lv_par1_6_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:787:1: (lv_par1_6_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:787:1: (lv_par1_6_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:788:3: lv_par1_6_0= RULE_ID
-            	    {
-            	    lv_par1_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1524); 
-
-            	    			newLeafNode(lv_par1_6_0, grammarAccess.getExpressionAccess().getPar1IDTerminalRuleCall_2_1_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par1",
-            	            		lv_par1_6_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:804:2: ( (lv_suffix_7_0= ruleMultString ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:805:1: (lv_suffix_7_0= ruleMultString )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:805:1: (lv_suffix_7_0= ruleMultString )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:806:3: lv_suffix_7_0= ruleMultString
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getExpressionAccess().getSuffixMultStringParserRuleCall_2_1_2_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleMultString_in_ruleExpression1550);
-            	    lv_suffix_7_0=ruleMultString();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"suffix",
-            	            		lv_suffix_7_0, 
-            	            		"MultString");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:823:6: (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:823:6: (otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:823:8: otherlv_8= 'infix' ( (lv_par1_9_0= RULE_ID ) ) ( (lv_infix_10_0= ruleMultString ) ) ( (lv_par2_11_0= RULE_ID ) )
-            	    {
-            	    otherlv_8=(Token)match(input,35,FOLLOW_35_in_ruleExpression1570); 
-
-            	        	newLeafNode(otherlv_8, grammarAccess.getExpressionAccess().getInfixKeyword_2_2_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:827:1: ( (lv_par1_9_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:828:1: (lv_par1_9_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:828:1: (lv_par1_9_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:829:3: lv_par1_9_0= RULE_ID
-            	    {
-            	    lv_par1_9_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1587); 
-
-            	    			newLeafNode(lv_par1_9_0, grammarAccess.getExpressionAccess().getPar1IDTerminalRuleCall_2_2_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par1",
-            	            		lv_par1_9_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:845:2: ( (lv_infix_10_0= ruleMultString ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:846:1: (lv_infix_10_0= ruleMultString )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:846:1: (lv_infix_10_0= ruleMultString )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:847:3: lv_infix_10_0= ruleMultString
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getExpressionAccess().getInfixMultStringParserRuleCall_2_2_2_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleMultString_in_ruleExpression1613);
-            	    lv_infix_10_0=ruleMultString();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"infix",
-            	            		lv_infix_10_0, 
-            	            		"MultString");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:863:2: ( (lv_par2_11_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:864:1: (lv_par2_11_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:864:1: (lv_par2_11_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:865:3: lv_par2_11_0= RULE_ID
-            	    {
-            	    lv_par2_11_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1630); 
-
-            	    			newLeafNode(lv_par2_11_0, grammarAccess.getExpressionAccess().getPar2IDTerminalRuleCall_2_2_3_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par2",
-            	            		lv_par2_11_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:882:6: (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:882:6: (otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:882:8: otherlv_12= 'infixleft' ( (lv_par1_13_0= RULE_ID ) ) ( (lv_infixleft_14_0= ruleMultString ) ) ( (lv_par2_15_0= RULE_ID ) )
-            	    {
-            	    otherlv_12=(Token)match(input,36,FOLLOW_36_in_ruleExpression1655); 
-
-            	        	newLeafNode(otherlv_12, grammarAccess.getExpressionAccess().getInfixleftKeyword_2_3_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:886:1: ( (lv_par1_13_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:887:1: (lv_par1_13_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:887:1: (lv_par1_13_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:888:3: lv_par1_13_0= RULE_ID
-            	    {
-            	    lv_par1_13_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1672); 
-
-            	    			newLeafNode(lv_par1_13_0, grammarAccess.getExpressionAccess().getPar1IDTerminalRuleCall_2_3_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par1",
-            	            		lv_par1_13_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:904:2: ( (lv_infixleft_14_0= ruleMultString ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:905:1: (lv_infixleft_14_0= ruleMultString )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:905:1: (lv_infixleft_14_0= ruleMultString )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:906:3: lv_infixleft_14_0= ruleMultString
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getExpressionAccess().getInfixleftMultStringParserRuleCall_2_3_2_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleMultString_in_ruleExpression1698);
-            	    lv_infixleft_14_0=ruleMultString();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"infixleft",
-            	            		lv_infixleft_14_0, 
-            	            		"MultString");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:922:2: ( (lv_par2_15_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:923:1: (lv_par2_15_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:923:1: (lv_par2_15_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:924:3: lv_par2_15_0= RULE_ID
-            	    {
-            	    lv_par2_15_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1715); 
-
-            	    			newLeafNode(lv_par2_15_0, grammarAccess.getExpressionAccess().getPar2IDTerminalRuleCall_2_3_3_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"par2",
-            	            		lv_par2_15_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 5 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:941:6: (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:941:6: (otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:941:8: otherlv_16= 'literal' ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) )
-            	    {
-            	    otherlv_16=(Token)match(input,37,FOLLOW_37_in_ruleExpression1740); 
-
-            	        	newLeafNode(otherlv_16, grammarAccess.getExpressionAccess().getLiteralKeyword_2_4_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:945:1: ( ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:946:1: ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:946:1: ( (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:947:1: (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:947:1: (lv_literal_17_1= 'int' | lv_literal_17_2= 'string' | lv_literal_17_3= 'bool' | lv_literal_17_4= 'float' )
-            	    int alt8=4;
-            	    switch ( input.LA(1) ) {
-            	    case 38:
-            	        {
-            	        alt8=1;
-            	        }
-            	        break;
-            	    case 39:
-            	        {
-            	        alt8=2;
-            	        }
-            	        break;
-            	    case 40:
-            	        {
-            	        alt8=3;
-            	        }
-            	        break;
-            	    case 41:
-            	        {
-            	        alt8=4;
-            	        }
-            	        break;
-            	    default:
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 8, 0, input);
-
-            	        throw nvae;
-            	    }
-
-            	    switch (alt8) {
-            	        case 1 :
-            	            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:948:3: lv_literal_17_1= 'int'
-            	            {
-            	            lv_literal_17_1=(Token)match(input,38,FOLLOW_38_in_ruleExpression1760); 
-
-            	                    newLeafNode(lv_literal_17_1, grammarAccess.getExpressionAccess().getLiteralIntKeyword_2_4_1_0_0());
-            	                
-
-            	            	        if (current==null) {
-            	            	            current = createModelElement(grammarAccess.getExpressionRule());
-            	            	        }
-            	                   		addWithLastConsumed(current, "literal", lv_literal_17_1, null);
-            	            	    
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:960:8: lv_literal_17_2= 'string'
-            	            {
-            	            lv_literal_17_2=(Token)match(input,39,FOLLOW_39_in_ruleExpression1789); 
-
-            	                    newLeafNode(lv_literal_17_2, grammarAccess.getExpressionAccess().getLiteralStringKeyword_2_4_1_0_1());
-            	                
-
-            	            	        if (current==null) {
-            	            	            current = createModelElement(grammarAccess.getExpressionRule());
-            	            	        }
-            	                   		addWithLastConsumed(current, "literal", lv_literal_17_2, null);
-            	            	    
-
-            	            }
-            	            break;
-            	        case 3 :
-            	            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:972:8: lv_literal_17_3= 'bool'
-            	            {
-            	            lv_literal_17_3=(Token)match(input,40,FOLLOW_40_in_ruleExpression1818); 
-
-            	                    newLeafNode(lv_literal_17_3, grammarAccess.getExpressionAccess().getLiteralBoolKeyword_2_4_1_0_2());
-            	                
-
-            	            	        if (current==null) {
-            	            	            current = createModelElement(grammarAccess.getExpressionRule());
-            	            	        }
-            	                   		addWithLastConsumed(current, "literal", lv_literal_17_3, null);
-            	            	    
-
-            	            }
-            	            break;
-            	        case 4 :
-            	            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:984:8: lv_literal_17_4= 'float'
-            	            {
-            	            lv_literal_17_4=(Token)match(input,41,FOLLOW_41_in_ruleExpression1847); 
-
-            	                    newLeafNode(lv_literal_17_4, grammarAccess.getExpressionAccess().getLiteralFloatKeyword_2_4_1_0_3());
-            	                
-
-            	            	        if (current==null) {
-            	            	            current = createModelElement(grammarAccess.getExpressionRule());
-            	            	        }
-            	                   		addWithLastConsumed(current, "literal", lv_literal_17_4, null);
-            	            	    
-
-            	            }
-            	            break;
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 6 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1000:6: (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1000:6: (otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1000:8: otherlv_18= 'bracket' ( (lv_bracket_19_0= RULE_ID ) )
-            	    {
-            	    otherlv_18=(Token)match(input,42,FOLLOW_42_in_ruleExpression1883); 
-
-            	        	newLeafNode(otherlv_18, grammarAccess.getExpressionAccess().getBracketKeyword_2_5_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1004:1: ( (lv_bracket_19_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1005:1: (lv_bracket_19_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1005:1: (lv_bracket_19_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1006:3: lv_bracket_19_0= RULE_ID
-            	    {
-            	    lv_bracket_19_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1900); 
-
-            	    			newLeafNode(lv_bracket_19_0, grammarAccess.getExpressionAccess().getBracketIDTerminalRuleCall_2_5_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"bracket",
-            	            		lv_bracket_19_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 7 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1023:6: (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1023:6: (otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1023:8: otherlv_20= 'braces' ( (lv_braces_21_0= RULE_ID ) )
-            	    {
-            	    otherlv_20=(Token)match(input,16,FOLLOW_16_in_ruleExpression1925); 
-
-            	        	newLeafNode(otherlv_20, grammarAccess.getExpressionAccess().getBracesKeyword_2_6_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1027:1: ( (lv_braces_21_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1028:1: (lv_braces_21_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1028:1: (lv_braces_21_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1029:3: lv_braces_21_0= RULE_ID
-            	    {
-            	    lv_braces_21_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1942); 
-
-            	    			newLeafNode(lv_braces_21_0, grammarAccess.getExpressionAccess().getBracesIDTerminalRuleCall_2_6_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"braces",
-            	            		lv_braces_21_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 8 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1046:6: (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1046:6: (otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1046:8: otherlv_22= 'parenthasis' ( (lv_parenthasis_23_0= RULE_ID ) )
-            	    {
-            	    otherlv_22=(Token)match(input,43,FOLLOW_43_in_ruleExpression1967); 
-
-            	        	newLeafNode(otherlv_22, grammarAccess.getExpressionAccess().getParenthasisKeyword_2_7_0());
-            	        
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1050:1: ( (lv_parenthasis_23_0= RULE_ID ) )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1051:1: (lv_parenthasis_23_0= RULE_ID )
-            	    {
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1051:1: (lv_parenthasis_23_0= RULE_ID )
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1052:3: lv_parenthasis_23_0= RULE_ID
-            	    {
-            	    lv_parenthasis_23_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleExpression1984); 
-
-            	    			newLeafNode(lv_parenthasis_23_0, grammarAccess.getExpressionAccess().getParenthasisIDTerminalRuleCall_2_7_1_0()); 
-            	    		
-
-            	    	        if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getExpressionRule());
-            	    	        }
-            	           		addWithLastConsumed(
-            	           			current, 
-            	           			"parenthasis",
-            	            		lv_parenthasis_23_0, 
-            	            		"ID");
-            	    	    
-
-            	    }
-
-
-            	    }
-
 
             	    }
 
@@ -2363,7 +1734,7 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop8;
                 }
             } while (true);
 
@@ -2387,8 +1758,968 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleExpression"
 
 
+    // $ANTLR start "entryRulePrecidence"
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:767:1: entryRulePrecidence returns [EObject current=null] : iv_rulePrecidence= rulePrecidence EOF ;
+    public final EObject entryRulePrecidence() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulePrecidence = null;
+
+
+        try {
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:768:2: (iv_rulePrecidence= rulePrecidence EOF )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:769:2: iv_rulePrecidence= rulePrecidence EOF
+            {
+             newCompositeNode(grammarAccess.getPrecidenceRule()); 
+            pushFollow(FOLLOW_rulePrecidence_in_entryRulePrecidence1488);
+            iv_rulePrecidence=rulePrecidence();
+
+            state._fsp--;
+
+             current =iv_rulePrecidence; 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrecidence1498); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulePrecidence"
+
+
+    // $ANTLR start "rulePrecidence"
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:776:1: rulePrecidence returns [EObject current=null] : ( (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) ) | (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) ) | (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) ) | (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) ) | (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) ) | (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) ) | (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) ) ) ;
+    public final EObject rulePrecidence() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_rule_1_0=null;
+        Token lv_par1_3_0=null;
+        Token otherlv_4=null;
+        Token lv_rule_5_0=null;
+        Token lv_par1_6_0=null;
+        Token otherlv_8=null;
+        Token lv_rule_9_0=null;
+        Token lv_par1_10_0=null;
+        Token lv_par2_12_0=null;
+        Token otherlv_13=null;
+        Token lv_rule_14_0=null;
+        Token lv_par1_15_0=null;
+        Token lv_par2_17_0=null;
+        Token otherlv_18=null;
+        Token lv_rule_19_0=null;
+        Token lv_literal_20_1=null;
+        Token lv_literal_20_2=null;
+        Token lv_literal_20_3=null;
+        Token lv_literal_20_4=null;
+        Token otherlv_21=null;
+        Token lv_rule_22_0=null;
+        Token lv_bracket_23_0=null;
+        Token otherlv_24=null;
+        Token lv_rule_25_0=null;
+        Token lv_braces_26_0=null;
+        Token otherlv_27=null;
+        Token lv_rule_28_0=null;
+        Token lv_parenthesis_29_0=null;
+        AntlrDatatypeRuleToken lv_prefix_2_0 = null;
+
+        AntlrDatatypeRuleToken lv_suffix_7_0 = null;
+
+        AntlrDatatypeRuleToken lv_infix_11_0 = null;
+
+        AntlrDatatypeRuleToken lv_infixleft_16_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:779:28: ( ( (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) ) | (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) ) | (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) ) | (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) ) | (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) ) | (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) ) | (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) ) ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:780:1: ( (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) ) | (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) ) | (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) ) | (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) ) | (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) ) | (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) ) | (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) ) )
+            {
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:780:1: ( (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) ) | (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) ) | (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) ) | (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) ) | (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) ) | (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) ) | (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) ) | (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) ) )
+            int alt10=8;
+            switch ( input.LA(1) ) {
+            case 13:
+                {
+                alt10=1;
+                }
+                break;
+            case 14:
+                {
+                alt10=2;
+                }
+                break;
+            case 35:
+                {
+                alt10=3;
+                }
+                break;
+            case 36:
+                {
+                alt10=4;
+                }
+                break;
+            case 37:
+                {
+                alt10=5;
+                }
+                break;
+            case 42:
+                {
+                alt10=6;
+                }
+                break;
+            case 16:
+                {
+                alt10=7;
+                }
+                break;
+            case 43:
+                {
+                alt10=8;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 10, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt10) {
+                case 1 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:780:2: (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:780:2: (otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:780:4: otherlv_0= 'prefix' ( (lv_rule_1_0= RULE_ID ) ) ( (lv_prefix_2_0= ruleMultString ) ) ( (lv_par1_3_0= RULE_ID ) )
+                    {
+                    otherlv_0=(Token)match(input,13,FOLLOW_13_in_rulePrecidence1536); 
+
+                        	newLeafNode(otherlv_0, grammarAccess.getPrecidenceAccess().getPrefixKeyword_0_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:784:1: ( (lv_rule_1_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:785:1: (lv_rule_1_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:785:1: (lv_rule_1_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:786:3: lv_rule_1_0= RULE_ID
+                    {
+                    lv_rule_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1553); 
+
+                    			newLeafNode(lv_rule_1_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_0_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_1_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:802:2: ( (lv_prefix_2_0= ruleMultString ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:803:1: (lv_prefix_2_0= ruleMultString )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:803:1: (lv_prefix_2_0= ruleMultString )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:804:3: lv_prefix_2_0= ruleMultString
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPrecidenceAccess().getPrefixMultStringParserRuleCall_0_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleMultString_in_rulePrecidence1579);
+                    lv_prefix_2_0=ruleMultString();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"prefix",
+                            		lv_prefix_2_0, 
+                            		"MultString");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:820:2: ( (lv_par1_3_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:821:1: (lv_par1_3_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:821:1: (lv_par1_3_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:822:3: lv_par1_3_0= RULE_ID
+                    {
+                    lv_par1_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1596); 
+
+                    			newLeafNode(lv_par1_3_0, grammarAccess.getPrecidenceAccess().getPar1IDTerminalRuleCall_0_3_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par1",
+                            		lv_par1_3_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:839:6: (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:839:6: (otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:839:8: otherlv_4= 'suffix' ( (lv_rule_5_0= RULE_ID ) ) ( (lv_par1_6_0= RULE_ID ) ) ( (lv_suffix_7_0= ruleMultString ) )
+                    {
+                    otherlv_4=(Token)match(input,14,FOLLOW_14_in_rulePrecidence1621); 
+
+                        	newLeafNode(otherlv_4, grammarAccess.getPrecidenceAccess().getSuffixKeyword_1_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:843:1: ( (lv_rule_5_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:844:1: (lv_rule_5_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:844:1: (lv_rule_5_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:845:3: lv_rule_5_0= RULE_ID
+                    {
+                    lv_rule_5_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1638); 
+
+                    			newLeafNode(lv_rule_5_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_1_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_5_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:861:2: ( (lv_par1_6_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:862:1: (lv_par1_6_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:862:1: (lv_par1_6_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:863:3: lv_par1_6_0= RULE_ID
+                    {
+                    lv_par1_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1660); 
+
+                    			newLeafNode(lv_par1_6_0, grammarAccess.getPrecidenceAccess().getPar1IDTerminalRuleCall_1_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par1",
+                            		lv_par1_6_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:879:2: ( (lv_suffix_7_0= ruleMultString ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:880:1: (lv_suffix_7_0= ruleMultString )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:880:1: (lv_suffix_7_0= ruleMultString )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:881:3: lv_suffix_7_0= ruleMultString
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPrecidenceAccess().getSuffixMultStringParserRuleCall_1_3_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleMultString_in_rulePrecidence1686);
+                    lv_suffix_7_0=ruleMultString();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"suffix",
+                            		lv_suffix_7_0, 
+                            		"MultString");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:898:6: (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:898:6: (otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:898:8: otherlv_8= 'infix' ( (lv_rule_9_0= RULE_ID ) ) ( (lv_par1_10_0= RULE_ID ) ) ( (lv_infix_11_0= ruleMultString ) ) ( (lv_par2_12_0= RULE_ID ) )
+                    {
+                    otherlv_8=(Token)match(input,35,FOLLOW_35_in_rulePrecidence1706); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getPrecidenceAccess().getInfixKeyword_2_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:902:1: ( (lv_rule_9_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:903:1: (lv_rule_9_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:903:1: (lv_rule_9_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:904:3: lv_rule_9_0= RULE_ID
+                    {
+                    lv_rule_9_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1723); 
+
+                    			newLeafNode(lv_rule_9_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_2_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_9_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:920:2: ( (lv_par1_10_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:921:1: (lv_par1_10_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:921:1: (lv_par1_10_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:922:3: lv_par1_10_0= RULE_ID
+                    {
+                    lv_par1_10_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1745); 
+
+                    			newLeafNode(lv_par1_10_0, grammarAccess.getPrecidenceAccess().getPar1IDTerminalRuleCall_2_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par1",
+                            		lv_par1_10_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:938:2: ( (lv_infix_11_0= ruleMultString ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:939:1: (lv_infix_11_0= ruleMultString )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:939:1: (lv_infix_11_0= ruleMultString )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:940:3: lv_infix_11_0= ruleMultString
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPrecidenceAccess().getInfixMultStringParserRuleCall_2_3_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleMultString_in_rulePrecidence1771);
+                    lv_infix_11_0=ruleMultString();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"infix",
+                            		lv_infix_11_0, 
+                            		"MultString");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:956:2: ( (lv_par2_12_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:957:1: (lv_par2_12_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:957:1: (lv_par2_12_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:958:3: lv_par2_12_0= RULE_ID
+                    {
+                    lv_par2_12_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1788); 
+
+                    			newLeafNode(lv_par2_12_0, grammarAccess.getPrecidenceAccess().getPar2IDTerminalRuleCall_2_4_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par2",
+                            		lv_par2_12_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:975:6: (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:975:6: (otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:975:8: otherlv_13= 'infixleft' ( (lv_rule_14_0= RULE_ID ) ) ( (lv_par1_15_0= RULE_ID ) ) ( (lv_infixleft_16_0= ruleMultString ) ) ( (lv_par2_17_0= RULE_ID ) )
+                    {
+                    otherlv_13=(Token)match(input,36,FOLLOW_36_in_rulePrecidence1813); 
+
+                        	newLeafNode(otherlv_13, grammarAccess.getPrecidenceAccess().getInfixleftKeyword_3_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:979:1: ( (lv_rule_14_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:980:1: (lv_rule_14_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:980:1: (lv_rule_14_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:981:3: lv_rule_14_0= RULE_ID
+                    {
+                    lv_rule_14_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1830); 
+
+                    			newLeafNode(lv_rule_14_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_3_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_14_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:997:2: ( (lv_par1_15_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:998:1: (lv_par1_15_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:998:1: (lv_par1_15_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:999:3: lv_par1_15_0= RULE_ID
+                    {
+                    lv_par1_15_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1852); 
+
+                    			newLeafNode(lv_par1_15_0, grammarAccess.getPrecidenceAccess().getPar1IDTerminalRuleCall_3_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par1",
+                            		lv_par1_15_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1015:2: ( (lv_infixleft_16_0= ruleMultString ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1016:1: (lv_infixleft_16_0= ruleMultString )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1016:1: (lv_infixleft_16_0= ruleMultString )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1017:3: lv_infixleft_16_0= ruleMultString
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getPrecidenceAccess().getInfixleftMultStringParserRuleCall_3_3_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleMultString_in_rulePrecidence1878);
+                    lv_infixleft_16_0=ruleMultString();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"infixleft",
+                            		lv_infixleft_16_0, 
+                            		"MultString");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1033:2: ( (lv_par2_17_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1034:1: (lv_par2_17_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1034:1: (lv_par2_17_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1035:3: lv_par2_17_0= RULE_ID
+                    {
+                    lv_par2_17_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1895); 
+
+                    			newLeafNode(lv_par2_17_0, grammarAccess.getPrecidenceAccess().getPar2IDTerminalRuleCall_3_4_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"par2",
+                            		lv_par2_17_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1052:6: (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1052:6: (otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1052:8: otherlv_18= 'literal' ( (lv_rule_19_0= RULE_ID ) ) ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) )
+                    {
+                    otherlv_18=(Token)match(input,37,FOLLOW_37_in_rulePrecidence1920); 
+
+                        	newLeafNode(otherlv_18, grammarAccess.getPrecidenceAccess().getLiteralKeyword_4_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1056:1: ( (lv_rule_19_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1057:1: (lv_rule_19_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1057:1: (lv_rule_19_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1058:3: lv_rule_19_0= RULE_ID
+                    {
+                    lv_rule_19_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence1937); 
+
+                    			newLeafNode(lv_rule_19_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_4_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_19_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1074:2: ( ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1075:1: ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1075:1: ( (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1076:1: (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1076:1: (lv_literal_20_1= 'int' | lv_literal_20_2= 'string' | lv_literal_20_3= 'bool' | lv_literal_20_4= 'float' )
+                    int alt9=4;
+                    switch ( input.LA(1) ) {
+                    case 38:
+                        {
+                        alt9=1;
+                        }
+                        break;
+                    case 39:
+                        {
+                        alt9=2;
+                        }
+                        break;
+                    case 40:
+                        {
+                        alt9=3;
+                        }
+                        break;
+                    case 41:
+                        {
+                        alt9=4;
+                        }
+                        break;
+                    default:
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 9, 0, input);
+
+                        throw nvae;
+                    }
+
+                    switch (alt9) {
+                        case 1 :
+                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1077:3: lv_literal_20_1= 'int'
+                            {
+                            lv_literal_20_1=(Token)match(input,38,FOLLOW_38_in_rulePrecidence1962); 
+
+                                    newLeafNode(lv_literal_20_1, grammarAccess.getPrecidenceAccess().getLiteralIntKeyword_4_2_0_0());
+                                
+
+                            	        if (current==null) {
+                            	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                            	        }
+                                   		setWithLastConsumed(current, "literal", lv_literal_20_1, null);
+                            	    
+
+                            }
+                            break;
+                        case 2 :
+                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1089:8: lv_literal_20_2= 'string'
+                            {
+                            lv_literal_20_2=(Token)match(input,39,FOLLOW_39_in_rulePrecidence1991); 
+
+                                    newLeafNode(lv_literal_20_2, grammarAccess.getPrecidenceAccess().getLiteralStringKeyword_4_2_0_1());
+                                
+
+                            	        if (current==null) {
+                            	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                            	        }
+                                   		setWithLastConsumed(current, "literal", lv_literal_20_2, null);
+                            	    
+
+                            }
+                            break;
+                        case 3 :
+                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1101:8: lv_literal_20_3= 'bool'
+                            {
+                            lv_literal_20_3=(Token)match(input,40,FOLLOW_40_in_rulePrecidence2020); 
+
+                                    newLeafNode(lv_literal_20_3, grammarAccess.getPrecidenceAccess().getLiteralBoolKeyword_4_2_0_2());
+                                
+
+                            	        if (current==null) {
+                            	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                            	        }
+                                   		setWithLastConsumed(current, "literal", lv_literal_20_3, null);
+                            	    
+
+                            }
+                            break;
+                        case 4 :
+                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1113:8: lv_literal_20_4= 'float'
+                            {
+                            lv_literal_20_4=(Token)match(input,41,FOLLOW_41_in_rulePrecidence2049); 
+
+                                    newLeafNode(lv_literal_20_4, grammarAccess.getPrecidenceAccess().getLiteralFloatKeyword_4_2_0_3());
+                                
+
+                            	        if (current==null) {
+                            	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                            	        }
+                                   		setWithLastConsumed(current, "literal", lv_literal_20_4, null);
+                            	    
+
+                            }
+                            break;
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1129:6: (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1129:6: (otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1129:8: otherlv_21= 'bracket' ( (lv_rule_22_0= RULE_ID ) ) ( (lv_bracket_23_0= RULE_ID ) )
+                    {
+                    otherlv_21=(Token)match(input,42,FOLLOW_42_in_rulePrecidence2085); 
+
+                        	newLeafNode(otherlv_21, grammarAccess.getPrecidenceAccess().getBracketKeyword_5_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1133:1: ( (lv_rule_22_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1134:1: (lv_rule_22_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1134:1: (lv_rule_22_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1135:3: lv_rule_22_0= RULE_ID
+                    {
+                    lv_rule_22_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2102); 
+
+                    			newLeafNode(lv_rule_22_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_5_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_22_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1151:2: ( (lv_bracket_23_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1152:1: (lv_bracket_23_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1152:1: (lv_bracket_23_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1153:3: lv_bracket_23_0= RULE_ID
+                    {
+                    lv_bracket_23_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2124); 
+
+                    			newLeafNode(lv_bracket_23_0, grammarAccess.getPrecidenceAccess().getBracketIDTerminalRuleCall_5_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"bracket",
+                            		lv_bracket_23_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1170:6: (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1170:6: (otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1170:8: otherlv_24= 'braces' ( (lv_rule_25_0= RULE_ID ) ) ( (lv_braces_26_0= RULE_ID ) )
+                    {
+                    otherlv_24=(Token)match(input,16,FOLLOW_16_in_rulePrecidence2149); 
+
+                        	newLeafNode(otherlv_24, grammarAccess.getPrecidenceAccess().getBracesKeyword_6_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1174:1: ( (lv_rule_25_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1175:1: (lv_rule_25_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1175:1: (lv_rule_25_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1176:3: lv_rule_25_0= RULE_ID
+                    {
+                    lv_rule_25_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2166); 
+
+                    			newLeafNode(lv_rule_25_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_6_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_25_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1192:2: ( (lv_braces_26_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1193:1: (lv_braces_26_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1193:1: (lv_braces_26_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1194:3: lv_braces_26_0= RULE_ID
+                    {
+                    lv_braces_26_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2188); 
+
+                    			newLeafNode(lv_braces_26_0, grammarAccess.getPrecidenceAccess().getBracesIDTerminalRuleCall_6_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"braces",
+                            		lv_braces_26_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1211:6: (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1211:6: (otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1211:8: otherlv_27= 'parenthesis' ( (lv_rule_28_0= RULE_ID ) ) ( (lv_parenthesis_29_0= RULE_ID ) )
+                    {
+                    otherlv_27=(Token)match(input,43,FOLLOW_43_in_rulePrecidence2213); 
+
+                        	newLeafNode(otherlv_27, grammarAccess.getPrecidenceAccess().getParenthesisKeyword_7_0());
+                        
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1215:1: ( (lv_rule_28_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1216:1: (lv_rule_28_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1216:1: (lv_rule_28_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1217:3: lv_rule_28_0= RULE_ID
+                    {
+                    lv_rule_28_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2230); 
+
+                    			newLeafNode(lv_rule_28_0, grammarAccess.getPrecidenceAccess().getRuleIDTerminalRuleCall_7_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"rule",
+                            		lv_rule_28_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1233:2: ( (lv_parenthesis_29_0= RULE_ID ) )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1234:1: (lv_parenthesis_29_0= RULE_ID )
+                    {
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1234:1: (lv_parenthesis_29_0= RULE_ID )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1235:3: lv_parenthesis_29_0= RULE_ID
+                    {
+                    lv_parenthesis_29_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrecidence2252); 
+
+                    			newLeafNode(lv_parenthesis_29_0, grammarAccess.getPrecidenceAccess().getParenthesisIDTerminalRuleCall_7_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPrecidenceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"parenthesis",
+                            		lv_parenthesis_29_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulePrecidence"
+
+
     // $ANTLR start "entryRuleMultID"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1076:1: entryRuleMultID returns [String current=null] : iv_ruleMultID= ruleMultID EOF ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1259:1: entryRuleMultID returns [String current=null] : iv_ruleMultID= ruleMultID EOF ;
     public final String entryRuleMultID() throws RecognitionException {
         String current = null;
 
@@ -2396,17 +2727,17 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1077:2: (iv_ruleMultID= ruleMultID EOF )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1078:2: iv_ruleMultID= ruleMultID EOF
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1260:2: (iv_ruleMultID= ruleMultID EOF )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1261:2: iv_ruleMultID= ruleMultID EOF
             {
              newCompositeNode(grammarAccess.getMultIDRule()); 
-            pushFollow(FOLLOW_ruleMultID_in_entryRuleMultID2029);
+            pushFollow(FOLLOW_ruleMultID_in_entryRuleMultID2295);
             iv_ruleMultID=ruleMultID();
 
             state._fsp--;
 
              current =iv_ruleMultID.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultID2040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultID2306); 
 
             }
 
@@ -2424,7 +2755,7 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultID"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1085:1: ruleMultID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) ) ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1268:1: ruleMultID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) ) ;
     public final AntlrDatatypeRuleToken ruleMultID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2435,30 +2766,30 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1088:28: ( (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) ) )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1089:1: (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1271:28: ( (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1272:1: (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) )
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1089:1: (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1272:1: (this_ID_0= RULE_ID | (kw= '[' (this_ID_2= RULE_ID )* kw= ']' ) )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_ID) ) {
-                alt11=1;
+            if ( (LA12_0==RULE_ID) ) {
+                alt12=1;
             }
-            else if ( (LA11_0==44) ) {
-                alt11=2;
+            else if ( (LA12_0==44) ) {
+                alt12=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1089:6: this_ID_0= RULE_ID
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1272:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMultID2080); 
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMultID2346); 
 
                     		current.merge(this_ID_0);
                         
@@ -2469,32 +2800,32 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1097:6: (kw= '[' (this_ID_2= RULE_ID )* kw= ']' )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1280:6: (kw= '[' (this_ID_2= RULE_ID )* kw= ']' )
                     {
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1097:6: (kw= '[' (this_ID_2= RULE_ID )* kw= ']' )
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1098:2: kw= '[' (this_ID_2= RULE_ID )* kw= ']'
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1280:6: (kw= '[' (this_ID_2= RULE_ID )* kw= ']' )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1281:2: kw= '[' (this_ID_2= RULE_ID )* kw= ']'
                     {
-                    kw=(Token)match(input,44,FOLLOW_44_in_ruleMultID2105); 
+                    kw=(Token)match(input,44,FOLLOW_44_in_ruleMultID2371); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMultIDAccess().getLeftSquareBracketKeyword_1_0()); 
                         
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1103:1: (this_ID_2= RULE_ID )*
-                    loop10:
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1286:1: (this_ID_2= RULE_ID )*
+                    loop11:
                     do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
+                        int alt11=2;
+                        int LA11_0 = input.LA(1);
 
-                        if ( (LA10_0==RULE_ID) ) {
-                            alt10=1;
+                        if ( (LA11_0==RULE_ID) ) {
+                            alt11=1;
                         }
 
 
-                        switch (alt10) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1103:6: this_ID_2= RULE_ID
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1286:6: this_ID_2= RULE_ID
                     	    {
-                    	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMultID2121); 
+                    	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMultID2387); 
 
                     	    		current.merge(this_ID_2);
                     	        
@@ -2506,11 +2837,11 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop11;
                         }
                     } while (true);
 
-                    kw=(Token)match(input,45,FOLLOW_45_in_ruleMultID2141); 
+                    kw=(Token)match(input,45,FOLLOW_45_in_ruleMultID2407); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMultIDAccess().getRightSquareBracketKeyword_1_2()); 
@@ -2542,7 +2873,7 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultString"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1124:1: entryRuleMultString returns [String current=null] : iv_ruleMultString= ruleMultString EOF ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1307:1: entryRuleMultString returns [String current=null] : iv_ruleMultString= ruleMultString EOF ;
     public final String entryRuleMultString() throws RecognitionException {
         String current = null;
 
@@ -2550,17 +2881,17 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1125:2: (iv_ruleMultString= ruleMultString EOF )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1126:2: iv_ruleMultString= ruleMultString EOF
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1308:2: (iv_ruleMultString= ruleMultString EOF )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1309:2: iv_ruleMultString= ruleMultString EOF
             {
              newCompositeNode(grammarAccess.getMultStringRule()); 
-            pushFollow(FOLLOW_ruleMultString_in_entryRuleMultString2183);
+            pushFollow(FOLLOW_ruleMultString_in_entryRuleMultString2449);
             iv_ruleMultString=ruleMultString();
 
             state._fsp--;
 
              current =iv_ruleMultString.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultString2194); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultString2460); 
 
             }
 
@@ -2578,7 +2909,7 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultString"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1133:1: ruleMultString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) ) ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1316:1: ruleMultString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) ) ;
     public final AntlrDatatypeRuleToken ruleMultString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2589,30 +2920,30 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1136:28: ( (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) ) )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1137:1: (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1319:28: ( (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1320:1: (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) )
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1137:1: (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1320:1: (this_STRING_0= RULE_STRING | (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' ) )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_STRING) ) {
-                alt13=1;
+            if ( (LA14_0==RULE_STRING) ) {
+                alt14=1;
             }
-            else if ( (LA13_0==44) ) {
-                alt13=2;
+            else if ( (LA14_0==44) ) {
+                alt14=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1137:6: this_STRING_0= RULE_STRING
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1320:6: this_STRING_0= RULE_STRING
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultString2234); 
+                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultString2500); 
 
                     		current.merge(this_STRING_0);
                         
@@ -2623,32 +2954,32 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1145:6: (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1328:6: (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' )
                     {
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1145:6: (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' )
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1146:2: kw= '[' (this_STRING_2= RULE_STRING )* kw= ']'
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1328:6: (kw= '[' (this_STRING_2= RULE_STRING )* kw= ']' )
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1329:2: kw= '[' (this_STRING_2= RULE_STRING )* kw= ']'
                     {
-                    kw=(Token)match(input,44,FOLLOW_44_in_ruleMultString2259); 
+                    kw=(Token)match(input,44,FOLLOW_44_in_ruleMultString2525); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_0()); 
                         
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1151:1: (this_STRING_2= RULE_STRING )*
-                    loop12:
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1334:1: (this_STRING_2= RULE_STRING )*
+                    loop13:
                     do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA12_0==RULE_STRING) ) {
-                            alt12=1;
+                        if ( (LA13_0==RULE_STRING) ) {
+                            alt13=1;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1151:6: this_STRING_2= RULE_STRING
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1334:6: this_STRING_2= RULE_STRING
                     	    {
-                    	    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultString2275); 
+                    	    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultString2541); 
 
                     	    		current.merge(this_STRING_2);
                     	        
@@ -2660,11 +2991,11 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop12;
+                    	    break loop13;
                         }
                     } while (true);
 
-                    kw=(Token)match(input,45,FOLLOW_45_in_ruleMultString2295); 
+                    kw=(Token)match(input,45,FOLLOW_45_in_ruleMultString2561); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_2()); 
@@ -2757,42 +3088,53 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression1371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_34_in_ruleExpression1408 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1425 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_13_in_ruleExpression1444 = new BitSet(new long[]{0x0000100000000020L});
-    public static final BitSet FOLLOW_ruleMultString_in_ruleExpression1465 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1482 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_14_in_ruleExpression1507 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1524 = new BitSet(new long[]{0x0000100000000020L});
-    public static final BitSet FOLLOW_ruleMultString_in_ruleExpression1550 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_35_in_ruleExpression1570 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1587 = new BitSet(new long[]{0x0000100000000020L});
-    public static final BitSet FOLLOW_ruleMultString_in_ruleExpression1613 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1630 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_36_in_ruleExpression1655 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1672 = new BitSet(new long[]{0x0000100000000020L});
-    public static final BitSet FOLLOW_ruleMultString_in_ruleExpression1698 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1715 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_37_in_ruleExpression1740 = new BitSet(new long[]{0x000003C000000000L});
-    public static final BitSet FOLLOW_38_in_ruleExpression1760 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_39_in_ruleExpression1789 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_40_in_ruleExpression1818 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_41_in_ruleExpression1847 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_42_in_ruleExpression1883 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1900 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_16_in_ruleExpression1925 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1942 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_43_in_ruleExpression1967 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExpression1984 = new BitSet(new long[]{0x00000C3800016002L});
-    public static final BitSet FOLLOW_ruleMultID_in_entryRuleMultID2029 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultID2040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMultID2080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleMultID2105 = new BitSet(new long[]{0x0000200000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMultID2121 = new BitSet(new long[]{0x0000200000000010L});
-    public static final BitSet FOLLOW_45_in_ruleMultID2141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultString_in_entryRuleMultString2183 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultString2194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultString2234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleMultString2259 = new BitSet(new long[]{0x0000200000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultString2275 = new BitSet(new long[]{0x0000200000000020L});
-    public static final BitSet FOLLOW_45_in_ruleMultString2295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrecidence_in_ruleExpression1451 = new BitSet(new long[]{0x00000C3800016002L});
+    public static final BitSet FOLLOW_rulePrecidence_in_entryRulePrecidence1488 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrecidence1498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rulePrecidence1536 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1553 = new BitSet(new long[]{0x0000100000000020L});
+    public static final BitSet FOLLOW_ruleMultString_in_rulePrecidence1579 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rulePrecidence1621 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1638 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1660 = new BitSet(new long[]{0x0000100000000020L});
+    public static final BitSet FOLLOW_ruleMultString_in_rulePrecidence1686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rulePrecidence1706 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1723 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1745 = new BitSet(new long[]{0x0000100000000020L});
+    public static final BitSet FOLLOW_ruleMultString_in_rulePrecidence1771 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rulePrecidence1813 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1830 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1852 = new BitSet(new long[]{0x0000100000000020L});
+    public static final BitSet FOLLOW_ruleMultString_in_rulePrecidence1878 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rulePrecidence1920 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence1937 = new BitSet(new long[]{0x000003C000000000L});
+    public static final BitSet FOLLOW_38_in_rulePrecidence1962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rulePrecidence1991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rulePrecidence2020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rulePrecidence2049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rulePrecidence2085 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2102 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rulePrecidence2149 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2166 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rulePrecidence2213 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2230 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePrecidence2252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultID_in_entryRuleMultID2295 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultID2306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMultID2346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleMultID2371 = new BitSet(new long[]{0x0000200000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMultID2387 = new BitSet(new long[]{0x0000200000000010L});
+    public static final BitSet FOLLOW_45_in_ruleMultID2407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_entryRuleMultString2449 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultString2460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultString2500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleMultString2525 = new BitSet(new long[]{0x0000200000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultString2541 = new BitSet(new long[]{0x0000200000000020L});
+    public static final BitSet FOLLOW_45_in_ruleMultString2561 = new BitSet(new long[]{0x0000000000000002L});
 
 }
