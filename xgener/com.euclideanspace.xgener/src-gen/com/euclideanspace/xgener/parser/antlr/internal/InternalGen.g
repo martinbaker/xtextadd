@@ -312,7 +312,7 @@ ruleProcedure returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Procedure' 
+(	otherlv_0='procedure' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getProcedureAccess().getProcedureKeyword_0());
     }

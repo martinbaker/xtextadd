@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGenParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'braces'", "'indent'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'int'", "'string'", "'bool'", "'float'", "'class'", "'prefix'", "'suffix'", "'blocking'", "'Procedure'", "'types'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'bracket'", "'parenthasis'", "'['", "']'", "'noclass'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'braces'", "'indent'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'int'", "'string'", "'bool'", "'float'", "'class'", "'prefix'", "'suffix'", "'blocking'", "'procedure'", "'types'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'bracket'", "'parenthasis'", "'['", "']'", "'noclass'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -2802,17 +2802,17 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:909:1: rule__Procedure__Group__0__Impl : ( 'Procedure' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:909:1: rule__Procedure__Group__0__Impl : ( 'procedure' ) ;
     public final void rule__Procedure__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:913:1: ( ( 'Procedure' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:914:1: ( 'Procedure' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:913:1: ( ( 'procedure' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:914:1: ( 'procedure' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:914:1: ( 'Procedure' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:915:1: 'Procedure'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:914:1: ( 'procedure' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:915:1: 'procedure'
             {
              before(grammarAccess.getProcedureAccess().getProcedureKeyword_0()); 
             match(input,26,FOLLOW_26_in_rule__Procedure__Group__0__Impl1947); 

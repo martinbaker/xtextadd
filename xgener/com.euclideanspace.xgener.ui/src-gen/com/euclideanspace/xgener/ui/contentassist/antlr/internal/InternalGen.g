@@ -914,7 +914,7 @@ rule__Procedure__Group__0__Impl
 (
 { before(grammarAccess.getProcedureAccess().getProcedureKeyword_0()); }
 
-	'Procedure' 
+	'procedure' 
 
 { after(grammarAccess.getProcedureAccess().getProcedureKeyword_0()); }
 )

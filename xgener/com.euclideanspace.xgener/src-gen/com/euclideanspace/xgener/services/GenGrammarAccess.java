@@ -182,15 +182,15 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTypesUntypedKeyword_2_2_1_0_4 = (Keyword)cTypesAlternatives_2_2_1_0.eContents().get(4);
 		
 		//Procedure:
-		//	"Procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
+		//	"procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
 		//	"spaceSeperated" | "inHeader" | "inferred" | "untyped"))*;
 		public ParserRule getRule() { return rule; }
 
-		//"Procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
+		//"procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
 		//"spaceSeperated" | "inHeader" | "inferred" | "untyped"))*
 		public Group getGroup() { return cGroup; }
 
-		//"Procedure"
+		//"procedure"
 		public Keyword getProcedureKeyword_0() { return cProcedureKeyword_0; }
 
 		//name=ID
@@ -784,7 +784,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Procedure:
-	//	"Procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
+	//	"procedure" name=ID ("prefix" prefix+=MultID | "suffix" suffix+=MultID | "types" types+=("colonSeperated" |
 	//	"spaceSeperated" | "inHeader" | "inferred" | "untyped"))*;
 	public ProcedureElements getProcedureAccess() {
 		return pProcedure;

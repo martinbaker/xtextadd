@@ -32,16 +32,14 @@ class GenGenerator implements IGenerator {
 		return name.substring(0, name.indexOf('.'))
 	}
 
-	def CharSequence compile(com.euclideanspace.xgener.gen.Model model) ''' 
-        «IF model.eContainer != null»
-            package «model.eResource.className»;
-        «ENDIF»
-        
-        «IF model.clas != null» «compile(model.clas as com.euclideanspace.xgener.gen.ClassType)» «ENDIF»
-        «IF model.proc != null» «compile(model.proc as com.euclideanspace.xgener.gen.Procedure)» «ENDIF»
-        «IF model.statem != null» «compile(model.statem as com.euclideanspace.xgener.gen.Statement)» «ENDIF»
-        «IF model.exp != null» «compile(model.exp as com.euclideanspace.xgener.gen.Expression)» «ENDIF»
-    grammar com.euclideanspace.xgener.Tutorial
+
+
+	def CharSequence compile(com.euclideanspace.xgener.gen.Model model) '''
+        «IF model != null»	    
+          «IF model.eContainer != null»
+package «model.eResource.className»;
+          «ENDIF»
+grammar com.euclideanspace.xgener.Tutorial
 generate demo "http://www.euclideanspace.com/xgener/Tutorial"
 //import "http://www.eclipse.org/xtext/xbase/Xbase"
 //import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
@@ -49,6 +47,93 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Model hidden(SL_COMMENT,WS):
 m+=Member*
 ;
+          «FOR x:model.clas»«compile(x)»;
+          «ENDFOR»
+          «FOR x:model.proc»«compile(x)»;
+          «ENDFOR»
+        
+          «FOR x:model.statem»«compile(x)»;
+          «ENDFOR»
+
+Parameter returns EuclidParameter:
+//annotations+=XAnnotation*
+parameterType=ID varArg?='...'? name=ValidID;
+
+XExpression hidden(SL_COMMENT,WS) /*returns XExpression*/ :
+XAssignment;
+XAssignment returns XExpression hidden(SL_COMMENT,WS):
+{XAssignment} feature=ID OpSingleAssign value=XAssignment |
+XOrExpression (
+=>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
+)?;
+
+OpSingleAssign hidden(SL_COMMENT,WS):
+'='
+;
+
+OpMultiAssign hidden(SL_COMMENT,WS):
+'+=' | '-=' | '*=' | '/=' | '%=' |
+'<' '<' '=' |
+'>' '>'? '>=';
+
+XCollectionLiteral hidden(SL_COMMENT,WS):
+XSetLiteral | XListLiteral
+;
+
+XSetLiteral hidden(SL_COMMENT,WS):
+{XSetLiteral} '#' '{' (elements+=XExpression (',' elements+=XExpression )*)? '}'
+;
+
+XListLiteral hidden(SL_COMMENT,WS):
+{XListLiteral} '#' '[' (elements+=XExpression (',' elements+=XExpression )*)? ']'
+;
+
+
+
+«FOR x:model.exp»«compile(x)»;
+«ENDFOR»
+
+XCatchClause hidden(SL_COMMENT,WS):
+=>'catch' '(' declaredParam=ID ')' expression=XExpression;
+ArrayBrackets hidden(SL_COMMENT,WS):'[' ID ']';
+QualifiedName hidden(SL_COMMENT,WS):
+ValidID (=>'.' ValidID)*;
+Number hidden(SL_COMMENT,WS):
+HEX | (INT | DECIMAL) ('.' (INT | DECIMAL))?;
+ValidID hidden(SL_COMMENT,WS): ID;
+terminal STRING :
+'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'";
+/**
+* Dummy rule, for "better" downwards compatibility, since GrammarAccess generates non-static inner classes,
+* which makes downstream grammars break on classloading, when a rule is removed.
+*/
+StaticQualifier hidden(SL_COMMENT,WS):
+(ValidID '::')+
+;
+terminal ID : '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal HEX:
+('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F'|'_')+
+('#' (('b'|'B')('i'|'I') | ('l'|'L')))?;
+terminal INT returns ecore::EInt:
+'0'..'9' ('0'..'9'|'_')*;
+terminal DECIMAL:
+INT
+(('e'|'E') ('+'|'-')? INT)?
+(('b'|'B')('i'|'I'|'d'|'D') | ('l'|'L'|'d'|'D'|'f'|'F'))?;
+terminal ML_COMMENT : '/*' -> '*/';
+terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
+terminal WS : (' '|'\t'|'\r'|'\n')+;
+terminal ANY_OTHER: .;
+        «ENDIF»
+    '''
+
+    /* Class */
+    def CharSequence compile(com.euclideanspace.xgener.gen.ClassType f) '''
+    '''
+ 
+    /* Procedure */
+    def CharSequence compile(com.euclideanspace.xgener.gen.Procedure f) '''
 /*
 * This is an inner element inside a class, interface or enum, such as:
 * 'val' or 'var' returns EuclidField
@@ -90,29 +175,116 @@ visibility=Visibility?*/ 'new'
 expression=XBlockExpression
 )
 ) ;
-Parameter returns EuclidParameter:
-//annotations+=XAnnotation*
-parameterType=ID varArg?='...'? name=ValidID;
-XExpression hidden(SL_COMMENT,WS) /*returns XExpression*/ :
-XAssignment;
-XAssignment returns XExpression hidden(SL_COMMENT,WS):
-{XAssignment} feature=ID OpSingleAssign value=XAssignment |
-XOrExpression (
-=>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
-)?;
-OpSingleAssign hidden(SL_COMMENT,WS):
-'='
+
+    '''
+ 
+    /* Statement */
+    def CharSequence compile(com.euclideanspace.xgener.gen.Statement f) '''
+XPrimaryExpression returns XExpression hidden(SL_COMMENT,WS):
+XConstructorCall |
+XBlockExpression |
+XSwitchExpression |
+XSynchronizedExpression |
+XFeatureCall |
+XLiteral |
+XIfExpression |
+XForLoopExpression |
+XBasicForLoopExpression |
+XWhileExpression |
+XDoWhileExpression |
+XThrowExpression |
+XReturnExpression |
+XTryCatchFinallyExpression |
+XParenthesizedExpression;
+XLiteral returns XExpression hidden(SL_COMMENT,WS):
+XCollectionLiteral |
+XClosure |
+XBooleanLiteral |
+XNumberLiteral |
+XNullLiteral |
+XStringLiteral |
+XTypeLiteral
 ;
-OpMultiAssign hidden(SL_COMMENT,WS):
-'+=' | '-=' | '*=' | '/=' | '%=' |
-'<' '<' '=' |
-'>' '>'? '>=';
+
+XClosure returns XExpression hidden(SL_COMMENT,WS):
+=>({XClosure}
+'[')
+=>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
+expression=XExpressionInClosure
+']';
+
+XExpressionInClosure returns XExpression hidden(SL_COMMENT,WS):
+{XBlockExpression}
+(expressions+=XExpressionOrVarDeclaration ';'?)*
+;
+
+XShortClosure returns XExpression hidden(SL_COMMENT,WS):
+  =>({XClosure} (declaredFormalParameters+=ID
+    (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')
+  expression=XExpression;
+
+XParenthesizedExpression returns XExpression hidden(SL_COMMENT,WS):
+'(' XExpression ')';
+
+XIfExpression returns XExpression hidden(SL_COMMENT,WS):
+{XIfExpression}
+'if' '(' if=XExpression ')'
+then=XExpression
+(=>'else' else=XExpression)?;
+
+XSwitchExpression returns XExpression hidden(SL_COMMENT,WS):
+{XSwitchExpression}
+'switch' (=>('(' declaredParam=ID ':') switch=XExpression ')'
+| =>(declaredParam=ID ':')? switch=XExpression) '{'
+(cases+=XCasePart)*
+('default' ':' default=XExpression )?
+'}';
+
+XCasePart hidden(SL_COMMENT,WS):
+{XCasePart}
+typeGuard=ID? ('case' case=XExpression)?
+(':' then=XExpression | fallThrough?=',') ;
+XForLoopExpression returns XExpression hidden(SL_COMMENT,WS):
+=>({XForLoopExpression}
+'for' '(' declaredParam=ID ':') forExpression=XExpression ')'
+eachExpression=XExpression;
+
+XBasicForLoopExpression returns XExpression hidden(SL_COMMENT,WS):
+{XBasicForLoopExpression}
+'for' '('(initExpressions+=XExpressionOrVarDeclaration
+  (',' initExpressions+=XExpressionOrVarDeclaration)*)? ';'
+expression=XExpression? ';'
+(updateExpressions+=XExpression (',' updateExpressions+=XExpression)*)? ')'
+eachExpression=XExpression;
+
+XWhileExpression returns XExpression hidden(SL_COMMENT,WS):
+{XWhileExpression}
+'while' '(' predicate=XExpression ')'
+body=XExpression
+;
+
+XDoWhileExpression returns XExpression hidden(SL_COMMENT,WS):
+{XDoWhileExpression}
+'do'
+body=XExpression
+'while' '(' predicate=XExpression ')';
+
+XBlockExpression returns XExpression hidden(SL_COMMENT,WS):
+{XBlockExpression}
+'{'
+(expressions+=XExpressionOrVarDeclaration ';'?)*
+'}';
+    '''
+ 
+    /* Expression */
+    def CharSequence compile(com.euclideanspace.xgener.gen.Expression f) '''
 XOrExpression returns XExpression hidden(SL_COMMENT,WS):
 XAndExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOr) rightOperand=XAndExpression)*;
 OpOr:
 '||';
 XAndExpression returns XExpression hidden(SL_COMMENT,WS):
-XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAnd) rightOperand=XEqualityExpression)*;
+XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAnd)
+  rightOperand=XEqualityExpression)*;
 OpAnd:
 '&&';
 XEqualityExpression returns XExpression hidden(SL_COMMENT,WS):
@@ -142,26 +314,31 @@ OpOther:
 XAdditiveExpression returns XExpression hidden(SL_COMMENT,WS):
 XMultiplicativeExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAdd)
 rightOperand=XMultiplicativeExpression)*;
+
 OpAdd:
 '+' | '-';
 XMultiplicativeExpression returns XExpression hidden(SL_COMMENT,WS):
 XUnaryOperation (=>({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*;
 OpMulti:
 '*' | '**' | '/' | '%';
+
 XUnaryOperation returns XExpression hidden(SL_COMMENT,WS):
 {XUnaryOperation} feature=OpUnary operand=XUnaryOperation
 | =>XCastedExpression;
 OpUnary:
 "!" | "-" | "+";
+
 XCastedExpression returns XExpression hidden(SL_COMMENT,WS):
 XPostfixOperation (=>({XCastedExpression.target=current} 'as') type=ID)*
 ;
+
 XPostfixOperation returns XExpression hidden(SL_COMMENT,WS):
 XMemberFeatureCall =>({XPostfixOperation.operand=current} feature=OpPostfix)?
 ;
 OpPostfix hidden(SL_COMMENT,WS):
 "++" | "--"
 ;
+
 XMemberFeatureCall returns XExpression hidden(SL_COMMENT,WS):
 XPrimaryExpression
 (=>({XAssignment.assignable=current} ('.'|explicitStatic?="::") feature=ID OpSingleAssign) value=XAssignment
@@ -176,104 +353,20 @@ memberCallArguments+=XShortClosure
 ')')?
 memberCallArguments+=XClosure?
 )*;
-XPrimaryExpression returns XExpression hidden(SL_COMMENT,WS):
-XConstructorCall |
-XBlockExpression |
-XSwitchExpression |
-XSynchronizedExpression |
-XFeatureCall |
-XLiteral |
-XIfExpression |
-XForLoopExpression |
-XBasicForLoopExpression |
-XWhileExpression |
-XDoWhileExpression |
-XThrowExpression |
-XReturnExpression |
-XTryCatchFinallyExpression |
-XParenthesizedExpression;
-XLiteral returns XExpression hidden(SL_COMMENT,WS):
-XCollectionLiteral |
-XClosure |
-XBooleanLiteral |
-XNumberLiteral |
-XNullLiteral |
-XStringLiteral |
-XTypeLiteral
-;
-XCollectionLiteral hidden(SL_COMMENT,WS):
-XSetLiteral | XListLiteral
-;
-XSetLiteral hidden(SL_COMMENT,WS):
-{XSetLiteral} '#' '{' (elements+=XExpression (',' elements+=XExpression )*)? '}'
-;
-XListLiteral hidden(SL_COMMENT,WS):
-{XListLiteral} '#' '[' (elements+=XExpression (',' elements+=XExpression )*)? ']'
-;
-XClosure returns XExpression hidden(SL_COMMENT,WS):
-=>({XClosure}
-'[')
-=>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
-expression=XExpressionInClosure
-']';
-XExpressionInClosure returns XExpression hidden(SL_COMMENT,WS):
-{XBlockExpression}
-(expressions+=XExpressionOrVarDeclaration ';'?)*
-;
-XShortClosure returns XExpression hidden(SL_COMMENT,WS):
-=>({XClosure} (declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|') expression=XExpression;
-XParenthesizedExpression returns XExpression hidden(SL_COMMENT,WS):
-'(' XExpression ')';
-XIfExpression returns XExpression hidden(SL_COMMENT,WS):
-{XIfExpression}
-'if' '(' if=XExpression ')'
-then=XExpression
-(=>'else' else=XExpression)?;
-XSwitchExpression returns XExpression hidden(SL_COMMENT,WS):
-{XSwitchExpression}
-'switch' (=>('(' declaredParam=ID ':') switch=XExpression ')'
-| =>(declaredParam=ID ':')? switch=XExpression) '{'
-(cases+=XCasePart)*
-('default' ':' default=XExpression )?
-'}';
-XCasePart hidden(SL_COMMENT,WS):
-{XCasePart}
-typeGuard=ID? ('case' case=XExpression)?
-(':' then=XExpression | fallThrough?=',') ;
-XForLoopExpression returns XExpression hidden(SL_COMMENT,WS):
-=>({XForLoopExpression}
-'for' '(' declaredParam=ID ':') forExpression=XExpression ')'
-eachExpression=XExpression;
-XBasicForLoopExpression returns XExpression hidden(SL_COMMENT,WS):
-{XBasicForLoopExpression}
-'for' '('(initExpressions+=XExpressionOrVarDeclaration (',' initExpressions+=XExpressionOrVarDeclaration)*)? ';'
-expression=XExpression? ';'
-(updateExpressions+=XExpression (',' updateExpressions+=XExpression)*)? ')'
-eachExpression=XExpression;
-XWhileExpression returns XExpression hidden(SL_COMMENT,WS):
-{XWhileExpression}
-'while' '(' predicate=XExpression ')'
-body=XExpression
-;
-XDoWhileExpression returns XExpression hidden(SL_COMMENT,WS):
-{XDoWhileExpression}
-'do'
-body=XExpression
-'while' '(' predicate=XExpression ')';
-XBlockExpression returns XExpression hidden(SL_COMMENT,WS):
-{XBlockExpression}
-'{'
-(expressions+=XExpressionOrVarDeclaration ';'?)*
-'}';
+
 XExpressionOrVarDeclaration returns XExpression hidden(SL_COMMENT,WS):
 XVariableDeclaration | XExpression;
+
 XVariableDeclaration returns XExpression hidden(SL_COMMENT,WS):
 {XVariableDeclaration}
 (writeable?='var'|'val') (=>(type=ID name=ValidID) | name=ValidID) ('=' right=XExpression)?;
+
 /*ID returns types::jvmFormalParameter:
 (parameterType=JvmTypeReference)? name=ValidID;
+
 FullID returns types::jvmFormalParameter:
 parameterType=JvmTypeReference name=ValidID;*/
+
 XFeatureCall returns XExpression hidden(SL_COMMENT,WS):
 {XFeatureCall}
 ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
@@ -285,12 +378,15 @@ featureCallArguments+=XShortClosure
 )?
 ')')?
 featureCallArguments+=XClosure?;
+
 FeatureCallID:
 ValidID | 'extends' | 'static' | 'import' | 'extension'
 ;
+
 IdOrSuper :
 FeatureCallID | 'super'
 ;
+
 XConstructorCall returns XExpression hidden(SL_COMMENT,WS):
 {XConstructorCall}
 'new' constructor=ID
@@ -302,21 +398,29 @@ arguments+=XShortClosure
 )?
 ')')?
 arguments+=XClosure?;
+
 XBooleanLiteral returns XExpression hidden(SL_COMMENT,WS):
 {XBooleanLiteral} ('false' | isTrue?='true');
+
 XNullLiteral returns XExpression hidden(SL_COMMENT,WS):
 {XNullLiteral} 'null';
+
 XNumberLiteral returns XExpression hidden(SL_COMMENT,WS):
 {XNumberLiteral} value=Number;
+
 XStringLiteral returns XExpression hidden(SL_COMMENT,WS):
 {XStringLiteral} value=STRING;
+
 XTypeLiteral returns XExpression hidden(SL_COMMENT,WS):
 {XTypeLiteral} 'typeof' '(' type=ID (arrayDimensions+=ArrayBrackets)* ')'
 ;
+
 XThrowExpression returns XExpression hidden(SL_COMMENT,WS):
 {XThrowExpression} 'throw' expression=XExpression;
+
 XReturnExpression returns XExpression hidden(SL_COMMENT,WS):
 {XReturnExpression} 'return' (->expression=XExpression)?;
+
 XTryCatchFinallyExpression returns XExpression hidden(SL_COMMENT,WS):
 {XTryCatchFinallyExpression}
 'try'
@@ -326,58 +430,10 @@ catchClauses+=XCatchClause+
 (=>'finally' finallyExpression=XExpression)?
 | 'finally' finallyExpression=XExpression
 );
+
 XSynchronizedExpression returns XExpression hidden(SL_COMMENT,WS):
 =>({XSynchronizedExpression}
 'synchronized' '(') param=XExpression ')' expression=XExpression;
-XCatchClause hidden(SL_COMMENT,WS):
-=>'catch' '(' declaredParam=ID ')' expression=XExpression;
-ArrayBrackets hidden(SL_COMMENT,WS):'[' ID ']';
-QualifiedName hidden(SL_COMMENT,WS):
-ValidID (=>'.' ValidID)*;
-Number hidden(SL_COMMENT,WS):
-HEX | (INT | DECIMAL) ('.' (INT | DECIMAL))?;
-ValidID hidden(SL_COMMENT,WS): ID;
-terminal STRING :
-'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
-"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'";
-/**
-* Dummy rule, for "better" downwards compatibility, since GrammarAccess generates non-static inner classes,
-* which makes downstream grammars break on classloading, when a rule is removed.
-*/
-StaticQualifier hidden(SL_COMMENT,WS):
-(ValidID '::')+
-;
-terminal ID : '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-terminal HEX:
-('0x'|'0X') ('0'..'9'|'a'..'f'|'A'..'F'|'_')+
-('#' (('b'|'B')('i'|'I') | ('l'|'L')))?;
-terminal INT returns ecore::EInt:
-'0'..'9' ('0'..'9'|'_')*;
-terminal DECIMAL:
-INT
-(('e'|'E') ('+'|'-')? INT)?
-(('b'|'B')('i'|'I'|'d'|'D') | ('l'|'L'|'d'|'D'|'f'|'F'))?;
-terminal ML_COMMENT : '/*' -> '*/';
-terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
-terminal WS : (' '|'\t'|'\r'|'\n')+;
-terminal ANY_OTHER: .;
-    
-    '''
-
-    /* Class */
-    def CharSequence compile(com.euclideanspace.xgener.gen.ClassType f) '''
-    '''
- 
-    /* Procedure */
-    def CharSequence compile(com.euclideanspace.xgener.gen.Procedure f) '''
-    '''
- 
-    /* Statement */
-    def CharSequence compile(com.euclideanspace.xgener.gen.Statement f) '''
-    '''
- 
-    /* Expression */
-    def CharSequence compile(com.euclideanspace.xgener.gen.Expression f) '''
     '''
  
 }

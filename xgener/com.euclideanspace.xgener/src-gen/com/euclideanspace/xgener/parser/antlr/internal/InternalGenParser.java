@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGenParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'noclass'", "'prefix'", "'suffix'", "'blocking'", "'braces'", "'indent'", "'Procedure'", "'types'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'int'", "'string'", "'bool'", "'float'", "'bracket'", "'parenthasis'", "'['", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'noclass'", "'prefix'", "'suffix'", "'blocking'", "'braces'", "'indent'", "'procedure'", "'types'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'infix'", "'infixleft'", "'literal'", "'int'", "'string'", "'bool'", "'float'", "'bracket'", "'parenthasis'", "'['", "']'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -748,7 +748,7 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProcedure"
-    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:311:1: ruleProcedure returns [EObject current=null] : (otherlv_0= 'Procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* ) ;
+    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:311:1: ruleProcedure returns [EObject current=null] : (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* ) ;
     public final EObject ruleProcedure() throws RecognitionException {
         EObject current = null;
 
@@ -770,11 +770,11 @@ public class InternalGenParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:314:28: ( (otherlv_0= 'Procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* ) )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:1: (otherlv_0= 'Procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:314:28: ( (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:1: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* )
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:1: (otherlv_0= 'Procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:3: otherlv_0= 'Procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:1: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )* )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:315:3: otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= 'prefix' ( (lv_prefix_3_0= ruleMultID ) ) ) | (otherlv_4= 'suffix' ( (lv_suffix_5_0= ruleMultID ) ) ) | (otherlv_6= 'types' ( ( (lv_types_7_1= 'colonSeperated' | lv_types_7_2= 'spaceSeperated' | lv_types_7_3= 'inHeader' | lv_types_7_4= 'inferred' | lv_types_7_5= 'untyped' ) ) ) ) )*
             {
             otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleProcedure602); 
 

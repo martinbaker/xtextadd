@@ -14,7 +14,7 @@ ClassType:
     )*;
 
 Procedure:
-	'Procedure' name=ID
+	'procedure' name=ID
     (('prefix' prefix += MultID)
     | ('suffix' suffix += MultID)
     | ('types' types+=('colonSeperated'|'spaceSeperated'|'inHeader'|'inferred'|'untyped'))

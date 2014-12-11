@@ -1,5 +1,4 @@
 '='=35
-'Procedure'=26
 '['=43
 ']'=44
 'blocking'=25
@@ -22,6 +21,7 @@
 'noclass'=45
 'parenthasis'=42
 'prefix'=23
+'procedure'=26
 'repeat'=29
 'spaceSeperated'=14
 'statement'=28
