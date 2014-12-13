@@ -3,7 +3,7 @@ package com.euclideanspace.pbase.ui;
 import org.antlr.runtime.CharStream;
 import org.antlr.runtime.TokenSource;
 
-public class TutorialUIParser extends com.euclideanspace.pbase.parser.antlr.TutorialParser {
+public class TutorialUIParser extends com.euclideanspace.pbase.ui.contentassist.antlr.TutorialParser {
 
   @Override
   protected TokenSource createLexer(CharStream stream) {
@@ -11,5 +11,4 @@ public class TutorialUIParser extends com.euclideanspace.pbase.parser.antlr.Tuto
     tokenSource.setDelegate(super.createLexer(stream));
     return tokenSource;
   }
-
 }

@@ -12,4 +12,9 @@ public class TutorialUiModule extends com.euclideanspace.pbase.ui.AbstractTutori
 	public TutorialUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
+	
+	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.antlr.IContentAssistParser> bindIContentAssistParser() {
+		return com.euclideanspace.pbase.ui.TutorialUIParser.class;
+	}
+
 }

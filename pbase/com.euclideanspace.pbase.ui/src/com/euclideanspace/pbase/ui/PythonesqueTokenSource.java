@@ -6,7 +6,7 @@ import org.antlr.runtime.Token;
 import org.eclipse.xtext.parser.antlr.AbstractSplittingTokenSource;
 import org.eclipse.xtext.parser.antlr.ITokenAcceptor;
 
-import com.euclideanspace.pbase.parser.antlr.internal.InternalTutorialLexer;
+import com.euclideanspace.pbase.ui.contentassist.antlr.internal.InternalTutorialLexer;
 
 /**
  * Provides a token source for a language that uses whitespace to delineate
