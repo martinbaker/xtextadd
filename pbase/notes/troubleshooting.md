@@ -1,23 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
-<title>Untitled Document</title>
-<style type="text/css">
-<!--
-.style1 {color: #FF0000}
--->
-</style>
-</head>
-<body>
+<p>If you are working with the projects on <a href="https://github.com/martinbaker/xtextadd">this site</a> and you are having problems then I will try to add notes here to help. </p>
 <h2>Troubleshooting for Implementing a Python-like Syntax</h2>
 <p>If you get one of the following errors, click on the link for more information:</p>
 <ul>
-  <li>An internal error occurred during: &quot;XtextReconcilerJob&quot;</li>
-  <li>Parsing in reconciler failed </li>
-  <li>java.lang.IllegalArgumentException: length -1 is &lt; 0 in TextRegion</li>
+  <li><a href="#XtextReconcilerJob">An internal error occurred during: &quot;XtextReconcilerJob&quot;</a></li>
+  <li><a href="#ParsingInReconcilerFailed">Parsing in reconciler failed</a> </li>
+  <li><a href="#IllegalArgumentException">java.lang.IllegalArgumentException: length -1 is &lt; 0 in TextRegion</a></li>
 </ul>
-<p>&nbsp;</p>
 <h3><a name="XtextReconcilerJob" id="XtextReconcilerJob"></a>XtextReconcilerJob</h3>
 <p>I sometimes get the following error when editing the DSL source code. Although the editor continues to work this needs to be sorted out. I assume the 'contentassist' parser in the ui needs to be modified in the same way as the main parser? </p>
 <table border="1">
@@ -47,6 +35,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
   </tr>
 </table>
 <h3><a name="ParsingInReconcilerFailed" id="ParsingInReconcilerFailed"></a>Parsing in reconciler failed</h3>
+<p>This message sometimes happens at the same time as the &quot;XtextReconcilerJob&quot; error above. As with the error above the editor continues to work, but we need to get rid of the error. </p>
 <table border="1">
   <tr>
     <td><pre>0    [Worker-1] ERROR org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy  - Parsing in reconciler failed.
@@ -72,8 +61,8 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 </pre></td>
   </tr>
 </table>
-<p>&nbsp;</p>
 <h3><a name="IllegalArgumentException" id="IllegalArgumentException"></a>IllegalArgumentException: length -1 is &lt; 0 in TextRegion</h3>
+<p>This error no longer happens in my code. I got the error in earlier versions of the code with bugs which caused the references back from the 'node model' to the 'text stream to have overlapping text regions. So if you get this error make sure the 'node model' is being set correctly. </p>
 <table border="1">
   <tr>
     <td><pre>java.lang.IllegalArgumentException: length -1 is < 0
@@ -240,6 +229,3 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)</pre></td>
   </tr>
 </table>
-<p>&nbsp;</p>
-</body>
-</html>
