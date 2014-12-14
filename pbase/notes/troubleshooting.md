@@ -34,6 +34,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 </pre></td>
   </tr>
 </table>
+<p>See <a href="https://github.com/martinbaker/xtextadd/issues/1">https://github.com/martinbaker/xtextadd/issues/1</a></p>
 <h3><a name="ParsingInReconcilerFailed" id="ParsingInReconcilerFailed"></a>Parsing in reconciler failed</h3>
 <p>This message sometimes happens at the same time as the &quot;XtextReconcilerJob&quot; error above. As with the error above the editor continues to work, but we need to get rid of the error. </p>
 <table border="1">
@@ -61,6 +62,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 </pre></td>
   </tr>
 </table>
+<p>See <a href="https://github.com/martinbaker/xtextadd/issues/1">https://github.com/martinbaker/xtextadd/issues/1</a></p>
 <h3><a name="IllegalArgumentException" id="IllegalArgumentException"></a>IllegalArgumentException: length -1 is &lt; 0 in TextRegion</h3>
 <p>This error no longer happens in my code. I got the error in earlier versions of the code with bugs which caused the references back from the 'node model' to the 'text stream to have overlapping text regions. So if you get this error make sure the 'node model' is being set correctly. </p>
 <table border="1">

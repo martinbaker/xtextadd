@@ -179,34 +179,8 @@ e a b c</pre></td>
 <p>So the first character has index 0:1</p>
 <p>The second 1:2 and so on.</p>
 <p>This makes it easier to work out the indexes for composite nodes as well as leaf nodes. So, for example, the composite node holding the outer brackets is 0:7. The inner brackets are 2:5.  </p>
-<h2>Known Problems</h2>
-<p>I sometimes get the following error when editing the DSL source code. Although the editor continues to work this needs to be sorted out. I assume the 'contentassist' parser in the ui needs to be modified in the same way as the main parser? </p>
-<table border="1">
-  <tr>
-    <td><pre>!MESSAGE An internal error occurred during: &quot;XtextReconcilerJob&quot;.
-!STACK 0
-java.lang.StringIndexOutOfBoundsException: String index out of range: 140
-	at java.lang.String.substring(String.java:1950)
-	at org.eclipse.xtext.nodemodel.impl.AbstractNode.getText(AbstractNode.java:148)
-	at org.eclipse.xtext.parser.impl.PartialParsingHelper.insertChangeIntoReplaceRegion(PartialParsingHelper.java:229)
-	at org.eclipse.xtext.parser.impl.PartialParsingHelper.reparse(PartialParsingHelper.java:98)
-	at org.eclipse.xtext.parser.antlr.AbstractAntlrParser.doReparse(AbstractAntlrParser.java:136)
-	at org.eclipse.xtext.parser.AbstractParser.reparse(AbstractParser.java:48)
-	at org.eclipse.xtext.resource.XtextResource.update(XtextResource.java:228)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.doReconcile(XtextDocumentReconcileStrategy.java:143)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.reconcile(XtextDocumentReconcileStrategy.java:65)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.doRun(XtextReconciler.java:413)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.access$3(XtextReconciler.java:393)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler$1.process(XtextReconciler.java:334)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler$1.process(XtextReconciler.java:1)
-	at org.eclipse.xtext.util.concurrent.IUnitOfWork$Void.exec(IUnitOfWork.java:36)
-	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.modify(XtextDocument.java:418)
-	at org.eclipse.xtext.ui.editor.model.XtextDocument.internalModify(XtextDocument.java:131)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.run(XtextReconciler.java:331)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-</pre></td>
-  </tr>
-</table>
+<h4>Known Problems</h4>
+<p>I sometimes get the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) when editing the DSL source code. Although the editor continues to work, getting random error messages is confusing for the user, so  this needs to be sorted out. I tried modifing the 'contentassist' parser in the ui  in the same way as the main parser (see <strong>Customised TokenSource in UI</strong> above) but this did not fix the problem.</p>
 <h3>Xgener</h3>
 <p>More information abour Xgener on <a href="https://github.com/martinbaker/xtextadd/tree/master/xgener">this page</a>. </p>
 <p>I often find that the DSLs (Domain Specific Languages) that I write have similar constructs, so I end up writing similar grammar rules and other code elements. It would be good to use Xbase but that is often not flexible enough to do what I want.</p>
