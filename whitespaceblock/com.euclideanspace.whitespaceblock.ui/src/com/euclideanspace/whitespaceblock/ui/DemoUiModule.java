@@ -12,4 +12,9 @@ public class DemoUiModule extends com.euclideanspace.whitespaceblock.ui.Abstract
 	public DemoUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
+	
+	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.antlr.IContentAssistParser> bindIContentAssistParser() {
+		return com.euclideanspace.whitespaceblock.ui.DemoUIParser.class;
+	}
+
 }
