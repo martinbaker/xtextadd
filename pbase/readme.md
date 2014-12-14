@@ -143,11 +143,11 @@ we have: while a &lt; n:</p></td>
   <li>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java">TutorialRuntimeModule.java</a> / <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialStandaloneSetup.java">TutorialStandaloneSetup.java</a> . Make sure the modified versions of all these are in your project. </li>
 </ul>
 <h4>Customised TokenSource in UI </h4>
-<p>Now the 'contentassist' parser in the ui needs to be modified in the same way as the main parser. If we dont the project will work most of the time but, sometimes there will be seeminly random error messages like: <em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em></p>
+<p>Now the 'contentassist' parser in the ui needs to be modified in the same way as the main parser. I was hoping this would fix <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) but I am still getting this error. </p>
 <ul>
-  <li>We therefore put another copy of the: <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PhantomToken.java">PhantomToken</a> class in the UI project .</li>
-  <li>We also need to  add  another copy of the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/PythonesqueTokenSource.java">customised token source</a> in the UI project.</li>
-  <li>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java">TutorialRuntimeModule.java</a> / <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialStandaloneSetup.java">TutorialStandaloneSetup.java</a> . Make sure the modified versions of all these are in your project.</li>
+  <li>We therefore put another copy of the: <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/PhantomToken.java">PhantomToken</a> class in the UI project .</li>
+  <li>We also need to  add  another copy of the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/PythonesqueTokenSource.java">customised token source</a> in the UI project.</li>
+  <li>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/TutorialUIParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/TutorialUiModule.java">TutorialUiModule.java</a>. Make sure the modified versions of all these are in your project.</li>
 </ul>
 <p>We can now go on to modify the grammar syntax: </p>
 <h3>Blocks</h3>
@@ -295,32 +295,6 @@ where:
 <h4>Block Comments</h4>
 <p>Block comments are multi-line comments (equivalent to /* comment*/ in Java). Each line of a block comment starts with a # and a single space, I cant see any reason why this should not be parsed as if it were multiple single-line comments.</p>
 <h2>Known Problems</h2>
-<p>I sometimes get the following error when editing the DSL source code. Although the editor continues to work this needs to be sorted out. I assume the 'contentassist' parser in the ui needs to be modified in the same way as the main parser? </p>
-<table border="1">
-  <tr>
-    <td><pre>!MESSAGE An internal error occurred during: "XtextReconcilerJob".
-!STACK 0
-java.lang.StringIndexOutOfBoundsException: String index out of range: 140
-	at java.lang.String.substring(String.java:1950)
-	at org.eclipse.xtext.nodemodel.impl.AbstractNode.getText(AbstractNode.java:148)
-	at org.eclipse.xtext.parser.impl.PartialParsingHelper.insertChangeIntoReplaceRegion(PartialParsingHelper.java:229)
-	at org.eclipse.xtext.parser.impl.PartialParsingHelper.reparse(PartialParsingHelper.java:98)
-	at org.eclipse.xtext.parser.antlr.AbstractAntlrParser.doReparse(AbstractAntlrParser.java:136)
-	at org.eclipse.xtext.parser.AbstractParser.reparse(AbstractParser.java:48)
-	at org.eclipse.xtext.resource.XtextResource.update(XtextResource.java:228)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.doReconcile(XtextDocumentReconcileStrategy.java:143)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.reconcile(XtextDocumentReconcileStrategy.java:65)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.doRun(XtextReconciler.java:413)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.access$3(XtextReconciler.java:393)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler$1.process(XtextReconciler.java:334)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler$1.process(XtextReconciler.java:1)
-	at org.eclipse.xtext.util.concurrent.IUnitOfWork$Void.exec(IUnitOfWork.java:36)
-	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.modify(XtextDocument.java:418)
-	at org.eclipse.xtext.ui.editor.model.XtextDocument.internalModify(XtextDocument.java:131)
-	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.run(XtextReconciler.java:331)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-</pre></td>
-  </tr>
-</table>
+<p>I sometimes get the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) when editing the DSL source code. Although the editor continues to work this needs to be sorted out. I tried modifing the 'contentassist' parser in the ui  in the same way as the main parser (see <strong>Customised TokenSource in UI</strong> above) but this did not fix the problem.</p>
 <h2>Future Enhancements</h2>
 <p>Xtext provides a fair degree of decoupling between the syntax and the semantics. It would be really good if, in the future, a chunk of code such as Xbase could have the ability to plug in different syntax such as a Java-like syntax and a Python-like syntax where both would have exactly the same functionality.  </p>
