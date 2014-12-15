@@ -640,11 +640,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:38:7: ( 'infix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:38:9: 'infix'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:38:7: ( '[' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:38:9: '['
             {
-            match("infix"); 
-
+            match('['); 
 
             }
 
@@ -661,11 +660,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:39:7: ( 'infixleft' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:39:9: 'infixleft'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:39:7: ( ']' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:39:9: ']'
             {
-            match("infixleft"); 
-
+            match(']'); 
 
             }
 
@@ -682,10 +680,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:40:7: ( 'literal' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:40:9: 'literal'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:40:7: ( 'noclass' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:40:9: 'noclass'
             {
-            match("literal"); 
+            match("noclass"); 
 
 
             }
@@ -703,10 +701,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:41:7: ( 'bracket' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:41:9: 'bracket'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:41:7: ( 'infix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:41:9: 'infix'
             {
-            match("bracket"); 
+            match("infix"); 
 
 
             }
@@ -724,10 +722,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:42:7: ( 'parenthesis' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:42:9: 'parenthesis'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:42:7: ( 'infixleft' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:42:9: 'infixleft'
             {
-            match("parenthesis"); 
+            match("infixleft"); 
 
 
             }
@@ -745,10 +743,11 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:43:7: ( '[' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:43:9: '['
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:43:7: ( 'literal' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:43:9: 'literal'
             {
-            match('['); 
+            match("literal"); 
+
 
             }
 
@@ -765,10 +764,11 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:7: ( ']' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:9: ']'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:7: ( 'bracket' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:9: 'bracket'
             {
-            match(']'); 
+            match("bracket"); 
+
 
             }
 
@@ -785,10 +785,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:45:7: ( 'noclass' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:45:9: 'noclass'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:45:7: ( 'parenthesis' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:45:9: 'parenthesis'
             {
-            match("noclass"); 
+            match("parenthesis"); 
 
 
             }
@@ -806,10 +806,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4199:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4199:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:11: ( '^' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4199:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -818,7 +818,7 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:11: '^'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4199:11: '^'
                     {
                     match('^'); 
 
@@ -836,7 +836,7 @@ public class InternalGenLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4199:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -885,10 +885,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4033:10: ( ( '0' .. '9' )+ )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4033:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4201:10: ( ( '0' .. '9' )+ )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4201:12: ( '0' .. '9' )+
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4033:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4201:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -902,7 +902,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4033:13: '0' .. '9'
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4201:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -934,10 +934,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -955,10 +955,10 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -974,7 +974,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:21: '\\\\' .
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -982,7 +982,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1007,10 +1007,10 @@ public class InternalGenLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1026,7 +1026,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:54: '\\\\' .
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1034,7 +1034,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1077,12 +1077,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4037:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4037:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4205:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4205:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4037:24: ( options {greedy=false; } : . )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4205:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1107,7 +1107,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4037:52: .
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4205:52: .
             	    {
             	    matchAny(); 
 
@@ -1137,12 +1137,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1155,7 +1155,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1175,7 +1175,7 @@ public class InternalGenLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:40: ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1184,9 +1184,9 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:41: ( '\\r' )? '\\n'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:41: ( '\\r' )?
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1195,7 +1195,7 @@ public class InternalGenLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4039:41: '\\r'
+                            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4207:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1227,10 +1227,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4041:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4041:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4209:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4209:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4041:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4209:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1284,8 +1284,8 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4043:16: ( . )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4043:18: .
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4211:16: ( . )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4211:18: .
             {
             matchAny(); 
 
@@ -1606,19 +1606,19 @@ public class InternalGenLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\14\36\1\uffff\2\36\2\uffff\1\36\1\32\2\uffff\3\32\2\uffff\3\36\1\uffff\16\36\1\120\1\36\1\uffff\2\36\2\uffff\1\36\5\uffff\6\36\1\135\10\36\1\147\6\36\1\uffff\1\156\1\157\4\36\1\165\5\36\1\uffff\11\36\1\uffff\6\36\2\uffff\5\36\1\uffff\4\36\1\u0094\1\36\1\u0096\5\36\1\u009c\1\u009d\3\36\1\u00a1\1\36\1\u00a3\3\36\1\u00a7\2\36\1\u00aa\3\36\1\uffff\1\36\1\uffff\1\36\1\u00b0\1\36\1\u00b2\1\36\2\uffff\1\u00b4\2\36\1\uffff\1\u00b7\1\uffff\3\36\1\uffff\1\u00bb\1\36\1\uffff\5\36\1\uffff\1\36\1\uffff\1\u00c3\1\uffff\2\36\1\uffff\1\36\1\u00c7\1\u00c8\1\uffff\1\u00c9\1\u00ca\1\u00cb\4\36\1\uffff\3\36\5\uffff\1\u00d3\2\36\1\u00d6\1\u00d7\2\36\1\uffff\2\36\2\uffff\1\36\1\u00dd\2\36\1\u00e0\1\uffff\2\36\1\uffff\2\36\1\u00e5\1\u00e6\2\uffff";
+        "\1\uffff\14\36\1\uffff\1\36\2\uffff\2\36\1\32\2\uffff\3\32\2\uffff\3\36\1\uffff\16\36\1\120\1\36\1\uffff\1\36\2\uffff\2\36\5\uffff\6\36\1\135\10\36\1\147\6\36\1\uffff\1\156\1\157\4\36\1\165\5\36\1\uffff\11\36\1\uffff\6\36\2\uffff\5\36\1\uffff\4\36\1\u0094\1\36\1\u0096\5\36\1\u009c\1\u009d\3\36\1\u00a1\1\36\1\u00a3\3\36\1\u00a7\2\36\1\u00aa\3\36\1\uffff\1\36\1\uffff\1\36\1\u00b0\1\36\1\u00b2\1\36\2\uffff\1\u00b4\2\36\1\uffff\1\u00b7\1\uffff\3\36\1\uffff\1\u00bb\1\36\1\uffff\5\36\1\uffff\1\36\1\uffff\1\u00c3\1\uffff\2\36\1\uffff\1\36\1\u00c7\1\u00c8\1\uffff\1\u00c9\1\u00ca\1\u00cb\4\36\1\uffff\3\36\5\uffff\1\u00d3\2\36\1\u00d6\1\u00d7\2\36\1\uffff\2\36\2\uffff\1\36\1\u00dd\2\36\1\u00e0\1\uffff\2\36\1\uffff\2\36\1\u00e5\1\u00e6\2\uffff";
     static final String DFA12_eofS =
         "\u00e7\uffff";
     static final String DFA12_minS =
-        "\1\0\1\154\1\156\1\154\1\160\1\156\1\154\1\141\1\171\1\145\1\150\1\157\1\141\1\uffff\1\170\1\151\2\uffff\1\157\1\101\2\uffff\2\0\1\52\2\uffff\1\141\2\157\1\uffff\1\110\1\154\3\141\1\146\1\164\1\157\1\162\1\145\1\162\2\160\1\151\1\60\1\154\1\uffff\1\160\1\164\2\uffff\1\143\5\uffff\1\143\1\154\1\143\3\145\1\60\1\157\1\163\1\143\1\151\1\164\1\146\1\151\1\141\1\60\1\146\1\143\3\145\1\154\1\uffff\2\60\1\162\1\145\1\154\1\145\1\60\1\153\1\156\1\141\1\162\1\170\1\uffff\1\156\1\163\1\145\1\156\1\145\1\151\1\160\1\154\1\164\1\uffff\1\151\1\145\1\156\1\163\1\141\1\145\2\uffff\1\145\1\162\1\141\1\163\1\145\1\uffff\1\151\1\164\1\144\1\162\1\60\1\123\1\60\1\123\1\147\1\155\1\170\1\145\2\60\1\170\1\144\1\164\1\60\1\164\1\60\1\163\1\141\1\163\1\60\1\164\1\156\1\60\3\145\1\uffff\1\145\1\uffff\1\145\1\60\1\145\1\60\1\144\2\uffff\1\60\1\165\1\150\1\uffff\1\60\1\uffff\1\163\1\154\1\163\1\uffff\1\60\1\147\1\uffff\1\162\1\144\1\146\2\160\1\uffff\1\156\1\uffff\1\60\1\uffff\1\162\1\145\1\uffff\1\151\2\60\1\uffff\3\60\1\164\2\145\1\164\1\uffff\1\145\1\163\1\157\5\uffff\1\60\2\162\2\60\1\151\1\156\1\uffff\2\141\2\uffff\1\163\1\60\2\164\1\60\1\uffff\2\145\1\uffff\2\144\2\60\2\uffff";
+        "\1\0\1\154\1\156\1\154\1\160\1\156\1\154\1\141\1\171\1\145\1\150\1\157\1\141\1\uffff\1\170\2\uffff\1\157\1\151\1\101\2\uffff\2\0\1\52\2\uffff\1\141\2\157\1\uffff\1\110\1\154\3\141\1\146\1\164\1\157\1\162\1\145\1\162\2\160\1\151\1\60\1\154\1\uffff\1\160\2\uffff\1\143\1\164\5\uffff\1\143\1\154\1\143\3\145\1\60\1\157\1\163\1\143\1\151\1\164\1\146\1\151\1\141\1\60\1\146\1\143\3\145\1\154\1\uffff\2\60\1\162\1\154\2\145\1\60\1\153\1\156\1\141\1\162\1\170\1\uffff\1\156\1\163\1\145\1\156\1\145\1\151\1\160\1\154\1\164\1\uffff\1\151\1\145\1\156\1\163\1\141\1\145\2\uffff\1\145\1\141\1\162\1\163\1\145\1\uffff\1\151\1\164\1\144\1\162\1\60\1\123\1\60\1\123\1\147\1\155\1\170\1\145\2\60\1\170\1\144\1\164\1\60\1\164\1\60\2\163\1\141\1\60\1\164\1\156\1\60\3\145\1\uffff\1\145\1\uffff\1\145\1\60\1\145\1\60\1\144\2\uffff\1\60\1\165\1\150\1\uffff\1\60\1\uffff\2\163\1\154\1\uffff\1\60\1\147\1\uffff\1\162\1\144\1\146\2\160\1\uffff\1\156\1\uffff\1\60\1\uffff\1\162\1\145\1\uffff\1\151\2\60\1\uffff\3\60\1\164\2\145\1\164\1\uffff\1\145\1\163\1\157\5\uffff\1\60\2\162\2\60\1\151\1\156\1\uffff\2\141\2\uffff\1\163\1\60\2\164\1\60\1\uffff\2\145\1\uffff\2\144\2\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\1\156\1\157\1\165\1\156\1\157\1\162\1\171\1\145\1\150\1\157\1\141\1\uffff\1\170\1\151\2\uffff\1\157\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\2\157\1\uffff\1\164\1\154\2\141\1\162\1\146\1\164\1\157\1\162\1\157\1\162\2\160\1\151\1\172\1\162\1\uffff\1\160\1\164\2\uffff\1\143\5\uffff\1\143\1\154\1\143\2\145\1\151\1\172\1\157\1\163\1\143\1\151\1\164\1\146\1\171\1\141\1\172\1\146\1\143\3\145\1\154\1\uffff\2\172\1\162\1\145\1\154\1\153\1\172\1\153\1\156\1\141\1\162\1\170\1\uffff\1\156\1\163\1\145\1\156\1\145\1\151\1\160\1\154\1\164\1\uffff\1\151\1\145\1\156\1\163\1\141\1\145\2\uffff\1\145\1\162\1\141\1\163\1\145\1\uffff\1\151\1\164\1\144\1\162\1\172\1\123\1\172\1\123\1\147\1\155\1\170\1\145\2\172\1\170\1\144\1\164\1\172\1\164\1\172\1\163\1\141\1\163\1\172\1\164\1\156\1\172\3\145\1\uffff\1\145\1\uffff\1\145\1\172\1\145\1\172\1\144\2\uffff\1\172\1\165\1\150\1\uffff\1\172\1\uffff\1\163\1\154\1\163\1\uffff\1\172\1\147\1\uffff\1\162\1\144\1\146\2\160\1\uffff\1\156\1\uffff\1\172\1\uffff\1\162\1\145\1\uffff\1\151\2\172\1\uffff\3\172\1\164\2\145\1\164\1\uffff\1\145\1\163\1\157\5\uffff\1\172\2\162\2\172\1\151\1\156\1\uffff\2\141\2\uffff\1\163\1\172\2\164\1\172\1\uffff\2\145\1\uffff\2\144\2\172\2\uffff";
+        "\1\uffff\1\162\1\156\1\157\1\165\1\156\1\157\1\162\1\171\1\145\1\150\1\157\1\141\1\uffff\1\170\2\uffff\1\157\1\151\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\2\157\1\uffff\1\164\1\154\2\141\1\162\1\146\1\164\1\157\1\162\1\157\1\162\2\160\1\151\1\172\1\162\1\uffff\1\160\2\uffff\1\143\1\164\5\uffff\1\143\1\154\1\143\2\145\1\151\1\172\1\157\1\163\1\143\1\151\1\164\1\146\1\171\1\141\1\172\1\146\1\143\3\145\1\154\1\uffff\2\172\1\162\1\154\1\145\1\153\1\172\1\153\1\156\1\141\1\162\1\170\1\uffff\1\156\1\163\1\145\1\156\1\145\1\151\1\160\1\154\1\164\1\uffff\1\151\1\145\1\156\1\163\1\141\1\145\2\uffff\1\145\1\141\1\162\1\163\1\145\1\uffff\1\151\1\164\1\144\1\162\1\172\1\123\1\172\1\123\1\147\1\155\1\170\1\145\2\172\1\170\1\144\1\164\1\172\1\164\1\172\2\163\1\141\1\172\1\164\1\156\1\172\3\145\1\uffff\1\145\1\uffff\1\145\1\172\1\145\1\172\1\144\2\uffff\1\172\1\165\1\150\1\uffff\1\172\1\uffff\2\163\1\154\1\uffff\1\172\1\147\1\uffff\1\162\1\144\1\146\2\160\1\uffff\1\156\1\uffff\1\172\1\uffff\1\162\1\145\1\uffff\1\151\2\172\1\uffff\3\172\1\164\2\145\1\164\1\uffff\1\145\1\163\1\157\5\uffff\1\172\2\162\2\172\1\151\1\156\1\uffff\2\141\2\uffff\1\163\1\172\2\164\1\172\1\uffff\2\145\1\uffff\2\144\2\172\2\uffff";
     static final String DFA12_acceptS =
-        "\15\uffff\1\31\2\uffff\1\41\1\42\2\uffff\1\44\1\45\3\uffff\1\51\1\52\3\uffff\1\44\20\uffff\1\31\2\uffff\1\41\1\42\1\uffff\1\45\1\46\1\47\1\50\1\51\26\uffff\1\26\14\uffff\1\10\11\uffff\1\27\6\uffff\1\30\1\32\5\uffff\1\12\36\uffff\1\34\1\uffff\1\14\5\uffff\1\24\1\13\3\uffff\1\21\1\uffff\1\25\3\uffff\1\1\2\uffff\1\2\5\uffff\1\11\1\uffff\1\16\1\uffff\1\15\2\uffff\1\23\3\uffff\1\37\7\uffff\1\7\3\uffff\1\36\1\43\1\17\1\5\1\6\7\uffff\1\35\2\uffff\1\22\1\20\5\uffff\1\33\2\uffff\1\40\4\uffff\1\3\1\4";
+        "\15\uffff\1\31\1\uffff\1\34\1\35\3\uffff\1\44\1\45\3\uffff\1\51\1\52\3\uffff\1\44\20\uffff\1\31\1\uffff\1\34\1\35\2\uffff\1\45\1\46\1\47\1\50\1\51\26\uffff\1\26\14\uffff\1\10\11\uffff\1\27\6\uffff\1\30\1\32\5\uffff\1\12\36\uffff\1\37\1\uffff\1\14\5\uffff\1\24\1\13\3\uffff\1\21\1\uffff\1\25\3\uffff\1\1\2\uffff\1\2\5\uffff\1\11\1\uffff\1\16\1\uffff\1\15\2\uffff\1\23\3\uffff\1\42\7\uffff\1\7\3\uffff\1\36\1\41\1\17\1\5\1\6\7\uffff\1\40\2\uffff\1\22\1\20\5\uffff\1\33\2\uffff\1\43\4\uffff\1\3\1\4";
     static final String DFA12_specialS =
         "\1\1\25\uffff\1\2\1\0\u00cf\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\32\2\31\2\32\1\31\22\32\1\31\1\32\1\26\4\32\1\27\7\32\1\30\12\25\3\32\1\15\3\32\32\24\1\20\1\32\1\21\1\23\1\24\1\32\1\24\1\1\1\3\1\13\1\16\1\6\2\24\1\2\2\24\1\17\1\24\1\22\1\24\1\7\1\24\1\11\1\4\1\10\1\5\1\14\1\12\3\24\uff85\32",
+            "\11\32\2\31\2\32\1\31\22\32\1\31\1\32\1\26\4\32\1\27\7\32\1\30\12\25\3\32\1\15\3\32\32\24\1\17\1\32\1\20\1\23\1\24\1\32\1\24\1\1\1\3\1\13\1\16\1\6\2\24\1\2\2\24\1\22\1\24\1\21\1\24\1\7\1\24\1\11\1\4\1\10\1\5\1\14\1\12\3\24\uff85\32",
             "\1\35\2\uffff\1\34\2\uffff\1\33",
             "\1\37",
             "\1\41\2\uffff\1\40",
@@ -1633,9 +1633,9 @@ public class InternalGenLexer extends Lexer {
             "\1\56",
             "",
             "\1\60",
-            "\1\61",
             "",
             "",
+            "\1\63",
             "\1\64",
             "\32\36\4\uffff\1\36\1\uffff\32\36",
             "",
@@ -1667,9 +1667,9 @@ public class InternalGenLexer extends Lexer {
             "\1\122\5\uffff\1\121",
             "",
             "\1\123",
+            "",
+            "",
             "\1\124",
-            "",
-            "",
             "\1\125",
             "",
             "",
@@ -1929,13 +1929,13 @@ public class InternalGenLexer extends Lexer {
 
                         else if ( (LA12_0=='e') ) {s = 14;}
 
-                        else if ( (LA12_0=='l') ) {s = 15;}
+                        else if ( (LA12_0=='[') ) {s = 15;}
 
-                        else if ( (LA12_0=='[') ) {s = 16;}
+                        else if ( (LA12_0==']') ) {s = 16;}
 
-                        else if ( (LA12_0==']') ) {s = 17;}
+                        else if ( (LA12_0=='n') ) {s = 17;}
 
-                        else if ( (LA12_0=='n') ) {s = 18;}
+                        else if ( (LA12_0=='l') ) {s = 18;}
 
                         else if ( (LA12_0=='^') ) {s = 19;}
 

@@ -4,7 +4,7 @@ package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.MultString;
-import com.euclideanspace.xgener.gen.Precidence;
+import com.euclideanspace.xgener.gen.Precedence;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,29 +17,50 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Precidence</b></em>'.
+ * An implementation of the model object '<em><b>Precedence</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getRule <em>Rule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getPrefix <em>Prefix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getPar1 <em>Par1</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getSuffix <em>Suffix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getInfix <em>Infix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getPar2 <em>Par2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getInfixleft <em>Infixleft</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getLiteral <em>Literal</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getBracket <em>Bracket</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getBraces <em>Braces</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl#getParenthesis <em>Parenthesis</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRuletyp <em>Ruletyp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPrefix <em>Prefix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar1 <em>Par1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getSuffix <em>Suffix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar2 <em>Par2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfixleft <em>Infixleft</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getLiteral <em>Literal</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBracket <em>Bracket</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBraces <em>Braces</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Precidence
+public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Precedence
 {
+  /**
+   * The default value of the '{@link #getRuletyp() <em>Ruletyp</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRuletyp()
+   * @generated
+   * @ordered
+   */
+  protected static final String RULETYP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRuletyp() <em>Ruletyp</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRuletyp()
+   * @generated
+   * @ordered
+   */
+  protected String ruletyp = RULETYP_EDEFAULT;
+
   /**
    * The default value of the '{@link #getRule() <em>Rule</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -225,7 +246,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PrecidenceImpl()
+  protected PrecedenceImpl()
   {
     super();
   }
@@ -238,7 +259,30 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   @Override
   protected EClass eStaticClass()
   {
-    return GenPackage.Literals.PRECIDENCE;
+    return GenPackage.Literals.PRECEDENCE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRuletyp()
+  {
+    return ruletyp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRuletyp(String newRuletyp)
+  {
+    String oldRuletyp = ruletyp;
+    ruletyp = newRuletyp;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__RULETYP, oldRuletyp, ruletyp));
   }
 
   /**
@@ -261,7 +305,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldRule = rule;
     rule = newRule;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__RULE, oldRule, rule));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__RULE, oldRule, rule));
   }
 
   /**
@@ -285,7 +329,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     prefix = newPrefix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__PREFIX, oldPrefix, newPrefix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__PREFIX, oldPrefix, newPrefix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -302,14 +346,14 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     {
       NotificationChain msgs = null;
       if (prefix != null)
-        msgs = ((InternalEObject)prefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__PREFIX, null, msgs);
+        msgs = ((InternalEObject)prefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__PREFIX, null, msgs);
       if (newPrefix != null)
-        msgs = ((InternalEObject)newPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__PREFIX, null, msgs);
+        msgs = ((InternalEObject)newPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__PREFIX, null, msgs);
       msgs = basicSetPrefix(newPrefix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__PREFIX, newPrefix, newPrefix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__PREFIX, newPrefix, newPrefix));
   }
 
   /**
@@ -332,7 +376,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldPar1 = par1;
     par1 = newPar1;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__PAR1, oldPar1, par1));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__PAR1, oldPar1, par1));
   }
 
   /**
@@ -356,7 +400,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     suffix = newSuffix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__SUFFIX, oldSuffix, newSuffix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__SUFFIX, oldSuffix, newSuffix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -373,14 +417,14 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     {
       NotificationChain msgs = null;
       if (suffix != null)
-        msgs = ((InternalEObject)suffix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__SUFFIX, null, msgs);
+        msgs = ((InternalEObject)suffix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__SUFFIX, null, msgs);
       if (newSuffix != null)
-        msgs = ((InternalEObject)newSuffix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__SUFFIX, null, msgs);
+        msgs = ((InternalEObject)newSuffix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__SUFFIX, null, msgs);
       msgs = basicSetSuffix(newSuffix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__SUFFIX, newSuffix, newSuffix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__SUFFIX, newSuffix, newSuffix));
   }
 
   /**
@@ -404,7 +448,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     infix = newInfix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__INFIX, oldInfix, newInfix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIX, oldInfix, newInfix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -421,14 +465,14 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     {
       NotificationChain msgs = null;
       if (infix != null)
-        msgs = ((InternalEObject)infix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__INFIX, null, msgs);
+        msgs = ((InternalEObject)infix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIX, null, msgs);
       if (newInfix != null)
-        msgs = ((InternalEObject)newInfix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__INFIX, null, msgs);
+        msgs = ((InternalEObject)newInfix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIX, null, msgs);
       msgs = basicSetInfix(newInfix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__INFIX, newInfix, newInfix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIX, newInfix, newInfix));
   }
 
   /**
@@ -451,7 +495,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldPar2 = par2;
     par2 = newPar2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__PAR2, oldPar2, par2));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__PAR2, oldPar2, par2));
   }
 
   /**
@@ -475,7 +519,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     infixleft = newInfixleft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__INFIXLEFT, oldInfixleft, newInfixleft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIXLEFT, oldInfixleft, newInfixleft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -492,14 +536,14 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     {
       NotificationChain msgs = null;
       if (infixleft != null)
-        msgs = ((InternalEObject)infixleft).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__INFIXLEFT, null, msgs);
+        msgs = ((InternalEObject)infixleft).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIXLEFT, null, msgs);
       if (newInfixleft != null)
-        msgs = ((InternalEObject)newInfixleft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECIDENCE__INFIXLEFT, null, msgs);
+        msgs = ((InternalEObject)newInfixleft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIXLEFT, null, msgs);
       msgs = basicSetInfixleft(newInfixleft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__INFIXLEFT, newInfixleft, newInfixleft));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIXLEFT, newInfixleft, newInfixleft));
   }
 
   /**
@@ -522,7 +566,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldLiteral = literal;
     literal = newLiteral;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__LITERAL, oldLiteral, literal));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__LITERAL, oldLiteral, literal));
   }
 
   /**
@@ -545,7 +589,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldBracket = bracket;
     bracket = newBracket;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__BRACKET, oldBracket, bracket));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__BRACKET, oldBracket, bracket));
   }
 
   /**
@@ -568,7 +612,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldBraces = braces;
     braces = newBraces;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__BRACES, oldBraces, braces));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__BRACES, oldBraces, braces));
   }
 
   /**
@@ -591,7 +635,7 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     String oldParenthesis = parenthesis;
     parenthesis = newParenthesis;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECIDENCE__PARENTHESIS, oldParenthesis, parenthesis));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__PARENTHESIS, oldParenthesis, parenthesis));
   }
 
   /**
@@ -604,13 +648,13 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   {
     switch (featureID)
     {
-      case GenPackage.PRECIDENCE__PREFIX:
+      case GenPackage.PRECEDENCE__PREFIX:
         return basicSetPrefix(null, msgs);
-      case GenPackage.PRECIDENCE__SUFFIX:
+      case GenPackage.PRECEDENCE__SUFFIX:
         return basicSetSuffix(null, msgs);
-      case GenPackage.PRECIDENCE__INFIX:
+      case GenPackage.PRECEDENCE__INFIX:
         return basicSetInfix(null, msgs);
-      case GenPackage.PRECIDENCE__INFIXLEFT:
+      case GenPackage.PRECEDENCE__INFIXLEFT:
         return basicSetInfixleft(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -626,27 +670,29 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   {
     switch (featureID)
     {
-      case GenPackage.PRECIDENCE__RULE:
+      case GenPackage.PRECEDENCE__RULETYP:
+        return getRuletyp();
+      case GenPackage.PRECEDENCE__RULE:
         return getRule();
-      case GenPackage.PRECIDENCE__PREFIX:
+      case GenPackage.PRECEDENCE__PREFIX:
         return getPrefix();
-      case GenPackage.PRECIDENCE__PAR1:
+      case GenPackage.PRECEDENCE__PAR1:
         return getPar1();
-      case GenPackage.PRECIDENCE__SUFFIX:
+      case GenPackage.PRECEDENCE__SUFFIX:
         return getSuffix();
-      case GenPackage.PRECIDENCE__INFIX:
+      case GenPackage.PRECEDENCE__INFIX:
         return getInfix();
-      case GenPackage.PRECIDENCE__PAR2:
+      case GenPackage.PRECEDENCE__PAR2:
         return getPar2();
-      case GenPackage.PRECIDENCE__INFIXLEFT:
+      case GenPackage.PRECEDENCE__INFIXLEFT:
         return getInfixleft();
-      case GenPackage.PRECIDENCE__LITERAL:
+      case GenPackage.PRECEDENCE__LITERAL:
         return getLiteral();
-      case GenPackage.PRECIDENCE__BRACKET:
+      case GenPackage.PRECEDENCE__BRACKET:
         return getBracket();
-      case GenPackage.PRECIDENCE__BRACES:
+      case GenPackage.PRECEDENCE__BRACES:
         return getBraces();
-      case GenPackage.PRECIDENCE__PARENTHESIS:
+      case GenPackage.PRECEDENCE__PARENTHESIS:
         return getParenthesis();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -662,37 +708,40 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   {
     switch (featureID)
     {
-      case GenPackage.PRECIDENCE__RULE:
+      case GenPackage.PRECEDENCE__RULETYP:
+        setRuletyp((String)newValue);
+        return;
+      case GenPackage.PRECEDENCE__RULE:
         setRule((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__PREFIX:
+      case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)newValue);
         return;
-      case GenPackage.PRECIDENCE__PAR1:
+      case GenPackage.PRECEDENCE__PAR1:
         setPar1((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__SUFFIX:
+      case GenPackage.PRECEDENCE__SUFFIX:
         setSuffix((MultString)newValue);
         return;
-      case GenPackage.PRECIDENCE__INFIX:
+      case GenPackage.PRECEDENCE__INFIX:
         setInfix((MultString)newValue);
         return;
-      case GenPackage.PRECIDENCE__PAR2:
+      case GenPackage.PRECEDENCE__PAR2:
         setPar2((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__INFIXLEFT:
+      case GenPackage.PRECEDENCE__INFIXLEFT:
         setInfixleft((MultString)newValue);
         return;
-      case GenPackage.PRECIDENCE__LITERAL:
+      case GenPackage.PRECEDENCE__LITERAL:
         setLiteral((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__BRACKET:
+      case GenPackage.PRECEDENCE__BRACKET:
         setBracket((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__BRACES:
+      case GenPackage.PRECEDENCE__BRACES:
         setBraces((String)newValue);
         return;
-      case GenPackage.PRECIDENCE__PARENTHESIS:
+      case GenPackage.PRECEDENCE__PARENTHESIS:
         setParenthesis((String)newValue);
         return;
     }
@@ -709,37 +758,40 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   {
     switch (featureID)
     {
-      case GenPackage.PRECIDENCE__RULE:
+      case GenPackage.PRECEDENCE__RULETYP:
+        setRuletyp(RULETYP_EDEFAULT);
+        return;
+      case GenPackage.PRECEDENCE__RULE:
         setRule(RULE_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__PREFIX:
+      case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)null);
         return;
-      case GenPackage.PRECIDENCE__PAR1:
+      case GenPackage.PRECEDENCE__PAR1:
         setPar1(PAR1_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__SUFFIX:
+      case GenPackage.PRECEDENCE__SUFFIX:
         setSuffix((MultString)null);
         return;
-      case GenPackage.PRECIDENCE__INFIX:
+      case GenPackage.PRECEDENCE__INFIX:
         setInfix((MultString)null);
         return;
-      case GenPackage.PRECIDENCE__PAR2:
+      case GenPackage.PRECEDENCE__PAR2:
         setPar2(PAR2_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__INFIXLEFT:
+      case GenPackage.PRECEDENCE__INFIXLEFT:
         setInfixleft((MultString)null);
         return;
-      case GenPackage.PRECIDENCE__LITERAL:
+      case GenPackage.PRECEDENCE__LITERAL:
         setLiteral(LITERAL_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__BRACKET:
+      case GenPackage.PRECEDENCE__BRACKET:
         setBracket(BRACKET_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__BRACES:
+      case GenPackage.PRECEDENCE__BRACES:
         setBraces(BRACES_EDEFAULT);
         return;
-      case GenPackage.PRECIDENCE__PARENTHESIS:
+      case GenPackage.PRECEDENCE__PARENTHESIS:
         setParenthesis(PARENTHESIS_EDEFAULT);
         return;
     }
@@ -756,27 +808,29 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
   {
     switch (featureID)
     {
-      case GenPackage.PRECIDENCE__RULE:
+      case GenPackage.PRECEDENCE__RULETYP:
+        return RULETYP_EDEFAULT == null ? ruletyp != null : !RULETYP_EDEFAULT.equals(ruletyp);
+      case GenPackage.PRECEDENCE__RULE:
         return RULE_EDEFAULT == null ? rule != null : !RULE_EDEFAULT.equals(rule);
-      case GenPackage.PRECIDENCE__PREFIX:
+      case GenPackage.PRECEDENCE__PREFIX:
         return prefix != null;
-      case GenPackage.PRECIDENCE__PAR1:
+      case GenPackage.PRECEDENCE__PAR1:
         return PAR1_EDEFAULT == null ? par1 != null : !PAR1_EDEFAULT.equals(par1);
-      case GenPackage.PRECIDENCE__SUFFIX:
+      case GenPackage.PRECEDENCE__SUFFIX:
         return suffix != null;
-      case GenPackage.PRECIDENCE__INFIX:
+      case GenPackage.PRECEDENCE__INFIX:
         return infix != null;
-      case GenPackage.PRECIDENCE__PAR2:
+      case GenPackage.PRECEDENCE__PAR2:
         return PAR2_EDEFAULT == null ? par2 != null : !PAR2_EDEFAULT.equals(par2);
-      case GenPackage.PRECIDENCE__INFIXLEFT:
+      case GenPackage.PRECEDENCE__INFIXLEFT:
         return infixleft != null;
-      case GenPackage.PRECIDENCE__LITERAL:
+      case GenPackage.PRECEDENCE__LITERAL:
         return LITERAL_EDEFAULT == null ? literal != null : !LITERAL_EDEFAULT.equals(literal);
-      case GenPackage.PRECIDENCE__BRACKET:
+      case GenPackage.PRECEDENCE__BRACKET:
         return BRACKET_EDEFAULT == null ? bracket != null : !BRACKET_EDEFAULT.equals(bracket);
-      case GenPackage.PRECIDENCE__BRACES:
+      case GenPackage.PRECEDENCE__BRACES:
         return BRACES_EDEFAULT == null ? braces != null : !BRACES_EDEFAULT.equals(braces);
-      case GenPackage.PRECIDENCE__PARENTHESIS:
+      case GenPackage.PRECEDENCE__PARENTHESIS:
         return PARENTHESIS_EDEFAULT == null ? parenthesis != null : !PARENTHESIS_EDEFAULT.equals(parenthesis);
     }
     return super.eIsSet(featureID);
@@ -793,7 +847,9 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (rule: ");
+    result.append(" (ruletyp: ");
+    result.append(ruletyp);
+    result.append(", rule: ");
     result.append(rule);
     result.append(", par1: ");
     result.append(par1);
@@ -811,4 +867,4 @@ public class PrecidenceImpl extends MinimalEObjectImpl.Container implements Prec
     return result.toString();
   }
 
-} //PrecidenceImpl
+} //PrecedenceImpl

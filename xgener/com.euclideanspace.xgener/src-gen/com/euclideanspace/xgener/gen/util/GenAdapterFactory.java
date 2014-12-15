@@ -100,9 +100,9 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
-      public Adapter casePrecidence(Precidence object)
+      public Adapter casePrecedence(Precedence object)
       {
-        return createPrecidenceAdapter();
+        return createPrecedenceAdapter();
       }
       @Override
       public Adapter caseMultID(MultID object)
@@ -212,16 +212,16 @@ public class GenAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Precidence <em>Precidence</em>}'.
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Precedence <em>Precedence</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.euclideanspace.xgener.gen.Precidence
+   * @see com.euclideanspace.xgener.gen.Precedence
    * @generated
    */
-  public Adapter createPrecidenceAdapter()
+  public Adapter createPrecedenceAdapter()
   {
     return null;
   }

@@ -68,13 +68,13 @@ public interface GenFactory extends EFactory
   Expression createExpression();
 
   /**
-   * Returns a new object of class '<em>Precidence</em>'.
+   * Returns a new object of class '<em>Precedence</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Precidence</em>'.
+   * @return a new object of class '<em>Precedence</em>'.
    * @generated
    */
-  Precidence createPrecidence();
+  Precedence createPrecedence();
 
   /**
    * Returns a new object of class '<em>Mult ID</em>'.

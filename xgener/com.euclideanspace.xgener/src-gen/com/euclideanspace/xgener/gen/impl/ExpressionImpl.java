@@ -4,7 +4,7 @@ package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
-import com.euclideanspace.xgener.gen.Precidence;
+import com.euclideanspace.xgener.gen.Precedence;
 
 import java.util.Collection;
 
@@ -66,7 +66,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * @generated
    * @ordered
    */
-  protected EList<Precidence> prec;
+  protected EList<Precedence> prec;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,11 +117,11 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Precidence> getPrec()
+  public EList<Precedence> getPrec()
   {
     if (prec == null)
     {
-      prec = new EObjectContainmentEList<Precidence>(Precidence.class, this, GenPackage.EXPRESSION__PREC);
+      prec = new EObjectContainmentEList<Precedence>(Precedence.class, this, GenPackage.EXPRESSION__PREC);
     }
     return prec;
   }
@@ -176,7 +176,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
         return;
       case GenPackage.EXPRESSION__PREC:
         getPrec().clear();
-        getPrec().addAll((Collection<? extends Precidence>)newValue);
+        getPrec().addAll((Collection<? extends Precedence>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

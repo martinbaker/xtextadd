@@ -425,13 +425,13 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cPrecAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPrecPrecidenceParserRuleCall_2_0 = (RuleCall)cPrecAssignment_2.eContents().get(0);
+		private final RuleCall cPrecPrecedenceParserRuleCall_2_0 = (RuleCall)cPrecAssignment_2.eContents().get(0);
 		
 		//Expression:
-		//	"expression" name=ID prec+=Precidence*;
+		//	"expression" name=ID prec+=Precedence*;
 		public ParserRule getRule() { return rule; }
 
-		//"expression" name=ID prec+=Precidence*
+		//"expression" name=ID prec+=Precedence*
 		public Group getGroup() { return cGroup; }
 
 		//"expression"
@@ -443,18 +443,19 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//prec+=Precidence*
+		//prec+=Precedence*
 		public Assignment getPrecAssignment_2() { return cPrecAssignment_2; }
 
-		//Precidence
-		public RuleCall getPrecPrecidenceParserRuleCall_2_0() { return cPrecPrecidenceParserRuleCall_2_0; }
+		//Precedence
+		public RuleCall getPrecPrecedenceParserRuleCall_2_0() { return cPrecPrecedenceParserRuleCall_2_0; }
 	}
 
-	public class PrecidenceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Precidence");
+	public class PrecedenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Precedence");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cPrefixKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cRuletypAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final Keyword cRuletypPrefixKeyword_0_0_0 = (Keyword)cRuletypAssignment_0_0.eContents().get(0);
 		private final Assignment cRuleAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_0_1_0 = (RuleCall)cRuleAssignment_0_1.eContents().get(0);
 		private final Assignment cPrefixAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
@@ -462,7 +463,8 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPar1Assignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
 		private final RuleCall cPar1IDTerminalRuleCall_0_3_0 = (RuleCall)cPar1Assignment_0_3.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cSuffixKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cRuletypAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cRuletypSuffixKeyword_1_0_0 = (Keyword)cRuletypAssignment_1_0.eContents().get(0);
 		private final Assignment cRuleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_1_1_0 = (RuleCall)cRuleAssignment_1_1.eContents().get(0);
 		private final Assignment cPar1Assignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
@@ -470,7 +472,8 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cSuffixAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
 		private final RuleCall cSuffixMultStringParserRuleCall_1_3_0 = (RuleCall)cSuffixAssignment_1_3.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cInfixKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cRuletypAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cRuletypInfixKeyword_2_0_0 = (Keyword)cRuletypAssignment_2_0.eContents().get(0);
 		private final Assignment cRuleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_2_1_0 = (RuleCall)cRuleAssignment_2_1.eContents().get(0);
 		private final Assignment cPar1Assignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
@@ -480,7 +483,8 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPar2Assignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
 		private final RuleCall cPar2IDTerminalRuleCall_2_4_0 = (RuleCall)cPar2Assignment_2_4.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cInfixleftKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cRuletypAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cRuletypInfixleftKeyword_3_0_0 = (Keyword)cRuletypAssignment_3_0.eContents().get(0);
 		private final Assignment cRuleAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_3_1_0 = (RuleCall)cRuleAssignment_3_1.eContents().get(0);
 		private final Assignment cPar1Assignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
@@ -490,7 +494,8 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPar2Assignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
 		private final RuleCall cPar2IDTerminalRuleCall_3_4_0 = (RuleCall)cPar2Assignment_3_4.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Keyword cLiteralKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cRuletypAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final Keyword cRuletypLiteralKeyword_4_0_0 = (Keyword)cRuletypAssignment_4_0.eContents().get(0);
 		private final Assignment cRuleAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_4_1_0 = (RuleCall)cRuleAssignment_4_1.eContents().get(0);
 		private final Assignment cLiteralAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
@@ -500,19 +505,22 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLiteralBoolKeyword_4_2_0_2 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(2);
 		private final Keyword cLiteralFloatKeyword_4_2_0_3 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(3);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
-		private final Keyword cBracketKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cRuletypAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final Keyword cRuletypBracketKeyword_5_0_0 = (Keyword)cRuletypAssignment_5_0.eContents().get(0);
 		private final Assignment cRuleAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_5_1_0 = (RuleCall)cRuleAssignment_5_1.eContents().get(0);
 		private final Assignment cBracketAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
 		private final RuleCall cBracketIDTerminalRuleCall_5_2_0 = (RuleCall)cBracketAssignment_5_2.eContents().get(0);
 		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
-		private final Keyword cBracesKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cRuletypAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
+		private final Keyword cRuletypBracesKeyword_6_0_0 = (Keyword)cRuletypAssignment_6_0.eContents().get(0);
 		private final Assignment cRuleAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_6_1_0 = (RuleCall)cRuleAssignment_6_1.eContents().get(0);
 		private final Assignment cBracesAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
 		private final RuleCall cBracesIDTerminalRuleCall_6_2_0 = (RuleCall)cBracesAssignment_6_2.eContents().get(0);
 		private final Group cGroup_7 = (Group)cAlternatives.eContents().get(7);
-		private final Keyword cParenthesisKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cRuletypAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
+		private final Keyword cRuletypParenthesisKeyword_7_0_0 = (Keyword)cRuletypAssignment_7_0.eContents().get(0);
 		private final Assignment cRuleAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_7_1_0 = (RuleCall)cRuleAssignment_7_1.eContents().get(0);
 		private final Assignment cParenthesisAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
@@ -520,24 +528,27 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		
 		/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 		// * in the same list in any order
-		// * / Precidence:
-		//	"prefix" rule=ID prefix=MultString par1=ID | "suffix" rule=ID par1=ID suffix=MultString | "infix" rule=ID par1=ID
-		//	infix=MultString par2=ID | "infixleft" rule=ID par1=ID infixleft=MultString par2=ID | "literal" rule=ID literal=("int"
-		//	| "string" | "bool" | "float") | "bracket" rule=ID bracket=ID | "braces" rule=ID braces=ID | "parenthesis" rule=ID
-		//	parenthesis=ID;
+		// * / Precedence:
+		//	ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
+		//	ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
+		//	par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
+		//	bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID;
 		public ParserRule getRule() { return rule; }
 
-		//"prefix" rule=ID prefix=MultString par1=ID | "suffix" rule=ID par1=ID suffix=MultString | "infix" rule=ID par1=ID
-		//infix=MultString par2=ID | "infixleft" rule=ID par1=ID infixleft=MultString par2=ID | "literal" rule=ID literal=("int"
-		//| "string" | "bool" | "float") | "bracket" rule=ID bracket=ID | "braces" rule=ID braces=ID | "parenthesis" rule=ID
-		//parenthesis=ID
+		//ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
+		//ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
+		//par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
+		//bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//"prefix" rule=ID prefix=MultString par1=ID
+		//ruletyp="prefix" rule=ID prefix=MultString par1=ID
 		public Group getGroup_0() { return cGroup_0; }
 
+		//ruletyp="prefix"
+		public Assignment getRuletypAssignment_0_0() { return cRuletypAssignment_0_0; }
+
 		//"prefix"
-		public Keyword getPrefixKeyword_0_0() { return cPrefixKeyword_0_0; }
+		public Keyword getRuletypPrefixKeyword_0_0_0() { return cRuletypPrefixKeyword_0_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_0_1() { return cRuleAssignment_0_1; }
@@ -557,11 +568,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar1IDTerminalRuleCall_0_3_0() { return cPar1IDTerminalRuleCall_0_3_0; }
 
-		//"suffix" rule=ID par1=ID suffix=MultString
+		//ruletyp="suffix" rule=ID par1=ID suffix=MultString
 		public Group getGroup_1() { return cGroup_1; }
 
+		//ruletyp="suffix"
+		public Assignment getRuletypAssignment_1_0() { return cRuletypAssignment_1_0; }
+
 		//"suffix"
-		public Keyword getSuffixKeyword_1_0() { return cSuffixKeyword_1_0; }
+		public Keyword getRuletypSuffixKeyword_1_0_0() { return cRuletypSuffixKeyword_1_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_1_1() { return cRuleAssignment_1_1; }
@@ -581,11 +595,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//MultString
 		public RuleCall getSuffixMultStringParserRuleCall_1_3_0() { return cSuffixMultStringParserRuleCall_1_3_0; }
 
-		//"infix" rule=ID par1=ID infix=MultString par2=ID
+		//ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID
 		public Group getGroup_2() { return cGroup_2; }
 
+		//ruletyp="infix"
+		public Assignment getRuletypAssignment_2_0() { return cRuletypAssignment_2_0; }
+
 		//"infix"
-		public Keyword getInfixKeyword_2_0() { return cInfixKeyword_2_0; }
+		public Keyword getRuletypInfixKeyword_2_0_0() { return cRuletypInfixKeyword_2_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_2_1() { return cRuleAssignment_2_1; }
@@ -611,11 +628,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar2IDTerminalRuleCall_2_4_0() { return cPar2IDTerminalRuleCall_2_4_0; }
 
-		//"infixleft" rule=ID par1=ID infixleft=MultString par2=ID
+		//ruletyp="infixleft" rule=ID par1=ID infixleft=MultString par2=ID
 		public Group getGroup_3() { return cGroup_3; }
 
+		//ruletyp="infixleft"
+		public Assignment getRuletypAssignment_3_0() { return cRuletypAssignment_3_0; }
+
 		//"infixleft"
-		public Keyword getInfixleftKeyword_3_0() { return cInfixleftKeyword_3_0; }
+		public Keyword getRuletypInfixleftKeyword_3_0_0() { return cRuletypInfixleftKeyword_3_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_3_1() { return cRuleAssignment_3_1; }
@@ -641,11 +661,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar2IDTerminalRuleCall_3_4_0() { return cPar2IDTerminalRuleCall_3_4_0; }
 
-		//"literal" rule=ID literal=("int" | "string" | "bool" | "float")
+		//ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float")
 		public Group getGroup_4() { return cGroup_4; }
 
+		//ruletyp="literal"
+		public Assignment getRuletypAssignment_4_0() { return cRuletypAssignment_4_0; }
+
 		//"literal"
-		public Keyword getLiteralKeyword_4_0() { return cLiteralKeyword_4_0; }
+		public Keyword getRuletypLiteralKeyword_4_0_0() { return cRuletypLiteralKeyword_4_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_4_1() { return cRuleAssignment_4_1; }
@@ -671,11 +694,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//"float"
 		public Keyword getLiteralFloatKeyword_4_2_0_3() { return cLiteralFloatKeyword_4_2_0_3; }
 
-		//"bracket" rule=ID bracket=ID
+		//ruletyp="bracket" rule=ID bracket=ID
 		public Group getGroup_5() { return cGroup_5; }
 
+		//ruletyp="bracket"
+		public Assignment getRuletypAssignment_5_0() { return cRuletypAssignment_5_0; }
+
 		//"bracket"
-		public Keyword getBracketKeyword_5_0() { return cBracketKeyword_5_0; }
+		public Keyword getRuletypBracketKeyword_5_0_0() { return cRuletypBracketKeyword_5_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_5_1() { return cRuleAssignment_5_1; }
@@ -689,11 +715,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getBracketIDTerminalRuleCall_5_2_0() { return cBracketIDTerminalRuleCall_5_2_0; }
 
-		//"braces" rule=ID braces=ID
+		//ruletyp="braces" rule=ID braces=ID
 		public Group getGroup_6() { return cGroup_6; }
 
+		//ruletyp="braces"
+		public Assignment getRuletypAssignment_6_0() { return cRuletypAssignment_6_0; }
+
 		//"braces"
-		public Keyword getBracesKeyword_6_0() { return cBracesKeyword_6_0; }
+		public Keyword getRuletypBracesKeyword_6_0_0() { return cRuletypBracesKeyword_6_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_6_1() { return cRuleAssignment_6_1; }
@@ -707,11 +736,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getBracesIDTerminalRuleCall_6_2_0() { return cBracesIDTerminalRuleCall_6_2_0; }
 
-		//"parenthesis" rule=ID parenthesis=ID
+		//ruletyp="parenthesis" rule=ID parenthesis=ID
 		public Group getGroup_7() { return cGroup_7; }
 
+		//ruletyp="parenthesis"
+		public Assignment getRuletypAssignment_7_0() { return cRuletypAssignment_7_0; }
+
 		//"parenthesis"
-		public Keyword getParenthesisKeyword_7_0() { return cParenthesisKeyword_7_0; }
+		public Keyword getRuletypParenthesisKeyword_7_0_0() { return cRuletypParenthesisKeyword_7_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_7_1() { return cRuleAssignment_7_1; }
@@ -828,7 +860,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	private final ProcedureElements pProcedure;
 	private final StatementElements pStatement;
 	private final ExpressionElements pExpression;
-	private final PrecidenceElements pPrecidence;
+	private final PrecedenceElements pPrecedence;
 	private final MultIDElements pMultID;
 	private final MultStringElements pMultString;
 	
@@ -846,7 +878,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		this.pProcedure = new ProcedureElements();
 		this.pStatement = new StatementElements();
 		this.pExpression = new ExpressionElements();
-		this.pPrecidence = new PrecidenceElements();
+		this.pPrecedence = new PrecedenceElements();
 		this.pMultID = new MultIDElements();
 		this.pMultString = new MultStringElements();
 	}
@@ -922,7 +954,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Expression:
-	//	"expression" name=ID prec+=Precidence*;
+	//	"expression" name=ID prec+=Precedence*;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -933,17 +965,17 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 
 	/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 	// * in the same list in any order
-	// * / Precidence:
-	//	"prefix" rule=ID prefix=MultString par1=ID | "suffix" rule=ID par1=ID suffix=MultString | "infix" rule=ID par1=ID
-	//	infix=MultString par2=ID | "infixleft" rule=ID par1=ID infixleft=MultString par2=ID | "literal" rule=ID literal=("int"
-	//	| "string" | "bool" | "float") | "bracket" rule=ID bracket=ID | "braces" rule=ID braces=ID | "parenthesis" rule=ID
-	//	parenthesis=ID;
-	public PrecidenceElements getPrecidenceAccess() {
-		return pPrecidence;
+	// * / Precedence:
+	//	ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
+	//	ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
+	//	par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
+	//	bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID;
+	public PrecedenceElements getPrecedenceAccess() {
+		return pPrecedence;
 	}
 	
-	public ParserRule getPrecidenceRule() {
-		return getPrecidenceAccess().getRule();
+	public ParserRule getPrecedenceRule() {
+		return getPrecedenceAccess().getRule();
 	}
 
 	//MultID:

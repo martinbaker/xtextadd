@@ -53,7 +53,7 @@ public interface Expression extends EObject
 
   /**
    * Returns the value of the '<em><b>Prec</b></em>' containment reference list.
-   * The list contents are of type {@link com.euclideanspace.xgener.gen.Precidence}.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.Precedence}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Prec</em>' containment reference list isn't clear,
@@ -65,6 +65,6 @@ public interface Expression extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Precidence> getPrec();
+  EList<Precedence> getPrec();
 
 } // Expression

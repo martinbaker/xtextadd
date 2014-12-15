@@ -6,7 +6,7 @@ import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.Model;
 import com.euclideanspace.xgener.gen.MultID;
 import com.euclideanspace.xgener.gen.MultString;
-import com.euclideanspace.xgener.gen.Precidence;
+import com.euclideanspace.xgener.gen.Precedence;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Statement;
 import com.euclideanspace.xgener.services.GenGrammarAccess;
@@ -59,9 +59,9 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case GenPackage.PRECIDENCE:
-				if(context == grammarAccess.getPrecidenceRule()) {
-					sequence_Precidence(context, (Precidence) semanticObject); 
+			case GenPackage.PRECEDENCE:
+				if(context == grammarAccess.getPrecedenceRule()) {
+					sequence_Precedence(context, (Precedence) semanticObject); 
 					return; 
 				}
 				else break;
@@ -92,7 +92,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID prec+=Precidence*)
+	 *     (name=ID prec+=Precedence*)
 	 */
 	protected void sequence_Expression(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -129,17 +129,17 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         (rule=ID prefix=MultString par1=ID) | 
-	 *         (rule=ID par1=ID suffix=MultString) | 
-	 *         (rule=ID par1=ID infix=MultString par2=ID) | 
-	 *         (rule=ID par1=ID infixleft=MultString par2=ID) | 
-	 *         (rule=ID (literal='int' | literal='string' | literal='bool' | literal='float')) | 
-	 *         (rule=ID bracket=ID) | 
-	 *         (rule=ID braces=ID) | 
-	 *         (rule=ID parenthesis=ID)
+	 *         (ruletyp='prefix' rule=ID prefix=MultString par1=ID) | 
+	 *         (ruletyp='suffix' rule=ID par1=ID suffix=MultString) | 
+	 *         (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID) | 
+	 *         (ruletyp='infixleft' rule=ID par1=ID infixleft=MultString par2=ID) | 
+	 *         (ruletyp='literal' rule=ID (literal='int' | literal='string' | literal='bool' | literal='float')) | 
+	 *         (ruletyp='bracket' rule=ID bracket=ID) | 
+	 *         (ruletyp='braces' rule=ID braces=ID) | 
+	 *         (ruletyp='parenthesis' rule=ID parenthesis=ID)
 	 *     )
 	 */
-	protected void sequence_Precidence(EObject context, Precidence semanticObject) {
+	protected void sequence_Precedence(EObject context, Precedence semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

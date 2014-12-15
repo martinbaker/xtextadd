@@ -107,10 +107,10 @@ public class GenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GenPackage.PRECIDENCE:
+      case GenPackage.PRECEDENCE:
       {
-        Precidence precidence = (Precidence)theEObject;
-        T result = casePrecidence(precidence);
+        Precedence precedence = (Precedence)theEObject;
+        T result = casePrecedence(precedence);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -213,17 +213,17 @@ public class GenSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Precidence</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Precedence</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Precidence</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Precedence</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePrecidence(Precidence object)
+  public T casePrecedence(Precedence object)
   {
     return null;
   }

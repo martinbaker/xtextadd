@@ -6,32 +6,59 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Precidence</b></em>'.
+ * A representation of the model object '<em><b>Precedence</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getRule <em>Rule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getPar1 <em>Par1</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getPar2 <em>Par2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getLiteral <em>Literal</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getBracket <em>Bracket</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getBraces <em>Braces</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Precidence#getParenthesis <em>Parenthesis</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRuletyp <em>Ruletyp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar1 <em>Par1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getSuffix <em>Suffix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBraces <em>Braces</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getParenthesis <em>Parenthesis</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence()
+ * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence()
  * @model
  * @generated
  */
-public interface Precidence extends EObject
+public interface Precedence extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Ruletyp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ruletyp</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ruletyp</em>' attribute.
+   * @see #setRuletyp(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Ruletyp()
+   * @model
+   * @generated
+   */
+  String getRuletyp();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getRuletyp <em>Ruletyp</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ruletyp</em>' attribute.
+   * @see #getRuletyp()
+   * @generated
+   */
+  void setRuletyp(String value);
+
   /**
    * Returns the value of the '<em><b>Rule</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -42,14 +69,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Rule</em>' attribute.
    * @see #setRule(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Rule()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Rule()
    * @model
    * @generated
    */
   String getRule();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getRule <em>Rule</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getRule <em>Rule</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Rule</em>' attribute.
@@ -68,14 +95,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Prefix</em>' containment reference.
    * @see #setPrefix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Prefix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Prefix()
    * @model containment="true"
    * @generated
    */
   MultString getPrefix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Prefix</em>' containment reference.
@@ -94,14 +121,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Par1</em>' attribute.
    * @see #setPar1(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Par1()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Par1()
    * @model
    * @generated
    */
   String getPar1();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getPar1 <em>Par1</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getPar1 <em>Par1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Par1</em>' attribute.
@@ -120,14 +147,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Suffix</em>' containment reference.
    * @see #setSuffix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Suffix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Suffix()
    * @model containment="true"
    * @generated
    */
   MultString getSuffix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getSuffix <em>Suffix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Suffix</em>' containment reference.
@@ -146,14 +173,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Infix</em>' containment reference.
    * @see #setInfix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Infix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Infix()
    * @model containment="true"
    * @generated
    */
   MultString getInfix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getInfix <em>Infix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Infix</em>' containment reference.
@@ -172,14 +199,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Par2</em>' attribute.
    * @see #setPar2(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Par2()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Par2()
    * @model
    * @generated
    */
   String getPar2();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getPar2 <em>Par2</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Par2</em>' attribute.
@@ -198,14 +225,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Infixleft</em>' containment reference.
    * @see #setInfixleft(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Infixleft()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Infixleft()
    * @model containment="true"
    * @generated
    */
   MultString getInfixleft();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Infixleft</em>' containment reference.
@@ -224,14 +251,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Literal</em>' attribute.
    * @see #setLiteral(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Literal()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Literal()
    * @model
    * @generated
    */
   String getLiteral();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getLiteral <em>Literal</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Literal</em>' attribute.
@@ -250,14 +277,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Bracket</em>' attribute.
    * @see #setBracket(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Bracket()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Bracket()
    * @model
    * @generated
    */
   String getBracket();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getBracket <em>Bracket</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Bracket</em>' attribute.
@@ -276,14 +303,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Braces</em>' attribute.
    * @see #setBraces(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Braces()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Braces()
    * @model
    * @generated
    */
   String getBraces();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getBraces <em>Braces</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getBraces <em>Braces</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Braces</em>' attribute.
@@ -302,14 +329,14 @@ public interface Precidence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parenthesis</em>' attribute.
    * @see #setParenthesis(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Parenthesis()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Parenthesis()
    * @model
    * @generated
    */
   String getParenthesis();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getParenthesis <em>Parenthesis</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getParenthesis <em>Parenthesis</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Parenthesis</em>' attribute.
@@ -318,4 +345,4 @@ public interface Precidence extends EObject
    */
   void setParenthesis(String value);
 
-} // Precidence
+} // Precedence

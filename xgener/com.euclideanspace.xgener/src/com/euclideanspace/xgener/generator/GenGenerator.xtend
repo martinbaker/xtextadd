@@ -472,12 +472,26 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 // end of rules for «e.name»
 '''
 
-/* Precidence */
-def CharSequence compile(com.euclideanspace.xgener.gen.Precidence p) '''
+/* Precedence
+	(ruletyp='prefix' rule=ID prefix=MultString par1=ID)
+    | (ruletyp='suffix' rule=ID par1=ID suffix=MultString)
+    | (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID)
+    | (ruletyp='infixleft' rule=ID par1=ID infixleft=MultString par2=ID)
+    | (ruletyp='literal' rule=ID literal=('int'|'string'|'bool'|'float'))
+    | (ruletyp='bracket' rule=ID bracket=ID)
+    | (ruletyp='braces' rule=ID braces=ID)
+    | (ruletyp='parenthesis' rule=ID parenthesis=ID)*/
+def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
   «p.rule» returns XExpression hidden(SL_COMMENT,WS):
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    «IF p.ruletyp=='prefix'»
+    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
+      IF p.infix != null»«compile(p.infix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
-  ;
+  «ELSEIF p.ruletyp=='infix'»
+    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
+      IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
+  «ENDIF»;
 '''
 
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''

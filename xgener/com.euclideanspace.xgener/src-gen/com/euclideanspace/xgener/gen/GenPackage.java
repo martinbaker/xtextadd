@@ -368,14 +368,23 @@ public interface GenPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl <em>Precidence</em>}' class.
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl <em>Precedence</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.euclideanspace.xgener.gen.impl.PrecidenceImpl
-   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecidence()
+   * @see com.euclideanspace.xgener.gen.impl.PrecedenceImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecedence()
    * @generated
    */
-  int PRECIDENCE = 5;
+  int PRECEDENCE = 5;
+
+  /**
+   * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECEDENCE__RULETYP = 0;
 
   /**
    * The feature id for the '<em><b>Rule</b></em>' attribute.
@@ -384,7 +393,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__RULE = 0;
+  int PRECEDENCE__RULE = 1;
 
   /**
    * The feature id for the '<em><b>Prefix</b></em>' containment reference.
@@ -393,7 +402,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__PREFIX = 1;
+  int PRECEDENCE__PREFIX = 2;
 
   /**
    * The feature id for the '<em><b>Par1</b></em>' attribute.
@@ -402,7 +411,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__PAR1 = 2;
+  int PRECEDENCE__PAR1 = 3;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' containment reference.
@@ -411,7 +420,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__SUFFIX = 3;
+  int PRECEDENCE__SUFFIX = 4;
 
   /**
    * The feature id for the '<em><b>Infix</b></em>' containment reference.
@@ -420,7 +429,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__INFIX = 4;
+  int PRECEDENCE__INFIX = 5;
 
   /**
    * The feature id for the '<em><b>Par2</b></em>' attribute.
@@ -429,7 +438,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__PAR2 = 5;
+  int PRECEDENCE__PAR2 = 6;
 
   /**
    * The feature id for the '<em><b>Infixleft</b></em>' containment reference.
@@ -438,7 +447,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__INFIXLEFT = 6;
+  int PRECEDENCE__INFIXLEFT = 7;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -447,7 +456,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__LITERAL = 7;
+  int PRECEDENCE__LITERAL = 8;
 
   /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
@@ -456,7 +465,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__BRACKET = 8;
+  int PRECEDENCE__BRACKET = 9;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -465,7 +474,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__BRACES = 9;
+  int PRECEDENCE__BRACES = 10;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -474,16 +483,16 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECIDENCE__PARENTHESIS = 10;
+  int PRECEDENCE__PARENTHESIS = 11;
 
   /**
-   * The number of structural features of the '<em>Precidence</em>' class.
+   * The number of structural features of the '<em>Precedence</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRECIDENCE_FEATURE_COUNT = 11;
+  int PRECEDENCE_FEATURE_COUNT = 12;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
@@ -857,135 +866,146 @@ public interface GenPackage extends EPackage
   EReference getExpression_Prec();
 
   /**
-   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Precidence <em>Precidence</em>}'.
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Precedence <em>Precedence</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Precidence</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence
+   * @return the meta object for class '<em>Precedence</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence
    * @generated
    */
-  EClass getPrecidence();
+  EClass getPrecedence();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getRule <em>Rule</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getRuletyp <em>Ruletyp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ruletyp</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence#getRuletyp()
+   * @see #getPrecedence()
+   * @generated
+   */
+  EAttribute getPrecedence_Ruletyp();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getRule <em>Rule</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Rule</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getRule()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getRule()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Rule();
+  EAttribute getPrecedence_Rule();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Prefix</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getPrefix()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getPrefix()
+   * @see #getPrecedence()
    * @generated
    */
-  EReference getPrecidence_Prefix();
+  EReference getPrecedence_Prefix();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar1 <em>Par1</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getPar1 <em>Par1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Par1</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getPar1()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getPar1()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Par1();
+  EAttribute getPrecedence_Par1();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Suffix</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getSuffix()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getSuffix()
+   * @see #getPrecedence()
    * @generated
    */
-  EReference getPrecidence_Suffix();
+  EReference getPrecedence_Suffix();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getInfix <em>Infix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Infix</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getInfix()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getInfix()
+   * @see #getPrecedence()
    * @generated
    */
-  EReference getPrecidence_Infix();
+  EReference getPrecedence_Infix();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar2 <em>Par2</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Par2</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getPar2()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getPar2()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Par2();
+  EAttribute getPrecedence_Par2();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Infixleft</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getInfixleft()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getInfixleft()
+   * @see #getPrecedence()
    * @generated
    */
-  EReference getPrecidence_Infixleft();
+  EReference getPrecedence_Infixleft();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getLiteral <em>Literal</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Literal</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getLiteral()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getLiteral()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Literal();
+  EAttribute getPrecedence_Literal();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getBracket <em>Bracket</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Bracket</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getBracket()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getBracket()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Bracket();
+  EAttribute getPrecedence_Bracket();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getBraces <em>Braces</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getBraces <em>Braces</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Braces</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getBraces()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getBraces()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Braces();
+  EAttribute getPrecedence_Braces();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getParenthesis <em>Parenthesis</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getParenthesis <em>Parenthesis</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Parenthesis</em>'.
-   * @see com.euclideanspace.xgener.gen.Precidence#getParenthesis()
-   * @see #getPrecidence()
+   * @see com.euclideanspace.xgener.gen.Precedence#getParenthesis()
+   * @see #getPrecedence()
    * @generated
    */
-  EAttribute getPrecidence_Parenthesis();
+  EAttribute getPrecedence_Parenthesis();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultID <em>Mult ID</em>}'.
@@ -1295,14 +1315,22 @@ public interface GenPackage extends EPackage
     EReference EXPRESSION__PREC = eINSTANCE.getExpression_Prec();
 
     /**
-     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrecidenceImpl <em>Precidence</em>}' class.
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl <em>Precedence</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.euclideanspace.xgener.gen.impl.PrecidenceImpl
-     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecidence()
+     * @see com.euclideanspace.xgener.gen.impl.PrecedenceImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecedence()
      * @generated
      */
-    EClass PRECIDENCE = eINSTANCE.getPrecidence();
+    EClass PRECEDENCE = eINSTANCE.getPrecedence();
+
+    /**
+     * The meta object literal for the '<em><b>Ruletyp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECEDENCE__RULETYP = eINSTANCE.getPrecedence_Ruletyp();
 
     /**
      * The meta object literal for the '<em><b>Rule</b></em>' attribute feature.
@@ -1310,7 +1338,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__RULE = eINSTANCE.getPrecidence_Rule();
+    EAttribute PRECEDENCE__RULE = eINSTANCE.getPrecedence_Rule();
 
     /**
      * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
@@ -1318,7 +1346,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRECIDENCE__PREFIX = eINSTANCE.getPrecidence_Prefix();
+    EReference PRECEDENCE__PREFIX = eINSTANCE.getPrecedence_Prefix();
 
     /**
      * The meta object literal for the '<em><b>Par1</b></em>' attribute feature.
@@ -1326,7 +1354,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__PAR1 = eINSTANCE.getPrecidence_Par1();
+    EAttribute PRECEDENCE__PAR1 = eINSTANCE.getPrecedence_Par1();
 
     /**
      * The meta object literal for the '<em><b>Suffix</b></em>' containment reference feature.
@@ -1334,7 +1362,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRECIDENCE__SUFFIX = eINSTANCE.getPrecidence_Suffix();
+    EReference PRECEDENCE__SUFFIX = eINSTANCE.getPrecedence_Suffix();
 
     /**
      * The meta object literal for the '<em><b>Infix</b></em>' containment reference feature.
@@ -1342,7 +1370,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRECIDENCE__INFIX = eINSTANCE.getPrecidence_Infix();
+    EReference PRECEDENCE__INFIX = eINSTANCE.getPrecedence_Infix();
 
     /**
      * The meta object literal for the '<em><b>Par2</b></em>' attribute feature.
@@ -1350,7 +1378,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__PAR2 = eINSTANCE.getPrecidence_Par2();
+    EAttribute PRECEDENCE__PAR2 = eINSTANCE.getPrecedence_Par2();
 
     /**
      * The meta object literal for the '<em><b>Infixleft</b></em>' containment reference feature.
@@ -1358,7 +1386,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRECIDENCE__INFIXLEFT = eINSTANCE.getPrecidence_Infixleft();
+    EReference PRECEDENCE__INFIXLEFT = eINSTANCE.getPrecedence_Infixleft();
 
     /**
      * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
@@ -1366,7 +1394,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__LITERAL = eINSTANCE.getPrecidence_Literal();
+    EAttribute PRECEDENCE__LITERAL = eINSTANCE.getPrecedence_Literal();
 
     /**
      * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
@@ -1374,7 +1402,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__BRACKET = eINSTANCE.getPrecidence_Bracket();
+    EAttribute PRECEDENCE__BRACKET = eINSTANCE.getPrecedence_Bracket();
 
     /**
      * The meta object literal for the '<em><b>Braces</b></em>' attribute feature.
@@ -1382,7 +1410,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__BRACES = eINSTANCE.getPrecidence_Braces();
+    EAttribute PRECEDENCE__BRACES = eINSTANCE.getPrecedence_Braces();
 
     /**
      * The meta object literal for the '<em><b>Parenthesis</b></em>' attribute feature.
@@ -1390,7 +1418,7 @@ public interface GenPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__PARENTHESIS = eINSTANCE.getPrecidence_Parenthesis();
+    EAttribute PRECEDENCE__PARENTHESIS = eINSTANCE.getPrecedence_Parenthesis();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
