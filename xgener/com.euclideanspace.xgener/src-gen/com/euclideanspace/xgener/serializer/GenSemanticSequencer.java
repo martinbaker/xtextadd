@@ -129,6 +129,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
+	 *         (ruletyp='caller' rule=ID) | 
 	 *         (ruletyp='prefix' rule=ID prefix=MultString par1=ID) | 
 	 *         (ruletyp='suffix' rule=ID par1=ID suffix=MultString) | 
 	 *         (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID) | 

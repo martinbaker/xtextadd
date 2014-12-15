@@ -455,100 +455,107 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Assignment cRuletypAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final Keyword cRuletypPrefixKeyword_0_0_0 = (Keyword)cRuletypAssignment_0_0.eContents().get(0);
+		private final Keyword cRuletypCallerKeyword_0_0_0 = (Keyword)cRuletypAssignment_0_0.eContents().get(0);
 		private final Assignment cRuleAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_0_1_0 = (RuleCall)cRuleAssignment_0_1.eContents().get(0);
-		private final Assignment cPrefixAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final RuleCall cPrefixMultStringParserRuleCall_0_2_0 = (RuleCall)cPrefixAssignment_0_2.eContents().get(0);
-		private final Assignment cPar1Assignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final RuleCall cPar1IDTerminalRuleCall_0_3_0 = (RuleCall)cPar1Assignment_0_3.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cRuletypAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cRuletypSuffixKeyword_1_0_0 = (Keyword)cRuletypAssignment_1_0.eContents().get(0);
+		private final Keyword cRuletypPrefixKeyword_1_0_0 = (Keyword)cRuletypAssignment_1_0.eContents().get(0);
 		private final Assignment cRuleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_1_1_0 = (RuleCall)cRuleAssignment_1_1.eContents().get(0);
-		private final Assignment cPar1Assignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cPar1IDTerminalRuleCall_1_2_0 = (RuleCall)cPar1Assignment_1_2.eContents().get(0);
-		private final Assignment cSuffixAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final RuleCall cSuffixMultStringParserRuleCall_1_3_0 = (RuleCall)cSuffixAssignment_1_3.eContents().get(0);
+		private final Assignment cPrefixAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cPrefixMultStringParserRuleCall_1_2_0 = (RuleCall)cPrefixAssignment_1_2.eContents().get(0);
+		private final Assignment cPar1Assignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cPar1IDTerminalRuleCall_1_3_0 = (RuleCall)cPar1Assignment_1_3.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Assignment cRuletypAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cRuletypInfixKeyword_2_0_0 = (Keyword)cRuletypAssignment_2_0.eContents().get(0);
+		private final Keyword cRuletypSuffixKeyword_2_0_0 = (Keyword)cRuletypAssignment_2_0.eContents().get(0);
 		private final Assignment cRuleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_2_1_0 = (RuleCall)cRuleAssignment_2_1.eContents().get(0);
 		private final Assignment cPar1Assignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
 		private final RuleCall cPar1IDTerminalRuleCall_2_2_0 = (RuleCall)cPar1Assignment_2_2.eContents().get(0);
-		private final Assignment cInfixAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
-		private final RuleCall cInfixMultStringParserRuleCall_2_3_0 = (RuleCall)cInfixAssignment_2_3.eContents().get(0);
-		private final Assignment cPar2Assignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
-		private final RuleCall cPar2IDTerminalRuleCall_2_4_0 = (RuleCall)cPar2Assignment_2_4.eContents().get(0);
+		private final Assignment cSuffixAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cSuffixMultStringParserRuleCall_2_3_0 = (RuleCall)cSuffixAssignment_2_3.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Assignment cRuletypAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final Keyword cRuletypInfixleftKeyword_3_0_0 = (Keyword)cRuletypAssignment_3_0.eContents().get(0);
+		private final Keyword cRuletypInfixKeyword_3_0_0 = (Keyword)cRuletypAssignment_3_0.eContents().get(0);
 		private final Assignment cRuleAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_3_1_0 = (RuleCall)cRuleAssignment_3_1.eContents().get(0);
 		private final Assignment cPar1Assignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
 		private final RuleCall cPar1IDTerminalRuleCall_3_2_0 = (RuleCall)cPar1Assignment_3_2.eContents().get(0);
-		private final Assignment cInfixleftAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final RuleCall cInfixleftMultStringParserRuleCall_3_3_0 = (RuleCall)cInfixleftAssignment_3_3.eContents().get(0);
+		private final Assignment cInfixAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final RuleCall cInfixMultStringParserRuleCall_3_3_0 = (RuleCall)cInfixAssignment_3_3.eContents().get(0);
 		private final Assignment cPar2Assignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
 		private final RuleCall cPar2IDTerminalRuleCall_3_4_0 = (RuleCall)cPar2Assignment_3_4.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
 		private final Assignment cRuletypAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final Keyword cRuletypLiteralKeyword_4_0_0 = (Keyword)cRuletypAssignment_4_0.eContents().get(0);
+		private final Keyword cRuletypInfixleftKeyword_4_0_0 = (Keyword)cRuletypAssignment_4_0.eContents().get(0);
 		private final Assignment cRuleAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_4_1_0 = (RuleCall)cRuleAssignment_4_1.eContents().get(0);
-		private final Assignment cLiteralAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final Alternatives cLiteralAlternatives_4_2_0 = (Alternatives)cLiteralAssignment_4_2.eContents().get(0);
-		private final Keyword cLiteralIntKeyword_4_2_0_0 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(0);
-		private final Keyword cLiteralStringKeyword_4_2_0_1 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(1);
-		private final Keyword cLiteralBoolKeyword_4_2_0_2 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(2);
-		private final Keyword cLiteralFloatKeyword_4_2_0_3 = (Keyword)cLiteralAlternatives_4_2_0.eContents().get(3);
+		private final Assignment cPar1Assignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cPar1IDTerminalRuleCall_4_2_0 = (RuleCall)cPar1Assignment_4_2.eContents().get(0);
+		private final Assignment cInfixleftAssignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
+		private final RuleCall cInfixleftMultStringParserRuleCall_4_3_0 = (RuleCall)cInfixleftAssignment_4_3.eContents().get(0);
+		private final Assignment cPar2Assignment_4_4 = (Assignment)cGroup_4.eContents().get(4);
+		private final RuleCall cPar2IDTerminalRuleCall_4_4_0 = (RuleCall)cPar2Assignment_4_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
 		private final Assignment cRuletypAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final Keyword cRuletypBracketKeyword_5_0_0 = (Keyword)cRuletypAssignment_5_0.eContents().get(0);
+		private final Keyword cRuletypLiteralKeyword_5_0_0 = (Keyword)cRuletypAssignment_5_0.eContents().get(0);
 		private final Assignment cRuleAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_5_1_0 = (RuleCall)cRuleAssignment_5_1.eContents().get(0);
-		private final Assignment cBracketAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cBracketIDTerminalRuleCall_5_2_0 = (RuleCall)cBracketAssignment_5_2.eContents().get(0);
+		private final Assignment cLiteralAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final Alternatives cLiteralAlternatives_5_2_0 = (Alternatives)cLiteralAssignment_5_2.eContents().get(0);
+		private final Keyword cLiteralIntKeyword_5_2_0_0 = (Keyword)cLiteralAlternatives_5_2_0.eContents().get(0);
+		private final Keyword cLiteralStringKeyword_5_2_0_1 = (Keyword)cLiteralAlternatives_5_2_0.eContents().get(1);
+		private final Keyword cLiteralBoolKeyword_5_2_0_2 = (Keyword)cLiteralAlternatives_5_2_0.eContents().get(2);
+		private final Keyword cLiteralFloatKeyword_5_2_0_3 = (Keyword)cLiteralAlternatives_5_2_0.eContents().get(3);
 		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
 		private final Assignment cRuletypAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final Keyword cRuletypBracesKeyword_6_0_0 = (Keyword)cRuletypAssignment_6_0.eContents().get(0);
+		private final Keyword cRuletypBracketKeyword_6_0_0 = (Keyword)cRuletypAssignment_6_0.eContents().get(0);
 		private final Assignment cRuleAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_6_1_0 = (RuleCall)cRuleAssignment_6_1.eContents().get(0);
-		private final Assignment cBracesAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cBracesIDTerminalRuleCall_6_2_0 = (RuleCall)cBracesAssignment_6_2.eContents().get(0);
+		private final Assignment cBracketAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cBracketIDTerminalRuleCall_6_2_0 = (RuleCall)cBracketAssignment_6_2.eContents().get(0);
 		private final Group cGroup_7 = (Group)cAlternatives.eContents().get(7);
 		private final Assignment cRuletypAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final Keyword cRuletypParenthesisKeyword_7_0_0 = (Keyword)cRuletypAssignment_7_0.eContents().get(0);
+		private final Keyword cRuletypBracesKeyword_7_0_0 = (Keyword)cRuletypAssignment_7_0.eContents().get(0);
 		private final Assignment cRuleAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
 		private final RuleCall cRuleIDTerminalRuleCall_7_1_0 = (RuleCall)cRuleAssignment_7_1.eContents().get(0);
-		private final Assignment cParenthesisAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cParenthesisIDTerminalRuleCall_7_2_0 = (RuleCall)cParenthesisAssignment_7_2.eContents().get(0);
+		private final Assignment cBracesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cBracesIDTerminalRuleCall_7_2_0 = (RuleCall)cBracesAssignment_7_2.eContents().get(0);
+		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
+		private final Assignment cRuletypAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
+		private final Keyword cRuletypParenthesisKeyword_8_0_0 = (Keyword)cRuletypAssignment_8_0.eContents().get(0);
+		private final Assignment cRuleAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cRuleIDTerminalRuleCall_8_1_0 = (RuleCall)cRuleAssignment_8_1.eContents().get(0);
+		private final Assignment cParenthesisAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cParenthesisIDTerminalRuleCall_8_2_0 = (RuleCall)cParenthesisAssignment_8_2.eContents().get(0);
 		
 		/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 		// * in the same list in any order
 		// * / Precedence:
-		//	ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
-		//	ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
-		//	par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
-		//	bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID;
+		//	ruletyp="caller" rule=ID | ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID
+		//	suffix=MultString | ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID
+		//	infixleft=MultString par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") |
+		//	ruletyp="bracket" rule=ID bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID
+		//	parenthesis=ID;
 		public ParserRule getRule() { return rule; }
 
-		//ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
-		//ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
-		//par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
-		//bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID
+		//ruletyp="caller" rule=ID | ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID
+		//suffix=MultString | ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID
+		//infixleft=MultString par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") |
+		//ruletyp="bracket" rule=ID bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID
+		//parenthesis=ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//ruletyp="prefix" rule=ID prefix=MultString par1=ID
+		//ruletyp="caller" rule=ID
 		public Group getGroup_0() { return cGroup_0; }
 
-		//ruletyp="prefix"
+		//ruletyp="caller"
 		public Assignment getRuletypAssignment_0_0() { return cRuletypAssignment_0_0; }
 
-		//"prefix"
-		public Keyword getRuletypPrefixKeyword_0_0_0() { return cRuletypPrefixKeyword_0_0_0; }
+		//"caller"
+		public Keyword getRuletypCallerKeyword_0_0_0() { return cRuletypCallerKeyword_0_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_0_1() { return cRuleAssignment_0_1; }
@@ -556,26 +563,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_0_1_0() { return cRuleIDTerminalRuleCall_0_1_0; }
 
-		//prefix=MultString
-		public Assignment getPrefixAssignment_0_2() { return cPrefixAssignment_0_2; }
-
-		//MultString
-		public RuleCall getPrefixMultStringParserRuleCall_0_2_0() { return cPrefixMultStringParserRuleCall_0_2_0; }
-
-		//par1=ID
-		public Assignment getPar1Assignment_0_3() { return cPar1Assignment_0_3; }
-
-		//ID
-		public RuleCall getPar1IDTerminalRuleCall_0_3_0() { return cPar1IDTerminalRuleCall_0_3_0; }
-
-		//ruletyp="suffix" rule=ID par1=ID suffix=MultString
+		//ruletyp="prefix" rule=ID prefix=MultString par1=ID
 		public Group getGroup_1() { return cGroup_1; }
 
-		//ruletyp="suffix"
+		//ruletyp="prefix"
 		public Assignment getRuletypAssignment_1_0() { return cRuletypAssignment_1_0; }
 
-		//"suffix"
-		public Keyword getRuletypSuffixKeyword_1_0_0() { return cRuletypSuffixKeyword_1_0_0; }
+		//"prefix"
+		public Keyword getRuletypPrefixKeyword_1_0_0() { return cRuletypPrefixKeyword_1_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_1_1() { return cRuleAssignment_1_1; }
@@ -583,26 +578,26 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_1_1_0() { return cRuleIDTerminalRuleCall_1_1_0; }
 
-		//par1=ID
-		public Assignment getPar1Assignment_1_2() { return cPar1Assignment_1_2; }
-
-		//ID
-		public RuleCall getPar1IDTerminalRuleCall_1_2_0() { return cPar1IDTerminalRuleCall_1_2_0; }
-
-		//suffix=MultString
-		public Assignment getSuffixAssignment_1_3() { return cSuffixAssignment_1_3; }
+		//prefix=MultString
+		public Assignment getPrefixAssignment_1_2() { return cPrefixAssignment_1_2; }
 
 		//MultString
-		public RuleCall getSuffixMultStringParserRuleCall_1_3_0() { return cSuffixMultStringParserRuleCall_1_3_0; }
+		public RuleCall getPrefixMultStringParserRuleCall_1_2_0() { return cPrefixMultStringParserRuleCall_1_2_0; }
 
-		//ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID
+		//par1=ID
+		public Assignment getPar1Assignment_1_3() { return cPar1Assignment_1_3; }
+
+		//ID
+		public RuleCall getPar1IDTerminalRuleCall_1_3_0() { return cPar1IDTerminalRuleCall_1_3_0; }
+
+		//ruletyp="suffix" rule=ID par1=ID suffix=MultString
 		public Group getGroup_2() { return cGroup_2; }
 
-		//ruletyp="infix"
+		//ruletyp="suffix"
 		public Assignment getRuletypAssignment_2_0() { return cRuletypAssignment_2_0; }
 
-		//"infix"
-		public Keyword getRuletypInfixKeyword_2_0_0() { return cRuletypInfixKeyword_2_0_0; }
+		//"suffix"
+		public Keyword getRuletypSuffixKeyword_2_0_0() { return cRuletypSuffixKeyword_2_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_2_1() { return cRuleAssignment_2_1; }
@@ -616,26 +611,20 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar1IDTerminalRuleCall_2_2_0() { return cPar1IDTerminalRuleCall_2_2_0; }
 
-		//infix=MultString
-		public Assignment getInfixAssignment_2_3() { return cInfixAssignment_2_3; }
+		//suffix=MultString
+		public Assignment getSuffixAssignment_2_3() { return cSuffixAssignment_2_3; }
 
 		//MultString
-		public RuleCall getInfixMultStringParserRuleCall_2_3_0() { return cInfixMultStringParserRuleCall_2_3_0; }
+		public RuleCall getSuffixMultStringParserRuleCall_2_3_0() { return cSuffixMultStringParserRuleCall_2_3_0; }
 
-		//par2=ID
-		public Assignment getPar2Assignment_2_4() { return cPar2Assignment_2_4; }
-
-		//ID
-		public RuleCall getPar2IDTerminalRuleCall_2_4_0() { return cPar2IDTerminalRuleCall_2_4_0; }
-
-		//ruletyp="infixleft" rule=ID par1=ID infixleft=MultString par2=ID
+		//ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID
 		public Group getGroup_3() { return cGroup_3; }
 
-		//ruletyp="infixleft"
+		//ruletyp="infix"
 		public Assignment getRuletypAssignment_3_0() { return cRuletypAssignment_3_0; }
 
-		//"infixleft"
-		public Keyword getRuletypInfixleftKeyword_3_0_0() { return cRuletypInfixleftKeyword_3_0_0; }
+		//"infix"
+		public Keyword getRuletypInfixKeyword_3_0_0() { return cRuletypInfixKeyword_3_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_3_1() { return cRuleAssignment_3_1; }
@@ -649,11 +638,11 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar1IDTerminalRuleCall_3_2_0() { return cPar1IDTerminalRuleCall_3_2_0; }
 
-		//infixleft=MultString
-		public Assignment getInfixleftAssignment_3_3() { return cInfixleftAssignment_3_3; }
+		//infix=MultString
+		public Assignment getInfixAssignment_3_3() { return cInfixAssignment_3_3; }
 
 		//MultString
-		public RuleCall getInfixleftMultStringParserRuleCall_3_3_0() { return cInfixleftMultStringParserRuleCall_3_3_0; }
+		public RuleCall getInfixMultStringParserRuleCall_3_3_0() { return cInfixMultStringParserRuleCall_3_3_0; }
 
 		//par2=ID
 		public Assignment getPar2Assignment_3_4() { return cPar2Assignment_3_4; }
@@ -661,14 +650,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getPar2IDTerminalRuleCall_3_4_0() { return cPar2IDTerminalRuleCall_3_4_0; }
 
-		//ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float")
+		//ruletyp="infixleft" rule=ID par1=ID infixleft=MultString par2=ID
 		public Group getGroup_4() { return cGroup_4; }
 
-		//ruletyp="literal"
+		//ruletyp="infixleft"
 		public Assignment getRuletypAssignment_4_0() { return cRuletypAssignment_4_0; }
 
-		//"literal"
-		public Keyword getRuletypLiteralKeyword_4_0_0() { return cRuletypLiteralKeyword_4_0_0; }
+		//"infixleft"
+		public Keyword getRuletypInfixleftKeyword_4_0_0() { return cRuletypInfixleftKeyword_4_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_4_1() { return cRuleAssignment_4_1; }
@@ -676,32 +665,32 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_4_1_0() { return cRuleIDTerminalRuleCall_4_1_0; }
 
-		//literal=("int" | "string" | "bool" | "float")
-		public Assignment getLiteralAssignment_4_2() { return cLiteralAssignment_4_2; }
+		//par1=ID
+		public Assignment getPar1Assignment_4_2() { return cPar1Assignment_4_2; }
 
-		//"int" | "string" | "bool" | "float"
-		public Alternatives getLiteralAlternatives_4_2_0() { return cLiteralAlternatives_4_2_0; }
+		//ID
+		public RuleCall getPar1IDTerminalRuleCall_4_2_0() { return cPar1IDTerminalRuleCall_4_2_0; }
 
-		//"int"
-		public Keyword getLiteralIntKeyword_4_2_0_0() { return cLiteralIntKeyword_4_2_0_0; }
+		//infixleft=MultString
+		public Assignment getInfixleftAssignment_4_3() { return cInfixleftAssignment_4_3; }
 
-		//"string"
-		public Keyword getLiteralStringKeyword_4_2_0_1() { return cLiteralStringKeyword_4_2_0_1; }
+		//MultString
+		public RuleCall getInfixleftMultStringParserRuleCall_4_3_0() { return cInfixleftMultStringParserRuleCall_4_3_0; }
 
-		//"bool"
-		public Keyword getLiteralBoolKeyword_4_2_0_2() { return cLiteralBoolKeyword_4_2_0_2; }
+		//par2=ID
+		public Assignment getPar2Assignment_4_4() { return cPar2Assignment_4_4; }
 
-		//"float"
-		public Keyword getLiteralFloatKeyword_4_2_0_3() { return cLiteralFloatKeyword_4_2_0_3; }
+		//ID
+		public RuleCall getPar2IDTerminalRuleCall_4_4_0() { return cPar2IDTerminalRuleCall_4_4_0; }
 
-		//ruletyp="bracket" rule=ID bracket=ID
+		//ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float")
 		public Group getGroup_5() { return cGroup_5; }
 
-		//ruletyp="bracket"
+		//ruletyp="literal"
 		public Assignment getRuletypAssignment_5_0() { return cRuletypAssignment_5_0; }
 
-		//"bracket"
-		public Keyword getRuletypBracketKeyword_5_0_0() { return cRuletypBracketKeyword_5_0_0; }
+		//"literal"
+		public Keyword getRuletypLiteralKeyword_5_0_0() { return cRuletypLiteralKeyword_5_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_5_1() { return cRuleAssignment_5_1; }
@@ -709,20 +698,32 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_5_1_0() { return cRuleIDTerminalRuleCall_5_1_0; }
 
-		//bracket=ID
-		public Assignment getBracketAssignment_5_2() { return cBracketAssignment_5_2; }
+		//literal=("int" | "string" | "bool" | "float")
+		public Assignment getLiteralAssignment_5_2() { return cLiteralAssignment_5_2; }
 
-		//ID
-		public RuleCall getBracketIDTerminalRuleCall_5_2_0() { return cBracketIDTerminalRuleCall_5_2_0; }
+		//"int" | "string" | "bool" | "float"
+		public Alternatives getLiteralAlternatives_5_2_0() { return cLiteralAlternatives_5_2_0; }
 
-		//ruletyp="braces" rule=ID braces=ID
+		//"int"
+		public Keyword getLiteralIntKeyword_5_2_0_0() { return cLiteralIntKeyword_5_2_0_0; }
+
+		//"string"
+		public Keyword getLiteralStringKeyword_5_2_0_1() { return cLiteralStringKeyword_5_2_0_1; }
+
+		//"bool"
+		public Keyword getLiteralBoolKeyword_5_2_0_2() { return cLiteralBoolKeyword_5_2_0_2; }
+
+		//"float"
+		public Keyword getLiteralFloatKeyword_5_2_0_3() { return cLiteralFloatKeyword_5_2_0_3; }
+
+		//ruletyp="bracket" rule=ID bracket=ID
 		public Group getGroup_6() { return cGroup_6; }
 
-		//ruletyp="braces"
+		//ruletyp="bracket"
 		public Assignment getRuletypAssignment_6_0() { return cRuletypAssignment_6_0; }
 
-		//"braces"
-		public Keyword getRuletypBracesKeyword_6_0_0() { return cRuletypBracesKeyword_6_0_0; }
+		//"bracket"
+		public Keyword getRuletypBracketKeyword_6_0_0() { return cRuletypBracketKeyword_6_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_6_1() { return cRuleAssignment_6_1; }
@@ -730,20 +731,20 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_6_1_0() { return cRuleIDTerminalRuleCall_6_1_0; }
 
-		//braces=ID
-		public Assignment getBracesAssignment_6_2() { return cBracesAssignment_6_2; }
+		//bracket=ID
+		public Assignment getBracketAssignment_6_2() { return cBracketAssignment_6_2; }
 
 		//ID
-		public RuleCall getBracesIDTerminalRuleCall_6_2_0() { return cBracesIDTerminalRuleCall_6_2_0; }
+		public RuleCall getBracketIDTerminalRuleCall_6_2_0() { return cBracketIDTerminalRuleCall_6_2_0; }
 
-		//ruletyp="parenthesis" rule=ID parenthesis=ID
+		//ruletyp="braces" rule=ID braces=ID
 		public Group getGroup_7() { return cGroup_7; }
 
-		//ruletyp="parenthesis"
+		//ruletyp="braces"
 		public Assignment getRuletypAssignment_7_0() { return cRuletypAssignment_7_0; }
 
-		//"parenthesis"
-		public Keyword getRuletypParenthesisKeyword_7_0_0() { return cRuletypParenthesisKeyword_7_0_0; }
+		//"braces"
+		public Keyword getRuletypBracesKeyword_7_0_0() { return cRuletypBracesKeyword_7_0_0; }
 
 		//rule=ID
 		public Assignment getRuleAssignment_7_1() { return cRuleAssignment_7_1; }
@@ -751,11 +752,32 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getRuleIDTerminalRuleCall_7_1_0() { return cRuleIDTerminalRuleCall_7_1_0; }
 
-		//parenthesis=ID
-		public Assignment getParenthesisAssignment_7_2() { return cParenthesisAssignment_7_2; }
+		//braces=ID
+		public Assignment getBracesAssignment_7_2() { return cBracesAssignment_7_2; }
 
 		//ID
-		public RuleCall getParenthesisIDTerminalRuleCall_7_2_0() { return cParenthesisIDTerminalRuleCall_7_2_0; }
+		public RuleCall getBracesIDTerminalRuleCall_7_2_0() { return cBracesIDTerminalRuleCall_7_2_0; }
+
+		//ruletyp="parenthesis" rule=ID parenthesis=ID
+		public Group getGroup_8() { return cGroup_8; }
+
+		//ruletyp="parenthesis"
+		public Assignment getRuletypAssignment_8_0() { return cRuletypAssignment_8_0; }
+
+		//"parenthesis"
+		public Keyword getRuletypParenthesisKeyword_8_0_0() { return cRuletypParenthesisKeyword_8_0_0; }
+
+		//rule=ID
+		public Assignment getRuleAssignment_8_1() { return cRuleAssignment_8_1; }
+
+		//ID
+		public RuleCall getRuleIDTerminalRuleCall_8_1_0() { return cRuleIDTerminalRuleCall_8_1_0; }
+
+		//parenthesis=ID
+		public Assignment getParenthesisAssignment_8_2() { return cParenthesisAssignment_8_2; }
+
+		//ID
+		public RuleCall getParenthesisIDTerminalRuleCall_8_2_0() { return cParenthesisIDTerminalRuleCall_8_2_0; }
 	}
 
 	public class MultIDElements extends AbstractParserRuleElementFinder {
@@ -966,10 +988,11 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 	// * in the same list in any order
 	// * / Precedence:
-	//	ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID suffix=MultString |
-	//	ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID infixleft=MultString
-	//	par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") | ruletyp="bracket" rule=ID
-	//	bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID parenthesis=ID;
+	//	ruletyp="caller" rule=ID | ruletyp="prefix" rule=ID prefix=MultString par1=ID | ruletyp="suffix" rule=ID par1=ID
+	//	suffix=MultString | ruletyp="infix" rule=ID par1=ID infix=MultString par2=ID | ruletyp="infixleft" rule=ID par1=ID
+	//	infixleft=MultString par2=ID | ruletyp="literal" rule=ID literal=("int" | "string" | "bool" | "float") |
+	//	ruletyp="bracket" rule=ID bracket=ID | ruletyp="braces" rule=ID braces=ID | ruletyp="parenthesis" rule=ID
+	//	parenthesis=ID;
 	public PrecedenceElements getPrecedenceAccess() {
 		return pPrecedence;
 	}

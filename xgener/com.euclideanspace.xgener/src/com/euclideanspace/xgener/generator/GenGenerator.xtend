@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 import com.euclideanspace.xgener.gen.Model
+import com.euclideanspace.xgener.gen.Expression
+import org.eclipse.emf.ecore.EObject
 
 /**
  * Generates code from your model files on save.
@@ -22,6 +24,29 @@ class GenGenerator implements IGenerator {
 //				.map[name]
 //				.join(', '))
 //	}
+
+    var String callingRule =null;
+    
+    def void setCallingRule(String s) {
+    	callingRule =s;
+    }
+
+    def String getCallingRule() {
+    	return callingRule;
+    }
+    
+    /**
+     * gets the name of the container
+     */
+    def String getParentExpression(EObject child) {
+      var Expression e=null;
+      var String s="error";
+      if (child.eContainer() instanceof Expression) {
+        e= child.eContainer() as Expression;
+        s=e.name;
+      }
+      return s;
+    }
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		fsa.generateFile(resource.className+".xtext", compile(resource.contents.head as Model))
@@ -473,25 +498,35 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 '''
 
 /* Precedence
-	(ruletyp='prefix' rule=ID prefix=MultString par1=ID)
-    | (ruletyp='suffix' rule=ID par1=ID suffix=MultString)
-    | (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID)
-    | (ruletyp='infixleft' rule=ID par1=ID infixleft=MultString par2=ID)
-    | (ruletyp='literal' rule=ID literal=('int'|'string'|'bool'|'float'))
-    | (ruletyp='bracket' rule=ID bracket=ID)
-    | (ruletyp='braces' rule=ID braces=ID)
-    | (ruletyp='parenthesis' rule=ID parenthesis=ID)*/
+ * ruletyp rule
+ * ------- ----
+ * 'caller' ID
+ * 'prefix' ID prefix=MultString par1=ID
+ * 'suffix' ID par1=ID suffix=MultString
+ * 'infix' ID par1=ID infix=MultString par2=ID
+ * 'infixleft' ID par1=ID infixleft=MultString par2=ID
+ * 'literal' ID literal=('int'|'string'|'bool'|'float')
+ * 'bracket' ID bracket=ID
+ * 'braces' ID braces=ID
+ * 'parenthesis' ID parenthesis=ID
+ */
 def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
-  «p.rule» returns XExpression hidden(SL_COMMENT,WS):
+  «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.ruletyp=='prefix'»
+     (=>({Lastrule.leftOperand=current} feature=«
+      IF p.prefix != null»«compile(p.prefix)»«ENDIF»)
+      «IF p.par1 != null»«p.par1»«ENDIF»)*;
+  «ELSEIF p.ruletyp=='suffix'»
     «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
-      IF p.infix != null»«compile(p.infix)»«ENDIF»)
+      IF p.suffix != null»«compile(p.suffix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
   «ELSEIF p.ruletyp=='infix'»
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
-      IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    «IF p.par1 != null»«p.par1»«ENDIF» (=>({«getCallingRule».leftOperand=current} feature=«
+    IF p.infix != null»«compile(p.infix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
-  «ENDIF»;
+  «ELSEIF p.ruletyp=='caller'»
+    «IF p.rule != null»«setCallingRule(p.rule)»«ENDIF»
+  «ENDIF»
 '''
 
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''
