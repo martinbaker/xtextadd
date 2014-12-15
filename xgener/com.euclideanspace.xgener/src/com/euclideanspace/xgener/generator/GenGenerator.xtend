@@ -31,8 +31,10 @@ class GenGenerator implements IGenerator {
     	callingRule =s;
     }
 
-    def String getCallingRule() {
-    	return callingRule;
+    def String getCallingRule(String s) {
+    	val String oldRule=callingRule;
+    	callingRule=s
+    	return oldRule;
     }
     
     /**
@@ -325,15 +327,19 @@ XBlockExpression returns «s.name» hidden(SL_COMMENT,WS):
 «e.name» hidden(SL_COMMENT,WS) :
   XAssignment;
 
-«FOR x:e.prec»«IF x.rule != null»«compile(x)»«ENDIF»
-«ENDFOR»
-
 XOrExpression returns «e.name» hidden(SL_COMMENT,WS):
   XAndExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOr)
     rightOperand=XAndExpression)*;
 
 OpOr:
   '||';
+
+«FOR x:e.prec»
+  «IF x.rule != null»
+
+    «compile(x)»
+  «ENDIF»
+«ENDFOR»
 
 XAndExpression returns «e.name» hidden(SL_COMMENT,WS):
   XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAnd)
@@ -497,7 +503,7 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 // end of rules for «e.name»
 '''
 
-/* Precedence
+/* Precedence, processes one of the following rules:
  * ruletyp rule
  * ------- ----
  * 'caller' ID
@@ -521,7 +527,7 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
       IF p.suffix != null»«compile(p.suffix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
   «ELSEIF p.ruletyp=='infix'»
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({«getCallingRule».leftOperand=current} feature=«
+    «IF p.par1 != null»«p.par1»«ENDIF» (=>({«getCallingRule(p.rule)».leftOperand=current} feature=«
     IF p.infix != null»«compile(p.infix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
   «ELSEIF p.ruletyp=='caller'»
@@ -529,13 +535,12 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
   «ENDIF»
 '''
 
-def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''
-  «var int i=1»«IF m.ms == null»«
+def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
+  var int i=1»«IF m.ms == null»«
     ELSEIF m.ms.length==1»'«m.ms.get(0)»'«
   ELSE
     »(«FOR x:m.ms»'«x»'«IF m.ms.length>i++»|«ENDIF»«ENDFOR»)«
-  ENDIF»
-'''
+  ENDIF»'''
 
 def CharSequence compile(com.euclideanspace.xgener.gen.MultID m) '''
   «var int i=1»«IF m.mi == null»«
