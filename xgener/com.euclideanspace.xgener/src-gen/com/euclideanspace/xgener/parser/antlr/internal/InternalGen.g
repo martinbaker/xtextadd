@@ -1256,96 +1256,144 @@ rulePrecidence returns [EObject current=null]
 
 
 // Entry rule entryRuleMultID
-entryRuleMultID returns [String current=null] 
+entryRuleMultID returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getMultIDRule()); } 
+	{ newCompositeNode(grammarAccess.getMultIDRule()); }
 	 iv_ruleMultID=ruleMultID 
-	 { $current=$iv_ruleMultID.current.getText(); }  
+	 { $current=$iv_ruleMultID.current; } 
 	 EOF 
 ;
 
 // Rule MultID
-ruleMultID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+ruleMultID returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_ID_0=RULE_ID    {
-		$current.merge(this_ID_0);
-    }
-
-    { 
-    newLeafNode(this_ID_0, grammarAccess.getMultIDAccess().getIDTerminalRuleCall_0()); 
-    }
-
-    |(
-	kw='[' 
+((
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMultIDAccess().getLeftSquareBracketKeyword_1_0()); 
+        $current = forceCreateModelElement(
+            grammarAccess.getMultIDAccess().getMultIDAction_0(),
+            $current);
     }
-(    this_ID_2=RULE_ID    {
-		$current.merge(this_ID_2);
-    }
+)((
+(
+		lv_mi_1_0=RULE_ID
+		{
+			newLeafNode(lv_mi_1_0, grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultIDRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"mi",
+        		lv_mi_1_0, 
+        		"ID");
+	    }
 
-    { 
-    newLeafNode(this_ID_2, grammarAccess.getMultIDAccess().getIDTerminalRuleCall_1_1()); 
-    }
-)*
-	kw=']' 
+)
+)
+    |(	otherlv_2='[' 
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMultIDAccess().getRightSquareBracketKeyword_1_2()); 
+    	newLeafNode(otherlv_2, grammarAccess.getMultIDAccess().getLeftSquareBracketKeyword_1_1_0());
     }
-))
-    ;
+(
+(
+		lv_mi_3_0=RULE_ID
+		{
+			newLeafNode(lv_mi_3_0, grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultIDRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"mi",
+        		lv_mi_3_0, 
+        		"ID");
+	    }
+
+)
+)*	otherlv_4=']' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMultIDAccess().getRightSquareBracketKeyword_1_1_2());
+    }
+)))
+;
 
 
 
 
 
 // Entry rule entryRuleMultString
-entryRuleMultString returns [String current=null] 
+entryRuleMultString returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getMultStringRule()); } 
+	{ newCompositeNode(grammarAccess.getMultStringRule()); }
 	 iv_ruleMultString=ruleMultString 
-	 { $current=$iv_ruleMultString.current.getText(); }  
+	 { $current=$iv_ruleMultString.current; } 
 	 EOF 
 ;
 
 // Rule MultString
-ruleMultString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+ruleMultString returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_STRING_0=RULE_STRING    {
-		$current.merge(this_STRING_0);
-    }
-
-    { 
-    newLeafNode(this_STRING_0, grammarAccess.getMultStringAccess().getSTRINGTerminalRuleCall_0()); 
-    }
-
-    |(
-	kw='[' 
+((
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_0()); 
+        $current = forceCreateModelElement(
+            grammarAccess.getMultStringAccess().getMultStringAction_0(),
+            $current);
     }
-(    this_STRING_2=RULE_STRING    {
-		$current.merge(this_STRING_2);
-    }
+)((
+(
+		lv_ms_1_0=RULE_STRING
+		{
+			newLeafNode(lv_ms_1_0, grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultStringRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"ms",
+        		lv_ms_1_0, 
+        		"STRING");
+	    }
 
-    { 
-    newLeafNode(this_STRING_2, grammarAccess.getMultStringAccess().getSTRINGTerminalRuleCall_1_1()); 
-    }
-)*
-	kw=']' 
+)
+)
+    |(	otherlv_2='[' 
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_2()); 
+    	newLeafNode(otherlv_2, grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_1_0());
     }
-))
-    ;
+(
+(
+		lv_ms_3_0=RULE_STRING
+		{
+			newLeafNode(lv_ms_3_0, grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultStringRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"ms",
+        		lv_ms_3_0, 
+        		"STRING");
+	    }
+
+)
+)*	otherlv_4=']' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_2());
+    }
+)))
+;
 
 
 

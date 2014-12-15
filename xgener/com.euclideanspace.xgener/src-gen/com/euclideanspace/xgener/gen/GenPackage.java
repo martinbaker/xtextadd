@@ -140,7 +140,7 @@ public interface GenPackage extends EPackage
   int CLASS_TYPE__NOCLASS = 1;
 
   /**
-   * The feature id for the '<em><b>Prefix</b></em>' attribute list.
+   * The feature id for the '<em><b>Prefix</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -149,7 +149,7 @@ public interface GenPackage extends EPackage
   int CLASS_TYPE__PREFIX = 2;
 
   /**
-   * The feature id for the '<em><b>Suffix</b></em>' attribute list.
+   * The feature id for the '<em><b>Suffix</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -195,7 +195,7 @@ public interface GenPackage extends EPackage
   int PROCEDURE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Prefix</b></em>' attribute list.
+   * The feature id for the '<em><b>Prefix</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -204,7 +204,7 @@ public interface GenPackage extends EPackage
   int PROCEDURE__PREFIX = 1;
 
   /**
-   * The feature id for the '<em><b>Suffix</b></em>' attribute list.
+   * The feature id for the '<em><b>Suffix</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -387,7 +387,7 @@ public interface GenPackage extends EPackage
   int PRECIDENCE__RULE = 0;
 
   /**
-   * The feature id for the '<em><b>Prefix</b></em>' attribute.
+   * The feature id for the '<em><b>Prefix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -405,7 +405,7 @@ public interface GenPackage extends EPackage
   int PRECIDENCE__PAR1 = 2;
 
   /**
-   * The feature id for the '<em><b>Suffix</b></em>' attribute.
+   * The feature id for the '<em><b>Suffix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -414,7 +414,7 @@ public interface GenPackage extends EPackage
   int PRECIDENCE__SUFFIX = 3;
 
   /**
-   * The feature id for the '<em><b>Infix</b></em>' attribute.
+   * The feature id for the '<em><b>Infix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -432,7 +432,7 @@ public interface GenPackage extends EPackage
   int PRECIDENCE__PAR2 = 5;
 
   /**
-   * The feature id for the '<em><b>Infixleft</b></em>' attribute.
+   * The feature id for the '<em><b>Infixleft</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -484,6 +484,62 @@ public interface GenPackage extends EPackage
    * @ordered
    */
   int PRECIDENCE_FEATURE_COUNT = 11;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.MultIDImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultID()
+   * @generated
+   */
+  int MULT_ID = 6;
+
+  /**
+   * The feature id for the '<em><b>Mi</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_ID__MI = 0;
+
+  /**
+   * The number of structural features of the '<em>Mult ID</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_ID_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.MultStringImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
+   * @generated
+   */
+  int MULT_STRING = 7;
+
+  /**
+   * The feature id for the '<em><b>Ms</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING__MS = 0;
+
+  /**
+   * The number of structural features of the '<em>Mult String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING_FEATURE_COUNT = 1;
 
 
   /**
@@ -573,26 +629,26 @@ public interface GenPackage extends EPackage
   EAttribute getClassType_Noclass();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.ClassType#getPrefix <em>Prefix</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.ClassType#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Prefix</em>'.
+   * @return the meta object for the containment reference list '<em>Prefix</em>'.
    * @see com.euclideanspace.xgener.gen.ClassType#getPrefix()
    * @see #getClassType()
    * @generated
    */
-  EAttribute getClassType_Prefix();
+  EReference getClassType_Prefix();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.ClassType#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.ClassType#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Suffix</em>'.
+   * @return the meta object for the containment reference list '<em>Suffix</em>'.
    * @see com.euclideanspace.xgener.gen.ClassType#getSuffix()
    * @see #getClassType()
    * @generated
    */
-  EAttribute getClassType_Suffix();
+  EReference getClassType_Suffix();
 
   /**
    * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.ClassType#getBlocking <em>Blocking</em>}'.
@@ -627,26 +683,26 @@ public interface GenPackage extends EPackage
   EAttribute getProcedure_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getPrefix <em>Prefix</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Procedure#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Prefix</em>'.
+   * @return the meta object for the containment reference list '<em>Prefix</em>'.
    * @see com.euclideanspace.xgener.gen.Procedure#getPrefix()
    * @see #getProcedure()
    * @generated
    */
-  EAttribute getProcedure_Prefix();
+  EReference getProcedure_Prefix();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Procedure#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Suffix</em>'.
+   * @return the meta object for the containment reference list '<em>Suffix</em>'.
    * @see com.euclideanspace.xgener.gen.Procedure#getSuffix()
    * @see #getProcedure()
    * @generated
    */
-  EAttribute getProcedure_Suffix();
+  EReference getProcedure_Suffix();
 
   /**
    * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getTypes <em>Types</em>}'.
@@ -822,15 +878,15 @@ public interface GenPackage extends EPackage
   EAttribute getPrecidence_Rule();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Prefix</em>'.
+   * @return the meta object for the containment reference '<em>Prefix</em>'.
    * @see com.euclideanspace.xgener.gen.Precidence#getPrefix()
    * @see #getPrecidence()
    * @generated
    */
-  EAttribute getPrecidence_Prefix();
+  EReference getPrecidence_Prefix();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar1 <em>Par1</em>}'.
@@ -844,26 +900,26 @@ public interface GenPackage extends EPackage
   EAttribute getPrecidence_Par1();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Suffix</em>'.
+   * @return the meta object for the containment reference '<em>Suffix</em>'.
    * @see com.euclideanspace.xgener.gen.Precidence#getSuffix()
    * @see #getPrecidence()
    * @generated
    */
-  EAttribute getPrecidence_Suffix();
+  EReference getPrecidence_Suffix();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Infix</em>'.
+   * @return the meta object for the containment reference '<em>Infix</em>'.
    * @see com.euclideanspace.xgener.gen.Precidence#getInfix()
    * @see #getPrecidence()
    * @generated
    */
-  EAttribute getPrecidence_Infix();
+  EReference getPrecidence_Infix();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getPar2 <em>Par2</em>}'.
@@ -877,15 +933,15 @@ public interface GenPackage extends EPackage
   EAttribute getPrecidence_Par2();
 
   /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}'.
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Infixleft</em>'.
+   * @return the meta object for the containment reference '<em>Infixleft</em>'.
    * @see com.euclideanspace.xgener.gen.Precidence#getInfixleft()
    * @see #getPrecidence()
    * @generated
    */
-  EAttribute getPrecidence_Infixleft();
+  EReference getPrecidence_Infixleft();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precidence#getLiteral <em>Literal</em>}'.
@@ -930,6 +986,48 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getPrecidence_Parenthesis();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultID <em>Mult ID</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mult ID</em>'.
+   * @see com.euclideanspace.xgener.gen.MultID
+   * @generated
+   */
+  EClass getMultID();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.MultID#getMi <em>Mi</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Mi</em>'.
+   * @see com.euclideanspace.xgener.gen.MultID#getMi()
+   * @see #getMultID()
+   * @generated
+   */
+  EAttribute getMultID_Mi();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultString <em>Mult String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mult String</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString
+   * @generated
+   */
+  EClass getMultString();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Ms</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString#getMs()
+   * @see #getMultString()
+   * @generated
+   */
+  EAttribute getMultString_Ms();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1023,20 +1121,20 @@ public interface GenPackage extends EPackage
     EAttribute CLASS_TYPE__NOCLASS = eINSTANCE.getClassType_Noclass();
 
     /**
-     * The meta object literal for the '<em><b>Prefix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Prefix</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLASS_TYPE__PREFIX = eINSTANCE.getClassType_Prefix();
+    EReference CLASS_TYPE__PREFIX = eINSTANCE.getClassType_Prefix();
 
     /**
-     * The meta object literal for the '<em><b>Suffix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Suffix</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLASS_TYPE__SUFFIX = eINSTANCE.getClassType_Suffix();
+    EReference CLASS_TYPE__SUFFIX = eINSTANCE.getClassType_Suffix();
 
     /**
      * The meta object literal for the '<em><b>Blocking</b></em>' attribute list feature.
@@ -1065,20 +1163,20 @@ public interface GenPackage extends EPackage
     EAttribute PROCEDURE__NAME = eINSTANCE.getProcedure_Name();
 
     /**
-     * The meta object literal for the '<em><b>Prefix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Prefix</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROCEDURE__PREFIX = eINSTANCE.getProcedure_Prefix();
+    EReference PROCEDURE__PREFIX = eINSTANCE.getProcedure_Prefix();
 
     /**
-     * The meta object literal for the '<em><b>Suffix</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Suffix</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROCEDURE__SUFFIX = eINSTANCE.getProcedure_Suffix();
+    EReference PROCEDURE__SUFFIX = eINSTANCE.getProcedure_Suffix();
 
     /**
      * The meta object literal for the '<em><b>Types</b></em>' attribute list feature.
@@ -1215,12 +1313,12 @@ public interface GenPackage extends EPackage
     EAttribute PRECIDENCE__RULE = eINSTANCE.getPrecidence_Rule();
 
     /**
-     * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__PREFIX = eINSTANCE.getPrecidence_Prefix();
+    EReference PRECIDENCE__PREFIX = eINSTANCE.getPrecidence_Prefix();
 
     /**
      * The meta object literal for the '<em><b>Par1</b></em>' attribute feature.
@@ -1231,20 +1329,20 @@ public interface GenPackage extends EPackage
     EAttribute PRECIDENCE__PAR1 = eINSTANCE.getPrecidence_Par1();
 
     /**
-     * The meta object literal for the '<em><b>Suffix</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Suffix</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__SUFFIX = eINSTANCE.getPrecidence_Suffix();
+    EReference PRECIDENCE__SUFFIX = eINSTANCE.getPrecidence_Suffix();
 
     /**
-     * The meta object literal for the '<em><b>Infix</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Infix</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__INFIX = eINSTANCE.getPrecidence_Infix();
+    EReference PRECIDENCE__INFIX = eINSTANCE.getPrecidence_Infix();
 
     /**
      * The meta object literal for the '<em><b>Par2</b></em>' attribute feature.
@@ -1255,12 +1353,12 @@ public interface GenPackage extends EPackage
     EAttribute PRECIDENCE__PAR2 = eINSTANCE.getPrecidence_Par2();
 
     /**
-     * The meta object literal for the '<em><b>Infixleft</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Infixleft</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PRECIDENCE__INFIXLEFT = eINSTANCE.getPrecidence_Infixleft();
+    EReference PRECIDENCE__INFIXLEFT = eINSTANCE.getPrecidence_Infixleft();
 
     /**
      * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
@@ -1293,6 +1391,42 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute PRECIDENCE__PARENTHESIS = eINSTANCE.getPrecidence_Parenthesis();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.MultIDImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultID()
+     * @generated
+     */
+    EClass MULT_ID = eINSTANCE.getMultID();
+
+    /**
+     * The meta object literal for the '<em><b>Mi</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULT_ID__MI = eINSTANCE.getMultID_Mi();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.MultStringImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
+     * @generated
+     */
+    EClass MULT_STRING = eINSTANCE.getMultString();
+
+    /**
+     * The meta object literal for the '<em><b>Ms</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
 
   }
 

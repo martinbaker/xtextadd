@@ -475,8 +475,24 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 /* Precidence */
 def CharSequence compile(com.euclideanspace.xgener.gen.Precidence p) '''
   «p.rule» returns XExpression hidden(SL_COMMENT,WS):
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«IF p.infix != null»«p.infix»«ENDIF»)
+    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«IF p.infix != null»«compile(p.infix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
   ;
+'''
+
+def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''
+  «var int i=1»«IF m.ms == null»«
+    ELSEIF m.ms.length==1»'«m.ms.get(0)»'«
+  ELSE
+    »(«FOR x:m.ms»'«x»'«IF m.ms.length>i++»|«ENDIF»«ENDFOR»)«
+  ENDIF»
+'''
+
+def CharSequence compile(com.euclideanspace.xgener.gen.MultID m) '''
+  «var int i=1»«IF m.mi == null»«
+    ELSEIF m.mi.length==1»«m.mi.get(0)»«
+  ELSE
+    »(«FOR x:m.mi»'«x»'«IF m.mi.length>i++»|«ENDIF»«ENDFOR»)«
+  ENDIF»
 '''
 }

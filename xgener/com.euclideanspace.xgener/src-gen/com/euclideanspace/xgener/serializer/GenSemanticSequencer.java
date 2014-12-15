@@ -4,6 +4,8 @@ import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.Model;
+import com.euclideanspace.xgener.gen.MultID;
+import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.Precidence;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Statement;
@@ -42,6 +44,18 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GenPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.MULT_ID:
+				if(context == grammarAccess.getMultIDRule()) {
+					sequence_MultID(context, (MultID) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.MULT_STRING:
+				if(context == grammarAccess.getMultStringRule()) {
+					sequence_MultString(context, (MultString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -90,6 +104,24 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (clas+=ClassType | proc+=Procedure | statem+=Statement | exp+=Expression)*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (mi+=ID | mi+=ID*)
+	 */
+	protected void sequence_MultID(EObject context, MultID semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (ms+=STRING | ms+=STRING*)
+	 */
+	protected void sequence_MultString(EObject context, MultString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

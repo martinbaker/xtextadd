@@ -728,66 +728,98 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class MultIDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultID");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cMultIDAction_0 = (Action)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cMiAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cMiIDTerminalRuleCall_1_0_0 = (RuleCall)cMiAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cMiAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cMiIDTerminalRuleCall_1_1_1_0 = (RuleCall)cMiAssignment_1_1_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
 		
 		//MultID:
-		//	ID | "[" ID* "]";
+		//	{MultID} (mi+=ID | "[" mi+=ID* "]");
 		public ParserRule getRule() { return rule; }
 
-		//ID | "[" ID* "]"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//{MultID} (mi+=ID | "[" mi+=ID* "]")
+		public Group getGroup() { return cGroup; }
+
+		//{MultID}
+		public Action getMultIDAction_0() { return cMultIDAction_0; }
+
+		//mi+=ID | "[" mi+=ID* "]"
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+
+		//mi+=ID
+		public Assignment getMiAssignment_1_0() { return cMiAssignment_1_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		public RuleCall getMiIDTerminalRuleCall_1_0_0() { return cMiIDTerminalRuleCall_1_0_0; }
 
-		//"[" ID* "]"
-		public Group getGroup_1() { return cGroup_1; }
+		//"[" mi+=ID* "]"
+		public Group getGroup_1_1() { return cGroup_1_1; }
 
 		//"["
-		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
+		public Keyword getLeftSquareBracketKeyword_1_1_0() { return cLeftSquareBracketKeyword_1_1_0; }
 
-		//ID*
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		//mi+=ID*
+		public Assignment getMiAssignment_1_1_1() { return cMiAssignment_1_1_1; }
+
+		//ID
+		public RuleCall getMiIDTerminalRuleCall_1_1_1_0() { return cMiIDTerminalRuleCall_1_1_1_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
+		public Keyword getRightSquareBracketKeyword_1_1_2() { return cRightSquareBracketKeyword_1_1_2; }
 	}
 
 	public class MultStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cMultStringAction_0 = (Action)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cMsAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cMsSTRINGTerminalRuleCall_1_0_0 = (RuleCall)cMsAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cMsAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cMsSTRINGTerminalRuleCall_1_1_1_0 = (RuleCall)cMsAssignment_1_1_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
 		
 		//MultString:
-		//	STRING | "[" STRING* "]";
+		//	{MultString} (ms+=STRING | "[" ms+=STRING* "]");
 		public ParserRule getRule() { return rule; }
 
-		//STRING | "[" STRING* "]"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//{MultString} (ms+=STRING | "[" ms+=STRING* "]")
+		public Group getGroup() { return cGroup; }
+
+		//{MultString}
+		public Action getMultStringAction_0() { return cMultStringAction_0; }
+
+		//ms+=STRING | "[" ms+=STRING* "]"
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+
+		//ms+=STRING
+		public Assignment getMsAssignment_1_0() { return cMsAssignment_1_0; }
 
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
+		public RuleCall getMsSTRINGTerminalRuleCall_1_0_0() { return cMsSTRINGTerminalRuleCall_1_0_0; }
 
-		//"[" STRING* "]"
-		public Group getGroup_1() { return cGroup_1; }
+		//"[" ms+=STRING* "]"
+		public Group getGroup_1_1() { return cGroup_1_1; }
 
 		//"["
-		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
+		public Keyword getLeftSquareBracketKeyword_1_1_0() { return cLeftSquareBracketKeyword_1_1_0; }
 
-		//STRING*
-		public RuleCall getSTRINGTerminalRuleCall_1_1() { return cSTRINGTerminalRuleCall_1_1; }
+		//ms+=STRING*
+		public Assignment getMsAssignment_1_1_1() { return cMsAssignment_1_1_1; }
+
+		//STRING
+		public RuleCall getMsSTRINGTerminalRuleCall_1_1_1_0() { return cMsSTRINGTerminalRuleCall_1_1_1_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
+		public Keyword getRightSquareBracketKeyword_1_1_2() { return cRightSquareBracketKeyword_1_1_2; }
 	}
 	
 	
@@ -915,7 +947,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultID:
-	//	ID | "[" ID* "]";
+	//	{MultID} (mi+=ID | "[" mi+=ID* "]");
 	public MultIDElements getMultIDAccess() {
 		return pMultID;
 	}
@@ -925,7 +957,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultString:
-	//	STRING | "[" STRING* "]";
+	//	{MultString} (ms+=STRING | "[" ms+=STRING* "]");
 	public MultStringElements getMultStringAccess() {
 		return pMultString;
 	}

@@ -105,6 +105,16 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createPrecidenceAdapter();
       }
       @Override
+      public Adapter caseMultID(MultID object)
+      {
+        return createMultIDAdapter();
+      }
+      @Override
+      public Adapter caseMultString(MultString object)
+      {
+        return createMultStringAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -212,6 +222,36 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPrecidenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.MultID <em>Mult ID</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.MultID
+   * @generated
+   */
+  public Adapter createMultIDAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.MultString <em>Mult String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.MultString
+   * @generated
+   */
+  public Adapter createMultStringAdapter()
   {
     return null;
   }

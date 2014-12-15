@@ -70,6 +70,8 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
       case GenPackage.STATEMENT: return createStatement();
       case GenPackage.EXPRESSION: return createExpression();
       case GenPackage.PRECIDENCE: return createPrecidence();
+      case GenPackage.MULT_ID: return createMultID();
+      case GenPackage.MULT_STRING: return createMultString();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -139,6 +141,28 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     PrecidenceImpl precidence = new PrecidenceImpl();
     return precidence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultID createMultID()
+  {
+    MultIDImpl multID = new MultIDImpl();
+    return multID;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultString createMultString()
+  {
+    MultStringImpl multString = new MultStringImpl();
+    return multString;
   }
 
   /**

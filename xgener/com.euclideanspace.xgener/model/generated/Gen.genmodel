@@ -16,14 +16,14 @@
     <genClasses ecoreClass="Gen.ecore#//ClassType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/noclass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/prefix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/suffix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//ClassType/prefix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//ClassType/suffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/blocking"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Procedure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/prefix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/suffix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/prefix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/suffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/types"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Statement">
@@ -43,16 +43,22 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Precidence">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/rule"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/prefix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precidence/prefix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/par1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/suffix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/infix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precidence/suffix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precidence/infix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/par2"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/infixleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precidence/infixleft"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/literal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/bracket"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precidence/parenthesis"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//MultID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultID/mi"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//MultString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

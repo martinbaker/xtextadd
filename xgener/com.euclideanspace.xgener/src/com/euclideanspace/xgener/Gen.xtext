@@ -47,6 +47,6 @@ Precidence:
     | ('parenthesis' rule=ID parenthesis=ID)
 ;
 
-MultID: ID | ('[' ID* ']');
+MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 
-MultString: STRING | ('[' STRING* ']');
+MultString: {MultString} (ms+=STRING | ('[' ms+=STRING* ']'));

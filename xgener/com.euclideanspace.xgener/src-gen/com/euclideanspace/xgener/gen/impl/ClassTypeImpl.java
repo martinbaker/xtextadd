@@ -4,19 +4,24 @@ package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.GenPackage;
+import com.euclideanspace.xgener.gen.MultID;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,24 +73,24 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
   protected EList<String> noclass;
 
   /**
-   * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute list.
+   * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPrefix()
    * @generated
    * @ordered
    */
-  protected EList<String> prefix;
+  protected EList<MultID> prefix;
 
   /**
-   * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' attribute list.
+   * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSuffix()
    * @generated
    * @ordered
    */
-  protected EList<String> suffix;
+  protected EList<MultID> suffix;
 
   /**
    * The cached value of the '{@link #getBlocking() <em>Blocking</em>}' attribute list.
@@ -160,11 +165,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getPrefix()
+  public EList<MultID> getPrefix()
   {
     if (prefix == null)
     {
-      prefix = new EDataTypeEList<String>(String.class, this, GenPackage.CLASS_TYPE__PREFIX);
+      prefix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.CLASS_TYPE__PREFIX);
     }
     return prefix;
   }
@@ -174,11 +179,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getSuffix()
+  public EList<MultID> getSuffix()
   {
     if (suffix == null)
     {
-      suffix = new EDataTypeEList<String>(String.class, this, GenPackage.CLASS_TYPE__SUFFIX);
+      suffix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.CLASS_TYPE__SUFFIX);
     }
     return suffix;
   }
@@ -195,6 +200,24 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
       blocking = new EDataTypeEList<String>(String.class, this, GenPackage.CLASS_TYPE__BLOCKING);
     }
     return blocking;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GenPackage.CLASS_TYPE__PREFIX:
+        return ((InternalEList<?>)getPrefix()).basicRemove(otherEnd, msgs);
+      case GenPackage.CLASS_TYPE__SUFFIX:
+        return ((InternalEList<?>)getSuffix()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -241,11 +264,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
         return;
       case GenPackage.CLASS_TYPE__PREFIX:
         getPrefix().clear();
-        getPrefix().addAll((Collection<? extends String>)newValue);
+        getPrefix().addAll((Collection<? extends MultID>)newValue);
         return;
       case GenPackage.CLASS_TYPE__SUFFIX:
         getSuffix().clear();
-        getSuffix().addAll((Collection<? extends String>)newValue);
+        getSuffix().addAll((Collection<? extends MultID>)newValue);
         return;
       case GenPackage.CLASS_TYPE__BLOCKING:
         getBlocking().clear();
@@ -323,10 +346,6 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
     result.append(name);
     result.append(", noclass: ");
     result.append(noclass);
-    result.append(", prefix: ");
-    result.append(prefix);
-    result.append(", suffix: ");
-    result.append(suffix);
     result.append(", blocking: ");
     result.append(blocking);
     result.append(')');

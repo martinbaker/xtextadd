@@ -77,6 +77,24 @@ public interface GenFactory extends EFactory
   Precidence createPrecidence();
 
   /**
+   * Returns a new object of class '<em>Mult ID</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mult ID</em>'.
+   * @generated
+   */
+  MultID createMultID();
+
+  /**
+   * Returns a new object of class '<em>Mult String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mult String</em>'.
+   * @generated
+   */
+  MultString createMultString();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

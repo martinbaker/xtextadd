@@ -59,30 +59,30 @@ public interface Precidence extends EObject
   void setRule(String value);
 
   /**
-   * Returns the value of the '<em><b>Prefix</b></em>' attribute.
+   * Returns the value of the '<em><b>Prefix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Prefix</em>' attribute isn't clear,
+   * If the meaning of the '<em>Prefix</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Prefix</em>' attribute.
-   * @see #setPrefix(String)
+   * @return the value of the '<em>Prefix</em>' containment reference.
+   * @see #setPrefix(MultString)
    * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Prefix()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getPrefix();
+  MultString getPrefix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getPrefix <em>Prefix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Prefix</em>' attribute.
+   * @param value the new value of the '<em>Prefix</em>' containment reference.
    * @see #getPrefix()
    * @generated
    */
-  void setPrefix(String value);
+  void setPrefix(MultString value);
 
   /**
    * Returns the value of the '<em><b>Par1</b></em>' attribute.
@@ -111,56 +111,56 @@ public interface Precidence extends EObject
   void setPar1(String value);
 
   /**
-   * Returns the value of the '<em><b>Suffix</b></em>' attribute.
+   * Returns the value of the '<em><b>Suffix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Suffix</em>' attribute isn't clear,
+   * If the meaning of the '<em>Suffix</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Suffix</em>' attribute.
-   * @see #setSuffix(String)
+   * @return the value of the '<em>Suffix</em>' containment reference.
+   * @see #setSuffix(MultString)
    * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Suffix()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getSuffix();
+  MultString getSuffix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getSuffix <em>Suffix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Suffix</em>' attribute.
+   * @param value the new value of the '<em>Suffix</em>' containment reference.
    * @see #getSuffix()
    * @generated
    */
-  void setSuffix(String value);
+  void setSuffix(MultString value);
 
   /**
-   * Returns the value of the '<em><b>Infix</b></em>' attribute.
+   * Returns the value of the '<em><b>Infix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Infix</em>' attribute isn't clear,
+   * If the meaning of the '<em>Infix</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Infix</em>' attribute.
-   * @see #setInfix(String)
+   * @return the value of the '<em>Infix</em>' containment reference.
+   * @see #setInfix(MultString)
    * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Infix()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getInfix();
+  MultString getInfix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfix <em>Infix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Infix</em>' attribute.
+   * @param value the new value of the '<em>Infix</em>' containment reference.
    * @see #getInfix()
    * @generated
    */
-  void setInfix(String value);
+  void setInfix(MultString value);
 
   /**
    * Returns the value of the '<em><b>Par2</b></em>' attribute.
@@ -189,30 +189,30 @@ public interface Precidence extends EObject
   void setPar2(String value);
 
   /**
-   * Returns the value of the '<em><b>Infixleft</b></em>' attribute.
+   * Returns the value of the '<em><b>Infixleft</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Infixleft</em>' attribute isn't clear,
+   * If the meaning of the '<em>Infixleft</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Infixleft</em>' attribute.
-   * @see #setInfixleft(String)
+   * @return the value of the '<em>Infixleft</em>' containment reference.
+   * @see #setInfixleft(MultString)
    * @see com.euclideanspace.xgener.gen.GenPackage#getPrecidence_Infixleft()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getInfixleft();
+  MultString getInfixleft();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precidence#getInfixleft <em>Infixleft</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Infixleft</em>' attribute.
+   * @param value the new value of the '<em>Infixleft</em>' containment reference.
    * @see #getInfixleft()
    * @generated
    */
-  void setInfixleft(String value);
+  void setInfixleft(MultString value);
 
   /**
    * Returns the value of the '<em><b>Literal</b></em>' attribute.

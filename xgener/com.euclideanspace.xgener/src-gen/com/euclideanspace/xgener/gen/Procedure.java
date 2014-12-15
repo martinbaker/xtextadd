@@ -54,36 +54,36 @@ public interface Procedure extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Prefix</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Prefix</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultID}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Prefix</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Prefix</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Prefix</em>' attribute list.
+   * @return the value of the '<em>Prefix</em>' containment reference list.
    * @see com.euclideanspace.xgener.gen.GenPackage#getProcedure_Prefix()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getPrefix();
+  EList<MultID> getPrefix();
 
   /**
-   * Returns the value of the '<em><b>Suffix</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Suffix</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultID}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Suffix</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Suffix</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Suffix</em>' attribute list.
+   * @return the value of the '<em>Suffix</em>' containment reference list.
    * @see com.euclideanspace.xgener.gen.GenPackage#getProcedure_Suffix()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getSuffix();
+  EList<MultID> getSuffix();
 
   /**
    * Returns the value of the '<em><b>Types</b></em>' attribute list.

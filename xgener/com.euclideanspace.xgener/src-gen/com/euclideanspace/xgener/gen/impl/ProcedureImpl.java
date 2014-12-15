@@ -3,20 +3,25 @@
 package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
+import com.euclideanspace.xgener.gen.MultID;
 import com.euclideanspace.xgener.gen.Procedure;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,24 +62,24 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute list.
+   * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPrefix()
    * @generated
    * @ordered
    */
-  protected EList<String> prefix;
+  protected EList<MultID> prefix;
 
   /**
-   * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' attribute list.
+   * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSuffix()
    * @generated
    * @ordered
    */
-  protected EList<String> suffix;
+  protected EList<MultID> suffix;
 
   /**
    * The cached value of the '{@link #getTypes() <em>Types</em>}' attribute list.
@@ -135,11 +140,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getPrefix()
+  public EList<MultID> getPrefix()
   {
     if (prefix == null)
     {
-      prefix = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__PREFIX);
+      prefix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.PROCEDURE__PREFIX);
     }
     return prefix;
   }
@@ -149,11 +154,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getSuffix()
+  public EList<MultID> getSuffix()
   {
     if (suffix == null)
     {
-      suffix = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__SUFFIX);
+      suffix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.PROCEDURE__SUFFIX);
     }
     return suffix;
   }
@@ -170,6 +175,24 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
       types = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__TYPES);
     }
     return types;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GenPackage.PROCEDURE__PREFIX:
+        return ((InternalEList<?>)getPrefix()).basicRemove(otherEnd, msgs);
+      case GenPackage.PROCEDURE__SUFFIX:
+        return ((InternalEList<?>)getSuffix()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -210,11 +233,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
         return;
       case GenPackage.PROCEDURE__PREFIX:
         getPrefix().clear();
-        getPrefix().addAll((Collection<? extends String>)newValue);
+        getPrefix().addAll((Collection<? extends MultID>)newValue);
         return;
       case GenPackage.PROCEDURE__SUFFIX:
         getSuffix().clear();
-        getSuffix().addAll((Collection<? extends String>)newValue);
+        getSuffix().addAll((Collection<? extends MultID>)newValue);
         return;
       case GenPackage.PROCEDURE__TYPES:
         getTypes().clear();
@@ -285,10 +308,6 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", prefix: ");
-    result.append(prefix);
-    result.append(", suffix: ");
-    result.append(suffix);
     result.append(", types: ");
     result.append(types);
     result.append(')');

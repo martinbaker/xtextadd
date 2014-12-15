@@ -45,8 +45,8 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatementAccess().getAlternatives_2(), "rule__Statement__Alternatives_2");
 					put(grammarAccess.getPrecidenceAccess().getAlternatives(), "rule__Precidence__Alternatives");
 					put(grammarAccess.getPrecidenceAccess().getLiteralAlternatives_4_2_0(), "rule__Precidence__LiteralAlternatives_4_2_0");
-					put(grammarAccess.getMultIDAccess().getAlternatives(), "rule__MultID__Alternatives");
-					put(grammarAccess.getMultStringAccess().getAlternatives(), "rule__MultString__Alternatives");
+					put(grammarAccess.getMultIDAccess().getAlternatives_1(), "rule__MultID__Alternatives_1");
+					put(grammarAccess.getMultStringAccess().getAlternatives_1(), "rule__MultString__Alternatives_1");
 					put(grammarAccess.getClassTypeAccess().getGroup(), "rule__ClassType__Group__0");
 					put(grammarAccess.getClassTypeAccess().getGroup_2_1(), "rule__ClassType__Group_2_1__0");
 					put(grammarAccess.getClassTypeAccess().getGroup_2_2(), "rule__ClassType__Group_2_2__0");
@@ -71,8 +71,10 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrecidenceAccess().getGroup_5(), "rule__Precidence__Group_5__0");
 					put(grammarAccess.getPrecidenceAccess().getGroup_6(), "rule__Precidence__Group_6__0");
 					put(grammarAccess.getPrecidenceAccess().getGroup_7(), "rule__Precidence__Group_7__0");
-					put(grammarAccess.getMultIDAccess().getGroup_1(), "rule__MultID__Group_1__0");
-					put(grammarAccess.getMultStringAccess().getGroup_1(), "rule__MultString__Group_1__0");
+					put(grammarAccess.getMultIDAccess().getGroup(), "rule__MultID__Group__0");
+					put(grammarAccess.getMultIDAccess().getGroup_1_1(), "rule__MultID__Group_1_1__0");
+					put(grammarAccess.getMultStringAccess().getGroup(), "rule__MultString__Group__0");
+					put(grammarAccess.getMultStringAccess().getGroup_1_1(), "rule__MultString__Group_1_1__0");
 					put(grammarAccess.getModelAccess().getClasAssignment_0(), "rule__Model__ClasAssignment_0");
 					put(grammarAccess.getModelAccess().getProcAssignment_1(), "rule__Model__ProcAssignment_1");
 					put(grammarAccess.getModelAccess().getStatemAssignment_2(), "rule__Model__StatemAssignment_2");
@@ -120,6 +122,10 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrecidenceAccess().getBracesAssignment_6_2(), "rule__Precidence__BracesAssignment_6_2");
 					put(grammarAccess.getPrecidenceAccess().getRuleAssignment_7_1(), "rule__Precidence__RuleAssignment_7_1");
 					put(grammarAccess.getPrecidenceAccess().getParenthesisAssignment_7_2(), "rule__Precidence__ParenthesisAssignment_7_2");
+					put(grammarAccess.getMultIDAccess().getMiAssignment_1_0(), "rule__MultID__MiAssignment_1_0");
+					put(grammarAccess.getMultIDAccess().getMiAssignment_1_1_1(), "rule__MultID__MiAssignment_1_1_1");
+					put(grammarAccess.getMultStringAccess().getMsAssignment_1_0(), "rule__MultString__MsAssignment_1_0");
+					put(grammarAccess.getMultStringAccess().getMsAssignment_1_1_1(), "rule__MultString__MsAssignment_1_1_1");
 				}
 			};
 		}
