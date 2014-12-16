@@ -14,10 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRuletyp <em>Ruletyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getFeature1 <em>Feature1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar1 <em>Par1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getSuffix <em>Suffix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}</li>
@@ -84,6 +86,32 @@ public interface Precedence extends EObject
    * @generated
    */
   void setRule(String value);
+
+  /**
+   * Returns the value of the '<em><b>Feature1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Feature1</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Feature1</em>' attribute.
+   * @see #setFeature1(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Feature1()
+   * @model
+   * @generated
+   */
+  String getFeature1();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getFeature1 <em>Feature1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Feature1</em>' attribute.
+   * @see #getFeature1()
+   * @generated
+   */
+  void setFeature1(String value);
 
   /**
    * Returns the value of the '<em><b>Prefix</b></em>' containment reference.
@@ -188,6 +216,32 @@ public interface Precedence extends EObject
    * @generated
    */
   void setInfix(MultString value);
+
+  /**
+   * Returns the value of the '<em><b>Feature2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Feature2</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Feature2</em>' attribute.
+   * @see #setFeature2(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Feature2()
+   * @model
+   * @generated
+   */
+  String getFeature2();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getFeature2 <em>Feature2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Feature2</em>' attribute.
+   * @see #getFeature2()
+   * @generated
+   */
+  void setFeature2(String value);
 
   /**
    * Returns the value of the '<em><b>Par2</b></em>' attribute.

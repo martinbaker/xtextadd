@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGenParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'braces'", "'indent'", "'colonSeperated'", "'spaceSeperated'", "'inHeader'", "'inferred'", "'untyped'", "'int'", "'string'", "'bool'", "'float'", "'class'", "'prefix'", "'suffix'", "'blocking'", "'procedure'", "'types'", "'statement'", "'repeat'", "'until'", "'while'", "'do'", "'for'", "'var'", "'='", "'val'", "'expression'", "'['", "']'", "'noclass'", "'caller'", "'infix'", "'infixleft'", "'literal'", "'bracket'", "'parenthesis'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'BRACES'", "'INDENT'", "'COLONSEPERATED'", "'SPACESEPERATED'", "'INHEADER'", "'INFERRED'", "'UNTYPED'", "'INT'", "'STRING'", "'BOOL'", "'FLOAT'", "'CLASS'", "'PREFIX'", "'SUFFIX'", "'BLOCKING'", "'PROCEDURE'", "'TYPES'", "'STATEMENT'", "'REPEAT'", "'UNTIL'", "'WHILE'", "'DO'", "'FOR'", "'VAR'", "'='", "'VAL'", "'EXPRESSION'", "'.'", "'['", "']'", "'NOCLASS'", "'CALLER'", "'INFIX'", "'INFIXADD'", "'INFIXLEFT'", "'LITERAL'", "'BRACKET'", "'PARENTHESIS'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -61,9 +61,11 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     public static final int T__32=32;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__48=48;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
@@ -905,7 +907,7 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:322:1: ( ( ( rule__ClassType__NoclassAssignment_2_0 ) ) | ( ( rule__ClassType__Group_2_1__0 ) ) | ( ( rule__ClassType__Group_2_2__0 ) ) | ( ( rule__ClassType__Group_2_3__0 ) ) )
             int alt3=4;
             switch ( input.LA(1) ) {
-            case 40:
+            case 41:
                 {
                 alt3=1;
                 }
@@ -1051,13 +1053,13 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__BlockingAlternatives_2_3_1_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:352:1: rule__ClassType__BlockingAlternatives_2_3_1_0 : ( ( 'braces' ) | ( 'indent' ) );
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:352:1: rule__ClassType__BlockingAlternatives_2_3_1_0 : ( ( 'BRACES' ) | ( 'INDENT' ) );
     public final void rule__ClassType__BlockingAlternatives_2_3_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:356:1: ( ( 'braces' ) | ( 'indent' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:356:1: ( ( 'BRACES' ) | ( 'INDENT' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1075,14 +1077,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:357:1: ( 'braces' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:357:1: ( 'BRACES' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:357:1: ( 'braces' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:358:1: 'braces'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:357:1: ( 'BRACES' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:358:1: 'BRACES'
                     {
-                     before(grammarAccess.getClassTypeAccess().getBlockingBracesKeyword_2_3_1_0_0()); 
+                     before(grammarAccess.getClassTypeAccess().getBlockingBRACESKeyword_2_3_1_0_0()); 
                     match(input,11,FOLLOW_11_in_rule__ClassType__BlockingAlternatives_2_3_1_0726); 
-                     after(grammarAccess.getClassTypeAccess().getBlockingBracesKeyword_2_3_1_0_0()); 
+                     after(grammarAccess.getClassTypeAccess().getBlockingBRACESKeyword_2_3_1_0_0()); 
 
                     }
 
@@ -1090,14 +1092,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:365:6: ( 'indent' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:365:6: ( 'INDENT' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:365:6: ( 'indent' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:366:1: 'indent'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:365:6: ( 'INDENT' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:366:1: 'INDENT'
                     {
-                     before(grammarAccess.getClassTypeAccess().getBlockingIndentKeyword_2_3_1_0_1()); 
+                     before(grammarAccess.getClassTypeAccess().getBlockingINDENTKeyword_2_3_1_0_1()); 
                     match(input,12,FOLLOW_12_in_rule__ClassType__BlockingAlternatives_2_3_1_0746); 
-                     after(grammarAccess.getClassTypeAccess().getBlockingIndentKeyword_2_3_1_0_1()); 
+                     after(grammarAccess.getClassTypeAccess().getBlockingINDENTKeyword_2_3_1_0_1()); 
 
                     }
 
@@ -1247,13 +1249,13 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__TypesAlternatives_2_2_1_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:406:1: rule__Procedure__TypesAlternatives_2_2_1_0 : ( ( 'colonSeperated' ) | ( 'spaceSeperated' ) | ( 'inHeader' ) | ( 'inferred' ) | ( 'untyped' ) );
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:406:1: rule__Procedure__TypesAlternatives_2_2_1_0 : ( ( 'COLONSEPERATED' ) | ( 'SPACESEPERATED' ) | ( 'INHEADER' ) | ( 'INFERRED' ) | ( 'UNTYPED' ) );
     public final void rule__Procedure__TypesAlternatives_2_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:410:1: ( ( 'colonSeperated' ) | ( 'spaceSeperated' ) | ( 'inHeader' ) | ( 'inferred' ) | ( 'untyped' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:410:1: ( ( 'COLONSEPERATED' ) | ( 'SPACESEPERATED' ) | ( 'INHEADER' ) | ( 'INFERRED' ) | ( 'UNTYPED' ) )
             int alt6=5;
             switch ( input.LA(1) ) {
             case 13:
@@ -1290,14 +1292,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
             switch (alt6) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:411:1: ( 'colonSeperated' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:411:1: ( 'COLONSEPERATED' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:411:1: ( 'colonSeperated' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:412:1: 'colonSeperated'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:411:1: ( 'COLONSEPERATED' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:412:1: 'COLONSEPERATED'
                     {
-                     before(grammarAccess.getProcedureAccess().getTypesColonSeperatedKeyword_2_2_1_0_0()); 
+                     before(grammarAccess.getProcedureAccess().getTypesCOLONSEPERATEDKeyword_2_2_1_0_0()); 
                     match(input,13,FOLLOW_13_in_rule__Procedure__TypesAlternatives_2_2_1_0850); 
-                     after(grammarAccess.getProcedureAccess().getTypesColonSeperatedKeyword_2_2_1_0_0()); 
+                     after(grammarAccess.getProcedureAccess().getTypesCOLONSEPERATEDKeyword_2_2_1_0_0()); 
 
                     }
 
@@ -1305,14 +1307,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:419:6: ( 'spaceSeperated' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:419:6: ( 'SPACESEPERATED' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:419:6: ( 'spaceSeperated' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:420:1: 'spaceSeperated'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:419:6: ( 'SPACESEPERATED' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:420:1: 'SPACESEPERATED'
                     {
-                     before(grammarAccess.getProcedureAccess().getTypesSpaceSeperatedKeyword_2_2_1_0_1()); 
+                     before(grammarAccess.getProcedureAccess().getTypesSPACESEPERATEDKeyword_2_2_1_0_1()); 
                     match(input,14,FOLLOW_14_in_rule__Procedure__TypesAlternatives_2_2_1_0870); 
-                     after(grammarAccess.getProcedureAccess().getTypesSpaceSeperatedKeyword_2_2_1_0_1()); 
+                     after(grammarAccess.getProcedureAccess().getTypesSPACESEPERATEDKeyword_2_2_1_0_1()); 
 
                     }
 
@@ -1320,14 +1322,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:427:6: ( 'inHeader' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:427:6: ( 'INHEADER' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:427:6: ( 'inHeader' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:428:1: 'inHeader'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:427:6: ( 'INHEADER' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:428:1: 'INHEADER'
                     {
-                     before(grammarAccess.getProcedureAccess().getTypesInHeaderKeyword_2_2_1_0_2()); 
+                     before(grammarAccess.getProcedureAccess().getTypesINHEADERKeyword_2_2_1_0_2()); 
                     match(input,15,FOLLOW_15_in_rule__Procedure__TypesAlternatives_2_2_1_0890); 
-                     after(grammarAccess.getProcedureAccess().getTypesInHeaderKeyword_2_2_1_0_2()); 
+                     after(grammarAccess.getProcedureAccess().getTypesINHEADERKeyword_2_2_1_0_2()); 
 
                     }
 
@@ -1335,14 +1337,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:435:6: ( 'inferred' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:435:6: ( 'INFERRED' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:435:6: ( 'inferred' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:436:1: 'inferred'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:435:6: ( 'INFERRED' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:436:1: 'INFERRED'
                     {
-                     before(grammarAccess.getProcedureAccess().getTypesInferredKeyword_2_2_1_0_3()); 
+                     before(grammarAccess.getProcedureAccess().getTypesINFERREDKeyword_2_2_1_0_3()); 
                     match(input,16,FOLLOW_16_in_rule__Procedure__TypesAlternatives_2_2_1_0910); 
-                     after(grammarAccess.getProcedureAccess().getTypesInferredKeyword_2_2_1_0_3()); 
+                     after(grammarAccess.getProcedureAccess().getTypesINFERREDKeyword_2_2_1_0_3()); 
 
                     }
 
@@ -1350,14 +1352,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:443:6: ( 'untyped' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:443:6: ( 'UNTYPED' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:443:6: ( 'untyped' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:444:1: 'untyped'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:443:6: ( 'UNTYPED' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:444:1: 'UNTYPED'
                     {
-                     before(grammarAccess.getProcedureAccess().getTypesUntypedKeyword_2_2_1_0_4()); 
+                     before(grammarAccess.getProcedureAccess().getTypesUNTYPEDKeyword_2_2_1_0_4()); 
                     match(input,17,FOLLOW_17_in_rule__Procedure__TypesAlternatives_2_2_1_0930); 
-                     after(grammarAccess.getProcedureAccess().getTypesUntypedKeyword_2_2_1_0_4()); 
+                     after(grammarAccess.getProcedureAccess().getTypesUNTYPEDKeyword_2_2_1_0_4()); 
 
                     }
 
@@ -1567,16 +1569,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Alternatives"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:496:1: rule__Precedence__Alternatives : ( ( ( rule__Precedence__Group_0__0 ) ) | ( ( rule__Precedence__Group_1__0 ) ) | ( ( rule__Precedence__Group_2__0 ) ) | ( ( rule__Precedence__Group_3__0 ) ) | ( ( rule__Precedence__Group_4__0 ) ) | ( ( rule__Precedence__Group_5__0 ) ) | ( ( rule__Precedence__Group_6__0 ) ) | ( ( rule__Precedence__Group_7__0 ) ) | ( ( rule__Precedence__Group_8__0 ) ) );
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:496:1: rule__Precedence__Alternatives : ( ( ( rule__Precedence__Group_0__0 ) ) | ( ( rule__Precedence__Group_1__0 ) ) | ( ( rule__Precedence__Group_2__0 ) ) | ( ( rule__Precedence__Group_3__0 ) ) | ( ( rule__Precedence__Group_4__0 ) ) | ( ( rule__Precedence__Group_5__0 ) ) | ( ( rule__Precedence__Group_6__0 ) ) | ( ( rule__Precedence__Group_7__0 ) ) | ( ( rule__Precedence__Group_8__0 ) ) | ( ( rule__Precedence__Group_9__0 ) ) );
     public final void rule__Precedence__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:500:1: ( ( ( rule__Precedence__Group_0__0 ) ) | ( ( rule__Precedence__Group_1__0 ) ) | ( ( rule__Precedence__Group_2__0 ) ) | ( ( rule__Precedence__Group_3__0 ) ) | ( ( rule__Precedence__Group_4__0 ) ) | ( ( rule__Precedence__Group_5__0 ) ) | ( ( rule__Precedence__Group_6__0 ) ) | ( ( rule__Precedence__Group_7__0 ) ) | ( ( rule__Precedence__Group_8__0 ) ) )
-            int alt8=9;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:500:1: ( ( ( rule__Precedence__Group_0__0 ) ) | ( ( rule__Precedence__Group_1__0 ) ) | ( ( rule__Precedence__Group_2__0 ) ) | ( ( rule__Precedence__Group_3__0 ) ) | ( ( rule__Precedence__Group_4__0 ) ) | ( ( rule__Precedence__Group_5__0 ) ) | ( ( rule__Precedence__Group_6__0 ) ) | ( ( rule__Precedence__Group_7__0 ) ) | ( ( rule__Precedence__Group_8__0 ) ) | ( ( rule__Precedence__Group_9__0 ) ) )
+            int alt8=10;
             switch ( input.LA(1) ) {
-            case 41:
+            case 42:
                 {
                 alt8=1;
                 }
@@ -1591,34 +1593,39 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                 alt8=3;
                 }
                 break;
-            case 42:
+            case 43:
                 {
                 alt8=4;
                 }
                 break;
-            case 43:
+            case 44:
                 {
                 alt8=5;
                 }
                 break;
-            case 44:
+            case 45:
                 {
                 alt8=6;
                 }
                 break;
-            case 45:
+            case 46:
                 {
                 alt8=7;
                 }
                 break;
-            case 11:
+            case 47:
                 {
                 alt8=8;
                 }
                 break;
-            case 46:
+            case 11:
                 {
                 alt8=9;
+                }
+                break;
+            case 48:
+                {
+                alt8=10;
                 }
                 break;
             default:
@@ -1854,6 +1861,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
                     }
                     break;
+                case 10 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:555:6: ( ( rule__Precedence__Group_9__0 ) )
+                    {
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:555:6: ( ( rule__Precedence__Group_9__0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:556:1: ( rule__Precedence__Group_9__0 )
+                    {
+                     before(grammarAccess.getPrecedenceAccess().getGroup_9()); 
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:557:1: ( rule__Precedence__Group_9__0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:557:2: rule__Precedence__Group_9__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_9__0_in_rule__Precedence__Alternatives1231);
+                    rule__Precedence__Group_9__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getPrecedenceAccess().getGroup_9()); 
+
+                    }
+
+
+                    }
+                    break;
 
             }
         }
@@ -1871,14 +1903,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Alternatives"
 
 
-    // $ANTLR start "rule__Precedence__LiteralAlternatives_5_2_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:560:1: rule__Precedence__LiteralAlternatives_5_2_0 : ( ( 'int' ) | ( 'string' ) | ( 'bool' ) | ( 'float' ) );
-    public final void rule__Precedence__LiteralAlternatives_5_2_0() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__LiteralAlternatives_6_2_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:566:1: rule__Precedence__LiteralAlternatives_6_2_0 : ( ( 'INT' ) | ( 'STRING' ) | ( 'BOOL' ) | ( 'FLOAT' ) );
+    public final void rule__Precedence__LiteralAlternatives_6_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:564:1: ( ( 'int' ) | ( 'string' ) | ( 'bool' ) | ( 'float' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:570:1: ( ( 'INT' ) | ( 'STRING' ) | ( 'BOOL' ) | ( 'FLOAT' ) )
             int alt9=4;
             switch ( input.LA(1) ) {
             case 18:
@@ -1910,14 +1942,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
             switch (alt9) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:565:1: ( 'int' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:571:1: ( 'INT' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:565:1: ( 'int' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:566:1: 'int'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:571:1: ( 'INT' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:572:1: 'INT'
                     {
-                     before(grammarAccess.getPrecedenceAccess().getLiteralIntKeyword_5_2_0_0()); 
-                    match(input,18,FOLLOW_18_in_rule__Precedence__LiteralAlternatives_5_2_01247); 
-                     after(grammarAccess.getPrecedenceAccess().getLiteralIntKeyword_5_2_0_0()); 
+                     before(grammarAccess.getPrecedenceAccess().getLiteralINTKeyword_6_2_0_0()); 
+                    match(input,18,FOLLOW_18_in_rule__Precedence__LiteralAlternatives_6_2_01265); 
+                     after(grammarAccess.getPrecedenceAccess().getLiteralINTKeyword_6_2_0_0()); 
 
                     }
 
@@ -1925,14 +1957,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:573:6: ( 'string' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:579:6: ( 'STRING' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:573:6: ( 'string' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:574:1: 'string'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:579:6: ( 'STRING' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:580:1: 'STRING'
                     {
-                     before(grammarAccess.getPrecedenceAccess().getLiteralStringKeyword_5_2_0_1()); 
-                    match(input,19,FOLLOW_19_in_rule__Precedence__LiteralAlternatives_5_2_01267); 
-                     after(grammarAccess.getPrecedenceAccess().getLiteralStringKeyword_5_2_0_1()); 
+                     before(grammarAccess.getPrecedenceAccess().getLiteralSTRINGKeyword_6_2_0_1()); 
+                    match(input,19,FOLLOW_19_in_rule__Precedence__LiteralAlternatives_6_2_01285); 
+                     after(grammarAccess.getPrecedenceAccess().getLiteralSTRINGKeyword_6_2_0_1()); 
 
                     }
 
@@ -1940,14 +1972,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:581:6: ( 'bool' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:587:6: ( 'BOOL' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:581:6: ( 'bool' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:582:1: 'bool'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:587:6: ( 'BOOL' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:588:1: 'BOOL'
                     {
-                     before(grammarAccess.getPrecedenceAccess().getLiteralBoolKeyword_5_2_0_2()); 
-                    match(input,20,FOLLOW_20_in_rule__Precedence__LiteralAlternatives_5_2_01287); 
-                     after(grammarAccess.getPrecedenceAccess().getLiteralBoolKeyword_5_2_0_2()); 
+                     before(grammarAccess.getPrecedenceAccess().getLiteralBOOLKeyword_6_2_0_2()); 
+                    match(input,20,FOLLOW_20_in_rule__Precedence__LiteralAlternatives_6_2_01305); 
+                     after(grammarAccess.getPrecedenceAccess().getLiteralBOOLKeyword_6_2_0_2()); 
 
                     }
 
@@ -1955,14 +1987,14 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:589:6: ( 'float' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:595:6: ( 'FLOAT' )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:589:6: ( 'float' )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:590:1: 'float'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:595:6: ( 'FLOAT' )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:596:1: 'FLOAT'
                     {
-                     before(grammarAccess.getPrecedenceAccess().getLiteralFloatKeyword_5_2_0_3()); 
-                    match(input,21,FOLLOW_21_in_rule__Precedence__LiteralAlternatives_5_2_01307); 
-                     after(grammarAccess.getPrecedenceAccess().getLiteralFloatKeyword_5_2_0_3()); 
+                     before(grammarAccess.getPrecedenceAccess().getLiteralFLOATKeyword_6_2_0_3()); 
+                    match(input,21,FOLLOW_21_in_rule__Precedence__LiteralAlternatives_6_2_01325); 
+                     after(grammarAccess.getPrecedenceAccess().getLiteralFLOATKeyword_6_2_0_3()); 
 
                     }
 
@@ -1983,24 +2015,24 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__LiteralAlternatives_5_2_0"
+    // $ANTLR end "rule__Precedence__LiteralAlternatives_6_2_0"
 
 
     // $ANTLR start "rule__MultID__Alternatives_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:602:1: rule__MultID__Alternatives_1 : ( ( ( rule__MultID__MiAssignment_1_0 ) ) | ( ( rule__MultID__Group_1_1__0 ) ) );
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:608:1: rule__MultID__Alternatives_1 : ( ( ( rule__MultID__MiAssignment_1_0 ) ) | ( ( rule__MultID__Group_1_1__0 ) ) );
     public final void rule__MultID__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:606:1: ( ( ( rule__MultID__MiAssignment_1_0 ) ) | ( ( rule__MultID__Group_1_1__0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:612:1: ( ( ( rule__MultID__MiAssignment_1_0 ) ) | ( ( rule__MultID__Group_1_1__0 ) ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
             if ( (LA10_0==RULE_ID) ) {
                 alt10=1;
             }
-            else if ( (LA10_0==38) ) {
+            else if ( (LA10_0==39) ) {
                 alt10=2;
             }
             else {
@@ -2011,16 +2043,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:607:1: ( ( rule__MultID__MiAssignment_1_0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:613:1: ( ( rule__MultID__MiAssignment_1_0 ) )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:607:1: ( ( rule__MultID__MiAssignment_1_0 ) )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:608:1: ( rule__MultID__MiAssignment_1_0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:613:1: ( ( rule__MultID__MiAssignment_1_0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:614:1: ( rule__MultID__MiAssignment_1_0 )
                     {
                      before(grammarAccess.getMultIDAccess().getMiAssignment_1_0()); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:609:1: ( rule__MultID__MiAssignment_1_0 )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:609:2: rule__MultID__MiAssignment_1_0
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:615:1: ( rule__MultID__MiAssignment_1_0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:615:2: rule__MultID__MiAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__MultID__MiAssignment_1_0_in_rule__MultID__Alternatives_11341);
+                    pushFollow(FOLLOW_rule__MultID__MiAssignment_1_0_in_rule__MultID__Alternatives_11359);
                     rule__MultID__MiAssignment_1_0();
 
                     state._fsp--;
@@ -2036,16 +2068,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:613:6: ( ( rule__MultID__Group_1_1__0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:619:6: ( ( rule__MultID__Group_1_1__0 ) )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:613:6: ( ( rule__MultID__Group_1_1__0 ) )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:614:1: ( rule__MultID__Group_1_1__0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:619:6: ( ( rule__MultID__Group_1_1__0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:620:1: ( rule__MultID__Group_1_1__0 )
                     {
                      before(grammarAccess.getMultIDAccess().getGroup_1_1()); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:615:1: ( rule__MultID__Group_1_1__0 )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:615:2: rule__MultID__Group_1_1__0
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:621:1: ( rule__MultID__Group_1_1__0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:621:2: rule__MultID__Group_1_1__0
                     {
-                    pushFollow(FOLLOW_rule__MultID__Group_1_1__0_in_rule__MultID__Alternatives_11359);
+                    pushFollow(FOLLOW_rule__MultID__Group_1_1__0_in_rule__MultID__Alternatives_11377);
                     rule__MultID__Group_1_1__0();
 
                     state._fsp--;
@@ -2078,20 +2110,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Alternatives_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:624:1: rule__MultString__Alternatives_1 : ( ( ( rule__MultString__MsAssignment_1_0 ) ) | ( ( rule__MultString__Group_1_1__0 ) ) );
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:630:1: rule__MultString__Alternatives_1 : ( ( ( rule__MultString__MsAssignment_1_0 ) ) | ( ( rule__MultString__Group_1_1__0 ) ) );
     public final void rule__MultString__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:628:1: ( ( ( rule__MultString__MsAssignment_1_0 ) ) | ( ( rule__MultString__Group_1_1__0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:634:1: ( ( ( rule__MultString__MsAssignment_1_0 ) ) | ( ( rule__MultString__Group_1_1__0 ) ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
             if ( (LA11_0==RULE_STRING) ) {
                 alt11=1;
             }
-            else if ( (LA11_0==38) ) {
+            else if ( (LA11_0==39) ) {
                 alt11=2;
             }
             else {
@@ -2102,16 +2134,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:629:1: ( ( rule__MultString__MsAssignment_1_0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:635:1: ( ( rule__MultString__MsAssignment_1_0 ) )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:629:1: ( ( rule__MultString__MsAssignment_1_0 ) )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:630:1: ( rule__MultString__MsAssignment_1_0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:635:1: ( ( rule__MultString__MsAssignment_1_0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:636:1: ( rule__MultString__MsAssignment_1_0 )
                     {
                      before(grammarAccess.getMultStringAccess().getMsAssignment_1_0()); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:631:1: ( rule__MultString__MsAssignment_1_0 )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:631:2: rule__MultString__MsAssignment_1_0
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:637:1: ( rule__MultString__MsAssignment_1_0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:637:2: rule__MultString__MsAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__MultString__MsAssignment_1_0_in_rule__MultString__Alternatives_11392);
+                    pushFollow(FOLLOW_rule__MultString__MsAssignment_1_0_in_rule__MultString__Alternatives_11410);
                     rule__MultString__MsAssignment_1_0();
 
                     state._fsp--;
@@ -2127,16 +2159,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:635:6: ( ( rule__MultString__Group_1_1__0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:641:6: ( ( rule__MultString__Group_1_1__0 ) )
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:635:6: ( ( rule__MultString__Group_1_1__0 ) )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:636:1: ( rule__MultString__Group_1_1__0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:641:6: ( ( rule__MultString__Group_1_1__0 ) )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:642:1: ( rule__MultString__Group_1_1__0 )
                     {
                      before(grammarAccess.getMultStringAccess().getGroup_1_1()); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:637:1: ( rule__MultString__Group_1_1__0 )
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:637:2: rule__MultString__Group_1_1__0
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:643:1: ( rule__MultString__Group_1_1__0 )
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:643:2: rule__MultString__Group_1_1__0
                     {
-                    pushFollow(FOLLOW_rule__MultString__Group_1_1__0_in_rule__MultString__Alternatives_11410);
+                    pushFollow(FOLLOW_rule__MultString__Group_1_1__0_in_rule__MultString__Alternatives_11428);
                     rule__MultString__Group_1_1__0();
 
                     state._fsp--;
@@ -2169,21 +2201,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:648:1: rule__ClassType__Group__0 : rule__ClassType__Group__0__Impl rule__ClassType__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:654:1: rule__ClassType__Group__0 : rule__ClassType__Group__0__Impl rule__ClassType__Group__1 ;
     public final void rule__ClassType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:652:1: ( rule__ClassType__Group__0__Impl rule__ClassType__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:653:2: rule__ClassType__Group__0__Impl rule__ClassType__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:658:1: ( rule__ClassType__Group__0__Impl rule__ClassType__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:659:2: rule__ClassType__Group__0__Impl rule__ClassType__Group__1
             {
-            pushFollow(FOLLOW_rule__ClassType__Group__0__Impl_in_rule__ClassType__Group__01441);
+            pushFollow(FOLLOW_rule__ClassType__Group__0__Impl_in_rule__ClassType__Group__01459);
             rule__ClassType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClassType__Group__1_in_rule__ClassType__Group__01444);
+            pushFollow(FOLLOW_rule__ClassType__Group__1_in_rule__ClassType__Group__01462);
             rule__ClassType__Group__1();
 
             state._fsp--;
@@ -2207,21 +2239,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:660:1: rule__ClassType__Group__0__Impl : ( 'class' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:666:1: rule__ClassType__Group__0__Impl : ( 'CLASS' ) ;
     public final void rule__ClassType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:664:1: ( ( 'class' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:665:1: ( 'class' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:670:1: ( ( 'CLASS' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:671:1: ( 'CLASS' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:665:1: ( 'class' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:666:1: 'class'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:671:1: ( 'CLASS' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:672:1: 'CLASS'
             {
-             before(grammarAccess.getClassTypeAccess().getClassKeyword_0()); 
-            match(input,22,FOLLOW_22_in_rule__ClassType__Group__0__Impl1472); 
-             after(grammarAccess.getClassTypeAccess().getClassKeyword_0()); 
+             before(grammarAccess.getClassTypeAccess().getCLASSKeyword_0()); 
+            match(input,22,FOLLOW_22_in_rule__ClassType__Group__0__Impl1490); 
+             after(grammarAccess.getClassTypeAccess().getCLASSKeyword_0()); 
 
             }
 
@@ -2244,21 +2276,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:679:1: rule__ClassType__Group__1 : rule__ClassType__Group__1__Impl rule__ClassType__Group__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:685:1: rule__ClassType__Group__1 : rule__ClassType__Group__1__Impl rule__ClassType__Group__2 ;
     public final void rule__ClassType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:683:1: ( rule__ClassType__Group__1__Impl rule__ClassType__Group__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:684:2: rule__ClassType__Group__1__Impl rule__ClassType__Group__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:689:1: ( rule__ClassType__Group__1__Impl rule__ClassType__Group__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:690:2: rule__ClassType__Group__1__Impl rule__ClassType__Group__2
             {
-            pushFollow(FOLLOW_rule__ClassType__Group__1__Impl_in_rule__ClassType__Group__11503);
+            pushFollow(FOLLOW_rule__ClassType__Group__1__Impl_in_rule__ClassType__Group__11521);
             rule__ClassType__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClassType__Group__2_in_rule__ClassType__Group__11506);
+            pushFollow(FOLLOW_rule__ClassType__Group__2_in_rule__ClassType__Group__11524);
             rule__ClassType__Group__2();
 
             state._fsp--;
@@ -2282,23 +2314,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:691:1: rule__ClassType__Group__1__Impl : ( ( rule__ClassType__NameAssignment_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:697:1: rule__ClassType__Group__1__Impl : ( ( rule__ClassType__NameAssignment_1 ) ) ;
     public final void rule__ClassType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:695:1: ( ( ( rule__ClassType__NameAssignment_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:696:1: ( ( rule__ClassType__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:701:1: ( ( ( rule__ClassType__NameAssignment_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:702:1: ( ( rule__ClassType__NameAssignment_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:696:1: ( ( rule__ClassType__NameAssignment_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:697:1: ( rule__ClassType__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:702:1: ( ( rule__ClassType__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:703:1: ( rule__ClassType__NameAssignment_1 )
             {
              before(grammarAccess.getClassTypeAccess().getNameAssignment_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:698:1: ( rule__ClassType__NameAssignment_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:698:2: rule__ClassType__NameAssignment_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:704:1: ( rule__ClassType__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:704:2: rule__ClassType__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__ClassType__NameAssignment_1_in_rule__ClassType__Group__1__Impl1533);
+            pushFollow(FOLLOW_rule__ClassType__NameAssignment_1_in_rule__ClassType__Group__1__Impl1551);
             rule__ClassType__NameAssignment_1();
 
             state._fsp--;
@@ -2329,16 +2361,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:708:1: rule__ClassType__Group__2 : rule__ClassType__Group__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:714:1: rule__ClassType__Group__2 : rule__ClassType__Group__2__Impl ;
     public final void rule__ClassType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:712:1: ( rule__ClassType__Group__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:713:2: rule__ClassType__Group__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:718:1: ( rule__ClassType__Group__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:719:2: rule__ClassType__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ClassType__Group__2__Impl_in_rule__ClassType__Group__21563);
+            pushFollow(FOLLOW_rule__ClassType__Group__2__Impl_in_rule__ClassType__Group__21581);
             rule__ClassType__Group__2__Impl();
 
             state._fsp--;
@@ -2362,35 +2394,35 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:719:1: rule__ClassType__Group__2__Impl : ( ( rule__ClassType__Alternatives_2 )* ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:725:1: rule__ClassType__Group__2__Impl : ( ( rule__ClassType__Alternatives_2 )* ) ;
     public final void rule__ClassType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:723:1: ( ( ( rule__ClassType__Alternatives_2 )* ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:724:1: ( ( rule__ClassType__Alternatives_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:729:1: ( ( ( rule__ClassType__Alternatives_2 )* ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:730:1: ( ( rule__ClassType__Alternatives_2 )* )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:724:1: ( ( rule__ClassType__Alternatives_2 )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:725:1: ( rule__ClassType__Alternatives_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:730:1: ( ( rule__ClassType__Alternatives_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:731:1: ( rule__ClassType__Alternatives_2 )*
             {
              before(grammarAccess.getClassTypeAccess().getAlternatives_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:726:1: ( rule__ClassType__Alternatives_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:732:1: ( rule__ClassType__Alternatives_2 )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( ((LA12_0>=23 && LA12_0<=25)||LA12_0==40) ) {
+                if ( ((LA12_0>=23 && LA12_0<=25)||LA12_0==41) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:726:2: rule__ClassType__Alternatives_2
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:732:2: rule__ClassType__Alternatives_2
             	    {
-            	    pushFollow(FOLLOW_rule__ClassType__Alternatives_2_in_rule__ClassType__Group__2__Impl1590);
+            	    pushFollow(FOLLOW_rule__ClassType__Alternatives_2_in_rule__ClassType__Group__2__Impl1608);
             	    rule__ClassType__Alternatives_2();
 
             	    state._fsp--;
@@ -2427,21 +2459,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:742:1: rule__ClassType__Group_2_1__0 : rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:748:1: rule__ClassType__Group_2_1__0 : rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1 ;
     public final void rule__ClassType__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:746:1: ( rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:747:2: rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:752:1: ( rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:753:2: rule__ClassType__Group_2_1__0__Impl rule__ClassType__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_1__0__Impl_in_rule__ClassType__Group_2_1__01627);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_1__0__Impl_in_rule__ClassType__Group_2_1__01645);
             rule__ClassType__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClassType__Group_2_1__1_in_rule__ClassType__Group_2_1__01630);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_1__1_in_rule__ClassType__Group_2_1__01648);
             rule__ClassType__Group_2_1__1();
 
             state._fsp--;
@@ -2465,21 +2497,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:754:1: rule__ClassType__Group_2_1__0__Impl : ( 'prefix' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:760:1: rule__ClassType__Group_2_1__0__Impl : ( 'PREFIX' ) ;
     public final void rule__ClassType__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:758:1: ( ( 'prefix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:759:1: ( 'prefix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:764:1: ( ( 'PREFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:765:1: ( 'PREFIX' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:759:1: ( 'prefix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:760:1: 'prefix'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:765:1: ( 'PREFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:766:1: 'PREFIX'
             {
-             before(grammarAccess.getClassTypeAccess().getPrefixKeyword_2_1_0()); 
-            match(input,23,FOLLOW_23_in_rule__ClassType__Group_2_1__0__Impl1658); 
-             after(grammarAccess.getClassTypeAccess().getPrefixKeyword_2_1_0()); 
+             before(grammarAccess.getClassTypeAccess().getPREFIXKeyword_2_1_0()); 
+            match(input,23,FOLLOW_23_in_rule__ClassType__Group_2_1__0__Impl1676); 
+             after(grammarAccess.getClassTypeAccess().getPREFIXKeyword_2_1_0()); 
 
             }
 
@@ -2502,16 +2534,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:773:1: rule__ClassType__Group_2_1__1 : rule__ClassType__Group_2_1__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:779:1: rule__ClassType__Group_2_1__1 : rule__ClassType__Group_2_1__1__Impl ;
     public final void rule__ClassType__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:777:1: ( rule__ClassType__Group_2_1__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:778:2: rule__ClassType__Group_2_1__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:783:1: ( rule__ClassType__Group_2_1__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:784:2: rule__ClassType__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_1__1__Impl_in_rule__ClassType__Group_2_1__11689);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_1__1__Impl_in_rule__ClassType__Group_2_1__11707);
             rule__ClassType__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -2535,23 +2567,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:784:1: rule__ClassType__Group_2_1__1__Impl : ( ( rule__ClassType__PrefixAssignment_2_1_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:790:1: rule__ClassType__Group_2_1__1__Impl : ( ( rule__ClassType__PrefixAssignment_2_1_1 ) ) ;
     public final void rule__ClassType__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:788:1: ( ( ( rule__ClassType__PrefixAssignment_2_1_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:789:1: ( ( rule__ClassType__PrefixAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:794:1: ( ( ( rule__ClassType__PrefixAssignment_2_1_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:795:1: ( ( rule__ClassType__PrefixAssignment_2_1_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:789:1: ( ( rule__ClassType__PrefixAssignment_2_1_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:790:1: ( rule__ClassType__PrefixAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:795:1: ( ( rule__ClassType__PrefixAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:796:1: ( rule__ClassType__PrefixAssignment_2_1_1 )
             {
              before(grammarAccess.getClassTypeAccess().getPrefixAssignment_2_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:791:1: ( rule__ClassType__PrefixAssignment_2_1_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:791:2: rule__ClassType__PrefixAssignment_2_1_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:797:1: ( rule__ClassType__PrefixAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:797:2: rule__ClassType__PrefixAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__ClassType__PrefixAssignment_2_1_1_in_rule__ClassType__Group_2_1__1__Impl1716);
+            pushFollow(FOLLOW_rule__ClassType__PrefixAssignment_2_1_1_in_rule__ClassType__Group_2_1__1__Impl1734);
             rule__ClassType__PrefixAssignment_2_1_1();
 
             state._fsp--;
@@ -2582,21 +2614,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_2__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:805:1: rule__ClassType__Group_2_2__0 : rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:811:1: rule__ClassType__Group_2_2__0 : rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1 ;
     public final void rule__ClassType__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:809:1: ( rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:810:2: rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:815:1: ( rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:816:2: rule__ClassType__Group_2_2__0__Impl rule__ClassType__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_2__0__Impl_in_rule__ClassType__Group_2_2__01750);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_2__0__Impl_in_rule__ClassType__Group_2_2__01768);
             rule__ClassType__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClassType__Group_2_2__1_in_rule__ClassType__Group_2_2__01753);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_2__1_in_rule__ClassType__Group_2_2__01771);
             rule__ClassType__Group_2_2__1();
 
             state._fsp--;
@@ -2620,21 +2652,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_2__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:817:1: rule__ClassType__Group_2_2__0__Impl : ( 'suffix' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:823:1: rule__ClassType__Group_2_2__0__Impl : ( 'SUFFIX' ) ;
     public final void rule__ClassType__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:821:1: ( ( 'suffix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:822:1: ( 'suffix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:827:1: ( ( 'SUFFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:828:1: ( 'SUFFIX' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:822:1: ( 'suffix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:823:1: 'suffix'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:828:1: ( 'SUFFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:829:1: 'SUFFIX'
             {
-             before(grammarAccess.getClassTypeAccess().getSuffixKeyword_2_2_0()); 
-            match(input,24,FOLLOW_24_in_rule__ClassType__Group_2_2__0__Impl1781); 
-             after(grammarAccess.getClassTypeAccess().getSuffixKeyword_2_2_0()); 
+             before(grammarAccess.getClassTypeAccess().getSUFFIXKeyword_2_2_0()); 
+            match(input,24,FOLLOW_24_in_rule__ClassType__Group_2_2__0__Impl1799); 
+             after(grammarAccess.getClassTypeAccess().getSUFFIXKeyword_2_2_0()); 
 
             }
 
@@ -2657,16 +2689,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_2__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:836:1: rule__ClassType__Group_2_2__1 : rule__ClassType__Group_2_2__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:842:1: rule__ClassType__Group_2_2__1 : rule__ClassType__Group_2_2__1__Impl ;
     public final void rule__ClassType__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:840:1: ( rule__ClassType__Group_2_2__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:841:2: rule__ClassType__Group_2_2__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:846:1: ( rule__ClassType__Group_2_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:847:2: rule__ClassType__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_2__1__Impl_in_rule__ClassType__Group_2_2__11812);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_2__1__Impl_in_rule__ClassType__Group_2_2__11830);
             rule__ClassType__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -2690,23 +2722,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_2__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:847:1: rule__ClassType__Group_2_2__1__Impl : ( ( rule__ClassType__SuffixAssignment_2_2_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:853:1: rule__ClassType__Group_2_2__1__Impl : ( ( rule__ClassType__SuffixAssignment_2_2_1 ) ) ;
     public final void rule__ClassType__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:851:1: ( ( ( rule__ClassType__SuffixAssignment_2_2_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:852:1: ( ( rule__ClassType__SuffixAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:857:1: ( ( ( rule__ClassType__SuffixAssignment_2_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:858:1: ( ( rule__ClassType__SuffixAssignment_2_2_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:852:1: ( ( rule__ClassType__SuffixAssignment_2_2_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:853:1: ( rule__ClassType__SuffixAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:858:1: ( ( rule__ClassType__SuffixAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:859:1: ( rule__ClassType__SuffixAssignment_2_2_1 )
             {
              before(grammarAccess.getClassTypeAccess().getSuffixAssignment_2_2_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:854:1: ( rule__ClassType__SuffixAssignment_2_2_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:854:2: rule__ClassType__SuffixAssignment_2_2_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:860:1: ( rule__ClassType__SuffixAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:860:2: rule__ClassType__SuffixAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__ClassType__SuffixAssignment_2_2_1_in_rule__ClassType__Group_2_2__1__Impl1839);
+            pushFollow(FOLLOW_rule__ClassType__SuffixAssignment_2_2_1_in_rule__ClassType__Group_2_2__1__Impl1857);
             rule__ClassType__SuffixAssignment_2_2_1();
 
             state._fsp--;
@@ -2737,21 +2769,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_3__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:868:1: rule__ClassType__Group_2_3__0 : rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:874:1: rule__ClassType__Group_2_3__0 : rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1 ;
     public final void rule__ClassType__Group_2_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:872:1: ( rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:873:2: rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:878:1: ( rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:879:2: rule__ClassType__Group_2_3__0__Impl rule__ClassType__Group_2_3__1
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_3__0__Impl_in_rule__ClassType__Group_2_3__01873);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_3__0__Impl_in_rule__ClassType__Group_2_3__01891);
             rule__ClassType__Group_2_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClassType__Group_2_3__1_in_rule__ClassType__Group_2_3__01876);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_3__1_in_rule__ClassType__Group_2_3__01894);
             rule__ClassType__Group_2_3__1();
 
             state._fsp--;
@@ -2775,21 +2807,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_3__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:880:1: rule__ClassType__Group_2_3__0__Impl : ( 'blocking' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:886:1: rule__ClassType__Group_2_3__0__Impl : ( 'BLOCKING' ) ;
     public final void rule__ClassType__Group_2_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:884:1: ( ( 'blocking' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:885:1: ( 'blocking' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:890:1: ( ( 'BLOCKING' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:891:1: ( 'BLOCKING' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:885:1: ( 'blocking' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:886:1: 'blocking'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:891:1: ( 'BLOCKING' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:892:1: 'BLOCKING'
             {
-             before(grammarAccess.getClassTypeAccess().getBlockingKeyword_2_3_0()); 
-            match(input,25,FOLLOW_25_in_rule__ClassType__Group_2_3__0__Impl1904); 
-             after(grammarAccess.getClassTypeAccess().getBlockingKeyword_2_3_0()); 
+             before(grammarAccess.getClassTypeAccess().getBLOCKINGKeyword_2_3_0()); 
+            match(input,25,FOLLOW_25_in_rule__ClassType__Group_2_3__0__Impl1922); 
+             after(grammarAccess.getClassTypeAccess().getBLOCKINGKeyword_2_3_0()); 
 
             }
 
@@ -2812,16 +2844,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_3__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:899:1: rule__ClassType__Group_2_3__1 : rule__ClassType__Group_2_3__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:905:1: rule__ClassType__Group_2_3__1 : rule__ClassType__Group_2_3__1__Impl ;
     public final void rule__ClassType__Group_2_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:903:1: ( rule__ClassType__Group_2_3__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:904:2: rule__ClassType__Group_2_3__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:909:1: ( rule__ClassType__Group_2_3__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:910:2: rule__ClassType__Group_2_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__ClassType__Group_2_3__1__Impl_in_rule__ClassType__Group_2_3__11935);
+            pushFollow(FOLLOW_rule__ClassType__Group_2_3__1__Impl_in_rule__ClassType__Group_2_3__11953);
             rule__ClassType__Group_2_3__1__Impl();
 
             state._fsp--;
@@ -2845,23 +2877,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__Group_2_3__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:910:1: rule__ClassType__Group_2_3__1__Impl : ( ( rule__ClassType__BlockingAssignment_2_3_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:916:1: rule__ClassType__Group_2_3__1__Impl : ( ( rule__ClassType__BlockingAssignment_2_3_1 ) ) ;
     public final void rule__ClassType__Group_2_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:914:1: ( ( ( rule__ClassType__BlockingAssignment_2_3_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:915:1: ( ( rule__ClassType__BlockingAssignment_2_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:920:1: ( ( ( rule__ClassType__BlockingAssignment_2_3_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:921:1: ( ( rule__ClassType__BlockingAssignment_2_3_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:915:1: ( ( rule__ClassType__BlockingAssignment_2_3_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:916:1: ( rule__ClassType__BlockingAssignment_2_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:921:1: ( ( rule__ClassType__BlockingAssignment_2_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:922:1: ( rule__ClassType__BlockingAssignment_2_3_1 )
             {
              before(grammarAccess.getClassTypeAccess().getBlockingAssignment_2_3_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:917:1: ( rule__ClassType__BlockingAssignment_2_3_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:917:2: rule__ClassType__BlockingAssignment_2_3_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:923:1: ( rule__ClassType__BlockingAssignment_2_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:923:2: rule__ClassType__BlockingAssignment_2_3_1
             {
-            pushFollow(FOLLOW_rule__ClassType__BlockingAssignment_2_3_1_in_rule__ClassType__Group_2_3__1__Impl1962);
+            pushFollow(FOLLOW_rule__ClassType__BlockingAssignment_2_3_1_in_rule__ClassType__Group_2_3__1__Impl1980);
             rule__ClassType__BlockingAssignment_2_3_1();
 
             state._fsp--;
@@ -2892,21 +2924,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:931:1: rule__Procedure__Group__0 : rule__Procedure__Group__0__Impl rule__Procedure__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:937:1: rule__Procedure__Group__0 : rule__Procedure__Group__0__Impl rule__Procedure__Group__1 ;
     public final void rule__Procedure__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:935:1: ( rule__Procedure__Group__0__Impl rule__Procedure__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:936:2: rule__Procedure__Group__0__Impl rule__Procedure__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:941:1: ( rule__Procedure__Group__0__Impl rule__Procedure__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:942:2: rule__Procedure__Group__0__Impl rule__Procedure__Group__1
             {
-            pushFollow(FOLLOW_rule__Procedure__Group__0__Impl_in_rule__Procedure__Group__01996);
+            pushFollow(FOLLOW_rule__Procedure__Group__0__Impl_in_rule__Procedure__Group__02014);
             rule__Procedure__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Procedure__Group__1_in_rule__Procedure__Group__01999);
+            pushFollow(FOLLOW_rule__Procedure__Group__1_in_rule__Procedure__Group__02017);
             rule__Procedure__Group__1();
 
             state._fsp--;
@@ -2930,21 +2962,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:943:1: rule__Procedure__Group__0__Impl : ( 'procedure' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:949:1: rule__Procedure__Group__0__Impl : ( 'PROCEDURE' ) ;
     public final void rule__Procedure__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:947:1: ( ( 'procedure' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:948:1: ( 'procedure' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:953:1: ( ( 'PROCEDURE' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:954:1: ( 'PROCEDURE' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:948:1: ( 'procedure' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:949:1: 'procedure'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:954:1: ( 'PROCEDURE' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:955:1: 'PROCEDURE'
             {
-             before(grammarAccess.getProcedureAccess().getProcedureKeyword_0()); 
-            match(input,26,FOLLOW_26_in_rule__Procedure__Group__0__Impl2027); 
-             after(grammarAccess.getProcedureAccess().getProcedureKeyword_0()); 
+             before(grammarAccess.getProcedureAccess().getPROCEDUREKeyword_0()); 
+            match(input,26,FOLLOW_26_in_rule__Procedure__Group__0__Impl2045); 
+             after(grammarAccess.getProcedureAccess().getPROCEDUREKeyword_0()); 
 
             }
 
@@ -2967,21 +2999,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:962:1: rule__Procedure__Group__1 : rule__Procedure__Group__1__Impl rule__Procedure__Group__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:968:1: rule__Procedure__Group__1 : rule__Procedure__Group__1__Impl rule__Procedure__Group__2 ;
     public final void rule__Procedure__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:966:1: ( rule__Procedure__Group__1__Impl rule__Procedure__Group__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:967:2: rule__Procedure__Group__1__Impl rule__Procedure__Group__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:972:1: ( rule__Procedure__Group__1__Impl rule__Procedure__Group__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:973:2: rule__Procedure__Group__1__Impl rule__Procedure__Group__2
             {
-            pushFollow(FOLLOW_rule__Procedure__Group__1__Impl_in_rule__Procedure__Group__12058);
+            pushFollow(FOLLOW_rule__Procedure__Group__1__Impl_in_rule__Procedure__Group__12076);
             rule__Procedure__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Procedure__Group__2_in_rule__Procedure__Group__12061);
+            pushFollow(FOLLOW_rule__Procedure__Group__2_in_rule__Procedure__Group__12079);
             rule__Procedure__Group__2();
 
             state._fsp--;
@@ -3005,23 +3037,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:974:1: rule__Procedure__Group__1__Impl : ( ( rule__Procedure__NameAssignment_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:980:1: rule__Procedure__Group__1__Impl : ( ( rule__Procedure__NameAssignment_1 ) ) ;
     public final void rule__Procedure__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:978:1: ( ( ( rule__Procedure__NameAssignment_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:979:1: ( ( rule__Procedure__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:984:1: ( ( ( rule__Procedure__NameAssignment_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:985:1: ( ( rule__Procedure__NameAssignment_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:979:1: ( ( rule__Procedure__NameAssignment_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:980:1: ( rule__Procedure__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:985:1: ( ( rule__Procedure__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:986:1: ( rule__Procedure__NameAssignment_1 )
             {
              before(grammarAccess.getProcedureAccess().getNameAssignment_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:981:1: ( rule__Procedure__NameAssignment_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:981:2: rule__Procedure__NameAssignment_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:987:1: ( rule__Procedure__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:987:2: rule__Procedure__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Procedure__NameAssignment_1_in_rule__Procedure__Group__1__Impl2088);
+            pushFollow(FOLLOW_rule__Procedure__NameAssignment_1_in_rule__Procedure__Group__1__Impl2106);
             rule__Procedure__NameAssignment_1();
 
             state._fsp--;
@@ -3052,16 +3084,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:991:1: rule__Procedure__Group__2 : rule__Procedure__Group__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:997:1: rule__Procedure__Group__2 : rule__Procedure__Group__2__Impl ;
     public final void rule__Procedure__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:995:1: ( rule__Procedure__Group__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:996:2: rule__Procedure__Group__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1001:1: ( rule__Procedure__Group__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1002:2: rule__Procedure__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Procedure__Group__2__Impl_in_rule__Procedure__Group__22118);
+            pushFollow(FOLLOW_rule__Procedure__Group__2__Impl_in_rule__Procedure__Group__22136);
             rule__Procedure__Group__2__Impl();
 
             state._fsp--;
@@ -3085,20 +3117,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1002:1: rule__Procedure__Group__2__Impl : ( ( rule__Procedure__Alternatives_2 )* ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1008:1: rule__Procedure__Group__2__Impl : ( ( rule__Procedure__Alternatives_2 )* ) ;
     public final void rule__Procedure__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1006:1: ( ( ( rule__Procedure__Alternatives_2 )* ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1007:1: ( ( rule__Procedure__Alternatives_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1012:1: ( ( ( rule__Procedure__Alternatives_2 )* ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1013:1: ( ( rule__Procedure__Alternatives_2 )* )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1007:1: ( ( rule__Procedure__Alternatives_2 )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1008:1: ( rule__Procedure__Alternatives_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1013:1: ( ( rule__Procedure__Alternatives_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1014:1: ( rule__Procedure__Alternatives_2 )*
             {
              before(grammarAccess.getProcedureAccess().getAlternatives_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1009:1: ( rule__Procedure__Alternatives_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1015:1: ( rule__Procedure__Alternatives_2 )*
             loop13:
             do {
                 int alt13=2;
@@ -3111,9 +3143,9 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1009:2: rule__Procedure__Alternatives_2
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1015:2: rule__Procedure__Alternatives_2
             	    {
-            	    pushFollow(FOLLOW_rule__Procedure__Alternatives_2_in_rule__Procedure__Group__2__Impl2145);
+            	    pushFollow(FOLLOW_rule__Procedure__Alternatives_2_in_rule__Procedure__Group__2__Impl2163);
             	    rule__Procedure__Alternatives_2();
 
             	    state._fsp--;
@@ -3150,21 +3182,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_0__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1025:1: rule__Procedure__Group_2_0__0 : rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1031:1: rule__Procedure__Group_2_0__0 : rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1 ;
     public final void rule__Procedure__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1029:1: ( rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1030:2: rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1035:1: ( rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1036:2: rule__Procedure__Group_2_0__0__Impl rule__Procedure__Group_2_0__1
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_0__0__Impl_in_rule__Procedure__Group_2_0__02182);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_0__0__Impl_in_rule__Procedure__Group_2_0__02200);
             rule__Procedure__Group_2_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Procedure__Group_2_0__1_in_rule__Procedure__Group_2_0__02185);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_0__1_in_rule__Procedure__Group_2_0__02203);
             rule__Procedure__Group_2_0__1();
 
             state._fsp--;
@@ -3188,21 +3220,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_0__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1037:1: rule__Procedure__Group_2_0__0__Impl : ( 'prefix' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1043:1: rule__Procedure__Group_2_0__0__Impl : ( 'PREFIX' ) ;
     public final void rule__Procedure__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1041:1: ( ( 'prefix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1042:1: ( 'prefix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1047:1: ( ( 'PREFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1048:1: ( 'PREFIX' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1042:1: ( 'prefix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1043:1: 'prefix'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1048:1: ( 'PREFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1049:1: 'PREFIX'
             {
-             before(grammarAccess.getProcedureAccess().getPrefixKeyword_2_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__Procedure__Group_2_0__0__Impl2213); 
-             after(grammarAccess.getProcedureAccess().getPrefixKeyword_2_0_0()); 
+             before(grammarAccess.getProcedureAccess().getPREFIXKeyword_2_0_0()); 
+            match(input,23,FOLLOW_23_in_rule__Procedure__Group_2_0__0__Impl2231); 
+             after(grammarAccess.getProcedureAccess().getPREFIXKeyword_2_0_0()); 
 
             }
 
@@ -3225,16 +3257,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_0__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1056:1: rule__Procedure__Group_2_0__1 : rule__Procedure__Group_2_0__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1062:1: rule__Procedure__Group_2_0__1 : rule__Procedure__Group_2_0__1__Impl ;
     public final void rule__Procedure__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1060:1: ( rule__Procedure__Group_2_0__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1061:2: rule__Procedure__Group_2_0__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1066:1: ( rule__Procedure__Group_2_0__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1067:2: rule__Procedure__Group_2_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_0__1__Impl_in_rule__Procedure__Group_2_0__12244);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_0__1__Impl_in_rule__Procedure__Group_2_0__12262);
             rule__Procedure__Group_2_0__1__Impl();
 
             state._fsp--;
@@ -3258,23 +3290,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_0__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1067:1: rule__Procedure__Group_2_0__1__Impl : ( ( rule__Procedure__PrefixAssignment_2_0_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1073:1: rule__Procedure__Group_2_0__1__Impl : ( ( rule__Procedure__PrefixAssignment_2_0_1 ) ) ;
     public final void rule__Procedure__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1071:1: ( ( ( rule__Procedure__PrefixAssignment_2_0_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1072:1: ( ( rule__Procedure__PrefixAssignment_2_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1077:1: ( ( ( rule__Procedure__PrefixAssignment_2_0_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1078:1: ( ( rule__Procedure__PrefixAssignment_2_0_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1072:1: ( ( rule__Procedure__PrefixAssignment_2_0_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1073:1: ( rule__Procedure__PrefixAssignment_2_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1078:1: ( ( rule__Procedure__PrefixAssignment_2_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1079:1: ( rule__Procedure__PrefixAssignment_2_0_1 )
             {
              before(grammarAccess.getProcedureAccess().getPrefixAssignment_2_0_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1074:1: ( rule__Procedure__PrefixAssignment_2_0_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1074:2: rule__Procedure__PrefixAssignment_2_0_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1080:1: ( rule__Procedure__PrefixAssignment_2_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1080:2: rule__Procedure__PrefixAssignment_2_0_1
             {
-            pushFollow(FOLLOW_rule__Procedure__PrefixAssignment_2_0_1_in_rule__Procedure__Group_2_0__1__Impl2271);
+            pushFollow(FOLLOW_rule__Procedure__PrefixAssignment_2_0_1_in_rule__Procedure__Group_2_0__1__Impl2289);
             rule__Procedure__PrefixAssignment_2_0_1();
 
             state._fsp--;
@@ -3305,21 +3337,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1088:1: rule__Procedure__Group_2_1__0 : rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1094:1: rule__Procedure__Group_2_1__0 : rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1 ;
     public final void rule__Procedure__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1092:1: ( rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1093:2: rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1098:1: ( rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1099:2: rule__Procedure__Group_2_1__0__Impl rule__Procedure__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_1__0__Impl_in_rule__Procedure__Group_2_1__02305);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_1__0__Impl_in_rule__Procedure__Group_2_1__02323);
             rule__Procedure__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Procedure__Group_2_1__1_in_rule__Procedure__Group_2_1__02308);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_1__1_in_rule__Procedure__Group_2_1__02326);
             rule__Procedure__Group_2_1__1();
 
             state._fsp--;
@@ -3343,21 +3375,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1100:1: rule__Procedure__Group_2_1__0__Impl : ( 'suffix' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1106:1: rule__Procedure__Group_2_1__0__Impl : ( 'SUFFIX' ) ;
     public final void rule__Procedure__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1104:1: ( ( 'suffix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1105:1: ( 'suffix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1110:1: ( ( 'SUFFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1111:1: ( 'SUFFIX' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1105:1: ( 'suffix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1106:1: 'suffix'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1111:1: ( 'SUFFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1112:1: 'SUFFIX'
             {
-             before(grammarAccess.getProcedureAccess().getSuffixKeyword_2_1_0()); 
-            match(input,24,FOLLOW_24_in_rule__Procedure__Group_2_1__0__Impl2336); 
-             after(grammarAccess.getProcedureAccess().getSuffixKeyword_2_1_0()); 
+             before(grammarAccess.getProcedureAccess().getSUFFIXKeyword_2_1_0()); 
+            match(input,24,FOLLOW_24_in_rule__Procedure__Group_2_1__0__Impl2354); 
+             after(grammarAccess.getProcedureAccess().getSUFFIXKeyword_2_1_0()); 
 
             }
 
@@ -3380,16 +3412,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1119:1: rule__Procedure__Group_2_1__1 : rule__Procedure__Group_2_1__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1125:1: rule__Procedure__Group_2_1__1 : rule__Procedure__Group_2_1__1__Impl ;
     public final void rule__Procedure__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1123:1: ( rule__Procedure__Group_2_1__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1124:2: rule__Procedure__Group_2_1__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1129:1: ( rule__Procedure__Group_2_1__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1130:2: rule__Procedure__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_1__1__Impl_in_rule__Procedure__Group_2_1__12367);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_1__1__Impl_in_rule__Procedure__Group_2_1__12385);
             rule__Procedure__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -3413,23 +3445,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1130:1: rule__Procedure__Group_2_1__1__Impl : ( ( rule__Procedure__SuffixAssignment_2_1_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1136:1: rule__Procedure__Group_2_1__1__Impl : ( ( rule__Procedure__SuffixAssignment_2_1_1 ) ) ;
     public final void rule__Procedure__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1134:1: ( ( ( rule__Procedure__SuffixAssignment_2_1_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1135:1: ( ( rule__Procedure__SuffixAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1140:1: ( ( ( rule__Procedure__SuffixAssignment_2_1_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1141:1: ( ( rule__Procedure__SuffixAssignment_2_1_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1135:1: ( ( rule__Procedure__SuffixAssignment_2_1_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1136:1: ( rule__Procedure__SuffixAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1141:1: ( ( rule__Procedure__SuffixAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1142:1: ( rule__Procedure__SuffixAssignment_2_1_1 )
             {
              before(grammarAccess.getProcedureAccess().getSuffixAssignment_2_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1137:1: ( rule__Procedure__SuffixAssignment_2_1_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1137:2: rule__Procedure__SuffixAssignment_2_1_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1143:1: ( rule__Procedure__SuffixAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1143:2: rule__Procedure__SuffixAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__Procedure__SuffixAssignment_2_1_1_in_rule__Procedure__Group_2_1__1__Impl2394);
+            pushFollow(FOLLOW_rule__Procedure__SuffixAssignment_2_1_1_in_rule__Procedure__Group_2_1__1__Impl2412);
             rule__Procedure__SuffixAssignment_2_1_1();
 
             state._fsp--;
@@ -3460,21 +3492,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_2__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1151:1: rule__Procedure__Group_2_2__0 : rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1157:1: rule__Procedure__Group_2_2__0 : rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1 ;
     public final void rule__Procedure__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1155:1: ( rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1156:2: rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1161:1: ( rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1162:2: rule__Procedure__Group_2_2__0__Impl rule__Procedure__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_2__0__Impl_in_rule__Procedure__Group_2_2__02428);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_2__0__Impl_in_rule__Procedure__Group_2_2__02446);
             rule__Procedure__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Procedure__Group_2_2__1_in_rule__Procedure__Group_2_2__02431);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_2__1_in_rule__Procedure__Group_2_2__02449);
             rule__Procedure__Group_2_2__1();
 
             state._fsp--;
@@ -3498,21 +3530,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_2__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1163:1: rule__Procedure__Group_2_2__0__Impl : ( 'types' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1169:1: rule__Procedure__Group_2_2__0__Impl : ( 'TYPES' ) ;
     public final void rule__Procedure__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1167:1: ( ( 'types' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1168:1: ( 'types' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1173:1: ( ( 'TYPES' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1174:1: ( 'TYPES' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1168:1: ( 'types' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1169:1: 'types'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1174:1: ( 'TYPES' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1175:1: 'TYPES'
             {
-             before(grammarAccess.getProcedureAccess().getTypesKeyword_2_2_0()); 
-            match(input,27,FOLLOW_27_in_rule__Procedure__Group_2_2__0__Impl2459); 
-             after(grammarAccess.getProcedureAccess().getTypesKeyword_2_2_0()); 
+             before(grammarAccess.getProcedureAccess().getTYPESKeyword_2_2_0()); 
+            match(input,27,FOLLOW_27_in_rule__Procedure__Group_2_2__0__Impl2477); 
+             after(grammarAccess.getProcedureAccess().getTYPESKeyword_2_2_0()); 
 
             }
 
@@ -3535,16 +3567,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_2__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1182:1: rule__Procedure__Group_2_2__1 : rule__Procedure__Group_2_2__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1188:1: rule__Procedure__Group_2_2__1 : rule__Procedure__Group_2_2__1__Impl ;
     public final void rule__Procedure__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1186:1: ( rule__Procedure__Group_2_2__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1187:2: rule__Procedure__Group_2_2__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1192:1: ( rule__Procedure__Group_2_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1193:2: rule__Procedure__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Procedure__Group_2_2__1__Impl_in_rule__Procedure__Group_2_2__12490);
+            pushFollow(FOLLOW_rule__Procedure__Group_2_2__1__Impl_in_rule__Procedure__Group_2_2__12508);
             rule__Procedure__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -3568,23 +3600,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__Group_2_2__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1193:1: rule__Procedure__Group_2_2__1__Impl : ( ( rule__Procedure__TypesAssignment_2_2_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1199:1: rule__Procedure__Group_2_2__1__Impl : ( ( rule__Procedure__TypesAssignment_2_2_1 ) ) ;
     public final void rule__Procedure__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1197:1: ( ( ( rule__Procedure__TypesAssignment_2_2_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1198:1: ( ( rule__Procedure__TypesAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1203:1: ( ( ( rule__Procedure__TypesAssignment_2_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1204:1: ( ( rule__Procedure__TypesAssignment_2_2_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1198:1: ( ( rule__Procedure__TypesAssignment_2_2_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1199:1: ( rule__Procedure__TypesAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1204:1: ( ( rule__Procedure__TypesAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1205:1: ( rule__Procedure__TypesAssignment_2_2_1 )
             {
              before(grammarAccess.getProcedureAccess().getTypesAssignment_2_2_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1200:1: ( rule__Procedure__TypesAssignment_2_2_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1200:2: rule__Procedure__TypesAssignment_2_2_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1206:1: ( rule__Procedure__TypesAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1206:2: rule__Procedure__TypesAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Procedure__TypesAssignment_2_2_1_in_rule__Procedure__Group_2_2__1__Impl2517);
+            pushFollow(FOLLOW_rule__Procedure__TypesAssignment_2_2_1_in_rule__Procedure__Group_2_2__1__Impl2535);
             rule__Procedure__TypesAssignment_2_2_1();
 
             state._fsp--;
@@ -3615,21 +3647,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1214:1: rule__Statement__Group__0 : rule__Statement__Group__0__Impl rule__Statement__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1220:1: rule__Statement__Group__0 : rule__Statement__Group__0__Impl rule__Statement__Group__1 ;
     public final void rule__Statement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1218:1: ( rule__Statement__Group__0__Impl rule__Statement__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1219:2: rule__Statement__Group__0__Impl rule__Statement__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1224:1: ( rule__Statement__Group__0__Impl rule__Statement__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1225:2: rule__Statement__Group__0__Impl rule__Statement__Group__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02551);
+            pushFollow(FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02569);
             rule__Statement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02554);
+            pushFollow(FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02572);
             rule__Statement__Group__1();
 
             state._fsp--;
@@ -3653,21 +3685,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1226:1: rule__Statement__Group__0__Impl : ( 'statement' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1232:1: rule__Statement__Group__0__Impl : ( 'STATEMENT' ) ;
     public final void rule__Statement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1230:1: ( ( 'statement' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1231:1: ( 'statement' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1236:1: ( ( 'STATEMENT' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1237:1: ( 'STATEMENT' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1231:1: ( 'statement' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1232:1: 'statement'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1237:1: ( 'STATEMENT' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1238:1: 'STATEMENT'
             {
-             before(grammarAccess.getStatementAccess().getStatementKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__Statement__Group__0__Impl2582); 
-             after(grammarAccess.getStatementAccess().getStatementKeyword_0()); 
+             before(grammarAccess.getStatementAccess().getSTATEMENTKeyword_0()); 
+            match(input,28,FOLLOW_28_in_rule__Statement__Group__0__Impl2600); 
+             after(grammarAccess.getStatementAccess().getSTATEMENTKeyword_0()); 
 
             }
 
@@ -3690,21 +3722,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1245:1: rule__Statement__Group__1 : rule__Statement__Group__1__Impl rule__Statement__Group__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1251:1: rule__Statement__Group__1 : rule__Statement__Group__1__Impl rule__Statement__Group__2 ;
     public final void rule__Statement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1249:1: ( rule__Statement__Group__1__Impl rule__Statement__Group__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1250:2: rule__Statement__Group__1__Impl rule__Statement__Group__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1255:1: ( rule__Statement__Group__1__Impl rule__Statement__Group__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1256:2: rule__Statement__Group__1__Impl rule__Statement__Group__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12613);
+            pushFollow(FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12631);
             rule__Statement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12616);
+            pushFollow(FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12634);
             rule__Statement__Group__2();
 
             state._fsp--;
@@ -3728,23 +3760,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1257:1: rule__Statement__Group__1__Impl : ( ( rule__Statement__NameAssignment_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1263:1: rule__Statement__Group__1__Impl : ( ( rule__Statement__NameAssignment_1 ) ) ;
     public final void rule__Statement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1261:1: ( ( ( rule__Statement__NameAssignment_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1262:1: ( ( rule__Statement__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1267:1: ( ( ( rule__Statement__NameAssignment_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1268:1: ( ( rule__Statement__NameAssignment_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1262:1: ( ( rule__Statement__NameAssignment_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1263:1: ( rule__Statement__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1268:1: ( ( rule__Statement__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1269:1: ( rule__Statement__NameAssignment_1 )
             {
              before(grammarAccess.getStatementAccess().getNameAssignment_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1264:1: ( rule__Statement__NameAssignment_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1264:2: rule__Statement__NameAssignment_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1270:1: ( rule__Statement__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1270:2: rule__Statement__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Statement__NameAssignment_1_in_rule__Statement__Group__1__Impl2643);
+            pushFollow(FOLLOW_rule__Statement__NameAssignment_1_in_rule__Statement__Group__1__Impl2661);
             rule__Statement__NameAssignment_1();
 
             state._fsp--;
@@ -3775,16 +3807,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1274:1: rule__Statement__Group__2 : rule__Statement__Group__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1280:1: rule__Statement__Group__2 : rule__Statement__Group__2__Impl ;
     public final void rule__Statement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1278:1: ( rule__Statement__Group__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1279:2: rule__Statement__Group__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1284:1: ( rule__Statement__Group__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1285:2: rule__Statement__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22673);
+            pushFollow(FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22691);
             rule__Statement__Group__2__Impl();
 
             state._fsp--;
@@ -3808,23 +3840,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1285:1: rule__Statement__Group__2__Impl : ( ( rule__Statement__Alternatives_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1291:1: rule__Statement__Group__2__Impl : ( ( rule__Statement__Alternatives_2 ) ) ;
     public final void rule__Statement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1289:1: ( ( ( rule__Statement__Alternatives_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1290:1: ( ( rule__Statement__Alternatives_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1295:1: ( ( ( rule__Statement__Alternatives_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1296:1: ( ( rule__Statement__Alternatives_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1290:1: ( ( rule__Statement__Alternatives_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1291:1: ( rule__Statement__Alternatives_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1296:1: ( ( rule__Statement__Alternatives_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1297:1: ( rule__Statement__Alternatives_2 )
             {
              before(grammarAccess.getStatementAccess().getAlternatives_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1292:1: ( rule__Statement__Alternatives_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1292:2: rule__Statement__Alternatives_2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1298:1: ( rule__Statement__Alternatives_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1298:2: rule__Statement__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__Statement__Alternatives_2_in_rule__Statement__Group__2__Impl2700);
+            pushFollow(FOLLOW_rule__Statement__Alternatives_2_in_rule__Statement__Group__2__Impl2718);
             rule__Statement__Alternatives_2();
 
             state._fsp--;
@@ -3855,21 +3887,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1308:1: rule__Statement__Group_2_0__0 : rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1314:1: rule__Statement__Group_2_0__0 : rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1 ;
     public final void rule__Statement__Group_2_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1312:1: ( rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1313:2: rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1318:1: ( rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1319:2: rule__Statement__Group_2_0__0__Impl rule__Statement__Group_2_0__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__0__Impl_in_rule__Statement__Group_2_0__02736);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__0__Impl_in_rule__Statement__Group_2_0__02754);
             rule__Statement__Group_2_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__1_in_rule__Statement__Group_2_0__02739);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__1_in_rule__Statement__Group_2_0__02757);
             rule__Statement__Group_2_0__1();
 
             state._fsp--;
@@ -3893,21 +3925,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1320:1: rule__Statement__Group_2_0__0__Impl : ( 'repeat' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1326:1: rule__Statement__Group_2_0__0__Impl : ( 'REPEAT' ) ;
     public final void rule__Statement__Group_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1324:1: ( ( 'repeat' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1325:1: ( 'repeat' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1330:1: ( ( 'REPEAT' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1331:1: ( 'REPEAT' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1325:1: ( 'repeat' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1326:1: 'repeat'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1331:1: ( 'REPEAT' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1332:1: 'REPEAT'
             {
-             before(grammarAccess.getStatementAccess().getRepeatKeyword_2_0_0()); 
-            match(input,29,FOLLOW_29_in_rule__Statement__Group_2_0__0__Impl2767); 
-             after(grammarAccess.getStatementAccess().getRepeatKeyword_2_0_0()); 
+             before(grammarAccess.getStatementAccess().getREPEATKeyword_2_0_0()); 
+            match(input,29,FOLLOW_29_in_rule__Statement__Group_2_0__0__Impl2785); 
+             after(grammarAccess.getStatementAccess().getREPEATKeyword_2_0_0()); 
 
             }
 
@@ -3930,21 +3962,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1339:1: rule__Statement__Group_2_0__1 : rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1345:1: rule__Statement__Group_2_0__1 : rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2 ;
     public final void rule__Statement__Group_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1343:1: ( rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1344:2: rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1349:1: ( rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1350:2: rule__Statement__Group_2_0__1__Impl rule__Statement__Group_2_0__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__1__Impl_in_rule__Statement__Group_2_0__12798);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__1__Impl_in_rule__Statement__Group_2_0__12816);
             rule__Statement__Group_2_0__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__2_in_rule__Statement__Group_2_0__12801);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__2_in_rule__Statement__Group_2_0__12819);
             rule__Statement__Group_2_0__2();
 
             state._fsp--;
@@ -3968,23 +4000,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1351:1: rule__Statement__Group_2_0__1__Impl : ( ( rule__Statement__RepAssignment_2_0_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1357:1: rule__Statement__Group_2_0__1__Impl : ( ( rule__Statement__RepAssignment_2_0_1 ) ) ;
     public final void rule__Statement__Group_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1355:1: ( ( ( rule__Statement__RepAssignment_2_0_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1356:1: ( ( rule__Statement__RepAssignment_2_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1361:1: ( ( ( rule__Statement__RepAssignment_2_0_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1362:1: ( ( rule__Statement__RepAssignment_2_0_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1356:1: ( ( rule__Statement__RepAssignment_2_0_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1357:1: ( rule__Statement__RepAssignment_2_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1362:1: ( ( rule__Statement__RepAssignment_2_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1363:1: ( rule__Statement__RepAssignment_2_0_1 )
             {
              before(grammarAccess.getStatementAccess().getRepAssignment_2_0_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1358:1: ( rule__Statement__RepAssignment_2_0_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1358:2: rule__Statement__RepAssignment_2_0_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1364:1: ( rule__Statement__RepAssignment_2_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1364:2: rule__Statement__RepAssignment_2_0_1
             {
-            pushFollow(FOLLOW_rule__Statement__RepAssignment_2_0_1_in_rule__Statement__Group_2_0__1__Impl2828);
+            pushFollow(FOLLOW_rule__Statement__RepAssignment_2_0_1_in_rule__Statement__Group_2_0__1__Impl2846);
             rule__Statement__RepAssignment_2_0_1();
 
             state._fsp--;
@@ -4015,21 +4047,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1368:1: rule__Statement__Group_2_0__2 : rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1374:1: rule__Statement__Group_2_0__2 : rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3 ;
     public final void rule__Statement__Group_2_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1372:1: ( rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1373:2: rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1378:1: ( rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1379:2: rule__Statement__Group_2_0__2__Impl rule__Statement__Group_2_0__3
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__2__Impl_in_rule__Statement__Group_2_0__22858);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__2__Impl_in_rule__Statement__Group_2_0__22876);
             rule__Statement__Group_2_0__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__3_in_rule__Statement__Group_2_0__22861);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__3_in_rule__Statement__Group_2_0__22879);
             rule__Statement__Group_2_0__3();
 
             state._fsp--;
@@ -4053,21 +4085,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1380:1: rule__Statement__Group_2_0__2__Impl : ( 'until' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1386:1: rule__Statement__Group_2_0__2__Impl : ( 'UNTIL' ) ;
     public final void rule__Statement__Group_2_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1384:1: ( ( 'until' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1385:1: ( 'until' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1390:1: ( ( 'UNTIL' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1391:1: ( 'UNTIL' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1385:1: ( 'until' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1386:1: 'until'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1391:1: ( 'UNTIL' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1392:1: 'UNTIL'
             {
-             before(grammarAccess.getStatementAccess().getUntilKeyword_2_0_2()); 
-            match(input,30,FOLLOW_30_in_rule__Statement__Group_2_0__2__Impl2889); 
-             after(grammarAccess.getStatementAccess().getUntilKeyword_2_0_2()); 
+             before(grammarAccess.getStatementAccess().getUNTILKeyword_2_0_2()); 
+            match(input,30,FOLLOW_30_in_rule__Statement__Group_2_0__2__Impl2907); 
+             after(grammarAccess.getStatementAccess().getUNTILKeyword_2_0_2()); 
 
             }
 
@@ -4090,16 +4122,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1399:1: rule__Statement__Group_2_0__3 : rule__Statement__Group_2_0__3__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1405:1: rule__Statement__Group_2_0__3 : rule__Statement__Group_2_0__3__Impl ;
     public final void rule__Statement__Group_2_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1403:1: ( rule__Statement__Group_2_0__3__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1404:2: rule__Statement__Group_2_0__3__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1409:1: ( rule__Statement__Group_2_0__3__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1410:2: rule__Statement__Group_2_0__3__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_0__3__Impl_in_rule__Statement__Group_2_0__32920);
+            pushFollow(FOLLOW_rule__Statement__Group_2_0__3__Impl_in_rule__Statement__Group_2_0__32938);
             rule__Statement__Group_2_0__3__Impl();
 
             state._fsp--;
@@ -4123,23 +4155,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_0__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1410:1: rule__Statement__Group_2_0__3__Impl : ( ( rule__Statement__UntilAssignment_2_0_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1416:1: rule__Statement__Group_2_0__3__Impl : ( ( rule__Statement__UntilAssignment_2_0_3 ) ) ;
     public final void rule__Statement__Group_2_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1414:1: ( ( ( rule__Statement__UntilAssignment_2_0_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1415:1: ( ( rule__Statement__UntilAssignment_2_0_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1420:1: ( ( ( rule__Statement__UntilAssignment_2_0_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1421:1: ( ( rule__Statement__UntilAssignment_2_0_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1415:1: ( ( rule__Statement__UntilAssignment_2_0_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1416:1: ( rule__Statement__UntilAssignment_2_0_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1421:1: ( ( rule__Statement__UntilAssignment_2_0_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1422:1: ( rule__Statement__UntilAssignment_2_0_3 )
             {
              before(grammarAccess.getStatementAccess().getUntilAssignment_2_0_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1417:1: ( rule__Statement__UntilAssignment_2_0_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1417:2: rule__Statement__UntilAssignment_2_0_3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1423:1: ( rule__Statement__UntilAssignment_2_0_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1423:2: rule__Statement__UntilAssignment_2_0_3
             {
-            pushFollow(FOLLOW_rule__Statement__UntilAssignment_2_0_3_in_rule__Statement__Group_2_0__3__Impl2947);
+            pushFollow(FOLLOW_rule__Statement__UntilAssignment_2_0_3_in_rule__Statement__Group_2_0__3__Impl2965);
             rule__Statement__UntilAssignment_2_0_3();
 
             state._fsp--;
@@ -4170,21 +4202,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1435:1: rule__Statement__Group_2_1__0 : rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1441:1: rule__Statement__Group_2_1__0 : rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1 ;
     public final void rule__Statement__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1439:1: ( rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1440:2: rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1445:1: ( rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1446:2: rule__Statement__Group_2_1__0__Impl rule__Statement__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__0__Impl_in_rule__Statement__Group_2_1__02985);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__0__Impl_in_rule__Statement__Group_2_1__03003);
             rule__Statement__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__1_in_rule__Statement__Group_2_1__02988);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__1_in_rule__Statement__Group_2_1__03006);
             rule__Statement__Group_2_1__1();
 
             state._fsp--;
@@ -4208,21 +4240,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1447:1: rule__Statement__Group_2_1__0__Impl : ( 'while' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1453:1: rule__Statement__Group_2_1__0__Impl : ( 'WHILE' ) ;
     public final void rule__Statement__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1451:1: ( ( 'while' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1452:1: ( 'while' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1457:1: ( ( 'WHILE' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1458:1: ( 'WHILE' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1452:1: ( 'while' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1453:1: 'while'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1458:1: ( 'WHILE' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1459:1: 'WHILE'
             {
-             before(grammarAccess.getStatementAccess().getWhileKeyword_2_1_0()); 
-            match(input,31,FOLLOW_31_in_rule__Statement__Group_2_1__0__Impl3016); 
-             after(grammarAccess.getStatementAccess().getWhileKeyword_2_1_0()); 
+             before(grammarAccess.getStatementAccess().getWHILEKeyword_2_1_0()); 
+            match(input,31,FOLLOW_31_in_rule__Statement__Group_2_1__0__Impl3034); 
+             after(grammarAccess.getStatementAccess().getWHILEKeyword_2_1_0()); 
 
             }
 
@@ -4245,21 +4277,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1466:1: rule__Statement__Group_2_1__1 : rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1472:1: rule__Statement__Group_2_1__1 : rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2 ;
     public final void rule__Statement__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1470:1: ( rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1471:2: rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1476:1: ( rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1477:2: rule__Statement__Group_2_1__1__Impl rule__Statement__Group_2_1__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__1__Impl_in_rule__Statement__Group_2_1__13047);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__1__Impl_in_rule__Statement__Group_2_1__13065);
             rule__Statement__Group_2_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__2_in_rule__Statement__Group_2_1__13050);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__2_in_rule__Statement__Group_2_1__13068);
             rule__Statement__Group_2_1__2();
 
             state._fsp--;
@@ -4283,23 +4315,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1478:1: rule__Statement__Group_2_1__1__Impl : ( ( rule__Statement__WhileAssignment_2_1_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1484:1: rule__Statement__Group_2_1__1__Impl : ( ( rule__Statement__WhileAssignment_2_1_1 ) ) ;
     public final void rule__Statement__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1482:1: ( ( ( rule__Statement__WhileAssignment_2_1_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1483:1: ( ( rule__Statement__WhileAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1488:1: ( ( ( rule__Statement__WhileAssignment_2_1_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1489:1: ( ( rule__Statement__WhileAssignment_2_1_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1483:1: ( ( rule__Statement__WhileAssignment_2_1_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1484:1: ( rule__Statement__WhileAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1489:1: ( ( rule__Statement__WhileAssignment_2_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1490:1: ( rule__Statement__WhileAssignment_2_1_1 )
             {
              before(grammarAccess.getStatementAccess().getWhileAssignment_2_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1485:1: ( rule__Statement__WhileAssignment_2_1_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1485:2: rule__Statement__WhileAssignment_2_1_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1491:1: ( rule__Statement__WhileAssignment_2_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1491:2: rule__Statement__WhileAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__Statement__WhileAssignment_2_1_1_in_rule__Statement__Group_2_1__1__Impl3077);
+            pushFollow(FOLLOW_rule__Statement__WhileAssignment_2_1_1_in_rule__Statement__Group_2_1__1__Impl3095);
             rule__Statement__WhileAssignment_2_1_1();
 
             state._fsp--;
@@ -4330,21 +4362,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1495:1: rule__Statement__Group_2_1__2 : rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1501:1: rule__Statement__Group_2_1__2 : rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3 ;
     public final void rule__Statement__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1499:1: ( rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1500:2: rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1505:1: ( rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1506:2: rule__Statement__Group_2_1__2__Impl rule__Statement__Group_2_1__3
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__2__Impl_in_rule__Statement__Group_2_1__23107);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__2__Impl_in_rule__Statement__Group_2_1__23125);
             rule__Statement__Group_2_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__3_in_rule__Statement__Group_2_1__23110);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__3_in_rule__Statement__Group_2_1__23128);
             rule__Statement__Group_2_1__3();
 
             state._fsp--;
@@ -4368,21 +4400,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1507:1: rule__Statement__Group_2_1__2__Impl : ( 'do' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1513:1: rule__Statement__Group_2_1__2__Impl : ( 'DO' ) ;
     public final void rule__Statement__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1511:1: ( ( 'do' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1512:1: ( 'do' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1517:1: ( ( 'DO' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1518:1: ( 'DO' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1512:1: ( 'do' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1513:1: 'do'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1518:1: ( 'DO' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1519:1: 'DO'
             {
-             before(grammarAccess.getStatementAccess().getDoKeyword_2_1_2()); 
-            match(input,32,FOLLOW_32_in_rule__Statement__Group_2_1__2__Impl3138); 
-             after(grammarAccess.getStatementAccess().getDoKeyword_2_1_2()); 
+             before(grammarAccess.getStatementAccess().getDOKeyword_2_1_2()); 
+            match(input,32,FOLLOW_32_in_rule__Statement__Group_2_1__2__Impl3156); 
+             after(grammarAccess.getStatementAccess().getDOKeyword_2_1_2()); 
 
             }
 
@@ -4405,16 +4437,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1526:1: rule__Statement__Group_2_1__3 : rule__Statement__Group_2_1__3__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1532:1: rule__Statement__Group_2_1__3 : rule__Statement__Group_2_1__3__Impl ;
     public final void rule__Statement__Group_2_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1530:1: ( rule__Statement__Group_2_1__3__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1531:2: rule__Statement__Group_2_1__3__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1536:1: ( rule__Statement__Group_2_1__3__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1537:2: rule__Statement__Group_2_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_1__3__Impl_in_rule__Statement__Group_2_1__33169);
+            pushFollow(FOLLOW_rule__Statement__Group_2_1__3__Impl_in_rule__Statement__Group_2_1__33187);
             rule__Statement__Group_2_1__3__Impl();
 
             state._fsp--;
@@ -4438,23 +4470,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_1__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1537:1: rule__Statement__Group_2_1__3__Impl : ( ( rule__Statement__DoAssignment_2_1_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1543:1: rule__Statement__Group_2_1__3__Impl : ( ( rule__Statement__DoAssignment_2_1_3 ) ) ;
     public final void rule__Statement__Group_2_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1541:1: ( ( ( rule__Statement__DoAssignment_2_1_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1542:1: ( ( rule__Statement__DoAssignment_2_1_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1547:1: ( ( ( rule__Statement__DoAssignment_2_1_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1548:1: ( ( rule__Statement__DoAssignment_2_1_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1542:1: ( ( rule__Statement__DoAssignment_2_1_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1543:1: ( rule__Statement__DoAssignment_2_1_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1548:1: ( ( rule__Statement__DoAssignment_2_1_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1549:1: ( rule__Statement__DoAssignment_2_1_3 )
             {
              before(grammarAccess.getStatementAccess().getDoAssignment_2_1_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1544:1: ( rule__Statement__DoAssignment_2_1_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1544:2: rule__Statement__DoAssignment_2_1_3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1550:1: ( rule__Statement__DoAssignment_2_1_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1550:2: rule__Statement__DoAssignment_2_1_3
             {
-            pushFollow(FOLLOW_rule__Statement__DoAssignment_2_1_3_in_rule__Statement__Group_2_1__3__Impl3196);
+            pushFollow(FOLLOW_rule__Statement__DoAssignment_2_1_3_in_rule__Statement__Group_2_1__3__Impl3214);
             rule__Statement__DoAssignment_2_1_3();
 
             state._fsp--;
@@ -4485,21 +4517,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_2__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1562:1: rule__Statement__Group_2_2__0 : rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1568:1: rule__Statement__Group_2_2__0 : rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1 ;
     public final void rule__Statement__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1566:1: ( rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1567:2: rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1572:1: ( rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1573:2: rule__Statement__Group_2_2__0__Impl rule__Statement__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_2__0__Impl_in_rule__Statement__Group_2_2__03234);
+            pushFollow(FOLLOW_rule__Statement__Group_2_2__0__Impl_in_rule__Statement__Group_2_2__03252);
             rule__Statement__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_2__1_in_rule__Statement__Group_2_2__03237);
+            pushFollow(FOLLOW_rule__Statement__Group_2_2__1_in_rule__Statement__Group_2_2__03255);
             rule__Statement__Group_2_2__1();
 
             state._fsp--;
@@ -4523,21 +4555,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_2__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1574:1: rule__Statement__Group_2_2__0__Impl : ( 'for' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1580:1: rule__Statement__Group_2_2__0__Impl : ( 'FOR' ) ;
     public final void rule__Statement__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1578:1: ( ( 'for' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1579:1: ( 'for' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1584:1: ( ( 'FOR' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1585:1: ( 'FOR' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1579:1: ( 'for' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1580:1: 'for'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1585:1: ( 'FOR' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1586:1: 'FOR'
             {
-             before(grammarAccess.getStatementAccess().getForKeyword_2_2_0()); 
-            match(input,33,FOLLOW_33_in_rule__Statement__Group_2_2__0__Impl3265); 
-             after(grammarAccess.getStatementAccess().getForKeyword_2_2_0()); 
+             before(grammarAccess.getStatementAccess().getFORKeyword_2_2_0()); 
+            match(input,33,FOLLOW_33_in_rule__Statement__Group_2_2__0__Impl3283); 
+             after(grammarAccess.getStatementAccess().getFORKeyword_2_2_0()); 
 
             }
 
@@ -4560,16 +4592,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_2__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1593:1: rule__Statement__Group_2_2__1 : rule__Statement__Group_2_2__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1599:1: rule__Statement__Group_2_2__1 : rule__Statement__Group_2_2__1__Impl ;
     public final void rule__Statement__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1597:1: ( rule__Statement__Group_2_2__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1598:2: rule__Statement__Group_2_2__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1603:1: ( rule__Statement__Group_2_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1604:2: rule__Statement__Group_2_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_2__1__Impl_in_rule__Statement__Group_2_2__13296);
+            pushFollow(FOLLOW_rule__Statement__Group_2_2__1__Impl_in_rule__Statement__Group_2_2__13314);
             rule__Statement__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -4593,23 +4625,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_2__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1604:1: rule__Statement__Group_2_2__1__Impl : ( ( rule__Statement__ForAssignment_2_2_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1610:1: rule__Statement__Group_2_2__1__Impl : ( ( rule__Statement__ForAssignment_2_2_1 ) ) ;
     public final void rule__Statement__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1608:1: ( ( ( rule__Statement__ForAssignment_2_2_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1609:1: ( ( rule__Statement__ForAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1614:1: ( ( ( rule__Statement__ForAssignment_2_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1615:1: ( ( rule__Statement__ForAssignment_2_2_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1609:1: ( ( rule__Statement__ForAssignment_2_2_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1610:1: ( rule__Statement__ForAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1615:1: ( ( rule__Statement__ForAssignment_2_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1616:1: ( rule__Statement__ForAssignment_2_2_1 )
             {
              before(grammarAccess.getStatementAccess().getForAssignment_2_2_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1611:1: ( rule__Statement__ForAssignment_2_2_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1611:2: rule__Statement__ForAssignment_2_2_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1617:1: ( rule__Statement__ForAssignment_2_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1617:2: rule__Statement__ForAssignment_2_2_1
             {
-            pushFollow(FOLLOW_rule__Statement__ForAssignment_2_2_1_in_rule__Statement__Group_2_2__1__Impl3323);
+            pushFollow(FOLLOW_rule__Statement__ForAssignment_2_2_1_in_rule__Statement__Group_2_2__1__Impl3341);
             rule__Statement__ForAssignment_2_2_1();
 
             state._fsp--;
@@ -4640,21 +4672,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1625:1: rule__Statement__Group_2_3__0 : rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1631:1: rule__Statement__Group_2_3__0 : rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1 ;
     public final void rule__Statement__Group_2_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1629:1: ( rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1630:2: rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1635:1: ( rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1636:2: rule__Statement__Group_2_3__0__Impl rule__Statement__Group_2_3__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_3__0__Impl_in_rule__Statement__Group_2_3__03357);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3__0__Impl_in_rule__Statement__Group_2_3__03375);
             rule__Statement__Group_2_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_3__1_in_rule__Statement__Group_2_3__03360);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3__1_in_rule__Statement__Group_2_3__03378);
             rule__Statement__Group_2_3__1();
 
             state._fsp--;
@@ -4678,21 +4710,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1637:1: rule__Statement__Group_2_3__0__Impl : ( 'var' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1643:1: rule__Statement__Group_2_3__0__Impl : ( 'VAR' ) ;
     public final void rule__Statement__Group_2_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1641:1: ( ( 'var' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1642:1: ( 'var' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1647:1: ( ( 'VAR' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1648:1: ( 'VAR' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1642:1: ( 'var' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1643:1: 'var'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1648:1: ( 'VAR' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1649:1: 'VAR'
             {
-             before(grammarAccess.getStatementAccess().getVarKeyword_2_3_0()); 
-            match(input,34,FOLLOW_34_in_rule__Statement__Group_2_3__0__Impl3388); 
-             after(grammarAccess.getStatementAccess().getVarKeyword_2_3_0()); 
+             before(grammarAccess.getStatementAccess().getVARKeyword_2_3_0()); 
+            match(input,34,FOLLOW_34_in_rule__Statement__Group_2_3__0__Impl3406); 
+             after(grammarAccess.getStatementAccess().getVARKeyword_2_3_0()); 
 
             }
 
@@ -4715,21 +4747,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1656:1: rule__Statement__Group_2_3__1 : rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1662:1: rule__Statement__Group_2_3__1 : rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2 ;
     public final void rule__Statement__Group_2_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1660:1: ( rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1661:2: rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1666:1: ( rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1667:2: rule__Statement__Group_2_3__1__Impl rule__Statement__Group_2_3__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_3__1__Impl_in_rule__Statement__Group_2_3__13419);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3__1__Impl_in_rule__Statement__Group_2_3__13437);
             rule__Statement__Group_2_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_3__2_in_rule__Statement__Group_2_3__13422);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3__2_in_rule__Statement__Group_2_3__13440);
             rule__Statement__Group_2_3__2();
 
             state._fsp--;
@@ -4753,23 +4785,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1668:1: rule__Statement__Group_2_3__1__Impl : ( ( rule__Statement__VarAssignment_2_3_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1674:1: rule__Statement__Group_2_3__1__Impl : ( ( rule__Statement__VarAssignment_2_3_1 ) ) ;
     public final void rule__Statement__Group_2_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1672:1: ( ( ( rule__Statement__VarAssignment_2_3_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1673:1: ( ( rule__Statement__VarAssignment_2_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1678:1: ( ( ( rule__Statement__VarAssignment_2_3_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1679:1: ( ( rule__Statement__VarAssignment_2_3_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1673:1: ( ( rule__Statement__VarAssignment_2_3_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1674:1: ( rule__Statement__VarAssignment_2_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1679:1: ( ( rule__Statement__VarAssignment_2_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1680:1: ( rule__Statement__VarAssignment_2_3_1 )
             {
              before(grammarAccess.getStatementAccess().getVarAssignment_2_3_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1675:1: ( rule__Statement__VarAssignment_2_3_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1675:2: rule__Statement__VarAssignment_2_3_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1681:1: ( rule__Statement__VarAssignment_2_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1681:2: rule__Statement__VarAssignment_2_3_1
             {
-            pushFollow(FOLLOW_rule__Statement__VarAssignment_2_3_1_in_rule__Statement__Group_2_3__1__Impl3449);
+            pushFollow(FOLLOW_rule__Statement__VarAssignment_2_3_1_in_rule__Statement__Group_2_3__1__Impl3467);
             rule__Statement__VarAssignment_2_3_1();
 
             state._fsp--;
@@ -4800,16 +4832,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1685:1: rule__Statement__Group_2_3__2 : rule__Statement__Group_2_3__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1691:1: rule__Statement__Group_2_3__2 : rule__Statement__Group_2_3__2__Impl ;
     public final void rule__Statement__Group_2_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1689:1: ( rule__Statement__Group_2_3__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1690:2: rule__Statement__Group_2_3__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1695:1: ( rule__Statement__Group_2_3__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1696:2: rule__Statement__Group_2_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_3__2__Impl_in_rule__Statement__Group_2_3__23479);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3__2__Impl_in_rule__Statement__Group_2_3__23497);
             rule__Statement__Group_2_3__2__Impl();
 
             state._fsp--;
@@ -4833,20 +4865,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1696:1: rule__Statement__Group_2_3__2__Impl : ( ( rule__Statement__Group_2_3_2__0 )? ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1702:1: rule__Statement__Group_2_3__2__Impl : ( ( rule__Statement__Group_2_3_2__0 )? ) ;
     public final void rule__Statement__Group_2_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1700:1: ( ( ( rule__Statement__Group_2_3_2__0 )? ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1701:1: ( ( rule__Statement__Group_2_3_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1706:1: ( ( ( rule__Statement__Group_2_3_2__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1707:1: ( ( rule__Statement__Group_2_3_2__0 )? )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1701:1: ( ( rule__Statement__Group_2_3_2__0 )? )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1702:1: ( rule__Statement__Group_2_3_2__0 )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1707:1: ( ( rule__Statement__Group_2_3_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1708:1: ( rule__Statement__Group_2_3_2__0 )?
             {
              before(grammarAccess.getStatementAccess().getGroup_2_3_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1703:1: ( rule__Statement__Group_2_3_2__0 )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1709:1: ( rule__Statement__Group_2_3_2__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -4855,9 +4887,9 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1703:2: rule__Statement__Group_2_3_2__0
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1709:2: rule__Statement__Group_2_3_2__0
                     {
-                    pushFollow(FOLLOW_rule__Statement__Group_2_3_2__0_in_rule__Statement__Group_2_3__2__Impl3506);
+                    pushFollow(FOLLOW_rule__Statement__Group_2_3_2__0_in_rule__Statement__Group_2_3__2__Impl3524);
                     rule__Statement__Group_2_3_2__0();
 
                     state._fsp--;
@@ -4891,21 +4923,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3_2__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1719:1: rule__Statement__Group_2_3_2__0 : rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1725:1: rule__Statement__Group_2_3_2__0 : rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1 ;
     public final void rule__Statement__Group_2_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1723:1: ( rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1724:2: rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1729:1: ( rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1730:2: rule__Statement__Group_2_3_2__0__Impl rule__Statement__Group_2_3_2__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__0__Impl_in_rule__Statement__Group_2_3_2__03543);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__0__Impl_in_rule__Statement__Group_2_3_2__03561);
             rule__Statement__Group_2_3_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__1_in_rule__Statement__Group_2_3_2__03546);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__1_in_rule__Statement__Group_2_3_2__03564);
             rule__Statement__Group_2_3_2__1();
 
             state._fsp--;
@@ -4929,20 +4961,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3_2__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1731:1: rule__Statement__Group_2_3_2__0__Impl : ( '=' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1737:1: rule__Statement__Group_2_3_2__0__Impl : ( '=' ) ;
     public final void rule__Statement__Group_2_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1735:1: ( ( '=' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1736:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1741:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1742:1: ( '=' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1736:1: ( '=' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1737:1: '='
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1742:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1743:1: '='
             {
              before(grammarAccess.getStatementAccess().getEqualsSignKeyword_2_3_2_0()); 
-            match(input,35,FOLLOW_35_in_rule__Statement__Group_2_3_2__0__Impl3574); 
+            match(input,35,FOLLOW_35_in_rule__Statement__Group_2_3_2__0__Impl3592); 
              after(grammarAccess.getStatementAccess().getEqualsSignKeyword_2_3_2_0()); 
 
             }
@@ -4966,16 +4998,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3_2__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1750:1: rule__Statement__Group_2_3_2__1 : rule__Statement__Group_2_3_2__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1756:1: rule__Statement__Group_2_3_2__1 : rule__Statement__Group_2_3_2__1__Impl ;
     public final void rule__Statement__Group_2_3_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1754:1: ( rule__Statement__Group_2_3_2__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1755:2: rule__Statement__Group_2_3_2__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1760:1: ( rule__Statement__Group_2_3_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1761:2: rule__Statement__Group_2_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__1__Impl_in_rule__Statement__Group_2_3_2__13605);
+            pushFollow(FOLLOW_rule__Statement__Group_2_3_2__1__Impl_in_rule__Statement__Group_2_3_2__13623);
             rule__Statement__Group_2_3_2__1__Impl();
 
             state._fsp--;
@@ -4999,23 +5031,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_3_2__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1761:1: rule__Statement__Group_2_3_2__1__Impl : ( ( rule__Statement__ExAssignment_2_3_2_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1767:1: rule__Statement__Group_2_3_2__1__Impl : ( ( rule__Statement__ExAssignment_2_3_2_1 ) ) ;
     public final void rule__Statement__Group_2_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1765:1: ( ( ( rule__Statement__ExAssignment_2_3_2_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1766:1: ( ( rule__Statement__ExAssignment_2_3_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1771:1: ( ( ( rule__Statement__ExAssignment_2_3_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1772:1: ( ( rule__Statement__ExAssignment_2_3_2_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1766:1: ( ( rule__Statement__ExAssignment_2_3_2_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1767:1: ( rule__Statement__ExAssignment_2_3_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1772:1: ( ( rule__Statement__ExAssignment_2_3_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1773:1: ( rule__Statement__ExAssignment_2_3_2_1 )
             {
              before(grammarAccess.getStatementAccess().getExAssignment_2_3_2_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1768:1: ( rule__Statement__ExAssignment_2_3_2_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1768:2: rule__Statement__ExAssignment_2_3_2_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1774:1: ( rule__Statement__ExAssignment_2_3_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1774:2: rule__Statement__ExAssignment_2_3_2_1
             {
-            pushFollow(FOLLOW_rule__Statement__ExAssignment_2_3_2_1_in_rule__Statement__Group_2_3_2__1__Impl3632);
+            pushFollow(FOLLOW_rule__Statement__ExAssignment_2_3_2_1_in_rule__Statement__Group_2_3_2__1__Impl3650);
             rule__Statement__ExAssignment_2_3_2_1();
 
             state._fsp--;
@@ -5046,21 +5078,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1782:1: rule__Statement__Group_2_4__0 : rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1788:1: rule__Statement__Group_2_4__0 : rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1 ;
     public final void rule__Statement__Group_2_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1786:1: ( rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1787:2: rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1792:1: ( rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1793:2: rule__Statement__Group_2_4__0__Impl rule__Statement__Group_2_4__1
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__0__Impl_in_rule__Statement__Group_2_4__03666);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__0__Impl_in_rule__Statement__Group_2_4__03684);
             rule__Statement__Group_2_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__1_in_rule__Statement__Group_2_4__03669);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__1_in_rule__Statement__Group_2_4__03687);
             rule__Statement__Group_2_4__1();
 
             state._fsp--;
@@ -5084,21 +5116,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1794:1: rule__Statement__Group_2_4__0__Impl : ( 'val' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1800:1: rule__Statement__Group_2_4__0__Impl : ( 'VAL' ) ;
     public final void rule__Statement__Group_2_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1798:1: ( ( 'val' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1799:1: ( 'val' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1804:1: ( ( 'VAL' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1805:1: ( 'VAL' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1799:1: ( 'val' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1800:1: 'val'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1805:1: ( 'VAL' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1806:1: 'VAL'
             {
-             before(grammarAccess.getStatementAccess().getValKeyword_2_4_0()); 
-            match(input,36,FOLLOW_36_in_rule__Statement__Group_2_4__0__Impl3697); 
-             after(grammarAccess.getStatementAccess().getValKeyword_2_4_0()); 
+             before(grammarAccess.getStatementAccess().getVALKeyword_2_4_0()); 
+            match(input,36,FOLLOW_36_in_rule__Statement__Group_2_4__0__Impl3715); 
+             after(grammarAccess.getStatementAccess().getVALKeyword_2_4_0()); 
 
             }
 
@@ -5121,21 +5153,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1813:1: rule__Statement__Group_2_4__1 : rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1819:1: rule__Statement__Group_2_4__1 : rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2 ;
     public final void rule__Statement__Group_2_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1817:1: ( rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1818:2: rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1823:1: ( rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1824:2: rule__Statement__Group_2_4__1__Impl rule__Statement__Group_2_4__2
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__1__Impl_in_rule__Statement__Group_2_4__13728);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__1__Impl_in_rule__Statement__Group_2_4__13746);
             rule__Statement__Group_2_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__2_in_rule__Statement__Group_2_4__13731);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__2_in_rule__Statement__Group_2_4__13749);
             rule__Statement__Group_2_4__2();
 
             state._fsp--;
@@ -5159,23 +5191,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1825:1: rule__Statement__Group_2_4__1__Impl : ( ( rule__Statement__ValAssignment_2_4_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1831:1: rule__Statement__Group_2_4__1__Impl : ( ( rule__Statement__ValAssignment_2_4_1 ) ) ;
     public final void rule__Statement__Group_2_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1829:1: ( ( ( rule__Statement__ValAssignment_2_4_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1830:1: ( ( rule__Statement__ValAssignment_2_4_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1835:1: ( ( ( rule__Statement__ValAssignment_2_4_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1836:1: ( ( rule__Statement__ValAssignment_2_4_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1830:1: ( ( rule__Statement__ValAssignment_2_4_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1831:1: ( rule__Statement__ValAssignment_2_4_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1836:1: ( ( rule__Statement__ValAssignment_2_4_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1837:1: ( rule__Statement__ValAssignment_2_4_1 )
             {
              before(grammarAccess.getStatementAccess().getValAssignment_2_4_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1832:1: ( rule__Statement__ValAssignment_2_4_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1832:2: rule__Statement__ValAssignment_2_4_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1838:1: ( rule__Statement__ValAssignment_2_4_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1838:2: rule__Statement__ValAssignment_2_4_1
             {
-            pushFollow(FOLLOW_rule__Statement__ValAssignment_2_4_1_in_rule__Statement__Group_2_4__1__Impl3758);
+            pushFollow(FOLLOW_rule__Statement__ValAssignment_2_4_1_in_rule__Statement__Group_2_4__1__Impl3776);
             rule__Statement__ValAssignment_2_4_1();
 
             state._fsp--;
@@ -5206,21 +5238,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1842:1: rule__Statement__Group_2_4__2 : rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1848:1: rule__Statement__Group_2_4__2 : rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3 ;
     public final void rule__Statement__Group_2_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1846:1: ( rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1847:2: rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1852:1: ( rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1853:2: rule__Statement__Group_2_4__2__Impl rule__Statement__Group_2_4__3
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__2__Impl_in_rule__Statement__Group_2_4__23788);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__2__Impl_in_rule__Statement__Group_2_4__23806);
             rule__Statement__Group_2_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__3_in_rule__Statement__Group_2_4__23791);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__3_in_rule__Statement__Group_2_4__23809);
             rule__Statement__Group_2_4__3();
 
             state._fsp--;
@@ -5244,20 +5276,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1854:1: rule__Statement__Group_2_4__2__Impl : ( '=' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1860:1: rule__Statement__Group_2_4__2__Impl : ( '=' ) ;
     public final void rule__Statement__Group_2_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1858:1: ( ( '=' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1859:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1864:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1865:1: ( '=' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1859:1: ( '=' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1860:1: '='
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1865:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1866:1: '='
             {
              before(grammarAccess.getStatementAccess().getEqualsSignKeyword_2_4_2()); 
-            match(input,35,FOLLOW_35_in_rule__Statement__Group_2_4__2__Impl3819); 
+            match(input,35,FOLLOW_35_in_rule__Statement__Group_2_4__2__Impl3837); 
              after(grammarAccess.getStatementAccess().getEqualsSignKeyword_2_4_2()); 
 
             }
@@ -5281,16 +5313,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1873:1: rule__Statement__Group_2_4__3 : rule__Statement__Group_2_4__3__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1879:1: rule__Statement__Group_2_4__3 : rule__Statement__Group_2_4__3__Impl ;
     public final void rule__Statement__Group_2_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1877:1: ( rule__Statement__Group_2_4__3__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1878:2: rule__Statement__Group_2_4__3__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1883:1: ( rule__Statement__Group_2_4__3__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1884:2: rule__Statement__Group_2_4__3__Impl
             {
-            pushFollow(FOLLOW_rule__Statement__Group_2_4__3__Impl_in_rule__Statement__Group_2_4__33850);
+            pushFollow(FOLLOW_rule__Statement__Group_2_4__3__Impl_in_rule__Statement__Group_2_4__33868);
             rule__Statement__Group_2_4__3__Impl();
 
             state._fsp--;
@@ -5314,23 +5346,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__Group_2_4__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1884:1: rule__Statement__Group_2_4__3__Impl : ( ( rule__Statement__ExAssignment_2_4_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1890:1: rule__Statement__Group_2_4__3__Impl : ( ( rule__Statement__ExAssignment_2_4_3 ) ) ;
     public final void rule__Statement__Group_2_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1888:1: ( ( ( rule__Statement__ExAssignment_2_4_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1889:1: ( ( rule__Statement__ExAssignment_2_4_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1894:1: ( ( ( rule__Statement__ExAssignment_2_4_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1895:1: ( ( rule__Statement__ExAssignment_2_4_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1889:1: ( ( rule__Statement__ExAssignment_2_4_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1890:1: ( rule__Statement__ExAssignment_2_4_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1895:1: ( ( rule__Statement__ExAssignment_2_4_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1896:1: ( rule__Statement__ExAssignment_2_4_3 )
             {
              before(grammarAccess.getStatementAccess().getExAssignment_2_4_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1891:1: ( rule__Statement__ExAssignment_2_4_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1891:2: rule__Statement__ExAssignment_2_4_3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1897:1: ( rule__Statement__ExAssignment_2_4_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1897:2: rule__Statement__ExAssignment_2_4_3
             {
-            pushFollow(FOLLOW_rule__Statement__ExAssignment_2_4_3_in_rule__Statement__Group_2_4__3__Impl3877);
+            pushFollow(FOLLOW_rule__Statement__ExAssignment_2_4_3_in_rule__Statement__Group_2_4__3__Impl3895);
             rule__Statement__ExAssignment_2_4_3();
 
             state._fsp--;
@@ -5361,21 +5393,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1909:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1915:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
     public final void rule__Expression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1913:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1914:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1919:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1920:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__03915);
+            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__03933);
             rule__Expression__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__03918);
+            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__03936);
             rule__Expression__Group__1();
 
             state._fsp--;
@@ -5399,21 +5431,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1921:1: rule__Expression__Group__0__Impl : ( 'expression' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1927:1: rule__Expression__Group__0__Impl : ( 'EXPRESSION' ) ;
     public final void rule__Expression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1925:1: ( ( 'expression' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1926:1: ( 'expression' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1931:1: ( ( 'EXPRESSION' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1932:1: ( 'EXPRESSION' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1926:1: ( 'expression' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1927:1: 'expression'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1932:1: ( 'EXPRESSION' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1933:1: 'EXPRESSION'
             {
-             before(grammarAccess.getExpressionAccess().getExpressionKeyword_0()); 
-            match(input,37,FOLLOW_37_in_rule__Expression__Group__0__Impl3946); 
-             after(grammarAccess.getExpressionAccess().getExpressionKeyword_0()); 
+             before(grammarAccess.getExpressionAccess().getEXPRESSIONKeyword_0()); 
+            match(input,37,FOLLOW_37_in_rule__Expression__Group__0__Impl3964); 
+             after(grammarAccess.getExpressionAccess().getEXPRESSIONKeyword_0()); 
 
             }
 
@@ -5436,21 +5468,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1940:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl rule__Expression__Group__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1946:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl rule__Expression__Group__2 ;
     public final void rule__Expression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1944:1: ( rule__Expression__Group__1__Impl rule__Expression__Group__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1945:2: rule__Expression__Group__1__Impl rule__Expression__Group__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1950:1: ( rule__Expression__Group__1__Impl rule__Expression__Group__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1951:2: rule__Expression__Group__1__Impl rule__Expression__Group__2
             {
-            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__13977);
+            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__13995);
             rule__Expression__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group__2_in_rule__Expression__Group__13980);
+            pushFollow(FOLLOW_rule__Expression__Group__2_in_rule__Expression__Group__13998);
             rule__Expression__Group__2();
 
             state._fsp--;
@@ -5474,23 +5506,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1952:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__NameAssignment_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1958:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__NameAssignment_1 ) ) ;
     public final void rule__Expression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1956:1: ( ( ( rule__Expression__NameAssignment_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1957:1: ( ( rule__Expression__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1962:1: ( ( ( rule__Expression__NameAssignment_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1963:1: ( ( rule__Expression__NameAssignment_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1957:1: ( ( rule__Expression__NameAssignment_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1958:1: ( rule__Expression__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1963:1: ( ( rule__Expression__NameAssignment_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1964:1: ( rule__Expression__NameAssignment_1 )
             {
              before(grammarAccess.getExpressionAccess().getNameAssignment_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1959:1: ( rule__Expression__NameAssignment_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1959:2: rule__Expression__NameAssignment_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1965:1: ( rule__Expression__NameAssignment_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1965:2: rule__Expression__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Expression__NameAssignment_1_in_rule__Expression__Group__1__Impl4007);
+            pushFollow(FOLLOW_rule__Expression__NameAssignment_1_in_rule__Expression__Group__1__Impl4025);
             rule__Expression__NameAssignment_1();
 
             state._fsp--;
@@ -5521,16 +5553,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1969:1: rule__Expression__Group__2 : rule__Expression__Group__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1975:1: rule__Expression__Group__2 : rule__Expression__Group__2__Impl ;
     public final void rule__Expression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1973:1: ( rule__Expression__Group__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1974:2: rule__Expression__Group__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1979:1: ( rule__Expression__Group__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1980:2: rule__Expression__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group__2__Impl_in_rule__Expression__Group__24037);
+            pushFollow(FOLLOW_rule__Expression__Group__2__Impl_in_rule__Expression__Group__24055);
             rule__Expression__Group__2__Impl();
 
             state._fsp--;
@@ -5554,35 +5586,35 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1980:1: rule__Expression__Group__2__Impl : ( ( rule__Expression__PrecAssignment_2 )* ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1986:1: rule__Expression__Group__2__Impl : ( ( rule__Expression__PrecAssignment_2 )* ) ;
     public final void rule__Expression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1984:1: ( ( ( rule__Expression__PrecAssignment_2 )* ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1985:1: ( ( rule__Expression__PrecAssignment_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1990:1: ( ( ( rule__Expression__PrecAssignment_2 )* ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1991:1: ( ( rule__Expression__PrecAssignment_2 )* )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1985:1: ( ( rule__Expression__PrecAssignment_2 )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1986:1: ( rule__Expression__PrecAssignment_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1991:1: ( ( rule__Expression__PrecAssignment_2 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1992:1: ( rule__Expression__PrecAssignment_2 )*
             {
              before(grammarAccess.getExpressionAccess().getPrecAssignment_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1987:1: ( rule__Expression__PrecAssignment_2 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1993:1: ( rule__Expression__PrecAssignment_2 )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==11||(LA15_0>=23 && LA15_0<=24)||(LA15_0>=41 && LA15_0<=46)) ) {
+                if ( (LA15_0==11||(LA15_0>=23 && LA15_0<=24)||(LA15_0>=42 && LA15_0<=48)) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1987:2: rule__Expression__PrecAssignment_2
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1993:2: rule__Expression__PrecAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Expression__PrecAssignment_2_in_rule__Expression__Group__2__Impl4064);
+            	    pushFollow(FOLLOW_rule__Expression__PrecAssignment_2_in_rule__Expression__Group__2__Impl4082);
             	    rule__Expression__PrecAssignment_2();
 
             	    state._fsp--;
@@ -5619,21 +5651,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_0__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2003:1: rule__Precedence__Group_0__0 : rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2009:1: rule__Precedence__Group_0__0 : rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1 ;
     public final void rule__Precedence__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2007:1: ( rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2008:2: rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2013:1: ( rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2014:2: rule__Precedence__Group_0__0__Impl rule__Precedence__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_0__0__Impl_in_rule__Precedence__Group_0__04101);
+            pushFollow(FOLLOW_rule__Precedence__Group_0__0__Impl_in_rule__Precedence__Group_0__04119);
             rule__Precedence__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_0__1_in_rule__Precedence__Group_0__04104);
+            pushFollow(FOLLOW_rule__Precedence__Group_0__1_in_rule__Precedence__Group_0__04122);
             rule__Precedence__Group_0__1();
 
             state._fsp--;
@@ -5657,23 +5689,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_0__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2015:1: rule__Precedence__Group_0__0__Impl : ( ( rule__Precedence__RuletypAssignment_0_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2021:1: rule__Precedence__Group_0__0__Impl : ( ( rule__Precedence__RuletypAssignment_0_0 ) ) ;
     public final void rule__Precedence__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2019:1: ( ( ( rule__Precedence__RuletypAssignment_0_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2020:1: ( ( rule__Precedence__RuletypAssignment_0_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2025:1: ( ( ( rule__Precedence__RuletypAssignment_0_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2026:1: ( ( rule__Precedence__RuletypAssignment_0_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2020:1: ( ( rule__Precedence__RuletypAssignment_0_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2021:1: ( rule__Precedence__RuletypAssignment_0_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2026:1: ( ( rule__Precedence__RuletypAssignment_0_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2027:1: ( rule__Precedence__RuletypAssignment_0_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2022:1: ( rule__Precedence__RuletypAssignment_0_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2022:2: rule__Precedence__RuletypAssignment_0_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2028:1: ( rule__Precedence__RuletypAssignment_0_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2028:2: rule__Precedence__RuletypAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_0_0_in_rule__Precedence__Group_0__0__Impl4131);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_0_0_in_rule__Precedence__Group_0__0__Impl4149);
             rule__Precedence__RuletypAssignment_0_0();
 
             state._fsp--;
@@ -5704,17 +5736,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_0__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2032:1: rule__Precedence__Group_0__1 : rule__Precedence__Group_0__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2038:1: rule__Precedence__Group_0__1 : rule__Precedence__Group_0__1__Impl rule__Precedence__Group_0__2 ;
     public final void rule__Precedence__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2036:1: ( rule__Precedence__Group_0__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2037:2: rule__Precedence__Group_0__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2042:1: ( rule__Precedence__Group_0__1__Impl rule__Precedence__Group_0__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2043:2: rule__Precedence__Group_0__1__Impl rule__Precedence__Group_0__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_0__1__Impl_in_rule__Precedence__Group_0__14161);
+            pushFollow(FOLLOW_rule__Precedence__Group_0__1__Impl_in_rule__Precedence__Group_0__14179);
             rule__Precedence__Group_0__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_0__2_in_rule__Precedence__Group_0__14182);
+            rule__Precedence__Group_0__2();
 
             state._fsp--;
 
@@ -5737,23 +5774,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_0__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2043:1: rule__Precedence__Group_0__1__Impl : ( ( rule__Precedence__RuleAssignment_0_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2050:1: rule__Precedence__Group_0__1__Impl : ( ( rule__Precedence__RuleAssignment_0_1 ) ) ;
     public final void rule__Precedence__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2047:1: ( ( ( rule__Precedence__RuleAssignment_0_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2048:1: ( ( rule__Precedence__RuleAssignment_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2054:1: ( ( ( rule__Precedence__RuleAssignment_0_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2055:1: ( ( rule__Precedence__RuleAssignment_0_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2048:1: ( ( rule__Precedence__RuleAssignment_0_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2049:1: ( rule__Precedence__RuleAssignment_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2055:1: ( ( rule__Precedence__RuleAssignment_0_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2056:1: ( rule__Precedence__RuleAssignment_0_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_0_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2050:1: ( rule__Precedence__RuleAssignment_0_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2050:2: rule__Precedence__RuleAssignment_0_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2057:1: ( rule__Precedence__RuleAssignment_0_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2057:2: rule__Precedence__RuleAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_0_1_in_rule__Precedence__Group_0__1__Impl4188);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_0_1_in_rule__Precedence__Group_0__1__Impl4209);
             rule__Precedence__RuleAssignment_0_1();
 
             state._fsp--;
@@ -5783,22 +5820,268 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_0__1__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_0__2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2067:1: rule__Precedence__Group_0__2 : rule__Precedence__Group_0__2__Impl ;
+    public final void rule__Precedence__Group_0__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2071:1: ( rule__Precedence__Group_0__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2072:2: rule__Precedence__Group_0__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_0__2__Impl_in_rule__Precedence__Group_0__24239);
+            rule__Precedence__Group_0__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0__2"
+
+
+    // $ANTLR start "rule__Precedence__Group_0__2__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2078:1: rule__Precedence__Group_0__2__Impl : ( ( rule__Precedence__Group_0_2__0 )? ) ;
+    public final void rule__Precedence__Group_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2082:1: ( ( ( rule__Precedence__Group_0_2__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2083:1: ( ( rule__Precedence__Group_0_2__0 )? )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2083:1: ( ( rule__Precedence__Group_0_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2084:1: ( rule__Precedence__Group_0_2__0 )?
+            {
+             before(grammarAccess.getPrecedenceAccess().getGroup_0_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2085:1: ( rule__Precedence__Group_0_2__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
+
+            if ( (LA16_0==38) ) {
+                alt16=1;
+            }
+            switch (alt16) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2085:2: rule__Precedence__Group_0_2__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_0_2__0_in_rule__Precedence__Group_0__2__Impl4266);
+                    rule__Precedence__Group_0_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getGroup_0_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0__2__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_0_2__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2101:1: rule__Precedence__Group_0_2__0 : rule__Precedence__Group_0_2__0__Impl rule__Precedence__Group_0_2__1 ;
+    public final void rule__Precedence__Group_0_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2105:1: ( rule__Precedence__Group_0_2__0__Impl rule__Precedence__Group_0_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2106:2: rule__Precedence__Group_0_2__0__Impl rule__Precedence__Group_0_2__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_0_2__0__Impl_in_rule__Precedence__Group_0_2__04303);
+            rule__Precedence__Group_0_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_0_2__1_in_rule__Precedence__Group_0_2__04306);
+            rule__Precedence__Group_0_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0_2__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_0_2__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2113:1: rule__Precedence__Group_0_2__0__Impl : ( '.' ) ;
+    public final void rule__Precedence__Group_0_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2117:1: ( ( '.' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2118:1: ( '.' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2118:1: ( '.' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2119:1: '.'
+            {
+             before(grammarAccess.getPrecedenceAccess().getFullStopKeyword_0_2_0()); 
+            match(input,38,FOLLOW_38_in_rule__Precedence__Group_0_2__0__Impl4334); 
+             after(grammarAccess.getPrecedenceAccess().getFullStopKeyword_0_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0_2__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_0_2__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2132:1: rule__Precedence__Group_0_2__1 : rule__Precedence__Group_0_2__1__Impl ;
+    public final void rule__Precedence__Group_0_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2136:1: ( rule__Precedence__Group_0_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2137:2: rule__Precedence__Group_0_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_0_2__1__Impl_in_rule__Precedence__Group_0_2__14365);
+            rule__Precedence__Group_0_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0_2__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_0_2__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2143:1: rule__Precedence__Group_0_2__1__Impl : ( ( rule__Precedence__Feature1Assignment_0_2_1 ) ) ;
+    public final void rule__Precedence__Group_0_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2147:1: ( ( ( rule__Precedence__Feature1Assignment_0_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2148:1: ( ( rule__Precedence__Feature1Assignment_0_2_1 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2148:1: ( ( rule__Precedence__Feature1Assignment_0_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2149:1: ( rule__Precedence__Feature1Assignment_0_2_1 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1Assignment_0_2_1()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2150:1: ( rule__Precedence__Feature1Assignment_0_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2150:2: rule__Precedence__Feature1Assignment_0_2_1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature1Assignment_0_2_1_in_rule__Precedence__Group_0_2__1__Impl4392);
+            rule__Precedence__Feature1Assignment_0_2_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature1Assignment_0_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_0_2__1__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2064:1: rule__Precedence__Group_1__0 : rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2164:1: rule__Precedence__Group_1__0 : rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1 ;
     public final void rule__Precedence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2068:1: ( rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2069:2: rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2168:1: ( rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2169:2: rule__Precedence__Group_1__0__Impl rule__Precedence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_1__0__Impl_in_rule__Precedence__Group_1__04222);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__0__Impl_in_rule__Precedence__Group_1__04426);
             rule__Precedence__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_1__1_in_rule__Precedence__Group_1__04225);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__1_in_rule__Precedence__Group_1__04429);
             rule__Precedence__Group_1__1();
 
             state._fsp--;
@@ -5822,23 +6105,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2076:1: rule__Precedence__Group_1__0__Impl : ( ( rule__Precedence__RuletypAssignment_1_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2176:1: rule__Precedence__Group_1__0__Impl : ( ( rule__Precedence__RuletypAssignment_1_0 ) ) ;
     public final void rule__Precedence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2080:1: ( ( ( rule__Precedence__RuletypAssignment_1_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2081:1: ( ( rule__Precedence__RuletypAssignment_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2180:1: ( ( ( rule__Precedence__RuletypAssignment_1_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2181:1: ( ( rule__Precedence__RuletypAssignment_1_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2081:1: ( ( rule__Precedence__RuletypAssignment_1_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2082:1: ( rule__Precedence__RuletypAssignment_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2181:1: ( ( rule__Precedence__RuletypAssignment_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2182:1: ( rule__Precedence__RuletypAssignment_1_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_1_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2083:1: ( rule__Precedence__RuletypAssignment_1_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2083:2: rule__Precedence__RuletypAssignment_1_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2183:1: ( rule__Precedence__RuletypAssignment_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2183:2: rule__Precedence__RuletypAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_1_0_in_rule__Precedence__Group_1__0__Impl4252);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_1_0_in_rule__Precedence__Group_1__0__Impl4456);
             rule__Precedence__RuletypAssignment_1_0();
 
             state._fsp--;
@@ -5869,21 +6152,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2093:1: rule__Precedence__Group_1__1 : rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2193:1: rule__Precedence__Group_1__1 : rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2 ;
     public final void rule__Precedence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2097:1: ( rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2098:2: rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2197:1: ( rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2198:2: rule__Precedence__Group_1__1__Impl rule__Precedence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_1__1__Impl_in_rule__Precedence__Group_1__14282);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__1__Impl_in_rule__Precedence__Group_1__14486);
             rule__Precedence__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_1__2_in_rule__Precedence__Group_1__14285);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__2_in_rule__Precedence__Group_1__14489);
             rule__Precedence__Group_1__2();
 
             state._fsp--;
@@ -5907,23 +6190,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2105:1: rule__Precedence__Group_1__1__Impl : ( ( rule__Precedence__RuleAssignment_1_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2205:1: rule__Precedence__Group_1__1__Impl : ( ( rule__Precedence__RuleAssignment_1_1 ) ) ;
     public final void rule__Precedence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2109:1: ( ( ( rule__Precedence__RuleAssignment_1_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2110:1: ( ( rule__Precedence__RuleAssignment_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2209:1: ( ( ( rule__Precedence__RuleAssignment_1_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2210:1: ( ( rule__Precedence__RuleAssignment_1_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2110:1: ( ( rule__Precedence__RuleAssignment_1_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2111:1: ( rule__Precedence__RuleAssignment_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2210:1: ( ( rule__Precedence__RuleAssignment_1_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2211:1: ( rule__Precedence__RuleAssignment_1_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2112:1: ( rule__Precedence__RuleAssignment_1_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2112:2: rule__Precedence__RuleAssignment_1_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2212:1: ( rule__Precedence__RuleAssignment_1_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2212:2: rule__Precedence__RuleAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_1_1_in_rule__Precedence__Group_1__1__Impl4312);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_1_1_in_rule__Precedence__Group_1__1__Impl4516);
             rule__Precedence__RuleAssignment_1_1();
 
             state._fsp--;
@@ -5954,21 +6237,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2122:1: rule__Precedence__Group_1__2 : rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2222:1: rule__Precedence__Group_1__2 : rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3 ;
     public final void rule__Precedence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2126:1: ( rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2127:2: rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2226:1: ( rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2227:2: rule__Precedence__Group_1__2__Impl rule__Precedence__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_1__2__Impl_in_rule__Precedence__Group_1__24342);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__2__Impl_in_rule__Precedence__Group_1__24546);
             rule__Precedence__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_1__3_in_rule__Precedence__Group_1__24345);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__3_in_rule__Precedence__Group_1__24549);
             rule__Precedence__Group_1__3();
 
             state._fsp--;
@@ -5992,23 +6275,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2134:1: rule__Precedence__Group_1__2__Impl : ( ( rule__Precedence__PrefixAssignment_1_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2234:1: rule__Precedence__Group_1__2__Impl : ( ( rule__Precedence__PrefixAssignment_1_2 ) ) ;
     public final void rule__Precedence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2138:1: ( ( ( rule__Precedence__PrefixAssignment_1_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2139:1: ( ( rule__Precedence__PrefixAssignment_1_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2238:1: ( ( ( rule__Precedence__PrefixAssignment_1_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2239:1: ( ( rule__Precedence__PrefixAssignment_1_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2139:1: ( ( rule__Precedence__PrefixAssignment_1_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2140:1: ( rule__Precedence__PrefixAssignment_1_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2239:1: ( ( rule__Precedence__PrefixAssignment_1_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2240:1: ( rule__Precedence__PrefixAssignment_1_2 )
             {
              before(grammarAccess.getPrecedenceAccess().getPrefixAssignment_1_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2141:1: ( rule__Precedence__PrefixAssignment_1_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2141:2: rule__Precedence__PrefixAssignment_1_2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2241:1: ( rule__Precedence__PrefixAssignment_1_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2241:2: rule__Precedence__PrefixAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Precedence__PrefixAssignment_1_2_in_rule__Precedence__Group_1__2__Impl4372);
+            pushFollow(FOLLOW_rule__Precedence__PrefixAssignment_1_2_in_rule__Precedence__Group_1__2__Impl4576);
             rule__Precedence__PrefixAssignment_1_2();
 
             state._fsp--;
@@ -6039,17 +6322,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2151:1: rule__Precedence__Group_1__3 : rule__Precedence__Group_1__3__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2251:1: rule__Precedence__Group_1__3 : rule__Precedence__Group_1__3__Impl rule__Precedence__Group_1__4 ;
     public final void rule__Precedence__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2155:1: ( rule__Precedence__Group_1__3__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2156:2: rule__Precedence__Group_1__3__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2255:1: ( rule__Precedence__Group_1__3__Impl rule__Precedence__Group_1__4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2256:2: rule__Precedence__Group_1__3__Impl rule__Precedence__Group_1__4
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_1__3__Impl_in_rule__Precedence__Group_1__34402);
+            pushFollow(FOLLOW_rule__Precedence__Group_1__3__Impl_in_rule__Precedence__Group_1__34606);
             rule__Precedence__Group_1__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_1__4_in_rule__Precedence__Group_1__34609);
+            rule__Precedence__Group_1__4();
 
             state._fsp--;
 
@@ -6072,31 +6360,46 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_1__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2162:1: rule__Precedence__Group_1__3__Impl : ( ( rule__Precedence__Par1Assignment_1_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2263:1: rule__Precedence__Group_1__3__Impl : ( ( rule__Precedence__Group_1_3__0 )? ) ;
     public final void rule__Precedence__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2166:1: ( ( ( rule__Precedence__Par1Assignment_1_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2167:1: ( ( rule__Precedence__Par1Assignment_1_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2267:1: ( ( ( rule__Precedence__Group_1_3__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2268:1: ( ( rule__Precedence__Group_1_3__0 )? )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2167:1: ( ( rule__Precedence__Par1Assignment_1_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2168:1: ( rule__Precedence__Par1Assignment_1_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2268:1: ( ( rule__Precedence__Group_1_3__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2269:1: ( rule__Precedence__Group_1_3__0 )?
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_1_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2169:1: ( rule__Precedence__Par1Assignment_1_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2169:2: rule__Precedence__Par1Assignment_1_3
-            {
-            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_1_3_in_rule__Precedence__Group_1__3__Impl4429);
-            rule__Precedence__Par1Assignment_1_3();
+             before(grammarAccess.getPrecedenceAccess().getGroup_1_3()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2270:1: ( rule__Precedence__Group_1_3__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA17_0==RULE_ID) ) {
+                int LA17_1 = input.LA(2);
 
+                if ( (LA17_1==35) ) {
+                    alt17=1;
+                }
+            }
+            switch (alt17) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2270:2: rule__Precedence__Group_1_3__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_1_3__0_in_rule__Precedence__Group_1__3__Impl4636);
+                    rule__Precedence__Group_1_3__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_1_3()); 
+             after(grammarAccess.getPrecedenceAccess().getGroup_1_3()); 
 
             }
 
@@ -6118,22 +6421,257 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_1__3__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_1__4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2280:1: rule__Precedence__Group_1__4 : rule__Precedence__Group_1__4__Impl ;
+    public final void rule__Precedence__Group_1__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2284:1: ( rule__Precedence__Group_1__4__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2285:2: rule__Precedence__Group_1__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_1__4__Impl_in_rule__Precedence__Group_1__44667);
+            rule__Precedence__Group_1__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1__4"
+
+
+    // $ANTLR start "rule__Precedence__Group_1__4__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2291:1: rule__Precedence__Group_1__4__Impl : ( ( rule__Precedence__Par1Assignment_1_4 ) ) ;
+    public final void rule__Precedence__Group_1__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2295:1: ( ( ( rule__Precedence__Par1Assignment_1_4 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2296:1: ( ( rule__Precedence__Par1Assignment_1_4 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2296:1: ( ( rule__Precedence__Par1Assignment_1_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2297:1: ( rule__Precedence__Par1Assignment_1_4 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_1_4()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2298:1: ( rule__Precedence__Par1Assignment_1_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2298:2: rule__Precedence__Par1Assignment_1_4
+            {
+            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_1_4_in_rule__Precedence__Group_1__4__Impl4694);
+            rule__Precedence__Par1Assignment_1_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_1_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1__4__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_1_3__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2318:1: rule__Precedence__Group_1_3__0 : rule__Precedence__Group_1_3__0__Impl rule__Precedence__Group_1_3__1 ;
+    public final void rule__Precedence__Group_1_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2322:1: ( rule__Precedence__Group_1_3__0__Impl rule__Precedence__Group_1_3__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2323:2: rule__Precedence__Group_1_3__0__Impl rule__Precedence__Group_1_3__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_1_3__0__Impl_in_rule__Precedence__Group_1_3__04734);
+            rule__Precedence__Group_1_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_1_3__1_in_rule__Precedence__Group_1_3__04737);
+            rule__Precedence__Group_1_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1_3__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_1_3__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2330:1: rule__Precedence__Group_1_3__0__Impl : ( ( rule__Precedence__Feature1Assignment_1_3_0 ) ) ;
+    public final void rule__Precedence__Group_1_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2334:1: ( ( ( rule__Precedence__Feature1Assignment_1_3_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2335:1: ( ( rule__Precedence__Feature1Assignment_1_3_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2335:1: ( ( rule__Precedence__Feature1Assignment_1_3_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2336:1: ( rule__Precedence__Feature1Assignment_1_3_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1Assignment_1_3_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2337:1: ( rule__Precedence__Feature1Assignment_1_3_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2337:2: rule__Precedence__Feature1Assignment_1_3_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature1Assignment_1_3_0_in_rule__Precedence__Group_1_3__0__Impl4764);
+            rule__Precedence__Feature1Assignment_1_3_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature1Assignment_1_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1_3__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_1_3__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2347:1: rule__Precedence__Group_1_3__1 : rule__Precedence__Group_1_3__1__Impl ;
+    public final void rule__Precedence__Group_1_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2351:1: ( rule__Precedence__Group_1_3__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2352:2: rule__Precedence__Group_1_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_1_3__1__Impl_in_rule__Precedence__Group_1_3__14794);
+            rule__Precedence__Group_1_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1_3__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_1_3__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2358:1: rule__Precedence__Group_1_3__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_1_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2362:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2363:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2363:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2364:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_1_3_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_1_3__1__Impl4822); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_1_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_1_3__1__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_2__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2187:1: rule__Precedence__Group_2__0 : rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2381:1: rule__Precedence__Group_2__0 : rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1 ;
     public final void rule__Precedence__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2191:1: ( rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2192:2: rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2385:1: ( rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2386:2: rule__Precedence__Group_2__0__Impl rule__Precedence__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_2__0__Impl_in_rule__Precedence__Group_2__04467);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__0__Impl_in_rule__Precedence__Group_2__04857);
             rule__Precedence__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_2__1_in_rule__Precedence__Group_2__04470);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__1_in_rule__Precedence__Group_2__04860);
             rule__Precedence__Group_2__1();
 
             state._fsp--;
@@ -6157,23 +6695,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2199:1: rule__Precedence__Group_2__0__Impl : ( ( rule__Precedence__RuletypAssignment_2_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2393:1: rule__Precedence__Group_2__0__Impl : ( ( rule__Precedence__RuletypAssignment_2_0 ) ) ;
     public final void rule__Precedence__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2203:1: ( ( ( rule__Precedence__RuletypAssignment_2_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2204:1: ( ( rule__Precedence__RuletypAssignment_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2397:1: ( ( ( rule__Precedence__RuletypAssignment_2_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2398:1: ( ( rule__Precedence__RuletypAssignment_2_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2204:1: ( ( rule__Precedence__RuletypAssignment_2_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2205:1: ( rule__Precedence__RuletypAssignment_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2398:1: ( ( rule__Precedence__RuletypAssignment_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2399:1: ( rule__Precedence__RuletypAssignment_2_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_2_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2206:1: ( rule__Precedence__RuletypAssignment_2_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2206:2: rule__Precedence__RuletypAssignment_2_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2400:1: ( rule__Precedence__RuletypAssignment_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2400:2: rule__Precedence__RuletypAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_2_0_in_rule__Precedence__Group_2__0__Impl4497);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_2_0_in_rule__Precedence__Group_2__0__Impl4887);
             rule__Precedence__RuletypAssignment_2_0();
 
             state._fsp--;
@@ -6204,21 +6742,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2216:1: rule__Precedence__Group_2__1 : rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2410:1: rule__Precedence__Group_2__1 : rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2 ;
     public final void rule__Precedence__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2220:1: ( rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2221:2: rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2414:1: ( rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2415:2: rule__Precedence__Group_2__1__Impl rule__Precedence__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_2__1__Impl_in_rule__Precedence__Group_2__14527);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__1__Impl_in_rule__Precedence__Group_2__14917);
             rule__Precedence__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_2__2_in_rule__Precedence__Group_2__14530);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__2_in_rule__Precedence__Group_2__14920);
             rule__Precedence__Group_2__2();
 
             state._fsp--;
@@ -6242,23 +6780,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2228:1: rule__Precedence__Group_2__1__Impl : ( ( rule__Precedence__RuleAssignment_2_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2422:1: rule__Precedence__Group_2__1__Impl : ( ( rule__Precedence__RuleAssignment_2_1 ) ) ;
     public final void rule__Precedence__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2232:1: ( ( ( rule__Precedence__RuleAssignment_2_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2233:1: ( ( rule__Precedence__RuleAssignment_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2426:1: ( ( ( rule__Precedence__RuleAssignment_2_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2427:1: ( ( rule__Precedence__RuleAssignment_2_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2233:1: ( ( rule__Precedence__RuleAssignment_2_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2234:1: ( rule__Precedence__RuleAssignment_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2427:1: ( ( rule__Precedence__RuleAssignment_2_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2428:1: ( rule__Precedence__RuleAssignment_2_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_2_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2235:1: ( rule__Precedence__RuleAssignment_2_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2235:2: rule__Precedence__RuleAssignment_2_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2429:1: ( rule__Precedence__RuleAssignment_2_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2429:2: rule__Precedence__RuleAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_2_1_in_rule__Precedence__Group_2__1__Impl4557);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_2_1_in_rule__Precedence__Group_2__1__Impl4947);
             rule__Precedence__RuleAssignment_2_1();
 
             state._fsp--;
@@ -6289,21 +6827,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2245:1: rule__Precedence__Group_2__2 : rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2439:1: rule__Precedence__Group_2__2 : rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3 ;
     public final void rule__Precedence__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2249:1: ( rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2250:2: rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2443:1: ( rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2444:2: rule__Precedence__Group_2__2__Impl rule__Precedence__Group_2__3
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_2__2__Impl_in_rule__Precedence__Group_2__24587);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__2__Impl_in_rule__Precedence__Group_2__24977);
             rule__Precedence__Group_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_2__3_in_rule__Precedence__Group_2__24590);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__3_in_rule__Precedence__Group_2__24980);
             rule__Precedence__Group_2__3();
 
             state._fsp--;
@@ -6327,31 +6865,46 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2257:1: rule__Precedence__Group_2__2__Impl : ( ( rule__Precedence__Par1Assignment_2_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2451:1: rule__Precedence__Group_2__2__Impl : ( ( rule__Precedence__Group_2_2__0 )? ) ;
     public final void rule__Precedence__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2261:1: ( ( ( rule__Precedence__Par1Assignment_2_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2262:1: ( ( rule__Precedence__Par1Assignment_2_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2455:1: ( ( ( rule__Precedence__Group_2_2__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2456:1: ( ( rule__Precedence__Group_2_2__0 )? )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2262:1: ( ( rule__Precedence__Par1Assignment_2_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2263:1: ( rule__Precedence__Par1Assignment_2_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2456:1: ( ( rule__Precedence__Group_2_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2457:1: ( rule__Precedence__Group_2_2__0 )?
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_2_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2264:1: ( rule__Precedence__Par1Assignment_2_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2264:2: rule__Precedence__Par1Assignment_2_2
-            {
-            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_2_2_in_rule__Precedence__Group_2__2__Impl4617);
-            rule__Precedence__Par1Assignment_2_2();
+             before(grammarAccess.getPrecedenceAccess().getGroup_2_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2458:1: ( rule__Precedence__Group_2_2__0 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA18_0==RULE_ID) ) {
+                int LA18_1 = input.LA(2);
 
+                if ( (LA18_1==35) ) {
+                    alt18=1;
+                }
+            }
+            switch (alt18) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2458:2: rule__Precedence__Group_2_2__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_2_2__0_in_rule__Precedence__Group_2__2__Impl5007);
+                    rule__Precedence__Group_2_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_2_2()); 
+             after(grammarAccess.getPrecedenceAccess().getGroup_2_2()); 
 
             }
 
@@ -6374,17 +6927,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2274:1: rule__Precedence__Group_2__3 : rule__Precedence__Group_2__3__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2468:1: rule__Precedence__Group_2__3 : rule__Precedence__Group_2__3__Impl rule__Precedence__Group_2__4 ;
     public final void rule__Precedence__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2278:1: ( rule__Precedence__Group_2__3__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2279:2: rule__Precedence__Group_2__3__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2472:1: ( rule__Precedence__Group_2__3__Impl rule__Precedence__Group_2__4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2473:2: rule__Precedence__Group_2__3__Impl rule__Precedence__Group_2__4
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_2__3__Impl_in_rule__Precedence__Group_2__34647);
+            pushFollow(FOLLOW_rule__Precedence__Group_2__3__Impl_in_rule__Precedence__Group_2__35038);
             rule__Precedence__Group_2__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_2__4_in_rule__Precedence__Group_2__35041);
+            rule__Precedence__Group_2__4();
 
             state._fsp--;
 
@@ -6407,31 +6965,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_2__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2285:1: rule__Precedence__Group_2__3__Impl : ( ( rule__Precedence__SuffixAssignment_2_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2480:1: rule__Precedence__Group_2__3__Impl : ( ( rule__Precedence__Par1Assignment_2_3 ) ) ;
     public final void rule__Precedence__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2289:1: ( ( ( rule__Precedence__SuffixAssignment_2_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2290:1: ( ( rule__Precedence__SuffixAssignment_2_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2484:1: ( ( ( rule__Precedence__Par1Assignment_2_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2485:1: ( ( rule__Precedence__Par1Assignment_2_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2290:1: ( ( rule__Precedence__SuffixAssignment_2_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2291:1: ( rule__Precedence__SuffixAssignment_2_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2485:1: ( ( rule__Precedence__Par1Assignment_2_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2486:1: ( rule__Precedence__Par1Assignment_2_3 )
             {
-             before(grammarAccess.getPrecedenceAccess().getSuffixAssignment_2_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2292:1: ( rule__Precedence__SuffixAssignment_2_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2292:2: rule__Precedence__SuffixAssignment_2_3
+             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_2_3()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2487:1: ( rule__Precedence__Par1Assignment_2_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2487:2: rule__Precedence__Par1Assignment_2_3
             {
-            pushFollow(FOLLOW_rule__Precedence__SuffixAssignment_2_3_in_rule__Precedence__Group_2__3__Impl4674);
-            rule__Precedence__SuffixAssignment_2_3();
+            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_2_3_in_rule__Precedence__Group_2__3__Impl5068);
+            rule__Precedence__Par1Assignment_2_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getSuffixAssignment_2_3()); 
+             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_2_3()); 
 
             }
 
@@ -6453,22 +7011,257 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_2__3__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_2__4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2497:1: rule__Precedence__Group_2__4 : rule__Precedence__Group_2__4__Impl ;
+    public final void rule__Precedence__Group_2__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2501:1: ( rule__Precedence__Group_2__4__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2502:2: rule__Precedence__Group_2__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_2__4__Impl_in_rule__Precedence__Group_2__45098);
+            rule__Precedence__Group_2__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2__4"
+
+
+    // $ANTLR start "rule__Precedence__Group_2__4__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2508:1: rule__Precedence__Group_2__4__Impl : ( ( rule__Precedence__SuffixAssignment_2_4 ) ) ;
+    public final void rule__Precedence__Group_2__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2512:1: ( ( ( rule__Precedence__SuffixAssignment_2_4 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2513:1: ( ( rule__Precedence__SuffixAssignment_2_4 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2513:1: ( ( rule__Precedence__SuffixAssignment_2_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2514:1: ( rule__Precedence__SuffixAssignment_2_4 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getSuffixAssignment_2_4()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2515:1: ( rule__Precedence__SuffixAssignment_2_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2515:2: rule__Precedence__SuffixAssignment_2_4
+            {
+            pushFollow(FOLLOW_rule__Precedence__SuffixAssignment_2_4_in_rule__Precedence__Group_2__4__Impl5125);
+            rule__Precedence__SuffixAssignment_2_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getSuffixAssignment_2_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2__4__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_2_2__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2535:1: rule__Precedence__Group_2_2__0 : rule__Precedence__Group_2_2__0__Impl rule__Precedence__Group_2_2__1 ;
+    public final void rule__Precedence__Group_2_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2539:1: ( rule__Precedence__Group_2_2__0__Impl rule__Precedence__Group_2_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2540:2: rule__Precedence__Group_2_2__0__Impl rule__Precedence__Group_2_2__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_2_2__0__Impl_in_rule__Precedence__Group_2_2__05165);
+            rule__Precedence__Group_2_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_2_2__1_in_rule__Precedence__Group_2_2__05168);
+            rule__Precedence__Group_2_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2_2__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_2_2__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2547:1: rule__Precedence__Group_2_2__0__Impl : ( ( rule__Precedence__Feature1Assignment_2_2_0 ) ) ;
+    public final void rule__Precedence__Group_2_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2551:1: ( ( ( rule__Precedence__Feature1Assignment_2_2_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2552:1: ( ( rule__Precedence__Feature1Assignment_2_2_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2552:1: ( ( rule__Precedence__Feature1Assignment_2_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2553:1: ( rule__Precedence__Feature1Assignment_2_2_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1Assignment_2_2_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2554:1: ( rule__Precedence__Feature1Assignment_2_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2554:2: rule__Precedence__Feature1Assignment_2_2_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature1Assignment_2_2_0_in_rule__Precedence__Group_2_2__0__Impl5195);
+            rule__Precedence__Feature1Assignment_2_2_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature1Assignment_2_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2_2__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_2_2__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2564:1: rule__Precedence__Group_2_2__1 : rule__Precedence__Group_2_2__1__Impl ;
+    public final void rule__Precedence__Group_2_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2568:1: ( rule__Precedence__Group_2_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2569:2: rule__Precedence__Group_2_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_2_2__1__Impl_in_rule__Precedence__Group_2_2__15225);
+            rule__Precedence__Group_2_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2_2__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_2_2__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2575:1: rule__Precedence__Group_2_2__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_2_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2579:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2580:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2580:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2581:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_2_2_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_2_2__1__Impl5253); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_2_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_2_2__1__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_3__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2310:1: rule__Precedence__Group_3__0 : rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2598:1: rule__Precedence__Group_3__0 : rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1 ;
     public final void rule__Precedence__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2314:1: ( rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2315:2: rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2602:1: ( rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2603:2: rule__Precedence__Group_3__0__Impl rule__Precedence__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_3__0__Impl_in_rule__Precedence__Group_3__04712);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__0__Impl_in_rule__Precedence__Group_3__05288);
             rule__Precedence__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_3__1_in_rule__Precedence__Group_3__04715);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__1_in_rule__Precedence__Group_3__05291);
             rule__Precedence__Group_3__1();
 
             state._fsp--;
@@ -6492,23 +7285,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2322:1: rule__Precedence__Group_3__0__Impl : ( ( rule__Precedence__RuletypAssignment_3_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2610:1: rule__Precedence__Group_3__0__Impl : ( ( rule__Precedence__RuletypAssignment_3_0 ) ) ;
     public final void rule__Precedence__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2326:1: ( ( ( rule__Precedence__RuletypAssignment_3_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2327:1: ( ( rule__Precedence__RuletypAssignment_3_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2614:1: ( ( ( rule__Precedence__RuletypAssignment_3_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2615:1: ( ( rule__Precedence__RuletypAssignment_3_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2327:1: ( ( rule__Precedence__RuletypAssignment_3_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2328:1: ( rule__Precedence__RuletypAssignment_3_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2615:1: ( ( rule__Precedence__RuletypAssignment_3_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2616:1: ( rule__Precedence__RuletypAssignment_3_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_3_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2329:1: ( rule__Precedence__RuletypAssignment_3_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2329:2: rule__Precedence__RuletypAssignment_3_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2617:1: ( rule__Precedence__RuletypAssignment_3_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2617:2: rule__Precedence__RuletypAssignment_3_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_3_0_in_rule__Precedence__Group_3__0__Impl4742);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_3_0_in_rule__Precedence__Group_3__0__Impl5318);
             rule__Precedence__RuletypAssignment_3_0();
 
             state._fsp--;
@@ -6539,21 +7332,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2339:1: rule__Precedence__Group_3__1 : rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2627:1: rule__Precedence__Group_3__1 : rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2 ;
     public final void rule__Precedence__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2343:1: ( rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2344:2: rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2631:1: ( rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2632:2: rule__Precedence__Group_3__1__Impl rule__Precedence__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_3__1__Impl_in_rule__Precedence__Group_3__14772);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__1__Impl_in_rule__Precedence__Group_3__15348);
             rule__Precedence__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_3__2_in_rule__Precedence__Group_3__14775);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__2_in_rule__Precedence__Group_3__15351);
             rule__Precedence__Group_3__2();
 
             state._fsp--;
@@ -6577,23 +7370,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2351:1: rule__Precedence__Group_3__1__Impl : ( ( rule__Precedence__RuleAssignment_3_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2639:1: rule__Precedence__Group_3__1__Impl : ( ( rule__Precedence__RuleAssignment_3_1 ) ) ;
     public final void rule__Precedence__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2355:1: ( ( ( rule__Precedence__RuleAssignment_3_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2356:1: ( ( rule__Precedence__RuleAssignment_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2643:1: ( ( ( rule__Precedence__RuleAssignment_3_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2644:1: ( ( rule__Precedence__RuleAssignment_3_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2356:1: ( ( rule__Precedence__RuleAssignment_3_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2357:1: ( rule__Precedence__RuleAssignment_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2644:1: ( ( rule__Precedence__RuleAssignment_3_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2645:1: ( rule__Precedence__RuleAssignment_3_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_3_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2358:1: ( rule__Precedence__RuleAssignment_3_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2358:2: rule__Precedence__RuleAssignment_3_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2646:1: ( rule__Precedence__RuleAssignment_3_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2646:2: rule__Precedence__RuleAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_3_1_in_rule__Precedence__Group_3__1__Impl4802);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_3_1_in_rule__Precedence__Group_3__1__Impl5378);
             rule__Precedence__RuleAssignment_3_1();
 
             state._fsp--;
@@ -6624,21 +7417,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2368:1: rule__Precedence__Group_3__2 : rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2656:1: rule__Precedence__Group_3__2 : rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3 ;
     public final void rule__Precedence__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2372:1: ( rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2373:2: rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2660:1: ( rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2661:2: rule__Precedence__Group_3__2__Impl rule__Precedence__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_3__2__Impl_in_rule__Precedence__Group_3__24832);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__2__Impl_in_rule__Precedence__Group_3__25408);
             rule__Precedence__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_3__3_in_rule__Precedence__Group_3__24835);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__3_in_rule__Precedence__Group_3__25411);
             rule__Precedence__Group_3__3();
 
             state._fsp--;
@@ -6662,31 +7455,46 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2380:1: rule__Precedence__Group_3__2__Impl : ( ( rule__Precedence__Par1Assignment_3_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2668:1: rule__Precedence__Group_3__2__Impl : ( ( rule__Precedence__Group_3_2__0 )? ) ;
     public final void rule__Precedence__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2384:1: ( ( ( rule__Precedence__Par1Assignment_3_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2385:1: ( ( rule__Precedence__Par1Assignment_3_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2672:1: ( ( ( rule__Precedence__Group_3_2__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2673:1: ( ( rule__Precedence__Group_3_2__0 )? )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2385:1: ( ( rule__Precedence__Par1Assignment_3_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2386:1: ( rule__Precedence__Par1Assignment_3_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2673:1: ( ( rule__Precedence__Group_3_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2674:1: ( rule__Precedence__Group_3_2__0 )?
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_3_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2387:1: ( rule__Precedence__Par1Assignment_3_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2387:2: rule__Precedence__Par1Assignment_3_2
-            {
-            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_3_2_in_rule__Precedence__Group_3__2__Impl4862);
-            rule__Precedence__Par1Assignment_3_2();
+             before(grammarAccess.getPrecedenceAccess().getGroup_3_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2675:1: ( rule__Precedence__Group_3_2__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA19_0==RULE_ID) ) {
+                int LA19_1 = input.LA(2);
 
+                if ( (LA19_1==35) ) {
+                    alt19=1;
+                }
+            }
+            switch (alt19) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2675:2: rule__Precedence__Group_3_2__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_3_2__0_in_rule__Precedence__Group_3__2__Impl5438);
+                    rule__Precedence__Group_3_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_3_2()); 
+             after(grammarAccess.getPrecedenceAccess().getGroup_3_2()); 
 
             }
 
@@ -6709,21 +7517,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2397:1: rule__Precedence__Group_3__3 : rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2685:1: rule__Precedence__Group_3__3 : rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4 ;
     public final void rule__Precedence__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2401:1: ( rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2402:2: rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2689:1: ( rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2690:2: rule__Precedence__Group_3__3__Impl rule__Precedence__Group_3__4
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_3__3__Impl_in_rule__Precedence__Group_3__34892);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__3__Impl_in_rule__Precedence__Group_3__35469);
             rule__Precedence__Group_3__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_3__4_in_rule__Precedence__Group_3__34895);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__4_in_rule__Precedence__Group_3__35472);
             rule__Precedence__Group_3__4();
 
             state._fsp--;
@@ -6747,31 +7555,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2409:1: rule__Precedence__Group_3__3__Impl : ( ( rule__Precedence__InfixAssignment_3_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2697:1: rule__Precedence__Group_3__3__Impl : ( ( rule__Precedence__Par1Assignment_3_3 ) ) ;
     public final void rule__Precedence__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2413:1: ( ( ( rule__Precedence__InfixAssignment_3_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2414:1: ( ( rule__Precedence__InfixAssignment_3_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2701:1: ( ( ( rule__Precedence__Par1Assignment_3_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2702:1: ( ( rule__Precedence__Par1Assignment_3_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2414:1: ( ( rule__Precedence__InfixAssignment_3_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2415:1: ( rule__Precedence__InfixAssignment_3_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2702:1: ( ( rule__Precedence__Par1Assignment_3_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2703:1: ( rule__Precedence__Par1Assignment_3_3 )
             {
-             before(grammarAccess.getPrecedenceAccess().getInfixAssignment_3_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2416:1: ( rule__Precedence__InfixAssignment_3_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2416:2: rule__Precedence__InfixAssignment_3_3
+             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_3_3()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2704:1: ( rule__Precedence__Par1Assignment_3_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2704:2: rule__Precedence__Par1Assignment_3_3
             {
-            pushFollow(FOLLOW_rule__Precedence__InfixAssignment_3_3_in_rule__Precedence__Group_3__3__Impl4922);
-            rule__Precedence__InfixAssignment_3_3();
+            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_3_3_in_rule__Precedence__Group_3__3__Impl5499);
+            rule__Precedence__Par1Assignment_3_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getInfixAssignment_3_3()); 
+             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_3_3()); 
 
             }
 
@@ -6794,17 +7602,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__4"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2426:1: rule__Precedence__Group_3__4 : rule__Precedence__Group_3__4__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2714:1: rule__Precedence__Group_3__4 : rule__Precedence__Group_3__4__Impl rule__Precedence__Group_3__5 ;
     public final void rule__Precedence__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2430:1: ( rule__Precedence__Group_3__4__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2431:2: rule__Precedence__Group_3__4__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2718:1: ( rule__Precedence__Group_3__4__Impl rule__Precedence__Group_3__5 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2719:2: rule__Precedence__Group_3__4__Impl rule__Precedence__Group_3__5
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_3__4__Impl_in_rule__Precedence__Group_3__44952);
+            pushFollow(FOLLOW_rule__Precedence__Group_3__4__Impl_in_rule__Precedence__Group_3__45529);
             rule__Precedence__Group_3__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_3__5_in_rule__Precedence__Group_3__45532);
+            rule__Precedence__Group_3__5();
 
             state._fsp--;
 
@@ -6827,31 +7640,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_3__4__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2437:1: rule__Precedence__Group_3__4__Impl : ( ( rule__Precedence__Par2Assignment_3_4 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2726:1: rule__Precedence__Group_3__4__Impl : ( ( rule__Precedence__InfixAssignment_3_4 ) ) ;
     public final void rule__Precedence__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2441:1: ( ( ( rule__Precedence__Par2Assignment_3_4 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2442:1: ( ( rule__Precedence__Par2Assignment_3_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2730:1: ( ( ( rule__Precedence__InfixAssignment_3_4 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2731:1: ( ( rule__Precedence__InfixAssignment_3_4 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2442:1: ( ( rule__Precedence__Par2Assignment_3_4 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2443:1: ( rule__Precedence__Par2Assignment_3_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2731:1: ( ( rule__Precedence__InfixAssignment_3_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2732:1: ( rule__Precedence__InfixAssignment_3_4 )
             {
-             before(grammarAccess.getPrecedenceAccess().getPar2Assignment_3_4()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2444:1: ( rule__Precedence__Par2Assignment_3_4 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2444:2: rule__Precedence__Par2Assignment_3_4
+             before(grammarAccess.getPrecedenceAccess().getInfixAssignment_3_4()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2733:1: ( rule__Precedence__InfixAssignment_3_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2733:2: rule__Precedence__InfixAssignment_3_4
             {
-            pushFollow(FOLLOW_rule__Precedence__Par2Assignment_3_4_in_rule__Precedence__Group_3__4__Impl4979);
-            rule__Precedence__Par2Assignment_3_4();
+            pushFollow(FOLLOW_rule__Precedence__InfixAssignment_3_4_in_rule__Precedence__Group_3__4__Impl5559);
+            rule__Precedence__InfixAssignment_3_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar2Assignment_3_4()); 
+             after(grammarAccess.getPrecedenceAccess().getInfixAssignment_3_4()); 
 
             }
 
@@ -6873,22 +7686,512 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_3__4__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_3__5"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2743:1: rule__Precedence__Group_3__5 : rule__Precedence__Group_3__5__Impl rule__Precedence__Group_3__6 ;
+    public final void rule__Precedence__Group_3__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2747:1: ( rule__Precedence__Group_3__5__Impl rule__Precedence__Group_3__6 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2748:2: rule__Precedence__Group_3__5__Impl rule__Precedence__Group_3__6
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3__5__Impl_in_rule__Precedence__Group_3__55589);
+            rule__Precedence__Group_3__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_3__6_in_rule__Precedence__Group_3__55592);
+            rule__Precedence__Group_3__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3__5"
+
+
+    // $ANTLR start "rule__Precedence__Group_3__5__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2755:1: rule__Precedence__Group_3__5__Impl : ( ( rule__Precedence__Group_3_5__0 )? ) ;
+    public final void rule__Precedence__Group_3__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2759:1: ( ( ( rule__Precedence__Group_3_5__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2760:1: ( ( rule__Precedence__Group_3_5__0 )? )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2760:1: ( ( rule__Precedence__Group_3_5__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2761:1: ( rule__Precedence__Group_3_5__0 )?
+            {
+             before(grammarAccess.getPrecedenceAccess().getGroup_3_5()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2762:1: ( rule__Precedence__Group_3_5__0 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
+
+            if ( (LA20_0==RULE_ID) ) {
+                int LA20_1 = input.LA(2);
+
+                if ( (LA20_1==35) ) {
+                    alt20=1;
+                }
+            }
+            switch (alt20) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2762:2: rule__Precedence__Group_3_5__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_3_5__0_in_rule__Precedence__Group_3__5__Impl5619);
+                    rule__Precedence__Group_3_5__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getGroup_3_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3__5__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_3__6"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2772:1: rule__Precedence__Group_3__6 : rule__Precedence__Group_3__6__Impl ;
+    public final void rule__Precedence__Group_3__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2776:1: ( rule__Precedence__Group_3__6__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2777:2: rule__Precedence__Group_3__6__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3__6__Impl_in_rule__Precedence__Group_3__65650);
+            rule__Precedence__Group_3__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3__6"
+
+
+    // $ANTLR start "rule__Precedence__Group_3__6__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2783:1: rule__Precedence__Group_3__6__Impl : ( ( rule__Precedence__Par2Assignment_3_6 ) ) ;
+    public final void rule__Precedence__Group_3__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2787:1: ( ( ( rule__Precedence__Par2Assignment_3_6 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2788:1: ( ( rule__Precedence__Par2Assignment_3_6 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2788:1: ( ( rule__Precedence__Par2Assignment_3_6 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2789:1: ( rule__Precedence__Par2Assignment_3_6 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2Assignment_3_6()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2790:1: ( rule__Precedence__Par2Assignment_3_6 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2790:2: rule__Precedence__Par2Assignment_3_6
+            {
+            pushFollow(FOLLOW_rule__Precedence__Par2Assignment_3_6_in_rule__Precedence__Group_3__6__Impl5677);
+            rule__Precedence__Par2Assignment_3_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getPar2Assignment_3_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3__6__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_2__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2814:1: rule__Precedence__Group_3_2__0 : rule__Precedence__Group_3_2__0__Impl rule__Precedence__Group_3_2__1 ;
+    public final void rule__Precedence__Group_3_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2818:1: ( rule__Precedence__Group_3_2__0__Impl rule__Precedence__Group_3_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2819:2: rule__Precedence__Group_3_2__0__Impl rule__Precedence__Group_3_2__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3_2__0__Impl_in_rule__Precedence__Group_3_2__05721);
+            rule__Precedence__Group_3_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_3_2__1_in_rule__Precedence__Group_3_2__05724);
+            rule__Precedence__Group_3_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_2__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_2__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2826:1: rule__Precedence__Group_3_2__0__Impl : ( ( rule__Precedence__Feature1Assignment_3_2_0 ) ) ;
+    public final void rule__Precedence__Group_3_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2830:1: ( ( ( rule__Precedence__Feature1Assignment_3_2_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2831:1: ( ( rule__Precedence__Feature1Assignment_3_2_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2831:1: ( ( rule__Precedence__Feature1Assignment_3_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2832:1: ( rule__Precedence__Feature1Assignment_3_2_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1Assignment_3_2_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2833:1: ( rule__Precedence__Feature1Assignment_3_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2833:2: rule__Precedence__Feature1Assignment_3_2_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature1Assignment_3_2_0_in_rule__Precedence__Group_3_2__0__Impl5751);
+            rule__Precedence__Feature1Assignment_3_2_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature1Assignment_3_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_2__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_2__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2843:1: rule__Precedence__Group_3_2__1 : rule__Precedence__Group_3_2__1__Impl ;
+    public final void rule__Precedence__Group_3_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2847:1: ( rule__Precedence__Group_3_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2848:2: rule__Precedence__Group_3_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3_2__1__Impl_in_rule__Precedence__Group_3_2__15781);
+            rule__Precedence__Group_3_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_2__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_2__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2854:1: rule__Precedence__Group_3_2__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_3_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2858:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2859:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2859:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2860:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_3_2_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_3_2__1__Impl5809); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_3_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_2__1__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_5__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2877:1: rule__Precedence__Group_3_5__0 : rule__Precedence__Group_3_5__0__Impl rule__Precedence__Group_3_5__1 ;
+    public final void rule__Precedence__Group_3_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2881:1: ( rule__Precedence__Group_3_5__0__Impl rule__Precedence__Group_3_5__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2882:2: rule__Precedence__Group_3_5__0__Impl rule__Precedence__Group_3_5__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3_5__0__Impl_in_rule__Precedence__Group_3_5__05844);
+            rule__Precedence__Group_3_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_3_5__1_in_rule__Precedence__Group_3_5__05847);
+            rule__Precedence__Group_3_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_5__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_5__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2889:1: rule__Precedence__Group_3_5__0__Impl : ( ( rule__Precedence__Feature2Assignment_3_5_0 ) ) ;
+    public final void rule__Precedence__Group_3_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2893:1: ( ( ( rule__Precedence__Feature2Assignment_3_5_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2894:1: ( ( rule__Precedence__Feature2Assignment_3_5_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2894:1: ( ( rule__Precedence__Feature2Assignment_3_5_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2895:1: ( rule__Precedence__Feature2Assignment_3_5_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature2Assignment_3_5_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2896:1: ( rule__Precedence__Feature2Assignment_3_5_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2896:2: rule__Precedence__Feature2Assignment_3_5_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature2Assignment_3_5_0_in_rule__Precedence__Group_3_5__0__Impl5874);
+            rule__Precedence__Feature2Assignment_3_5_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature2Assignment_3_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_5__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_5__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2906:1: rule__Precedence__Group_3_5__1 : rule__Precedence__Group_3_5__1__Impl ;
+    public final void rule__Precedence__Group_3_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2910:1: ( rule__Precedence__Group_3_5__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2911:2: rule__Precedence__Group_3_5__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_3_5__1__Impl_in_rule__Precedence__Group_3_5__15904);
+            rule__Precedence__Group_3_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_5__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_3_5__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2917:1: rule__Precedence__Group_3_5__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_3_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2921:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2922:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2922:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2923:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_3_5_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_3_5__1__Impl5932); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_3_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_3_5__1__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_4__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2464:1: rule__Precedence__Group_4__0 : rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2940:1: rule__Precedence__Group_4__0 : rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1 ;
     public final void rule__Precedence__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2468:1: ( rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2469:2: rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2944:1: ( rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2945:2: rule__Precedence__Group_4__0__Impl rule__Precedence__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_4__0__Impl_in_rule__Precedence__Group_4__05019);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__0__Impl_in_rule__Precedence__Group_4__05967);
             rule__Precedence__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_4__1_in_rule__Precedence__Group_4__05022);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__1_in_rule__Precedence__Group_4__05970);
             rule__Precedence__Group_4__1();
 
             state._fsp--;
@@ -6912,23 +8215,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2476:1: rule__Precedence__Group_4__0__Impl : ( ( rule__Precedence__RuletypAssignment_4_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2952:1: rule__Precedence__Group_4__0__Impl : ( ( rule__Precedence__RuletypAssignment_4_0 ) ) ;
     public final void rule__Precedence__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2480:1: ( ( ( rule__Precedence__RuletypAssignment_4_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2481:1: ( ( rule__Precedence__RuletypAssignment_4_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2956:1: ( ( ( rule__Precedence__RuletypAssignment_4_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2957:1: ( ( rule__Precedence__RuletypAssignment_4_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2481:1: ( ( rule__Precedence__RuletypAssignment_4_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2482:1: ( rule__Precedence__RuletypAssignment_4_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2957:1: ( ( rule__Precedence__RuletypAssignment_4_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2958:1: ( rule__Precedence__RuletypAssignment_4_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_4_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2483:1: ( rule__Precedence__RuletypAssignment_4_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2483:2: rule__Precedence__RuletypAssignment_4_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2959:1: ( rule__Precedence__RuletypAssignment_4_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2959:2: rule__Precedence__RuletypAssignment_4_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_4_0_in_rule__Precedence__Group_4__0__Impl5049);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_4_0_in_rule__Precedence__Group_4__0__Impl5997);
             rule__Precedence__RuletypAssignment_4_0();
 
             state._fsp--;
@@ -6959,21 +8262,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2493:1: rule__Precedence__Group_4__1 : rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2969:1: rule__Precedence__Group_4__1 : rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2 ;
     public final void rule__Precedence__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2497:1: ( rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2498:2: rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2973:1: ( rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2974:2: rule__Precedence__Group_4__1__Impl rule__Precedence__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_4__1__Impl_in_rule__Precedence__Group_4__15079);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__1__Impl_in_rule__Precedence__Group_4__16027);
             rule__Precedence__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_4__2_in_rule__Precedence__Group_4__15082);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__2_in_rule__Precedence__Group_4__16030);
             rule__Precedence__Group_4__2();
 
             state._fsp--;
@@ -6997,23 +8300,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2505:1: rule__Precedence__Group_4__1__Impl : ( ( rule__Precedence__RuleAssignment_4_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2981:1: rule__Precedence__Group_4__1__Impl : ( ( rule__Precedence__RuleAssignment_4_1 ) ) ;
     public final void rule__Precedence__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2509:1: ( ( ( rule__Precedence__RuleAssignment_4_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2510:1: ( ( rule__Precedence__RuleAssignment_4_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2985:1: ( ( ( rule__Precedence__RuleAssignment_4_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2986:1: ( ( rule__Precedence__RuleAssignment_4_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2510:1: ( ( rule__Precedence__RuleAssignment_4_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2511:1: ( rule__Precedence__RuleAssignment_4_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2986:1: ( ( rule__Precedence__RuleAssignment_4_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2987:1: ( rule__Precedence__RuleAssignment_4_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_4_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2512:1: ( rule__Precedence__RuleAssignment_4_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2512:2: rule__Precedence__RuleAssignment_4_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2988:1: ( rule__Precedence__RuleAssignment_4_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2988:2: rule__Precedence__RuleAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_4_1_in_rule__Precedence__Group_4__1__Impl5109);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_4_1_in_rule__Precedence__Group_4__1__Impl6057);
             rule__Precedence__RuleAssignment_4_1();
 
             state._fsp--;
@@ -7044,21 +8347,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2522:1: rule__Precedence__Group_4__2 : rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2998:1: rule__Precedence__Group_4__2 : rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3 ;
     public final void rule__Precedence__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2526:1: ( rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2527:2: rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3002:1: ( rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3003:2: rule__Precedence__Group_4__2__Impl rule__Precedence__Group_4__3
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_4__2__Impl_in_rule__Precedence__Group_4__25139);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__2__Impl_in_rule__Precedence__Group_4__26087);
             rule__Precedence__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_4__3_in_rule__Precedence__Group_4__25142);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__3_in_rule__Precedence__Group_4__26090);
             rule__Precedence__Group_4__3();
 
             state._fsp--;
@@ -7082,31 +8385,46 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2534:1: rule__Precedence__Group_4__2__Impl : ( ( rule__Precedence__Par1Assignment_4_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3010:1: rule__Precedence__Group_4__2__Impl : ( ( rule__Precedence__Group_4_2__0 )? ) ;
     public final void rule__Precedence__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2538:1: ( ( ( rule__Precedence__Par1Assignment_4_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2539:1: ( ( rule__Precedence__Par1Assignment_4_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3014:1: ( ( ( rule__Precedence__Group_4_2__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3015:1: ( ( rule__Precedence__Group_4_2__0 )? )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2539:1: ( ( rule__Precedence__Par1Assignment_4_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2540:1: ( rule__Precedence__Par1Assignment_4_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3015:1: ( ( rule__Precedence__Group_4_2__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3016:1: ( rule__Precedence__Group_4_2__0 )?
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_4_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2541:1: ( rule__Precedence__Par1Assignment_4_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2541:2: rule__Precedence__Par1Assignment_4_2
-            {
-            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_4_2_in_rule__Precedence__Group_4__2__Impl5169);
-            rule__Precedence__Par1Assignment_4_2();
+             before(grammarAccess.getPrecedenceAccess().getGroup_4_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3017:1: ( rule__Precedence__Group_4_2__0 )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA21_0==RULE_ID) ) {
+                int LA21_1 = input.LA(2);
 
+                if ( (LA21_1==35) ) {
+                    alt21=1;
+                }
+            }
+            switch (alt21) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3017:2: rule__Precedence__Group_4_2__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_4_2__0_in_rule__Precedence__Group_4__2__Impl6117);
+                    rule__Precedence__Group_4_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_4_2()); 
+             after(grammarAccess.getPrecedenceAccess().getGroup_4_2()); 
 
             }
 
@@ -7129,21 +8447,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2551:1: rule__Precedence__Group_4__3 : rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3027:1: rule__Precedence__Group_4__3 : rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4 ;
     public final void rule__Precedence__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2555:1: ( rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2556:2: rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3031:1: ( rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3032:2: rule__Precedence__Group_4__3__Impl rule__Precedence__Group_4__4
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_4__3__Impl_in_rule__Precedence__Group_4__35199);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__3__Impl_in_rule__Precedence__Group_4__36148);
             rule__Precedence__Group_4__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_4__4_in_rule__Precedence__Group_4__35202);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__4_in_rule__Precedence__Group_4__36151);
             rule__Precedence__Group_4__4();
 
             state._fsp--;
@@ -7167,31 +8485,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__3__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2563:1: rule__Precedence__Group_4__3__Impl : ( ( rule__Precedence__InfixleftAssignment_4_3 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3039:1: rule__Precedence__Group_4__3__Impl : ( ( rule__Precedence__Par1Assignment_4_3 ) ) ;
     public final void rule__Precedence__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2567:1: ( ( ( rule__Precedence__InfixleftAssignment_4_3 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2568:1: ( ( rule__Precedence__InfixleftAssignment_4_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3043:1: ( ( ( rule__Precedence__Par1Assignment_4_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3044:1: ( ( rule__Precedence__Par1Assignment_4_3 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2568:1: ( ( rule__Precedence__InfixleftAssignment_4_3 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2569:1: ( rule__Precedence__InfixleftAssignment_4_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3044:1: ( ( rule__Precedence__Par1Assignment_4_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3045:1: ( rule__Precedence__Par1Assignment_4_3 )
             {
-             before(grammarAccess.getPrecedenceAccess().getInfixleftAssignment_4_3()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2570:1: ( rule__Precedence__InfixleftAssignment_4_3 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2570:2: rule__Precedence__InfixleftAssignment_4_3
+             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_4_3()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3046:1: ( rule__Precedence__Par1Assignment_4_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3046:2: rule__Precedence__Par1Assignment_4_3
             {
-            pushFollow(FOLLOW_rule__Precedence__InfixleftAssignment_4_3_in_rule__Precedence__Group_4__3__Impl5229);
-            rule__Precedence__InfixleftAssignment_4_3();
+            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_4_3_in_rule__Precedence__Group_4__3__Impl6178);
+            rule__Precedence__Par1Assignment_4_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getInfixleftAssignment_4_3()); 
+             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_4_3()); 
 
             }
 
@@ -7214,17 +8532,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__4"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2580:1: rule__Precedence__Group_4__4 : rule__Precedence__Group_4__4__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3056:1: rule__Precedence__Group_4__4 : rule__Precedence__Group_4__4__Impl rule__Precedence__Group_4__5 ;
     public final void rule__Precedence__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2584:1: ( rule__Precedence__Group_4__4__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2585:2: rule__Precedence__Group_4__4__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3060:1: ( rule__Precedence__Group_4__4__Impl rule__Precedence__Group_4__5 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3061:2: rule__Precedence__Group_4__4__Impl rule__Precedence__Group_4__5
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_4__4__Impl_in_rule__Precedence__Group_4__45259);
+            pushFollow(FOLLOW_rule__Precedence__Group_4__4__Impl_in_rule__Precedence__Group_4__46208);
             rule__Precedence__Group_4__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_4__5_in_rule__Precedence__Group_4__46211);
+            rule__Precedence__Group_4__5();
 
             state._fsp--;
 
@@ -7247,31 +8570,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_4__4__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2591:1: rule__Precedence__Group_4__4__Impl : ( ( rule__Precedence__Par2Assignment_4_4 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3068:1: rule__Precedence__Group_4__4__Impl : ( ( rule__Precedence__InfixAssignment_4_4 ) ) ;
     public final void rule__Precedence__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2595:1: ( ( ( rule__Precedence__Par2Assignment_4_4 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2596:1: ( ( rule__Precedence__Par2Assignment_4_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3072:1: ( ( ( rule__Precedence__InfixAssignment_4_4 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3073:1: ( ( rule__Precedence__InfixAssignment_4_4 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2596:1: ( ( rule__Precedence__Par2Assignment_4_4 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2597:1: ( rule__Precedence__Par2Assignment_4_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3073:1: ( ( rule__Precedence__InfixAssignment_4_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3074:1: ( rule__Precedence__InfixAssignment_4_4 )
             {
-             before(grammarAccess.getPrecedenceAccess().getPar2Assignment_4_4()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2598:1: ( rule__Precedence__Par2Assignment_4_4 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2598:2: rule__Precedence__Par2Assignment_4_4
+             before(grammarAccess.getPrecedenceAccess().getInfixAssignment_4_4()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3075:1: ( rule__Precedence__InfixAssignment_4_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3075:2: rule__Precedence__InfixAssignment_4_4
             {
-            pushFollow(FOLLOW_rule__Precedence__Par2Assignment_4_4_in_rule__Precedence__Group_4__4__Impl5286);
-            rule__Precedence__Par2Assignment_4_4();
+            pushFollow(FOLLOW_rule__Precedence__InfixAssignment_4_4_in_rule__Precedence__Group_4__4__Impl6238);
+            rule__Precedence__InfixAssignment_4_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getPar2Assignment_4_4()); 
+             after(grammarAccess.getPrecedenceAccess().getInfixAssignment_4_4()); 
 
             }
 
@@ -7293,22 +8616,512 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_4__4__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_4__5"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3085:1: rule__Precedence__Group_4__5 : rule__Precedence__Group_4__5__Impl rule__Precedence__Group_4__6 ;
+    public final void rule__Precedence__Group_4__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3089:1: ( rule__Precedence__Group_4__5__Impl rule__Precedence__Group_4__6 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3090:2: rule__Precedence__Group_4__5__Impl rule__Precedence__Group_4__6
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4__5__Impl_in_rule__Precedence__Group_4__56268);
+            rule__Precedence__Group_4__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_4__6_in_rule__Precedence__Group_4__56271);
+            rule__Precedence__Group_4__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4__5"
+
+
+    // $ANTLR start "rule__Precedence__Group_4__5__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3097:1: rule__Precedence__Group_4__5__Impl : ( ( rule__Precedence__Group_4_5__0 )? ) ;
+    public final void rule__Precedence__Group_4__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3101:1: ( ( ( rule__Precedence__Group_4_5__0 )? ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3102:1: ( ( rule__Precedence__Group_4_5__0 )? )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3102:1: ( ( rule__Precedence__Group_4_5__0 )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3103:1: ( rule__Precedence__Group_4_5__0 )?
+            {
+             before(grammarAccess.getPrecedenceAccess().getGroup_4_5()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3104:1: ( rule__Precedence__Group_4_5__0 )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==RULE_ID) ) {
+                int LA22_1 = input.LA(2);
+
+                if ( (LA22_1==35) ) {
+                    alt22=1;
+                }
+            }
+            switch (alt22) {
+                case 1 :
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3104:2: rule__Precedence__Group_4_5__0
+                    {
+                    pushFollow(FOLLOW_rule__Precedence__Group_4_5__0_in_rule__Precedence__Group_4__5__Impl6298);
+                    rule__Precedence__Group_4_5__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getGroup_4_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4__5__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_4__6"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3114:1: rule__Precedence__Group_4__6 : rule__Precedence__Group_4__6__Impl ;
+    public final void rule__Precedence__Group_4__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3118:1: ( rule__Precedence__Group_4__6__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3119:2: rule__Precedence__Group_4__6__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4__6__Impl_in_rule__Precedence__Group_4__66329);
+            rule__Precedence__Group_4__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4__6"
+
+
+    // $ANTLR start "rule__Precedence__Group_4__6__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3125:1: rule__Precedence__Group_4__6__Impl : ( ( rule__Precedence__Par2Assignment_4_6 ) ) ;
+    public final void rule__Precedence__Group_4__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3129:1: ( ( ( rule__Precedence__Par2Assignment_4_6 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3130:1: ( ( rule__Precedence__Par2Assignment_4_6 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3130:1: ( ( rule__Precedence__Par2Assignment_4_6 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3131:1: ( rule__Precedence__Par2Assignment_4_6 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2Assignment_4_6()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3132:1: ( rule__Precedence__Par2Assignment_4_6 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3132:2: rule__Precedence__Par2Assignment_4_6
+            {
+            pushFollow(FOLLOW_rule__Precedence__Par2Assignment_4_6_in_rule__Precedence__Group_4__6__Impl6356);
+            rule__Precedence__Par2Assignment_4_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getPar2Assignment_4_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4__6__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_2__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3156:1: rule__Precedence__Group_4_2__0 : rule__Precedence__Group_4_2__0__Impl rule__Precedence__Group_4_2__1 ;
+    public final void rule__Precedence__Group_4_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3160:1: ( rule__Precedence__Group_4_2__0__Impl rule__Precedence__Group_4_2__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3161:2: rule__Precedence__Group_4_2__0__Impl rule__Precedence__Group_4_2__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4_2__0__Impl_in_rule__Precedence__Group_4_2__06400);
+            rule__Precedence__Group_4_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_4_2__1_in_rule__Precedence__Group_4_2__06403);
+            rule__Precedence__Group_4_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_2__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_2__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3168:1: rule__Precedence__Group_4_2__0__Impl : ( ( rule__Precedence__Feature1Assignment_4_2_0 ) ) ;
+    public final void rule__Precedence__Group_4_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3172:1: ( ( ( rule__Precedence__Feature1Assignment_4_2_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3173:1: ( ( rule__Precedence__Feature1Assignment_4_2_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3173:1: ( ( rule__Precedence__Feature1Assignment_4_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3174:1: ( rule__Precedence__Feature1Assignment_4_2_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1Assignment_4_2_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3175:1: ( rule__Precedence__Feature1Assignment_4_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3175:2: rule__Precedence__Feature1Assignment_4_2_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature1Assignment_4_2_0_in_rule__Precedence__Group_4_2__0__Impl6430);
+            rule__Precedence__Feature1Assignment_4_2_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature1Assignment_4_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_2__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_2__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3185:1: rule__Precedence__Group_4_2__1 : rule__Precedence__Group_4_2__1__Impl ;
+    public final void rule__Precedence__Group_4_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3189:1: ( rule__Precedence__Group_4_2__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3190:2: rule__Precedence__Group_4_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4_2__1__Impl_in_rule__Precedence__Group_4_2__16460);
+            rule__Precedence__Group_4_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_2__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_2__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3196:1: rule__Precedence__Group_4_2__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_4_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3200:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3201:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3201:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3202:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_4_2_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_4_2__1__Impl6488); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_4_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_2__1__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_5__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3219:1: rule__Precedence__Group_4_5__0 : rule__Precedence__Group_4_5__0__Impl rule__Precedence__Group_4_5__1 ;
+    public final void rule__Precedence__Group_4_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3223:1: ( rule__Precedence__Group_4_5__0__Impl rule__Precedence__Group_4_5__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3224:2: rule__Precedence__Group_4_5__0__Impl rule__Precedence__Group_4_5__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4_5__0__Impl_in_rule__Precedence__Group_4_5__06523);
+            rule__Precedence__Group_4_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_4_5__1_in_rule__Precedence__Group_4_5__06526);
+            rule__Precedence__Group_4_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_5__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_5__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3231:1: rule__Precedence__Group_4_5__0__Impl : ( ( rule__Precedence__Feature2Assignment_4_5_0 ) ) ;
+    public final void rule__Precedence__Group_4_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3235:1: ( ( ( rule__Precedence__Feature2Assignment_4_5_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3236:1: ( ( rule__Precedence__Feature2Assignment_4_5_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3236:1: ( ( rule__Precedence__Feature2Assignment_4_5_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3237:1: ( rule__Precedence__Feature2Assignment_4_5_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature2Assignment_4_5_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3238:1: ( rule__Precedence__Feature2Assignment_4_5_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3238:2: rule__Precedence__Feature2Assignment_4_5_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__Feature2Assignment_4_5_0_in_rule__Precedence__Group_4_5__0__Impl6553);
+            rule__Precedence__Feature2Assignment_4_5_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getFeature2Assignment_4_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_5__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_5__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3248:1: rule__Precedence__Group_4_5__1 : rule__Precedence__Group_4_5__1__Impl ;
+    public final void rule__Precedence__Group_4_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3252:1: ( rule__Precedence__Group_4_5__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3253:2: rule__Precedence__Group_4_5__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_4_5__1__Impl_in_rule__Precedence__Group_4_5__16583);
+            rule__Precedence__Group_4_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_5__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_4_5__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3259:1: rule__Precedence__Group_4_5__1__Impl : ( '=' ) ;
+    public final void rule__Precedence__Group_4_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3263:1: ( ( '=' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3264:1: ( '=' )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3264:1: ( '=' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3265:1: '='
+            {
+             before(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_4_5_1()); 
+            match(input,35,FOLLOW_35_in_rule__Precedence__Group_4_5__1__Impl6611); 
+             after(grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_4_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_4_5__1__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_5__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2618:1: rule__Precedence__Group_5__0 : rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3282:1: rule__Precedence__Group_5__0 : rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1 ;
     public final void rule__Precedence__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2622:1: ( rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2623:2: rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3286:1: ( rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3287:2: rule__Precedence__Group_5__0__Impl rule__Precedence__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_5__0__Impl_in_rule__Precedence__Group_5__05326);
+            pushFollow(FOLLOW_rule__Precedence__Group_5__0__Impl_in_rule__Precedence__Group_5__06646);
             rule__Precedence__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_5__1_in_rule__Precedence__Group_5__05329);
+            pushFollow(FOLLOW_rule__Precedence__Group_5__1_in_rule__Precedence__Group_5__06649);
             rule__Precedence__Group_5__1();
 
             state._fsp--;
@@ -7332,23 +9145,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_5__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2630:1: rule__Precedence__Group_5__0__Impl : ( ( rule__Precedence__RuletypAssignment_5_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3294:1: rule__Precedence__Group_5__0__Impl : ( ( rule__Precedence__RuletypAssignment_5_0 ) ) ;
     public final void rule__Precedence__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2634:1: ( ( ( rule__Precedence__RuletypAssignment_5_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2635:1: ( ( rule__Precedence__RuletypAssignment_5_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3298:1: ( ( ( rule__Precedence__RuletypAssignment_5_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3299:1: ( ( rule__Precedence__RuletypAssignment_5_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2635:1: ( ( rule__Precedence__RuletypAssignment_5_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2636:1: ( rule__Precedence__RuletypAssignment_5_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3299:1: ( ( rule__Precedence__RuletypAssignment_5_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3300:1: ( rule__Precedence__RuletypAssignment_5_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_5_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2637:1: ( rule__Precedence__RuletypAssignment_5_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2637:2: rule__Precedence__RuletypAssignment_5_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3301:1: ( rule__Precedence__RuletypAssignment_5_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3301:2: rule__Precedence__RuletypAssignment_5_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_5_0_in_rule__Precedence__Group_5__0__Impl5356);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_5_0_in_rule__Precedence__Group_5__0__Impl6676);
             rule__Precedence__RuletypAssignment_5_0();
 
             state._fsp--;
@@ -7379,21 +9192,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_5__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2647:1: rule__Precedence__Group_5__1 : rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3311:1: rule__Precedence__Group_5__1 : rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2 ;
     public final void rule__Precedence__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2651:1: ( rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2652:2: rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3315:1: ( rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3316:2: rule__Precedence__Group_5__1__Impl rule__Precedence__Group_5__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_5__1__Impl_in_rule__Precedence__Group_5__15386);
+            pushFollow(FOLLOW_rule__Precedence__Group_5__1__Impl_in_rule__Precedence__Group_5__16706);
             rule__Precedence__Group_5__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_5__2_in_rule__Precedence__Group_5__15389);
+            pushFollow(FOLLOW_rule__Precedence__Group_5__2_in_rule__Precedence__Group_5__16709);
             rule__Precedence__Group_5__2();
 
             state._fsp--;
@@ -7417,23 +9230,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_5__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2659:1: rule__Precedence__Group_5__1__Impl : ( ( rule__Precedence__RuleAssignment_5_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3323:1: rule__Precedence__Group_5__1__Impl : ( ( rule__Precedence__RuleAssignment_5_1 ) ) ;
     public final void rule__Precedence__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2663:1: ( ( ( rule__Precedence__RuleAssignment_5_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2664:1: ( ( rule__Precedence__RuleAssignment_5_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3327:1: ( ( ( rule__Precedence__RuleAssignment_5_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3328:1: ( ( rule__Precedence__RuleAssignment_5_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2664:1: ( ( rule__Precedence__RuleAssignment_5_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2665:1: ( rule__Precedence__RuleAssignment_5_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3328:1: ( ( rule__Precedence__RuleAssignment_5_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3329:1: ( rule__Precedence__RuleAssignment_5_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_5_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2666:1: ( rule__Precedence__RuleAssignment_5_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2666:2: rule__Precedence__RuleAssignment_5_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3330:1: ( rule__Precedence__RuleAssignment_5_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3330:2: rule__Precedence__RuleAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_5_1_in_rule__Precedence__Group_5__1__Impl5416);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_5_1_in_rule__Precedence__Group_5__1__Impl6736);
             rule__Precedence__RuleAssignment_5_1();
 
             state._fsp--;
@@ -7464,17 +9277,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_5__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2676:1: rule__Precedence__Group_5__2 : rule__Precedence__Group_5__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3340:1: rule__Precedence__Group_5__2 : rule__Precedence__Group_5__2__Impl rule__Precedence__Group_5__3 ;
     public final void rule__Precedence__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2680:1: ( rule__Precedence__Group_5__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2681:2: rule__Precedence__Group_5__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3344:1: ( rule__Precedence__Group_5__2__Impl rule__Precedence__Group_5__3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3345:2: rule__Precedence__Group_5__2__Impl rule__Precedence__Group_5__3
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_5__2__Impl_in_rule__Precedence__Group_5__25446);
+            pushFollow(FOLLOW_rule__Precedence__Group_5__2__Impl_in_rule__Precedence__Group_5__26766);
             rule__Precedence__Group_5__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_5__3_in_rule__Precedence__Group_5__26769);
+            rule__Precedence__Group_5__3();
 
             state._fsp--;
 
@@ -7497,31 +9315,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_5__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2687:1: rule__Precedence__Group_5__2__Impl : ( ( rule__Precedence__LiteralAssignment_5_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3352:1: rule__Precedence__Group_5__2__Impl : ( ( rule__Precedence__Par1Assignment_5_2 ) ) ;
     public final void rule__Precedence__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2691:1: ( ( ( rule__Precedence__LiteralAssignment_5_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2692:1: ( ( rule__Precedence__LiteralAssignment_5_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3356:1: ( ( ( rule__Precedence__Par1Assignment_5_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3357:1: ( ( rule__Precedence__Par1Assignment_5_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2692:1: ( ( rule__Precedence__LiteralAssignment_5_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2693:1: ( rule__Precedence__LiteralAssignment_5_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3357:1: ( ( rule__Precedence__Par1Assignment_5_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3358:1: ( rule__Precedence__Par1Assignment_5_2 )
             {
-             before(grammarAccess.getPrecedenceAccess().getLiteralAssignment_5_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2694:1: ( rule__Precedence__LiteralAssignment_5_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2694:2: rule__Precedence__LiteralAssignment_5_2
+             before(grammarAccess.getPrecedenceAccess().getPar1Assignment_5_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3359:1: ( rule__Precedence__Par1Assignment_5_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3359:2: rule__Precedence__Par1Assignment_5_2
             {
-            pushFollow(FOLLOW_rule__Precedence__LiteralAssignment_5_2_in_rule__Precedence__Group_5__2__Impl5473);
-            rule__Precedence__LiteralAssignment_5_2();
+            pushFollow(FOLLOW_rule__Precedence__Par1Assignment_5_2_in_rule__Precedence__Group_5__2__Impl6796);
+            rule__Precedence__Par1Assignment_5_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getLiteralAssignment_5_2()); 
+             after(grammarAccess.getPrecedenceAccess().getPar1Assignment_5_2()); 
 
             }
 
@@ -7543,22 +9361,187 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_5__2__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_5__3"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3369:1: rule__Precedence__Group_5__3 : rule__Precedence__Group_5__3__Impl rule__Precedence__Group_5__4 ;
+    public final void rule__Precedence__Group_5__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3373:1: ( rule__Precedence__Group_5__3__Impl rule__Precedence__Group_5__4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3374:2: rule__Precedence__Group_5__3__Impl rule__Precedence__Group_5__4
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_5__3__Impl_in_rule__Precedence__Group_5__36826);
+            rule__Precedence__Group_5__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_5__4_in_rule__Precedence__Group_5__36829);
+            rule__Precedence__Group_5__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_5__3"
+
+
+    // $ANTLR start "rule__Precedence__Group_5__3__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3381:1: rule__Precedence__Group_5__3__Impl : ( ( rule__Precedence__InfixleftAssignment_5_3 ) ) ;
+    public final void rule__Precedence__Group_5__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3385:1: ( ( ( rule__Precedence__InfixleftAssignment_5_3 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3386:1: ( ( rule__Precedence__InfixleftAssignment_5_3 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3386:1: ( ( rule__Precedence__InfixleftAssignment_5_3 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3387:1: ( rule__Precedence__InfixleftAssignment_5_3 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getInfixleftAssignment_5_3()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3388:1: ( rule__Precedence__InfixleftAssignment_5_3 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3388:2: rule__Precedence__InfixleftAssignment_5_3
+            {
+            pushFollow(FOLLOW_rule__Precedence__InfixleftAssignment_5_3_in_rule__Precedence__Group_5__3__Impl6856);
+            rule__Precedence__InfixleftAssignment_5_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getInfixleftAssignment_5_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_5__3__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_5__4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3398:1: rule__Precedence__Group_5__4 : rule__Precedence__Group_5__4__Impl ;
+    public final void rule__Precedence__Group_5__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3402:1: ( rule__Precedence__Group_5__4__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3403:2: rule__Precedence__Group_5__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_5__4__Impl_in_rule__Precedence__Group_5__46886);
+            rule__Precedence__Group_5__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_5__4"
+
+
+    // $ANTLR start "rule__Precedence__Group_5__4__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3409:1: rule__Precedence__Group_5__4__Impl : ( ( rule__Precedence__Par2Assignment_5_4 ) ) ;
+    public final void rule__Precedence__Group_5__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3413:1: ( ( ( rule__Precedence__Par2Assignment_5_4 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3414:1: ( ( rule__Precedence__Par2Assignment_5_4 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3414:1: ( ( rule__Precedence__Par2Assignment_5_4 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3415:1: ( rule__Precedence__Par2Assignment_5_4 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2Assignment_5_4()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3416:1: ( rule__Precedence__Par2Assignment_5_4 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3416:2: rule__Precedence__Par2Assignment_5_4
+            {
+            pushFollow(FOLLOW_rule__Precedence__Par2Assignment_5_4_in_rule__Precedence__Group_5__4__Impl6913);
+            rule__Precedence__Par2Assignment_5_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getPar2Assignment_5_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_5__4__Impl"
+
+
     // $ANTLR start "rule__Precedence__Group_6__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2710:1: rule__Precedence__Group_6__0 : rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3436:1: rule__Precedence__Group_6__0 : rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1 ;
     public final void rule__Precedence__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2714:1: ( rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2715:2: rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3440:1: ( rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3441:2: rule__Precedence__Group_6__0__Impl rule__Precedence__Group_6__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_6__0__Impl_in_rule__Precedence__Group_6__05509);
+            pushFollow(FOLLOW_rule__Precedence__Group_6__0__Impl_in_rule__Precedence__Group_6__06953);
             rule__Precedence__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_6__1_in_rule__Precedence__Group_6__05512);
+            pushFollow(FOLLOW_rule__Precedence__Group_6__1_in_rule__Precedence__Group_6__06956);
             rule__Precedence__Group_6__1();
 
             state._fsp--;
@@ -7582,23 +9565,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_6__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2722:1: rule__Precedence__Group_6__0__Impl : ( ( rule__Precedence__RuletypAssignment_6_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3448:1: rule__Precedence__Group_6__0__Impl : ( ( rule__Precedence__RuletypAssignment_6_0 ) ) ;
     public final void rule__Precedence__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2726:1: ( ( ( rule__Precedence__RuletypAssignment_6_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2727:1: ( ( rule__Precedence__RuletypAssignment_6_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3452:1: ( ( ( rule__Precedence__RuletypAssignment_6_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3453:1: ( ( rule__Precedence__RuletypAssignment_6_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2727:1: ( ( rule__Precedence__RuletypAssignment_6_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2728:1: ( rule__Precedence__RuletypAssignment_6_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3453:1: ( ( rule__Precedence__RuletypAssignment_6_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3454:1: ( rule__Precedence__RuletypAssignment_6_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_6_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2729:1: ( rule__Precedence__RuletypAssignment_6_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2729:2: rule__Precedence__RuletypAssignment_6_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3455:1: ( rule__Precedence__RuletypAssignment_6_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3455:2: rule__Precedence__RuletypAssignment_6_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_6_0_in_rule__Precedence__Group_6__0__Impl5539);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_6_0_in_rule__Precedence__Group_6__0__Impl6983);
             rule__Precedence__RuletypAssignment_6_0();
 
             state._fsp--;
@@ -7629,21 +9612,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_6__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2739:1: rule__Precedence__Group_6__1 : rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3465:1: rule__Precedence__Group_6__1 : rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2 ;
     public final void rule__Precedence__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2743:1: ( rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2744:2: rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3469:1: ( rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3470:2: rule__Precedence__Group_6__1__Impl rule__Precedence__Group_6__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_6__1__Impl_in_rule__Precedence__Group_6__15569);
+            pushFollow(FOLLOW_rule__Precedence__Group_6__1__Impl_in_rule__Precedence__Group_6__17013);
             rule__Precedence__Group_6__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_6__2_in_rule__Precedence__Group_6__15572);
+            pushFollow(FOLLOW_rule__Precedence__Group_6__2_in_rule__Precedence__Group_6__17016);
             rule__Precedence__Group_6__2();
 
             state._fsp--;
@@ -7667,23 +9650,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_6__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2751:1: rule__Precedence__Group_6__1__Impl : ( ( rule__Precedence__RuleAssignment_6_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3477:1: rule__Precedence__Group_6__1__Impl : ( ( rule__Precedence__RuleAssignment_6_1 ) ) ;
     public final void rule__Precedence__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2755:1: ( ( ( rule__Precedence__RuleAssignment_6_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2756:1: ( ( rule__Precedence__RuleAssignment_6_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3481:1: ( ( ( rule__Precedence__RuleAssignment_6_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3482:1: ( ( rule__Precedence__RuleAssignment_6_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2756:1: ( ( rule__Precedence__RuleAssignment_6_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2757:1: ( rule__Precedence__RuleAssignment_6_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3482:1: ( ( rule__Precedence__RuleAssignment_6_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3483:1: ( rule__Precedence__RuleAssignment_6_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_6_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2758:1: ( rule__Precedence__RuleAssignment_6_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2758:2: rule__Precedence__RuleAssignment_6_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3484:1: ( rule__Precedence__RuleAssignment_6_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3484:2: rule__Precedence__RuleAssignment_6_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_6_1_in_rule__Precedence__Group_6__1__Impl5599);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_6_1_in_rule__Precedence__Group_6__1__Impl7043);
             rule__Precedence__RuleAssignment_6_1();
 
             state._fsp--;
@@ -7714,16 +9697,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_6__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2768:1: rule__Precedence__Group_6__2 : rule__Precedence__Group_6__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3494:1: rule__Precedence__Group_6__2 : rule__Precedence__Group_6__2__Impl ;
     public final void rule__Precedence__Group_6__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2772:1: ( rule__Precedence__Group_6__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2773:2: rule__Precedence__Group_6__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3498:1: ( rule__Precedence__Group_6__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3499:2: rule__Precedence__Group_6__2__Impl
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_6__2__Impl_in_rule__Precedence__Group_6__25629);
+            pushFollow(FOLLOW_rule__Precedence__Group_6__2__Impl_in_rule__Precedence__Group_6__27073);
             rule__Precedence__Group_6__2__Impl();
 
             state._fsp--;
@@ -7747,31 +9730,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_6__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2779:1: rule__Precedence__Group_6__2__Impl : ( ( rule__Precedence__BracketAssignment_6_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3505:1: rule__Precedence__Group_6__2__Impl : ( ( rule__Precedence__LiteralAssignment_6_2 ) ) ;
     public final void rule__Precedence__Group_6__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2783:1: ( ( ( rule__Precedence__BracketAssignment_6_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2784:1: ( ( rule__Precedence__BracketAssignment_6_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3509:1: ( ( ( rule__Precedence__LiteralAssignment_6_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3510:1: ( ( rule__Precedence__LiteralAssignment_6_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2784:1: ( ( rule__Precedence__BracketAssignment_6_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2785:1: ( rule__Precedence__BracketAssignment_6_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3510:1: ( ( rule__Precedence__LiteralAssignment_6_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3511:1: ( rule__Precedence__LiteralAssignment_6_2 )
             {
-             before(grammarAccess.getPrecedenceAccess().getBracketAssignment_6_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2786:1: ( rule__Precedence__BracketAssignment_6_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2786:2: rule__Precedence__BracketAssignment_6_2
+             before(grammarAccess.getPrecedenceAccess().getLiteralAssignment_6_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3512:1: ( rule__Precedence__LiteralAssignment_6_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3512:2: rule__Precedence__LiteralAssignment_6_2
             {
-            pushFollow(FOLLOW_rule__Precedence__BracketAssignment_6_2_in_rule__Precedence__Group_6__2__Impl5656);
-            rule__Precedence__BracketAssignment_6_2();
+            pushFollow(FOLLOW_rule__Precedence__LiteralAssignment_6_2_in_rule__Precedence__Group_6__2__Impl7100);
+            rule__Precedence__LiteralAssignment_6_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getBracketAssignment_6_2()); 
+             after(grammarAccess.getPrecedenceAccess().getLiteralAssignment_6_2()); 
 
             }
 
@@ -7794,21 +9777,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2802:1: rule__Precedence__Group_7__0 : rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3528:1: rule__Precedence__Group_7__0 : rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1 ;
     public final void rule__Precedence__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2806:1: ( rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2807:2: rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3532:1: ( rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3533:2: rule__Precedence__Group_7__0__Impl rule__Precedence__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_7__0__Impl_in_rule__Precedence__Group_7__05692);
+            pushFollow(FOLLOW_rule__Precedence__Group_7__0__Impl_in_rule__Precedence__Group_7__07136);
             rule__Precedence__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_7__1_in_rule__Precedence__Group_7__05695);
+            pushFollow(FOLLOW_rule__Precedence__Group_7__1_in_rule__Precedence__Group_7__07139);
             rule__Precedence__Group_7__1();
 
             state._fsp--;
@@ -7832,23 +9815,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2814:1: rule__Precedence__Group_7__0__Impl : ( ( rule__Precedence__RuletypAssignment_7_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3540:1: rule__Precedence__Group_7__0__Impl : ( ( rule__Precedence__RuletypAssignment_7_0 ) ) ;
     public final void rule__Precedence__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2818:1: ( ( ( rule__Precedence__RuletypAssignment_7_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2819:1: ( ( rule__Precedence__RuletypAssignment_7_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3544:1: ( ( ( rule__Precedence__RuletypAssignment_7_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3545:1: ( ( rule__Precedence__RuletypAssignment_7_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2819:1: ( ( rule__Precedence__RuletypAssignment_7_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2820:1: ( rule__Precedence__RuletypAssignment_7_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3545:1: ( ( rule__Precedence__RuletypAssignment_7_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3546:1: ( rule__Precedence__RuletypAssignment_7_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_7_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2821:1: ( rule__Precedence__RuletypAssignment_7_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2821:2: rule__Precedence__RuletypAssignment_7_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3547:1: ( rule__Precedence__RuletypAssignment_7_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3547:2: rule__Precedence__RuletypAssignment_7_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_7_0_in_rule__Precedence__Group_7__0__Impl5722);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_7_0_in_rule__Precedence__Group_7__0__Impl7166);
             rule__Precedence__RuletypAssignment_7_0();
 
             state._fsp--;
@@ -7879,21 +9862,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2831:1: rule__Precedence__Group_7__1 : rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3557:1: rule__Precedence__Group_7__1 : rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2 ;
     public final void rule__Precedence__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2835:1: ( rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2836:2: rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3561:1: ( rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3562:2: rule__Precedence__Group_7__1__Impl rule__Precedence__Group_7__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_7__1__Impl_in_rule__Precedence__Group_7__15752);
+            pushFollow(FOLLOW_rule__Precedence__Group_7__1__Impl_in_rule__Precedence__Group_7__17196);
             rule__Precedence__Group_7__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_7__2_in_rule__Precedence__Group_7__15755);
+            pushFollow(FOLLOW_rule__Precedence__Group_7__2_in_rule__Precedence__Group_7__17199);
             rule__Precedence__Group_7__2();
 
             state._fsp--;
@@ -7917,23 +9900,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2843:1: rule__Precedence__Group_7__1__Impl : ( ( rule__Precedence__RuleAssignment_7_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3569:1: rule__Precedence__Group_7__1__Impl : ( ( rule__Precedence__RuleAssignment_7_1 ) ) ;
     public final void rule__Precedence__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2847:1: ( ( ( rule__Precedence__RuleAssignment_7_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2848:1: ( ( rule__Precedence__RuleAssignment_7_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3573:1: ( ( ( rule__Precedence__RuleAssignment_7_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3574:1: ( ( rule__Precedence__RuleAssignment_7_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2848:1: ( ( rule__Precedence__RuleAssignment_7_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2849:1: ( rule__Precedence__RuleAssignment_7_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3574:1: ( ( rule__Precedence__RuleAssignment_7_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3575:1: ( rule__Precedence__RuleAssignment_7_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_7_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2850:1: ( rule__Precedence__RuleAssignment_7_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2850:2: rule__Precedence__RuleAssignment_7_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3576:1: ( rule__Precedence__RuleAssignment_7_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3576:2: rule__Precedence__RuleAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_7_1_in_rule__Precedence__Group_7__1__Impl5782);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_7_1_in_rule__Precedence__Group_7__1__Impl7226);
             rule__Precedence__RuleAssignment_7_1();
 
             state._fsp--;
@@ -7964,16 +9947,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2860:1: rule__Precedence__Group_7__2 : rule__Precedence__Group_7__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3586:1: rule__Precedence__Group_7__2 : rule__Precedence__Group_7__2__Impl ;
     public final void rule__Precedence__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2864:1: ( rule__Precedence__Group_7__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2865:2: rule__Precedence__Group_7__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3590:1: ( rule__Precedence__Group_7__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3591:2: rule__Precedence__Group_7__2__Impl
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_7__2__Impl_in_rule__Precedence__Group_7__25812);
+            pushFollow(FOLLOW_rule__Precedence__Group_7__2__Impl_in_rule__Precedence__Group_7__27256);
             rule__Precedence__Group_7__2__Impl();
 
             state._fsp--;
@@ -7997,31 +9980,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_7__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2871:1: rule__Precedence__Group_7__2__Impl : ( ( rule__Precedence__BracesAssignment_7_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3597:1: rule__Precedence__Group_7__2__Impl : ( ( rule__Precedence__BracketAssignment_7_2 ) ) ;
     public final void rule__Precedence__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2875:1: ( ( ( rule__Precedence__BracesAssignment_7_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2876:1: ( ( rule__Precedence__BracesAssignment_7_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3601:1: ( ( ( rule__Precedence__BracketAssignment_7_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3602:1: ( ( rule__Precedence__BracketAssignment_7_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2876:1: ( ( rule__Precedence__BracesAssignment_7_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2877:1: ( rule__Precedence__BracesAssignment_7_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3602:1: ( ( rule__Precedence__BracketAssignment_7_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3603:1: ( rule__Precedence__BracketAssignment_7_2 )
             {
-             before(grammarAccess.getPrecedenceAccess().getBracesAssignment_7_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2878:1: ( rule__Precedence__BracesAssignment_7_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2878:2: rule__Precedence__BracesAssignment_7_2
+             before(grammarAccess.getPrecedenceAccess().getBracketAssignment_7_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3604:1: ( rule__Precedence__BracketAssignment_7_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3604:2: rule__Precedence__BracketAssignment_7_2
             {
-            pushFollow(FOLLOW_rule__Precedence__BracesAssignment_7_2_in_rule__Precedence__Group_7__2__Impl5839);
-            rule__Precedence__BracesAssignment_7_2();
+            pushFollow(FOLLOW_rule__Precedence__BracketAssignment_7_2_in_rule__Precedence__Group_7__2__Impl7283);
+            rule__Precedence__BracketAssignment_7_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getBracesAssignment_7_2()); 
+             after(grammarAccess.getPrecedenceAccess().getBracketAssignment_7_2()); 
 
             }
 
@@ -8044,21 +10027,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2894:1: rule__Precedence__Group_8__0 : rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3620:1: rule__Precedence__Group_8__0 : rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1 ;
     public final void rule__Precedence__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2898:1: ( rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2899:2: rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3624:1: ( rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3625:2: rule__Precedence__Group_8__0__Impl rule__Precedence__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_8__0__Impl_in_rule__Precedence__Group_8__05875);
+            pushFollow(FOLLOW_rule__Precedence__Group_8__0__Impl_in_rule__Precedence__Group_8__07319);
             rule__Precedence__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_8__1_in_rule__Precedence__Group_8__05878);
+            pushFollow(FOLLOW_rule__Precedence__Group_8__1_in_rule__Precedence__Group_8__07322);
             rule__Precedence__Group_8__1();
 
             state._fsp--;
@@ -8082,23 +10065,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2906:1: rule__Precedence__Group_8__0__Impl : ( ( rule__Precedence__RuletypAssignment_8_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3632:1: rule__Precedence__Group_8__0__Impl : ( ( rule__Precedence__RuletypAssignment_8_0 ) ) ;
     public final void rule__Precedence__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2910:1: ( ( ( rule__Precedence__RuletypAssignment_8_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2911:1: ( ( rule__Precedence__RuletypAssignment_8_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3636:1: ( ( ( rule__Precedence__RuletypAssignment_8_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3637:1: ( ( rule__Precedence__RuletypAssignment_8_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2911:1: ( ( rule__Precedence__RuletypAssignment_8_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2912:1: ( rule__Precedence__RuletypAssignment_8_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3637:1: ( ( rule__Precedence__RuletypAssignment_8_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3638:1: ( rule__Precedence__RuletypAssignment_8_0 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_8_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2913:1: ( rule__Precedence__RuletypAssignment_8_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2913:2: rule__Precedence__RuletypAssignment_8_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3639:1: ( rule__Precedence__RuletypAssignment_8_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3639:2: rule__Precedence__RuletypAssignment_8_0
             {
-            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_8_0_in_rule__Precedence__Group_8__0__Impl5905);
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_8_0_in_rule__Precedence__Group_8__0__Impl7349);
             rule__Precedence__RuletypAssignment_8_0();
 
             state._fsp--;
@@ -8129,21 +10112,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2923:1: rule__Precedence__Group_8__1 : rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3649:1: rule__Precedence__Group_8__1 : rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2 ;
     public final void rule__Precedence__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2927:1: ( rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2928:2: rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3653:1: ( rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3654:2: rule__Precedence__Group_8__1__Impl rule__Precedence__Group_8__2
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_8__1__Impl_in_rule__Precedence__Group_8__15935);
+            pushFollow(FOLLOW_rule__Precedence__Group_8__1__Impl_in_rule__Precedence__Group_8__17379);
             rule__Precedence__Group_8__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Precedence__Group_8__2_in_rule__Precedence__Group_8__15938);
+            pushFollow(FOLLOW_rule__Precedence__Group_8__2_in_rule__Precedence__Group_8__17382);
             rule__Precedence__Group_8__2();
 
             state._fsp--;
@@ -8167,23 +10150,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2935:1: rule__Precedence__Group_8__1__Impl : ( ( rule__Precedence__RuleAssignment_8_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3661:1: rule__Precedence__Group_8__1__Impl : ( ( rule__Precedence__RuleAssignment_8_1 ) ) ;
     public final void rule__Precedence__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2939:1: ( ( ( rule__Precedence__RuleAssignment_8_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2940:1: ( ( rule__Precedence__RuleAssignment_8_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3665:1: ( ( ( rule__Precedence__RuleAssignment_8_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3666:1: ( ( rule__Precedence__RuleAssignment_8_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2940:1: ( ( rule__Precedence__RuleAssignment_8_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2941:1: ( rule__Precedence__RuleAssignment_8_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3666:1: ( ( rule__Precedence__RuleAssignment_8_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3667:1: ( rule__Precedence__RuleAssignment_8_1 )
             {
              before(grammarAccess.getPrecedenceAccess().getRuleAssignment_8_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2942:1: ( rule__Precedence__RuleAssignment_8_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2942:2: rule__Precedence__RuleAssignment_8_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3668:1: ( rule__Precedence__RuleAssignment_8_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3668:2: rule__Precedence__RuleAssignment_8_1
             {
-            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_8_1_in_rule__Precedence__Group_8__1__Impl5965);
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_8_1_in_rule__Precedence__Group_8__1__Impl7409);
             rule__Precedence__RuleAssignment_8_1();
 
             state._fsp--;
@@ -8214,16 +10197,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2952:1: rule__Precedence__Group_8__2 : rule__Precedence__Group_8__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3678:1: rule__Precedence__Group_8__2 : rule__Precedence__Group_8__2__Impl ;
     public final void rule__Precedence__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2956:1: ( rule__Precedence__Group_8__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2957:2: rule__Precedence__Group_8__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3682:1: ( rule__Precedence__Group_8__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3683:2: rule__Precedence__Group_8__2__Impl
             {
-            pushFollow(FOLLOW_rule__Precedence__Group_8__2__Impl_in_rule__Precedence__Group_8__25995);
+            pushFollow(FOLLOW_rule__Precedence__Group_8__2__Impl_in_rule__Precedence__Group_8__27439);
             rule__Precedence__Group_8__2__Impl();
 
             state._fsp--;
@@ -8247,31 +10230,31 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__Group_8__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2963:1: rule__Precedence__Group_8__2__Impl : ( ( rule__Precedence__ParenthesisAssignment_8_2 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3689:1: rule__Precedence__Group_8__2__Impl : ( ( rule__Precedence__BracesAssignment_8_2 ) ) ;
     public final void rule__Precedence__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2967:1: ( ( ( rule__Precedence__ParenthesisAssignment_8_2 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2968:1: ( ( rule__Precedence__ParenthesisAssignment_8_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3693:1: ( ( ( rule__Precedence__BracesAssignment_8_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3694:1: ( ( rule__Precedence__BracesAssignment_8_2 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2968:1: ( ( rule__Precedence__ParenthesisAssignment_8_2 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2969:1: ( rule__Precedence__ParenthesisAssignment_8_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3694:1: ( ( rule__Precedence__BracesAssignment_8_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3695:1: ( rule__Precedence__BracesAssignment_8_2 )
             {
-             before(grammarAccess.getPrecedenceAccess().getParenthesisAssignment_8_2()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2970:1: ( rule__Precedence__ParenthesisAssignment_8_2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2970:2: rule__Precedence__ParenthesisAssignment_8_2
+             before(grammarAccess.getPrecedenceAccess().getBracesAssignment_8_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3696:1: ( rule__Precedence__BracesAssignment_8_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3696:2: rule__Precedence__BracesAssignment_8_2
             {
-            pushFollow(FOLLOW_rule__Precedence__ParenthesisAssignment_8_2_in_rule__Precedence__Group_8__2__Impl6022);
-            rule__Precedence__ParenthesisAssignment_8_2();
+            pushFollow(FOLLOW_rule__Precedence__BracesAssignment_8_2_in_rule__Precedence__Group_8__2__Impl7466);
+            rule__Precedence__BracesAssignment_8_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getParenthesisAssignment_8_2()); 
+             after(grammarAccess.getPrecedenceAccess().getBracesAssignment_8_2()); 
 
             }
 
@@ -8293,22 +10276,272 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__Group_8__2__Impl"
 
 
+    // $ANTLR start "rule__Precedence__Group_9__0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3712:1: rule__Precedence__Group_9__0 : rule__Precedence__Group_9__0__Impl rule__Precedence__Group_9__1 ;
+    public final void rule__Precedence__Group_9__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3716:1: ( rule__Precedence__Group_9__0__Impl rule__Precedence__Group_9__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3717:2: rule__Precedence__Group_9__0__Impl rule__Precedence__Group_9__1
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_9__0__Impl_in_rule__Precedence__Group_9__07502);
+            rule__Precedence__Group_9__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_9__1_in_rule__Precedence__Group_9__07505);
+            rule__Precedence__Group_9__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__0"
+
+
+    // $ANTLR start "rule__Precedence__Group_9__0__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3724:1: rule__Precedence__Group_9__0__Impl : ( ( rule__Precedence__RuletypAssignment_9_0 ) ) ;
+    public final void rule__Precedence__Group_9__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3728:1: ( ( ( rule__Precedence__RuletypAssignment_9_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3729:1: ( ( rule__Precedence__RuletypAssignment_9_0 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3729:1: ( ( rule__Precedence__RuletypAssignment_9_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3730:1: ( rule__Precedence__RuletypAssignment_9_0 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getRuletypAssignment_9_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3731:1: ( rule__Precedence__RuletypAssignment_9_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3731:2: rule__Precedence__RuletypAssignment_9_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__RuletypAssignment_9_0_in_rule__Precedence__Group_9__0__Impl7532);
+            rule__Precedence__RuletypAssignment_9_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getRuletypAssignment_9_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__0__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_9__1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3741:1: rule__Precedence__Group_9__1 : rule__Precedence__Group_9__1__Impl rule__Precedence__Group_9__2 ;
+    public final void rule__Precedence__Group_9__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3745:1: ( rule__Precedence__Group_9__1__Impl rule__Precedence__Group_9__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3746:2: rule__Precedence__Group_9__1__Impl rule__Precedence__Group_9__2
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_9__1__Impl_in_rule__Precedence__Group_9__17562);
+            rule__Precedence__Group_9__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Precedence__Group_9__2_in_rule__Precedence__Group_9__17565);
+            rule__Precedence__Group_9__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__1"
+
+
+    // $ANTLR start "rule__Precedence__Group_9__1__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3753:1: rule__Precedence__Group_9__1__Impl : ( ( rule__Precedence__RuleAssignment_9_1 ) ) ;
+    public final void rule__Precedence__Group_9__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3757:1: ( ( ( rule__Precedence__RuleAssignment_9_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3758:1: ( ( rule__Precedence__RuleAssignment_9_1 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3758:1: ( ( rule__Precedence__RuleAssignment_9_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3759:1: ( rule__Precedence__RuleAssignment_9_1 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getRuleAssignment_9_1()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3760:1: ( rule__Precedence__RuleAssignment_9_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3760:2: rule__Precedence__RuleAssignment_9_1
+            {
+            pushFollow(FOLLOW_rule__Precedence__RuleAssignment_9_1_in_rule__Precedence__Group_9__1__Impl7592);
+            rule__Precedence__RuleAssignment_9_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getRuleAssignment_9_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__1__Impl"
+
+
+    // $ANTLR start "rule__Precedence__Group_9__2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3770:1: rule__Precedence__Group_9__2 : rule__Precedence__Group_9__2__Impl ;
+    public final void rule__Precedence__Group_9__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3774:1: ( rule__Precedence__Group_9__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3775:2: rule__Precedence__Group_9__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Precedence__Group_9__2__Impl_in_rule__Precedence__Group_9__27622);
+            rule__Precedence__Group_9__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__2"
+
+
+    // $ANTLR start "rule__Precedence__Group_9__2__Impl"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3781:1: rule__Precedence__Group_9__2__Impl : ( ( rule__Precedence__ParenthesisAssignment_9_2 ) ) ;
+    public final void rule__Precedence__Group_9__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3785:1: ( ( ( rule__Precedence__ParenthesisAssignment_9_2 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3786:1: ( ( rule__Precedence__ParenthesisAssignment_9_2 ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3786:1: ( ( rule__Precedence__ParenthesisAssignment_9_2 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3787:1: ( rule__Precedence__ParenthesisAssignment_9_2 )
+            {
+             before(grammarAccess.getPrecedenceAccess().getParenthesisAssignment_9_2()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3788:1: ( rule__Precedence__ParenthesisAssignment_9_2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3788:2: rule__Precedence__ParenthesisAssignment_9_2
+            {
+            pushFollow(FOLLOW_rule__Precedence__ParenthesisAssignment_9_2_in_rule__Precedence__Group_9__2__Impl7649);
+            rule__Precedence__ParenthesisAssignment_9_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getParenthesisAssignment_9_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Group_9__2__Impl"
+
+
     // $ANTLR start "rule__MultID__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2986:1: rule__MultID__Group__0 : rule__MultID__Group__0__Impl rule__MultID__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3804:1: rule__MultID__Group__0 : rule__MultID__Group__0__Impl rule__MultID__Group__1 ;
     public final void rule__MultID__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2990:1: ( rule__MultID__Group__0__Impl rule__MultID__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2991:2: rule__MultID__Group__0__Impl rule__MultID__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3808:1: ( rule__MultID__Group__0__Impl rule__MultID__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3809:2: rule__MultID__Group__0__Impl rule__MultID__Group__1
             {
-            pushFollow(FOLLOW_rule__MultID__Group__0__Impl_in_rule__MultID__Group__06058);
+            pushFollow(FOLLOW_rule__MultID__Group__0__Impl_in_rule__MultID__Group__07685);
             rule__MultID__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultID__Group__1_in_rule__MultID__Group__06061);
+            pushFollow(FOLLOW_rule__MultID__Group__1_in_rule__MultID__Group__07688);
             rule__MultID__Group__1();
 
             state._fsp--;
@@ -8332,21 +10565,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:2998:1: rule__MultID__Group__0__Impl : ( () ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3816:1: rule__MultID__Group__0__Impl : ( () ) ;
     public final void rule__MultID__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3002:1: ( ( () ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3003:1: ( () )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3820:1: ( ( () ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3821:1: ( () )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3003:1: ( () )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3004:1: ()
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3821:1: ( () )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3822:1: ()
             {
              before(grammarAccess.getMultIDAccess().getMultIDAction_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3005:1: ()
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3007:1: 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3823:1: ()
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3825:1: 
             {
             }
 
@@ -8369,16 +10602,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3017:1: rule__MultID__Group__1 : rule__MultID__Group__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3835:1: rule__MultID__Group__1 : rule__MultID__Group__1__Impl ;
     public final void rule__MultID__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3021:1: ( rule__MultID__Group__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3022:2: rule__MultID__Group__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3839:1: ( rule__MultID__Group__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3840:2: rule__MultID__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultID__Group__1__Impl_in_rule__MultID__Group__16119);
+            pushFollow(FOLLOW_rule__MultID__Group__1__Impl_in_rule__MultID__Group__17746);
             rule__MultID__Group__1__Impl();
 
             state._fsp--;
@@ -8402,23 +10635,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3028:1: rule__MultID__Group__1__Impl : ( ( rule__MultID__Alternatives_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3846:1: rule__MultID__Group__1__Impl : ( ( rule__MultID__Alternatives_1 ) ) ;
     public final void rule__MultID__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3032:1: ( ( ( rule__MultID__Alternatives_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3033:1: ( ( rule__MultID__Alternatives_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3850:1: ( ( ( rule__MultID__Alternatives_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3851:1: ( ( rule__MultID__Alternatives_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3033:1: ( ( rule__MultID__Alternatives_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3034:1: ( rule__MultID__Alternatives_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3851:1: ( ( rule__MultID__Alternatives_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3852:1: ( rule__MultID__Alternatives_1 )
             {
              before(grammarAccess.getMultIDAccess().getAlternatives_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3035:1: ( rule__MultID__Alternatives_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3035:2: rule__MultID__Alternatives_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3853:1: ( rule__MultID__Alternatives_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3853:2: rule__MultID__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__MultID__Alternatives_1_in_rule__MultID__Group__1__Impl6146);
+            pushFollow(FOLLOW_rule__MultID__Alternatives_1_in_rule__MultID__Group__1__Impl7773);
             rule__MultID__Alternatives_1();
 
             state._fsp--;
@@ -8449,21 +10682,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3049:1: rule__MultID__Group_1_1__0 : rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3867:1: rule__MultID__Group_1_1__0 : rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1 ;
     public final void rule__MultID__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3053:1: ( rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3054:2: rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3871:1: ( rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3872:2: rule__MultID__Group_1_1__0__Impl rule__MultID__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__MultID__Group_1_1__0__Impl_in_rule__MultID__Group_1_1__06180);
+            pushFollow(FOLLOW_rule__MultID__Group_1_1__0__Impl_in_rule__MultID__Group_1_1__07807);
             rule__MultID__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultID__Group_1_1__1_in_rule__MultID__Group_1_1__06183);
+            pushFollow(FOLLOW_rule__MultID__Group_1_1__1_in_rule__MultID__Group_1_1__07810);
             rule__MultID__Group_1_1__1();
 
             state._fsp--;
@@ -8487,20 +10720,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3061:1: rule__MultID__Group_1_1__0__Impl : ( '[' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3879:1: rule__MultID__Group_1_1__0__Impl : ( '[' ) ;
     public final void rule__MultID__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3065:1: ( ( '[' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3066:1: ( '[' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3883:1: ( ( '[' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3884:1: ( '[' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3066:1: ( '[' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3067:1: '['
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3884:1: ( '[' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3885:1: '['
             {
              before(grammarAccess.getMultIDAccess().getLeftSquareBracketKeyword_1_1_0()); 
-            match(input,38,FOLLOW_38_in_rule__MultID__Group_1_1__0__Impl6211); 
+            match(input,39,FOLLOW_39_in_rule__MultID__Group_1_1__0__Impl7838); 
              after(grammarAccess.getMultIDAccess().getLeftSquareBracketKeyword_1_1_0()); 
 
             }
@@ -8524,21 +10757,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3080:1: rule__MultID__Group_1_1__1 : rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3898:1: rule__MultID__Group_1_1__1 : rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2 ;
     public final void rule__MultID__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3084:1: ( rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3085:2: rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3902:1: ( rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3903:2: rule__MultID__Group_1_1__1__Impl rule__MultID__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__MultID__Group_1_1__1__Impl_in_rule__MultID__Group_1_1__16242);
+            pushFollow(FOLLOW_rule__MultID__Group_1_1__1__Impl_in_rule__MultID__Group_1_1__17869);
             rule__MultID__Group_1_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultID__Group_1_1__2_in_rule__MultID__Group_1_1__16245);
+            pushFollow(FOLLOW_rule__MultID__Group_1_1__2_in_rule__MultID__Group_1_1__17872);
             rule__MultID__Group_1_1__2();
 
             state._fsp--;
@@ -8562,35 +10795,35 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3092:1: rule__MultID__Group_1_1__1__Impl : ( ( rule__MultID__MiAssignment_1_1_1 )* ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3910:1: rule__MultID__Group_1_1__1__Impl : ( ( rule__MultID__MiAssignment_1_1_1 )* ) ;
     public final void rule__MultID__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3096:1: ( ( ( rule__MultID__MiAssignment_1_1_1 )* ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3097:1: ( ( rule__MultID__MiAssignment_1_1_1 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3914:1: ( ( ( rule__MultID__MiAssignment_1_1_1 )* ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3915:1: ( ( rule__MultID__MiAssignment_1_1_1 )* )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3097:1: ( ( rule__MultID__MiAssignment_1_1_1 )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3098:1: ( rule__MultID__MiAssignment_1_1_1 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3915:1: ( ( rule__MultID__MiAssignment_1_1_1 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3916:1: ( rule__MultID__MiAssignment_1_1_1 )*
             {
              before(grammarAccess.getMultIDAccess().getMiAssignment_1_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3099:1: ( rule__MultID__MiAssignment_1_1_1 )*
-            loop16:
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3917:1: ( rule__MultID__MiAssignment_1_1_1 )*
+            loop23:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA16_0==RULE_ID) ) {
-                    alt16=1;
+                if ( (LA23_0==RULE_ID) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt23) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3099:2: rule__MultID__MiAssignment_1_1_1
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3917:2: rule__MultID__MiAssignment_1_1_1
             	    {
-            	    pushFollow(FOLLOW_rule__MultID__MiAssignment_1_1_1_in_rule__MultID__Group_1_1__1__Impl6272);
+            	    pushFollow(FOLLOW_rule__MultID__MiAssignment_1_1_1_in_rule__MultID__Group_1_1__1__Impl7899);
             	    rule__MultID__MiAssignment_1_1_1();
 
             	    state._fsp--;
@@ -8600,7 +10833,7 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop23;
                 }
             } while (true);
 
@@ -8627,16 +10860,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3109:1: rule__MultID__Group_1_1__2 : rule__MultID__Group_1_1__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3927:1: rule__MultID__Group_1_1__2 : rule__MultID__Group_1_1__2__Impl ;
     public final void rule__MultID__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3113:1: ( rule__MultID__Group_1_1__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3114:2: rule__MultID__Group_1_1__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3931:1: ( rule__MultID__Group_1_1__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3932:2: rule__MultID__Group_1_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__MultID__Group_1_1__2__Impl_in_rule__MultID__Group_1_1__26303);
+            pushFollow(FOLLOW_rule__MultID__Group_1_1__2__Impl_in_rule__MultID__Group_1_1__27930);
             rule__MultID__Group_1_1__2__Impl();
 
             state._fsp--;
@@ -8660,20 +10893,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__Group_1_1__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3120:1: rule__MultID__Group_1_1__2__Impl : ( ']' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3938:1: rule__MultID__Group_1_1__2__Impl : ( ']' ) ;
     public final void rule__MultID__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3124:1: ( ( ']' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3125:1: ( ']' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3942:1: ( ( ']' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3943:1: ( ']' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3125:1: ( ']' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3126:1: ']'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3943:1: ( ']' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3944:1: ']'
             {
              before(grammarAccess.getMultIDAccess().getRightSquareBracketKeyword_1_1_2()); 
-            match(input,39,FOLLOW_39_in_rule__MultID__Group_1_1__2__Impl6331); 
+            match(input,40,FOLLOW_40_in_rule__MultID__Group_1_1__2__Impl7958); 
              after(grammarAccess.getMultIDAccess().getRightSquareBracketKeyword_1_1_2()); 
 
             }
@@ -8697,21 +10930,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3145:1: rule__MultString__Group__0 : rule__MultString__Group__0__Impl rule__MultString__Group__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3963:1: rule__MultString__Group__0 : rule__MultString__Group__0__Impl rule__MultString__Group__1 ;
     public final void rule__MultString__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3149:1: ( rule__MultString__Group__0__Impl rule__MultString__Group__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3150:2: rule__MultString__Group__0__Impl rule__MultString__Group__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3967:1: ( rule__MultString__Group__0__Impl rule__MultString__Group__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3968:2: rule__MultString__Group__0__Impl rule__MultString__Group__1
             {
-            pushFollow(FOLLOW_rule__MultString__Group__0__Impl_in_rule__MultString__Group__06368);
+            pushFollow(FOLLOW_rule__MultString__Group__0__Impl_in_rule__MultString__Group__07995);
             rule__MultString__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultString__Group__1_in_rule__MultString__Group__06371);
+            pushFollow(FOLLOW_rule__MultString__Group__1_in_rule__MultString__Group__07998);
             rule__MultString__Group__1();
 
             state._fsp--;
@@ -8735,21 +10968,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3157:1: rule__MultString__Group__0__Impl : ( () ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3975:1: rule__MultString__Group__0__Impl : ( () ) ;
     public final void rule__MultString__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3161:1: ( ( () ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3162:1: ( () )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3979:1: ( ( () ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3980:1: ( () )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3162:1: ( () )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3163:1: ()
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3980:1: ( () )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3981:1: ()
             {
              before(grammarAccess.getMultStringAccess().getMultStringAction_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3164:1: ()
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3166:1: 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3982:1: ()
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3984:1: 
             {
             }
 
@@ -8772,16 +11005,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3176:1: rule__MultString__Group__1 : rule__MultString__Group__1__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3994:1: rule__MultString__Group__1 : rule__MultString__Group__1__Impl ;
     public final void rule__MultString__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3180:1: ( rule__MultString__Group__1__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3181:2: rule__MultString__Group__1__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3998:1: ( rule__MultString__Group__1__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3999:2: rule__MultString__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultString__Group__1__Impl_in_rule__MultString__Group__16429);
+            pushFollow(FOLLOW_rule__MultString__Group__1__Impl_in_rule__MultString__Group__18056);
             rule__MultString__Group__1__Impl();
 
             state._fsp--;
@@ -8805,23 +11038,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3187:1: rule__MultString__Group__1__Impl : ( ( rule__MultString__Alternatives_1 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4005:1: rule__MultString__Group__1__Impl : ( ( rule__MultString__Alternatives_1 ) ) ;
     public final void rule__MultString__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3191:1: ( ( ( rule__MultString__Alternatives_1 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3192:1: ( ( rule__MultString__Alternatives_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4009:1: ( ( ( rule__MultString__Alternatives_1 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4010:1: ( ( rule__MultString__Alternatives_1 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3192:1: ( ( rule__MultString__Alternatives_1 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3193:1: ( rule__MultString__Alternatives_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4010:1: ( ( rule__MultString__Alternatives_1 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4011:1: ( rule__MultString__Alternatives_1 )
             {
              before(grammarAccess.getMultStringAccess().getAlternatives_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3194:1: ( rule__MultString__Alternatives_1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3194:2: rule__MultString__Alternatives_1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4012:1: ( rule__MultString__Alternatives_1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4012:2: rule__MultString__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__MultString__Alternatives_1_in_rule__MultString__Group__1__Impl6456);
+            pushFollow(FOLLOW_rule__MultString__Alternatives_1_in_rule__MultString__Group__1__Impl8083);
             rule__MultString__Alternatives_1();
 
             state._fsp--;
@@ -8852,21 +11085,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3208:1: rule__MultString__Group_1_1__0 : rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4026:1: rule__MultString__Group_1_1__0 : rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1 ;
     public final void rule__MultString__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3212:1: ( rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3213:2: rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4030:1: ( rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4031:2: rule__MultString__Group_1_1__0__Impl rule__MultString__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__MultString__Group_1_1__0__Impl_in_rule__MultString__Group_1_1__06490);
+            pushFollow(FOLLOW_rule__MultString__Group_1_1__0__Impl_in_rule__MultString__Group_1_1__08117);
             rule__MultString__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultString__Group_1_1__1_in_rule__MultString__Group_1_1__06493);
+            pushFollow(FOLLOW_rule__MultString__Group_1_1__1_in_rule__MultString__Group_1_1__08120);
             rule__MultString__Group_1_1__1();
 
             state._fsp--;
@@ -8890,20 +11123,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__0__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3220:1: rule__MultString__Group_1_1__0__Impl : ( '[' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4038:1: rule__MultString__Group_1_1__0__Impl : ( '[' ) ;
     public final void rule__MultString__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3224:1: ( ( '[' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3225:1: ( '[' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4042:1: ( ( '[' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4043:1: ( '[' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3225:1: ( '[' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3226:1: '['
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4043:1: ( '[' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4044:1: '['
             {
              before(grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_1_0()); 
-            match(input,38,FOLLOW_38_in_rule__MultString__Group_1_1__0__Impl6521); 
+            match(input,39,FOLLOW_39_in_rule__MultString__Group_1_1__0__Impl8148); 
              after(grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_1_0()); 
 
             }
@@ -8927,21 +11160,21 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3239:1: rule__MultString__Group_1_1__1 : rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2 ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4057:1: rule__MultString__Group_1_1__1 : rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2 ;
     public final void rule__MultString__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3243:1: ( rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3244:2: rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4061:1: ( rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4062:2: rule__MultString__Group_1_1__1__Impl rule__MultString__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__MultString__Group_1_1__1__Impl_in_rule__MultString__Group_1_1__16552);
+            pushFollow(FOLLOW_rule__MultString__Group_1_1__1__Impl_in_rule__MultString__Group_1_1__18179);
             rule__MultString__Group_1_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MultString__Group_1_1__2_in_rule__MultString__Group_1_1__16555);
+            pushFollow(FOLLOW_rule__MultString__Group_1_1__2_in_rule__MultString__Group_1_1__18182);
             rule__MultString__Group_1_1__2();
 
             state._fsp--;
@@ -8965,35 +11198,35 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__1__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3251:1: rule__MultString__Group_1_1__1__Impl : ( ( rule__MultString__MsAssignment_1_1_1 )* ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4069:1: rule__MultString__Group_1_1__1__Impl : ( ( rule__MultString__MsAssignment_1_1_1 )* ) ;
     public final void rule__MultString__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3255:1: ( ( ( rule__MultString__MsAssignment_1_1_1 )* ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3256:1: ( ( rule__MultString__MsAssignment_1_1_1 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4073:1: ( ( ( rule__MultString__MsAssignment_1_1_1 )* ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4074:1: ( ( rule__MultString__MsAssignment_1_1_1 )* )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3256:1: ( ( rule__MultString__MsAssignment_1_1_1 )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3257:1: ( rule__MultString__MsAssignment_1_1_1 )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4074:1: ( ( rule__MultString__MsAssignment_1_1_1 )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4075:1: ( rule__MultString__MsAssignment_1_1_1 )*
             {
              before(grammarAccess.getMultStringAccess().getMsAssignment_1_1_1()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3258:1: ( rule__MultString__MsAssignment_1_1_1 )*
-            loop17:
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4076:1: ( rule__MultString__MsAssignment_1_1_1 )*
+            loop24:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA17_0==RULE_STRING) ) {
-                    alt17=1;
+                if ( (LA24_0==RULE_STRING) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt24) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3258:2: rule__MultString__MsAssignment_1_1_1
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4076:2: rule__MultString__MsAssignment_1_1_1
             	    {
-            	    pushFollow(FOLLOW_rule__MultString__MsAssignment_1_1_1_in_rule__MultString__Group_1_1__1__Impl6582);
+            	    pushFollow(FOLLOW_rule__MultString__MsAssignment_1_1_1_in_rule__MultString__Group_1_1__1__Impl8209);
             	    rule__MultString__MsAssignment_1_1_1();
 
             	    state._fsp--;
@@ -9003,7 +11236,7 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop24;
                 }
             } while (true);
 
@@ -9030,16 +11263,16 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3268:1: rule__MultString__Group_1_1__2 : rule__MultString__Group_1_1__2__Impl ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4086:1: rule__MultString__Group_1_1__2 : rule__MultString__Group_1_1__2__Impl ;
     public final void rule__MultString__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3272:1: ( rule__MultString__Group_1_1__2__Impl )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3273:2: rule__MultString__Group_1_1__2__Impl
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4090:1: ( rule__MultString__Group_1_1__2__Impl )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4091:2: rule__MultString__Group_1_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__MultString__Group_1_1__2__Impl_in_rule__MultString__Group_1_1__26613);
+            pushFollow(FOLLOW_rule__MultString__Group_1_1__2__Impl_in_rule__MultString__Group_1_1__28240);
             rule__MultString__Group_1_1__2__Impl();
 
             state._fsp--;
@@ -9063,20 +11296,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__Group_1_1__2__Impl"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3279:1: rule__MultString__Group_1_1__2__Impl : ( ']' ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4097:1: rule__MultString__Group_1_1__2__Impl : ( ']' ) ;
     public final void rule__MultString__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3283:1: ( ( ']' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3284:1: ( ']' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4101:1: ( ( ']' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4102:1: ( ']' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3284:1: ( ']' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3285:1: ']'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4102:1: ( ']' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4103:1: ']'
             {
              before(grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_2()); 
-            match(input,39,FOLLOW_39_in_rule__MultString__Group_1_1__2__Impl6641); 
+            match(input,40,FOLLOW_40_in_rule__MultString__Group_1_1__2__Impl8268); 
              after(grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_2()); 
 
             }
@@ -9100,20 +11333,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ClasAssignment_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3305:1: rule__Model__ClasAssignment_0 : ( ruleClassType ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4123:1: rule__Model__ClasAssignment_0 : ( ruleClassType ) ;
     public final void rule__Model__ClasAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3309:1: ( ( ruleClassType ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3310:1: ( ruleClassType )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4127:1: ( ( ruleClassType ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4128:1: ( ruleClassType )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3310:1: ( ruleClassType )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3311:1: ruleClassType
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4128:1: ( ruleClassType )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4129:1: ruleClassType
             {
              before(grammarAccess.getModelAccess().getClasClassTypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleClassType_in_rule__Model__ClasAssignment_06683);
+            pushFollow(FOLLOW_ruleClassType_in_rule__Model__ClasAssignment_08310);
             ruleClassType();
 
             state._fsp--;
@@ -9141,20 +11374,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ProcAssignment_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3320:1: rule__Model__ProcAssignment_1 : ( ruleProcedure ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4138:1: rule__Model__ProcAssignment_1 : ( ruleProcedure ) ;
     public final void rule__Model__ProcAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3324:1: ( ( ruleProcedure ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3325:1: ( ruleProcedure )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4142:1: ( ( ruleProcedure ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4143:1: ( ruleProcedure )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3325:1: ( ruleProcedure )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3326:1: ruleProcedure
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4143:1: ( ruleProcedure )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4144:1: ruleProcedure
             {
              before(grammarAccess.getModelAccess().getProcProcedureParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleProcedure_in_rule__Model__ProcAssignment_16714);
+            pushFollow(FOLLOW_ruleProcedure_in_rule__Model__ProcAssignment_18341);
             ruleProcedure();
 
             state._fsp--;
@@ -9182,20 +11415,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__StatemAssignment_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3335:1: rule__Model__StatemAssignment_2 : ( ruleStatement ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4153:1: rule__Model__StatemAssignment_2 : ( ruleStatement ) ;
     public final void rule__Model__StatemAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3339:1: ( ( ruleStatement ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3340:1: ( ruleStatement )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4157:1: ( ( ruleStatement ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4158:1: ( ruleStatement )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3340:1: ( ruleStatement )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3341:1: ruleStatement
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4158:1: ( ruleStatement )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4159:1: ruleStatement
             {
              before(grammarAccess.getModelAccess().getStatemStatementParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleStatement_in_rule__Model__StatemAssignment_26745);
+            pushFollow(FOLLOW_ruleStatement_in_rule__Model__StatemAssignment_28372);
             ruleStatement();
 
             state._fsp--;
@@ -9223,20 +11456,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ExpAssignment_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3350:1: rule__Model__ExpAssignment_3 : ( ruleExpression ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4168:1: rule__Model__ExpAssignment_3 : ( ruleExpression ) ;
     public final void rule__Model__ExpAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3354:1: ( ( ruleExpression ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3355:1: ( ruleExpression )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4172:1: ( ( ruleExpression ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4173:1: ( ruleExpression )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3355:1: ( ruleExpression )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3356:1: ruleExpression
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4173:1: ( ruleExpression )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4174:1: ruleExpression
             {
              before(grammarAccess.getModelAccess().getExpExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Model__ExpAssignment_36776);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Model__ExpAssignment_38403);
             ruleExpression();
 
             state._fsp--;
@@ -9264,20 +11497,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__NameAssignment_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3365:1: rule__ClassType__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4183:1: rule__ClassType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ClassType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3369:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3370:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4187:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4188:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3370:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3371:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4188:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4189:1: RULE_ID
             {
              before(grammarAccess.getClassTypeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ClassType__NameAssignment_16807); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ClassType__NameAssignment_18434); 
              after(grammarAccess.getClassTypeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9301,29 +11534,29 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__NoclassAssignment_2_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3380:1: rule__ClassType__NoclassAssignment_2_0 : ( ( 'noclass' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4198:1: rule__ClassType__NoclassAssignment_2_0 : ( ( 'NOCLASS' ) ) ;
     public final void rule__ClassType__NoclassAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3384:1: ( ( ( 'noclass' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3385:1: ( ( 'noclass' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4202:1: ( ( ( 'NOCLASS' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:1: ( ( 'NOCLASS' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3385:1: ( ( 'noclass' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3386:1: ( 'noclass' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4203:1: ( ( 'NOCLASS' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4204:1: ( 'NOCLASS' )
             {
-             before(grammarAccess.getClassTypeAccess().getNoclassNoclassKeyword_2_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3387:1: ( 'noclass' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3388:1: 'noclass'
+             before(grammarAccess.getClassTypeAccess().getNoclassNOCLASSKeyword_2_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4205:1: ( 'NOCLASS' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4206:1: 'NOCLASS'
             {
-             before(grammarAccess.getClassTypeAccess().getNoclassNoclassKeyword_2_0_0()); 
-            match(input,40,FOLLOW_40_in_rule__ClassType__NoclassAssignment_2_06843); 
-             after(grammarAccess.getClassTypeAccess().getNoclassNoclassKeyword_2_0_0()); 
+             before(grammarAccess.getClassTypeAccess().getNoclassNOCLASSKeyword_2_0_0()); 
+            match(input,41,FOLLOW_41_in_rule__ClassType__NoclassAssignment_2_08470); 
+             after(grammarAccess.getClassTypeAccess().getNoclassNOCLASSKeyword_2_0_0()); 
 
             }
 
-             after(grammarAccess.getClassTypeAccess().getNoclassNoclassKeyword_2_0_0()); 
+             after(grammarAccess.getClassTypeAccess().getNoclassNOCLASSKeyword_2_0_0()); 
 
             }
 
@@ -9346,20 +11579,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__PrefixAssignment_2_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3403:1: rule__ClassType__PrefixAssignment_2_1_1 : ( ruleMultID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4221:1: rule__ClassType__PrefixAssignment_2_1_1 : ( ruleMultID ) ;
     public final void rule__ClassType__PrefixAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3407:1: ( ( ruleMultID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3408:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4225:1: ( ( ruleMultID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4226:1: ( ruleMultID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3408:1: ( ruleMultID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3409:1: ruleMultID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4226:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4227:1: ruleMultID
             {
              before(grammarAccess.getClassTypeAccess().getPrefixMultIDParserRuleCall_2_1_1_0()); 
-            pushFollow(FOLLOW_ruleMultID_in_rule__ClassType__PrefixAssignment_2_1_16882);
+            pushFollow(FOLLOW_ruleMultID_in_rule__ClassType__PrefixAssignment_2_1_18509);
             ruleMultID();
 
             state._fsp--;
@@ -9387,20 +11620,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__SuffixAssignment_2_2_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3418:1: rule__ClassType__SuffixAssignment_2_2_1 : ( ruleMultID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4236:1: rule__ClassType__SuffixAssignment_2_2_1 : ( ruleMultID ) ;
     public final void rule__ClassType__SuffixAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3422:1: ( ( ruleMultID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3423:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4240:1: ( ( ruleMultID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4241:1: ( ruleMultID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3423:1: ( ruleMultID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3424:1: ruleMultID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4241:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4242:1: ruleMultID
             {
              before(grammarAccess.getClassTypeAccess().getSuffixMultIDParserRuleCall_2_2_1_0()); 
-            pushFollow(FOLLOW_ruleMultID_in_rule__ClassType__SuffixAssignment_2_2_16913);
+            pushFollow(FOLLOW_ruleMultID_in_rule__ClassType__SuffixAssignment_2_2_18540);
             ruleMultID();
 
             state._fsp--;
@@ -9428,23 +11661,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ClassType__BlockingAssignment_2_3_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3433:1: rule__ClassType__BlockingAssignment_2_3_1 : ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4251:1: rule__ClassType__BlockingAssignment_2_3_1 : ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) ) ;
     public final void rule__ClassType__BlockingAssignment_2_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3437:1: ( ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3438:1: ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4255:1: ( ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4256:1: ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3438:1: ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3439:1: ( rule__ClassType__BlockingAlternatives_2_3_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4256:1: ( ( rule__ClassType__BlockingAlternatives_2_3_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4257:1: ( rule__ClassType__BlockingAlternatives_2_3_1_0 )
             {
              before(grammarAccess.getClassTypeAccess().getBlockingAlternatives_2_3_1_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3440:1: ( rule__ClassType__BlockingAlternatives_2_3_1_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3440:2: rule__ClassType__BlockingAlternatives_2_3_1_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4258:1: ( rule__ClassType__BlockingAlternatives_2_3_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4258:2: rule__ClassType__BlockingAlternatives_2_3_1_0
             {
-            pushFollow(FOLLOW_rule__ClassType__BlockingAlternatives_2_3_1_0_in_rule__ClassType__BlockingAssignment_2_3_16944);
+            pushFollow(FOLLOW_rule__ClassType__BlockingAlternatives_2_3_1_0_in_rule__ClassType__BlockingAssignment_2_3_18571);
             rule__ClassType__BlockingAlternatives_2_3_1_0();
 
             state._fsp--;
@@ -9475,20 +11708,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__NameAssignment_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3449:1: rule__Procedure__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4267:1: rule__Procedure__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Procedure__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3453:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3454:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4271:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4272:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3454:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3455:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4272:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4273:1: RULE_ID
             {
              before(grammarAccess.getProcedureAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Procedure__NameAssignment_16977); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Procedure__NameAssignment_18604); 
              after(grammarAccess.getProcedureAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9512,20 +11745,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__PrefixAssignment_2_0_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3464:1: rule__Procedure__PrefixAssignment_2_0_1 : ( ruleMultID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4282:1: rule__Procedure__PrefixAssignment_2_0_1 : ( ruleMultID ) ;
     public final void rule__Procedure__PrefixAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3468:1: ( ( ruleMultID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3469:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4286:1: ( ( ruleMultID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4287:1: ( ruleMultID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3469:1: ( ruleMultID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3470:1: ruleMultID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4287:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4288:1: ruleMultID
             {
              before(grammarAccess.getProcedureAccess().getPrefixMultIDParserRuleCall_2_0_1_0()); 
-            pushFollow(FOLLOW_ruleMultID_in_rule__Procedure__PrefixAssignment_2_0_17008);
+            pushFollow(FOLLOW_ruleMultID_in_rule__Procedure__PrefixAssignment_2_0_18635);
             ruleMultID();
 
             state._fsp--;
@@ -9553,20 +11786,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__SuffixAssignment_2_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3479:1: rule__Procedure__SuffixAssignment_2_1_1 : ( ruleMultID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4297:1: rule__Procedure__SuffixAssignment_2_1_1 : ( ruleMultID ) ;
     public final void rule__Procedure__SuffixAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3483:1: ( ( ruleMultID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3484:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4301:1: ( ( ruleMultID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4302:1: ( ruleMultID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3484:1: ( ruleMultID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3485:1: ruleMultID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4302:1: ( ruleMultID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4303:1: ruleMultID
             {
              before(grammarAccess.getProcedureAccess().getSuffixMultIDParserRuleCall_2_1_1_0()); 
-            pushFollow(FOLLOW_ruleMultID_in_rule__Procedure__SuffixAssignment_2_1_17039);
+            pushFollow(FOLLOW_ruleMultID_in_rule__Procedure__SuffixAssignment_2_1_18666);
             ruleMultID();
 
             state._fsp--;
@@ -9594,23 +11827,23 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Procedure__TypesAssignment_2_2_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3494:1: rule__Procedure__TypesAssignment_2_2_1 : ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4312:1: rule__Procedure__TypesAssignment_2_2_1 : ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) ) ;
     public final void rule__Procedure__TypesAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3498:1: ( ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3499:1: ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4316:1: ( ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4317:1: ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3499:1: ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3500:1: ( rule__Procedure__TypesAlternatives_2_2_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4317:1: ( ( rule__Procedure__TypesAlternatives_2_2_1_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4318:1: ( rule__Procedure__TypesAlternatives_2_2_1_0 )
             {
              before(grammarAccess.getProcedureAccess().getTypesAlternatives_2_2_1_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3501:1: ( rule__Procedure__TypesAlternatives_2_2_1_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3501:2: rule__Procedure__TypesAlternatives_2_2_1_0
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4319:1: ( rule__Procedure__TypesAlternatives_2_2_1_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4319:2: rule__Procedure__TypesAlternatives_2_2_1_0
             {
-            pushFollow(FOLLOW_rule__Procedure__TypesAlternatives_2_2_1_0_in_rule__Procedure__TypesAssignment_2_2_17070);
+            pushFollow(FOLLOW_rule__Procedure__TypesAlternatives_2_2_1_0_in_rule__Procedure__TypesAssignment_2_2_18697);
             rule__Procedure__TypesAlternatives_2_2_1_0();
 
             state._fsp--;
@@ -9641,20 +11874,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__NameAssignment_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3510:1: rule__Statement__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4328:1: rule__Statement__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Statement__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3514:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3515:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4332:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4333:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3515:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3516:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4333:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4334:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__NameAssignment_17103); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__NameAssignment_18730); 
              after(grammarAccess.getStatementAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9678,20 +11911,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__RepAssignment_2_0_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3525:1: rule__Statement__RepAssignment_2_0_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4343:1: rule__Statement__RepAssignment_2_0_1 : ( RULE_ID ) ;
     public final void rule__Statement__RepAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3529:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3530:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4347:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4348:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3530:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3531:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4348:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4349:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getRepIDTerminalRuleCall_2_0_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__RepAssignment_2_0_17134); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__RepAssignment_2_0_18761); 
              after(grammarAccess.getStatementAccess().getRepIDTerminalRuleCall_2_0_1_0()); 
 
             }
@@ -9715,20 +11948,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__UntilAssignment_2_0_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3540:1: rule__Statement__UntilAssignment_2_0_3 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4358:1: rule__Statement__UntilAssignment_2_0_3 : ( RULE_ID ) ;
     public final void rule__Statement__UntilAssignment_2_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3544:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3545:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4362:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4363:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3545:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3546:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4363:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4364:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getUntilIDTerminalRuleCall_2_0_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__UntilAssignment_2_0_37165); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__UntilAssignment_2_0_38792); 
              after(grammarAccess.getStatementAccess().getUntilIDTerminalRuleCall_2_0_3_0()); 
 
             }
@@ -9752,20 +11985,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__WhileAssignment_2_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3555:1: rule__Statement__WhileAssignment_2_1_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4373:1: rule__Statement__WhileAssignment_2_1_1 : ( RULE_ID ) ;
     public final void rule__Statement__WhileAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3559:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3560:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4377:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4378:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3560:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3561:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4378:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4379:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getWhileIDTerminalRuleCall_2_1_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__WhileAssignment_2_1_17196); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__WhileAssignment_2_1_18823); 
              after(grammarAccess.getStatementAccess().getWhileIDTerminalRuleCall_2_1_1_0()); 
 
             }
@@ -9789,20 +12022,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__DoAssignment_2_1_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3570:1: rule__Statement__DoAssignment_2_1_3 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4388:1: rule__Statement__DoAssignment_2_1_3 : ( RULE_ID ) ;
     public final void rule__Statement__DoAssignment_2_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3574:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3575:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4392:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4393:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3575:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3576:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4393:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4394:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getDoIDTerminalRuleCall_2_1_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__DoAssignment_2_1_37227); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__DoAssignment_2_1_38854); 
              after(grammarAccess.getStatementAccess().getDoIDTerminalRuleCall_2_1_3_0()); 
 
             }
@@ -9826,20 +12059,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__ForAssignment_2_2_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3585:1: rule__Statement__ForAssignment_2_2_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4403:1: rule__Statement__ForAssignment_2_2_1 : ( RULE_ID ) ;
     public final void rule__Statement__ForAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3589:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3590:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4407:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4408:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3590:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3591:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4408:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4409:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getForIDTerminalRuleCall_2_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ForAssignment_2_2_17258); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ForAssignment_2_2_18885); 
              after(grammarAccess.getStatementAccess().getForIDTerminalRuleCall_2_2_1_0()); 
 
             }
@@ -9863,20 +12096,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__VarAssignment_2_3_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3600:1: rule__Statement__VarAssignment_2_3_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4418:1: rule__Statement__VarAssignment_2_3_1 : ( RULE_ID ) ;
     public final void rule__Statement__VarAssignment_2_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3604:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3605:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4422:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4423:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3605:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3606:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4423:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4424:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getVarIDTerminalRuleCall_2_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__VarAssignment_2_3_17289); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__VarAssignment_2_3_18916); 
              after(grammarAccess.getStatementAccess().getVarIDTerminalRuleCall_2_3_1_0()); 
 
             }
@@ -9900,20 +12133,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__ExAssignment_2_3_2_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3615:1: rule__Statement__ExAssignment_2_3_2_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4433:1: rule__Statement__ExAssignment_2_3_2_1 : ( RULE_ID ) ;
     public final void rule__Statement__ExAssignment_2_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3619:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3620:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4437:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4438:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3620:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3621:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4438:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4439:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_3_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_3_2_17320); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_3_2_18947); 
              after(grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_3_2_1_0()); 
 
             }
@@ -9937,20 +12170,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__ValAssignment_2_4_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3630:1: rule__Statement__ValAssignment_2_4_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4448:1: rule__Statement__ValAssignment_2_4_1 : ( RULE_ID ) ;
     public final void rule__Statement__ValAssignment_2_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3634:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3635:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4452:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4453:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3635:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3636:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4453:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4454:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getValIDTerminalRuleCall_2_4_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ValAssignment_2_4_17351); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ValAssignment_2_4_18978); 
              after(grammarAccess.getStatementAccess().getValIDTerminalRuleCall_2_4_1_0()); 
 
             }
@@ -9974,20 +12207,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statement__ExAssignment_2_4_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3645:1: rule__Statement__ExAssignment_2_4_3 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4463:1: rule__Statement__ExAssignment_2_4_3 : ( RULE_ID ) ;
     public final void rule__Statement__ExAssignment_2_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3649:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3650:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4467:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4468:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3650:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3651:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4468:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4469:1: RULE_ID
             {
              before(grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_4_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_4_37382); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_4_39009); 
              after(grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_4_3_0()); 
 
             }
@@ -10011,20 +12244,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__NameAssignment_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3660:1: rule__Expression__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4478:1: rule__Expression__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Expression__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3664:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3665:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4482:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4483:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3665:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3666:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4483:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4484:1: RULE_ID
             {
              before(grammarAccess.getExpressionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Expression__NameAssignment_17413); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Expression__NameAssignment_19040); 
              after(grammarAccess.getExpressionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10048,20 +12281,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__PrecAssignment_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3675:1: rule__Expression__PrecAssignment_2 : ( rulePrecedence ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4493:1: rule__Expression__PrecAssignment_2 : ( rulePrecedence ) ;
     public final void rule__Expression__PrecAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3679:1: ( ( rulePrecedence ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3680:1: ( rulePrecedence )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4497:1: ( ( rulePrecedence ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4498:1: ( rulePrecedence )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3680:1: ( rulePrecedence )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3681:1: rulePrecedence
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4498:1: ( rulePrecedence )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4499:1: rulePrecedence
             {
              before(grammarAccess.getExpressionAccess().getPrecPrecedenceParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_rulePrecedence_in_rule__Expression__PrecAssignment_27444);
+            pushFollow(FOLLOW_rulePrecedence_in_rule__Expression__PrecAssignment_29071);
             rulePrecedence();
 
             state._fsp--;
@@ -10089,29 +12322,29 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_0_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3690:1: rule__Precedence__RuletypAssignment_0_0 : ( ( 'caller' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4508:1: rule__Precedence__RuletypAssignment_0_0 : ( ( 'CALLER' ) ) ;
     public final void rule__Precedence__RuletypAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3694:1: ( ( ( 'caller' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3695:1: ( ( 'caller' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4512:1: ( ( ( 'CALLER' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4513:1: ( ( 'CALLER' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3695:1: ( ( 'caller' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3696:1: ( 'caller' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4513:1: ( ( 'CALLER' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4514:1: ( 'CALLER' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypCallerKeyword_0_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3697:1: ( 'caller' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3698:1: 'caller'
+             before(grammarAccess.getPrecedenceAccess().getRuletypCALLERKeyword_0_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4515:1: ( 'CALLER' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4516:1: 'CALLER'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypCallerKeyword_0_0_0()); 
-            match(input,41,FOLLOW_41_in_rule__Precedence__RuletypAssignment_0_07480); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypCallerKeyword_0_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypCALLERKeyword_0_0_0()); 
+            match(input,42,FOLLOW_42_in_rule__Precedence__RuletypAssignment_0_09107); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypCALLERKeyword_0_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypCallerKeyword_0_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypCALLERKeyword_0_0_0()); 
 
             }
 
@@ -10134,20 +12367,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_0_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3713:1: rule__Precedence__RuleAssignment_0_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4531:1: rule__Precedence__RuleAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3717:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3718:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4535:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4536:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3718:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3719:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4536:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4537:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_0_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_0_17519); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_0_19146); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_0_1_0()); 
 
             }
@@ -10170,30 +12403,67 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_0_1"
 
 
+    // $ANTLR start "rule__Precedence__Feature1Assignment_0_2_1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4546:1: rule__Precedence__Feature1Assignment_0_2_1 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature1Assignment_0_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4550:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4551:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4551:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4552:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_0_2_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_0_2_19177); 
+             after(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_0_2_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Feature1Assignment_0_2_1"
+
+
     // $ANTLR start "rule__Precedence__RuletypAssignment_1_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3728:1: rule__Precedence__RuletypAssignment_1_0 : ( ( 'prefix' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4561:1: rule__Precedence__RuletypAssignment_1_0 : ( ( 'PREFIX' ) ) ;
     public final void rule__Precedence__RuletypAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3732:1: ( ( ( 'prefix' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3733:1: ( ( 'prefix' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4565:1: ( ( ( 'PREFIX' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4566:1: ( ( 'PREFIX' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3733:1: ( ( 'prefix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3734:1: ( 'prefix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4566:1: ( ( 'PREFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4567:1: ( 'PREFIX' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypPrefixKeyword_1_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3735:1: ( 'prefix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3736:1: 'prefix'
+             before(grammarAccess.getPrecedenceAccess().getRuletypPREFIXKeyword_1_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4568:1: ( 'PREFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4569:1: 'PREFIX'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypPrefixKeyword_1_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__Precedence__RuletypAssignment_1_07555); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypPrefixKeyword_1_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypPREFIXKeyword_1_0_0()); 
+            match(input,23,FOLLOW_23_in_rule__Precedence__RuletypAssignment_1_09213); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypPREFIXKeyword_1_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypPrefixKeyword_1_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypPREFIXKeyword_1_0_0()); 
 
             }
 
@@ -10216,20 +12486,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3751:1: rule__Precedence__RuleAssignment_1_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4584:1: rule__Precedence__RuleAssignment_1_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3755:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3756:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4588:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4589:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3756:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3757:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4589:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4590:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_1_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_1_17594); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_1_19252); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_1_1_0()); 
 
             }
@@ -10253,20 +12523,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__PrefixAssignment_1_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3766:1: rule__Precedence__PrefixAssignment_1_2 : ( ruleMultString ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4599:1: rule__Precedence__PrefixAssignment_1_2 : ( ruleMultString ) ;
     public final void rule__Precedence__PrefixAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3770:1: ( ( ruleMultString ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3771:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4603:1: ( ( ruleMultString ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4604:1: ( ruleMultString )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3771:1: ( ruleMultString )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3772:1: ruleMultString
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4604:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4605:1: ruleMultString
             {
              before(grammarAccess.getPrecedenceAccess().getPrefixMultStringParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__PrefixAssignment_1_27625);
+            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__PrefixAssignment_1_29283);
             ruleMultString();
 
             state._fsp--;
@@ -10293,22 +12563,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__PrefixAssignment_1_2"
 
 
-    // $ANTLR start "rule__Precedence__Par1Assignment_1_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3781:1: rule__Precedence__Par1Assignment_1_3 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par1Assignment_1_3() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature1Assignment_1_3_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4614:1: rule__Precedence__Feature1Assignment_1_3_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature1Assignment_1_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3785:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3786:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4618:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4619:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3786:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3787:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4619:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4620:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_1_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_1_37656); 
-             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_1_3_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_1_3_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_1_3_09314); 
+             after(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_1_3_0_0()); 
 
             }
 
@@ -10327,33 +12597,70 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par1Assignment_1_3"
+    // $ANTLR end "rule__Precedence__Feature1Assignment_1_3_0"
+
+
+    // $ANTLR start "rule__Precedence__Par1Assignment_1_4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4629:1: rule__Precedence__Par1Assignment_1_4 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par1Assignment_1_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4633:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4634:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4634:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4635:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_1_4_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_1_49345); 
+             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_1_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par1Assignment_1_4"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_2_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3796:1: rule__Precedence__RuletypAssignment_2_0 : ( ( 'suffix' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4644:1: rule__Precedence__RuletypAssignment_2_0 : ( ( 'SUFFIX' ) ) ;
     public final void rule__Precedence__RuletypAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3800:1: ( ( ( 'suffix' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3801:1: ( ( 'suffix' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4648:1: ( ( ( 'SUFFIX' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4649:1: ( ( 'SUFFIX' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3801:1: ( ( 'suffix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3802:1: ( 'suffix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4649:1: ( ( 'SUFFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4650:1: ( 'SUFFIX' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypSuffixKeyword_2_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3803:1: ( 'suffix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3804:1: 'suffix'
+             before(grammarAccess.getPrecedenceAccess().getRuletypSUFFIXKeyword_2_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4651:1: ( 'SUFFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4652:1: 'SUFFIX'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypSuffixKeyword_2_0_0()); 
-            match(input,24,FOLLOW_24_in_rule__Precedence__RuletypAssignment_2_07692); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypSuffixKeyword_2_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypSUFFIXKeyword_2_0_0()); 
+            match(input,24,FOLLOW_24_in_rule__Precedence__RuletypAssignment_2_09381); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypSUFFIXKeyword_2_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypSuffixKeyword_2_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypSUFFIXKeyword_2_0_0()); 
 
             }
 
@@ -10376,20 +12683,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_2_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3819:1: rule__Precedence__RuleAssignment_2_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4667:1: rule__Precedence__RuleAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3823:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3824:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4671:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4672:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3824:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3825:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4672:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4673:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_2_17731); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_2_19420); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_2_1_0()); 
 
             }
@@ -10412,22 +12719,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_2_1"
 
 
-    // $ANTLR start "rule__Precedence__Par1Assignment_2_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3834:1: rule__Precedence__Par1Assignment_2_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par1Assignment_2_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature1Assignment_2_2_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4682:1: rule__Precedence__Feature1Assignment_2_2_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature1Assignment_2_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3838:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3839:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4686:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4687:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3839:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3840:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4687:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4688:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_2_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_2_27762); 
-             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_2_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_2_2_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_2_2_09451); 
+             after(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_2_2_0_0()); 
 
             }
 
@@ -10446,29 +12753,66 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par1Assignment_2_2"
+    // $ANTLR end "rule__Precedence__Feature1Assignment_2_2_0"
 
 
-    // $ANTLR start "rule__Precedence__SuffixAssignment_2_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3849:1: rule__Precedence__SuffixAssignment_2_3 : ( ruleMultString ) ;
-    public final void rule__Precedence__SuffixAssignment_2_3() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Par1Assignment_2_3"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4697:1: rule__Precedence__Par1Assignment_2_3 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par1Assignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3853:1: ( ( ruleMultString ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3854:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4701:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4702:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3854:1: ( ruleMultString )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3855:1: ruleMultString
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4702:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4703:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getSuffixMultStringParserRuleCall_2_3_0()); 
-            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__SuffixAssignment_2_37793);
+             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_2_3_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_2_39482); 
+             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_2_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par1Assignment_2_3"
+
+
+    // $ANTLR start "rule__Precedence__SuffixAssignment_2_4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4712:1: rule__Precedence__SuffixAssignment_2_4 : ( ruleMultString ) ;
+    public final void rule__Precedence__SuffixAssignment_2_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4716:1: ( ( ruleMultString ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4717:1: ( ruleMultString )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4717:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4718:1: ruleMultString
+            {
+             before(grammarAccess.getPrecedenceAccess().getSuffixMultStringParserRuleCall_2_4_0()); 
+            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__SuffixAssignment_2_49513);
             ruleMultString();
 
             state._fsp--;
 
-             after(grammarAccess.getPrecedenceAccess().getSuffixMultStringParserRuleCall_2_3_0()); 
+             after(grammarAccess.getPrecedenceAccess().getSuffixMultStringParserRuleCall_2_4_0()); 
 
             }
 
@@ -10487,33 +12831,33 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__SuffixAssignment_2_3"
+    // $ANTLR end "rule__Precedence__SuffixAssignment_2_4"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_3_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3864:1: rule__Precedence__RuletypAssignment_3_0 : ( ( 'infix' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4727:1: rule__Precedence__RuletypAssignment_3_0 : ( ( 'INFIX' ) ) ;
     public final void rule__Precedence__RuletypAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3868:1: ( ( ( 'infix' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3869:1: ( ( 'infix' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4731:1: ( ( ( 'INFIX' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4732:1: ( ( 'INFIX' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3869:1: ( ( 'infix' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3870:1: ( 'infix' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4732:1: ( ( 'INFIX' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4733:1: ( 'INFIX' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypInfixKeyword_3_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3871:1: ( 'infix' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3872:1: 'infix'
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXKeyword_3_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4734:1: ( 'INFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4735:1: 'INFIX'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypInfixKeyword_3_0_0()); 
-            match(input,42,FOLLOW_42_in_rule__Precedence__RuletypAssignment_3_07829); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypInfixKeyword_3_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXKeyword_3_0_0()); 
+            match(input,43,FOLLOW_43_in_rule__Precedence__RuletypAssignment_3_09549); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXKeyword_3_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypInfixKeyword_3_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXKeyword_3_0_0()); 
 
             }
 
@@ -10536,20 +12880,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_3_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3887:1: rule__Precedence__RuleAssignment_3_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4750:1: rule__Precedence__RuleAssignment_3_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3891:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3892:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4754:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4755:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3892:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3893:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4755:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4756:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_3_17868); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_3_19588); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_3_1_0()); 
 
             }
@@ -10572,22 +12916,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_3_1"
 
 
-    // $ANTLR start "rule__Precedence__Par1Assignment_3_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3902:1: rule__Precedence__Par1Assignment_3_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par1Assignment_3_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature1Assignment_3_2_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4765:1: rule__Precedence__Feature1Assignment_3_2_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature1Assignment_3_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3906:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3907:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4769:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4770:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3907:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3908:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4770:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4771:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_3_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_3_27899); 
-             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_3_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_3_2_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_3_2_09619); 
+             after(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_3_2_0_0()); 
 
             }
 
@@ -10606,29 +12950,66 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par1Assignment_3_2"
+    // $ANTLR end "rule__Precedence__Feature1Assignment_3_2_0"
 
 
-    // $ANTLR start "rule__Precedence__InfixAssignment_3_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3917:1: rule__Precedence__InfixAssignment_3_3 : ( ruleMultString ) ;
-    public final void rule__Precedence__InfixAssignment_3_3() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Par1Assignment_3_3"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4780:1: rule__Precedence__Par1Assignment_3_3 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par1Assignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3921:1: ( ( ruleMultString ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3922:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4784:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4785:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3922:1: ( ruleMultString )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3923:1: ruleMultString
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4785:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4786:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_3_3_0()); 
-            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_3_37930);
+             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_3_3_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_3_39650); 
+             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_3_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par1Assignment_3_3"
+
+
+    // $ANTLR start "rule__Precedence__InfixAssignment_3_4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4795:1: rule__Precedence__InfixAssignment_3_4 : ( ruleMultString ) ;
+    public final void rule__Precedence__InfixAssignment_3_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4799:1: ( ( ruleMultString ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4800:1: ( ruleMultString )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4800:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4801:1: ruleMultString
+            {
+             before(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_3_4_0()); 
+            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_3_49681);
             ruleMultString();
 
             state._fsp--;
 
-             after(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_3_3_0()); 
+             after(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_3_4_0()); 
 
             }
 
@@ -10647,25 +13028,25 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__InfixAssignment_3_3"
+    // $ANTLR end "rule__Precedence__InfixAssignment_3_4"
 
 
-    // $ANTLR start "rule__Precedence__Par2Assignment_3_4"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3932:1: rule__Precedence__Par2Assignment_3_4 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par2Assignment_3_4() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature2Assignment_3_5_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4810:1: rule__Precedence__Feature2Assignment_3_5_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature2Assignment_3_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3936:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3937:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4814:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4815:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3937:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3938:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4815:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4816:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_3_4_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_3_47961); 
-             after(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_3_4_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature2IDTerminalRuleCall_3_5_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature2Assignment_3_5_09712); 
+             after(grammarAccess.getPrecedenceAccess().getFeature2IDTerminalRuleCall_3_5_0_0()); 
 
             }
 
@@ -10684,33 +13065,70 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par2Assignment_3_4"
+    // $ANTLR end "rule__Precedence__Feature2Assignment_3_5_0"
+
+
+    // $ANTLR start "rule__Precedence__Par2Assignment_3_6"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4825:1: rule__Precedence__Par2Assignment_3_6 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par2Assignment_3_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4829:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4830:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4830:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4831:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_3_6_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_3_69743); 
+             after(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_3_6_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par2Assignment_3_6"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_4_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3947:1: rule__Precedence__RuletypAssignment_4_0 : ( ( 'infixleft' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4840:1: rule__Precedence__RuletypAssignment_4_0 : ( ( 'INFIXADD' ) ) ;
     public final void rule__Precedence__RuletypAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3951:1: ( ( ( 'infixleft' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3952:1: ( ( 'infixleft' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4844:1: ( ( ( 'INFIXADD' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4845:1: ( ( 'INFIXADD' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3952:1: ( ( 'infixleft' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3953:1: ( 'infixleft' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4845:1: ( ( 'INFIXADD' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4846:1: ( 'INFIXADD' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypInfixleftKeyword_4_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3954:1: ( 'infixleft' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3955:1: 'infixleft'
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXADDKeyword_4_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4847:1: ( 'INFIXADD' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4848:1: 'INFIXADD'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypInfixleftKeyword_4_0_0()); 
-            match(input,43,FOLLOW_43_in_rule__Precedence__RuletypAssignment_4_07997); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypInfixleftKeyword_4_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXADDKeyword_4_0_0()); 
+            match(input,44,FOLLOW_44_in_rule__Precedence__RuletypAssignment_4_09779); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXADDKeyword_4_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypInfixleftKeyword_4_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXADDKeyword_4_0_0()); 
 
             }
 
@@ -10733,20 +13151,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_4_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3970:1: rule__Precedence__RuleAssignment_4_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4863:1: rule__Precedence__RuleAssignment_4_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3974:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3975:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4867:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4868:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3975:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3976:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4868:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4869:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_4_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_4_18036); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_4_19818); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_4_1_0()); 
 
             }
@@ -10769,22 +13187,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_4_1"
 
 
-    // $ANTLR start "rule__Precedence__Par1Assignment_4_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3985:1: rule__Precedence__Par1Assignment_4_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par1Assignment_4_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature1Assignment_4_2_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4878:1: rule__Precedence__Feature1Assignment_4_2_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature1Assignment_4_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3989:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3990:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4882:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4883:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3990:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:3991:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4883:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4884:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_4_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_4_28067); 
-             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_4_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_4_2_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_4_2_09849); 
+             after(grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_4_2_0_0()); 
 
             }
 
@@ -10803,29 +13221,66 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par1Assignment_4_2"
+    // $ANTLR end "rule__Precedence__Feature1Assignment_4_2_0"
 
 
-    // $ANTLR start "rule__Precedence__InfixleftAssignment_4_3"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4000:1: rule__Precedence__InfixleftAssignment_4_3 : ( ruleMultString ) ;
-    public final void rule__Precedence__InfixleftAssignment_4_3() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Par1Assignment_4_3"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4893:1: rule__Precedence__Par1Assignment_4_3 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par1Assignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4004:1: ( ( ruleMultString ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4005:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4897:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4898:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4005:1: ( ruleMultString )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4006:1: ruleMultString
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4898:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4899:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getInfixleftMultStringParserRuleCall_4_3_0()); 
-            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__InfixleftAssignment_4_38098);
+             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_4_3_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_4_39880); 
+             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_4_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par1Assignment_4_3"
+
+
+    // $ANTLR start "rule__Precedence__InfixAssignment_4_4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4908:1: rule__Precedence__InfixAssignment_4_4 : ( ruleMultString ) ;
+    public final void rule__Precedence__InfixAssignment_4_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4912:1: ( ( ruleMultString ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4913:1: ( ruleMultString )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4913:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4914:1: ruleMultString
+            {
+             before(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_4_4_0()); 
+            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_4_49911);
             ruleMultString();
 
             state._fsp--;
 
-             after(grammarAccess.getPrecedenceAccess().getInfixleftMultStringParserRuleCall_4_3_0()); 
+             after(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_4_4_0()); 
 
             }
 
@@ -10844,25 +13299,25 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__InfixleftAssignment_4_3"
+    // $ANTLR end "rule__Precedence__InfixAssignment_4_4"
 
 
-    // $ANTLR start "rule__Precedence__Par2Assignment_4_4"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4015:1: rule__Precedence__Par2Assignment_4_4 : ( RULE_ID ) ;
-    public final void rule__Precedence__Par2Assignment_4_4() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Feature2Assignment_4_5_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4923:1: rule__Precedence__Feature2Assignment_4_5_0 : ( RULE_ID ) ;
+    public final void rule__Precedence__Feature2Assignment_4_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4019:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4020:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4927:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4928:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4020:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4021:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4928:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4929:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_4_4_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_4_48129); 
-             after(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_4_4_0()); 
+             before(grammarAccess.getPrecedenceAccess().getFeature2IDTerminalRuleCall_4_5_0_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Feature2Assignment_4_5_09942); 
+             after(grammarAccess.getPrecedenceAccess().getFeature2IDTerminalRuleCall_4_5_0_0()); 
 
             }
 
@@ -10881,33 +13336,70 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__Par2Assignment_4_4"
+    // $ANTLR end "rule__Precedence__Feature2Assignment_4_5_0"
+
+
+    // $ANTLR start "rule__Precedence__Par2Assignment_4_6"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4938:1: rule__Precedence__Par2Assignment_4_6 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par2Assignment_4_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4942:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4943:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4943:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4944:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_4_6_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_4_69973); 
+             after(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_4_6_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par2Assignment_4_6"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_5_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4030:1: rule__Precedence__RuletypAssignment_5_0 : ( ( 'literal' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4953:1: rule__Precedence__RuletypAssignment_5_0 : ( ( 'INFIXLEFT' ) ) ;
     public final void rule__Precedence__RuletypAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4034:1: ( ( ( 'literal' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:1: ( ( 'literal' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4957:1: ( ( ( 'INFIXLEFT' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4958:1: ( ( 'INFIXLEFT' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4035:1: ( ( 'literal' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4036:1: ( 'literal' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4958:1: ( ( 'INFIXLEFT' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4959:1: ( 'INFIXLEFT' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypLiteralKeyword_5_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4037:1: ( 'literal' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4038:1: 'literal'
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXLEFTKeyword_5_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4960:1: ( 'INFIXLEFT' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4961:1: 'INFIXLEFT'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypLiteralKeyword_5_0_0()); 
-            match(input,44,FOLLOW_44_in_rule__Precedence__RuletypAssignment_5_08165); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypLiteralKeyword_5_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypINFIXLEFTKeyword_5_0_0()); 
+            match(input,45,FOLLOW_45_in_rule__Precedence__RuletypAssignment_5_010009); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXLEFTKeyword_5_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypLiteralKeyword_5_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypINFIXLEFTKeyword_5_0_0()); 
 
             }
 
@@ -10930,20 +13422,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_5_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4053:1: rule__Precedence__RuleAssignment_5_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4976:1: rule__Precedence__RuleAssignment_5_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4057:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4058:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4980:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4981:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4058:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4059:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4981:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4982:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_5_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_5_18204); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_5_110048); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_5_1_0()); 
 
             }
@@ -10966,32 +13458,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_5_1"
 
 
-    // $ANTLR start "rule__Precedence__LiteralAssignment_5_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4068:1: rule__Precedence__LiteralAssignment_5_2 : ( ( rule__Precedence__LiteralAlternatives_5_2_0 ) ) ;
-    public final void rule__Precedence__LiteralAssignment_5_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__Par1Assignment_5_2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4991:1: rule__Precedence__Par1Assignment_5_2 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par1Assignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4072:1: ( ( ( rule__Precedence__LiteralAlternatives_5_2_0 ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4073:1: ( ( rule__Precedence__LiteralAlternatives_5_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4995:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4996:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4073:1: ( ( rule__Precedence__LiteralAlternatives_5_2_0 ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4074:1: ( rule__Precedence__LiteralAlternatives_5_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4996:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4997:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getLiteralAlternatives_5_2_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4075:1: ( rule__Precedence__LiteralAlternatives_5_2_0 )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4075:2: rule__Precedence__LiteralAlternatives_5_2_0
-            {
-            pushFollow(FOLLOW_rule__Precedence__LiteralAlternatives_5_2_0_in_rule__Precedence__LiteralAssignment_5_28235);
-            rule__Precedence__LiteralAlternatives_5_2_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPrecedenceAccess().getLiteralAlternatives_5_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_5_2_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_5_210079); 
+             after(grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_5_2_0()); 
 
             }
 
@@ -11010,33 +13492,111 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__LiteralAssignment_5_2"
+    // $ANTLR end "rule__Precedence__Par1Assignment_5_2"
+
+
+    // $ANTLR start "rule__Precedence__InfixleftAssignment_5_3"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5006:1: rule__Precedence__InfixleftAssignment_5_3 : ( ruleMultString ) ;
+    public final void rule__Precedence__InfixleftAssignment_5_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5010:1: ( ( ruleMultString ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5011:1: ( ruleMultString )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5011:1: ( ruleMultString )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5012:1: ruleMultString
+            {
+             before(grammarAccess.getPrecedenceAccess().getInfixleftMultStringParserRuleCall_5_3_0()); 
+            pushFollow(FOLLOW_ruleMultString_in_rule__Precedence__InfixleftAssignment_5_310110);
+            ruleMultString();
+
+            state._fsp--;
+
+             after(grammarAccess.getPrecedenceAccess().getInfixleftMultStringParserRuleCall_5_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__InfixleftAssignment_5_3"
+
+
+    // $ANTLR start "rule__Precedence__Par2Assignment_5_4"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5021:1: rule__Precedence__Par2Assignment_5_4 : ( RULE_ID ) ;
+    public final void rule__Precedence__Par2Assignment_5_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5025:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5026:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5026:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5027:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_5_4_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_5_410141); 
+             after(grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_5_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__Par2Assignment_5_4"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_6_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4084:1: rule__Precedence__RuletypAssignment_6_0 : ( ( 'bracket' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5036:1: rule__Precedence__RuletypAssignment_6_0 : ( ( 'LITERAL' ) ) ;
     public final void rule__Precedence__RuletypAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4088:1: ( ( ( 'bracket' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4089:1: ( ( 'bracket' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5040:1: ( ( ( 'LITERAL' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5041:1: ( ( 'LITERAL' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4089:1: ( ( 'bracket' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4090:1: ( 'bracket' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5041:1: ( ( 'LITERAL' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5042:1: ( 'LITERAL' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypBracketKeyword_6_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4091:1: ( 'bracket' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4092:1: 'bracket'
+             before(grammarAccess.getPrecedenceAccess().getRuletypLITERALKeyword_6_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5043:1: ( 'LITERAL' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5044:1: 'LITERAL'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypBracketKeyword_6_0_0()); 
-            match(input,45,FOLLOW_45_in_rule__Precedence__RuletypAssignment_6_08273); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypBracketKeyword_6_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypLITERALKeyword_6_0_0()); 
+            match(input,46,FOLLOW_46_in_rule__Precedence__RuletypAssignment_6_010177); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypLITERALKeyword_6_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypBracketKeyword_6_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypLITERALKeyword_6_0_0()); 
 
             }
 
@@ -11059,20 +13619,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_6_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4107:1: rule__Precedence__RuleAssignment_6_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5059:1: rule__Precedence__RuleAssignment_6_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4111:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4112:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5063:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5064:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4112:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4113:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5064:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5065:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_6_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_6_18312); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_6_110216); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_6_1_0()); 
 
             }
@@ -11095,22 +13655,32 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_6_1"
 
 
-    // $ANTLR start "rule__Precedence__BracketAssignment_6_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4122:1: rule__Precedence__BracketAssignment_6_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__BracketAssignment_6_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__LiteralAssignment_6_2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5074:1: rule__Precedence__LiteralAssignment_6_2 : ( ( rule__Precedence__LiteralAlternatives_6_2_0 ) ) ;
+    public final void rule__Precedence__LiteralAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4126:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4127:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5078:1: ( ( ( rule__Precedence__LiteralAlternatives_6_2_0 ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5079:1: ( ( rule__Precedence__LiteralAlternatives_6_2_0 ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4127:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4128:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5079:1: ( ( rule__Precedence__LiteralAlternatives_6_2_0 ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5080:1: ( rule__Precedence__LiteralAlternatives_6_2_0 )
             {
-             before(grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_6_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__BracketAssignment_6_28343); 
-             after(grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_6_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getLiteralAlternatives_6_2_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5081:1: ( rule__Precedence__LiteralAlternatives_6_2_0 )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5081:2: rule__Precedence__LiteralAlternatives_6_2_0
+            {
+            pushFollow(FOLLOW_rule__Precedence__LiteralAlternatives_6_2_0_in_rule__Precedence__LiteralAssignment_6_210247);
+            rule__Precedence__LiteralAlternatives_6_2_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getLiteralAlternatives_6_2_0()); 
 
             }
 
@@ -11129,33 +13699,33 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__BracketAssignment_6_2"
+    // $ANTLR end "rule__Precedence__LiteralAssignment_6_2"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_7_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4137:1: rule__Precedence__RuletypAssignment_7_0 : ( ( 'braces' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5090:1: rule__Precedence__RuletypAssignment_7_0 : ( ( 'BRACKET' ) ) ;
     public final void rule__Precedence__RuletypAssignment_7_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4141:1: ( ( ( 'braces' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4142:1: ( ( 'braces' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5094:1: ( ( ( 'BRACKET' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5095:1: ( ( 'BRACKET' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4142:1: ( ( 'braces' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4143:1: ( 'braces' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5095:1: ( ( 'BRACKET' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5096:1: ( 'BRACKET' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypBracesKeyword_7_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4144:1: ( 'braces' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4145:1: 'braces'
+             before(grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_7_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5097:1: ( 'BRACKET' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5098:1: 'BRACKET'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypBracesKeyword_7_0_0()); 
-            match(input,11,FOLLOW_11_in_rule__Precedence__RuletypAssignment_7_08379); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypBracesKeyword_7_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_7_0_0()); 
+            match(input,47,FOLLOW_47_in_rule__Precedence__RuletypAssignment_7_010285); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_7_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypBracesKeyword_7_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_7_0_0()); 
 
             }
 
@@ -11178,20 +13748,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_7_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4160:1: rule__Precedence__RuleAssignment_7_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5113:1: rule__Precedence__RuleAssignment_7_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4164:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4165:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5117:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5118:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4165:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4166:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5118:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5119:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_7_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_7_18418); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_7_110324); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_7_1_0()); 
 
             }
@@ -11214,22 +13784,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_7_1"
 
 
-    // $ANTLR start "rule__Precedence__BracesAssignment_7_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4175:1: rule__Precedence__BracesAssignment_7_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__BracesAssignment_7_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__BracketAssignment_7_2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5128:1: rule__Precedence__BracketAssignment_7_2 : ( RULE_ID ) ;
+    public final void rule__Precedence__BracketAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4179:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4180:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5132:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5133:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4180:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4181:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5133:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5134:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_7_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__BracesAssignment_7_28449); 
-             after(grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_7_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_7_2_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__BracketAssignment_7_210355); 
+             after(grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_7_2_0()); 
 
             }
 
@@ -11248,33 +13818,33 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__BracesAssignment_7_2"
+    // $ANTLR end "rule__Precedence__BracketAssignment_7_2"
 
 
     // $ANTLR start "rule__Precedence__RuletypAssignment_8_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4190:1: rule__Precedence__RuletypAssignment_8_0 : ( ( 'parenthesis' ) ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5143:1: rule__Precedence__RuletypAssignment_8_0 : ( ( 'BRACES' ) ) ;
     public final void rule__Precedence__RuletypAssignment_8_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4194:1: ( ( ( 'parenthesis' ) ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4195:1: ( ( 'parenthesis' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5147:1: ( ( ( 'BRACES' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5148:1: ( ( 'BRACES' ) )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4195:1: ( ( 'parenthesis' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4196:1: ( 'parenthesis' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5148:1: ( ( 'BRACES' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5149:1: ( 'BRACES' )
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypParenthesisKeyword_8_0_0()); 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4197:1: ( 'parenthesis' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4198:1: 'parenthesis'
+             before(grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_8_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5150:1: ( 'BRACES' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5151:1: 'BRACES'
             {
-             before(grammarAccess.getPrecedenceAccess().getRuletypParenthesisKeyword_8_0_0()); 
-            match(input,46,FOLLOW_46_in_rule__Precedence__RuletypAssignment_8_08485); 
-             after(grammarAccess.getPrecedenceAccess().getRuletypParenthesisKeyword_8_0_0()); 
+             before(grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_8_0_0()); 
+            match(input,11,FOLLOW_11_in_rule__Precedence__RuletypAssignment_8_010391); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_8_0_0()); 
 
             }
 
-             after(grammarAccess.getPrecedenceAccess().getRuletypParenthesisKeyword_8_0_0()); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_8_0_0()); 
 
             }
 
@@ -11297,20 +13867,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Precedence__RuleAssignment_8_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4213:1: rule__Precedence__RuleAssignment_8_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5166:1: rule__Precedence__RuleAssignment_8_1 : ( RULE_ID ) ;
     public final void rule__Precedence__RuleAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4217:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4218:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5170:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5171:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4218:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4219:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5171:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5172:1: RULE_ID
             {
              before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_8_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_8_18524); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_8_110430); 
              after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_8_1_0()); 
 
             }
@@ -11333,22 +13903,22 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Precedence__RuleAssignment_8_1"
 
 
-    // $ANTLR start "rule__Precedence__ParenthesisAssignment_8_2"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4228:1: rule__Precedence__ParenthesisAssignment_8_2 : ( RULE_ID ) ;
-    public final void rule__Precedence__ParenthesisAssignment_8_2() throws RecognitionException {
+    // $ANTLR start "rule__Precedence__BracesAssignment_8_2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5181:1: rule__Precedence__BracesAssignment_8_2 : ( RULE_ID ) ;
+    public final void rule__Precedence__BracesAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4232:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4233:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5185:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5186:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4233:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4234:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5186:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5187:1: RULE_ID
             {
-             before(grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_8_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__ParenthesisAssignment_8_28555); 
-             after(grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_8_2_0()); 
+             before(grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_8_2_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__BracesAssignment_8_210461); 
+             after(grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_8_2_0()); 
 
             }
 
@@ -11367,24 +13937,143 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Precedence__ParenthesisAssignment_8_2"
+    // $ANTLR end "rule__Precedence__BracesAssignment_8_2"
+
+
+    // $ANTLR start "rule__Precedence__RuletypAssignment_9_0"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5196:1: rule__Precedence__RuletypAssignment_9_0 : ( ( 'PARENTHESIS' ) ) ;
+    public final void rule__Precedence__RuletypAssignment_9_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5200:1: ( ( ( 'PARENTHESIS' ) ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5201:1: ( ( 'PARENTHESIS' ) )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5201:1: ( ( 'PARENTHESIS' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5202:1: ( 'PARENTHESIS' )
+            {
+             before(grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_9_0_0()); 
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5203:1: ( 'PARENTHESIS' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5204:1: 'PARENTHESIS'
+            {
+             before(grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_9_0_0()); 
+            match(input,48,FOLLOW_48_in_rule__Precedence__RuletypAssignment_9_010497); 
+             after(grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_9_0_0()); 
+
+            }
+
+             after(grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_9_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__RuletypAssignment_9_0"
+
+
+    // $ANTLR start "rule__Precedence__RuleAssignment_9_1"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5219:1: rule__Precedence__RuleAssignment_9_1 : ( RULE_ID ) ;
+    public final void rule__Precedence__RuleAssignment_9_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5223:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5224:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5224:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5225:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_9_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_9_110536); 
+             after(grammarAccess.getPrecedenceAccess().getRuleIDTerminalRuleCall_9_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__RuleAssignment_9_1"
+
+
+    // $ANTLR start "rule__Precedence__ParenthesisAssignment_9_2"
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5234:1: rule__Precedence__ParenthesisAssignment_9_2 : ( RULE_ID ) ;
+    public final void rule__Precedence__ParenthesisAssignment_9_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5238:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5239:1: ( RULE_ID )
+            {
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5239:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5240:1: RULE_ID
+            {
+             before(grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_9_2_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Precedence__ParenthesisAssignment_9_210567); 
+             after(grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_9_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Precedence__ParenthesisAssignment_9_2"
 
 
     // $ANTLR start "rule__MultID__MiAssignment_1_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4243:1: rule__MultID__MiAssignment_1_0 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5249:1: rule__MultID__MiAssignment_1_0 : ( RULE_ID ) ;
     public final void rule__MultID__MiAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4247:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4248:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5253:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5254:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4248:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4249:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5254:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5255:1: RULE_ID
             {
              before(grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_08586); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_010598); 
              after(grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_0_0()); 
 
             }
@@ -11408,20 +14097,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultID__MiAssignment_1_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4258:1: rule__MultID__MiAssignment_1_1_1 : ( RULE_ID ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5264:1: rule__MultID__MiAssignment_1_1_1 : ( RULE_ID ) ;
     public final void rule__MultID__MiAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4262:1: ( ( RULE_ID ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4263:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5268:1: ( ( RULE_ID ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5269:1: ( RULE_ID )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4263:1: ( RULE_ID )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4264:1: RULE_ID
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5269:1: ( RULE_ID )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5270:1: RULE_ID
             {
              before(grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_1_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_1_18617); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_1_110629); 
              after(grammarAccess.getMultIDAccess().getMiIDTerminalRuleCall_1_1_1_0()); 
 
             }
@@ -11445,20 +14134,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__MsAssignment_1_0"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4273:1: rule__MultString__MsAssignment_1_0 : ( RULE_STRING ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5279:1: rule__MultString__MsAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__MultString__MsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4277:1: ( ( RULE_STRING ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4278:1: ( RULE_STRING )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5283:1: ( ( RULE_STRING ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5284:1: ( RULE_STRING )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4278:1: ( RULE_STRING )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4279:1: RULE_STRING
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5284:1: ( RULE_STRING )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5285:1: RULE_STRING
             {
              before(grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_08648); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_010660); 
              after(grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -11482,20 +14171,20 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultString__MsAssignment_1_1_1"
-    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4288:1: rule__MultString__MsAssignment_1_1_1 : ( RULE_STRING ) ;
+    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5294:1: rule__MultString__MsAssignment_1_1_1 : ( RULE_STRING ) ;
     public final void rule__MultString__MsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4292:1: ( ( RULE_STRING ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4293:1: ( RULE_STRING )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5298:1: ( ( RULE_STRING ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5299:1: ( RULE_STRING )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4293:1: ( RULE_STRING )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:4294:1: RULE_STRING
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5299:1: ( RULE_STRING )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5300:1: RULE_STRING
             {
              before(grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_1_18679); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_1_110691); 
              after(grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_1_1_0()); 
 
             }
@@ -11578,298 +14267,381 @@ public class InternalGenParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Precedence__Group_6__0_in_rule__Precedence__Alternatives1177 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Precedence__Group_7__0_in_rule__Precedence__Alternatives1195 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Precedence__Group_8__0_in_rule__Precedence__Alternatives1213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Precedence__LiteralAlternatives_5_2_01247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Precedence__LiteralAlternatives_5_2_01267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Precedence__LiteralAlternatives_5_2_01287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Precedence__LiteralAlternatives_5_2_01307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__MiAssignment_1_0_in_rule__MultID__Alternatives_11341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__0_in_rule__MultID__Alternatives_11359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__MsAssignment_1_0_in_rule__MultString__Alternatives_11392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__0_in_rule__MultString__Alternatives_11410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group__0__Impl_in_rule__ClassType__Group__01441 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ClassType__Group__1_in_rule__ClassType__Group__01444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__ClassType__Group__0__Impl1472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group__1__Impl_in_rule__ClassType__Group__11503 = new BitSet(new long[]{0x0000010003800000L});
-    public static final BitSet FOLLOW_rule__ClassType__Group__2_in_rule__ClassType__Group__11506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__NameAssignment_1_in_rule__ClassType__Group__1__Impl1533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group__2__Impl_in_rule__ClassType__Group__21563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Alternatives_2_in_rule__ClassType__Group__2__Impl1590 = new BitSet(new long[]{0x0000010003800002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__0__Impl_in_rule__ClassType__Group_2_1__01627 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__1_in_rule__ClassType__Group_2_1__01630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__ClassType__Group_2_1__0__Impl1658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__1__Impl_in_rule__ClassType__Group_2_1__11689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__PrefixAssignment_2_1_1_in_rule__ClassType__Group_2_1__1__Impl1716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__0__Impl_in_rule__ClassType__Group_2_2__01750 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__1_in_rule__ClassType__Group_2_2__01753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__ClassType__Group_2_2__0__Impl1781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__1__Impl_in_rule__ClassType__Group_2_2__11812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__SuffixAssignment_2_2_1_in_rule__ClassType__Group_2_2__1__Impl1839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__0__Impl_in_rule__ClassType__Group_2_3__01873 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__1_in_rule__ClassType__Group_2_3__01876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__ClassType__Group_2_3__0__Impl1904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__1__Impl_in_rule__ClassType__Group_2_3__11935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__BlockingAssignment_2_3_1_in_rule__ClassType__Group_2_3__1__Impl1962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group__0__Impl_in_rule__Procedure__Group__01996 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Procedure__Group__1_in_rule__Procedure__Group__01999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Procedure__Group__0__Impl2027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group__1__Impl_in_rule__Procedure__Group__12058 = new BitSet(new long[]{0x0000000009800000L});
-    public static final BitSet FOLLOW_rule__Procedure__Group__2_in_rule__Procedure__Group__12061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__NameAssignment_1_in_rule__Procedure__Group__1__Impl2088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group__2__Impl_in_rule__Procedure__Group__22118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Alternatives_2_in_rule__Procedure__Group__2__Impl2145 = new BitSet(new long[]{0x0000000009800002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__0__Impl_in_rule__Procedure__Group_2_0__02182 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__1_in_rule__Procedure__Group_2_0__02185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Procedure__Group_2_0__0__Impl2213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__1__Impl_in_rule__Procedure__Group_2_0__12244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__PrefixAssignment_2_0_1_in_rule__Procedure__Group_2_0__1__Impl2271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__0__Impl_in_rule__Procedure__Group_2_1__02305 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__1_in_rule__Procedure__Group_2_1__02308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Procedure__Group_2_1__0__Impl2336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__1__Impl_in_rule__Procedure__Group_2_1__12367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__SuffixAssignment_2_1_1_in_rule__Procedure__Group_2_1__1__Impl2394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__0__Impl_in_rule__Procedure__Group_2_2__02428 = new BitSet(new long[]{0x000000000003E000L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__1_in_rule__Procedure__Group_2_2__02431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Procedure__Group_2_2__0__Impl2459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__1__Impl_in_rule__Procedure__Group_2_2__12490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__TypesAssignment_2_2_1_in_rule__Procedure__Group_2_2__1__Impl2517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02551 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Statement__Group__0__Impl2582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12613 = new BitSet(new long[]{0x00000016A0000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__NameAssignment_1_in_rule__Statement__Group__1__Impl2643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Alternatives_2_in_rule__Statement__Group__2__Impl2700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__0__Impl_in_rule__Statement__Group_2_0__02736 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__1_in_rule__Statement__Group_2_0__02739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Statement__Group_2_0__0__Impl2767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__1__Impl_in_rule__Statement__Group_2_0__12798 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__2_in_rule__Statement__Group_2_0__12801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__RepAssignment_2_0_1_in_rule__Statement__Group_2_0__1__Impl2828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__2__Impl_in_rule__Statement__Group_2_0__22858 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__3_in_rule__Statement__Group_2_0__22861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Statement__Group_2_0__2__Impl2889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_0__3__Impl_in_rule__Statement__Group_2_0__32920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__UntilAssignment_2_0_3_in_rule__Statement__Group_2_0__3__Impl2947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__0__Impl_in_rule__Statement__Group_2_1__02985 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__1_in_rule__Statement__Group_2_1__02988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Statement__Group_2_1__0__Impl3016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__1__Impl_in_rule__Statement__Group_2_1__13047 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__2_in_rule__Statement__Group_2_1__13050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__WhileAssignment_2_1_1_in_rule__Statement__Group_2_1__1__Impl3077 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__2__Impl_in_rule__Statement__Group_2_1__23107 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__3_in_rule__Statement__Group_2_1__23110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Statement__Group_2_1__2__Impl3138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_1__3__Impl_in_rule__Statement__Group_2_1__33169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__DoAssignment_2_1_3_in_rule__Statement__Group_2_1__3__Impl3196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_2__0__Impl_in_rule__Statement__Group_2_2__03234 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_2__1_in_rule__Statement__Group_2_2__03237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Statement__Group_2_2__0__Impl3265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_2__1__Impl_in_rule__Statement__Group_2_2__13296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__ForAssignment_2_2_1_in_rule__Statement__Group_2_2__1__Impl3323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3__0__Impl_in_rule__Statement__Group_2_3__03357 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3__1_in_rule__Statement__Group_2_3__03360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Statement__Group_2_3__0__Impl3388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3__1__Impl_in_rule__Statement__Group_2_3__13419 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3__2_in_rule__Statement__Group_2_3__13422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__VarAssignment_2_3_1_in_rule__Statement__Group_2_3__1__Impl3449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3__2__Impl_in_rule__Statement__Group_2_3__23479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__0_in_rule__Statement__Group_2_3__2__Impl3506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__0__Impl_in_rule__Statement__Group_2_3_2__03543 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__1_in_rule__Statement__Group_2_3_2__03546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Statement__Group_2_3_2__0__Impl3574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__1__Impl_in_rule__Statement__Group_2_3_2__13605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__ExAssignment_2_3_2_1_in_rule__Statement__Group_2_3_2__1__Impl3632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__0__Impl_in_rule__Statement__Group_2_4__03666 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__1_in_rule__Statement__Group_2_4__03669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Statement__Group_2_4__0__Impl3697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__1__Impl_in_rule__Statement__Group_2_4__13728 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__2_in_rule__Statement__Group_2_4__13731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__ValAssignment_2_4_1_in_rule__Statement__Group_2_4__1__Impl3758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__2__Impl_in_rule__Statement__Group_2_4__23788 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__3_in_rule__Statement__Group_2_4__23791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Statement__Group_2_4__2__Impl3819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__Group_2_4__3__Impl_in_rule__Statement__Group_2_4__33850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statement__ExAssignment_2_4_3_in_rule__Statement__Group_2_4__3__Impl3877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__03915 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__03918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Expression__Group__0__Impl3946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__13977 = new BitSet(new long[]{0x00007E0001800800L});
-    public static final BitSet FOLLOW_rule__Expression__Group__2_in_rule__Expression__Group__13980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__NameAssignment_1_in_rule__Expression__Group__1__Impl4007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__2__Impl_in_rule__Expression__Group__24037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__PrecAssignment_2_in_rule__Expression__Group__2__Impl4064 = new BitSet(new long[]{0x00007E0001800802L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_0__0__Impl_in_rule__Precedence__Group_0__04101 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_0__1_in_rule__Precedence__Group_0__04104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_0_0_in_rule__Precedence__Group_0__0__Impl4131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_0__1__Impl_in_rule__Precedence__Group_0__14161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_0_1_in_rule__Precedence__Group_0__1__Impl4188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__0__Impl_in_rule__Precedence__Group_1__04222 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__1_in_rule__Precedence__Group_1__04225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_1_0_in_rule__Precedence__Group_1__0__Impl4252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__1__Impl_in_rule__Precedence__Group_1__14282 = new BitSet(new long[]{0x0000004000000020L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__2_in_rule__Precedence__Group_1__14285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_1_1_in_rule__Precedence__Group_1__1__Impl4312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__2__Impl_in_rule__Precedence__Group_1__24342 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__3_in_rule__Precedence__Group_1__24345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__PrefixAssignment_1_2_in_rule__Precedence__Group_1__2__Impl4372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_1__3__Impl_in_rule__Precedence__Group_1__34402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_1_3_in_rule__Precedence__Group_1__3__Impl4429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__0__Impl_in_rule__Precedence__Group_2__04467 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__1_in_rule__Precedence__Group_2__04470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_2_0_in_rule__Precedence__Group_2__0__Impl4497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__1__Impl_in_rule__Precedence__Group_2__14527 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__2_in_rule__Precedence__Group_2__14530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_2_1_in_rule__Precedence__Group_2__1__Impl4557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__2__Impl_in_rule__Precedence__Group_2__24587 = new BitSet(new long[]{0x0000004000000020L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__3_in_rule__Precedence__Group_2__24590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_2_2_in_rule__Precedence__Group_2__2__Impl4617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_2__3__Impl_in_rule__Precedence__Group_2__34647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__SuffixAssignment_2_3_in_rule__Precedence__Group_2__3__Impl4674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__0__Impl_in_rule__Precedence__Group_3__04712 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__1_in_rule__Precedence__Group_3__04715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_3_0_in_rule__Precedence__Group_3__0__Impl4742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__1__Impl_in_rule__Precedence__Group_3__14772 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__2_in_rule__Precedence__Group_3__14775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_3_1_in_rule__Precedence__Group_3__1__Impl4802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__2__Impl_in_rule__Precedence__Group_3__24832 = new BitSet(new long[]{0x0000004000000020L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__3_in_rule__Precedence__Group_3__24835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_3_2_in_rule__Precedence__Group_3__2__Impl4862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__3__Impl_in_rule__Precedence__Group_3__34892 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__4_in_rule__Precedence__Group_3__34895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__InfixAssignment_3_3_in_rule__Precedence__Group_3__3__Impl4922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_3__4__Impl_in_rule__Precedence__Group_3__44952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par2Assignment_3_4_in_rule__Precedence__Group_3__4__Impl4979 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__0__Impl_in_rule__Precedence__Group_4__05019 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__1_in_rule__Precedence__Group_4__05022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_4_0_in_rule__Precedence__Group_4__0__Impl5049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__1__Impl_in_rule__Precedence__Group_4__15079 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__2_in_rule__Precedence__Group_4__15082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_4_1_in_rule__Precedence__Group_4__1__Impl5109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__2__Impl_in_rule__Precedence__Group_4__25139 = new BitSet(new long[]{0x0000004000000020L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__3_in_rule__Precedence__Group_4__25142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_4_2_in_rule__Precedence__Group_4__2__Impl5169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__3__Impl_in_rule__Precedence__Group_4__35199 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__4_in_rule__Precedence__Group_4__35202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__InfixleftAssignment_4_3_in_rule__Precedence__Group_4__3__Impl5229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_4__4__Impl_in_rule__Precedence__Group_4__45259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Par2Assignment_4_4_in_rule__Precedence__Group_4__4__Impl5286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_5__0__Impl_in_rule__Precedence__Group_5__05326 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_5__1_in_rule__Precedence__Group_5__05329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_5_0_in_rule__Precedence__Group_5__0__Impl5356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_5__1__Impl_in_rule__Precedence__Group_5__15386 = new BitSet(new long[]{0x00000000003C0000L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_5__2_in_rule__Precedence__Group_5__15389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_5_1_in_rule__Precedence__Group_5__1__Impl5416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_5__2__Impl_in_rule__Precedence__Group_5__25446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__LiteralAssignment_5_2_in_rule__Precedence__Group_5__2__Impl5473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_6__0__Impl_in_rule__Precedence__Group_6__05509 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_6__1_in_rule__Precedence__Group_6__05512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_6_0_in_rule__Precedence__Group_6__0__Impl5539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_6__1__Impl_in_rule__Precedence__Group_6__15569 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_6__2_in_rule__Precedence__Group_6__15572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_6_1_in_rule__Precedence__Group_6__1__Impl5599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_6__2__Impl_in_rule__Precedence__Group_6__25629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__BracketAssignment_6_2_in_rule__Precedence__Group_6__2__Impl5656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_7__0__Impl_in_rule__Precedence__Group_7__05692 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_7__1_in_rule__Precedence__Group_7__05695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_7_0_in_rule__Precedence__Group_7__0__Impl5722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_7__1__Impl_in_rule__Precedence__Group_7__15752 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_7__2_in_rule__Precedence__Group_7__15755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_7_1_in_rule__Precedence__Group_7__1__Impl5782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_7__2__Impl_in_rule__Precedence__Group_7__25812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__BracesAssignment_7_2_in_rule__Precedence__Group_7__2__Impl5839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_8__0__Impl_in_rule__Precedence__Group_8__05875 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_8__1_in_rule__Precedence__Group_8__05878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_8_0_in_rule__Precedence__Group_8__0__Impl5905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_8__1__Impl_in_rule__Precedence__Group_8__15935 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_8__2_in_rule__Precedence__Group_8__15938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_8_1_in_rule__Precedence__Group_8__1__Impl5965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__Group_8__2__Impl_in_rule__Precedence__Group_8__25995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__ParenthesisAssignment_8_2_in_rule__Precedence__Group_8__2__Impl6022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Group__0__Impl_in_rule__MultID__Group__06058 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_rule__MultID__Group__1_in_rule__MultID__Group__06061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Group__1__Impl_in_rule__MultID__Group__16119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Alternatives_1_in_rule__MultID__Group__1__Impl6146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__0__Impl_in_rule__MultID__Group_1_1__06180 = new BitSet(new long[]{0x0000008000000010L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__1_in_rule__MultID__Group_1_1__06183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__MultID__Group_1_1__0__Impl6211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__1__Impl_in_rule__MultID__Group_1_1__16242 = new BitSet(new long[]{0x0000008000000010L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__2_in_rule__MultID__Group_1_1__16245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultID__MiAssignment_1_1_1_in_rule__MultID__Group_1_1__1__Impl6272 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__MultID__Group_1_1__2__Impl_in_rule__MultID__Group_1_1__26303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__MultID__Group_1_1__2__Impl6331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Group__0__Impl_in_rule__MultString__Group__06368 = new BitSet(new long[]{0x0000004000000020L});
-    public static final BitSet FOLLOW_rule__MultString__Group__1_in_rule__MultString__Group__06371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Group__1__Impl_in_rule__MultString__Group__16429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Alternatives_1_in_rule__MultString__Group__1__Impl6456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__0__Impl_in_rule__MultString__Group_1_1__06490 = new BitSet(new long[]{0x0000008000000020L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__1_in_rule__MultString__Group_1_1__06493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__MultString__Group_1_1__0__Impl6521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__1__Impl_in_rule__MultString__Group_1_1__16552 = new BitSet(new long[]{0x0000008000000020L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__2_in_rule__MultString__Group_1_1__16555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultString__MsAssignment_1_1_1_in_rule__MultString__Group_1_1__1__Impl6582 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__MultString__Group_1_1__2__Impl_in_rule__MultString__Group_1_1__26613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__MultString__Group_1_1__2__Impl6641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClassType_in_rule__Model__ClasAssignment_06683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProcedure_in_rule__Model__ProcAssignment_16714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__Model__StatemAssignment_26745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Model__ExpAssignment_36776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ClassType__NameAssignment_16807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__ClassType__NoclassAssignment_2_06843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultID_in_rule__ClassType__PrefixAssignment_2_1_16882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultID_in_rule__ClassType__SuffixAssignment_2_2_16913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClassType__BlockingAlternatives_2_3_1_0_in_rule__ClassType__BlockingAssignment_2_3_16944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Procedure__NameAssignment_16977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultID_in_rule__Procedure__PrefixAssignment_2_0_17008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultID_in_rule__Procedure__SuffixAssignment_2_1_17039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Procedure__TypesAlternatives_2_2_1_0_in_rule__Procedure__TypesAssignment_2_2_17070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__NameAssignment_17103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__RepAssignment_2_0_17134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__UntilAssignment_2_0_37165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__WhileAssignment_2_1_17196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__DoAssignment_2_1_37227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ForAssignment_2_2_17258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__VarAssignment_2_3_17289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_3_2_17320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ValAssignment_2_4_17351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_4_37382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Expression__NameAssignment_17413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrecedence_in_rule__Expression__PrecAssignment_27444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Precedence__RuletypAssignment_0_07480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_0_17519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Precedence__RuletypAssignment_1_07555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_1_17594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__PrefixAssignment_1_27625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_1_37656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Precedence__RuletypAssignment_2_07692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_2_17731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_2_27762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__SuffixAssignment_2_37793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Precedence__RuletypAssignment_3_07829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_3_17868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_3_27899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_3_37930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_3_47961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Precedence__RuletypAssignment_4_07997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_4_18036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_4_28067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__InfixleftAssignment_4_38098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_4_48129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Precedence__RuletypAssignment_5_08165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_5_18204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Precedence__LiteralAlternatives_5_2_0_in_rule__Precedence__LiteralAssignment_5_28235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Precedence__RuletypAssignment_6_08273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_6_18312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__BracketAssignment_6_28343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Precedence__RuletypAssignment_7_08379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_7_18418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__BracesAssignment_7_28449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Precedence__RuletypAssignment_8_08485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_8_18524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__ParenthesisAssignment_8_28555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_08586 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_1_18617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_08648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_1_18679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__0_in_rule__Precedence__Alternatives1231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Precedence__LiteralAlternatives_6_2_01265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Precedence__LiteralAlternatives_6_2_01285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Precedence__LiteralAlternatives_6_2_01305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Precedence__LiteralAlternatives_6_2_01325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__MiAssignment_1_0_in_rule__MultID__Alternatives_11359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__0_in_rule__MultID__Alternatives_11377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__MsAssignment_1_0_in_rule__MultString__Alternatives_11410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__0_in_rule__MultString__Alternatives_11428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group__0__Impl_in_rule__ClassType__Group__01459 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ClassType__Group__1_in_rule__ClassType__Group__01462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__ClassType__Group__0__Impl1490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group__1__Impl_in_rule__ClassType__Group__11521 = new BitSet(new long[]{0x0000020003800000L});
+    public static final BitSet FOLLOW_rule__ClassType__Group__2_in_rule__ClassType__Group__11524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__NameAssignment_1_in_rule__ClassType__Group__1__Impl1551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group__2__Impl_in_rule__ClassType__Group__21581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Alternatives_2_in_rule__ClassType__Group__2__Impl1608 = new BitSet(new long[]{0x0000020003800002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__0__Impl_in_rule__ClassType__Group_2_1__01645 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__1_in_rule__ClassType__Group_2_1__01648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ClassType__Group_2_1__0__Impl1676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_1__1__Impl_in_rule__ClassType__Group_2_1__11707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__PrefixAssignment_2_1_1_in_rule__ClassType__Group_2_1__1__Impl1734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__0__Impl_in_rule__ClassType__Group_2_2__01768 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__1_in_rule__ClassType__Group_2_2__01771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__ClassType__Group_2_2__0__Impl1799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_2__1__Impl_in_rule__ClassType__Group_2_2__11830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__SuffixAssignment_2_2_1_in_rule__ClassType__Group_2_2__1__Impl1857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__0__Impl_in_rule__ClassType__Group_2_3__01891 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__1_in_rule__ClassType__Group_2_3__01894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__ClassType__Group_2_3__0__Impl1922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__Group_2_3__1__Impl_in_rule__ClassType__Group_2_3__11953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__BlockingAssignment_2_3_1_in_rule__ClassType__Group_2_3__1__Impl1980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group__0__Impl_in_rule__Procedure__Group__02014 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Procedure__Group__1_in_rule__Procedure__Group__02017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Procedure__Group__0__Impl2045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group__1__Impl_in_rule__Procedure__Group__12076 = new BitSet(new long[]{0x0000000009800000L});
+    public static final BitSet FOLLOW_rule__Procedure__Group__2_in_rule__Procedure__Group__12079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__NameAssignment_1_in_rule__Procedure__Group__1__Impl2106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group__2__Impl_in_rule__Procedure__Group__22136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Alternatives_2_in_rule__Procedure__Group__2__Impl2163 = new BitSet(new long[]{0x0000000009800002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__0__Impl_in_rule__Procedure__Group_2_0__02200 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__1_in_rule__Procedure__Group_2_0__02203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Procedure__Group_2_0__0__Impl2231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_0__1__Impl_in_rule__Procedure__Group_2_0__12262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__PrefixAssignment_2_0_1_in_rule__Procedure__Group_2_0__1__Impl2289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__0__Impl_in_rule__Procedure__Group_2_1__02323 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__1_in_rule__Procedure__Group_2_1__02326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Procedure__Group_2_1__0__Impl2354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_1__1__Impl_in_rule__Procedure__Group_2_1__12385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__SuffixAssignment_2_1_1_in_rule__Procedure__Group_2_1__1__Impl2412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__0__Impl_in_rule__Procedure__Group_2_2__02446 = new BitSet(new long[]{0x000000000003E000L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__1_in_rule__Procedure__Group_2_2__02449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Procedure__Group_2_2__0__Impl2477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__Group_2_2__1__Impl_in_rule__Procedure__Group_2_2__12508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__TypesAssignment_2_2_1_in_rule__Procedure__Group_2_2__1__Impl2535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__0__Impl_in_rule__Statement__Group__02569 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group__1_in_rule__Statement__Group__02572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Statement__Group__0__Impl2600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__1__Impl_in_rule__Statement__Group__12631 = new BitSet(new long[]{0x00000016A0000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group__2_in_rule__Statement__Group__12634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__NameAssignment_1_in_rule__Statement__Group__1__Impl2661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group__2__Impl_in_rule__Statement__Group__22691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Alternatives_2_in_rule__Statement__Group__2__Impl2718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__0__Impl_in_rule__Statement__Group_2_0__02754 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__1_in_rule__Statement__Group_2_0__02757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Statement__Group_2_0__0__Impl2785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__1__Impl_in_rule__Statement__Group_2_0__12816 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__2_in_rule__Statement__Group_2_0__12819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__RepAssignment_2_0_1_in_rule__Statement__Group_2_0__1__Impl2846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__2__Impl_in_rule__Statement__Group_2_0__22876 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__3_in_rule__Statement__Group_2_0__22879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Statement__Group_2_0__2__Impl2907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_0__3__Impl_in_rule__Statement__Group_2_0__32938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__UntilAssignment_2_0_3_in_rule__Statement__Group_2_0__3__Impl2965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__0__Impl_in_rule__Statement__Group_2_1__03003 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__1_in_rule__Statement__Group_2_1__03006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Statement__Group_2_1__0__Impl3034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__1__Impl_in_rule__Statement__Group_2_1__13065 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__2_in_rule__Statement__Group_2_1__13068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__WhileAssignment_2_1_1_in_rule__Statement__Group_2_1__1__Impl3095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__2__Impl_in_rule__Statement__Group_2_1__23125 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__3_in_rule__Statement__Group_2_1__23128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Statement__Group_2_1__2__Impl3156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_1__3__Impl_in_rule__Statement__Group_2_1__33187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__DoAssignment_2_1_3_in_rule__Statement__Group_2_1__3__Impl3214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_2__0__Impl_in_rule__Statement__Group_2_2__03252 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_2__1_in_rule__Statement__Group_2_2__03255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Statement__Group_2_2__0__Impl3283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_2__1__Impl_in_rule__Statement__Group_2_2__13314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ForAssignment_2_2_1_in_rule__Statement__Group_2_2__1__Impl3341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3__0__Impl_in_rule__Statement__Group_2_3__03375 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3__1_in_rule__Statement__Group_2_3__03378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Statement__Group_2_3__0__Impl3406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3__1__Impl_in_rule__Statement__Group_2_3__13437 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3__2_in_rule__Statement__Group_2_3__13440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__VarAssignment_2_3_1_in_rule__Statement__Group_2_3__1__Impl3467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3__2__Impl_in_rule__Statement__Group_2_3__23497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__0_in_rule__Statement__Group_2_3__2__Impl3524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__0__Impl_in_rule__Statement__Group_2_3_2__03561 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__1_in_rule__Statement__Group_2_3_2__03564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Statement__Group_2_3_2__0__Impl3592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_3_2__1__Impl_in_rule__Statement__Group_2_3_2__13623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ExAssignment_2_3_2_1_in_rule__Statement__Group_2_3_2__1__Impl3650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__0__Impl_in_rule__Statement__Group_2_4__03684 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__1_in_rule__Statement__Group_2_4__03687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Statement__Group_2_4__0__Impl3715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__1__Impl_in_rule__Statement__Group_2_4__13746 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__2_in_rule__Statement__Group_2_4__13749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ValAssignment_2_4_1_in_rule__Statement__Group_2_4__1__Impl3776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__2__Impl_in_rule__Statement__Group_2_4__23806 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__3_in_rule__Statement__Group_2_4__23809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Statement__Group_2_4__2__Impl3837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__Group_2_4__3__Impl_in_rule__Statement__Group_2_4__33868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statement__ExAssignment_2_4_3_in_rule__Statement__Group_2_4__3__Impl3895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__03933 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__03936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Expression__Group__0__Impl3964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__13995 = new BitSet(new long[]{0x0001FC0001800800L});
+    public static final BitSet FOLLOW_rule__Expression__Group__2_in_rule__Expression__Group__13998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__NameAssignment_1_in_rule__Expression__Group__1__Impl4025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__2__Impl_in_rule__Expression__Group__24055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__PrecAssignment_2_in_rule__Expression__Group__2__Impl4082 = new BitSet(new long[]{0x0001FC0001800802L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0__0__Impl_in_rule__Precedence__Group_0__04119 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0__1_in_rule__Precedence__Group_0__04122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_0_0_in_rule__Precedence__Group_0__0__Impl4149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0__1__Impl_in_rule__Precedence__Group_0__14179 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0__2_in_rule__Precedence__Group_0__14182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_0_1_in_rule__Precedence__Group_0__1__Impl4209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0__2__Impl_in_rule__Precedence__Group_0__24239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0_2__0_in_rule__Precedence__Group_0__2__Impl4266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0_2__0__Impl_in_rule__Precedence__Group_0_2__04303 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0_2__1_in_rule__Precedence__Group_0_2__04306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Precedence__Group_0_2__0__Impl4334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_0_2__1__Impl_in_rule__Precedence__Group_0_2__14365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature1Assignment_0_2_1_in_rule__Precedence__Group_0_2__1__Impl4392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__0__Impl_in_rule__Precedence__Group_1__04426 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__1_in_rule__Precedence__Group_1__04429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_1_0_in_rule__Precedence__Group_1__0__Impl4456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__1__Impl_in_rule__Precedence__Group_1__14486 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__2_in_rule__Precedence__Group_1__14489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_1_1_in_rule__Precedence__Group_1__1__Impl4516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__2__Impl_in_rule__Precedence__Group_1__24546 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__3_in_rule__Precedence__Group_1__24549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__PrefixAssignment_1_2_in_rule__Precedence__Group_1__2__Impl4576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__3__Impl_in_rule__Precedence__Group_1__34606 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__4_in_rule__Precedence__Group_1__34609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1_3__0_in_rule__Precedence__Group_1__3__Impl4636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1__4__Impl_in_rule__Precedence__Group_1__44667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_1_4_in_rule__Precedence__Group_1__4__Impl4694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1_3__0__Impl_in_rule__Precedence__Group_1_3__04734 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1_3__1_in_rule__Precedence__Group_1_3__04737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature1Assignment_1_3_0_in_rule__Precedence__Group_1_3__0__Impl4764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_1_3__1__Impl_in_rule__Precedence__Group_1_3__14794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_1_3__1__Impl4822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__0__Impl_in_rule__Precedence__Group_2__04857 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__1_in_rule__Precedence__Group_2__04860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_2_0_in_rule__Precedence__Group_2__0__Impl4887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__1__Impl_in_rule__Precedence__Group_2__14917 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__2_in_rule__Precedence__Group_2__14920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_2_1_in_rule__Precedence__Group_2__1__Impl4947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__2__Impl_in_rule__Precedence__Group_2__24977 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__3_in_rule__Precedence__Group_2__24980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2_2__0_in_rule__Precedence__Group_2__2__Impl5007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__3__Impl_in_rule__Precedence__Group_2__35038 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__4_in_rule__Precedence__Group_2__35041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_2_3_in_rule__Precedence__Group_2__3__Impl5068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2__4__Impl_in_rule__Precedence__Group_2__45098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__SuffixAssignment_2_4_in_rule__Precedence__Group_2__4__Impl5125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2_2__0__Impl_in_rule__Precedence__Group_2_2__05165 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2_2__1_in_rule__Precedence__Group_2_2__05168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature1Assignment_2_2_0_in_rule__Precedence__Group_2_2__0__Impl5195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_2_2__1__Impl_in_rule__Precedence__Group_2_2__15225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_2_2__1__Impl5253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__0__Impl_in_rule__Precedence__Group_3__05288 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__1_in_rule__Precedence__Group_3__05291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_3_0_in_rule__Precedence__Group_3__0__Impl5318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__1__Impl_in_rule__Precedence__Group_3__15348 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__2_in_rule__Precedence__Group_3__15351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_3_1_in_rule__Precedence__Group_3__1__Impl5378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__2__Impl_in_rule__Precedence__Group_3__25408 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__3_in_rule__Precedence__Group_3__25411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_2__0_in_rule__Precedence__Group_3__2__Impl5438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__3__Impl_in_rule__Precedence__Group_3__35469 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__4_in_rule__Precedence__Group_3__35472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_3_3_in_rule__Precedence__Group_3__3__Impl5499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__4__Impl_in_rule__Precedence__Group_3__45529 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__5_in_rule__Precedence__Group_3__45532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__InfixAssignment_3_4_in_rule__Precedence__Group_3__4__Impl5559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__5__Impl_in_rule__Precedence__Group_3__55589 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__6_in_rule__Precedence__Group_3__55592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_5__0_in_rule__Precedence__Group_3__5__Impl5619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3__6__Impl_in_rule__Precedence__Group_3__65650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par2Assignment_3_6_in_rule__Precedence__Group_3__6__Impl5677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_2__0__Impl_in_rule__Precedence__Group_3_2__05721 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_2__1_in_rule__Precedence__Group_3_2__05724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature1Assignment_3_2_0_in_rule__Precedence__Group_3_2__0__Impl5751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_2__1__Impl_in_rule__Precedence__Group_3_2__15781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_3_2__1__Impl5809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_5__0__Impl_in_rule__Precedence__Group_3_5__05844 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_5__1_in_rule__Precedence__Group_3_5__05847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature2Assignment_3_5_0_in_rule__Precedence__Group_3_5__0__Impl5874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_3_5__1__Impl_in_rule__Precedence__Group_3_5__15904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_3_5__1__Impl5932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__0__Impl_in_rule__Precedence__Group_4__05967 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__1_in_rule__Precedence__Group_4__05970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_4_0_in_rule__Precedence__Group_4__0__Impl5997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__1__Impl_in_rule__Precedence__Group_4__16027 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__2_in_rule__Precedence__Group_4__16030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_4_1_in_rule__Precedence__Group_4__1__Impl6057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__2__Impl_in_rule__Precedence__Group_4__26087 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__3_in_rule__Precedence__Group_4__26090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_2__0_in_rule__Precedence__Group_4__2__Impl6117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__3__Impl_in_rule__Precedence__Group_4__36148 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__4_in_rule__Precedence__Group_4__36151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_4_3_in_rule__Precedence__Group_4__3__Impl6178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__4__Impl_in_rule__Precedence__Group_4__46208 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__5_in_rule__Precedence__Group_4__46211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__InfixAssignment_4_4_in_rule__Precedence__Group_4__4__Impl6238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__5__Impl_in_rule__Precedence__Group_4__56268 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__6_in_rule__Precedence__Group_4__56271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_5__0_in_rule__Precedence__Group_4__5__Impl6298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4__6__Impl_in_rule__Precedence__Group_4__66329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par2Assignment_4_6_in_rule__Precedence__Group_4__6__Impl6356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_2__0__Impl_in_rule__Precedence__Group_4_2__06400 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_2__1_in_rule__Precedence__Group_4_2__06403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature1Assignment_4_2_0_in_rule__Precedence__Group_4_2__0__Impl6430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_2__1__Impl_in_rule__Precedence__Group_4_2__16460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_4_2__1__Impl6488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_5__0__Impl_in_rule__Precedence__Group_4_5__06523 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_5__1_in_rule__Precedence__Group_4_5__06526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Feature2Assignment_4_5_0_in_rule__Precedence__Group_4_5__0__Impl6553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_4_5__1__Impl_in_rule__Precedence__Group_4_5__16583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Precedence__Group_4_5__1__Impl6611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__0__Impl_in_rule__Precedence__Group_5__06646 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__1_in_rule__Precedence__Group_5__06649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_5_0_in_rule__Precedence__Group_5__0__Impl6676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__1__Impl_in_rule__Precedence__Group_5__16706 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__2_in_rule__Precedence__Group_5__16709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_5_1_in_rule__Precedence__Group_5__1__Impl6736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__2__Impl_in_rule__Precedence__Group_5__26766 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__3_in_rule__Precedence__Group_5__26769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par1Assignment_5_2_in_rule__Precedence__Group_5__2__Impl6796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__3__Impl_in_rule__Precedence__Group_5__36826 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__4_in_rule__Precedence__Group_5__36829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__InfixleftAssignment_5_3_in_rule__Precedence__Group_5__3__Impl6856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_5__4__Impl_in_rule__Precedence__Group_5__46886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Par2Assignment_5_4_in_rule__Precedence__Group_5__4__Impl6913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_6__0__Impl_in_rule__Precedence__Group_6__06953 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_6__1_in_rule__Precedence__Group_6__06956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_6_0_in_rule__Precedence__Group_6__0__Impl6983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_6__1__Impl_in_rule__Precedence__Group_6__17013 = new BitSet(new long[]{0x00000000003C0000L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_6__2_in_rule__Precedence__Group_6__17016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_6_1_in_rule__Precedence__Group_6__1__Impl7043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_6__2__Impl_in_rule__Precedence__Group_6__27073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__LiteralAssignment_6_2_in_rule__Precedence__Group_6__2__Impl7100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_7__0__Impl_in_rule__Precedence__Group_7__07136 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_7__1_in_rule__Precedence__Group_7__07139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_7_0_in_rule__Precedence__Group_7__0__Impl7166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_7__1__Impl_in_rule__Precedence__Group_7__17196 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_7__2_in_rule__Precedence__Group_7__17199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_7_1_in_rule__Precedence__Group_7__1__Impl7226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_7__2__Impl_in_rule__Precedence__Group_7__27256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__BracketAssignment_7_2_in_rule__Precedence__Group_7__2__Impl7283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_8__0__Impl_in_rule__Precedence__Group_8__07319 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_8__1_in_rule__Precedence__Group_8__07322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_8_0_in_rule__Precedence__Group_8__0__Impl7349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_8__1__Impl_in_rule__Precedence__Group_8__17379 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_8__2_in_rule__Precedence__Group_8__17382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_8_1_in_rule__Precedence__Group_8__1__Impl7409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_8__2__Impl_in_rule__Precedence__Group_8__27439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__BracesAssignment_8_2_in_rule__Precedence__Group_8__2__Impl7466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__0__Impl_in_rule__Precedence__Group_9__07502 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__1_in_rule__Precedence__Group_9__07505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuletypAssignment_9_0_in_rule__Precedence__Group_9__0__Impl7532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__1__Impl_in_rule__Precedence__Group_9__17562 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__2_in_rule__Precedence__Group_9__17565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__RuleAssignment_9_1_in_rule__Precedence__Group_9__1__Impl7592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__Group_9__2__Impl_in_rule__Precedence__Group_9__27622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__ParenthesisAssignment_9_2_in_rule__Precedence__Group_9__2__Impl7649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Group__0__Impl_in_rule__MultID__Group__07685 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_rule__MultID__Group__1_in_rule__MultID__Group__07688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Group__1__Impl_in_rule__MultID__Group__17746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Alternatives_1_in_rule__MultID__Group__1__Impl7773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__0__Impl_in_rule__MultID__Group_1_1__07807 = new BitSet(new long[]{0x0000010000000010L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__1_in_rule__MultID__Group_1_1__07810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__MultID__Group_1_1__0__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__1__Impl_in_rule__MultID__Group_1_1__17869 = new BitSet(new long[]{0x0000010000000010L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__2_in_rule__MultID__Group_1_1__17872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultID__MiAssignment_1_1_1_in_rule__MultID__Group_1_1__1__Impl7899 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__MultID__Group_1_1__2__Impl_in_rule__MultID__Group_1_1__27930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__MultID__Group_1_1__2__Impl7958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Group__0__Impl_in_rule__MultString__Group__07995 = new BitSet(new long[]{0x0000008000000020L});
+    public static final BitSet FOLLOW_rule__MultString__Group__1_in_rule__MultString__Group__07998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Group__1__Impl_in_rule__MultString__Group__18056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Alternatives_1_in_rule__MultString__Group__1__Impl8083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__0__Impl_in_rule__MultString__Group_1_1__08117 = new BitSet(new long[]{0x0000010000000020L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__1_in_rule__MultString__Group_1_1__08120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__MultString__Group_1_1__0__Impl8148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__1__Impl_in_rule__MultString__Group_1_1__18179 = new BitSet(new long[]{0x0000010000000020L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__2_in_rule__MultString__Group_1_1__18182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultString__MsAssignment_1_1_1_in_rule__MultString__Group_1_1__1__Impl8209 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__MultString__Group_1_1__2__Impl_in_rule__MultString__Group_1_1__28240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__MultString__Group_1_1__2__Impl8268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClassType_in_rule__Model__ClasAssignment_08310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProcedure_in_rule__Model__ProcAssignment_18341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__Model__StatemAssignment_28372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Model__ExpAssignment_38403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ClassType__NameAssignment_18434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__ClassType__NoclassAssignment_2_08470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultID_in_rule__ClassType__PrefixAssignment_2_1_18509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultID_in_rule__ClassType__SuffixAssignment_2_2_18540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassType__BlockingAlternatives_2_3_1_0_in_rule__ClassType__BlockingAssignment_2_3_18571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Procedure__NameAssignment_18604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultID_in_rule__Procedure__PrefixAssignment_2_0_18635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultID_in_rule__Procedure__SuffixAssignment_2_1_18666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Procedure__TypesAlternatives_2_2_1_0_in_rule__Procedure__TypesAssignment_2_2_18697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__NameAssignment_18730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__RepAssignment_2_0_18761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__UntilAssignment_2_0_38792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__WhileAssignment_2_1_18823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__DoAssignment_2_1_38854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ForAssignment_2_2_18885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__VarAssignment_2_3_18916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_3_2_18947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ValAssignment_2_4_18978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statement__ExAssignment_2_4_39009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Expression__NameAssignment_19040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrecedence_in_rule__Expression__PrecAssignment_29071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Precedence__RuletypAssignment_0_09107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_0_19146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_0_2_19177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Precedence__RuletypAssignment_1_09213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_1_19252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__PrefixAssignment_1_29283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_1_3_09314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_1_49345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Precedence__RuletypAssignment_2_09381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_2_19420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_2_2_09451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_2_39482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__SuffixAssignment_2_49513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Precedence__RuletypAssignment_3_09549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_3_19588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_3_2_09619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_3_39650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_3_49681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature2Assignment_3_5_09712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_3_69743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Precedence__RuletypAssignment_4_09779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_4_19818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature1Assignment_4_2_09849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_4_39880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__InfixAssignment_4_49911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Feature2Assignment_4_5_09942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_4_69973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Precedence__RuletypAssignment_5_010009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_5_110048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par1Assignment_5_210079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultString_in_rule__Precedence__InfixleftAssignment_5_310110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__Par2Assignment_5_410141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Precedence__RuletypAssignment_6_010177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_6_110216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Precedence__LiteralAlternatives_6_2_0_in_rule__Precedence__LiteralAssignment_6_210247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Precedence__RuletypAssignment_7_010285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_7_110324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__BracketAssignment_7_210355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Precedence__RuletypAssignment_8_010391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_8_110430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__BracesAssignment_8_210461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Precedence__RuletypAssignment_9_010497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__RuleAssignment_9_110536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Precedence__ParenthesisAssignment_9_210567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_010598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MultID__MiAssignment_1_1_110629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_010660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__MultString__MsAssignment_1_1_110691 = new BitSet(new long[]{0x0000000000000002L});
 
 }

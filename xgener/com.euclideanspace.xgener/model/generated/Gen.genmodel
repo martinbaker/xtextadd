@@ -44,10 +44,12 @@
     <genClasses ecoreClass="Gen.ecore#//Precedence">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/ruletyp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/rule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/feature1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/prefix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/suffix"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/infix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/feature2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/infixleft"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/literal"/>

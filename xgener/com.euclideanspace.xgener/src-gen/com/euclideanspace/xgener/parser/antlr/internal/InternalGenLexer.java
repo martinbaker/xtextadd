@@ -49,9 +49,11 @@ public class InternalGenLexer extends Lexer {
     public static final int T__32=32;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__48=48;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
@@ -75,10 +77,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:11:7: ( 'class' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:11:9: 'class'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:11:7: ( 'CLASS' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:11:9: 'CLASS'
             {
-            match("class"); 
+            match("CLASS"); 
 
 
             }
@@ -96,10 +98,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:12:7: ( 'noclass' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:12:9: 'noclass'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:12:7: ( 'NOCLASS' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:12:9: 'NOCLASS'
             {
-            match("noclass"); 
+            match("NOCLASS"); 
 
 
             }
@@ -117,10 +119,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:13:7: ( 'prefix' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:13:9: 'prefix'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:13:7: ( 'PREFIX' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:13:9: 'PREFIX'
             {
-            match("prefix"); 
+            match("PREFIX"); 
 
 
             }
@@ -138,10 +140,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:14:7: ( 'suffix' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:14:9: 'suffix'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:14:7: ( 'SUFFIX' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:14:9: 'SUFFIX'
             {
-            match("suffix"); 
+            match("SUFFIX"); 
 
 
             }
@@ -159,10 +161,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:15:7: ( 'blocking' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:15:9: 'blocking'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:15:7: ( 'BLOCKING' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:15:9: 'BLOCKING'
             {
-            match("blocking"); 
+            match("BLOCKING"); 
 
 
             }
@@ -180,10 +182,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:16:7: ( 'braces' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:16:9: 'braces'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:16:7: ( 'BRACES' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:16:9: 'BRACES'
             {
-            match("braces"); 
+            match("BRACES"); 
 
 
             }
@@ -201,10 +203,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:17:7: ( 'indent' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:17:9: 'indent'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:17:7: ( 'INDENT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:17:9: 'INDENT'
             {
-            match("indent"); 
+            match("INDENT"); 
 
 
             }
@@ -222,10 +224,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:18:7: ( 'procedure' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:18:9: 'procedure'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:18:7: ( 'PROCEDURE' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:18:9: 'PROCEDURE'
             {
-            match("procedure"); 
+            match("PROCEDURE"); 
 
 
             }
@@ -243,10 +245,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:19:7: ( 'types' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:19:9: 'types'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:19:7: ( 'TYPES' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:19:9: 'TYPES'
             {
-            match("types"); 
+            match("TYPES"); 
 
 
             }
@@ -264,10 +266,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:20:7: ( 'colonSeperated' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:20:9: 'colonSeperated'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:20:7: ( 'COLONSEPERATED' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:20:9: 'COLONSEPERATED'
             {
-            match("colonSeperated"); 
+            match("COLONSEPERATED"); 
 
 
             }
@@ -285,10 +287,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:21:7: ( 'spaceSeperated' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:21:9: 'spaceSeperated'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:21:7: ( 'SPACESEPERATED' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:21:9: 'SPACESEPERATED'
             {
-            match("spaceSeperated"); 
+            match("SPACESEPERATED"); 
 
 
             }
@@ -306,10 +308,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:22:7: ( 'inHeader' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:22:9: 'inHeader'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:22:7: ( 'INHEADER' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:22:9: 'INHEADER'
             {
-            match("inHeader"); 
+            match("INHEADER"); 
 
 
             }
@@ -327,10 +329,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:23:7: ( 'inferred' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:23:9: 'inferred'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:23:7: ( 'INFERRED' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:23:9: 'INFERRED'
             {
-            match("inferred"); 
+            match("INFERRED"); 
 
 
             }
@@ -348,10 +350,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:24:7: ( 'untyped' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:24:9: 'untyped'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:24:7: ( 'UNTYPED' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:24:9: 'UNTYPED'
             {
-            match("untyped"); 
+            match("UNTYPED"); 
 
 
             }
@@ -369,10 +371,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:25:7: ( 'statement' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:25:9: 'statement'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:25:7: ( 'STATEMENT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:25:9: 'STATEMENT'
             {
-            match("statement"); 
+            match("STATEMENT"); 
 
 
             }
@@ -390,10 +392,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:26:7: ( 'repeat' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:26:9: 'repeat'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:26:7: ( 'REPEAT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:26:9: 'REPEAT'
             {
-            match("repeat"); 
+            match("REPEAT"); 
 
 
             }
@@ -411,10 +413,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:27:7: ( 'until' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:27:9: 'until'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:27:7: ( 'UNTIL' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:27:9: 'UNTIL'
             {
-            match("until"); 
+            match("UNTIL"); 
 
 
             }
@@ -432,10 +434,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:28:7: ( 'while' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:28:9: 'while'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:28:7: ( 'WHILE' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:28:9: 'WHILE'
             {
-            match("while"); 
+            match("WHILE"); 
 
 
             }
@@ -453,10 +455,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:29:7: ( 'do' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:29:9: 'do'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:29:7: ( 'DO' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:29:9: 'DO'
             {
-            match("do"); 
+            match("DO"); 
 
 
             }
@@ -474,10 +476,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:30:7: ( 'for' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:30:9: 'for'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:30:7: ( 'FOR' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:30:9: 'FOR'
             {
-            match("for"); 
+            match("FOR"); 
 
 
             }
@@ -495,10 +497,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:31:7: ( 'var' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:31:9: 'var'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:31:7: ( 'VAR' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:31:9: 'VAR'
             {
-            match("var"); 
+            match("VAR"); 
 
 
             }
@@ -536,10 +538,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:33:7: ( 'val' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:33:9: 'val'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:33:7: ( 'VAL' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:33:9: 'VAL'
             {
-            match("val"); 
+            match("VAL"); 
 
 
             }
@@ -557,10 +559,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:34:7: ( 'expression' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:34:9: 'expression'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:34:7: ( 'EXPRESSION' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:34:9: 'EXPRESSION'
             {
-            match("expression"); 
+            match("EXPRESSION"); 
 
 
             }
@@ -578,10 +580,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:35:7: ( 'caller' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:35:9: 'caller'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:35:7: ( 'CALLER' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:35:9: 'CALLER'
             {
-            match("caller"); 
+            match("CALLER"); 
 
 
             }
@@ -599,11 +601,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:36:7: ( 'infix' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:36:9: 'infix'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:36:7: ( '.' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:36:9: '.'
             {
-            match("infix"); 
-
+            match('.'); 
 
             }
 
@@ -620,10 +621,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:37:7: ( 'infixleft' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:37:9: 'infixleft'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:37:7: ( 'INFIX' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:37:9: 'INFIX'
             {
-            match("infixleft"); 
+            match("INFIX"); 
 
 
             }
@@ -641,10 +642,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:38:7: ( 'literal' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:38:9: 'literal'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:38:7: ( 'INFIXADD' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:38:9: 'INFIXADD'
             {
-            match("literal"); 
+            match("INFIXADD"); 
 
 
             }
@@ -662,10 +663,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:39:7: ( 'int' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:39:9: 'int'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:39:7: ( 'INFIXLEFT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:39:9: 'INFIXLEFT'
             {
-            match("int"); 
+            match("INFIXLEFT"); 
 
 
             }
@@ -683,10 +684,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:40:7: ( 'string' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:40:9: 'string'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:40:7: ( 'LITERAL' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:40:9: 'LITERAL'
             {
-            match("string"); 
+            match("LITERAL"); 
 
 
             }
@@ -704,10 +705,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:41:7: ( 'bool' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:41:9: 'bool'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:41:7: ( 'INT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:41:9: 'INT'
             {
-            match("bool"); 
+            match("INT"); 
 
 
             }
@@ -725,10 +726,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:42:7: ( 'float' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:42:9: 'float'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:42:7: ( 'STRING' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:42:9: 'STRING'
             {
-            match("float"); 
+            match("STRING"); 
 
 
             }
@@ -746,10 +747,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:43:7: ( 'bracket' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:43:9: 'bracket'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:43:7: ( 'BOOL' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:43:9: 'BOOL'
             {
-            match("bracket"); 
+            match("BOOL"); 
 
 
             }
@@ -767,10 +768,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:44:7: ( 'parenthesis' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:44:9: 'parenthesis'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:44:7: ( 'FLOAT' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:44:9: 'FLOAT'
             {
-            match("parenthesis"); 
+            match("FLOAT"); 
 
 
             }
@@ -788,10 +789,11 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:45:7: ( '[' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:45:9: '['
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:45:7: ( 'BRACKET' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:45:9: 'BRACKET'
             {
-            match('['); 
+            match("BRACKET"); 
+
 
             }
 
@@ -808,10 +810,11 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:46:7: ( ']' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:46:9: ']'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:46:7: ( 'PARENTHESIS' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:46:9: 'PARENTHESIS'
             {
-            match(']'); 
+            match("PARENTHESIS"); 
+
 
             }
 
@@ -823,15 +826,55 @@ public class InternalGenLexer extends Lexer {
     }
     // $ANTLR end "T__46"
 
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:47:7: ( '[' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:47:9: '['
+            {
+            match('['); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__47"
+
+    // $ANTLR start "T__48"
+    public final void mT__48() throws RecognitionException {
+        try {
+            int _type = T__48;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:48:7: ( ']' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:48:9: ']'
+            {
+            match(']'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__48"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1524:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1524:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1766:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1766:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1524:11: ( '^' )?
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1766:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -840,7 +883,7 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1524:11: '^'
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1766:11: '^'
                     {
                     match('^'); 
 
@@ -858,7 +901,7 @@ public class InternalGenLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1524:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1766:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -907,10 +950,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1526:10: ( ( '0' .. '9' )+ )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1526:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1768:10: ( ( '0' .. '9' )+ )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1768:12: ( '0' .. '9' )+
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1526:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1768:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -924,7 +967,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1526:13: '0' .. '9'
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1768:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -956,10 +999,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -977,10 +1020,10 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -996,7 +1039,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:21: '\\\\' .
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1004,7 +1047,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1029,10 +1072,10 @@ public class InternalGenLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1048,7 +1091,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:54: '\\\\' .
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1056,7 +1099,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1528:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1770:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1099,12 +1142,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1530:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1530:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1772:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1772:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1530:24: ( options {greedy=false; } : . )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1772:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1129,7 +1172,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1530:52: .
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1772:52: .
             	    {
             	    matchAny(); 
 
@@ -1159,12 +1202,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1177,7 +1220,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1197,7 +1240,7 @@ public class InternalGenLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:40: ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1206,9 +1249,9 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:41: ( '\\r' )? '\\n'
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:41: ( '\\r' )?
+                    // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1217,7 +1260,7 @@ public class InternalGenLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1532:41: '\\r'
+                            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1774:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1249,10 +1292,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1534:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1534:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1776:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1776:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1534:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1776:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1306,8 +1349,8 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1536:16: ( . )
-            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1536:18: .
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1778:16: ( . )
+            // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1778:18: .
             {
             matchAny(); 
 
@@ -1322,8 +1365,8 @@ public class InternalGenLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=43;
+        // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=45;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1579,49 +1622,63 @@ public class InternalGenLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:226: RULE_ID
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:226: T__47
+                {
+                mT__47(); 
+
+                }
+                break;
+            case 38 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:232: T__48
+                {
+                mT__48(); 
+
+                }
+                break;
+            case 39 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:238: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 38 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:234: RULE_INT
+            case 40 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:246: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 39 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:243: RULE_STRING
+            case 41 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:255: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 40 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:255: RULE_ML_COMMENT
+            case 42 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:267: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 41 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:271: RULE_SL_COMMENT
+            case 43 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:283: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 42 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:287: RULE_WS
+            case 44 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:299: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 43 :
-                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:295: RULE_ANY_OTHER
+            case 45 :
+                // ../com.euclideanspace.xgener/src-gen/com/euclideanspace/xgener/parser/antlr/internal/InternalGen.g:1:307: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1635,79 +1692,79 @@ public class InternalGenLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\15\36\1\uffff\2\36\2\uffff\1\32\2\uffff\3\32\2\uffff\3\36\1\uffff\16\36\1\121\3\36\1\uffff\2\36\7\uffff\21\36\1\152\4\36\1\uffff\1\160\1\36\1\162\1\163\17\36\1\u0084\4\36\1\uffff\5\36\1\uffff\1\36\2\uffff\2\36\1\u0091\15\36\1\uffff\3\36\1\u00a3\1\u00a4\1\36\1\u00a6\1\36\1\u00a8\1\u00a9\2\36\1\uffff\1\36\1\u00ad\1\36\1\u00af\2\36\1\u00b2\2\36\1\u00b5\1\36\1\u00b7\1\36\1\u00b9\3\36\2\uffff\1\36\1\uffff\1\u00be\2\uffff\3\36\1\uffff\1\u00c2\1\uffff\2\36\1\uffff\2\36\1\uffff\1\36\1\uffff\1\u00c8\1\uffff\3\36\1\u00cc\1\uffff\1\36\1\u00ce\1\36\1\uffff\4\36\1\u00d4\1\uffff\1\u00d5\1\u00d6\1\36\1\uffff\1\36\1\uffff\1\36\1\u00da\2\36\1\u00dd\3\uffff\1\u00de\2\36\1\uffff\2\36\2\uffff\1\u00e3\1\36\1\u00e5\1\36\1\uffff\1\36\1\uffff\3\36\1\u00eb\1\u00ec\2\uffff";
+        "\1\uffff\15\37\1\uffff\1\37\1\uffff\1\37\2\uffff\1\33\2\uffff\3\33\2\uffff\3\37\1\uffff\16\37\1\123\3\37\1\uffff\1\37\1\uffff\1\37\7\uffff\21\37\1\154\4\37\1\uffff\1\162\1\37\1\164\1\165\17\37\1\u0086\4\37\1\uffff\5\37\1\uffff\1\37\2\uffff\2\37\1\u0093\15\37\1\uffff\3\37\1\u00a6\1\u00a7\1\37\1\u00a9\1\37\1\u00ab\1\u00ac\2\37\1\uffff\1\37\1\u00b0\1\37\1\u00b2\2\37\1\u00b5\2\37\1\u00b8\1\37\1\u00ba\1\37\1\u00bc\4\37\2\uffff\1\37\1\uffff\1\u00c2\2\uffff\3\37\1\uffff\1\u00c6\1\uffff\2\37\1\uffff\2\37\1\uffff\1\37\1\uffff\1\u00cc\1\uffff\4\37\1\u00d1\1\uffff\1\37\1\u00d3\1\37\1\uffff\4\37\1\u00d9\1\uffff\1\u00da\1\u00db\1\u00dc\1\37\1\uffff\1\37\1\uffff\1\37\1\u00e0\2\37\1\u00e3\4\uffff\1\u00e4\2\37\1\uffff\2\37\2\uffff\1\u00e9\1\37\1\u00eb\1\37\1\uffff\1\37\1\uffff\3\37\1\u00f1\1\u00f2\2\uffff";
     static final String DFA12_eofS =
-        "\u00ed\uffff";
+        "\u00f3\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\157\1\141\1\160\1\154\1\156\1\171\1\156\1\145\1\150\1\157\1\154\1\141\1\uffff\1\170\1\151\2\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\141\2\154\1\uffff\1\143\1\145\1\162\1\146\2\141\1\157\1\141\1\157\1\110\1\160\1\164\1\160\1\151\1\60\1\162\1\157\1\154\1\uffff\1\160\1\164\7\uffff\1\163\1\157\2\154\1\146\1\143\1\145\1\146\1\143\1\164\1\151\2\143\1\154\3\145\1\60\1\145\1\151\1\145\1\154\1\uffff\1\60\1\141\2\60\1\162\1\145\1\163\1\156\1\145\1\141\1\151\1\145\1\156\1\151\2\145\1\156\1\153\1\145\1\60\1\156\1\141\1\162\1\170\1\uffff\1\163\1\160\1\154\1\141\1\145\1\uffff\1\164\2\uffff\1\145\1\162\1\60\1\123\1\162\1\163\1\170\1\144\1\164\1\170\1\123\1\155\1\147\1\151\1\163\1\145\1\uffff\1\164\1\144\1\162\2\60\1\145\1\60\1\164\2\60\1\163\1\141\1\uffff\1\145\1\60\1\163\1\60\1\165\1\150\1\60\2\145\1\60\1\156\1\60\1\164\1\60\3\145\2\uffff\1\144\1\uffff\1\60\2\uffff\1\163\1\154\1\160\1\uffff\1\60\1\uffff\1\162\1\145\1\uffff\1\160\1\156\1\uffff\1\147\1\uffff\1\60\1\uffff\1\162\1\144\1\146\1\60\1\uffff\1\151\1\60\1\145\1\uffff\1\145\1\163\1\145\1\164\1\60\1\uffff\2\60\1\164\1\uffff\1\157\1\uffff\1\162\1\60\1\151\1\162\1\60\3\uffff\1\60\1\156\1\141\1\uffff\1\163\1\141\2\uffff\1\60\1\164\1\60\1\164\1\uffff\1\145\1\uffff\1\145\2\144\2\60\2\uffff";
+        "\1\0\1\101\1\117\1\101\1\120\1\114\1\116\1\131\1\116\1\105\1\110\1\117\1\114\1\101\1\uffff\1\130\1\uffff\1\111\2\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\101\2\114\1\uffff\1\103\1\105\1\122\1\106\2\101\1\117\1\101\1\117\1\104\1\120\1\124\1\120\1\111\1\60\1\122\1\117\1\114\1\uffff\1\120\1\uffff\1\124\7\uffff\1\123\1\117\2\114\1\106\1\103\1\105\1\106\1\103\1\124\1\111\2\103\1\114\3\105\1\60\1\105\1\111\1\105\1\114\1\uffff\1\60\1\101\2\60\1\122\1\105\1\123\1\116\1\105\1\101\1\111\1\105\1\116\1\111\2\105\1\116\1\113\1\105\1\60\1\116\1\101\1\122\1\130\1\uffff\1\123\1\120\1\114\1\101\1\105\1\uffff\1\124\2\uffff\1\105\1\122\1\60\1\123\1\122\1\123\1\130\1\104\1\124\1\130\1\123\1\115\1\107\1\111\1\123\1\105\1\uffff\1\124\1\104\1\122\2\60\1\105\1\60\1\124\2\60\1\123\1\101\1\uffff\1\105\1\60\1\123\1\60\1\125\1\110\1\60\2\105\1\60\1\116\1\60\1\124\1\60\2\105\1\104\1\105\2\uffff\1\104\1\uffff\1\60\2\uffff\1\123\1\114\1\120\1\uffff\1\60\1\uffff\1\122\1\105\1\uffff\1\120\1\116\1\uffff\1\107\1\uffff\1\60\1\uffff\1\122\2\104\1\106\1\60\1\uffff\1\111\1\60\1\105\1\uffff\1\105\1\123\1\105\1\124\1\60\1\uffff\3\60\1\124\1\uffff\1\117\1\uffff\1\122\1\60\1\111\1\122\1\60\4\uffff\1\60\1\116\1\101\1\uffff\1\123\1\101\2\uffff\1\60\1\124\1\60\1\124\1\uffff\1\105\1\uffff\1\105\2\104\2\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\2\157\1\162\1\165\1\162\1\156\1\171\1\156\1\145\1\150\2\157\1\141\1\uffff\1\170\1\151\2\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\2\154\1\uffff\1\143\1\157\1\162\1\146\1\141\1\162\1\157\1\141\1\157\1\164\1\160\1\164\1\160\1\151\1\172\1\162\1\157\1\162\1\uffff\1\160\1\164\7\uffff\1\163\1\157\2\154\1\146\1\143\1\145\1\146\1\143\1\164\1\151\2\143\1\154\2\145\1\151\1\172\1\145\1\171\1\145\1\154\1\uffff\1\172\1\141\2\172\1\162\1\145\1\163\1\156\1\145\1\141\1\151\1\145\1\156\1\151\2\145\1\156\2\153\1\172\1\156\1\141\1\162\1\170\1\uffff\1\163\1\160\1\154\1\141\1\145\1\uffff\1\164\2\uffff\1\145\1\162\1\172\1\123\1\162\1\163\1\170\1\144\1\164\1\170\1\123\1\155\1\147\1\151\1\163\1\145\1\uffff\1\164\1\144\1\162\2\172\1\145\1\172\1\164\2\172\1\163\1\141\1\uffff\1\145\1\172\1\163\1\172\1\165\1\150\1\172\2\145\1\172\1\156\1\172\1\164\1\172\3\145\2\uffff\1\144\1\uffff\1\172\2\uffff\1\163\1\154\1\160\1\uffff\1\172\1\uffff\1\162\1\145\1\uffff\1\160\1\156\1\uffff\1\147\1\uffff\1\172\1\uffff\1\162\1\144\1\146\1\172\1\uffff\1\151\1\172\1\145\1\uffff\1\145\1\163\1\145\1\164\1\172\1\uffff\2\172\1\164\1\uffff\1\157\1\uffff\1\162\1\172\1\151\1\162\1\172\3\uffff\1\172\1\156\1\141\1\uffff\1\163\1\141\2\uffff\1\172\1\164\1\172\1\164\1\uffff\1\145\1\uffff\1\145\2\144\2\172\2\uffff";
+        "\1\uffff\2\117\1\122\1\125\1\122\1\116\1\131\1\116\1\105\1\110\2\117\1\101\1\uffff\1\130\1\uffff\1\111\2\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\101\2\114\1\uffff\1\103\1\117\1\122\1\106\1\101\1\122\1\117\1\101\1\117\1\124\1\120\1\124\1\120\1\111\1\172\1\122\1\117\1\122\1\uffff\1\120\1\uffff\1\124\7\uffff\1\123\1\117\2\114\1\106\1\103\1\105\1\106\1\103\1\124\1\111\2\103\1\114\2\105\1\111\1\172\1\105\1\131\1\105\1\114\1\uffff\1\172\1\101\2\172\1\122\1\105\1\123\1\116\1\105\1\101\1\111\1\105\1\116\1\111\2\105\1\116\2\113\1\172\1\116\1\101\1\122\1\130\1\uffff\1\123\1\120\1\114\1\101\1\105\1\uffff\1\124\2\uffff\1\105\1\122\1\172\1\123\1\122\1\123\1\130\1\104\1\124\1\130\1\123\1\115\1\107\1\111\1\123\1\105\1\uffff\1\124\1\104\1\122\2\172\1\105\1\172\1\124\2\172\1\123\1\101\1\uffff\1\105\1\172\1\123\1\172\1\125\1\110\1\172\2\105\1\172\1\116\1\172\1\124\1\172\2\105\1\104\1\105\2\uffff\1\104\1\uffff\1\172\2\uffff\1\123\1\114\1\120\1\uffff\1\172\1\uffff\1\122\1\105\1\uffff\1\120\1\116\1\uffff\1\107\1\uffff\1\172\1\uffff\1\122\2\104\1\106\1\172\1\uffff\1\111\1\172\1\105\1\uffff\1\105\1\123\1\105\1\124\1\172\1\uffff\3\172\1\124\1\uffff\1\117\1\uffff\1\122\1\172\1\111\1\122\1\172\4\uffff\1\172\1\116\1\101\1\uffff\1\123\1\101\2\uffff\1\172\1\124\1\172\1\124\1\uffff\1\105\1\uffff\1\105\2\104\2\172\2\uffff";
     static final String DFA12_acceptS =
-        "\16\uffff\1\26\2\uffff\1\43\1\44\1\uffff\1\45\1\46\3\uffff\1\52\1\53\3\uffff\1\45\22\uffff\1\26\2\uffff\1\43\1\44\1\46\1\47\1\50\1\51\1\52\26\uffff\1\23\30\uffff\1\35\5\uffff\1\24\1\uffff\1\25\1\27\20\uffff\1\37\14\uffff\1\1\21\uffff\1\32\1\11\1\uffff\1\21\1\uffff\1\22\1\40\3\uffff\1\31\1\uffff\1\3\2\uffff\1\4\2\uffff\1\36\1\uffff\1\6\1\uffff\1\7\4\uffff\1\20\3\uffff\1\2\5\uffff\1\41\3\uffff\1\16\1\uffff\1\34\5\uffff\1\5\1\14\1\15\3\uffff\1\10\2\uffff\1\17\1\33\4\uffff\1\30\1\uffff\1\42\5\uffff\1\12\1\13";
+        "\16\uffff\1\26\1\uffff\1\32\1\uffff\1\45\1\46\1\uffff\1\47\1\50\3\uffff\1\54\1\55\3\uffff\1\47\22\uffff\1\26\1\uffff\1\32\1\uffff\1\45\1\46\1\50\1\51\1\52\1\53\1\54\26\uffff\1\23\30\uffff\1\37\5\uffff\1\24\1\uffff\1\25\1\27\20\uffff\1\41\14\uffff\1\1\22\uffff\1\33\1\11\1\uffff\1\21\1\uffff\1\22\1\42\3\uffff\1\31\1\uffff\1\3\2\uffff\1\4\2\uffff\1\40\1\uffff\1\6\1\uffff\1\7\5\uffff\1\20\3\uffff\1\2\5\uffff\1\43\4\uffff\1\16\1\uffff\1\36\5\uffff\1\5\1\14\1\15\1\34\3\uffff\1\10\2\uffff\1\17\1\35\4\uffff\1\30\1\uffff\1\44\5\uffff\1\12\1\13";
     static final String DFA12_specialS =
-        "\1\1\25\uffff\1\0\1\2\u00d5\uffff}>";
+        "\1\0\26\uffff\1\1\1\2\u00da\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\32\2\31\2\32\1\31\22\32\1\31\1\32\1\26\4\32\1\27\7\32\1\30\12\25\3\32\1\16\3\32\32\24\1\21\1\32\1\22\1\23\1\24\1\32\1\24\1\5\1\1\1\13\1\17\1\14\2\24\1\6\2\24\1\20\1\24\1\2\1\24\1\3\1\24\1\11\1\4\1\7\1\10\1\15\1\12\3\24\uff85\32",
-            "\1\35\12\uffff\1\33\2\uffff\1\34",
-            "\1\37",
-            "\1\41\20\uffff\1\40",
-            "\1\43\3\uffff\1\44\1\42",
-            "\1\45\2\uffff\1\47\2\uffff\1\46",
-            "\1\50",
+            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\27\4\33\1\30\6\33\1\20\1\31\12\26\3\33\1\16\3\33\1\25\1\5\1\1\1\13\1\17\1\14\2\25\1\6\2\25\1\21\1\25\1\2\1\25\1\3\1\25\1\11\1\4\1\7\1\10\1\15\1\12\3\25\1\22\1\33\1\23\1\24\1\25\1\33\32\25\uff85\33",
+            "\1\36\12\uffff\1\34\2\uffff\1\35",
+            "\1\40",
+            "\1\42\20\uffff\1\41",
+            "\1\44\3\uffff\1\45\1\43",
+            "\1\46\2\uffff\1\50\2\uffff\1\47",
             "\1\51",
             "\1\52",
             "\1\53",
             "\1\54",
             "\1\55",
-            "\1\57\2\uffff\1\56",
-            "\1\60",
+            "\1\56",
+            "\1\60\2\uffff\1\57",
+            "\1\61",
             "",
-            "\1\62",
             "\1\63",
             "",
-            "",
-            "\32\36\4\uffff\1\36\1\uffff\32\36",
-            "",
-            "",
-            "\0\67",
-            "\0\67",
-            "\1\70\4\uffff\1\71",
+            "\1\65",
             "",
             "",
-            "\1\73",
-            "\1\74",
+            "\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
+            "",
+            "\0\71",
+            "\0\71",
+            "\1\72\4\uffff\1\73",
+            "",
+            "",
             "\1\75",
-            "",
             "\1\76",
-            "\1\77\11\uffff\1\100",
-            "\1\101",
-            "\1\102",
+            "\1\77",
+            "",
+            "\1\100",
+            "\1\101\11\uffff\1\102",
             "\1\103",
-            "\1\104\20\uffff\1\105",
-            "\1\106",
-            "\1\107",
+            "\1\104",
+            "\1\105",
+            "\1\106\20\uffff\1\107",
             "\1\110",
-            "\1\112\33\uffff\1\111\1\uffff\1\113\15\uffff\1\114",
-            "\1\115",
-            "\1\116",
+            "\1\111",
+            "\1\112",
+            "\1\113\1\uffff\1\115\1\uffff\1\114\13\uffff\1\116",
             "\1\117",
             "\1\120",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\121",
             "\1\122",
-            "\1\123",
-            "\1\125\5\uffff\1\124",
-            "",
-            "\1\126",
-            "\1\127",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\124",
+            "\1\125",
+            "\1\127\5\uffff\1\126",
             "",
             "\1\130",
+            "",
             "\1\131",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\132",
             "\1\133",
             "\1\134",
@@ -1722,19 +1779,19 @@ public class InternalGenLexer extends Lexer {
             "\1\145",
             "\1\146",
             "\1\147",
-            "\1\150\3\uffff\1\151",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\153",
-            "\1\155\17\uffff\1\154",
-            "\1\156",
-            "\1\157",
-            "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\150",
+            "\1\151",
+            "\1\152\3\uffff\1\153",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\155",
+            "\1\157\17\uffff\1\156",
+            "\1\160",
             "\1\161",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\164",
-            "\1\165",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\163",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\166",
             "\1\167",
             "\1\170",
@@ -1747,27 +1804,27 @@ public class InternalGenLexer extends Lexer {
             "\1\177",
             "\1\u0080",
             "\1\u0081",
-            "\1\u0082\5\uffff\1\u0083",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u0085",
-            "\1\u0086",
+            "\1\u0082",
+            "\1\u0083",
+            "\1\u0084\5\uffff\1\u0085",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u0087",
             "\1\u0088",
-            "",
             "\1\u0089",
             "\1\u008a",
+            "",
             "\1\u008b",
             "\1\u008c",
             "\1\u008d",
-            "",
             "\1\u008e",
-            "",
-            "",
             "\1\u008f",
+            "",
             "\1\u0090",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "",
+            "",
+            "\1\u0091",
             "\1\u0092",
-            "\1\u0093",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u0094",
             "\1\u0095",
             "\1\u0096",
@@ -1779,109 +1836,115 @@ public class InternalGenLexer extends Lexer {
             "\1\u009c",
             "\1\u009d",
             "\1\u009e",
-            "",
             "\1\u009f",
             "\1\u00a0",
-            "\1\u00a1",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\13\36\1\u00a2\16\36",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00a5",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00a7",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00aa",
-            "\1\u00ab",
             "",
-            "\1\u00ac",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\u00a1",
+            "\1\u00a2",
+            "\1\u00a3",
+            "\12\37\7\uffff\1\u00a4\12\37\1\u00a5\16\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00a8",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00aa",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00ad",
             "\1\u00ae",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00b0",
+            "",
+            "\1\u00af",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00b1",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00b3",
             "\1\u00b4",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00b6",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00b8",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00ba",
+            "\1\u00b7",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00b9",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00bb",
-            "\1\u00bc",
-            "",
-            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00bd",
-            "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "",
-            "",
+            "\1\u00be",
             "\1\u00bf",
             "\1\u00c0",
+            "",
+            "",
             "\1\u00c1",
             "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
             "",
             "\1\u00c3",
             "\1\u00c4",
-            "",
             "\1\u00c5",
-            "\1\u00c6",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "\1\u00c7",
-            "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\u00c8",
             "",
             "\1\u00c9",
             "\1\u00ca",
+            "",
             "\1\u00cb",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "\1\u00cd",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\u00ce",
             "\1\u00cf",
-            "",
             "\1\u00d0",
-            "\1\u00d1",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
             "\1\u00d2",
-            "\1\u00d3",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00d4",
             "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\1\u00d5",
+            "\1\u00d6",
             "\1\u00d7",
-            "",
             "\1\u00d8",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
-            "\1\u00d9",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00db",
-            "\1\u00dc",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00dd",
             "",
+            "\1\u00de",
             "",
-            "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
             "\1\u00df",
-            "\1\u00e0",
-            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00e1",
             "\1\u00e2",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\1\u00e4",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00e5",
             "\1\u00e6",
             "",
             "\1\u00e7",
-            "",
             "\1\u00e8",
-            "\1\u00e9",
+            "",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\u00ea",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\12\36\7\uffff\32\36\4\uffff\1\36\1\uffff\32\36",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00ec",
+            "",
+            "\1\u00ed",
+            "",
+            "\1\u00ee",
+            "\1\u00ef",
+            "\1\u00f0",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             ""
     };
@@ -1916,87 +1979,89 @@ public class InternalGenLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_22 = input.LA(1);
+                        int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_22>='\u0000' && LA12_22<='\uFFFF')) ) {s = 55;}
+                        if ( (LA12_0=='C') ) {s = 1;}
 
-                        else s = 26;
+                        else if ( (LA12_0=='N') ) {s = 2;}
+
+                        else if ( (LA12_0=='P') ) {s = 3;}
+
+                        else if ( (LA12_0=='S') ) {s = 4;}
+
+                        else if ( (LA12_0=='B') ) {s = 5;}
+
+                        else if ( (LA12_0=='I') ) {s = 6;}
+
+                        else if ( (LA12_0=='T') ) {s = 7;}
+
+                        else if ( (LA12_0=='U') ) {s = 8;}
+
+                        else if ( (LA12_0=='R') ) {s = 9;}
+
+                        else if ( (LA12_0=='W') ) {s = 10;}
+
+                        else if ( (LA12_0=='D') ) {s = 11;}
+
+                        else if ( (LA12_0=='F') ) {s = 12;}
+
+                        else if ( (LA12_0=='V') ) {s = 13;}
+
+                        else if ( (LA12_0=='=') ) {s = 14;}
+
+                        else if ( (LA12_0=='E') ) {s = 15;}
+
+                        else if ( (LA12_0=='.') ) {s = 16;}
+
+                        else if ( (LA12_0=='L') ) {s = 17;}
+
+                        else if ( (LA12_0=='[') ) {s = 18;}
+
+                        else if ( (LA12_0==']') ) {s = 19;}
+
+                        else if ( (LA12_0=='^') ) {s = 20;}
+
+                        else if ( (LA12_0=='A'||(LA12_0>='G' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='K')||LA12_0=='M'||LA12_0=='O'||LA12_0=='Q'||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 21;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 22;}
+
+                        else if ( (LA12_0=='\"') ) {s = 23;}
+
+                        else if ( (LA12_0=='\'') ) {s = 24;}
+
+                        else if ( (LA12_0=='/') ) {s = 25;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 26;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||(LA12_0>=':' && LA12_0<='<')||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 27;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_0 = input.LA(1);
+                        int LA12_23 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='c') ) {s = 1;}
+                        if ( ((LA12_23>='\u0000' && LA12_23<='\uFFFF')) ) {s = 57;}
 
-                        else if ( (LA12_0=='n') ) {s = 2;}
-
-                        else if ( (LA12_0=='p') ) {s = 3;}
-
-                        else if ( (LA12_0=='s') ) {s = 4;}
-
-                        else if ( (LA12_0=='b') ) {s = 5;}
-
-                        else if ( (LA12_0=='i') ) {s = 6;}
-
-                        else if ( (LA12_0=='t') ) {s = 7;}
-
-                        else if ( (LA12_0=='u') ) {s = 8;}
-
-                        else if ( (LA12_0=='r') ) {s = 9;}
-
-                        else if ( (LA12_0=='w') ) {s = 10;}
-
-                        else if ( (LA12_0=='d') ) {s = 11;}
-
-                        else if ( (LA12_0=='f') ) {s = 12;}
-
-                        else if ( (LA12_0=='v') ) {s = 13;}
-
-                        else if ( (LA12_0=='=') ) {s = 14;}
-
-                        else if ( (LA12_0=='e') ) {s = 15;}
-
-                        else if ( (LA12_0=='l') ) {s = 16;}
-
-                        else if ( (LA12_0=='[') ) {s = 17;}
-
-                        else if ( (LA12_0==']') ) {s = 18;}
-
-                        else if ( (LA12_0=='^') ) {s = 19;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='k')||LA12_0=='m'||LA12_0=='o'||LA12_0=='q'||(LA12_0>='x' && LA12_0<='z')) ) {s = 20;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 21;}
-
-                        else if ( (LA12_0=='\"') ) {s = 22;}
-
-                        else if ( (LA12_0=='\'') ) {s = 23;}
-
-                        else if ( (LA12_0=='/') ) {s = 24;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 25;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='<')||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 26;}
+                        else s = 27;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_23 = input.LA(1);
+                        int LA12_24 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_23>='\u0000' && LA12_23<='\uFFFF')) ) {s = 55;}
+                        if ( ((LA12_24>='\u0000' && LA12_24<='\uFFFF')) ) {s = 57;}
 
-                        else s = 26;
+                        else s = 27;
 
                         if ( s>=0 ) return s;
                         break;

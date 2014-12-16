@@ -6,46 +6,47 @@ Model:
 	(clas+=ClassType |proc+=Procedure |statem+=Statement |exp+=Expression)*;
 	
 ClassType:
-	'class' name=ID
-    ( noclass+='noclass' 
-    | ('prefix' prefix += MultID)
-    | ('suffix' suffix += MultID)
-    | ('blocking' blocking+=('braces'|'indent'))
+	'CLASS' name=ID
+    ( noclass+='NOCLASS' 
+    | ('PREFIX' prefix += MultID)
+    | ('SUFFIX' suffix += MultID)
+    | ('BLOCKING' blocking+=('BRACES'|'INDENT'))
     )*;
 
 Procedure:
-	'procedure' name=ID
-    (('prefix' prefix += MultID)
-    | ('suffix' suffix += MultID)
-    | ('types' types+=('colonSeperated'|'spaceSeperated'|'inHeader'|'inferred'|'untyped'))
+	'PROCEDURE' name=ID
+    (('PREFIX' prefix += MultID)
+    | ('SUFFIX' suffix += MultID)
+    | ('TYPES' types+=('COLONSEPERATED'|'SPACESEPERATED'|'INHEADER'|'INFERRED'|'UNTYPED'))
     )*;
 
 Statement:
-	'statement' name=ID
-    (('repeat' rep=ID 'until' until=ID)
-    | ('while' while=ID 'do' do=ID)
-    | ('for' for=ID)
-    | ('var' var=ID ('=' ex=ID)?)
-    | ('val' val=ID '=' ex=ID)
+	'STATEMENT' name=ID
+    (('REPEAT' rep=ID 'UNTIL' until=ID)
+    | ('WHILE' while=ID 'DO' do=ID)
+    | ('FOR' for=ID)
+    | ('VAR' var=ID ('=' ex=ID)?)
+    | ('VAL' val=ID '=' ex=ID)
     );
 
 Expression:
-	'expression' name=ID
+	'EXPRESSION' name=ID
     prec+=Precedence*;
 
 /* make this rule separate from Expression so prefix,suffix,infix.... can be
  * in the same list in any order
  */
 Precedence:
-	(ruletyp='caller' rule=ID)
-	| (ruletyp='prefix' rule=ID prefix=MultString par1=ID)
-    | (ruletyp='suffix' rule=ID par1=ID suffix=MultString)
-    | (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID)
-    | (ruletyp='infixleft' rule=ID par1=ID infixleft=MultString par2=ID)
-    | (ruletyp='literal' rule=ID literal=('int'|'string'|'bool'|'float'))
-    | (ruletyp='bracket' rule=ID bracket=ID)
-    | (ruletyp='braces' rule=ID braces=ID)
-    | (ruletyp='parenthesis' rule=ID parenthesis=ID)
+	(ruletyp='CALLER' rule=ID ('.' feature1=ID)?)
+	| (ruletyp='PREFIX' rule=ID prefix=MultString (feature1=ID '=')? par1=ID)
+    | (ruletyp='SUFFIX' rule=ID (feature1=ID '=')? par1=ID suffix=MultString)
+    | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='INFIXADD' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID)
+    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
+    | (ruletyp='BRACKET' rule=ID bracket=ID)
+    | (ruletyp='BRACES' rule=ID braces=ID)
+    | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
 ;
 
 MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));

@@ -396,13 +396,22 @@ public interface GenPackage extends EPackage
   int PRECEDENCE__RULE = 1;
 
   /**
+   * The feature id for the '<em><b>Feature1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECEDENCE__FEATURE1 = 2;
+
+  /**
    * The feature id for the '<em><b>Prefix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PREFIX = 2;
+  int PRECEDENCE__PREFIX = 3;
 
   /**
    * The feature id for the '<em><b>Par1</b></em>' attribute.
@@ -411,7 +420,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PAR1 = 3;
+  int PRECEDENCE__PAR1 = 4;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' containment reference.
@@ -420,7 +429,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__SUFFIX = 4;
+  int PRECEDENCE__SUFFIX = 5;
 
   /**
    * The feature id for the '<em><b>Infix</b></em>' containment reference.
@@ -429,7 +438,16 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__INFIX = 5;
+  int PRECEDENCE__INFIX = 6;
+
+  /**
+   * The feature id for the '<em><b>Feature2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECEDENCE__FEATURE2 = 7;
 
   /**
    * The feature id for the '<em><b>Par2</b></em>' attribute.
@@ -438,7 +456,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PAR2 = 6;
+  int PRECEDENCE__PAR2 = 8;
 
   /**
    * The feature id for the '<em><b>Infixleft</b></em>' containment reference.
@@ -447,7 +465,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__INFIXLEFT = 7;
+  int PRECEDENCE__INFIXLEFT = 9;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -456,7 +474,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__LITERAL = 8;
+  int PRECEDENCE__LITERAL = 10;
 
   /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
@@ -465,7 +483,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACKET = 9;
+  int PRECEDENCE__BRACKET = 11;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -474,7 +492,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACES = 10;
+  int PRECEDENCE__BRACES = 12;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -483,7 +501,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PARENTHESIS = 11;
+  int PRECEDENCE__PARENTHESIS = 13;
 
   /**
    * The number of structural features of the '<em>Precedence</em>' class.
@@ -492,7 +510,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE_FEATURE_COUNT = 12;
+  int PRECEDENCE_FEATURE_COUNT = 14;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
@@ -898,6 +916,17 @@ public interface GenPackage extends EPackage
   EAttribute getPrecedence_Rule();
 
   /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getFeature1 <em>Feature1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature1</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence#getFeature1()
+   * @see #getPrecedence()
+   * @generated
+   */
+  EAttribute getPrecedence_Feature1();
+
+  /**
    * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -940,6 +969,17 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EReference getPrecedence_Infix();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getFeature2 <em>Feature2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature2</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence#getFeature2()
+   * @see #getPrecedence()
+   * @generated
+   */
+  EAttribute getPrecedence_Feature2();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}'.
@@ -1341,6 +1381,14 @@ public interface GenPackage extends EPackage
     EAttribute PRECEDENCE__RULE = eINSTANCE.getPrecedence_Rule();
 
     /**
+     * The meta object literal for the '<em><b>Feature1</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECEDENCE__FEATURE1 = eINSTANCE.getPrecedence_Feature1();
+
+    /**
      * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1371,6 +1419,14 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EReference PRECEDENCE__INFIX = eINSTANCE.getPrecedence_Infix();
+
+    /**
+     * The meta object literal for the '<em><b>Feature2</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECEDENCE__FEATURE2 = eINSTANCE.getPrecedence_Feature2();
 
     /**
      * The meta object literal for the '<em><b>Par2</b></em>' attribute feature.

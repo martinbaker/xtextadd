@@ -83,7 +83,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (noclass+='noclass' | prefix+=MultID | suffix+=MultID | blocking+='braces' | blocking+='indent')*)
+	 *     (name=ID (noclass+='NOCLASS' | prefix+=MultID | suffix+=MultID | blocking+='BRACES' | blocking+='INDENT')*)
 	 */
 	protected void sequence_ClassType(EObject context, ClassType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -129,15 +129,32 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         (ruletyp='caller' rule=ID) | 
-	 *         (ruletyp='prefix' rule=ID prefix=MultString par1=ID) | 
-	 *         (ruletyp='suffix' rule=ID par1=ID suffix=MultString) | 
-	 *         (ruletyp='infix' rule=ID par1=ID infix=MultString par2=ID) | 
-	 *         (ruletyp='infixleft' rule=ID par1=ID infixleft=MultString par2=ID) | 
-	 *         (ruletyp='literal' rule=ID (literal='int' | literal='string' | literal='bool' | literal='float')) | 
-	 *         (ruletyp='bracket' rule=ID bracket=ID) | 
-	 *         (ruletyp='braces' rule=ID braces=ID) | 
-	 *         (ruletyp='parenthesis' rule=ID parenthesis=ID)
+	 *         (ruletyp='CALLER' rule=ID feature1=ID?) | 
+	 *         (ruletyp='PREFIX' rule=ID prefix=MultString feature1=ID? par1=ID) | 
+	 *         (ruletyp='SUFFIX' rule=ID feature1=ID? par1=ID suffix=MultString) | 
+	 *         (
+	 *             ruletyp='INFIX' 
+	 *             rule=ID 
+	 *             feature1=ID? 
+	 *             par1=ID 
+	 *             infix=MultString 
+	 *             feature2=ID? 
+	 *             par2=ID
+	 *         ) | 
+	 *         (
+	 *             ruletyp='INFIXADD' 
+	 *             rule=ID 
+	 *             feature1=ID? 
+	 *             par1=ID 
+	 *             infix=MultString 
+	 *             feature2=ID? 
+	 *             par2=ID
+	 *         ) | 
+	 *         (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID) | 
+	 *         (ruletyp='LITERAL' rule=ID (literal='INT' | literal='STRING' | literal='BOOL' | literal='FLOAT')) | 
+	 *         (ruletyp='BRACKET' rule=ID bracket=ID) | 
+	 *         (ruletyp='BRACES' rule=ID braces=ID) | 
+	 *         (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
 	 *     )
 	 */
 	protected void sequence_Precedence(EObject context, Precedence semanticObject) {
@@ -152,11 +169,11 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             prefix+=MultID | 
 	 *             suffix+=MultID | 
-	 *             types+='colonSeperated' | 
-	 *             types+='spaceSeperated' | 
-	 *             types+='inHeader' | 
-	 *             types+='inferred' | 
-	 *             types+='untyped'
+	 *             types+='COLONSEPERATED' | 
+	 *             types+='SPACESEPERATED' | 
+	 *             types+='INHEADER' | 
+	 *             types+='INFERRED' | 
+	 *             types+='UNTYPED'
 	 *         )*
 	 *     )
 	 */

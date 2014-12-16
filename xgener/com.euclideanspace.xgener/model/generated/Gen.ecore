@@ -50,6 +50,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Precedence">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruletyp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rule" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prefix" eType="#//MultString"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="par1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -57,6 +58,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="infix" eType="#//MultString"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="par2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="infixleft" eType="#//MultString"
         containment="true"/>

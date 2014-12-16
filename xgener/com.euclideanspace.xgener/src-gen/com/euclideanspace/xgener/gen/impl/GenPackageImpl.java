@@ -472,9 +472,19 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getPrecedence_Feature1()
+  {
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getPrecedence_Prefix()
   {
-    return (EReference)precedenceEClass.getEStructuralFeatures().get(2);
+    return (EReference)precedenceEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -484,7 +494,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Par1()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -494,7 +504,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EReference getPrecedence_Suffix()
   {
-    return (EReference)precedenceEClass.getEStructuralFeatures().get(4);
+    return (EReference)precedenceEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -504,7 +514,17 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EReference getPrecedence_Infix()
   {
-    return (EReference)precedenceEClass.getEStructuralFeatures().get(5);
+    return (EReference)precedenceEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrecedence_Feature2()
+  {
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -514,7 +534,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Par2()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -524,7 +544,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EReference getPrecedence_Infixleft()
   {
-    return (EReference)precedenceEClass.getEStructuralFeatures().get(7);
+    return (EReference)precedenceEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -534,7 +554,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Literal()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -544,7 +564,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Bracket()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(9);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -554,7 +574,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Braces()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(12);
   }
 
   /**
@@ -564,7 +584,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getPrecedence_Parenthesis()
   {
-    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(11);
+    return (EAttribute)precedenceEClass.getEStructuralFeatures().get(13);
   }
 
   /**
@@ -674,10 +694,12 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     precedenceEClass = createEClass(PRECEDENCE);
     createEAttribute(precedenceEClass, PRECEDENCE__RULETYP);
     createEAttribute(precedenceEClass, PRECEDENCE__RULE);
+    createEAttribute(precedenceEClass, PRECEDENCE__FEATURE1);
     createEReference(precedenceEClass, PRECEDENCE__PREFIX);
     createEAttribute(precedenceEClass, PRECEDENCE__PAR1);
     createEReference(precedenceEClass, PRECEDENCE__SUFFIX);
     createEReference(precedenceEClass, PRECEDENCE__INFIX);
+    createEAttribute(precedenceEClass, PRECEDENCE__FEATURE2);
     createEAttribute(precedenceEClass, PRECEDENCE__PAR2);
     createEReference(precedenceEClass, PRECEDENCE__INFIXLEFT);
     createEAttribute(precedenceEClass, PRECEDENCE__LITERAL);
@@ -760,10 +782,12 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     initEClass(precedenceEClass, Precedence.class, "Precedence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrecedence_Ruletyp(), ecorePackage.getEString(), "ruletyp", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrecedence_Rule(), ecorePackage.getEString(), "rule", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecedence_Feature1(), ecorePackage.getEString(), "feature1", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrecedence_Prefix(), this.getMultString(), null, "prefix", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrecedence_Par1(), ecorePackage.getEString(), "par1", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrecedence_Suffix(), this.getMultString(), null, "suffix", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrecedence_Infix(), this.getMultString(), null, "infix", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrecedence_Feature2(), ecorePackage.getEString(), "feature2", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrecedence_Par2(), ecorePackage.getEString(), "par2", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPrecedence_Infixleft(), this.getMultString(), null, "infixleft", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrecedence_Literal(), ecorePackage.getEString(), "literal", null, 0, 1, Precedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

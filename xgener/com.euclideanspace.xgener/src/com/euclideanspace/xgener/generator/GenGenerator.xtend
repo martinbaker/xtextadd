@@ -27,13 +27,17 @@ class GenGenerator implements IGenerator {
 
     var String callingRule =null;
     
-    def void setCallingRule(String s) {
-    	callingRule =s;
+    def void setCallingRule(String s,String feature) {
+    	callingRule =s+".leftOperand";
+    	if (feature!=null) callingRule=s+"."+feature;
     }
 
+    /**
+     * remove commented out rule if we want to rotate.
+     */
     def String getCallingRule(String s) {
     	val String oldRule=callingRule;
-    	callingRule=s
+    	//callingRule=s
     	return oldRule;
     }
     
@@ -327,33 +331,12 @@ XBlockExpression returns «s.name» hidden(SL_COMMENT,WS):
 «e.name» hidden(SL_COMMENT,WS) :
   XAssignment;
 
-XOrExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XAndExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOr)
-    rightOperand=XAndExpression)*;
-
-OpOr:
-  '||';
-
 «FOR x:e.prec»
   «IF x.rule != null»
 
     «compile(x)»
   «ENDIF»
 «ENDFOR»
-
-XAndExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAnd)
-    rightOperand=XEqualityExpression)*;
-
-OpAnd:
-  '&&';
-
-XEqualityExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XRelationalExpression (=>({XBinaryOperation.leftOperand=current} feature=OpEquality)
-  rightOperand=XRelationalExpression)*;
-
-OpEquality:
-  '==' | '!=' | '===' | '!==';
 
 XRelationalExpression returns «e.name» hidden(SL_COMMENT,WS):
   XOtherOperatorExpression
@@ -506,7 +489,7 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 /* Precedence, processes one of the following rules:
  * ruletyp rule
  * ------- ----
- * 'caller' ID
+ * 'caller' ID ('.' feature1=ID)?)
  * 'prefix' ID prefix=MultString par1=ID
  * 'suffix' ID par1=ID suffix=MultString
  * 'infix' ID par1=ID infix=MultString par2=ID
@@ -517,21 +500,24 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
  * 'parenthesis' ID parenthesis=ID
  */
 def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
-  «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
-    «IF p.ruletyp=='prefix'»
-     (=>({Lastrule.leftOperand=current} feature=«
+    «IF p.ruletyp=='PREFIX'»
+      «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+      (=>({Lastrule.leftOperand=current} feature=«
       IF p.prefix != null»«compile(p.prefix)»«ENDIF»)
       «IF p.par1 != null»«p.par1»«ENDIF»)*;
-  «ELSEIF p.ruletyp=='suffix'»
+  «ELSEIF p.ruletyp=='SUFFIX'»
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
       IF p.suffix != null»«compile(p.suffix)»«ENDIF»)
     rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
-  «ELSEIF p.ruletyp=='infix'»
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({«getCallingRule(p.rule)».leftOperand=current} feature=«
-    IF p.infix != null»«compile(p.infix)»«ENDIF»)
-    rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
-  «ELSEIF p.ruletyp=='caller'»
-    «IF p.rule != null»«setCallingRule(p.rule)»«ENDIF»
+  «ELSEIF p.ruletyp=='INFIX'»
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
+     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*;
+  «ELSEIF p.ruletyp=='CALLER'»
+    «IF p.rule != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
   «ENDIF»
 '''
 

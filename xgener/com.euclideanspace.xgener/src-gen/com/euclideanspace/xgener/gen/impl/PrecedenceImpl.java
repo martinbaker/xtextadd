@@ -24,10 +24,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRuletyp <em>Ruletyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getFeature1 <em>Feature1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar1 <em>Par1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getSuffix <em>Suffix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfixleft <em>Infixleft</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getLiteral <em>Literal</em>}</li>
@@ -82,6 +84,26 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
   protected String rule = RULE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getFeature1() <em>Feature1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature1()
+   * @generated
+   * @ordered
+   */
+  protected static final String FEATURE1_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFeature1() <em>Feature1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature1()
+   * @generated
+   * @ordered
+   */
+  protected String feature1 = FEATURE1_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,6 +152,26 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * @ordered
    */
   protected MultString infix;
+
+  /**
+   * The default value of the '{@link #getFeature2() <em>Feature2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature2()
+   * @generated
+   * @ordered
+   */
+  protected static final String FEATURE2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFeature2() <em>Feature2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature2()
+   * @generated
+   * @ordered
+   */
+  protected String feature2 = FEATURE2_EDEFAULT;
 
   /**
    * The default value of the '{@link #getPar2() <em>Par2</em>}' attribute.
@@ -313,6 +355,29 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getFeature1()
+  {
+    return feature1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFeature1(String newFeature1)
+  {
+    String oldFeature1 = feature1;
+    feature1 = newFeature1;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__FEATURE1, oldFeature1, feature1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MultString getPrefix()
   {
     return prefix;
@@ -473,6 +538,29 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIX, newInfix, newInfix));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getFeature2()
+  {
+    return feature2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFeature2(String newFeature2)
+  {
+    String oldFeature2 = feature2;
+    feature2 = newFeature2;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__FEATURE2, oldFeature2, feature2));
   }
 
   /**
@@ -674,6 +762,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getRuletyp();
       case GenPackage.PRECEDENCE__RULE:
         return getRule();
+      case GenPackage.PRECEDENCE__FEATURE1:
+        return getFeature1();
       case GenPackage.PRECEDENCE__PREFIX:
         return getPrefix();
       case GenPackage.PRECEDENCE__PAR1:
@@ -682,6 +772,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getSuffix();
       case GenPackage.PRECEDENCE__INFIX:
         return getInfix();
+      case GenPackage.PRECEDENCE__FEATURE2:
+        return getFeature2();
       case GenPackage.PRECEDENCE__PAR2:
         return getPar2();
       case GenPackage.PRECEDENCE__INFIXLEFT:
@@ -714,6 +806,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__RULE:
         setRule((String)newValue);
         return;
+      case GenPackage.PRECEDENCE__FEATURE1:
+        setFeature1((String)newValue);
+        return;
       case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)newValue);
         return;
@@ -725,6 +820,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return;
       case GenPackage.PRECEDENCE__INFIX:
         setInfix((MultString)newValue);
+        return;
+      case GenPackage.PRECEDENCE__FEATURE2:
+        setFeature2((String)newValue);
         return;
       case GenPackage.PRECEDENCE__PAR2:
         setPar2((String)newValue);
@@ -764,6 +862,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__RULE:
         setRule(RULE_EDEFAULT);
         return;
+      case GenPackage.PRECEDENCE__FEATURE1:
+        setFeature1(FEATURE1_EDEFAULT);
+        return;
       case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)null);
         return;
@@ -775,6 +876,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return;
       case GenPackage.PRECEDENCE__INFIX:
         setInfix((MultString)null);
+        return;
+      case GenPackage.PRECEDENCE__FEATURE2:
+        setFeature2(FEATURE2_EDEFAULT);
         return;
       case GenPackage.PRECEDENCE__PAR2:
         setPar2(PAR2_EDEFAULT);
@@ -812,6 +916,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return RULETYP_EDEFAULT == null ? ruletyp != null : !RULETYP_EDEFAULT.equals(ruletyp);
       case GenPackage.PRECEDENCE__RULE:
         return RULE_EDEFAULT == null ? rule != null : !RULE_EDEFAULT.equals(rule);
+      case GenPackage.PRECEDENCE__FEATURE1:
+        return FEATURE1_EDEFAULT == null ? feature1 != null : !FEATURE1_EDEFAULT.equals(feature1);
       case GenPackage.PRECEDENCE__PREFIX:
         return prefix != null;
       case GenPackage.PRECEDENCE__PAR1:
@@ -820,6 +926,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return suffix != null;
       case GenPackage.PRECEDENCE__INFIX:
         return infix != null;
+      case GenPackage.PRECEDENCE__FEATURE2:
+        return FEATURE2_EDEFAULT == null ? feature2 != null : !FEATURE2_EDEFAULT.equals(feature2);
       case GenPackage.PRECEDENCE__PAR2:
         return PAR2_EDEFAULT == null ? par2 != null : !PAR2_EDEFAULT.equals(par2);
       case GenPackage.PRECEDENCE__INFIXLEFT:
@@ -851,8 +959,12 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
     result.append(ruletyp);
     result.append(", rule: ");
     result.append(rule);
+    result.append(", feature1: ");
+    result.append(feature1);
     result.append(", par1: ");
     result.append(par1);
+    result.append(", feature2: ");
+    result.append(feature2);
     result.append(", par2: ");
     result.append(par2);
     result.append(", literal: ");
