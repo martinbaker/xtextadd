@@ -10,5 +10,16 @@ public class TutorialRuntimeModule extends com.euclideanspace.pbase.AbstractTuto
 	public Class<? extends org.eclipse.xtext.parser.IParser> bindIParser() {
 		return com.euclideanspace.pbase.TutorialParser.class;
 	}
+	
+	 // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
+//  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
+//  return TutorialOverrideSemanticSequencer.class;
+//  }
+	
+  // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
+  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
+    return TutorialOverrideSyntacticSequencer.class;
+  }
+
 }
 
