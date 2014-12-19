@@ -3,6 +3,8 @@
  */
 package com.euclideanspace.whitespaceblock;
 
+import com.euclideanspace.whitespaceblock.DemoOverrideSyntacticSequencer;
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
@@ -10,4 +12,15 @@ public class DemoRuntimeModule extends com.euclideanspace.whitespaceblock.Abstra
 	public Class<? extends org.eclipse.xtext.parser.IParser> bindIParser() {
 		return com.euclideanspace.whitespaceblock.DemoParser.class;
 	}
+
+	 // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
+//  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
+//  return DemoOverrideSemanticSequencer.class;
+//  }
+
+  // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
+  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
+    return DemoOverrideSyntacticSequencer.class;
+  }
+
 }
