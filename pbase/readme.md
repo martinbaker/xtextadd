@@ -149,6 +149,37 @@ we have: while a &lt; n:</p></td>
   <li>We also need to  add  another copy of the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/PythonesqueTokenSource.java">customised token source</a> in the UI project.</li>
   <li>In order to use this customised TokenSource we need to customise the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/TutorialUIParser.java">parser</a> and in <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase.ui/src/com/euclideanspace/pbase/ui/TutorialUiModule.java">TutorialUiModule.java</a>. Make sure the modified versions of all these are in your project.</li>
 </ul>
+<h4>Serializer</h4>
+<table>
+  <tr>
+    <td>So far we have setup the Lexer/Parser which turns text into EMF model. The serializer works in the other direction (EMF model -&gt; text). In TutorialSyntacticSequencer which extends AbstractSyntacticSequencer we have code which returns text representation of BEGIN and END as you can see on the right:</td>
+    <td><table border="1">
+      <tr>
+        <td><pre>	/**
+	 * terminal BEGIN : '{|';
+	 */
+	protected String getBEGINToken(EObject semanticObject,
+                                            RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return &quot;{|&quot;;
+	}
+	
+	/**
+	 * terminal END : '|}';
+	 */
+	protected String getENDToken(EObject semanticObject, 
+                                         uleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return &quot;|}&quot;;
+	}</pre></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>This textual representation is only intended to be used internally in the EMF model so I don't think we want that returned here? I have therefore overridden this <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialOverrideSyntacticSequencer.java">in class here</a> to return empty string. </p>
+<p>So put this code into the project. We need to bind this code in TutorialRuntimeModule<a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java"> here</a>. </p>
 <p>We can now go on to modify the grammar syntax: </p>
 <h3>Blocks</h3>
 <p>The main thing we want to do is delineate blocks using whitespace. As discussed already, most of the work for this is done in the customised TokenSource.</p>
@@ -316,5 +347,6 @@ public String insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegi
 }
 </pre>
 <p>I have put the code for this <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialPartialParsingHelper.java">here</a>. We need to bind this code in TutorialRuntimeModule<a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java"> here</a>. </p>
+<p>So include this in the project. </p>
 <h2>Future Enhancements</h2>
 <p>Xtext provides a fair degree of decoupling between the syntax and the semantics. It would be really good if, in the future, a chunk of code such as Xbase could have the ability to plug in different syntax such as a Java-like syntax and a Python-like syntax where both would have exactly the same functionality.  </p>
