@@ -98,7 +98,7 @@ When the user includes this in the grammar then it is proposed that, when MWE2 i
   <li>This would be separately injectable 'preprocessor' between the lexer and parser which could be injected and customised without the need to modify the lexer or parser. </li>
 </ul>
 <h3>Known Problems</h3>
-<p>I sometimes get the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) when editing the DSL source code. Although the editor continues to work, getting random error messages is confusing for the user, so this needs to be sorted out. I tried modifing the 'contentassist' parser in the UI  in the same way as the main parser  but this did not fix the problem.</p>
+<p>I sometimes get the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) when editing the DSL source code. Although the editor continues to work, getting random error messages is confusing for the user, so this needs to be sorted out. I have reported this bug to Xtext <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908">here</a> this includes a workaround.</p>
 <h3>Other Projects</h3>
 <p>I have some other projects related to this, see <a href="https://github.com/martinbaker/xtextadd">this page</a>.</p>
 <p>For a tutorial about writing a DSL with Python-like syntax <a href="https://github.com/martinbaker/xtextadd/tree/master/pbase">goto page here</a>. </p>
