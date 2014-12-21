@@ -10,16 +10,20 @@ public class TutorialRuntimeModule extends com.euclideanspace.pbase.AbstractTuto
 	public Class<? extends org.eclipse.xtext.parser.IParser> bindIParser() {
 		return com.euclideanspace.pbase.TutorialParser.class;
 	}
-	
-	 // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
-//  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
-//  return TutorialOverrideSemanticSequencer.class;
-//  }
-	
-  // contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
-  public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
-    return TutorialOverrideSyntacticSequencer.class;
-  }
 
+	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
+	/**
+	 * make sure serialiser does not convert BEGIN and END to {| and |}
+	 */
+    public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
+      return TutorialOverrideSyntacticSequencer.class;
+    }
+
+	/**
+	 * This is a fix for this bug:
+	 * https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908
+	 */
+	public Class<? extends org.eclipse.xtext.parser.antlr.IPartialParsingHelper> bindIPartialParserHelper() {
+      return TutorialPartialParsingHelper.class;
+    }
 }
-

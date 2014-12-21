@@ -3,6 +3,7 @@ package com.euclideanspace.pbase;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
 
 /**
  * I have extended TutorialSyntacticSequencer in order to get PhantomTokens working better.
@@ -35,4 +36,16 @@ public class TutorialOverrideSyntacticSequencer extends com.euclideanspace.pbase
 		return "";
 	}
 
+	@Override
+	public String toString() {
+		String res="SyntacticSequencer\n";
+		res = res+"Member_SemicolonKeyword="+match_Member_SemicolonKeyword_0_2_q.toString()+"\n";
+		res = res+"Member_VarKeyword="+match_Member_VarKeyword_0_0_0_1_1_q.toString()+"\n";
+		res = res+"Member___CommaKeyword="+match_Member___CommaKeyword_0_7_2_0_IDTerminalRuleCall_0_7_2_1__a.toString()+"\n";
+		res = res+"XBlockExpression_SemicolonKeyword="+match_XBlockExpression_SemicolonKeyword_2_1_q.toString()+"\n";
+		res = res+"XExpressionInClosure_SemicolonKeyword="+match_XExpressionInClosure_SemicolonKeyword_1_1_q.toString()+"\n";
+		res = res+"XParenthesizedExpression_LeftParenthesisKeyword_a="+match_XParenthesizedExpression_LeftParenthesisKeyword_0_a.toString()+"\n";
+		res = res+"XParenthesizedExpression_LeftParenthesisKeyword_p="+match_XParenthesizedExpression_LeftParenthesisKeyword_0_p.toString()+"\n";
+		return res;
+	}
 }
