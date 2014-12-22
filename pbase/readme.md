@@ -178,7 +178,9 @@ we have: while a &lt; n:</p></td>
     </table></td>
   </tr>
 </table>
-<p>This textual representation is only intended to be used internally in the EMF model so I don't think we want that returned here? I have therefore overridden this <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialOverrideSyntacticSequencer.java">in class here</a> to return empty string. </p>
+<p>This textual representation is only intended to be used internally in the EMF model so I don't think we want that returned here? I have therefore overridden this <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialOverrideSyntacticSequencer.java">in class here</a> to return empty string. If your application makes use of serialisation then I suspect you should really implement Xtext formatting (Pretty Printing)
+
+capability using the IFormatter service.</p>
 <p>So put this code into the project. We need to bind this code in TutorialRuntimeModule<a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java"> here</a>. </p>
 <p>We can now go on to modify the grammar syntax: </p>
 <h3>Blocks</h3>
