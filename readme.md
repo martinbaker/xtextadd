@@ -122,7 +122,7 @@ e a b c</pre></td>
 <p>The above projects may need to be used in combination and they may need to be customised to change the syntax slightly to suit the specific DSL. So it would be better if they were part of a more general preprocessor designed to run after the lexer and before the  parser. This is for situations where we don't want to write the lexer or parser completely by hand, we still want to use the grammar, but we want more customisation than is currently possible.</p>
 <p>Ideally this would have a two-way mapping between the text stream used in the editor and the indexes used in the nodeModel.  </p>
 <h3>Technical Background</h3>
-<p>Here are some technical notes which might help in understanding the code. </p>
+<p>Here are some technical notes which might help in understanding the code (I have put more extensive information on <a href="http://www.euclideanspace.com/software/development/eclipse/xtext/grammar/customising/index.htm">this site</a>). </p>
 <p>The output of the Xtext parser is two separate tree structures:</p>
 <ul>
   <li>EMF model (semantic model) - used for validation and eventually code generation - I think this is the equivalent to the AST.</li>
