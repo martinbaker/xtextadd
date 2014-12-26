@@ -114,6 +114,13 @@ public class GenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GenPackage.INNER_PRECEDENCE:
+      {
+        InnerPrecedence innerPrecedence = (InnerPrecedence)theEObject;
+        T result = caseInnerPrecedence(innerPrecedence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GenPackage.MULT_ID:
       {
         MultID multID = (MultID)theEObject;
@@ -224,6 +231,22 @@ public class GenSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePrecedence(Precedence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inner Precedence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inner Precedence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInnerPrecedence(InnerPrecedence object)
   {
     return null;
   }

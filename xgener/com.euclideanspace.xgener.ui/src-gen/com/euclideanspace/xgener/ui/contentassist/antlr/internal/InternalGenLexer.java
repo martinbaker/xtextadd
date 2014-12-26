@@ -12,15 +12,23 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalGenLexer extends Lexer {
+    public static final int T__50=50;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__55=55;
     public static final int T__12=12;
+    public static final int T__56=56;
     public static final int T__13=13;
+    public static final int T__57=57;
     public static final int T__14=14;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
     public static final int RULE_ID=4;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -50,6 +58,7 @@ public class InternalGenLexer extends Lexer {
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int T__48=48;
+    public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
@@ -766,10 +775,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:7: ( 'INFIXADD' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:9: 'INFIXADD'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:7: ( 'OUTER' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:44:9: 'OUTER'
             {
-            match("INFIXADD"); 
+            match("OUTER"); 
 
 
             }
@@ -866,15 +875,204 @@ public class InternalGenLexer extends Lexer {
     }
     // $ANTLR end "T__48"
 
+    // $ANTLR start "T__49"
+    public final void mT__49() throws RecognitionException {
+        try {
+            int _type = T__49;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:49:7: ( 'ANGLE' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:49:9: 'ANGLE'
+            {
+            match("ANGLE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__49"
+
+    // $ANTLR start "T__50"
+    public final void mT__50() throws RecognitionException {
+        try {
+            int _type = T__50;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:50:7: ( 'INNERPREFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:50:9: 'INNERPREFIX'
+            {
+            match("INNERPREFIX"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__50"
+
+    // $ANTLR start "T__51"
+    public final void mT__51() throws RecognitionException {
+        try {
+            int _type = T__51;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:51:7: ( 'INNERSUFFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:51:9: 'INNERSUFFIX'
+            {
+            match("INNERSUFFIX"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__51"
+
+    // $ANTLR start "T__52"
+    public final void mT__52() throws RecognitionException {
+        try {
+            int _type = T__52;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:52:7: ( 'INNERINFIX' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:52:9: 'INNERINFIX'
+            {
+            match("INNERINFIX"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__52"
+
+    // $ANTLR start "T__53"
+    public final void mT__53() throws RecognitionException {
+        try {
+            int _type = T__53;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:53:7: ( 'INNERINFIXLEFT' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:53:9: 'INNERINFIXLEFT'
+            {
+            match("INNERINFIXLEFT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__53"
+
+    // $ANTLR start "T__54"
+    public final void mT__54() throws RecognitionException {
+        try {
+            int _type = T__54;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:54:7: ( 'INNERBRACKET' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:54:9: 'INNERBRACKET'
+            {
+            match("INNERBRACKET"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__54"
+
+    // $ANTLR start "T__55"
+    public final void mT__55() throws RecognitionException {
+        try {
+            int _type = T__55;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:55:7: ( 'INNERBRACES' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:55:9: 'INNERBRACES'
+            {
+            match("INNERBRACES"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__55"
+
+    // $ANTLR start "T__56"
+    public final void mT__56() throws RecognitionException {
+        try {
+            int _type = T__56;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:56:7: ( 'INNERPARENTHESIS' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:56:9: 'INNERPARENTHESIS'
+            {
+            match("INNERPARENTHESIS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__56"
+
+    // $ANTLR start "T__57"
+    public final void mT__57() throws RecognitionException {
+        try {
+            int _type = T__57;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:57:7: ( 'INNERANGLE' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:57:9: 'INNERANGLE'
+            {
+            match("INNERANGLE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__57"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5310:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5310:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6970:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6970:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5310:11: ( '^' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6970:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -883,7 +1081,7 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5310:11: '^'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6970:11: '^'
                     {
                     match('^'); 
 
@@ -901,7 +1099,7 @@ public class InternalGenLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5310:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6970:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -950,10 +1148,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5312:10: ( ( '0' .. '9' )+ )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5312:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6972:10: ( ( '0' .. '9' )+ )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6972:12: ( '0' .. '9' )+
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5312:12: ( '0' .. '9' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6972:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -967,7 +1165,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5312:13: '0' .. '9'
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6972:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -999,10 +1197,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1020,10 +1218,10 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1039,7 +1237,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:21: '\\\\' .
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1047,7 +1245,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1072,10 +1270,10 @@ public class InternalGenLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1091,7 +1289,7 @@ public class InternalGenLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:54: '\\\\' .
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1099,7 +1297,7 @@ public class InternalGenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5314:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6974:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1142,12 +1340,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5316:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5316:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6976:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6976:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5316:24: ( options {greedy=false; } : . )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6976:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1172,7 +1370,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5316:52: .
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6976:52: .
             	    {
             	    matchAny(); 
 
@@ -1202,12 +1400,12 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1220,7 +1418,7 @@ public class InternalGenLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1240,7 +1438,7 @@ public class InternalGenLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:40: ( ( '\\r' )? '\\n' )?
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1249,9 +1447,9 @@ public class InternalGenLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:41: ( '\\r' )? '\\n'
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:41: ( '\\r' )?
+                    // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1260,7 +1458,7 @@ public class InternalGenLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5318:41: '\\r'
+                            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6978:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1292,10 +1490,10 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5320:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5320:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6980:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6980:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5320:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6980:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1349,8 +1547,8 @@ public class InternalGenLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5322:16: ( . )
-            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:5322:18: .
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6982:16: ( . )
+            // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:6982:18: .
             {
             matchAny(); 
 
@@ -1365,8 +1563,8 @@ public class InternalGenLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=45;
+        // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=54;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1636,49 +1834,112 @@ public class InternalGenLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:238: RULE_ID
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:238: T__49
+                {
+                mT__49(); 
+
+                }
+                break;
+            case 40 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:244: T__50
+                {
+                mT__50(); 
+
+                }
+                break;
+            case 41 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:250: T__51
+                {
+                mT__51(); 
+
+                }
+                break;
+            case 42 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:256: T__52
+                {
+                mT__52(); 
+
+                }
+                break;
+            case 43 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:262: T__53
+                {
+                mT__53(); 
+
+                }
+                break;
+            case 44 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:268: T__54
+                {
+                mT__54(); 
+
+                }
+                break;
+            case 45 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:274: T__55
+                {
+                mT__55(); 
+
+                }
+                break;
+            case 46 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:280: T__56
+                {
+                mT__56(); 
+
+                }
+                break;
+            case 47 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:286: T__57
+                {
+                mT__57(); 
+
+                }
+                break;
+            case 48 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:292: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 40 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:246: RULE_INT
+            case 49 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:300: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 41 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:255: RULE_STRING
+            case 50 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:309: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 42 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:267: RULE_ML_COMMENT
+            case 51 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:321: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 43 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:283: RULE_SL_COMMENT
+            case 52 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:337: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 44 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:299: RULE_WS
+            case 53 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:353: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 45 :
-                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:307: RULE_ANY_OTHER
+            case 54 :
+                // ../com.euclideanspace.xgener.ui/src-gen/com/euclideanspace/xgener/ui/contentassist/antlr/internal/InternalGen.g:1:361: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1692,121 +1953,117 @@ public class InternalGenLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\14\37\1\uffff\1\37\3\uffff\2\37\1\33\2\uffff\3\33\2\uffff\3\37\1\uffff\17\37\1\124\1\37\1\uffff\1\37\3\uffff\2\37\5\uffff\6\37\1\141\11\37\1\154\6\37\1\uffff\1\163\1\164\4\37\1\172\5\37\1\uffff\12\37\1\uffff\6\37\2\uffff\5\37\1\uffff\4\37\1\u009b\1\37\1\u009d\6\37\1\u00a4\1\u00a5\3\37\1\u00a9\1\37\1\u00ab\3\37\1\u00af\2\37\1\u00b2\4\37\1\uffff\1\37\1\uffff\1\u00b8\1\37\1\u00ba\1\37\1\u00bc\1\37\2\uffff\1\u00be\2\37\1\uffff\1\u00c1\1\uffff\3\37\1\uffff\1\u00c5\1\37\1\uffff\5\37\1\uffff\1\37\1\uffff\1\37\1\uffff\1\u00ce\1\uffff\2\37\1\uffff\1\37\1\u00d2\1\u00d3\1\uffff\1\u00d4\1\u00d5\1\u00d6\1\u00d7\4\37\1\uffff\3\37\6\uffff\1\u00df\2\37\1\u00e2\1\u00e3\2\37\1\uffff\2\37\2\uffff\1\37\1\u00e9\2\37\1\u00ec\1\uffff\2\37\1\uffff\2\37\1\u00f1\1\u00f2\2\uffff";
+        "\1\uffff\14\41\1\uffff\1\41\3\uffff\4\41\1\35\2\uffff\3\35\2\uffff\3\41\1\uffff\17\41\1\131\1\41\1\uffff\1\41\3\uffff\4\41\5\uffff\6\41\1\150\12\41\1\164\6\41\1\uffff\1\173\1\174\6\41\1\u0084\5\41\1\uffff\13\41\1\uffff\6\41\2\uffff\7\41\1\uffff\4\41\1\u00a7\2\41\1\u00ae\6\41\1\u00b5\1\u00b6\3\41\1\u00ba\1\41\1\u00bc\2\41\1\u00bf\1\41\1\u00c1\1\u00c2\2\41\1\u00c5\3\41\1\uffff\6\41\1\uffff\1\u00d0\1\41\1\u00d2\1\41\1\u00d4\1\41\2\uffff\1\u00d6\2\41\1\uffff\1\u00d9\1\uffff\2\41\1\uffff\1\41\2\uffff\1\u00dd\1\41\1\uffff\12\41\1\uffff\1\41\1\uffff\1\41\1\uffff\1\u00eb\1\uffff\2\41\1\uffff\1\41\1\u00ef\1\u00f0\1\uffff\1\u00f1\1\u00f2\1\u00f3\12\41\1\uffff\3\41\5\uffff\1\u0101\10\41\1\u010b\1\u010c\2\41\1\uffff\3\41\1\u0113\2\41\1\u0116\2\41\2\uffff\1\41\1\u011a\1\u011b\1\41\1\u011d\1\41\1\uffff\1\41\1\u0120\1\uffff\2\41\1\u0123\2\uffff\1\41\1\uffff\1\41\1\u0126\1\uffff\2\41\1\uffff\2\41\1\uffff\3\41\1\u012e\1\u012f\1\u0130\1\41\3\uffff\1\u0132\1\uffff";
     static final String DFA12_eofS =
-        "\u00f3\uffff";
+        "\u0133\uffff";
     static final String DFA12_minS =
-        "\1\0\1\114\1\116\1\101\1\120\1\116\1\114\1\101\1\131\1\105\1\110\1\117\1\101\1\uffff\1\130\3\uffff\1\117\1\111\1\101\2\uffff\2\0\1\52\2\uffff\1\101\2\117\1\uffff\1\104\1\114\1\101\1\114\2\101\1\106\1\124\1\117\1\122\1\105\1\122\2\120\1\111\1\60\1\114\1\uffff\1\120\3\uffff\1\103\1\124\5\uffff\1\103\1\114\1\103\3\105\1\60\1\117\1\123\1\114\1\103\1\111\1\124\1\106\1\111\1\101\1\60\1\106\1\103\3\105\1\114\1\uffff\2\60\1\122\1\114\2\105\1\60\1\113\1\116\1\101\1\122\1\130\1\uffff\1\116\1\123\2\105\1\116\1\105\1\111\1\120\1\114\1\124\1\uffff\1\111\1\105\1\116\1\123\1\101\1\105\2\uffff\1\105\1\101\1\122\1\123\1\105\1\uffff\1\111\1\124\1\104\1\122\1\60\1\123\1\60\1\122\1\123\1\107\1\115\1\130\1\105\2\60\1\130\1\104\1\124\1\60\1\124\1\60\2\123\1\101\1\60\1\124\1\116\1\60\2\105\1\104\1\105\1\uffff\1\105\1\uffff\1\60\1\105\1\60\1\105\1\60\1\104\2\uffff\1\60\1\125\1\110\1\uffff\1\60\1\uffff\2\123\1\114\1\uffff\1\60\1\107\1\uffff\1\122\2\104\1\106\1\120\1\uffff\1\120\1\uffff\1\116\1\uffff\1\60\1\uffff\1\122\1\105\1\uffff\1\111\2\60\1\uffff\4\60\1\124\2\105\1\124\1\uffff\1\105\1\123\1\117\6\uffff\1\60\2\122\2\60\1\111\1\116\1\uffff\2\101\2\uffff\1\123\1\60\2\124\1\60\1\uffff\2\105\1\uffff\2\104\2\60\2\uffff";
+        "\1\0\1\114\1\116\1\101\1\120\1\116\1\114\1\101\1\131\1\105\1\110\1\117\1\101\1\uffff\1\130\3\uffff\1\117\1\125\1\111\1\116\1\101\2\uffff\2\0\1\52\2\uffff\1\101\2\117\1\uffff\1\104\1\114\1\101\1\114\2\101\1\106\1\124\1\117\1\122\1\105\1\122\2\120\1\111\1\60\1\114\1\uffff\1\120\3\uffff\1\103\2\124\1\107\5\uffff\1\103\1\114\1\103\3\105\1\60\1\105\1\117\1\123\1\114\1\103\1\111\1\124\1\106\1\111\1\101\1\60\1\106\1\103\3\105\1\114\1\uffff\2\60\1\122\1\114\2\105\1\114\1\105\1\60\1\113\1\116\1\101\1\122\1\130\1\uffff\1\122\1\116\1\123\2\105\1\116\1\105\1\111\1\120\1\114\1\124\1\uffff\1\111\1\105\1\116\1\123\1\101\1\105\2\uffff\1\105\1\101\2\122\1\105\1\123\1\105\1\uffff\1\111\1\124\1\104\1\122\1\60\1\101\1\123\1\60\1\122\1\123\1\107\1\115\1\130\1\105\2\60\1\130\1\104\1\124\1\60\1\124\1\60\2\123\1\60\1\101\2\60\1\124\1\116\1\60\3\105\1\uffff\1\101\1\125\1\116\1\122\1\116\1\105\1\uffff\1\60\1\105\1\60\1\105\1\60\1\104\2\uffff\1\60\1\125\1\110\1\uffff\1\60\1\uffff\2\123\1\uffff\1\114\2\uffff\1\60\1\107\1\uffff\1\122\1\104\1\106\1\105\1\122\2\106\1\101\1\107\1\120\1\uffff\1\120\1\uffff\1\116\1\uffff\1\60\1\uffff\1\122\1\105\1\uffff\1\111\2\60\1\uffff\3\60\1\124\1\106\1\105\1\106\1\111\1\103\1\114\2\105\1\124\1\uffff\1\105\1\123\1\117\5\uffff\1\60\1\111\1\116\1\111\1\130\2\105\2\122\2\60\1\111\1\116\1\uffff\1\130\1\124\1\130\1\60\1\105\1\123\1\60\2\101\2\uffff\1\123\2\60\1\110\1\60\1\105\1\uffff\1\124\1\60\1\uffff\2\124\1\60\2\uffff\1\105\1\uffff\1\106\1\60\1\uffff\2\105\1\uffff\1\123\1\124\1\uffff\2\104\1\111\3\60\1\123\3\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\122\1\116\1\117\1\125\1\116\1\117\1\122\1\131\1\105\1\110\1\117\1\101\1\uffff\1\130\3\uffff\1\117\1\111\1\172\2\uffff\2\uffff\1\57\2\uffff\1\101\2\117\1\uffff\1\124\1\114\1\101\1\114\1\101\1\122\1\106\1\124\1\117\1\122\1\117\1\122\2\120\1\111\1\172\1\122\1\uffff\1\120\3\uffff\1\103\1\124\5\uffff\1\103\1\114\1\103\2\105\1\111\1\172\1\117\1\123\1\114\1\103\1\111\1\124\1\106\1\131\1\101\1\172\1\106\1\103\3\105\1\114\1\uffff\2\172\1\122\1\114\1\105\1\113\1\172\1\113\1\116\1\101\1\122\1\130\1\uffff\1\116\1\123\2\105\1\116\1\105\1\111\1\120\1\114\1\124\1\uffff\1\111\1\105\1\116\1\123\1\101\1\105\2\uffff\1\105\1\101\1\122\1\123\1\105\1\uffff\1\111\1\124\1\104\1\122\1\172\1\123\1\172\1\122\1\123\1\107\1\115\1\130\1\105\2\172\1\130\1\104\1\124\1\172\1\124\1\172\2\123\1\101\1\172\1\124\1\116\1\172\2\105\1\104\1\105\1\uffff\1\105\1\uffff\1\172\1\105\1\172\1\105\1\172\1\104\2\uffff\1\172\1\125\1\110\1\uffff\1\172\1\uffff\2\123\1\114\1\uffff\1\172\1\107\1\uffff\1\122\2\104\1\106\1\120\1\uffff\1\120\1\uffff\1\116\1\uffff\1\172\1\uffff\1\122\1\105\1\uffff\1\111\2\172\1\uffff\4\172\1\124\2\105\1\124\1\uffff\1\105\1\123\1\117\6\uffff\1\172\2\122\2\172\1\111\1\116\1\uffff\2\101\2\uffff\1\123\1\172\2\124\1\172\1\uffff\2\105\1\uffff\2\104\2\172\2\uffff";
+        "\1\uffff\1\122\1\116\1\117\1\125\1\116\1\117\1\122\1\131\1\105\1\110\1\117\1\101\1\uffff\1\130\3\uffff\1\117\1\125\1\111\1\116\1\172\2\uffff\2\uffff\1\57\2\uffff\1\101\2\117\1\uffff\1\124\1\114\1\101\1\114\1\101\1\122\1\106\1\124\1\117\1\122\1\117\1\122\2\120\1\111\1\172\1\122\1\uffff\1\120\3\uffff\1\103\2\124\1\107\5\uffff\1\103\1\114\1\103\2\105\1\111\1\172\1\105\1\117\1\123\1\114\1\103\1\111\1\124\1\106\1\131\1\101\1\172\1\106\1\103\3\105\1\114\1\uffff\2\172\1\122\1\114\2\105\1\114\1\113\1\172\1\113\1\116\1\101\1\122\1\130\1\uffff\1\122\1\116\1\123\2\105\1\116\1\105\1\111\1\120\1\114\1\124\1\uffff\1\111\1\105\1\116\1\123\1\101\1\105\2\uffff\1\105\1\101\2\122\1\105\1\123\1\105\1\uffff\1\111\1\124\1\104\1\122\1\172\2\123\1\172\1\122\1\123\1\107\1\115\1\130\1\105\2\172\1\130\1\104\1\124\1\172\1\124\1\172\2\123\1\172\1\101\2\172\1\124\1\116\1\172\3\105\1\uffff\1\122\1\125\1\116\1\122\1\116\1\105\1\uffff\1\172\1\105\1\172\1\105\1\172\1\104\2\uffff\1\172\1\125\1\110\1\uffff\1\172\1\uffff\2\123\1\uffff\1\114\2\uffff\1\172\1\107\1\uffff\1\122\1\104\1\106\1\105\1\122\2\106\1\101\1\107\1\120\1\uffff\1\120\1\uffff\1\116\1\uffff\1\172\1\uffff\1\122\1\105\1\uffff\1\111\2\172\1\uffff\3\172\1\124\1\106\1\105\1\106\1\111\1\103\1\114\2\105\1\124\1\uffff\1\105\1\123\1\117\5\uffff\1\172\1\111\1\116\1\111\1\130\1\113\1\105\2\122\2\172\1\111\1\116\1\uffff\1\130\1\124\1\130\1\172\1\105\1\123\1\172\2\101\2\uffff\1\123\2\172\1\110\1\172\1\105\1\uffff\1\124\1\172\1\uffff\2\124\1\172\2\uffff\1\105\1\uffff\1\106\1\172\1\uffff\2\105\1\uffff\1\123\1\124\1\uffff\2\104\1\111\3\172\1\123\3\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\15\uffff\1\31\1\uffff\1\34\1\35\1\36\3\uffff\1\47\1\50\3\uffff\1\54\1\55\3\uffff\1\47\21\uffff\1\31\1\uffff\1\34\1\35\1\36\2\uffff\1\50\1\51\1\52\1\53\1\54\27\uffff\1\26\14\uffff\1\10\12\uffff\1\27\6\uffff\1\30\1\32\5\uffff\1\12\40\uffff\1\41\1\uffff\1\14\6\uffff\1\24\1\13\3\uffff\1\21\1\uffff\1\25\3\uffff\1\1\2\uffff\1\2\5\uffff\1\40\1\uffff\1\11\1\uffff\1\16\1\uffff\1\15\2\uffff\1\23\3\uffff\1\45\10\uffff\1\7\3\uffff\1\37\1\44\1\17\1\5\1\6\1\42\7\uffff\1\43\2\uffff\1\22\1\20\5\uffff\1\33\2\uffff\1\46\4\uffff\1\3\1\4";
+        "\15\uffff\1\31\1\uffff\1\34\1\35\1\36\5\uffff\1\60\1\61\3\uffff\1\65\1\66\3\uffff\1\60\21\uffff\1\31\1\uffff\1\34\1\35\1\36\4\uffff\1\61\1\62\1\63\1\64\1\65\30\uffff\1\26\16\uffff\1\10\13\uffff\1\27\6\uffff\1\30\1\32\7\uffff\1\12\42\uffff\1\41\6\uffff\1\14\6\uffff\1\24\1\13\3\uffff\1\21\1\uffff\1\25\2\uffff\1\42\1\uffff\1\47\1\1\2\uffff\1\2\12\uffff\1\40\1\uffff\1\11\1\uffff\1\16\1\uffff\1\15\2\uffff\1\23\3\uffff\1\45\15\uffff\1\7\3\uffff\1\37\1\44\1\17\1\5\1\6\15\uffff\1\43\11\uffff\1\22\1\20\6\uffff\1\52\2\uffff\1\57\3\uffff\1\33\1\50\1\uffff\1\51\2\uffff\1\55\2\uffff\1\46\2\uffff\1\54\7\uffff\1\53\1\3\1\4\1\uffff\1\56";
     static final String DFA12_specialS =
-        "\1\2\26\uffff\1\0\1\1\u00da\uffff}>";
+        "\1\0\30\uffff\1\1\1\2\u0118\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\27\4\33\1\30\6\33\1\17\1\31\12\26\3\33\1\15\3\33\1\25\1\1\1\3\1\13\1\16\1\6\2\25\1\2\2\25\1\23\1\25\1\22\1\25\1\7\1\25\1\11\1\4\1\10\1\5\1\14\1\12\3\25\1\20\1\33\1\21\1\24\1\25\1\33\32\25\uff85\33",
-            "\1\36\2\uffff\1\35\2\uffff\1\34",
-            "\1\40",
-            "\1\43\12\uffff\1\42\2\uffff\1\41",
-            "\1\44\3\uffff\1\45\1\46",
-            "\1\47",
-            "\1\50\2\uffff\1\51",
-            "\1\53\20\uffff\1\52",
-            "\1\54",
-            "\1\55",
+            "\11\35\2\34\2\35\1\34\22\35\1\34\1\35\1\31\4\35\1\32\6\35\1\17\1\33\12\30\3\35\1\15\3\35\1\25\1\1\1\3\1\13\1\16\1\6\2\27\1\2\2\27\1\24\1\27\1\22\1\23\1\7\1\27\1\11\1\4\1\10\1\5\1\14\1\12\3\27\1\20\1\35\1\21\1\26\1\27\1\35\32\27\uff85\35",
+            "\1\40\2\uffff\1\37\2\uffff\1\36",
+            "\1\42",
+            "\1\45\12\uffff\1\44\2\uffff\1\43",
+            "\1\46\3\uffff\1\47\1\50",
+            "\1\51",
+            "\1\52\2\uffff\1\53",
+            "\1\55\20\uffff\1\54",
             "\1\56",
             "\1\57",
             "\1\60",
-            "",
+            "\1\61",
             "\1\62",
             "",
+            "\1\64",
             "",
             "",
-            "\1\66",
-            "\1\67",
-            "\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
+            "\1\70",
+            "\1\71",
+            "\1\72",
+            "\1\73",
+            "\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
-            "\0\71",
-            "\0\71",
-            "\1\72\4\uffff\1\73",
+            "\0\75",
+            "\0\75",
+            "\1\76\4\uffff\1\77",
             "",
             "",
-            "\1\75",
-            "\1\76",
-            "\1\77",
+            "\1\101",
+            "\1\102",
+            "\1\103",
             "",
-            "\1\100\1\uffff\1\102\1\uffff\1\101\13\uffff\1\103",
-            "\1\104",
-            "\1\105",
-            "\1\106",
-            "\1\107",
-            "\1\111\20\uffff\1\110",
+            "\1\104\1\uffff\1\106\1\uffff\1\105\5\uffff\1\110\5\uffff\1\107",
+            "\1\111",
             "\1\112",
             "\1\113",
             "\1\114",
-            "\1\115",
-            "\1\116\11\uffff\1\117",
+            "\1\116\20\uffff\1\115",
+            "\1\117",
             "\1\120",
             "\1\121",
             "\1\122",
-            "\1\123",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\126\5\uffff\1\125",
-            "",
+            "\1\123\11\uffff\1\124",
+            "\1\125",
+            "\1\126",
             "\1\127",
-            "",
-            "",
-            "",
             "\1\130",
-            "\1\131",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\133\5\uffff\1\132",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\1\132",
-            "\1\133",
             "\1\134",
+            "",
+            "",
+            "",
             "\1\135",
             "\1\136",
-            "\1\137\3\uffff\1\140",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\137",
+            "\1\140",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\141",
             "\1\142",
             "\1\143",
             "\1\144",
             "\1\145",
-            "\1\146",
-            "\1\147",
-            "\1\150",
-            "\1\152\17\uffff\1\151",
+            "\1\146\3\uffff\1\147",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\151",
+            "\1\152",
             "\1\153",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\154",
             "\1\155",
             "\1\156",
             "\1\157",
             "\1\160",
-            "\1\161",
-            "\1\162",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\162\17\uffff\1\161",
+            "\1\163",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\165",
             "\1\166",
             "\1\167",
-            "\1\170\5\uffff\1\171",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\173",
-            "\1\174",
+            "\1\170",
+            "\1\171",
+            "\1\172",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\175",
             "\1\176",
             "\1\177",
-            "",
             "\1\u0080",
             "\1\u0081",
-            "\1\u0082",
-            "\1\u0083",
-            "\1\u0084",
+            "\1\u0082\5\uffff\1\u0083",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u0085",
             "\1\u0086",
             "\1\u0087",
@@ -1819,8 +2076,6 @@ public class InternalGenLexer extends Lexer {
             "\1\u008d",
             "\1\u008e",
             "\1\u008f",
-            "",
-            "",
             "\1\u0090",
             "\1\u0091",
             "\1\u0092",
@@ -1831,121 +2086,191 @@ public class InternalGenLexer extends Lexer {
             "\1\u0096",
             "\1\u0097",
             "\1\u0098",
-            "\12\37\7\uffff\1\u0099\12\37\1\u009a\16\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u0099",
+            "\1\u009a",
+            "",
+            "",
+            "\1\u009b",
             "\1\u009c",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u009d",
             "\1\u009e",
             "\1\u009f",
             "\1\u00a0",
             "\1\u00a1",
+            "",
             "\1\u00a2",
             "\1\u00a3",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\u00a6",
-            "\1\u00a7",
-            "\1\u00a8",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\u00aa",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\u00ac",
+            "\1\u00a4",
+            "\1\u00a5",
+            "\12\41\7\uffff\13\41\1\u00a6\16\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00ac\1\u00ab\6\uffff\1\u00aa\6\uffff\1\u00a8\2\uffff\1\u00a9",
             "\1\u00ad",
-            "\1\u00ae",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00b2",
             "\1\u00b3",
             "\1\u00b4",
-            "\1\u00b5",
-            "\1\u00b6",
-            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00b7",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00b8",
             "\1\u00b9",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00bb",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00bd",
-            "",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\1\u00bf",
+            "\1\u00be",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00c0",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "",
-            "\1\u00c2",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00c3",
             "\1\u00c4",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00c6",
-            "",
             "\1\u00c7",
             "\1\u00c8",
-            "\1\u00c9",
-            "\1\u00ca",
+            "",
+            "\1\u00ca\20\uffff\1\u00c9",
             "\1\u00cb",
-            "",
             "\1\u00cc",
-            "",
             "\1\u00cd",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "",
+            "\1\u00ce",
             "\1\u00cf",
-            "\1\u00d0",
             "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00d1",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00d3",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00d5",
             "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00d7",
             "\1\u00d8",
-            "\1\u00d9",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
             "\1\u00da",
             "\1\u00db",
             "",
             "\1\u00dc",
-            "\1\u00dd",
+            "",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00de",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\u00e2",
+            "\1\u00e3",
             "\1\u00e4",
             "\1\u00e5",
-            "",
             "\1\u00e6",
             "\1\u00e7",
-            "",
-            "",
             "\1\u00e8",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
+            "\1\u00e9",
+            "",
             "\1\u00ea",
-            "\1\u00eb",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u00ec",
             "\1\u00ed",
+            "",
             "\1\u00ee",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
-            "\1\u00ef",
-            "\1\u00f0",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
-            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u00f4",
+            "\1\u00f5",
+            "\1\u00f6",
+            "\1\u00f7",
+            "\1\u00f8",
+            "\1\u00f9",
+            "\1\u00fa",
+            "\1\u00fb",
+            "\1\u00fc",
+            "\1\u00fd",
             "",
+            "\1\u00fe",
+            "\1\u00ff",
+            "\1\u0100",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0102",
+            "\1\u0103",
+            "\1\u0104",
+            "\1\u0105",
+            "\1\u0107\5\uffff\1\u0106",
+            "\1\u0108",
+            "\1\u0109",
+            "\1\u010a",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u010d",
+            "\1\u010e",
+            "",
+            "\1\u010f",
+            "\1\u0110",
+            "\1\u0111",
+            "\12\41\7\uffff\13\41\1\u0112\16\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0114",
+            "\1\u0115",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0117",
+            "\1\u0118",
+            "",
+            "",
+            "\1\u0119",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u011c",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u011e",
+            "",
+            "\1\u011f",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u0121",
+            "\1\u0122",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "",
+            "\1\u0124",
+            "",
+            "\1\u0125",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\u0127",
+            "\1\u0128",
+            "",
+            "\1\u0129",
+            "\1\u012a",
+            "",
+            "\1\u012b",
+            "\1\u012c",
+            "\1\u012d",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\u0131",
+            "",
+            "",
+            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             ""
     };
 
@@ -1979,33 +2304,13 @@ public class InternalGenLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_23 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_23>='\u0000' && LA12_23<='\uFFFF')) ) {s = 57;}
-
-                        else s = 27;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_24 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_24>='\u0000' && LA12_24<='\uFFFF')) ) {s = 57;}
-
-                        else s = 27;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -2045,23 +2350,47 @@ public class InternalGenLexer extends Lexer {
 
                         else if ( (LA12_0=='N') ) {s = 18;}
 
-                        else if ( (LA12_0=='L') ) {s = 19;}
+                        else if ( (LA12_0=='O') ) {s = 19;}
 
-                        else if ( (LA12_0=='^') ) {s = 20;}
+                        else if ( (LA12_0=='L') ) {s = 20;}
 
-                        else if ( (LA12_0=='A'||(LA12_0>='G' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='K')||LA12_0=='M'||LA12_0=='O'||LA12_0=='Q'||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 21;}
+                        else if ( (LA12_0=='A') ) {s = 21;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 22;}
+                        else if ( (LA12_0=='^') ) {s = 22;}
 
-                        else if ( (LA12_0=='\"') ) {s = 23;}
+                        else if ( ((LA12_0>='G' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='K')||LA12_0=='M'||LA12_0=='Q'||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 23;}
 
-                        else if ( (LA12_0=='\'') ) {s = 24;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 24;}
 
-                        else if ( (LA12_0=='/') ) {s = 25;}
+                        else if ( (LA12_0=='\"') ) {s = 25;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 26;}
+                        else if ( (LA12_0=='\'') ) {s = 26;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||(LA12_0>=':' && LA12_0<='<')||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 27;}
+                        else if ( (LA12_0=='/') ) {s = 27;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 28;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||(LA12_0>=':' && LA12_0<='<')||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 29;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_25 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_25>='\u0000' && LA12_25<='\uFFFF')) ) {s = 61;}
+
+                        else s = 29;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_26 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_26>='\u0000' && LA12_26<='\uFFFF')) ) {s = 61;}
+
+                        else s = 29;
 
                         if ( s>=0 ) return s;
                         break;

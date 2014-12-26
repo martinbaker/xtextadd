@@ -3,6 +3,7 @@ package com.euclideanspace.xgener.serializer;
 import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
+import com.euclideanspace.xgener.gen.InnerPrecedence;
 import com.euclideanspace.xgener.gen.Model;
 import com.euclideanspace.xgener.gen.MultID;
 import com.euclideanspace.xgener.gen.MultString;
@@ -38,6 +39,12 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GenPackage.EXPRESSION:
 				if(context == grammarAccess.getExpressionRule()) {
 					sequence_Expression(context, (Expression) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.INNER_PRECEDENCE:
+				if(context == grammarAccess.getInnerPrecedenceRule()) {
+					sequence_InnerPrecedence(context, (InnerPrecedence) semanticObject); 
 					return; 
 				}
 				else break;
@@ -101,6 +108,24 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         (ruletyp='INNERPREFIX' prefix=MultString feature1=ID? par2=ID) | 
+	 *         (ruletyp='INNERSUFFIX' suffix=MultString) | 
+	 *         (ruletyp='INNERINFIX' (mod='CALLER' rule=ID feature1=ID?)? infix=MultString feature2=ID? par2=ID) | 
+	 *         (ruletyp='INNERINFIXLEFT' infixleft=MultString par2=ID) | 
+	 *         (ruletyp='INNERBRACKET' rule=ID bracket=ID) | 
+	 *         (ruletyp='INNERBRACES' rule=ID braces=ID) | 
+	 *         (ruletyp='INNERPARENTHESIS' rule=ID parenthesis=ID) | 
+	 *         (ruletyp='INNERANGLE' rule=ID angle=ID)
+	 *     )
+	 */
+	protected void sequence_InnerPrecedence(EObject context, InnerPrecedence semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (clas+=ClassType | proc+=Procedure | statem+=Statement | exp+=Expression)*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
@@ -141,20 +166,13 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             feature2=ID? 
 	 *             par2=ID
 	 *         ) | 
-	 *         (
-	 *             ruletyp='INFIXADD' 
-	 *             rule=ID 
-	 *             feature1=ID? 
-	 *             par1=ID 
-	 *             infix=MultString 
-	 *             feature2=ID? 
-	 *             par2=ID
-	 *         ) | 
+	 *         (ruletyp='OUTER' rule=ID feature1=ID? par1=ID inner+=InnerPrecedence+) | 
 	 *         (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID) | 
 	 *         (ruletyp='LITERAL' rule=ID (literal='INT' | literal='STRING' | literal='BOOL' | literal='FLOAT')) | 
 	 *         (ruletyp='BRACKET' rule=ID bracket=ID) | 
 	 *         (ruletyp='BRACES' rule=ID braces=ID) | 
-	 *         (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
+	 *         (ruletyp='PARENTHESIS' rule=ID parenthesis=ID) | 
+	 *         (ruletyp='ANGLE' rule=ID angle=ID)
 	 *     )
 	 */
 	protected void sequence_Precedence(EObject context, Precedence semanticObject) {

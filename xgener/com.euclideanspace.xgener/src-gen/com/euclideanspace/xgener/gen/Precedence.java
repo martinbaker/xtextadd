@@ -2,6 +2,8 @@
  */
 package com.euclideanspace.xgener.gen;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -21,11 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfix <em>Infix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInner <em>Inner</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getParenthesis <em>Parenthesis</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getAngle <em>Angle</em>}</li>
  * </ul>
  * </p>
  *
@@ -270,6 +274,22 @@ public interface Precedence extends EObject
   void setPar2(String value);
 
   /**
+   * Returns the value of the '<em><b>Inner</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.InnerPrecedence}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Inner</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Inner</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Inner()
+   * @model containment="true"
+   * @generated
+   */
+  EList<InnerPrecedence> getInner();
+
+  /**
    * Returns the value of the '<em><b>Infixleft</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -398,5 +418,31 @@ public interface Precedence extends EObject
    * @generated
    */
   void setParenthesis(String value);
+
+  /**
+   * Returns the value of the '<em><b>Angle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Angle</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Angle</em>' attribute.
+   * @see #setAngle(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Angle()
+   * @model
+   * @generated
+   */
+  String getAngle();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getAngle <em>Angle</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Angle</em>' attribute.
+   * @see #getAngle()
+   * @generated
+   */
+  void setAngle(String value);
 
 } // Precedence

@@ -9,6 +9,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import com.euclideanspace.xgener.gen.Model
 import com.euclideanspace.xgener.gen.Expression
 import org.eclipse.emf.ecore.EObject
+import com.euclideanspace.xgener.gen.Precedence
 
 /**
  * Generates code from your model files on save.
@@ -25,6 +26,21 @@ class GenGenerator implements IGenerator {
 //				.join(', '))
 //	}
 
+/*     var CharSequence addInfix=null;
+    
+    def void readAddInfix(com.euclideanspace.xgener.gen.Precedence p){
+    	addInfix = '''    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
+     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)|'''
+    }
+
+    def CharSequence getAddInfix(){
+    	var CharSequence addHold=addInfix;
+    	addInfix=null;
+    	return addHold;
+    }*/
+    
     var String callingRule =null;
     
     def void setCallingRule(String s,String feature) {
@@ -42,6 +58,15 @@ class GenGenerator implements IGenerator {
     }
     
     /**
+     * 
+     */
+    def String getCallingRule() {
+    	val String oldRule=callingRule;
+    	//callingRule=s
+    	return oldRule;
+    }
+    
+    /**
      * gets the name of the container
      */
     def String getParentExpression(EObject child) {
@@ -53,6 +78,29 @@ class GenGenerator implements IGenerator {
       }
       return s;
     }
+
+    /**
+     * gets the name of the containers container
+     */
+    def String getGrandParentExpression(EObject child) {
+      var Precedence p=null;
+      var Expression e=null;
+      var String s="error";
+      if (child.eContainer() instanceof Precedence) {
+        p= child.eContainer() as Precedence;
+      }
+      if (p.eContainer() instanceof Expression) {
+        e= p.eContainer() as Expression;
+        s=e.name;
+      }
+      return s;
+    }
+
+/*     def notNull(String v){
+    	val boolean b = !("null".equals(v))
+    	System.out.println(v+" notnull:"+b)
+    	return b
+    }*/
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		fsa.generateFile(resource.className+".xtext", compile(resource.contents.head as Model))
@@ -338,61 +386,6 @@ XBlockExpression returns «s.name» hidden(SL_COMMENT,WS):
   «ENDIF»
 «ENDFOR»
 
-XRelationalExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XOtherOperatorExpression
-  (=>({XInstanceOfExpression.expression=current} 'instanceof') type=ID |
-  =>({XBinaryOperation.leftOperand=current} feature=OpCompare) rightOperand=XOtherOperatorExpression)*;
-
-OpCompare:
-  '>=' | '<' '=' | '>' | '<' ;
-
-XOtherOperatorExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XAdditiveExpression (=>({XBinaryOperation.leftOperand=current} feature=OpOther)
-  rightOperand=XAdditiveExpression)*;
-
-OpOther:
-  '->'
-  | '..<'
-  | '>' '..'
-  | '..'
-  | '=>'
-  | '>' (=>('>' '>') | '>')
-  | '<' (=>('<' '<') | '<' | '=>')
-  | '<>'
-  | '?:';
-  
-XAdditiveExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XMultiplicativeExpression (=>({XBinaryOperation.leftOperand=current} feature=OpAdd)
-  rightOperand=XMultiplicativeExpression)*;
-
-OpAdd:
-  '+' | '-';
-
-XMultiplicativeExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XUnaryOperation (=>({XBinaryOperation.leftOperand=current} feature=OpMulti) rightOperand=XUnaryOperation)*;
-
-OpMulti:
-  '*' | '**' | '/' | '%';
-
-XUnaryOperation returns «e.name» hidden(SL_COMMENT,WS):
-  {XUnaryOperation} feature=OpUnary operand=XUnaryOperation
-  | =>XCastedExpression;
-  
-OpUnary:
-  "!" | "-" | "+";
-
-XCastedExpression returns «e.name» hidden(SL_COMMENT,WS):
-  XPostfixOperation (=>({XCastedExpression.target=current} 'as') type=ID)*
-;
-
-XPostfixOperation returns «e.name» hidden(SL_COMMENT,WS):
-  XMemberFeatureCall =>({XPostfixOperation.operand=current} feature=OpPostfix)?
-;
-
-OpPostfix hidden(SL_COMMENT,WS):
-  "++" | "--"
-;
-
 XMemberFeatureCall returns «e.name» hidden(SL_COMMENT,WS):
   XPrimaryExpression
   (=>({XAssignment.assignable=current} ('.'|explicitStatic?="::") feature=ID OpSingleAssign) value=XAssignment
@@ -502,37 +495,79 @@ XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
 def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     «IF p.ruletyp=='PREFIX'»
       «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
-      (=>({Lastrule.leftOperand=current} feature=«
-      IF p.prefix != null»«compile(p.prefix)»«ENDIF»)
-      «IF p.par1 != null»«p.par1»«ENDIF»)*;
+      {«p.rule»} feature=«
+      IF p.prefix != null»«compile(p.prefix)»«ENDIF» operand=«
+      IF p.rule != null»«p.rule»«ENDIF»
+      | => «IF p.par1 != null»«p.par1»«ENDIF»;
   «ELSEIF p.ruletyp=='SUFFIX'»
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
-    «IF p.par1 != null»«p.par1»«ENDIF» (=>({Lastrule.leftOperand=current} feature=«
-      IF p.suffix != null»«compile(p.suffix)»«ENDIF»)
-    rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»)*;
+    «IF p.par1 != null»«p.par1»«ENDIF» =>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.suffix != null»«compile(p.suffix)»«ENDIF»)?;
   «ELSEIF p.ruletyp=='INFIX'»
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
      ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
      IF p.infix != null»«compile(p.infix)»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*;
+  «ELSEIF p.ruletyp=='OUTER'»«p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
+    «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;
   «ELSEIF p.ruletyp=='CALLER'»
     «IF p.rule != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
+  «ELSEIF p.ruletyp=='ANGLE'»
+    ('<'«IF p.angle != null»«p.angle»+=ID (',' «p.angle»+=ID)* «ENDIF»'>');
+  «ELSEIF p.ruletyp=='BRACKET'»
+    ('['«IF p.bracket != null»«p.angle»+=ID (',' «p.bracket»+=ID)* «ENDIF»']');
+  «ELSEIF p.ruletyp=='BRACES'»
+    ('{'«IF p.braces != null»«p.angle»+=ID (',' «p.braces»+=ID)* «ENDIF»'}');
+  «ELSEIF p.ruletyp=='PARENTHESIS'»
+    ('('«IF p.parenthesis != null»«p.angle»+=ID (',' «p.parenthesis»+=ID)* «ENDIF»')');
   «ENDIF»
 '''
 
+def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
+  «IF p.ruletyp=='INNERPREFIX'»
+      =>({Lastrule.leftOperand=current} feature=«
+      IF p.prefix != null»«compile(p.prefix)»«ENDIF»)
+      «IF p.par2 != null»«p.par2»«ENDIF»
+  «ELSEIF p.ruletyp=='INNERSUFFIX'»
+      =>({Lastrule.leftOperand=current} feature=«
+      IF p.suffix != null»«compile(p.suffix)»«ENDIF»)
+      rightOperand=«IF p.par2 != null»«p.par2»«ENDIF»
+  «ELSEIF p.ruletyp=='INNERINFIX'»
+     «IF p.mod != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
+     =>({«getCallingRule()»=current} feature=«
+     IF p.infix != null»«compile(p.infix)»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»
+  «ELSEIF p.ruletyp=='INNERANGLE'»
+    ('<'«IF p.angle != null»«p.angle»+=ID (',' «p.angle»+=ID)* «ENDIF»'>')
+  «ELSEIF p.ruletyp=='INNERBRACKET'»
+    ('['«IF p.bracket != null»«p.angle»+=ID (',' «p.bracket»+=ID)* «ENDIF»']')
+  «ELSEIF p.ruletyp=='INNERBRACES'»
+    ('{'«IF p.braces != null»«p.angle»+=ID (',' «p.braces»+=ID)* «ENDIF»'}')
+  «ELSEIF p.ruletyp=='INNERPARENTHESIS'»
+    ('('«IF p.parenthesis != null»«p.angle»+=ID (',' «p.parenthesis»+=ID)* «ENDIF»')')
+  «ENDIF»
+'''
+
+/**
+ * MultString
+ */
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
-  var int i=1»«IF m.ms == null»«
-    ELSEIF m.ms.length==1»'«m.ms.get(0)»'«
+  IF m.ms == null»«
+  ELSEIF m.ms.length==1»'«m.ms.get(0)»'«
   ELSE
-    »(«FOR x:m.ms»'«x»'«IF m.ms.length>i++»|«ENDIF»«ENDFOR»)«
+    »«FOR x:m.ms BEFORE '(' SEPARATOR '|' AFTER ')'»'«x»'«ENDFOR»«
   ENDIF»'''
 
-def CharSequence compile(com.euclideanspace.xgener.gen.MultID m) '''
-  «var int i=1»«IF m.mi == null»«
-    ELSEIF m.mi.length==1»«m.mi.get(0)»«
+/**
+ * multi ID
+ */
+def CharSequence compile(com.euclideanspace.xgener.gen.MultID m) '''«
+  IF m.mi == null»«
+  ELSEIF m.mi.length==1»«m.mi.get(0)»«
   ELSE
-    »(«FOR x:m.mi»'«x»'«IF m.mi.length>i++»|«ENDIF»«ENDFOR»)«
+    »«FOR x:m.mi BEFORE '(' SEPARATOR '|' AFTER ')'»«x»«ENDFOR»«
   ENDIF»
 '''
 }

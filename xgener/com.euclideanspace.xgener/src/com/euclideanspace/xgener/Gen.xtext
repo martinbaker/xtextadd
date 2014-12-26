@@ -41,12 +41,24 @@ Precedence:
 	| (ruletyp='PREFIX' rule=ID prefix=MultString (feature1=ID '=')? par1=ID)
     | (ruletyp='SUFFIX' rule=ID (feature1=ID '=')? par1=ID suffix=MultString)
     | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
-    | (ruletyp='INFIXADD' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='OUTER' rule=ID (feature1=ID '=')? par1=ID inner+=InnerPrecedence+)
     | (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID)
     | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
     | (ruletyp='BRACKET' rule=ID bracket=ID)
     | (ruletyp='BRACES' rule=ID braces=ID)
     | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
+    | (ruletyp='ANGLE' rule=ID angle=ID)
+;
+
+InnerPrecedence:
+	 (ruletyp='INNERPREFIX' prefix=MultString (feature1=ID '=')? par2=ID)
+    | (ruletyp='INNERSUFFIX' suffix=MultString)
+    | (ruletyp='INNERINFIX' (mod='CALLER' rule=ID ('.' feature1=ID)?)? infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='INNERINFIXLEFT' infixleft=MultString par2=ID)
+    | (ruletyp='INNERBRACKET' rule=ID bracket=ID)
+    | (ruletyp='INNERBRACES' rule=ID braces=ID)
+    | (ruletyp='INNERPARENTHESIS' rule=ID parenthesis=ID)
+    | (ruletyp='INNERANGLE' rule=ID angle=ID)
 ;
 
 MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));

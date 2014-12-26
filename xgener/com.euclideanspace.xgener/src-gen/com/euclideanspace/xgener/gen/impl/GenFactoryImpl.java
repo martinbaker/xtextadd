@@ -70,6 +70,7 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
       case GenPackage.STATEMENT: return createStatement();
       case GenPackage.EXPRESSION: return createExpression();
       case GenPackage.PRECEDENCE: return createPrecedence();
+      case GenPackage.INNER_PRECEDENCE: return createInnerPrecedence();
       case GenPackage.MULT_ID: return createMultID();
       case GenPackage.MULT_STRING: return createMultString();
       default:
@@ -141,6 +142,17 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     PrecedenceImpl precedence = new PrecedenceImpl();
     return precedence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InnerPrecedence createInnerPrecedence()
+  {
+    InnerPrecedenceImpl innerPrecedence = new InnerPrecedenceImpl();
+    return innerPrecedence;
   }
 
   /**
