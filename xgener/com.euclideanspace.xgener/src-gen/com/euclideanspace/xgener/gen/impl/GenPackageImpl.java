@@ -794,6 +794,16 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getPrimaryInner_Construct2()
+  {
+    return (EAttribute)primaryInnerEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLiteral()
   {
     return literalEClass;
@@ -949,6 +959,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     primaryInnerEClass = createEClass(PRIMARY_INNER);
     createEAttribute(primaryInnerEClass, PRIMARY_INNER__PRIMARYTYP);
     createEAttribute(primaryInnerEClass, PRIMARY_INNER__CONSTRUCT);
+    createEAttribute(primaryInnerEClass, PRIMARY_INNER__CONSTRUCT2);
 
     literalEClass = createEClass(LITERAL);
     createEAttribute(literalEClass, LITERAL__NAME);
@@ -1060,6 +1071,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     initEClass(primaryInnerEClass, PrimaryInner.class, "PrimaryInner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrimaryInner_Primarytyp(), ecorePackage.getEString(), "primarytyp", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrimaryInner_Construct(), ecorePackage.getEString(), "construct", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrimaryInner_Construct2(), ecorePackage.getEString(), "construct2", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

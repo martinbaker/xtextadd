@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getPrimarytyp <em>Primarytyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct <em>Construct</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct2 <em>Construct2</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +75,31 @@ public interface PrimaryInner extends EObject
    * @generated
    */
   void setConstruct(String value);
+
+  /**
+   * Returns the value of the '<em><b>Construct2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Construct2</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Construct2</em>' attribute.
+   * @see #setConstruct2(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrimaryInner_Construct2()
+   * @model
+   * @generated
+   */
+  String getConstruct2();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct2 <em>Construct2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Construct2</em>' attribute.
+   * @see #getConstruct2()
+   * @generated
+   */
+  void setConstruct2(String value);
 
 } // PrimaryInner

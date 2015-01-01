@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getPrimarytyp <em>Primarytyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getConstruct <em>Construct</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getConstruct2 <em>Construct2</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,6 +68,26 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
    * @ordered
    */
   protected String construct = CONSTRUCT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getConstruct2() <em>Construct2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConstruct2()
+   * @generated
+   * @ordered
+   */
+  protected static final String CONSTRUCT2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getConstruct2() <em>Construct2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConstruct2()
+   * @generated
+   * @ordered
+   */
+  protected String construct2 = CONSTRUCT2_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,6 +161,29 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getConstruct2()
+  {
+    return construct2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setConstruct2(String newConstruct2)
+  {
+    String oldConstruct2 = construct2;
+    construct2 = newConstruct2;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRIMARY_INNER__CONSTRUCT2, oldConstruct2, construct2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -149,6 +193,8 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return getPrimarytyp();
       case GenPackage.PRIMARY_INNER__CONSTRUCT:
         return getConstruct();
+      case GenPackage.PRIMARY_INNER__CONSTRUCT2:
+        return getConstruct2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,6 +214,9 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return;
       case GenPackage.PRIMARY_INNER__CONSTRUCT:
         setConstruct((String)newValue);
+        return;
+      case GenPackage.PRIMARY_INNER__CONSTRUCT2:
+        setConstruct2((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,6 +238,9 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
       case GenPackage.PRIMARY_INNER__CONSTRUCT:
         setConstruct(CONSTRUCT_EDEFAULT);
         return;
+      case GenPackage.PRIMARY_INNER__CONSTRUCT2:
+        setConstruct2(CONSTRUCT2_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -207,6 +259,8 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return PRIMARYTYP_EDEFAULT == null ? primarytyp != null : !PRIMARYTYP_EDEFAULT.equals(primarytyp);
       case GenPackage.PRIMARY_INNER__CONSTRUCT:
         return CONSTRUCT_EDEFAULT == null ? construct != null : !CONSTRUCT_EDEFAULT.equals(construct);
+      case GenPackage.PRIMARY_INNER__CONSTRUCT2:
+        return CONSTRUCT2_EDEFAULT == null ? construct2 != null : !CONSTRUCT2_EDEFAULT.equals(construct2);
     }
     return super.eIsSet(featureID);
   }
@@ -226,6 +280,8 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
     result.append(primarytyp);
     result.append(", construct: ");
     result.append(construct);
+    result.append(", construct2: ");
+    result.append(construct2);
     result.append(')');
     return result.toString();
   }

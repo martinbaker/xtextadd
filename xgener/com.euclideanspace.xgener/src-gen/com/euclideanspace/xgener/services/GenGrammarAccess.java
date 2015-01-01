@@ -1271,86 +1271,83 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPrimarytypSWITCHKeyword_2_0_0 = (Keyword)cPrimarytypAssignment_2_0.eContents().get(0);
 		private final Assignment cConstructAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_2_1_0 = (RuleCall)cConstructAssignment_2_1.eContents().get(0);
+		private final Assignment cConstruct2Assignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cConstruct2IDTerminalRuleCall_2_2_0 = (RuleCall)cConstruct2Assignment_2_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Assignment cPrimarytypAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final Keyword cPrimarytypCASEPARTKeyword_3_0_0 = (Keyword)cPrimarytypAssignment_3_0.eContents().get(0);
+		private final Keyword cPrimarytypSYNCHRONIZEDKeyword_3_0_0 = (Keyword)cPrimarytypAssignment_3_0.eContents().get(0);
 		private final Assignment cConstructAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_3_1_0 = (RuleCall)cConstructAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
 		private final Assignment cPrimarytypAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final Keyword cPrimarytypSYNCHRONIZEDKeyword_4_0_0 = (Keyword)cPrimarytypAssignment_4_0.eContents().get(0);
+		private final Keyword cPrimarytypFEATURECALLKeyword_4_0_0 = (Keyword)cPrimarytypAssignment_4_0.eContents().get(0);
 		private final Assignment cConstructAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_4_1_0 = (RuleCall)cConstructAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
 		private final Assignment cPrimarytypAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final Keyword cPrimarytypFEATURECALLKeyword_5_0_0 = (Keyword)cPrimarytypAssignment_5_0.eContents().get(0);
+		private final Keyword cPrimarytypIFEXPRESSIONKeyword_5_0_0 = (Keyword)cPrimarytypAssignment_5_0.eContents().get(0);
 		private final Assignment cConstructAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_5_1_0 = (RuleCall)cConstructAssignment_5_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
 		private final Assignment cPrimarytypAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final Keyword cPrimarytypIFEXPRESSIONKeyword_6_0_0 = (Keyword)cPrimarytypAssignment_6_0.eContents().get(0);
+		private final Keyword cPrimarytypFOREXPRESSIONKeyword_6_0_0 = (Keyword)cPrimarytypAssignment_6_0.eContents().get(0);
 		private final Assignment cConstructAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_6_1_0 = (RuleCall)cConstructAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cAlternatives.eContents().get(7);
 		private final Assignment cPrimarytypAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final Keyword cPrimarytypFOREXPRESSIONKeyword_7_0_0 = (Keyword)cPrimarytypAssignment_7_0.eContents().get(0);
+		private final Keyword cPrimarytypBASICFORLOOPEXPRESSIONKeyword_7_0_0 = (Keyword)cPrimarytypAssignment_7_0.eContents().get(0);
 		private final Assignment cConstructAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_7_1_0 = (RuleCall)cConstructAssignment_7_1.eContents().get(0);
 		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
 		private final Assignment cPrimarytypAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
-		private final Keyword cPrimarytypBASICFORLOOPEXPRESSIONKeyword_8_0_0 = (Keyword)cPrimarytypAssignment_8_0.eContents().get(0);
+		private final Keyword cPrimarytypWHILEEXPRESSIONKeyword_8_0_0 = (Keyword)cPrimarytypAssignment_8_0.eContents().get(0);
 		private final Assignment cConstructAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_8_1_0 = (RuleCall)cConstructAssignment_8_1.eContents().get(0);
 		private final Group cGroup_9 = (Group)cAlternatives.eContents().get(9);
 		private final Assignment cPrimarytypAssignment_9_0 = (Assignment)cGroup_9.eContents().get(0);
-		private final Keyword cPrimarytypWHILEEXPRESSIONKeyword_9_0_0 = (Keyword)cPrimarytypAssignment_9_0.eContents().get(0);
+		private final Keyword cPrimarytypDOWHILEEXPRESSIONKeyword_9_0_0 = (Keyword)cPrimarytypAssignment_9_0.eContents().get(0);
 		private final Assignment cConstructAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_9_1_0 = (RuleCall)cConstructAssignment_9_1.eContents().get(0);
 		private final Group cGroup_10 = (Group)cAlternatives.eContents().get(10);
 		private final Assignment cPrimarytypAssignment_10_0 = (Assignment)cGroup_10.eContents().get(0);
-		private final Keyword cPrimarytypDOWHILEEXPRESSIONKeyword_10_0_0 = (Keyword)cPrimarytypAssignment_10_0.eContents().get(0);
+		private final Keyword cPrimarytypTHROWEXPRESSIONKeyword_10_0_0 = (Keyword)cPrimarytypAssignment_10_0.eContents().get(0);
 		private final Assignment cConstructAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_10_1_0 = (RuleCall)cConstructAssignment_10_1.eContents().get(0);
 		private final Group cGroup_11 = (Group)cAlternatives.eContents().get(11);
 		private final Assignment cPrimarytypAssignment_11_0 = (Assignment)cGroup_11.eContents().get(0);
-		private final Keyword cPrimarytypTHROWEXPRESSIONKeyword_11_0_0 = (Keyword)cPrimarytypAssignment_11_0.eContents().get(0);
+		private final Keyword cPrimarytypRETURNEXPRESSIONKeyword_11_0_0 = (Keyword)cPrimarytypAssignment_11_0.eContents().get(0);
 		private final Assignment cConstructAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_11_1_0 = (RuleCall)cConstructAssignment_11_1.eContents().get(0);
 		private final Group cGroup_12 = (Group)cAlternatives.eContents().get(12);
 		private final Assignment cPrimarytypAssignment_12_0 = (Assignment)cGroup_12.eContents().get(0);
-		private final Keyword cPrimarytypRETURNEXPRESSIONKeyword_12_0_0 = (Keyword)cPrimarytypAssignment_12_0.eContents().get(0);
+		private final Keyword cPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_12_0_0 = (Keyword)cPrimarytypAssignment_12_0.eContents().get(0);
 		private final Assignment cConstructAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_12_1_0 = (RuleCall)cConstructAssignment_12_1.eContents().get(0);
 		private final Group cGroup_13 = (Group)cAlternatives.eContents().get(13);
 		private final Assignment cPrimarytypAssignment_13_0 = (Assignment)cGroup_13.eContents().get(0);
-		private final Keyword cPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_13_0_0 = (Keyword)cPrimarytypAssignment_13_0.eContents().get(0);
+		private final Keyword cPrimarytypPARENTHESIZEDEXPRESSIONKeyword_13_0_0 = (Keyword)cPrimarytypAssignment_13_0.eContents().get(0);
 		private final Assignment cConstructAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_13_1_0 = (RuleCall)cConstructAssignment_13_1.eContents().get(0);
 		private final Group cGroup_14 = (Group)cAlternatives.eContents().get(14);
 		private final Assignment cPrimarytypAssignment_14_0 = (Assignment)cGroup_14.eContents().get(0);
-		private final Keyword cPrimarytypPARENTHESIZEDEXPRESSIONKeyword_14_0_0 = (Keyword)cPrimarytypAssignment_14_0.eContents().get(0);
+		private final Keyword cPrimarytypLITERALEXPRESSIONKeyword_14_0_0 = (Keyword)cPrimarytypAssignment_14_0.eContents().get(0);
 		private final Assignment cConstructAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_14_1_0 = (RuleCall)cConstructAssignment_14_1.eContents().get(0);
-		private final Group cGroup_15 = (Group)cAlternatives.eContents().get(15);
-		private final Assignment cPrimarytypAssignment_15_0 = (Assignment)cGroup_15.eContents().get(0);
-		private final Keyword cPrimarytypLITERALEXPRESSIONKeyword_15_0_0 = (Keyword)cPrimarytypAssignment_15_0.eContents().get(0);
-		private final Assignment cConstructAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
-		private final RuleCall cConstructIDTerminalRuleCall_15_1_0 = (RuleCall)cConstructAssignment_15_1.eContents().get(0);
 		
 		//PrimaryInner:
 		//	primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-		//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID | primarytyp="CASEPART" construct=ID |
-		//	primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION"
-		//	construct=ID | primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
+		//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
+		//	construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
+		//	primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
 		//	primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
 		//	construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
 		//	primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID;
 		public ParserRule getRule() { return rule; }
 
 		//primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-		//| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID | primarytyp="CASEPART" construct=ID |
-		//primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID
-		//| primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
+		//| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
+		//construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
+		//primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
 		//primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
 		//construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
 		//primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID
@@ -1386,7 +1383,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_1_1_0() { return cConstructIDTerminalRuleCall_1_1_0; }
 
-		//primarytyp="SWITCH" construct=ID
+		//primarytyp="SWITCH" construct=ID construct2=ID
 		public Group getGroup_2() { return cGroup_2; }
 
 		//primarytyp="SWITCH"
@@ -1401,14 +1398,20 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_2_1_0() { return cConstructIDTerminalRuleCall_2_1_0; }
 
-		//primarytyp="CASEPART" construct=ID
+		//construct2=ID
+		public Assignment getConstruct2Assignment_2_2() { return cConstruct2Assignment_2_2; }
+
+		//ID
+		public RuleCall getConstruct2IDTerminalRuleCall_2_2_0() { return cConstruct2IDTerminalRuleCall_2_2_0; }
+
+		//primarytyp="SYNCHRONIZED" construct=ID
 		public Group getGroup_3() { return cGroup_3; }
 
-		//primarytyp="CASEPART"
+		//primarytyp="SYNCHRONIZED"
 		public Assignment getPrimarytypAssignment_3_0() { return cPrimarytypAssignment_3_0; }
 
-		//"CASEPART"
-		public Keyword getPrimarytypCASEPARTKeyword_3_0_0() { return cPrimarytypCASEPARTKeyword_3_0_0; }
+		//"SYNCHRONIZED"
+		public Keyword getPrimarytypSYNCHRONIZEDKeyword_3_0_0() { return cPrimarytypSYNCHRONIZEDKeyword_3_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_3_1() { return cConstructAssignment_3_1; }
@@ -1416,14 +1419,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_3_1_0() { return cConstructIDTerminalRuleCall_3_1_0; }
 
-		//primarytyp="SYNCHRONIZED" construct=ID
+		//primarytyp="FEATURECALL" construct=ID
 		public Group getGroup_4() { return cGroup_4; }
 
-		//primarytyp="SYNCHRONIZED"
+		//primarytyp="FEATURECALL"
 		public Assignment getPrimarytypAssignment_4_0() { return cPrimarytypAssignment_4_0; }
 
-		//"SYNCHRONIZED"
-		public Keyword getPrimarytypSYNCHRONIZEDKeyword_4_0_0() { return cPrimarytypSYNCHRONIZEDKeyword_4_0_0; }
+		//"FEATURECALL"
+		public Keyword getPrimarytypFEATURECALLKeyword_4_0_0() { return cPrimarytypFEATURECALLKeyword_4_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_4_1() { return cConstructAssignment_4_1; }
@@ -1431,14 +1434,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_4_1_0() { return cConstructIDTerminalRuleCall_4_1_0; }
 
-		//primarytyp="FEATURECALL" construct=ID
+		//primarytyp="IFEXPRESSION" construct=ID
 		public Group getGroup_5() { return cGroup_5; }
 
-		//primarytyp="FEATURECALL"
+		//primarytyp="IFEXPRESSION"
 		public Assignment getPrimarytypAssignment_5_0() { return cPrimarytypAssignment_5_0; }
 
-		//"FEATURECALL"
-		public Keyword getPrimarytypFEATURECALLKeyword_5_0_0() { return cPrimarytypFEATURECALLKeyword_5_0_0; }
+		//"IFEXPRESSION"
+		public Keyword getPrimarytypIFEXPRESSIONKeyword_5_0_0() { return cPrimarytypIFEXPRESSIONKeyword_5_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_5_1() { return cConstructAssignment_5_1; }
@@ -1446,14 +1449,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_5_1_0() { return cConstructIDTerminalRuleCall_5_1_0; }
 
-		//primarytyp="IFEXPRESSION" construct=ID
+		//primarytyp="FOREXPRESSION" construct=ID
 		public Group getGroup_6() { return cGroup_6; }
 
-		//primarytyp="IFEXPRESSION"
+		//primarytyp="FOREXPRESSION"
 		public Assignment getPrimarytypAssignment_6_0() { return cPrimarytypAssignment_6_0; }
 
-		//"IFEXPRESSION"
-		public Keyword getPrimarytypIFEXPRESSIONKeyword_6_0_0() { return cPrimarytypIFEXPRESSIONKeyword_6_0_0; }
+		//"FOREXPRESSION"
+		public Keyword getPrimarytypFOREXPRESSIONKeyword_6_0_0() { return cPrimarytypFOREXPRESSIONKeyword_6_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_6_1() { return cConstructAssignment_6_1; }
@@ -1461,14 +1464,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_6_1_0() { return cConstructIDTerminalRuleCall_6_1_0; }
 
-		//primarytyp="FOREXPRESSION" construct=ID
+		//primarytyp="BASICFORLOOPEXPRESSION" construct=ID
 		public Group getGroup_7() { return cGroup_7; }
 
-		//primarytyp="FOREXPRESSION"
+		//primarytyp="BASICFORLOOPEXPRESSION"
 		public Assignment getPrimarytypAssignment_7_0() { return cPrimarytypAssignment_7_0; }
 
-		//"FOREXPRESSION"
-		public Keyword getPrimarytypFOREXPRESSIONKeyword_7_0_0() { return cPrimarytypFOREXPRESSIONKeyword_7_0_0; }
+		//"BASICFORLOOPEXPRESSION"
+		public Keyword getPrimarytypBASICFORLOOPEXPRESSIONKeyword_7_0_0() { return cPrimarytypBASICFORLOOPEXPRESSIONKeyword_7_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_7_1() { return cConstructAssignment_7_1; }
@@ -1476,14 +1479,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_7_1_0() { return cConstructIDTerminalRuleCall_7_1_0; }
 
-		//primarytyp="BASICFORLOOPEXPRESSION" construct=ID
+		//primarytyp="WHILEEXPRESSION" construct=ID
 		public Group getGroup_8() { return cGroup_8; }
 
-		//primarytyp="BASICFORLOOPEXPRESSION"
+		//primarytyp="WHILEEXPRESSION"
 		public Assignment getPrimarytypAssignment_8_0() { return cPrimarytypAssignment_8_0; }
 
-		//"BASICFORLOOPEXPRESSION"
-		public Keyword getPrimarytypBASICFORLOOPEXPRESSIONKeyword_8_0_0() { return cPrimarytypBASICFORLOOPEXPRESSIONKeyword_8_0_0; }
+		//"WHILEEXPRESSION"
+		public Keyword getPrimarytypWHILEEXPRESSIONKeyword_8_0_0() { return cPrimarytypWHILEEXPRESSIONKeyword_8_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_8_1() { return cConstructAssignment_8_1; }
@@ -1491,14 +1494,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_8_1_0() { return cConstructIDTerminalRuleCall_8_1_0; }
 
-		//primarytyp="WHILEEXPRESSION" construct=ID
+		//primarytyp="DOWHILEEXPRESSION" construct=ID
 		public Group getGroup_9() { return cGroup_9; }
 
-		//primarytyp="WHILEEXPRESSION"
+		//primarytyp="DOWHILEEXPRESSION"
 		public Assignment getPrimarytypAssignment_9_0() { return cPrimarytypAssignment_9_0; }
 
-		//"WHILEEXPRESSION"
-		public Keyword getPrimarytypWHILEEXPRESSIONKeyword_9_0_0() { return cPrimarytypWHILEEXPRESSIONKeyword_9_0_0; }
+		//"DOWHILEEXPRESSION"
+		public Keyword getPrimarytypDOWHILEEXPRESSIONKeyword_9_0_0() { return cPrimarytypDOWHILEEXPRESSIONKeyword_9_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_9_1() { return cConstructAssignment_9_1; }
@@ -1506,14 +1509,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_9_1_0() { return cConstructIDTerminalRuleCall_9_1_0; }
 
-		//primarytyp="DOWHILEEXPRESSION" construct=ID
+		//primarytyp="THROWEXPRESSION" construct=ID
 		public Group getGroup_10() { return cGroup_10; }
 
-		//primarytyp="DOWHILEEXPRESSION"
+		//primarytyp="THROWEXPRESSION"
 		public Assignment getPrimarytypAssignment_10_0() { return cPrimarytypAssignment_10_0; }
 
-		//"DOWHILEEXPRESSION"
-		public Keyword getPrimarytypDOWHILEEXPRESSIONKeyword_10_0_0() { return cPrimarytypDOWHILEEXPRESSIONKeyword_10_0_0; }
+		//"THROWEXPRESSION"
+		public Keyword getPrimarytypTHROWEXPRESSIONKeyword_10_0_0() { return cPrimarytypTHROWEXPRESSIONKeyword_10_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_10_1() { return cConstructAssignment_10_1; }
@@ -1521,14 +1524,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_10_1_0() { return cConstructIDTerminalRuleCall_10_1_0; }
 
-		//primarytyp="THROWEXPRESSION" construct=ID
+		//primarytyp="RETURNEXPRESSION" construct=ID
 		public Group getGroup_11() { return cGroup_11; }
 
-		//primarytyp="THROWEXPRESSION"
+		//primarytyp="RETURNEXPRESSION"
 		public Assignment getPrimarytypAssignment_11_0() { return cPrimarytypAssignment_11_0; }
 
-		//"THROWEXPRESSION"
-		public Keyword getPrimarytypTHROWEXPRESSIONKeyword_11_0_0() { return cPrimarytypTHROWEXPRESSIONKeyword_11_0_0; }
+		//"RETURNEXPRESSION"
+		public Keyword getPrimarytypRETURNEXPRESSIONKeyword_11_0_0() { return cPrimarytypRETURNEXPRESSIONKeyword_11_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_11_1() { return cConstructAssignment_11_1; }
@@ -1536,14 +1539,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_11_1_0() { return cConstructIDTerminalRuleCall_11_1_0; }
 
-		//primarytyp="RETURNEXPRESSION" construct=ID
+		//primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID
 		public Group getGroup_12() { return cGroup_12; }
 
-		//primarytyp="RETURNEXPRESSION"
+		//primarytyp="TRYCATCHFINALYEXPRESSION"
 		public Assignment getPrimarytypAssignment_12_0() { return cPrimarytypAssignment_12_0; }
 
-		//"RETURNEXPRESSION"
-		public Keyword getPrimarytypRETURNEXPRESSIONKeyword_12_0_0() { return cPrimarytypRETURNEXPRESSIONKeyword_12_0_0; }
+		//"TRYCATCHFINALYEXPRESSION"
+		public Keyword getPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_12_0_0() { return cPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_12_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_12_1() { return cConstructAssignment_12_1; }
@@ -1551,14 +1554,14 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_12_1_0() { return cConstructIDTerminalRuleCall_12_1_0; }
 
-		//primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID
+		//primarytyp="PARENTHESIZEDEXPRESSION" construct=ID
 		public Group getGroup_13() { return cGroup_13; }
 
-		//primarytyp="TRYCATCHFINALYEXPRESSION"
+		//primarytyp="PARENTHESIZEDEXPRESSION"
 		public Assignment getPrimarytypAssignment_13_0() { return cPrimarytypAssignment_13_0; }
 
-		//"TRYCATCHFINALYEXPRESSION"
-		public Keyword getPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_13_0_0() { return cPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_13_0_0; }
+		//"PARENTHESIZEDEXPRESSION"
+		public Keyword getPrimarytypPARENTHESIZEDEXPRESSIONKeyword_13_0_0() { return cPrimarytypPARENTHESIZEDEXPRESSIONKeyword_13_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_13_1() { return cConstructAssignment_13_1; }
@@ -1566,35 +1569,20 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_13_1_0() { return cConstructIDTerminalRuleCall_13_1_0; }
 
-		//primarytyp="PARENTHESIZEDEXPRESSION" construct=ID
+		//primarytyp="LITERALEXPRESSION" construct=ID
 		public Group getGroup_14() { return cGroup_14; }
 
-		//primarytyp="PARENTHESIZEDEXPRESSION"
+		//primarytyp="LITERALEXPRESSION"
 		public Assignment getPrimarytypAssignment_14_0() { return cPrimarytypAssignment_14_0; }
 
-		//"PARENTHESIZEDEXPRESSION"
-		public Keyword getPrimarytypPARENTHESIZEDEXPRESSIONKeyword_14_0_0() { return cPrimarytypPARENTHESIZEDEXPRESSIONKeyword_14_0_0; }
+		//"LITERALEXPRESSION"
+		public Keyword getPrimarytypLITERALEXPRESSIONKeyword_14_0_0() { return cPrimarytypLITERALEXPRESSIONKeyword_14_0_0; }
 
 		//construct=ID
 		public Assignment getConstructAssignment_14_1() { return cConstructAssignment_14_1; }
 
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_14_1_0() { return cConstructIDTerminalRuleCall_14_1_0; }
-
-		//primarytyp="LITERALEXPRESSION" construct=ID
-		public Group getGroup_15() { return cGroup_15; }
-
-		//primarytyp="LITERALEXPRESSION"
-		public Assignment getPrimarytypAssignment_15_0() { return cPrimarytypAssignment_15_0; }
-
-		//"LITERALEXPRESSION"
-		public Keyword getPrimarytypLITERALEXPRESSIONKeyword_15_0_0() { return cPrimarytypLITERALEXPRESSIONKeyword_15_0_0; }
-
-		//construct=ID
-		public Assignment getConstructAssignment_15_1() { return cConstructAssignment_15_1; }
-
-		//ID
-		public RuleCall getConstructIDTerminalRuleCall_15_1_0() { return cConstructIDTerminalRuleCall_15_1_0; }
 	}
 
 	public class LiteralElements extends AbstractParserRuleElementFinder {
@@ -1955,9 +1943,9 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 
 	//PrimaryInner:
 	//	primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-	//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID | primarytyp="CASEPART" construct=ID |
-	//	primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION"
-	//	construct=ID | primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
+	//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
+	//	construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
+	//	primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
 	//	primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
 	//	construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
 	//	primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID;

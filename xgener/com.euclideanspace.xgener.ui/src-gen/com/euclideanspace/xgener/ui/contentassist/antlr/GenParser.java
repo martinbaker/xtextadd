@@ -108,7 +108,6 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryInnerAccess().getGroup_12(), "rule__PrimaryInner__Group_12__0");
 					put(grammarAccess.getPrimaryInnerAccess().getGroup_13(), "rule__PrimaryInner__Group_13__0");
 					put(grammarAccess.getPrimaryInnerAccess().getGroup_14(), "rule__PrimaryInner__Group_14__0");
-					put(grammarAccess.getPrimaryInnerAccess().getGroup_15(), "rule__PrimaryInner__Group_15__0");
 					put(grammarAccess.getLiteralAccess().getGroup(), "rule__Literal__Group__0");
 					put(grammarAccess.getLiteralInnerAccess().getGroup_0(), "rule__LiteralInner__Group_0__0");
 					put(grammarAccess.getLiteralInnerAccess().getGroup_1(), "rule__LiteralInner__Group_1__0");
@@ -222,6 +221,7 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_1_1(), "rule__PrimaryInner__ConstructAssignment_1_1");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_2_0(), "rule__PrimaryInner__PrimarytypAssignment_2_0");
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_2_1(), "rule__PrimaryInner__ConstructAssignment_2_1");
+					put(grammarAccess.getPrimaryInnerAccess().getConstruct2Assignment_2_2(), "rule__PrimaryInner__Construct2Assignment_2_2");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_3_0(), "rule__PrimaryInner__PrimarytypAssignment_3_0");
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_3_1(), "rule__PrimaryInner__ConstructAssignment_3_1");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_4_0(), "rule__PrimaryInner__PrimarytypAssignment_4_0");
@@ -246,8 +246,6 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_13_1(), "rule__PrimaryInner__ConstructAssignment_13_1");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_14_0(), "rule__PrimaryInner__PrimarytypAssignment_14_0");
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_14_1(), "rule__PrimaryInner__ConstructAssignment_14_1");
-					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_15_0(), "rule__PrimaryInner__PrimarytypAssignment_15_0");
-					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_15_1(), "rule__PrimaryInner__ConstructAssignment_15_1");
 					put(grammarAccess.getLiteralAccess().getNameAssignment_1(), "rule__Literal__NameAssignment_1");
 					put(grammarAccess.getLiteralAccess().getInnerAssignment_2(), "rule__Literal__InnerAssignment_2");
 					put(grammarAccess.getLiteralInnerAccess().getPrimarytypAssignment_0_0(), "rule__LiteralInner__PrimarytypAssignment_0_0");

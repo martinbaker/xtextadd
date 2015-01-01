@@ -289,25 +289,13 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Expression e) '''
 def CharSequence compile(com.euclideanspace.xgener.gen.Primary p) '''
 // start of rules for Primary=«p.name»
 
-  «p.name» hidden(SL_COMMENT,WS) :
-  XAssignment;
+«p.name» hidden(SL_COMMENT,WS) :
+XAssignment;
 
-  XPrimaryExpression returns «p.name» hidden(SL_COMMENT,WS):
-    XConstructorCall |
-    XBlockExpression |
-    XSwitchExpression |
-    XSynchronizedExpression |
-    XFeatureCall |
-    XLiteral |
-    XIfExpression |
-    XForLoopExpression |
-    XBasicForLoopExpression |
-    XWhileExpression |
-    XDoWhileExpression |
-    XThrowExpression |
-    XReturnExpression |
-    XTryCatchFinallyExpression |
-    XParenthesizedExpression;
+XPrimaryExpression returns «p.name» hidden(SL_COMMENT,WS):
+  «FOR x:p.inner SEPARATOR ' |'»
+    «IF x.construct != null»«x.construct»«ENDIF»
+  «ENDFOR»;
     
 FeatureCallID:
   ValidID | 'extends' | 'static' | 'import' | 'extension'
@@ -348,7 +336,7 @@ XFeatureCall returns «p.name» hidden(SL_COMMENT,WS):
 /* Inner Primary */
 def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
 «IF pi.primarytyp=='CONSTRUCTOR'»
-XConstructorCall returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XConstructorCall}
   'new' constructor=ID
   (=>'<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
@@ -361,29 +349,28 @@ XConstructorCall returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   arguments+=XClosure?;
 «ENDIF»
 «IF pi.primarytyp=='BLOCK'»
-XBlockExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBlockExpression}
   '{'
   (expressions+=XExpressionOrVarDeclaration ';'?)*
   '}';
 «ENDIF»
 «IF pi.primarytyp=='SWITCH'»
-XSwitchExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XSwitchExpression}
   'switch' (=>('(' declaredParam=ID ':') switch=«getParentExpression(pi)» ')'
   | =>(declaredParam=ID ':')? switch=«getParentExpression(pi)») '{'
   (cases+=XCasePart)*
   ('default' ':' default=«getParentExpression(pi)» )?
 '}';
-«ENDIF»
-«IF pi.primarytyp=='CASEPART'»
-XCasePart hidden(SL_COMMENT,WS):
+
+«pi.construct2» hidden(SL_COMMENT,WS):
   {XCasePart}
   typeGuard=ID? ('case' case=XExpression)?
   (':' then=«getParentExpression(pi)» | fallThrough?=',') ;
 «ENDIF»
 «IF pi.primarytyp=='SYNCHRONIZED'»
-XSynchronizedExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({XSynchronizedExpression}
   'synchronized' '(') param=XExpression ')' expression=«getParentExpression(pi)»;
 «ENDIF»
@@ -401,13 +388,13 @@ XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   (=>'else' else=«getParentExpression(pi)»)?;
 «ENDIF»
 «IF pi.primarytyp=='FOREXPRESSION'»
-XForLoopExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({XForLoopExpression}
   'for' '(' declaredParam=ID ':') forExpression=«getParentExpression(pi)» ')'
   eachExpression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='BASICFORLOOPEXPRESSION'»
-XBasicForLoopExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBasicForLoopExpression}
   'for' '('(initExpressions+=XExpressionOrVarDeclaration
     (',' initExpressions+=XExpressionOrVarDeclaration)*)? ';'
@@ -416,29 +403,29 @@ XBasicForLoopExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS
   eachExpression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='WHILEEXPRESSION'»
-XWhileExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XWhileExpression}
   'while' '(' predicate=«getParentExpression(pi)» ')'
   body=XExpression
 ;
 «ENDIF»
 «IF pi.primarytyp=='DOWHILEEXPRESSION'»
-XDoWhileExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XDoWhileExpression}
   'do'
   body=XExpression
   'while' '(' predicate=«getParentExpression(pi)» ')';
 «ENDIF»
 «IF pi.primarytyp=='THROWEXPRESSION'»
-XThrowExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XThrowExpression} 'throw' expression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='RETURNEXPRESSION'»
-XReturnExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XReturnExpression} 'return' (->expression=XExpression)?;
 «ENDIF»
 «IF pi.primarytyp=='TRYCATCHFINALYEXPRESSION'»
-XTryCatchFinallyExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XTryCatchFinallyExpression}
   'try'
   expression=«getParentExpression(pi)»
@@ -449,28 +436,23 @@ XTryCatchFinallyExpression returns «getParentExpression(pi)» hidden(SL_COMMENT
 );
 «ENDIF»
 «IF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
-XParenthesizedExpression returns «pi.construct» hidden(SL_COMMENT,WS):
+«pi.construct» returns «pi.construct» hidden(SL_COMMENT,WS):
   '(' «pi.construct» ')';
 «ENDIF»'''
 
 /* Literal */
 def CharSequence compile(com.euclideanspace.xgener.gen.Literal p) '''
 // start of rules for literal=«p.name»
-  XLiteral returns XExpression hidden(SL_COMMENT,WS):
-    XCollectionLiteral |
-    XClosure |
-    XBooleanLiteral |
-    XNumberLiteral |
-    XNullLiteral |
-    XStringLiteral |
-    XTypeLiteral
-  ;
+XLiteral returns XExpression hidden(SL_COMMENT,WS):
+«FOR x:p.inner SEPARATOR ' |'»
+  «IF x.construct != null»«x.construct»«ENDIF»
+«ENDFOR»;
 
-  «FOR x:p.inner SEPARATOR '\n'»
+«FOR x:p.inner SEPARATOR '\n'»
   «IF x.construct != null»
   «compile(x)»
   «ENDIF»
-  «ENDFOR»
+«ENDFOR»
 // end of rules for literal=«p.name»
 '''
 
@@ -480,41 +462,41 @@ def CharSequence compile(com.euclideanspace.xgener.gen.LiteralInner pi) '''
 
 «ENDIF»
 «IF pi.primarytyp=='CLOSURE'»
-XClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({XClosure}
   '[')
   =>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
   expression=XExpressionInClosure
   ']';
 
-XExpressionInClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBlockExpression}
   (expressions+=XExpressionOrVarDeclaration ';'?)*
 ;
 
-XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({XClosure} (declaredFormalParameters+=ID
     (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')
   expression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='BOOLEANLITERAL'»
-XBooleanLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBooleanLiteral} ('false' | isTrue?='true');
 «ENDIF»
 «IF pi.primarytyp=='NUMBERLITERAL'»
-XNumberLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XNumberLiteral} value=Number;
 «ENDIF»
 «IF pi.primarytyp=='NULLLITERAL'»
-XNullLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XNullLiteral} 'null';
 «ENDIF»
 «IF pi.primarytyp=='STRINGLITERAL'»
-XStringLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XStringLiteral} value=STRING;
 «ENDIF»
 «IF pi.primarytyp=='TYPELITERAL'»
-XTypeLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XTypeLiteral} 'typeof' '(' type=ID (arrayDimensions+=ArrayBrackets)* ')'
 ;
 «ENDIF»'''
