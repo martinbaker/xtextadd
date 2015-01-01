@@ -28,7 +28,7 @@ Member returns EuclidMember hidden(SL_COMMENT,WS):
   //{EuclidField.annotationInfo = current}
   //visibility=Visibility?
   (
-  	(extension?='extension' (final?='val' | 'var')? type=ID name1=ValidID?
+    (extension?='extension' (final?='val' | 'var')? type=ID name1=ValidID?
       | static?='static'? (type=ID | (final?='val' | 'var')) name2=ValidID)
     ('=' initialValue=XExpression)? ';'?
     //| {EuclidInnerClass.annotationInfo = current}
