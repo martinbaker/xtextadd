@@ -5,9 +5,10 @@ package com.euclideanspace.xgener.gen.impl;
 import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
+import com.euclideanspace.xgener.gen.Literal;
 import com.euclideanspace.xgener.gen.Model;
+import com.euclideanspace.xgener.gen.Primary;
 import com.euclideanspace.xgener.gen.Procedure;
-import com.euclideanspace.xgener.gen.Statement;
 
 import java.util.Collection;
 
@@ -32,7 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getClas <em>Clas</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getProc <em>Proc</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getStatem <em>Statem</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getPrim <em>Prim</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getLit <em>Lit</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
@@ -62,14 +64,24 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EList<Procedure> proc;
 
   /**
-   * The cached value of the '{@link #getStatem() <em>Statem</em>}' containment reference list.
+   * The cached value of the '{@link #getPrim() <em>Prim</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStatem()
+   * @see #getPrim()
    * @generated
    * @ordered
    */
-  protected EList<Statement> statem;
+  protected EList<Primary> prim;
+
+  /**
+   * The cached value of the '{@link #getLit() <em>Lit</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLit()
+   * @generated
+   * @ordered
+   */
+  protected EList<Literal> lit;
 
   /**
    * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference list.
@@ -135,13 +147,27 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Statement> getStatem()
+  public EList<Primary> getPrim()
   {
-    if (statem == null)
+    if (prim == null)
     {
-      statem = new EObjectContainmentEList<Statement>(Statement.class, this, GenPackage.MODEL__STATEM);
+      prim = new EObjectContainmentEList<Primary>(Primary.class, this, GenPackage.MODEL__PRIM);
     }
-    return statem;
+    return prim;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Literal> getLit()
+  {
+    if (lit == null)
+    {
+      lit = new EObjectContainmentEList<Literal>(Literal.class, this, GenPackage.MODEL__LIT);
+    }
+    return lit;
   }
 
   /**
@@ -172,8 +198,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return ((InternalEList<?>)getClas()).basicRemove(otherEnd, msgs);
       case GenPackage.MODEL__PROC:
         return ((InternalEList<?>)getProc()).basicRemove(otherEnd, msgs);
-      case GenPackage.MODEL__STATEM:
-        return ((InternalEList<?>)getStatem()).basicRemove(otherEnd, msgs);
+      case GenPackage.MODEL__PRIM:
+        return ((InternalEList<?>)getPrim()).basicRemove(otherEnd, msgs);
+      case GenPackage.MODEL__LIT:
+        return ((InternalEList<?>)getLit()).basicRemove(otherEnd, msgs);
       case GenPackage.MODEL__EXP:
         return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
     }
@@ -194,8 +222,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return getClas();
       case GenPackage.MODEL__PROC:
         return getProc();
-      case GenPackage.MODEL__STATEM:
-        return getStatem();
+      case GenPackage.MODEL__PRIM:
+        return getPrim();
+      case GenPackage.MODEL__LIT:
+        return getLit();
       case GenPackage.MODEL__EXP:
         return getExp();
     }
@@ -221,9 +251,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         getProc().clear();
         getProc().addAll((Collection<? extends Procedure>)newValue);
         return;
-      case GenPackage.MODEL__STATEM:
-        getStatem().clear();
-        getStatem().addAll((Collection<? extends Statement>)newValue);
+      case GenPackage.MODEL__PRIM:
+        getPrim().clear();
+        getPrim().addAll((Collection<? extends Primary>)newValue);
+        return;
+      case GenPackage.MODEL__LIT:
+        getLit().clear();
+        getLit().addAll((Collection<? extends Literal>)newValue);
         return;
       case GenPackage.MODEL__EXP:
         getExp().clear();
@@ -249,8 +283,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case GenPackage.MODEL__PROC:
         getProc().clear();
         return;
-      case GenPackage.MODEL__STATEM:
-        getStatem().clear();
+      case GenPackage.MODEL__PRIM:
+        getPrim().clear();
+        return;
+      case GenPackage.MODEL__LIT:
+        getLit().clear();
         return;
       case GenPackage.MODEL__EXP:
         getExp().clear();
@@ -273,8 +310,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return clas != null && !clas.isEmpty();
       case GenPackage.MODEL__PROC:
         return proc != null && !proc.isEmpty();
-      case GenPackage.MODEL__STATEM:
-        return statem != null && !statem.isEmpty();
+      case GenPackage.MODEL__PRIM:
+        return prim != null && !prim.isEmpty();
+      case GenPackage.MODEL__LIT:
+        return lit != null && !lit.isEmpty();
       case GenPackage.MODEL__EXP:
         return exp != null && !exp.isEmpty();
     }

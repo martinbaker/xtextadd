@@ -90,11 +90,6 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createProcedureAdapter();
       }
       @Override
-      public Adapter caseStatement(Statement object)
-      {
-        return createStatementAdapter();
-      }
-      @Override
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
@@ -118,6 +113,26 @@ public class GenAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMultString(MultString object)
       {
         return createMultStringAdapter();
+      }
+      @Override
+      public Adapter casePrimary(Primary object)
+      {
+        return createPrimaryAdapter();
+      }
+      @Override
+      public Adapter casePrimaryInner(PrimaryInner object)
+      {
+        return createPrimaryInnerAdapter();
+      }
+      @Override
+      public Adapter caseLiteral(Literal object)
+      {
+        return createLiteralAdapter();
+      }
+      @Override
+      public Adapter caseLiteralInner(LiteralInner object)
+      {
+        return createLiteralInnerAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -182,21 +197,6 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createProcedureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Statement <em>Statement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.euclideanspace.xgener.gen.Statement
-   * @generated
-   */
-  public Adapter createStatementAdapter()
   {
     return null;
   }
@@ -272,6 +272,66 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMultStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Primary <em>Primary</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.Primary
+   * @generated
+   */
+  public Adapter createPrimaryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.PrimaryInner <em>Primary Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.PrimaryInner
+   * @generated
+   */
+  public Adapter createPrimaryInnerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.Literal
+   * @generated
+   */
+  public Adapter createLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.LiteralInner <em>Literal Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.LiteralInner
+   * @generated
+   */
+  public Adapter createLiteralInnerAdapter()
   {
     return null;
   }

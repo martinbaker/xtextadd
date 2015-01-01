@@ -4,12 +4,15 @@ import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.InnerPrecedence;
+import com.euclideanspace.xgener.gen.Literal;
+import com.euclideanspace.xgener.gen.LiteralInner;
 import com.euclideanspace.xgener.gen.Model;
 import com.euclideanspace.xgener.gen.MultID;
 import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.Precedence;
+import com.euclideanspace.xgener.gen.Primary;
+import com.euclideanspace.xgener.gen.PrimaryInner;
 import com.euclideanspace.xgener.gen.Procedure;
-import com.euclideanspace.xgener.gen.Statement;
 import com.euclideanspace.xgener.services.GenGrammarAccess;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -48,6 +51,18 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GenPackage.LITERAL:
+				if(context == grammarAccess.getLiteralRule()) {
+					sequence_Literal(context, (Literal) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.LITERAL_INNER:
+				if(context == grammarAccess.getLiteralInnerRule()) {
+					sequence_LiteralInner(context, (LiteralInner) semanticObject); 
+					return; 
+				}
+				else break;
 			case GenPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
@@ -72,15 +87,21 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case GenPackage.PROCEDURE:
-				if(context == grammarAccess.getProcedureRule()) {
-					sequence_Procedure(context, (Procedure) semanticObject); 
+			case GenPackage.PRIMARY:
+				if(context == grammarAccess.getPrimaryRule()) {
+					sequence_Primary(context, (Primary) semanticObject); 
 					return; 
 				}
 				else break;
-			case GenPackage.STATEMENT:
-				if(context == grammarAccess.getStatementRule()) {
-					sequence_Statement(context, (Statement) semanticObject); 
+			case GenPackage.PRIMARY_INNER:
+				if(context == grammarAccess.getPrimaryInnerRule()) {
+					sequence_PrimaryInner(context, (PrimaryInner) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.PROCEDURE:
+				if(context == grammarAccess.getProcedureRule()) {
+					sequence_Procedure(context, (Procedure) semanticObject); 
 					return; 
 				}
 				else break;
@@ -126,7 +147,33 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (clas+=ClassType | proc+=Procedure | statem+=Statement | exp+=Expression)*
+	 *     (
+	 *         (primarytyp='COLLECTIONLITERAL' construct=ID) | 
+	 *         (primarytyp='CLOSURE' construct=ID) | 
+	 *         (primarytyp='BOOLEANLITERAL' construct=ID) | 
+	 *         (primarytyp='NUMBERLITERAL' construct=ID) | 
+	 *         (primarytyp='NULLLITERAL' construct=ID) | 
+	 *         (primarytyp='STRINGLITERAL' construct=ID) | 
+	 *         (primarytyp='TYPELITERAL' construct=ID)
+	 *     )
+	 */
+	protected void sequence_LiteralInner(EObject context, LiteralInner semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID inner+=LiteralInner*)
+	 */
+	protected void sequence_Literal(EObject context, Literal semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (clas+=ClassType | proc+=Procedure | prim+=Primary | lit+=Literal | exp+=Expression)*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -168,14 +215,57 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         ) | 
 	 *         (ruletyp='OUTER' rule=ID feature1=ID? par1=ID inner+=InnerPrecedence+) | 
 	 *         (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID) | 
-	 *         (ruletyp='LITERAL' rule=ID (literal='INT' | literal='STRING' | literal='BOOL' | literal='FLOAT')) | 
 	 *         (ruletyp='BRACKET' rule=ID bracket=ID) | 
 	 *         (ruletyp='BRACES' rule=ID braces=ID) | 
 	 *         (ruletyp='PARENTHESIS' rule=ID parenthesis=ID) | 
-	 *         (ruletyp='ANGLE' rule=ID angle=ID)
+	 *         (ruletyp='ANGLE' rule=ID angle=ID) | 
+	 *         (
+	 *             ruletyp='MEMBERFEATURE' 
+	 *             rule=ID 
+	 *             feature1=ID? 
+	 *             par1=ID 
+	 *             infix=MultString 
+	 *             feature2=ID? 
+	 *             par2=ID
+	 *         )
 	 *     )
 	 */
 	protected void sequence_Precedence(EObject context, Precedence semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (primarytyp='CONSTRUCTOR' construct=ID) | 
+	 *         (primarytyp='BLOCK' construct=ID) | 
+	 *         (primarytyp='SWITCH' construct=ID) | 
+	 *         (primarytyp='CASEPART' construct=ID) | 
+	 *         (primarytyp='SYNCHRONIZED' construct=ID) | 
+	 *         (primarytyp='FEATURECALL' construct=ID) | 
+	 *         (primarytyp='IFEXPRESSION' construct=ID) | 
+	 *         (primarytyp='FOREXPRESSION' construct=ID) | 
+	 *         (primarytyp='BASICFORLOOPEXPRESSION' construct=ID) | 
+	 *         (primarytyp='WHILEEXPRESSION' construct=ID) | 
+	 *         (primarytyp='DOWHILEEXPRESSION' construct=ID) | 
+	 *         (primarytyp='THROWEXPRESSION' construct=ID) | 
+	 *         (primarytyp='RETURNEXPRESSION' construct=ID) | 
+	 *         (primarytyp='TRYCATCHFINALYEXPRESSION' construct=ID) | 
+	 *         (primarytyp='PARENTHESIZEDEXPRESSION' construct=ID) | 
+	 *         (primarytyp='LITERALEXPRESSION' construct=ID)
+	 *     )
+	 */
+	protected void sequence_PrimaryInner(EObject context, PrimaryInner semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID inner+=PrimaryInner*)
+	 */
+	protected void sequence_Primary(EObject context, Primary semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -196,15 +286,6 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_Procedure(EObject context, Procedure semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID ((rep=ID until=ID) | (while=ID do=ID) | for=ID | (var=ID ex=ID?) | (val=ID ex=ID)))
-	 */
-	protected void sequence_Statement(EObject context, Statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

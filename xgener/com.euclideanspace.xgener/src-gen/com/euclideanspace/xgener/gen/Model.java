@@ -16,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getClas <em>Clas</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getProc <em>Proc</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.Model#getStatem <em>Statem</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Model#getPrim <em>Prim</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Model#getLit <em>Lit</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
@@ -60,20 +61,36 @@ public interface Model extends EObject
   EList<Procedure> getProc();
 
   /**
-   * Returns the value of the '<em><b>Statem</b></em>' containment reference list.
-   * The list contents are of type {@link com.euclideanspace.xgener.gen.Statement}.
+   * Returns the value of the '<em><b>Prim</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.Primary}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Statem</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Prim</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Statem</em>' containment reference list.
-   * @see com.euclideanspace.xgener.gen.GenPackage#getModel_Statem()
+   * @return the value of the '<em>Prim</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getModel_Prim()
    * @model containment="true"
    * @generated
    */
-  EList<Statement> getStatem();
+  EList<Primary> getPrim();
+
+  /**
+   * Returns the value of the '<em><b>Lit</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.Literal}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Lit</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lit</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getModel_Lit()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Literal> getLit();
 
   /**
    * Returns the value of the '<em><b>Exp</b></em>' containment reference list.

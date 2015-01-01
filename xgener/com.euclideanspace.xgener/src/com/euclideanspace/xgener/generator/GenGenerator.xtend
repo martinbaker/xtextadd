@@ -10,6 +10,8 @@ import com.euclideanspace.xgener.gen.Model
 import com.euclideanspace.xgener.gen.Expression
 import org.eclipse.emf.ecore.EObject
 import com.euclideanspace.xgener.gen.Precedence
+import com.euclideanspace.xgener.gen.Primary
+import com.euclideanspace.xgener.gen.Literal
 
 /**
  * Generates code from your model files on save.
@@ -70,11 +72,16 @@ class GenGenerator implements IGenerator {
      * gets the name of the container
      */
     def String getParentExpression(EObject child) {
-      var Expression e=null;
-      var String s="error";
+      var String s="gen_error";
       if (child.eContainer() instanceof Expression) {
-        e= child.eContainer() as Expression;
+        val Expression e= child.eContainer() as Expression;
         s=e.name;
+      } else if (child.eContainer() instanceof Primary) {
+        val Primary f= child.eContainer() as Primary;
+        s=f.name;
+      } else if (child.eContainer() instanceof Literal) {
+        val Literal g= child.eContainer() as Literal;
+        s=g.name;
       }
       return s;
     }
@@ -124,13 +131,16 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Model hidden(SL_COMMENT,WS):
   m+=Member*
 ;
-          «FOR x:model.clas»«IF x.name != null»«compile(x)»«ENDIF»
-          «ENDFOR»
-          «FOR x:model.proc»«IF x.name != null»«compile(x)»«ENDIF»
-          «ENDFOR»
-        
-          «FOR x:model.statem»«IF x.name != null»«compile(x)»«ENDIF»
-          «ENDFOR»
+
+«FOR x:model.clas»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
+«FOR x:model.proc»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
+
+«FOR x:model.prim»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
+«FOR x:model.lit»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
 
 Parameter returns GenerParameter:
   //annotations+=XAnnotation*
@@ -138,19 +148,19 @@ Parameter returns GenerParameter:
 
 
 XAssignment returns XExpression hidden(SL_COMMENT,WS):
-  {XAssignment} feature=ID OpSingleAssign value=XAssignment |
+  {XAssignment} feature=ID '=' value=XAssignment |
   XOrExpression (
   =>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
   )?;
 
-OpSingleAssign hidden(SL_COMMENT,WS):
-  '='
-;
+//OpSingleAssign hidden(SL_COMMENT,WS):
+//  '='
+//;
 
 OpMultiAssign hidden(SL_COMMENT,WS):
   '+=' | '-=' | '*=' | '/=' | '%=' |
-  '<' '<' '=' |
-  '>' '>'? '>=';
+  '<' | '<' | '=' |
+  '>' | '>'? | '>=';
 
 XCollectionLiteral hidden(SL_COMMENT,WS):
   XSetLiteral | XListLiteral
@@ -211,13 +221,13 @@ terminal ANY_OTHER: .;
 
     /* Class */
     def CharSequence compile(com.euclideanspace.xgener.gen.ClassType c) '''
-// start of rules for «c.name»
-// end of rules for «c.name»
+// start of rules for ClassType=«c.name»
+// end of rules for ClassType=«c.name»
 '''
  
     /* Procedure */
     def CharSequence compile(com.euclideanspace.xgener.gen.Procedure p) '''
-// start of rules for «p.name»
+// start of rules for Procedure=«p.name»
 /*
 * This is an inner element inside a class, interface or enum, such as:
 * 'val' or 'var' returns GenerField
@@ -232,194 +242,73 @@ Member returns GenerMember hidden(SL_COMMENT,WS):
     (
       (extension?='extension' (final?='val' | 'var')? type=ID name1=ValidID?
         | static?='static'? (type=ID | (final?='val' | 'var')) name2=ValidID)
-        ('=' initialValue=XExpression)? ';'?
-          //| {GenerInnerClass.annotationInfo = current}
-          'class' name=ValidID ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
-            ("extends" extends=ID)?
-            ('implements' implements+=ID (',' ID)*)?
-            '{' (members+=Member)* '}'
-          ) | (
-            //| {GenerFunction.annotationInfo = current}
-            ('def' | override?='override') /*visibility=Visibility?*/ static?='static'? (dispatch?='dispatch'?)
-            ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
-              ( /* =>(returnType=ID createExtensionInfo=CreateExtensionInfo name=ValidID '(')
-                |*/ =>(returnType=ID name3=ValidID '(')
-                //| =>(createExtensionInfo=CreateExtensionInfo name=ValidID '(')
-              | name4=ValidID '('
-              )
-            (parameters+=Parameter (',' parameters+=Parameter)*)? ')'
-              ('throws' exceptions+=ID (',' exceptions+=ID)*)?
-                (expression=XBlockExpression)?
-              ) | (
-                /*| {GenerConstructor.annotationInfo = current}
-                visibility=Visibility?*/ 'new'
-                ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
-                 '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')'
-                   ('throws' exceptions+=ID (',' exceptions+=ID)*)?
-                     expression=XBlockExpression
-                   )
+      ('=' initialValue=XExpression)? ';'?
+        //| {GenerInnerClass.annotationInfo = current}
+        'class' name=ValidID ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
+        ("extends" extends=ID)?
+        ('implements' implements+=ID (',' ID)*)?
+          '{' (members+=Member)* '}'
+    ) | (
+      //| {GenerFunction.annotationInfo = current}
+      ('def' | override?='override') /*visibility=Visibility?*/ static?='static'? (dispatch?='dispatch'?)
+      ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
+      ( /* =>(returnType=ID createExtensionInfo=CreateExtensionInfo name=ValidID '(')
+        |*/ =>(returnType=ID name3=ValidID '(')
+        //| =>(createExtensionInfo=CreateExtensionInfo name=ValidID '(')
+        | name4=ValidID '('
+      )
+      (parameters+=Parameter (',' parameters+=Parameter)*)? ')'
+      ('throws' exceptions+=ID (',' exceptions+=ID)*)?
+      (expression=XBlockExpression)?
+    ) | (
+      /*| {GenerConstructor.annotationInfo = current}
+        visibility=Visibility?*/ 'new'
+      ('<' typeParameters+=ID (',' typeParameters+=ID)* '>')?
+        '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')'
+      ('throws' exceptions+=ID (',' exceptions+=ID)*)?
+      expression=XBlockExpression
+    )
   ) ;
 
-// end of rules for «p.name»
+// end of rules for Procedure=«p.name»
 
-'''
- 
-    /* Statement */
-    def CharSequence compile(com.euclideanspace.xgener.gen.Statement s) '''
-// start of rules for «s.name»
+''' 
+/* Expression */
+def CharSequence compile(com.euclideanspace.xgener.gen.Expression e) '''
+// start of rules for Expression=«e.name»
 
-/* s.name is same as e.name
-*/
-«s.name» hidden(SL_COMMENT,WS) :
-  XAssignment;
-
-XPrimaryExpression returns «s.name» hidden(SL_COMMENT,WS):
-  XConstructorCall |
-  XBlockExpression |
-  XSwitchExpression |
-  XSynchronizedExpression |
-  XFeatureCall |
-  XLiteral |
-  XIfExpression |
-  XForLoopExpression |
-  XBasicForLoopExpression |
-  XWhileExpression |
-  XDoWhileExpression |
-  XThrowExpression |
-  XReturnExpression |
-  XTryCatchFinallyExpression |
-  XParenthesizedExpression;
-  XLiteral returns XExpression hidden(SL_COMMENT,WS):
-  XCollectionLiteral |
-  XClosure |
-  XBooleanLiteral |
-  XNumberLiteral |
-  XNullLiteral |
-  XStringLiteral |
-  XTypeLiteral
-;
-
-XClosure returns «s.name» hidden(SL_COMMENT,WS):
-  =>({XClosure}
-  '[')
-  =>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
-  expression=XExpressionInClosure
-  ']';
-
-XExpressionInClosure returns «s.name» hidden(SL_COMMENT,WS):
-  {XBlockExpression}
-  (expressions+=XExpressionOrVarDeclaration ';'?)*
-;
-
-XShortClosure returns «s.name» hidden(SL_COMMENT,WS):
-  =>({XClosure} (declaredFormalParameters+=ID
-    (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')
-  expression=«s.name»;
-
-XParenthesizedExpression returns «s.name» hidden(SL_COMMENT,WS):
-  '(' «s.name» ')';
-
-XIfExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XIfExpression}
-  'if' '(' if=«s.name» ')'
-  then=XExpression
-  (=>'else' else=«s.name»)?;
-
-XSwitchExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XSwitchExpression}
-  'switch' (=>('(' declaredParam=ID ':') switch=«s.name» ')'
-  | =>(declaredParam=ID ':')? switch=«s.name») '{'
-  (cases+=XCasePart)*
-  ('default' ':' default=«s.name» )?
-'}';
-
-XCasePart hidden(SL_COMMENT,WS):
-  {XCasePart}
-  typeGuard=ID? ('case' case=XExpression)?
-  (':' then=«s.name» | fallThrough?=',') ;
-  
-XForLoopExpression returns «s.name» hidden(SL_COMMENT,WS):
-  =>({XForLoopExpression}
-  'for' '(' declaredParam=ID ':') forExpression=«s.name» ')'
-  eachExpression=«s.name»;
-
-XBasicForLoopExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XBasicForLoopExpression}
-  'for' '('(initExpressions+=XExpressionOrVarDeclaration
-    (',' initExpressions+=XExpressionOrVarDeclaration)*)? ';'
-  expression=XExpression? ';'
-  (updateExpressions+=XExpression (',' updateExpressions+=XExpression)*)? ')'
-  eachExpression=XExpression;
-
-XWhileExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XWhileExpression}
-  'while' '(' predicate=«s.name» ')'
-  body=XExpression
-;
-
-XDoWhileExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XDoWhileExpression}
-  'do'
-  body=XExpression
-  'while' '(' predicate=«s.name» ')';
-
-XBlockExpression returns «s.name» hidden(SL_COMMENT,WS):
-  {XBlockExpression}
-  '{'
-  (expressions+=XExpressionOrVarDeclaration ';'?)*
-  '}';
-
-// end of rules for «s.name»
-'''
- 
-    /* Expression */
-    def CharSequence compile(com.euclideanspace.xgener.gen.Expression e) '''
-// start of rules for «e.name»
-
-«e.name» hidden(SL_COMMENT,WS) :
-  XAssignment;
-
-«FOR x:e.prec»
+«FOR x:e.prec SEPARATOR '\n'»
   «IF x.rule != null»
-
     «compile(x)»
   «ENDIF»
 «ENDFOR»
+// start of rules for Expression=«e.name»
+'''
 
-XMemberFeatureCall returns «e.name» hidden(SL_COMMENT,WS):
-  XPrimaryExpression
-  (=>({XAssignment.assignable=current} ('.'|explicitStatic?="::") feature=ID OpSingleAssign) value=XAssignment
-  |=>({XMemberFeatureCall.memberCallTarget=current} ("."|nullSafe?="?."|explicitStatic?="::"))
-  ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
-  feature=ID (
-  =>explicitOperationCall?='('
-  (
-  memberCallArguments+=XShortClosure
-  | memberCallArguments+=«e.name» (',' memberCallArguments+=«e.name»)*
-  )?
-  ')')?
-  memberCallArguments+=XClosure?
-)*;
+/* Primary */
+def CharSequence compile(com.euclideanspace.xgener.gen.Primary p) '''
+// start of rules for Primary=«p.name»
 
-XExpressionOrVarDeclaration returns «e.name» hidden(SL_COMMENT,WS):
-  XVariableDeclaration | «e.name»;
+  «p.name» hidden(SL_COMMENT,WS) :
+  XAssignment;
 
-XVariableDeclaration returns «e.name» hidden(SL_COMMENT,WS):
-  {XVariableDeclaration}
-  (writeable?='var'|'val') (=>(type=ID name=ValidID) | name=ValidID) ('=' right=«e.name»)?;
-
-XFeatureCall returns «e.name» hidden(SL_COMMENT,WS):
-  {XFeatureCall}
-  ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
-  feature=IdOrSuper
-  (=>explicitOperationCall?='('
-  (
-  featureCallArguments+=XShortClosure
-  | featureCallArguments+=«e.name» (',' featureCallArguments+=XExpression)*
-  )?
-  ')')?
-  featureCallArguments+=XClosure?;
-
+  XPrimaryExpression returns «p.name» hidden(SL_COMMENT,WS):
+    XConstructorCall |
+    XBlockExpression |
+    XSwitchExpression |
+    XSynchronizedExpression |
+    XFeatureCall |
+    XLiteral |
+    XIfExpression |
+    XForLoopExpression |
+    XBasicForLoopExpression |
+    XWhileExpression |
+    XDoWhileExpression |
+    XThrowExpression |
+    XReturnExpression |
+    XTryCatchFinallyExpression |
+    XParenthesizedExpression;
+    
 FeatureCallID:
   ValidID | 'extends' | 'static' | 'import' | 'extension'
 ;
@@ -428,7 +317,38 @@ IdOrSuper :
   FeatureCallID | 'super'
 ;
 
-XConstructorCall returns «e.name» hidden(SL_COMMENT,WS):
+XExpressionOrVarDeclaration returns «p.name» hidden(SL_COMMENT,WS):
+  XVariableDeclaration | «p.name»;
+
+XVariableDeclaration returns «p.name» hidden(SL_COMMENT,WS):
+  {XVariableDeclaration}
+  (writeable?='var'|'val') (=>(type=ID name=ValidID) | name=ValidID) ('=' right=«p.name»)?;
+
+XFeatureCall returns «p.name» hidden(SL_COMMENT,WS):
+  {XFeatureCall}
+  ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
+  feature=IdOrSuper
+  (=>explicitOperationCall?='('
+  (
+  featureCallArguments+=XShortClosure
+  | featureCallArguments+=«p.name» (',' featureCallArguments+=XExpression)*
+  )?
+  ')')?
+  featureCallArguments+=XClosure?;
+
+  «FOR x:p.inner SEPARATOR '\n'»
+  «IF x.construct != null»
+  «compile(x)»
+  «ENDIF»
+  «ENDFOR»
+  
+// end of rules for Primary=«p.name»
+'''
+    
+/* Inner Primary */
+def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
+«IF pi.primarytyp=='CONSTRUCTOR'»
+XConstructorCall returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XConstructorCall}
   'new' constructor=ID
   (=>'<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
@@ -439,45 +359,165 @@ XConstructorCall returns «e.name» hidden(SL_COMMENT,WS):
   )?
   ')')?
   arguments+=XClosure?;
+«ENDIF»
+«IF pi.primarytyp=='BLOCK'»
+XBlockExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XBlockExpression}
+  '{'
+  (expressions+=XExpressionOrVarDeclaration ';'?)*
+  '}';
+«ENDIF»
+«IF pi.primarytyp=='SWITCH'»
+XSwitchExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XSwitchExpression}
+  'switch' (=>('(' declaredParam=ID ':') switch=«getParentExpression(pi)» ')'
+  | =>(declaredParam=ID ':')? switch=«getParentExpression(pi)») '{'
+  (cases+=XCasePart)*
+  ('default' ':' default=«getParentExpression(pi)» )?
+'}';
+«ENDIF»
+«IF pi.primarytyp=='CASEPART'»
+XCasePart hidden(SL_COMMENT,WS):
+  {XCasePart}
+  typeGuard=ID? ('case' case=XExpression)?
+  (':' then=«getParentExpression(pi)» | fallThrough?=',') ;
+«ENDIF»
+«IF pi.primarytyp=='SYNCHRONIZED'»
+XSynchronizedExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  =>({XSynchronizedExpression}
+  'synchronized' '(') param=XExpression ')' expression=«getParentExpression(pi)»;
+«ENDIF»
+«IF pi.primarytyp=='FEATURECALL'»
 
-XBooleanLiteral returns «e.name» hidden(SL_COMMENT,WS):
-  {XBooleanLiteral} ('false' | isTrue?='true');
+«ENDIF»
+«IF pi.primarytyp=='LITERALEXPRESSION'»
 
-XNullLiteral returns «e.name» hidden(SL_COMMENT,WS):
-  {XNullLiteral} 'null';
-
-XNumberLiteral returns «e.name» hidden(SL_COMMENT,WS):
-  {XNumberLiteral} value=Number;
-
-XStringLiteral returns «e.name» hidden(SL_COMMENT,WS):
-  {XStringLiteral} value=STRING;
-
-XTypeLiteral returns «e.name» hidden(SL_COMMENT,WS):
-  {XTypeLiteral} 'typeof' '(' type=ID (arrayDimensions+=ArrayBrackets)* ')'
+«ENDIF»
+«IF pi.primarytyp=='IFEXPRESSION'»
+XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XIfExpression}
+  'if' '(' if=«getParentExpression(pi)» ')'
+  then=XExpression
+  (=>'else' else=«getParentExpression(pi)»)?;
+«ENDIF»
+«IF pi.primarytyp=='FOREXPRESSION'»
+XForLoopExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  =>({XForLoopExpression}
+  'for' '(' declaredParam=ID ':') forExpression=«getParentExpression(pi)» ')'
+  eachExpression=«getParentExpression(pi)»;
+«ENDIF»
+«IF pi.primarytyp=='BASICFORLOOPEXPRESSION'»
+XBasicForLoopExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XBasicForLoopExpression}
+  'for' '('(initExpressions+=XExpressionOrVarDeclaration
+    (',' initExpressions+=XExpressionOrVarDeclaration)*)? ';'
+  expression=XExpression? ';'
+  (updateExpressions+=XExpression (',' updateExpressions+=XExpression)*)? ')'
+  eachExpression=XExpression;
+«ENDIF»
+«IF pi.primarytyp=='WHILEEXPRESSION'»
+XWhileExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XWhileExpression}
+  'while' '(' predicate=«getParentExpression(pi)» ')'
+  body=XExpression
 ;
-
-XThrowExpression returns «e.name» hidden(SL_COMMENT,WS):
+«ENDIF»
+«IF pi.primarytyp=='DOWHILEEXPRESSION'»
+XDoWhileExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XDoWhileExpression}
+  'do'
+  body=XExpression
+  'while' '(' predicate=«getParentExpression(pi)» ')';
+«ENDIF»
+«IF pi.primarytyp=='THROWEXPRESSION'»
+XThrowExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XThrowExpression} 'throw' expression=XExpression;
-
-XReturnExpression returns «e.name» hidden(SL_COMMENT,WS):
+«ENDIF»
+«IF pi.primarytyp=='RETURNEXPRESSION'»
+XReturnExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XReturnExpression} 'return' (->expression=XExpression)?;
-
-XTryCatchFinallyExpression returns «e.name» hidden(SL_COMMENT,WS):
+«ENDIF»
+«IF pi.primarytyp=='TRYCATCHFINALYEXPRESSION'»
+XTryCatchFinallyExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XTryCatchFinallyExpression}
   'try'
-  expression=«e.name»
+  expression=«getParentExpression(pi)»
   (
   catchClauses+=XCatchClause+
   (=>'finally' finallyExpression=XExpression)?
-  | 'finally' finallyExpression=«e.name»
+  | 'finally' finallyExpression=«getParentExpression(pi)»
 );
+«ENDIF»
+«IF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
+XParenthesizedExpression returns «pi.construct» hidden(SL_COMMENT,WS):
+  '(' «pi.construct» ')';
+«ENDIF»'''
 
-XSynchronizedExpression returns «e.name» hidden(SL_COMMENT,WS):
-  =>({XSynchronizedExpression}
-  'synchronized' '(') param=XExpression ')' expression=«e.name»;
+/* Literal */
+def CharSequence compile(com.euclideanspace.xgener.gen.Literal p) '''
+// start of rules for literal=«p.name»
+  XLiteral returns XExpression hidden(SL_COMMENT,WS):
+    XCollectionLiteral |
+    XClosure |
+    XBooleanLiteral |
+    XNumberLiteral |
+    XNullLiteral |
+    XStringLiteral |
+    XTypeLiteral
+  ;
 
-// end of rules for «e.name»
+  «FOR x:p.inner SEPARATOR '\n'»
+  «IF x.construct != null»
+  «compile(x)»
+  «ENDIF»
+  «ENDFOR»
+// end of rules for literal=«p.name»
 '''
+
+/* Inner Literal */
+def CharSequence compile(com.euclideanspace.xgener.gen.LiteralInner pi) '''
+«IF pi.primarytyp=='COLLECTIONLITERAL'»
+
+«ENDIF»
+«IF pi.primarytyp=='CLOSURE'»
+XClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  =>({XClosure}
+  '[')
+  =>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
+  expression=XExpressionInClosure
+  ']';
+
+XExpressionInClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XBlockExpression}
+  (expressions+=XExpressionOrVarDeclaration ';'?)*
+;
+
+XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  =>({XClosure} (declaredFormalParameters+=ID
+    (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')
+  expression=«getParentExpression(pi)»;
+«ENDIF»
+«IF pi.primarytyp=='BOOLEANLITERAL'»
+XBooleanLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XBooleanLiteral} ('false' | isTrue?='true');
+«ENDIF»
+«IF pi.primarytyp=='NUMBERLITERAL'»
+XNumberLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XNumberLiteral} value=Number;
+«ENDIF»
+«IF pi.primarytyp=='NULLLITERAL'»
+XNullLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XNullLiteral} 'null';
+«ENDIF»
+«IF pi.primarytyp=='STRINGLITERAL'»
+XStringLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XStringLiteral} value=STRING;
+«ENDIF»
+«IF pi.primarytyp=='TYPELITERAL'»
+XTypeLiteral returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {XTypeLiteral} 'typeof' '(' type=ID (arrayDimensions+=ArrayBrackets)* ')'
+;
+«ENDIF»'''
 
 /* Precedence, processes one of the following rules:
  * ruletyp rule
@@ -522,6 +562,21 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     ('{'«IF p.braces != null»«p.angle»+=ID (',' «p.braces»+=ID)* «ENDIF»'}');
   «ELSEIF p.ruletyp=='PARENTHESIS'»
     ('('«IF p.parenthesis != null»«p.angle»+=ID (',' «p.parenthesis»+=ID)* «ENDIF»')');
+  «ELSEIF p.ruletyp=='MEMBERFEATURE'»
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
+    ( =>({XAssignment.assignable=current} ('.'|explicitStatic?="::") feature=ID '=') value=XAssignment
+      |=>({XMemberFeatureCall.memberCallTarget=current} ("."|nullSafe?="?."|explicitStatic?="::"))
+      ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
+      feature=ID (
+        =>explicitOperationCall?='('
+        (
+          memberCallArguments+=XShortClosure
+          | memberCallArguments+=«getParentExpression(p)» (',' memberCallArguments+=«getParentExpression(p)»)*
+        )?
+      ')')?
+      memberCallArguments+=XClosure?
+    )*;
   «ENDIF»
 '''
 

@@ -118,17 +118,17 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getStatemStatementParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getPrimPrimaryParserRuleCall_2_0()); 
 	    }
-		lv_statem_2_0=ruleStatement		{
+		lv_prim_2_0=rulePrimary		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
        		add(
        			$current, 
-       			"statem",
-        		lv_statem_2_0, 
-        		"Statement");
+       			"prim",
+        		lv_prim_2_0, 
+        		"Primary");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -137,16 +137,35 @@ ruleModel returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getExpExpressionParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getLitLiteralParserRuleCall_3_0()); 
 	    }
-		lv_exp_3_0=ruleExpression		{
+		lv_lit_3_0=ruleLiteral		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	        }
+       		add(
+       			$current, 
+       			"lit",
+        		lv_lit_3_0, 
+        		"Literal");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getExpExpressionParserRuleCall_4_0()); 
+	    }
+		lv_exp_4_0=ruleExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
        		add(
        			$current, 
        			"exp",
-        		lv_exp_3_0, 
+        		lv_exp_4_0, 
         		"Expression");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -451,251 +470,6 @@ ruleProcedure returns [EObject current=null]
 
 )
 )))*)
-;
-
-
-
-
-
-// Entry rule entryRuleStatement
-entryRuleStatement returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getStatementRule()); }
-	 iv_ruleStatement=ruleStatement 
-	 { $current=$iv_ruleStatement.current; } 
-	 EOF 
-;
-
-// Rule Statement
-ruleStatement returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='STATEMENT' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getStatementAccess().getSTATEMENTKeyword_0());
-    }
-(
-(
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getStatementAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"ID");
-	    }
-
-)
-)((	otherlv_2='REPEAT' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getStatementAccess().getREPEATKeyword_2_0_0());
-    }
-(
-(
-		lv_rep_3_0=RULE_ID
-		{
-			newLeafNode(lv_rep_3_0, grammarAccess.getStatementAccess().getRepIDTerminalRuleCall_2_0_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"rep",
-        		lv_rep_3_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_4='UNTIL' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getStatementAccess().getUNTILKeyword_2_0_2());
-    }
-(
-(
-		lv_until_5_0=RULE_ID
-		{
-			newLeafNode(lv_until_5_0, grammarAccess.getStatementAccess().getUntilIDTerminalRuleCall_2_0_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"until",
-        		lv_until_5_0, 
-        		"ID");
-	    }
-
-)
-))
-    |(	otherlv_6='WHILE' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getStatementAccess().getWHILEKeyword_2_1_0());
-    }
-(
-(
-		lv_while_7_0=RULE_ID
-		{
-			newLeafNode(lv_while_7_0, grammarAccess.getStatementAccess().getWhileIDTerminalRuleCall_2_1_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"while",
-        		lv_while_7_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_8='DO' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getStatementAccess().getDOKeyword_2_1_2());
-    }
-(
-(
-		lv_do_9_0=RULE_ID
-		{
-			newLeafNode(lv_do_9_0, grammarAccess.getStatementAccess().getDoIDTerminalRuleCall_2_1_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"do",
-        		lv_do_9_0, 
-        		"ID");
-	    }
-
-)
-))
-    |(	otherlv_10='FOR' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getStatementAccess().getFORKeyword_2_2_0());
-    }
-(
-(
-		lv_for_11_0=RULE_ID
-		{
-			newLeafNode(lv_for_11_0, grammarAccess.getStatementAccess().getForIDTerminalRuleCall_2_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"for",
-        		lv_for_11_0, 
-        		"ID");
-	    }
-
-)
-))
-    |(	otherlv_12='VAR' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getStatementAccess().getVARKeyword_2_3_0());
-    }
-(
-(
-		lv_var_13_0=RULE_ID
-		{
-			newLeafNode(lv_var_13_0, grammarAccess.getStatementAccess().getVarIDTerminalRuleCall_2_3_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"var",
-        		lv_var_13_0, 
-        		"ID");
-	    }
-
-)
-)(	otherlv_14='=' 
-    {
-    	newLeafNode(otherlv_14, grammarAccess.getStatementAccess().getEqualsSignKeyword_2_3_2_0());
-    }
-(
-(
-		lv_ex_15_0=RULE_ID
-		{
-			newLeafNode(lv_ex_15_0, grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_3_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"ex",
-        		lv_ex_15_0, 
-        		"ID");
-	    }
-
-)
-))?)
-    |(	otherlv_16='VAL' 
-    {
-    	newLeafNode(otherlv_16, grammarAccess.getStatementAccess().getVALKeyword_2_4_0());
-    }
-(
-(
-		lv_val_17_0=RULE_ID
-		{
-			newLeafNode(lv_val_17_0, grammarAccess.getStatementAccess().getValIDTerminalRuleCall_2_4_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"val",
-        		lv_val_17_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_18='=' 
-    {
-    	newLeafNode(otherlv_18, grammarAccess.getStatementAccess().getEqualsSignKeyword_2_4_2());
-    }
-(
-(
-		lv_ex_19_0=RULE_ID
-		{
-			newLeafNode(lv_ex_19_0, grammarAccess.getStatementAccess().getExIDTerminalRuleCall_2_4_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatementRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"ex",
-        		lv_ex_19_0, 
-        		"ID");
-	    }
-
-)
-))))
 ;
 
 
@@ -1331,16 +1105,16 @@ rulePrecedence returns [EObject current=null]
 ))
     |((
 (
-		lv_ruletyp_36_0=	'LITERAL' 
+		lv_ruletyp_36_0=	'BRACKET' 
     {
-        newLeafNode(lv_ruletyp_36_0, grammarAccess.getPrecedenceAccess().getRuletypLITERALKeyword_6_0_0());
+        newLeafNode(lv_ruletyp_36_0, grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_6_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_36_0, "LITERAL");
+       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_36_0, "BRACKET");
 	    }
 
 )
@@ -1364,71 +1138,35 @@ rulePrecedence returns [EObject current=null]
 )
 )(
 (
-(
-		lv_literal_38_1=	'INT' 
-    {
-        newLeafNode(lv_literal_38_1, grammarAccess.getPrecedenceAccess().getLiteralINTKeyword_6_2_0_0());
-    }
- 
-	    {
+		lv_bracket_38_0=RULE_ID
+		{
+			newLeafNode(lv_bracket_38_0, grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_6_2_0()); 
+		}
+		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "literal", lv_literal_38_1, null);
+       		setWithLastConsumed(
+       			$current, 
+       			"bracket",
+        		lv_bracket_38_0, 
+        		"ID");
 	    }
-
-    |		lv_literal_38_2=	'STRING' 
-    {
-        newLeafNode(lv_literal_38_2, grammarAccess.getPrecedenceAccess().getLiteralSTRINGKeyword_6_2_0_1());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPrecedenceRule());
-	        }
-       		setWithLastConsumed($current, "literal", lv_literal_38_2, null);
-	    }
-
-    |		lv_literal_38_3=	'BOOL' 
-    {
-        newLeafNode(lv_literal_38_3, grammarAccess.getPrecedenceAccess().getLiteralBOOLKeyword_6_2_0_2());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPrecedenceRule());
-	        }
-       		setWithLastConsumed($current, "literal", lv_literal_38_3, null);
-	    }
-
-    |		lv_literal_38_4=	'FLOAT' 
-    {
-        newLeafNode(lv_literal_38_4, grammarAccess.getPrecedenceAccess().getLiteralFLOATKeyword_6_2_0_3());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPrecedenceRule());
-	        }
-       		setWithLastConsumed($current, "literal", lv_literal_38_4, null);
-	    }
-
-)
 
 )
 ))
     |((
 (
-		lv_ruletyp_39_0=	'BRACKET' 
+		lv_ruletyp_39_0=	'BRACES' 
     {
-        newLeafNode(lv_ruletyp_39_0, grammarAccess.getPrecedenceAccess().getRuletypBRACKETKeyword_7_0_0());
+        newLeafNode(lv_ruletyp_39_0, grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_7_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_39_0, "BRACKET");
+       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_39_0, "BRACES");
 	    }
 
 )
@@ -1452,9 +1190,9 @@ rulePrecedence returns [EObject current=null]
 )
 )(
 (
-		lv_bracket_41_0=RULE_ID
+		lv_braces_41_0=RULE_ID
 		{
-			newLeafNode(lv_bracket_41_0, grammarAccess.getPrecedenceAccess().getBracketIDTerminalRuleCall_7_2_0()); 
+			newLeafNode(lv_braces_41_0, grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_7_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1462,8 +1200,8 @@ rulePrecedence returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"bracket",
-        		lv_bracket_41_0, 
+       			"braces",
+        		lv_braces_41_0, 
         		"ID");
 	    }
 
@@ -1471,16 +1209,16 @@ rulePrecedence returns [EObject current=null]
 ))
     |((
 (
-		lv_ruletyp_42_0=	'BRACES' 
+		lv_ruletyp_42_0=	'PARENTHESIS' 
     {
-        newLeafNode(lv_ruletyp_42_0, grammarAccess.getPrecedenceAccess().getRuletypBRACESKeyword_8_0_0());
+        newLeafNode(lv_ruletyp_42_0, grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_8_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_42_0, "BRACES");
+       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_42_0, "PARENTHESIS");
 	    }
 
 )
@@ -1504,9 +1242,9 @@ rulePrecedence returns [EObject current=null]
 )
 )(
 (
-		lv_braces_44_0=RULE_ID
+		lv_parenthesis_44_0=RULE_ID
 		{
-			newLeafNode(lv_braces_44_0, grammarAccess.getPrecedenceAccess().getBracesIDTerminalRuleCall_8_2_0()); 
+			newLeafNode(lv_parenthesis_44_0, grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_8_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1514,8 +1252,8 @@ rulePrecedence returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"braces",
-        		lv_braces_44_0, 
+       			"parenthesis",
+        		lv_parenthesis_44_0, 
         		"ID");
 	    }
 
@@ -1523,16 +1261,16 @@ rulePrecedence returns [EObject current=null]
 ))
     |((
 (
-		lv_ruletyp_45_0=	'PARENTHESIS' 
+		lv_ruletyp_45_0=	'ANGLE' 
     {
-        newLeafNode(lv_ruletyp_45_0, grammarAccess.getPrecedenceAccess().getRuletypPARENTHESISKeyword_9_0_0());
+        newLeafNode(lv_ruletyp_45_0, grammarAccess.getPrecedenceAccess().getRuletypANGLEKeyword_9_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_45_0, "PARENTHESIS");
+       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_45_0, "ANGLE");
 	    }
 
 )
@@ -1556,9 +1294,9 @@ rulePrecedence returns [EObject current=null]
 )
 )(
 (
-		lv_parenthesis_47_0=RULE_ID
+		lv_angle_47_0=RULE_ID
 		{
-			newLeafNode(lv_parenthesis_47_0, grammarAccess.getPrecedenceAccess().getParenthesisIDTerminalRuleCall_9_2_0()); 
+			newLeafNode(lv_angle_47_0, grammarAccess.getPrecedenceAccess().getAngleIDTerminalRuleCall_9_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1566,8 +1304,8 @@ rulePrecedence returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"parenthesis",
-        		lv_parenthesis_47_0, 
+       			"angle",
+        		lv_angle_47_0, 
         		"ID");
 	    }
 
@@ -1575,16 +1313,16 @@ rulePrecedence returns [EObject current=null]
 ))
     |((
 (
-		lv_ruletyp_48_0=	'ANGLE' 
+		lv_ruletyp_48_0=	'MEMBERFEATURE' 
     {
-        newLeafNode(lv_ruletyp_48_0, grammarAccess.getPrecedenceAccess().getRuletypANGLEKeyword_10_0_0());
+        newLeafNode(lv_ruletyp_48_0, grammarAccess.getPrecedenceAccess().getRuletypMEMBERFEATUREKeyword_10_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrecedenceRule());
 	        }
-       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_48_0, "ANGLE");
+       		setWithLastConsumed($current, "ruletyp", lv_ruletyp_48_0, "MEMBERFEATURE");
 	    }
 
 )
@@ -1606,11 +1344,11 @@ rulePrecedence returns [EObject current=null]
 	    }
 
 )
-)(
+)((
 (
-		lv_angle_50_0=RULE_ID
+		lv_feature1_50_0=RULE_ID
 		{
-			newLeafNode(lv_angle_50_0, grammarAccess.getPrecedenceAccess().getAngleIDTerminalRuleCall_10_2_0()); 
+			newLeafNode(lv_feature1_50_0, grammarAccess.getPrecedenceAccess().getFeature1IDTerminalRuleCall_10_2_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1618,8 +1356,88 @@ rulePrecedence returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"angle",
-        		lv_angle_50_0, 
+       			"feature1",
+        		lv_feature1_50_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_51='=' 
+    {
+    	newLeafNode(otherlv_51, grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_10_2_1());
+    }
+)?(
+(
+		lv_par1_52_0=RULE_ID
+		{
+			newLeafNode(lv_par1_52_0, grammarAccess.getPrecedenceAccess().getPar1IDTerminalRuleCall_10_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrecedenceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"par1",
+        		lv_par1_52_0, 
+        		"ID");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPrecedenceAccess().getInfixMultStringParserRuleCall_10_4_0()); 
+	    }
+		lv_infix_53_0=ruleMultString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPrecedenceRule());
+	        }
+       		set(
+       			$current, 
+       			"infix",
+        		lv_infix_53_0, 
+        		"MultString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)((
+(
+		lv_feature2_54_0=RULE_ID
+		{
+			newLeafNode(lv_feature2_54_0, grammarAccess.getPrecedenceAccess().getFeature2IDTerminalRuleCall_10_5_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrecedenceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"feature2",
+        		lv_feature2_54_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_55='=' 
+    {
+    	newLeafNode(otherlv_55, grammarAccess.getPrecedenceAccess().getEqualsSignKeyword_10_5_1());
+    }
+)?(
+(
+		lv_par2_56_0=RULE_ID
+		{
+			newLeafNode(lv_par2_56_0, grammarAccess.getPrecedenceAccess().getPar2IDTerminalRuleCall_10_6_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrecedenceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"par2",
+        		lv_par2_56_0, 
         		"ID");
 	    }
 
@@ -2285,6 +2103,950 @@ ruleMultString returns [EObject current=null]
     {
     	newLeafNode(otherlv_4, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_2());
     }
+)))
+;
+
+
+
+
+
+// Entry rule entryRulePrimary
+entryRulePrimary returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPrimaryRule()); }
+	 iv_rulePrimary=rulePrimary 
+	 { $current=$iv_rulePrimary.current; } 
+	 EOF 
+;
+
+// Rule Primary
+rulePrimary returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='PRIMARY' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getPrimaryAccess().getPRIMARYKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getPrimaryAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPrimaryAccess().getInnerPrimaryInnerParserRuleCall_2_0()); 
+	    }
+		lv_inner_2_0=rulePrimaryInner		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPrimaryRule());
+	        }
+       		add(
+       			$current, 
+       			"inner",
+        		lv_inner_2_0, 
+        		"PrimaryInner");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
+;
+
+
+
+
+
+// Entry rule entryRulePrimaryInner
+entryRulePrimaryInner returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPrimaryInnerRule()); }
+	 iv_rulePrimaryInner=rulePrimaryInner 
+	 { $current=$iv_rulePrimaryInner.current; } 
+	 EOF 
+;
+
+// Rule PrimaryInner
+rulePrimaryInner returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(((
+(
+		lv_primarytyp_0_0=	'CONSTRUCTOR' 
+    {
+        newLeafNode(lv_primarytyp_0_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypCONSTRUCTORKeyword_0_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_0_0, "CONSTRUCTOR");
+	    }
+
+)
+)(
+(
+		lv_construct_1_0=RULE_ID
+		{
+			newLeafNode(lv_construct_1_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_1_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_2_0=	'BLOCK' 
+    {
+        newLeafNode(lv_primarytyp_2_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypBLOCKKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_2_0, "BLOCK");
+	    }
+
+)
+)(
+(
+		lv_construct_3_0=RULE_ID
+		{
+			newLeafNode(lv_construct_3_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_3_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_4_0=	'SWITCH' 
+    {
+        newLeafNode(lv_primarytyp_4_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypSWITCHKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_4_0, "SWITCH");
+	    }
+
+)
+)(
+(
+		lv_construct_5_0=RULE_ID
+		{
+			newLeafNode(lv_construct_5_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_2_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_5_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_6_0=	'CASEPART' 
+    {
+        newLeafNode(lv_primarytyp_6_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypCASEPARTKeyword_3_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_6_0, "CASEPART");
+	    }
+
+)
+)(
+(
+		lv_construct_7_0=RULE_ID
+		{
+			newLeafNode(lv_construct_7_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_7_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_8_0=	'SYNCHRONIZED' 
+    {
+        newLeafNode(lv_primarytyp_8_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypSYNCHRONIZEDKeyword_4_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_8_0, "SYNCHRONIZED");
+	    }
+
+)
+)(
+(
+		lv_construct_9_0=RULE_ID
+		{
+			newLeafNode(lv_construct_9_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_9_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_10_0=	'FEATURECALL' 
+    {
+        newLeafNode(lv_primarytyp_10_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypFEATURECALLKeyword_5_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_10_0, "FEATURECALL");
+	    }
+
+)
+)(
+(
+		lv_construct_11_0=RULE_ID
+		{
+			newLeafNode(lv_construct_11_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_5_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_11_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_12_0=	'IFEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_12_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypIFEXPRESSIONKeyword_6_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_12_0, "IFEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_13_0=RULE_ID
+		{
+			newLeafNode(lv_construct_13_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_6_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_13_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_14_0=	'FOREXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_14_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypFOREXPRESSIONKeyword_7_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_14_0, "FOREXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_15_0=RULE_ID
+		{
+			newLeafNode(lv_construct_15_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_7_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_15_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_16_0=	'BASICFORLOOPEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_16_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypBASICFORLOOPEXPRESSIONKeyword_8_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_16_0, "BASICFORLOOPEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_17_0=RULE_ID
+		{
+			newLeafNode(lv_construct_17_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_8_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_17_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_18_0=	'WHILEEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_18_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypWHILEEXPRESSIONKeyword_9_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_18_0, "WHILEEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_19_0=RULE_ID
+		{
+			newLeafNode(lv_construct_19_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_9_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_19_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_20_0=	'DOWHILEEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_20_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypDOWHILEEXPRESSIONKeyword_10_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_20_0, "DOWHILEEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_21_0=RULE_ID
+		{
+			newLeafNode(lv_construct_21_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_10_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_21_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_22_0=	'THROWEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_22_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTHROWEXPRESSIONKeyword_11_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_22_0, "THROWEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_23_0=RULE_ID
+		{
+			newLeafNode(lv_construct_23_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_11_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_23_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_24_0=	'RETURNEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_24_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypRETURNEXPRESSIONKeyword_12_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_24_0, "RETURNEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_25_0=RULE_ID
+		{
+			newLeafNode(lv_construct_25_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_12_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_25_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_26_0=	'TRYCATCHFINALYEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_26_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_13_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_26_0, "TRYCATCHFINALYEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_27_0=RULE_ID
+		{
+			newLeafNode(lv_construct_27_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_13_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_27_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_28_0=	'PARENTHESIZEDEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_28_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypPARENTHESIZEDEXPRESSIONKeyword_14_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_28_0, "PARENTHESIZEDEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_29_0=RULE_ID
+		{
+			newLeafNode(lv_construct_29_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_14_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_29_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_30_0=	'LITERALEXPRESSION' 
+    {
+        newLeafNode(lv_primarytyp_30_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypLITERALEXPRESSIONKeyword_15_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_30_0, "LITERALEXPRESSION");
+	    }
+
+)
+)(
+(
+		lv_construct_31_0=RULE_ID
+		{
+			newLeafNode(lv_construct_31_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_15_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_31_0, 
+        		"ID");
+	    }
+
+)
+)))
+;
+
+
+
+
+
+// Entry rule entryRuleLiteral
+entryRuleLiteral returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLiteralRule()); }
+	 iv_ruleLiteral=ruleLiteral 
+	 { $current=$iv_ruleLiteral.current; } 
+	 EOF 
+;
+
+// Rule Literal
+ruleLiteral returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='LITERAL' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLiteralAccess().getLITERALKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getLiteralAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLiteralAccess().getInnerLiteralInnerParserRuleCall_2_0()); 
+	    }
+		lv_inner_2_0=ruleLiteralInner		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLiteralRule());
+	        }
+       		add(
+       			$current, 
+       			"inner",
+        		lv_inner_2_0, 
+        		"LiteralInner");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
+;
+
+
+
+
+
+// Entry rule entryRuleLiteralInner
+entryRuleLiteralInner returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLiteralInnerRule()); }
+	 iv_ruleLiteralInner=ruleLiteralInner 
+	 { $current=$iv_ruleLiteralInner.current; } 
+	 EOF 
+;
+
+// Rule LiteralInner
+ruleLiteralInner returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(((
+(
+		lv_primarytyp_0_0=	'COLLECTIONLITERAL' 
+    {
+        newLeafNode(lv_primarytyp_0_0, grammarAccess.getLiteralInnerAccess().getPrimarytypCOLLECTIONLITERALKeyword_0_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_0_0, "COLLECTIONLITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_1_0=RULE_ID
+		{
+			newLeafNode(lv_construct_1_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_1_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_2_0=	'CLOSURE' 
+    {
+        newLeafNode(lv_primarytyp_2_0, grammarAccess.getLiteralInnerAccess().getPrimarytypCLOSUREKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_2_0, "CLOSURE");
+	    }
+
+)
+)(
+(
+		lv_construct_3_0=RULE_ID
+		{
+			newLeafNode(lv_construct_3_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_3_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_4_0=	'BOOLEANLITERAL' 
+    {
+        newLeafNode(lv_primarytyp_4_0, grammarAccess.getLiteralInnerAccess().getPrimarytypBOOLEANLITERALKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_4_0, "BOOLEANLITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_5_0=RULE_ID
+		{
+			newLeafNode(lv_construct_5_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_2_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_5_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_6_0=	'NUMBERLITERAL' 
+    {
+        newLeafNode(lv_primarytyp_6_0, grammarAccess.getLiteralInnerAccess().getPrimarytypNUMBERLITERALKeyword_3_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_6_0, "NUMBERLITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_7_0=RULE_ID
+		{
+			newLeafNode(lv_construct_7_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_7_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_8_0=	'NULLLITERAL' 
+    {
+        newLeafNode(lv_primarytyp_8_0, grammarAccess.getLiteralInnerAccess().getPrimarytypNULLLITERALKeyword_4_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_8_0, "NULLLITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_9_0=RULE_ID
+		{
+			newLeafNode(lv_construct_9_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_9_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_10_0=	'STRINGLITERAL' 
+    {
+        newLeafNode(lv_primarytyp_10_0, grammarAccess.getLiteralInnerAccess().getPrimarytypSTRINGLITERALKeyword_5_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_10_0, "STRINGLITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_11_0=RULE_ID
+		{
+			newLeafNode(lv_construct_11_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_5_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_11_0, 
+        		"ID");
+	    }
+
+)
+))
+    |((
+(
+		lv_primarytyp_12_0=	'TYPELITERAL' 
+    {
+        newLeafNode(lv_primarytyp_12_0, grammarAccess.getLiteralInnerAccess().getPrimarytypTYPELITERALKeyword_6_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_12_0, "TYPELITERAL");
+	    }
+
+)
+)(
+(
+		lv_construct_13_0=RULE_ID
+		{
+			newLeafNode(lv_construct_13_0, grammarAccess.getLiteralInnerAccess().getConstructIDTerminalRuleCall_6_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLiteralInnerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"construct",
+        		lv_construct_13_0, 
+        		"ID");
+	    }
+
+)
 )))
 ;
 

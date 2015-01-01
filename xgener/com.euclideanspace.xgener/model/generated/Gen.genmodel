@@ -10,7 +10,8 @@
     <genClasses ecoreClass="Gen.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/clas"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/proc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/statem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/prim"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/lit"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/exp"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//ClassType">
@@ -25,17 +26,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/prefix"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/suffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/types"/>
-    </genClasses>
-    <genClasses ecoreClass="Gen.ecore#//Statement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/rep"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/until"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/while"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/do"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/for"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/var"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/ex"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Statement/val"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Expression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Expression/name"/>
@@ -53,7 +43,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/inner"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/infixleft"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/literal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/bracket"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/parenthesis"/>
@@ -80,6 +69,22 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//MultString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Primary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Primary/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Primary/inner"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//PrimaryInner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//PrimaryInner/primarytyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//PrimaryInner/construct"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Literal/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Literal/inner"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//LiteralInner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//LiteralInner/primarytyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//LiteralInner/construct"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

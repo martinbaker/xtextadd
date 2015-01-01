@@ -41,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInner <em>Inner</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfixleft <em>Infixleft</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getLiteral <em>Literal</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
@@ -222,26 +221,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * @ordered
    */
   protected MultString infixleft;
-
-  /**
-   * The default value of the '{@link #getLiteral() <em>Literal</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLiteral()
-   * @generated
-   * @ordered
-   */
-  protected static final String LITERAL_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getLiteral() <em>Literal</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLiteral()
-   * @generated
-   * @ordered
-   */
-  protected String literal = LITERAL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getBracket() <em>Bracket</em>}' attribute.
@@ -693,29 +672,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getLiteral()
-  {
-    return literal;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLiteral(String newLiteral)
-  {
-    String oldLiteral = literal;
-    literal = newLiteral;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__LITERAL, oldLiteral, literal));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getBracket()
   {
     return bracket;
@@ -859,8 +815,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getInner();
       case GenPackage.PRECEDENCE__INFIXLEFT:
         return getInfixleft();
-      case GenPackage.PRECEDENCE__LITERAL:
-        return getLiteral();
       case GenPackage.PRECEDENCE__BRACKET:
         return getBracket();
       case GenPackage.PRECEDENCE__BRACES:
@@ -917,9 +871,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return;
       case GenPackage.PRECEDENCE__INFIXLEFT:
         setInfixleft((MultString)newValue);
-        return;
-      case GenPackage.PRECEDENCE__LITERAL:
-        setLiteral((String)newValue);
         return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket((String)newValue);
@@ -980,9 +931,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__INFIXLEFT:
         setInfixleft((MultString)null);
         return;
-      case GenPackage.PRECEDENCE__LITERAL:
-        setLiteral(LITERAL_EDEFAULT);
-        return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket(BRACKET_EDEFAULT);
         return;
@@ -1031,8 +979,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return inner != null && !inner.isEmpty();
       case GenPackage.PRECEDENCE__INFIXLEFT:
         return infixleft != null;
-      case GenPackage.PRECEDENCE__LITERAL:
-        return LITERAL_EDEFAULT == null ? literal != null : !LITERAL_EDEFAULT.equals(literal);
       case GenPackage.PRECEDENCE__BRACKET:
         return BRACKET_EDEFAULT == null ? bracket != null : !BRACKET_EDEFAULT.equals(bracket);
       case GenPackage.PRECEDENCE__BRACES:
@@ -1068,8 +1014,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
     result.append(feature2);
     result.append(", par2: ");
     result.append(par2);
-    result.append(", literal: ");
-    result.append(literal);
     result.append(", bracket: ");
     result.append(bracket);
     result.append(", braces: ");

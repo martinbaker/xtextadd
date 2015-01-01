@@ -3,7 +3,7 @@ grammar com.euclideanspace.xgener.Gen with org.eclipse.xtext.common.Terminals
 generate gen "http://www.euclideanspace.com/xgener/Gen"
 
 Model:
-	(clas+=ClassType |proc+=Procedure |statem+=Statement |exp+=Expression)*;
+	(clas+=ClassType |proc+=Procedure |prim+=Primary |lit+=Literal |exp+=Expression)*;
 	
 ClassType:
 	'CLASS' name=ID
@@ -20,15 +20,6 @@ Procedure:
     | ('TYPES' types+=('COLONSEPERATED'|'SPACESEPERATED'|'INHEADER'|'INFERRED'|'UNTYPED'))
     )*;
 
-Statement:
-	'STATEMENT' name=ID
-    (('REPEAT' rep=ID 'UNTIL' until=ID)
-    | ('WHILE' while=ID 'DO' do=ID)
-    | ('FOR' for=ID)
-    | ('VAR' var=ID ('=' ex=ID)?)
-    | ('VAL' val=ID '=' ex=ID)
-    );
-
 Expression:
 	'EXPRESSION' name=ID
     prec+=Precedence*;
@@ -43,11 +34,12 @@ Precedence:
     | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='OUTER' rule=ID (feature1=ID '=')? par1=ID inner+=InnerPrecedence+)
     | (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID)
-    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
+//    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
     | (ruletyp='BRACKET' rule=ID bracket=ID)
     | (ruletyp='BRACES' rule=ID braces=ID)
     | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
     | (ruletyp='ANGLE' rule=ID angle=ID)
+    | (ruletyp='MEMBERFEATURE' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
 ;
 
 InnerPrecedence:
@@ -64,3 +56,43 @@ InnerPrecedence:
 MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 
 MultString: {MultString} (ms+=STRING | ('[' ms+=STRING* ']'));
+
+Primary:
+	'PRIMARY' name=ID
+    (inner+=PrimaryInner)*	
+;
+
+PrimaryInner:
+  (primarytyp='CONSTRUCTOR' construct=ID) |
+  (primarytyp='BLOCK' construct=ID) |
+  (primarytyp='SWITCH' construct=ID) |
+  (primarytyp='CASEPART' construct=ID) |
+  (primarytyp='SYNCHRONIZED' construct=ID) |
+  (primarytyp='FEATURECALL' construct=ID) |
+//  (primarytyp='LITERAL' construct=ID) |
+  (primarytyp='IFEXPRESSION' construct=ID) |
+  (primarytyp='FOREXPRESSION' construct=ID) |
+  (primarytyp='BASICFORLOOPEXPRESSION' construct=ID) |
+  (primarytyp='WHILEEXPRESSION' construct=ID) |
+  (primarytyp='DOWHILEEXPRESSION' construct=ID) |
+  (primarytyp='THROWEXPRESSION' construct=ID) |
+  (primarytyp='RETURNEXPRESSION' construct=ID) |
+  (primarytyp='TRYCATCHFINALYEXPRESSION' construct=ID) |
+  (primarytyp='PARENTHESIZEDEXPRESSION' construct=ID) |
+  (primarytyp='LITERALEXPRESSION' construct=ID)
+;
+
+Literal:
+	'LITERAL' name=ID
+    (inner+=LiteralInner)*	
+;
+
+LiteralInner:
+  (primarytyp='COLLECTIONLITERAL' construct=ID) |
+  (primarytyp='CLOSURE' construct=ID) |
+  (primarytyp='BOOLEANLITERAL' construct=ID) |
+  (primarytyp='NUMBERLITERAL' construct=ID) |
+  (primarytyp='NULLLITERAL' construct=ID) |
+  (primarytyp='STRINGLITERAL' construct=ID) |
+  (primarytyp='TYPELITERAL' construct=ID)
+;

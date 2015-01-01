@@ -85,13 +85,22 @@ public interface GenPackage extends EPackage
   int MODEL__PROC = 1;
 
   /**
-   * The feature id for the '<em><b>Statem</b></em>' containment reference list.
+   * The feature id for the '<em><b>Prim</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__STATEM = 2;
+  int MODEL__PRIM = 2;
+
+  /**
+   * The feature id for the '<em><b>Lit</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__LIT = 3;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -100,7 +109,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__EXP = 3;
+  int MODEL__EXP = 4;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -109,7 +118,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 4;
+  int MODEL_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ClassTypeImpl <em>Class Type</em>}' class.
@@ -231,106 +240,6 @@ public interface GenPackage extends EPackage
   int PROCEDURE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.StatementImpl <em>Statement</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.euclideanspace.xgener.gen.impl.StatementImpl
-   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getStatement()
-   * @generated
-   */
-  int STATEMENT = 3;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Rep</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__REP = 1;
-
-  /**
-   * The feature id for the '<em><b>Until</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__UNTIL = 2;
-
-  /**
-   * The feature id for the '<em><b>While</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__WHILE = 3;
-
-  /**
-   * The feature id for the '<em><b>Do</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__DO = 4;
-
-  /**
-   * The feature id for the '<em><b>For</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__FOR = 5;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__VAR = 6;
-
-  /**
-   * The feature id for the '<em><b>Ex</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__EX = 7;
-
-  /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT__VAL = 8;
-
-  /**
-   * The number of structural features of the '<em>Statement</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMENT_FEATURE_COUNT = 9;
-
-  /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -338,7 +247,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 4;
+  int EXPRESSION = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -375,7 +284,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecedence()
    * @generated
    */
-  int PRECEDENCE = 5;
+  int PRECEDENCE = 4;
 
   /**
    * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
@@ -477,22 +386,13 @@ public interface GenPackage extends EPackage
   int PRECEDENCE__INFIXLEFT = 10;
 
   /**
-   * The feature id for the '<em><b>Literal</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRECEDENCE__LITERAL = 11;
-
-  /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACKET = 12;
+  int PRECEDENCE__BRACKET = 11;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -501,7 +401,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACES = 13;
+  int PRECEDENCE__BRACES = 12;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -510,7 +410,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PARENTHESIS = 14;
+  int PRECEDENCE__PARENTHESIS = 13;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -519,7 +419,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__ANGLE = 15;
+  int PRECEDENCE__ANGLE = 14;
 
   /**
    * The number of structural features of the '<em>Precedence</em>' class.
@@ -528,7 +428,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE_FEATURE_COUNT = 16;
+  int PRECEDENCE_FEATURE_COUNT = 15;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl <em>Inner Precedence</em>}' class.
@@ -538,7 +438,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getInnerPrecedence()
    * @generated
    */
-  int INNER_PRECEDENCE = 6;
+  int INNER_PRECEDENCE = 5;
 
   /**
    * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
@@ -683,7 +583,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultID()
    * @generated
    */
-  int MULT_ID = 7;
+  int MULT_ID = 6;
 
   /**
    * The feature id for the '<em><b>Mi</b></em>' attribute list.
@@ -711,7 +611,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
    * @generated
    */
-  int MULT_STRING = 8;
+  int MULT_STRING = 7;
 
   /**
    * The feature id for the '<em><b>Ms</b></em>' attribute list.
@@ -730,6 +630,154 @@ public interface GenPackage extends EPackage
    * @ordered
    */
   int MULT_STRING_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryImpl <em>Primary</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.PrimaryImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
+   * @generated
+   */
+  int PRIMARY = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY__INNER = 1;
+
+  /**
+   * The number of structural features of the '<em>Primary</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl <em>Primary Inner</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
+   * @generated
+   */
+  int PRIMARY_INNER = 9;
+
+  /**
+   * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_INNER__PRIMARYTYP = 0;
+
+  /**
+   * The feature id for the '<em><b>Construct</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_INNER__CONSTRUCT = 1;
+
+  /**
+   * The number of structural features of the '<em>Primary Inner</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_INNER_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.LiteralImpl <em>Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.LiteralImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
+   * @generated
+   */
+  int LITERAL = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__INNER = 1;
+
+  /**
+   * The number of structural features of the '<em>Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.LiteralInnerImpl <em>Literal Inner</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.LiteralInnerImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
+   * @generated
+   */
+  int LITERAL_INNER = 11;
+
+  /**
+   * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INNER__PRIMARYTYP = 0;
+
+  /**
+   * The feature id for the '<em><b>Construct</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INNER__CONSTRUCT = 1;
+
+  /**
+   * The number of structural features of the '<em>Literal Inner</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_INNER_FEATURE_COUNT = 2;
 
 
   /**
@@ -765,15 +813,26 @@ public interface GenPackage extends EPackage
   EReference getModel_Proc();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getStatem <em>Statem</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getPrim <em>Prim</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Statem</em>'.
-   * @see com.euclideanspace.xgener.gen.Model#getStatem()
+   * @return the meta object for the containment reference list '<em>Prim</em>'.
+   * @see com.euclideanspace.xgener.gen.Model#getPrim()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Statem();
+  EReference getModel_Prim();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getLit <em>Lit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Lit</em>'.
+   * @see com.euclideanspace.xgener.gen.Model#getLit()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Lit();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getExp <em>Exp</em>}'.
@@ -904,115 +963,6 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getProcedure_Types();
-
-  /**
-   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Statement <em>Statement</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Statement</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement
-   * @generated
-   */
-  EClass getStatement();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getName()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getRep <em>Rep</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Rep</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getRep()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Rep();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getUntil <em>Until</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Until</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getUntil()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Until();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getWhile <em>While</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>While</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getWhile()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_While();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getDo <em>Do</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Do</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getDo()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Do();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getFor <em>For</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>For</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getFor()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_For();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getVar <em>Var</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Var</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getVar()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Var();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getEx <em>Ex</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Ex</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getEx()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Ex();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Statement#getVal <em>Val</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see com.euclideanspace.xgener.gen.Statement#getVal()
-   * @see #getStatement()
-   * @generated
-   */
-  EAttribute getStatement_Val();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Expression <em>Expression</em>}'.
@@ -1176,17 +1126,6 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EReference getPrecedence_Infixleft();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getLiteral <em>Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Literal</em>'.
-   * @see com.euclideanspace.xgener.gen.Precedence#getLiteral()
-   * @see #getPrecedence()
-   * @generated
-   */
-  EAttribute getPrecedence_Literal();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}'.
@@ -1439,6 +1378,134 @@ public interface GenPackage extends EPackage
   EAttribute getMultString_Ms();
 
   /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Primary <em>Primary</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Primary</em>'.
+   * @see com.euclideanspace.xgener.gen.Primary
+   * @generated
+   */
+  EClass getPrimary();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Primary#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.euclideanspace.xgener.gen.Primary#getName()
+   * @see #getPrimary()
+   * @generated
+   */
+  EAttribute getPrimary_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Primary#getInner <em>Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Inner</em>'.
+   * @see com.euclideanspace.xgener.gen.Primary#getInner()
+   * @see #getPrimary()
+   * @generated
+   */
+  EReference getPrimary_Inner();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.PrimaryInner <em>Primary Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Primary Inner</em>'.
+   * @see com.euclideanspace.xgener.gen.PrimaryInner
+   * @generated
+   */
+  EClass getPrimaryInner();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.PrimaryInner#getPrimarytyp <em>Primarytyp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Primarytyp</em>'.
+   * @see com.euclideanspace.xgener.gen.PrimaryInner#getPrimarytyp()
+   * @see #getPrimaryInner()
+   * @generated
+   */
+  EAttribute getPrimaryInner_Primarytyp();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct <em>Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Construct</em>'.
+   * @see com.euclideanspace.xgener.gen.PrimaryInner#getConstruct()
+   * @see #getPrimaryInner()
+   * @generated
+   */
+  EAttribute getPrimaryInner_Construct();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal</em>'.
+   * @see com.euclideanspace.xgener.gen.Literal
+   * @generated
+   */
+  EClass getLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Literal#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.euclideanspace.xgener.gen.Literal#getName()
+   * @see #getLiteral()
+   * @generated
+   */
+  EAttribute getLiteral_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Literal#getInner <em>Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Inner</em>'.
+   * @see com.euclideanspace.xgener.gen.Literal#getInner()
+   * @see #getLiteral()
+   * @generated
+   */
+  EReference getLiteral_Inner();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.LiteralInner <em>Literal Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Inner</em>'.
+   * @see com.euclideanspace.xgener.gen.LiteralInner
+   * @generated
+   */
+  EClass getLiteralInner();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.LiteralInner#getPrimarytyp <em>Primarytyp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Primarytyp</em>'.
+   * @see com.euclideanspace.xgener.gen.LiteralInner#getPrimarytyp()
+   * @see #getLiteralInner()
+   * @generated
+   */
+  EAttribute getLiteralInner_Primarytyp();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.LiteralInner#getConstruct <em>Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Construct</em>'.
+   * @see com.euclideanspace.xgener.gen.LiteralInner#getConstruct()
+   * @see #getLiteralInner()
+   * @generated
+   */
+  EAttribute getLiteralInner_Construct();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1488,12 +1555,20 @@ public interface GenPackage extends EPackage
     EReference MODEL__PROC = eINSTANCE.getModel_Proc();
 
     /**
-     * The meta object literal for the '<em><b>Statem</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Prim</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__STATEM = eINSTANCE.getModel_Statem();
+    EReference MODEL__PRIM = eINSTANCE.getModel_Prim();
+
+    /**
+     * The meta object literal for the '<em><b>Lit</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__LIT = eINSTANCE.getModel_Lit();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference list feature.
@@ -1594,88 +1669,6 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute PROCEDURE__TYPES = eINSTANCE.getProcedure_Types();
-
-    /**
-     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.StatementImpl <em>Statement</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.euclideanspace.xgener.gen.impl.StatementImpl
-     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getStatement()
-     * @generated
-     */
-    EClass STATEMENT = eINSTANCE.getStatement();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__NAME = eINSTANCE.getStatement_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Rep</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__REP = eINSTANCE.getStatement_Rep();
-
-    /**
-     * The meta object literal for the '<em><b>Until</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__UNTIL = eINSTANCE.getStatement_Until();
-
-    /**
-     * The meta object literal for the '<em><b>While</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__WHILE = eINSTANCE.getStatement_While();
-
-    /**
-     * The meta object literal for the '<em><b>Do</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__DO = eINSTANCE.getStatement_Do();
-
-    /**
-     * The meta object literal for the '<em><b>For</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__FOR = eINSTANCE.getStatement_For();
-
-    /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__VAR = eINSTANCE.getStatement_Var();
-
-    /**
-     * The meta object literal for the '<em><b>Ex</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__EX = eINSTANCE.getStatement_Ex();
-
-    /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMENT__VAL = eINSTANCE.getStatement_Val();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -1800,14 +1793,6 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EReference PRECEDENCE__INFIXLEFT = eINSTANCE.getPrecedence_Infixleft();
-
-    /**
-     * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PRECEDENCE__LITERAL = eINSTANCE.getPrecedence_Literal();
 
     /**
      * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
@@ -1998,6 +1983,110 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryImpl <em>Primary</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.PrimaryImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
+     * @generated
+     */
+    EClass PRIMARY = eINSTANCE.getPrimary();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIMARY__NAME = eINSTANCE.getPrimary_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Inner</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY__INNER = eINSTANCE.getPrimary_Inner();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl <em>Primary Inner</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
+     * @generated
+     */
+    EClass PRIMARY_INNER = eINSTANCE.getPrimaryInner();
+
+    /**
+     * The meta object literal for the '<em><b>Primarytyp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIMARY_INNER__PRIMARYTYP = eINSTANCE.getPrimaryInner_Primarytyp();
+
+    /**
+     * The meta object literal for the '<em><b>Construct</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIMARY_INNER__CONSTRUCT = eINSTANCE.getPrimaryInner_Construct();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.LiteralImpl <em>Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.LiteralImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
+     * @generated
+     */
+    EClass LITERAL = eINSTANCE.getLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL__NAME = eINSTANCE.getLiteral_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Inner</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LITERAL__INNER = eINSTANCE.getLiteral_Inner();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.LiteralInnerImpl <em>Literal Inner</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.LiteralInnerImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
+     * @generated
+     */
+    EClass LITERAL_INNER = eINSTANCE.getLiteralInner();
+
+    /**
+     * The meta object literal for the '<em><b>Primarytyp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_INNER__PRIMARYTYP = eINSTANCE.getLiteralInner_Primarytyp();
+
+    /**
+     * The meta object literal for the '<em><b>Construct</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_INNER__CONSTRUCT = eINSTANCE.getLiteralInner_Construct();
 
   }
 

@@ -67,12 +67,15 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
       case GenPackage.MODEL: return createModel();
       case GenPackage.CLASS_TYPE: return createClassType();
       case GenPackage.PROCEDURE: return createProcedure();
-      case GenPackage.STATEMENT: return createStatement();
       case GenPackage.EXPRESSION: return createExpression();
       case GenPackage.PRECEDENCE: return createPrecedence();
       case GenPackage.INNER_PRECEDENCE: return createInnerPrecedence();
       case GenPackage.MULT_ID: return createMultID();
       case GenPackage.MULT_STRING: return createMultString();
+      case GenPackage.PRIMARY: return createPrimary();
+      case GenPackage.PRIMARY_INNER: return createPrimaryInner();
+      case GenPackage.LITERAL: return createLiteral();
+      case GenPackage.LITERAL_INNER: return createLiteralInner();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -109,17 +112,6 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     ProcedureImpl procedure = new ProcedureImpl();
     return procedure;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Statement createStatement()
-  {
-    StatementImpl statement = new StatementImpl();
-    return statement;
   }
 
   /**
@@ -175,6 +167,50 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     MultStringImpl multString = new MultStringImpl();
     return multString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Primary createPrimary()
+  {
+    PrimaryImpl primary = new PrimaryImpl();
+    return primary;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PrimaryInner createPrimaryInner()
+  {
+    PrimaryInnerImpl primaryInner = new PrimaryInnerImpl();
+    return primaryInner;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralInner createLiteralInner()
+  {
+    LiteralInnerImpl literalInner = new LiteralInnerImpl();
+    return literalInner;
   }
 
   /**
