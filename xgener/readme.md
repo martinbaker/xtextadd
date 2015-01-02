@@ -78,10 +78,52 @@ EXPRESSION XExpression
 <p>This source file needs to contain a number of sections formatted as described below.  The keywords are uppercase in Xgener to try to avoid clashes with the target language. </p>
 <h4>EXPRESSION</h4>
 <p>The expression section contains a list of entries in (low to high) precidence order. So in the example above XMultiplicativeExpression is below XAdditiveExpression because multiplicatation has a higher precidence (binds more tightly) than addition.</p>
+<p>Entries may be of the following types:</p>
+<ul>
+  <li>INFIX Binary functions typically have the operation symbol (such as '+' or '*') between the two operands </li>
+  <li>INFIXLEFT Same as INFIX but associates on left, that is a*b*c = (a*b)*c instead of a*(b*c)</li>
+  <li>PREFIX Operator comes before single operand (such as -3). </li>
+  <li>SUFFIX Operator comes after single operand </li>
+  <li>CALLER Sets what EObject is returned if match is found, Applies to all following entries until it is changed. </li>
+  <li>OUTER Allows multiple entries with the same precidence. </li>
+  <li>BRACKET an entry inside brackets '[ ... ]' </li>
+  <li>BRACES an entry inside curly brackets '{ ... }' </li>
+  <li>PARENTHESIS an entry inside parenthesis '( ... )' </li>
+  <li>ANGLE an entry inside angle brackets '&lt; ... &gt;' </li>
+  <li>MEMBERFEATURE all the other stuff </li>
+</ul>
 <h4>PRIMARY</h4>
 <p>The entries in this section can be in any order. Each entry represents a type of statement in the language. Note our language need not make a distinction between a 'statement' and an 'expression' if they both return the same type. </p>
+<p>Entries may be of the following types: </p>
+<ul>
+  <li>CONSTRUCTOR</li>
+  <li>BLOCK code inside braces: '{ ... }'</li>
+  <li>SWITCH switch to different cases depending on value of integer or string </li>
+  <li>SYNCHRONIZED</li>
+  <li>FEATURECALL</li>
+  <li>IFEXPRESSION If ... then ... else ... or if(...)... else... construct </li>
+  <li>FOREXPRESSION</li>
+  <li>BASICFORLOOPEXPRESSION</li>
+  <li>WHILEEXPRESSION while (...) ...  construct</li>
+  <li>DOWHILEEXPRESSION try ... catch ... finally ... construct</li>
+  <li>THROWEXPRESSION throw an error </li>
+  <li>RETURNEXPRESSION return from procedure </li>
+  <li>TRYCATCHFINALYEXPRESSION try ... catch ... finally ... construct </li>
+  <li>PARENTHESIZEDEXPRESSION code inside parenthasis: '( ... )'</li>
+  <li>LITERALEXPRESSION defined by Literal section, see below. </li>
+</ul>
 <h4>LITERAL</h4>
 <p>The entries here represent literal values in our DSL such as numbers or strings. </p>
+<p>Entries may be of the following types: </p>
+<ul>
+  <li>COLLECTIONLITERAL</li>
+  <li>CLOSURE</li>
+  <li>BOOLEANLITERAL true or false </li>
+  <li>NUMBERLITERAL</li>
+  <li>NULLLITERAL the word 'null' </li>
+  <li>STRINGLITERAL string inside doubl quotes &quot;...&quot; </li>
+  <li>TYPELITERAL</li>
+</ul>
 <h4>PROCEDURE</h4>
 <p>The procedure (method) section defines the syntax of procedure/method/function definitions in your DSL. </p>
 <h4>CLASS</h4>
