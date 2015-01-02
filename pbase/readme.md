@@ -88,7 +88,7 @@ we have: while a &lt; n:</p></td>
   <li>Replace jvm types such as types::JvmIdentifiableElement and just use ID. </li>
   <li>Other hacks to get the grammar to compile. </li>
 </ul>
-<p><a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step2/Tutorial.xtext">Here is a pointer</a> to the resulting grammar. </p>
+<p><a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/steps/step2/Tutorial.xtext">Here is a pointer</a> to the resulting grammar. An alternative would be to use the <a href="https://github.com/martinbaker/xtextadd/tree/master/xgener">program described on the page here</a> to create a suitable grammar. </p>
 <h3>Try the Code so far. </h3>
 <table>
   <tr>
@@ -119,12 +119,13 @@ we have: while a &lt; n:</p></td>
 <table>
   <tr>
     <td>Confirm that this does not have any errors:  </td>
-    <td><img src="pbase1.png" alt="image" width="438" height="190" /></td>
+    <td><img src="notes/pbase1.png" alt="image" width="438" height="190" /></td>
   </tr>
 </table>
 <p>We can now start gradually converting this  Java syntax to Python syntax. </p>
 <h2>Modifying the Syntax</h2>
 <p>In order to do move toward Python we first need to change the terminals as discussed on <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">page here</a>. </p>
+<p>I am hoping that this will be built into Xtext so that we can just import a different terminals file, like this: </p>
 <table border="1">
   <tr>
     <th bgcolor="#FFFF00">Java-like</th>
@@ -228,7 +229,7 @@ terminal END : '|}';
   <tr>
     <td><p>We can then run our code in a new instance of Eclipse, remove the curly brackets and confirm that this parses correctly:</p>
     </td>
-    <td><img src="pbase2.png" alt="image" width="363" height="200" /></td>
+    <td><img src="notes/pbase2.png" alt="image" width="363" height="200" /></td>
   </tr>
 </table>
 <h3>Terminating Statements</h3>
@@ -279,7 +280,7 @@ where:
       <p>So I ran the previous  code in a new instance of Eclipse and removed all the semicolons. The code continued to parse correctly.</p>
       <p>This is because the code in this tutorial is based on Xbase, in Xbase semicolons are optional.</p>
       <p>However, in your DSL, it may be difficult to write a grammar without terminators for statements, in which case you may need to change TokenSource as described above. </p></td>
-    <td><img src="pbase3.png" alt="image" width="432" height="291" /></td>
+    <td><img src="notes/pbase3.png" alt="image" width="432" height="291" /></td>
   </tr>
 </table>
 <h3>Line Continuation</h3>
