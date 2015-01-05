@@ -136,49 +136,12 @@ Model hidden(SL_COMMENT,WS):
 «ENDFOR»
 «FOR x:model.proc»«IF x.name != null»«compile(x)»«ENDIF»
 «ENDFOR»
-
+«FOR x:model.exp»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
 «FOR x:model.prim»«IF x.name != null»«compile(x)»«ENDIF»
 «ENDFOR»
 «FOR x:model.lit»«IF x.name != null»«compile(x)»«ENDIF»
 «ENDFOR»
-
-Parameter returns GenerParameter:
-  //annotations+=XAnnotation*
-  parameterType=ID varArg?='...'? name=ValidID;
-
-
-XAssignment returns XExpression hidden(SL_COMMENT,WS):
-  {XAssignment} feature=ID '=' value=XAssignment |
-  XOrExpression (
-  =>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
-  )?;
-
-//OpSingleAssign hidden(SL_COMMENT,WS):
-//  '='
-//;
-
-OpMultiAssign hidden(SL_COMMENT,WS):
-  '+=' | '-=' | '*=' | '/=' | '%=' |
-  '<' | '<' | '=' |
-  '>' | '>'? | '>=';
-
-XCollectionLiteral hidden(SL_COMMENT,WS):
-  XSetLiteral | XListLiteral
-;
-
-XSetLiteral hidden(SL_COMMENT,WS):
-  {XSetLiteral} '#' '{' (elements+=XExpression (',' elements+=XExpression )*)? '}'
-;
-
-XListLiteral hidden(SL_COMMENT,WS):
-  {XListLiteral} '#' '[' (elements+=XExpression (',' elements+=XExpression )*)? ']'
-;
-
-«FOR x:model.exp»«IF x.name != null»«compile(x)»«ENDIF»
-«ENDFOR»
-
-XCatchClause hidden(SL_COMMENT,WS):
-  =>'catch' '(' declaredParam=ID ')' expression=XExpression;
 
 ArrayBrackets hidden(SL_COMMENT,WS):'[' ID ']';
 
@@ -270,12 +233,25 @@ Member returns GenerMember hidden(SL_COMMENT,WS):
     )
   ) ;
 
-// end of rules for Procedure=«p.name»
+Parameter returns GenerParameter:
+  //annotations+=XAnnotation*
+  parameterType=ID varArg?='...'? name=ValidID;
 
+// end of rules for Procedure=«p.name»
 ''' 
 /* Expression */
 def CharSequence compile(com.euclideanspace.xgener.gen.Expression e) '''
 // start of rules for Expression=«e.name»
+XAssignment returns XExpression hidden(SL_COMMENT,WS):
+  {XAssignment} feature=ID '=' value=XAssignment |
+  XOrExpression (
+  =>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
+  )?;
+
+OpMultiAssign hidden(SL_COMMENT,WS):
+  '+=' | '-=' | '*=' | '/=' | '%=' |
+  '<' | '<' | '=' |
+  '>' | '>'? | '>=';
 
 «FOR x:e.prec SEPARATOR '\n'»
   «IF x.rule != null»
@@ -434,6 +410,9 @@ XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   (=>'finally' finallyExpression=XExpression)?
   | 'finally' finallyExpression=«getParentExpression(pi)»
 );
+
+XCatchClause hidden(SL_COMMENT,WS):
+  =>'catch' '(' declaredParam=ID ')' expression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
 «pi.construct» returns «pi.construct» hidden(SL_COMMENT,WS):
@@ -459,25 +438,34 @@ XLiteral returns XExpression hidden(SL_COMMENT,WS):
 /* Inner Literal */
 def CharSequence compile(com.euclideanspace.xgener.gen.LiteralInner pi) '''
 «IF pi.primarytyp=='COLLECTIONLITERAL'»
+XCollectionLiteral hidden(SL_COMMENT,WS):
+  XSetLiteral | XListLiteral
+;
 
+XSetLiteral hidden(SL_COMMENT,WS):
+  {XSetLiteral} '#' '{' (elements+=XExpression (',' elements+=XExpression )*)? '}'
+;
+
+XListLiteral hidden(SL_COMMENT,WS):
+  {XListLiteral} '#' '[' (elements+=XExpression (',' elements+=XExpression )*)? ']'
+;
 «ENDIF»
 «IF pi.primarytyp=='CLOSURE'»
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  =>({XClosure}
+  =>({«pi.construct»}
   '[')
   =>((declaredFormalParameters+=ID (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')?
   expression=XExpressionInClosure
   ']';
 
-«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  {XBlockExpression}
-  (expressions+=XExpressionOrVarDeclaration ';'?)*
+XExpressionInClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS): 
+	{XBlockExpression}
+	(expressions+=XExpressionOrVarDeclaration ';'?)*
 ;
 
-«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  =>({XClosure} (declaredFormalParameters+=ID
-    (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|')
-  expression=«getParentExpression(pi)»;
+XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+	=>({«pi.construct»} (declaredFormalParameters+=ID
+       (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|') expression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='BOOLEANLITERAL'»
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
