@@ -288,18 +288,6 @@ XVariableDeclaration returns «p.name» hidden(SL_COMMENT,WS):
   {XVariableDeclaration}
   (writeable?='var'|'val') (=>(type=ID name=ValidID) | name=ValidID) ('=' right=«p.name»)?;
 
-XFeatureCall returns «p.name» hidden(SL_COMMENT,WS):
-  {XFeatureCall}
-  ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
-  feature=IdOrSuper
-  (=>explicitOperationCall?='('
-  (
-  featureCallArguments+=XShortClosure
-  | featureCallArguments+=«p.name» (',' featureCallArguments+=XExpression)*
-  )?
-  ')')?
-  featureCallArguments+=XClosure?;
-
   «FOR x:p.inner SEPARATOR '\n'»
   «IF x.construct != null»
   «compile(x)»
@@ -312,6 +300,8 @@ XFeatureCall returns «p.name» hidden(SL_COMMENT,WS):
 /* Inner Primary */
 def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
 «IF pi.primarytyp=='CONSTRUCTOR'»
+/* 'new' keyword followed by specification of object to be constructed.
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XConstructorCall}
   'new' constructor=ID
@@ -325,6 +315,8 @@ def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
   arguments+=XClosure?;
 «ENDIF»
 «IF pi.primarytyp=='BLOCK'»
+/* code inside braces: '{ ... }'
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBlockExpression}
   '{'
@@ -332,6 +324,8 @@ def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
   '}';
 «ENDIF»
 «IF pi.primarytyp=='SWITCH'»
+/* switch to different cases depending on value of integer or string 
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XSwitchExpression}
   'switch' (=>('(' declaredParam=ID ':') switch=«getParentExpression(pi)» ')'
@@ -340,36 +334,59 @@ def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
   ('default' ':' default=«getParentExpression(pi)» )?
 '}';
 
+/* Case Part
+*/
 «pi.construct2» hidden(SL_COMMENT,WS):
   {XCasePart}
   typeGuard=ID? ('case' case=XExpression)?
   (':' then=«getParentExpression(pi)» | fallThrough?=',') ;
 «ENDIF»
 «IF pi.primarytyp=='SYNCHRONIZED'»
+/* support for multithreading
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({XSynchronizedExpression}
   'synchronized' '(') param=XExpression ')' expression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='FEATURECALL'»
-
+/* call a function
+*/
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {«pi.construct»}
+  ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
+  feature=IdOrSuper
+  (=>explicitOperationCall?='('
+  (
+  featureCallArguments+=XShortClosure
+  | featureCallArguments+=«getParentExpression(pi)» (',' featureCallArguments+=XExpression)*
+  )?
+  ')')?
+  featureCallArguments+=XClosure?;
 «ENDIF»
 «IF pi.primarytyp=='LITERALEXPRESSION'»
-
+/* «pi.construct» defined by Literal section
+*/
 «ENDIF»
 «IF pi.primarytyp=='IFEXPRESSION'»
-XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  {XIfExpression}
+/* If ... then ... else ... or if(...)... else... construct
+*/
+«pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
+  {«pi.construct»}
   'if' '(' if=«getParentExpression(pi)» ')'
   then=XExpression
   (=>'else' else=«getParentExpression(pi)»)?;
 «ENDIF»
 «IF pi.primarytyp=='FOREXPRESSION'»
+/* modern form of 'for' expression using itererators
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  =>({XForLoopExpression}
+  =>({«pi.construct»}
   'for' '(' declaredParam=ID ':') forExpression=«getParentExpression(pi)» ')'
   eachExpression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='BASICFORLOOPEXPRESSION'»
+/* original 'for' expression in java 
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBasicForLoopExpression}
   'for' '('(initExpressions+=XExpressionOrVarDeclaration
@@ -379,6 +396,8 @@ XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   eachExpression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='WHILEEXPRESSION'»
+/* while (...) ...  construct
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XWhileExpression}
   'while' '(' predicate=«getParentExpression(pi)» ')'
@@ -386,6 +405,8 @@ XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
 ;
 «ENDIF»
 «IF pi.primarytyp=='DOWHILEEXPRESSION'»
+/* do ... while(...)
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XDoWhileExpression}
   'do'
@@ -393,16 +414,22 @@ XIfExpression returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   'while' '(' predicate=«getParentExpression(pi)» ')';
 «ENDIF»
 «IF pi.primarytyp=='THROWEXPRESSION'»
+/* throw an error
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XThrowExpression} 'throw' expression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='RETURNEXPRESSION'»
+/* return from procedure
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XReturnExpression} 'return' (->expression=XExpression)?;
 «ENDIF»
 «IF pi.primarytyp=='TRYCATCHFINALYEXPRESSION'»
+/* try ... catch ... finally ... construct
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
-  {XTryCatchFinallyExpression}
+  {«pi.construct»}
   'try'
   expression=«getParentExpression(pi)»
   (
@@ -415,6 +442,8 @@ XCatchClause hidden(SL_COMMENT,WS):
   =>'catch' '(' declaredParam=ID ')' expression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
+/* code inside parenthasis: '( ... )'
+*/
 «pi.construct» returns «pi.construct» hidden(SL_COMMENT,WS):
   '(' «pi.construct» ')';
 «ENDIF»'''
@@ -504,35 +533,54 @@ XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
  */
 def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     «IF p.ruletyp=='PREFIX'»
+      /* Operator comes before single operand (such as -3). 
+      */
       «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
       {«p.rule»} feature=«
       IF p.prefix != null»«compile(p.prefix)»«ENDIF» operand=«
       IF p.rule != null»«p.rule»«ENDIF»
       | => «IF p.par1 != null»«p.par1»«ENDIF»;
   «ELSEIF p.ruletyp=='SUFFIX'»
+    /* Operator comes after single operand (such as x++)
+    */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«p.par1»«ENDIF» =>({«getCallingRule(p.rule)»=current} feature=«
      IF p.suffix != null»«compile(p.suffix)»«ENDIF»)?;
   «ELSEIF p.ruletyp=='INFIX'»
+    /* Binary functions typically have the operation symbol
+    * (such as '+' or '*') between the two operands 
+    */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
      ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
      IF p.infix != null»«compile(p.infix)»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*;
   «ELSEIF p.ruletyp=='OUTER'»«p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    /* Allows multiple entries with the same precidence. 
+    */
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
     «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;
   «ELSEIF p.ruletyp=='CALLER'»
     «IF p.rule != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
   «ELSEIF p.ruletyp=='ANGLE'»
+    /* an entry inside angle brackets '< ... >'
+    */
     ('<'«IF p.angle != null»«p.angle»+=ID (',' «p.angle»+=ID)* «ENDIF»'>');
   «ELSEIF p.ruletyp=='BRACKET'»
+    /* an entry inside brackets '[ ... ]' 
+    */
     ('['«IF p.bracket != null»«p.angle»+=ID (',' «p.bracket»+=ID)* «ENDIF»']');
   «ELSEIF p.ruletyp=='BRACES'»
+    /* an entry inside curly brackets '{ ... }'
+    */
     ('{'«IF p.braces != null»«p.angle»+=ID (',' «p.braces»+=ID)* «ENDIF»'}');
   «ELSEIF p.ruletyp=='PARENTHESIS'»
+    /* an entry inside parenthesis '( ... )'
+    */
     ('('«IF p.parenthesis != null»«p.angle»+=ID (',' «p.parenthesis»+=ID)* «ENDIF»')');
   «ELSEIF p.ruletyp=='MEMBERFEATURE'»
+    /* object name: identities seperated by '.', '?.' or '::' 
+    */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
     ( =>({XAssignment.assignable=current} ('.'|explicitStatic?="::") feature=ID '=') value=XAssignment

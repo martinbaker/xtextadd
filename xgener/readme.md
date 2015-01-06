@@ -24,13 +24,29 @@
 PROCEDURE Proc
   TYPES COLONSEPERATED
 
+EXPRESSION XExpression
+  CALLER XBinaryOperation
+  INFIX XOrExpression XAndExpression "||" XAndExpression
+  INFIX XAndExpression XEqualityExpression "&&" XEqualityExpression
+  INFIX XEqualityExpression XRelationalExpression ["==" "!=" "===" "!=="] XRelationalExpression
+  CALLER XInstanceOfExpression.expression
+  OUTER XRelationalExpression XOtherOperatorExpression
+    INNERINFIX 'instanceof' type=ID
+    INNERINFIX CALLER XBinaryOperation [">=" "<" "=" ">" "<"] XOtherOperatorExpression
+  INFIX XOtherOperatorExpression XAdditiveExpression ["->" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression
+  INFIX XAdditiveExpression XMultiplicativeExpression ["+" "-"] XMultiplicativeExpression
+  INFIX XMultiplicativeExpression XUnaryOperation ["*" "**" "/" "%"] XUnaryOperation
+  PREFIX XUnaryOperation ["!" "-" "+"] XCastedExpression
+  INFIX XCastedExpression XPostfixOperation "as" type=ID
+  SUFFIX XPostfixOperation XMemberFeatureCall ["++" "--"]
+  MEMBERFEATURE XMemberFeatureCall XPrimaryExpression ["super" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression
+
 PRIMARY XExpression
   CONSTRUCTOR XConstructorCall
   BLOCK XBlockExpression
   SWITCH XSwitchExpression XCasePart
   SYNCHRONIZED XSynchronizedExpression
   FEATURECALL XFeatureCall
-  //LITERAL XLiteral
   IFEXPRESSION XIfExpression
   FOREXPRESSION XForLoopExpression
   BASICFORLOOPEXPRESSION XBasicForLoopExpression
@@ -49,24 +65,7 @@ LITERAL XExpression
   NUMBERLITERAL XNumberLiteral
   NULLLITERAL XNullLiteral
   STRINGLITERAL XStringLiteral
-  TYPELITERAL XTypeLiteral
-
-EXPRESSION XExpression
-  CALLER XBinaryOperation
-  INFIX XOrExpression XAndExpression "||" XAndExpression
-  INFIX XAndExpression XEqualityExpression "&&" XEqualityExpression
-  INFIX XEqualityExpression XRelationalExpression ["==" "!=" "===" "!=="] XRelationalExpression
-  CALLER XInstanceOfExpression.expression
-  OUTER XRelationalExpression XOtherOperatorExpression
-    INNERINFIX 'instanceof' type=ID
-    INNERINFIX CALLER XBinaryOperation [">=" "<" "=" ">" "<"] XOtherOperatorExpression
-  INFIX XOtherOperatorExpression XAdditiveExpression ["->" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression
-  INFIX XAdditiveExpression XMultiplicativeExpression ["+" "-"] XMultiplicativeExpression
-  INFIX XMultiplicativeExpression XUnaryOperation ["*" "**" "/" "%"] XUnaryOperation
-  PREFIX XUnaryOperation ["!" "-" "+"] XCastedExpression
-  INFIX XCastedExpression XPostfixOperation "as" type=ID
-  SUFFIX XPostfixOperation XMemberFeatureCall ["++" "--"]
-  MEMBERFEATURE XMemberFeatureCall XPrimaryExpression ["super" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression</pre></td>
+  TYPELITERAL XTypeLiteral</pre></td>
   </tr>
 </table>
 <p>This will then generate a '.xtext'  grammar file which can be used to start your target DSL project.</p>
@@ -90,20 +89,20 @@ EXPRESSION XExpression
   <li>BRACES an entry inside curly brackets '{ ... }' </li>
   <li>PARENTHESIS an entry inside parenthesis '( ... )' </li>
   <li>ANGLE an entry inside angle brackets '&lt; ... &gt;' </li>
-  <li>MEMBERFEATURE all the other stuff </li>
+  <li>MEMBERFEATURE object name: identities seperated by '.', '?.' or '::' </li>
 </ul>
 <h4>PRIMARY</h4>
 <p>The entries in this section can be in any order. Each entry represents a type of statement in the language. Note our language need not make a distinction between a 'statement' and an 'expression' if they both return the same type. </p>
 <p>Entries may be of the following types: </p>
 <ul>
-  <li>CONSTRUCTOR</li>
+  <li>CONSTRUCTOR 'new' keyword followed by specification of object to be constructed. </li>
   <li>BLOCK code inside braces: '{ ... }'</li>
   <li>SWITCH switch to different cases depending on value of integer or string </li>
-  <li>SYNCHRONIZED</li>
-  <li>FEATURECALL</li>
+  <li>SYNCHRONIZED support for multithreading </li>
+  <li>FEATURECALL call a function </li>
   <li>IFEXPRESSION If ... then ... else ... or if(...)... else... construct </li>
-  <li>FOREXPRESSION</li>
-  <li>BASICFORLOOPEXPRESSION</li>
+  <li>FOREXPRESSION modern form of 'for' expression using itererators </li>
+  <li>BASICFORLOOPEXPRESSION original 'for' expression in java </li>
   <li>WHILEEXPRESSION while (...) ...  construct</li>
   <li>DOWHILEEXPRESSION try ... catch ... finally ... construct</li>
   <li>THROWEXPRESSION throw an error </li>
