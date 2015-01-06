@@ -242,7 +242,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (primarytyp='BLOCK' construct=ID) | 
 	 *         (primarytyp='SWITCH' construct=ID construct2=ID) | 
 	 *         (primarytyp='SYNCHRONIZED' construct=ID) | 
-	 *         (primarytyp='FEATURECALL' construct=ID) | 
+	 *         (primarytyp='FEATURECALL' construct=ID feature=MultString) | 
 	 *         (primarytyp='IFEXPRESSION' construct=ID) | 
 	 *         (primarytyp='FOREXPRESSION' construct=ID) | 
 	 *         (primarytyp='BASICFORLOOPEXPRESSION' construct=ID) | 

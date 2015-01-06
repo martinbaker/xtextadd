@@ -427,22 +427,22 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 		// * in the same list in any order
 		// * / Precedence:
-		//	ruletyp="CALLER" rule=ID ("." feature1=ID)? //    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
-		//	| ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID | ruletyp="SUFFIX" rule=ID (feature1=ID "=")?
-		//	par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
-		//	par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID
-		//	par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID bracket=ID | ruletyp="BRACES" rule=ID braces=ID |
-		//	ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE" rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID
-		//	(feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")? par2=ID;
+		//	ruletyp="CALLER" rule=ID ("." feature1=ID)? | ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID |
+		//	ruletyp="SUFFIX" rule=ID (feature1=ID "=")? par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")?
+		//	par1=ID infix=MultString (feature2=ID "=")? par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID
+		//	inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID
+		//	bracket=ID | ruletyp="BRACES" rule=ID braces=ID | ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE"
+		//	rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
+		//	par2=ID;
 		public ParserRule getRule() { return rule; }
 
-		//ruletyp="CALLER" rule=ID ("." feature1=ID)? //    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
-		//| ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID | ruletyp="SUFFIX" rule=ID (feature1=ID "=")?
-		//par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
-		//par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID
-		//par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID bracket=ID | ruletyp="BRACES" rule=ID braces=ID |
-		//ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE" rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID
-		//(feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")? par2=ID
+		//ruletyp="CALLER" rule=ID ("." feature1=ID)? | ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID |
+		//ruletyp="SUFFIX" rule=ID (feature1=ID "=")? par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")?
+		//par1=ID infix=MultString (feature2=ID "=")? par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID
+		//inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID
+		//bracket=ID | ruletyp="BRACES" rule=ID braces=ID | ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE"
+		//rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
+		//par2=ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ruletyp="CALLER" rule=ID ("." feature1=ID)?
@@ -1283,6 +1283,8 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPrimarytypFEATURECALLKeyword_4_0_0 = (Keyword)cPrimarytypAssignment_4_0.eContents().get(0);
 		private final Assignment cConstructAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cConstructIDTerminalRuleCall_4_1_0 = (RuleCall)cConstructAssignment_4_1.eContents().get(0);
+		private final Assignment cFeatureAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cFeatureMultStringParserRuleCall_4_2_0 = (RuleCall)cFeatureAssignment_4_2.eContents().get(0);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
 		private final Assignment cPrimarytypAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final Keyword cPrimarytypIFEXPRESSIONKeyword_5_0_0 = (Keyword)cPrimarytypAssignment_5_0.eContents().get(0);
@@ -1335,22 +1337,22 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConstructIDTerminalRuleCall_14_1_0 = (RuleCall)cConstructAssignment_14_1.eContents().get(0);
 		
 		//PrimaryInner:
-		//	primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-		//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
-		//	construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
-		//	primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
-		//	primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
-		//	construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
-		//	primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID;
+		//	primarytyp="CONSTRUCTOR" construct=ID | primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID
+		//	construct2=ID | primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID feature=MultString |
+		//	primarytyp="IFEXPRESSION" construct=ID | primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION"
+		//	construct=ID | primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID |
+		//	primarytyp="THROWEXPRESSION" construct=ID | primarytyp="RETURNEXPRESSION" construct=ID |
+		//	primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID | primarytyp="PARENTHESIZEDEXPRESSION" construct=ID |
+		//	primarytyp="LITERALEXPRESSION" construct=ID;
 		public ParserRule getRule() { return rule; }
 
-		//primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-		//| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
-		//construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
-		//primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
-		//primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
-		//construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
-		//primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID
+		//primarytyp="CONSTRUCTOR" construct=ID | primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID
+		//| primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID feature=MultString |
+		//primarytyp="IFEXPRESSION" construct=ID | primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION"
+		//construct=ID | primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID |
+		//primarytyp="THROWEXPRESSION" construct=ID | primarytyp="RETURNEXPRESSION" construct=ID |
+		//primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID | primarytyp="PARENTHESIZEDEXPRESSION" construct=ID |
+		//primarytyp="LITERALEXPRESSION" construct=ID
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//primarytyp="CONSTRUCTOR" construct=ID
@@ -1419,7 +1421,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_3_1_0() { return cConstructIDTerminalRuleCall_3_1_0; }
 
-		//primarytyp="FEATURECALL" construct=ID
+		//primarytyp="FEATURECALL" construct=ID feature=MultString
 		public Group getGroup_4() { return cGroup_4; }
 
 		//primarytyp="FEATURECALL"
@@ -1433,6 +1435,12 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getConstructIDTerminalRuleCall_4_1_0() { return cConstructIDTerminalRuleCall_4_1_0; }
+
+		//feature=MultString
+		public Assignment getFeatureAssignment_4_2() { return cFeatureAssignment_4_2; }
+
+		//MultString
+		public RuleCall getFeatureMultStringParserRuleCall_4_2_0() { return cFeatureMultStringParserRuleCall_4_2_0; }
 
 		//primarytyp="IFEXPRESSION" construct=ID
 		public Group getGroup_5() { return cGroup_5; }
@@ -1882,13 +1890,13 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	/// * make this rule separate from Expression so prefix,suffix,infix.... can be
 	// * in the same list in any order
 	// * / Precedence:
-	//	ruletyp="CALLER" rule=ID ("." feature1=ID)? //    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
-	//	| ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID | ruletyp="SUFFIX" rule=ID (feature1=ID "=")?
-	//	par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
-	//	par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID
-	//	par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID bracket=ID | ruletyp="BRACES" rule=ID braces=ID |
-	//	ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE" rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID
-	//	(feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")? par2=ID;
+	//	ruletyp="CALLER" rule=ID ("." feature1=ID)? | ruletyp="PREFIX" rule=ID prefix=MultString (feature1=ID "=")? par1=ID |
+	//	ruletyp="SUFFIX" rule=ID (feature1=ID "=")? par1=ID suffix=MultString | ruletyp="INFIX" rule=ID (feature1=ID "=")?
+	//	par1=ID infix=MultString (feature2=ID "=")? par2=ID | ruletyp="OUTER" rule=ID (feature1=ID "=")? par1=ID
+	//	inner+=InnerPrecedence+ | ruletyp="INFIXLEFT" rule=ID par1=ID infixleft=MultString par2=ID | ruletyp="BRACKET" rule=ID
+	//	bracket=ID | ruletyp="BRACES" rule=ID braces=ID | ruletyp="PARENTHESIS" rule=ID parenthesis=ID | ruletyp="ANGLE"
+	//	rule=ID angle=ID | ruletyp="MEMBERFEATURE" rule=ID (feature1=ID "=")? par1=ID infix=MultString (feature2=ID "=")?
+	//	par2=ID;
 	public PrecedenceElements getPrecedenceAccess() {
 		return pPrecedence;
 	}
@@ -1942,13 +1950,13 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PrimaryInner:
-	//	primarytyp="CONSTRUCTOR" construct=ID //  (primarytyp='LITERAL' construct=ID) |
-	//	| primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID construct2=ID | primarytyp="SYNCHRONIZED"
-	//	construct=ID | primarytyp="FEATURECALL" construct=ID | primarytyp="IFEXPRESSION" construct=ID |
-	//	primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION" construct=ID |
-	//	primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID | primarytyp="THROWEXPRESSION"
-	//	construct=ID | primarytyp="RETURNEXPRESSION" construct=ID | primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID |
-	//	primarytyp="PARENTHESIZEDEXPRESSION" construct=ID | primarytyp="LITERALEXPRESSION" construct=ID;
+	//	primarytyp="CONSTRUCTOR" construct=ID | primarytyp="BLOCK" construct=ID | primarytyp="SWITCH" construct=ID
+	//	construct2=ID | primarytyp="SYNCHRONIZED" construct=ID | primarytyp="FEATURECALL" construct=ID feature=MultString |
+	//	primarytyp="IFEXPRESSION" construct=ID | primarytyp="FOREXPRESSION" construct=ID | primarytyp="BASICFORLOOPEXPRESSION"
+	//	construct=ID | primarytyp="WHILEEXPRESSION" construct=ID | primarytyp="DOWHILEEXPRESSION" construct=ID |
+	//	primarytyp="THROWEXPRESSION" construct=ID | primarytyp="RETURNEXPRESSION" construct=ID |
+	//	primarytyp="TRYCATCHFINALYEXPRESSION" construct=ID | primarytyp="PARENTHESIZEDEXPRESSION" construct=ID |
+	//	primarytyp="LITERALEXPRESSION" construct=ID;
 	public PrimaryInnerElements getPrimaryInnerAccess() {
 		return pPrimaryInner;
 	}

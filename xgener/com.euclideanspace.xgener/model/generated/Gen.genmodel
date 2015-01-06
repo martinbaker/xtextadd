@@ -78,6 +78,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//PrimaryInner/primarytyp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//PrimaryInner/construct"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//PrimaryInner/construct2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//PrimaryInner/feature"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Literal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Literal/name"/>

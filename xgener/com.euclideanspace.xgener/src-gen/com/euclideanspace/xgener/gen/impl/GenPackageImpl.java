@@ -804,6 +804,16 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getPrimaryInner_Feature()
+  {
+    return (EReference)primaryInnerEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLiteral()
   {
     return literalEClass;
@@ -960,6 +970,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     createEAttribute(primaryInnerEClass, PRIMARY_INNER__PRIMARYTYP);
     createEAttribute(primaryInnerEClass, PRIMARY_INNER__CONSTRUCT);
     createEAttribute(primaryInnerEClass, PRIMARY_INNER__CONSTRUCT2);
+    createEReference(primaryInnerEClass, PRIMARY_INNER__FEATURE);
 
     literalEClass = createEClass(LITERAL);
     createEAttribute(literalEClass, LITERAL__NAME);
@@ -1072,6 +1083,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     initEAttribute(getPrimaryInner_Primarytyp(), ecorePackage.getEString(), "primarytyp", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrimaryInner_Construct(), ecorePackage.getEString(), "construct", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPrimaryInner_Construct2(), ecorePackage.getEString(), "construct2", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPrimaryInner_Feature(), this.getMultString(), null, "feature", null, 0, 1, PrimaryInner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

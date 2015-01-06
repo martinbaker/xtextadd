@@ -3,11 +3,14 @@
 package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
+import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.PrimaryInner;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -22,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getPrimarytyp <em>Primarytyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getConstruct <em>Construct</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getConstruct2 <em>Construct2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrimaryInnerImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
@@ -88,6 +92,16 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
    * @ordered
    */
   protected String construct2 = CONSTRUCT2_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getFeature() <em>Feature</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature()
+   * @generated
+   * @ordered
+   */
+  protected MultString feature;
 
   /**
    * <!-- begin-user-doc -->
@@ -184,6 +198,70 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
    * <!-- end-user-doc -->
    * @generated
    */
+  public MultString getFeature()
+  {
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFeature(MultString newFeature, NotificationChain msgs)
+  {
+    MultString oldFeature = feature;
+    feature = newFeature;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRIMARY_INNER__FEATURE, oldFeature, newFeature);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFeature(MultString newFeature)
+  {
+    if (newFeature != feature)
+    {
+      NotificationChain msgs = null;
+      if (feature != null)
+        msgs = ((InternalEObject)feature).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRIMARY_INNER__FEATURE, null, msgs);
+      if (newFeature != null)
+        msgs = ((InternalEObject)newFeature).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRIMARY_INNER__FEATURE, null, msgs);
+      msgs = basicSetFeature(newFeature, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRIMARY_INNER__FEATURE, newFeature, newFeature));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GenPackage.PRIMARY_INNER__FEATURE:
+        return basicSetFeature(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -195,6 +273,8 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return getConstruct();
       case GenPackage.PRIMARY_INNER__CONSTRUCT2:
         return getConstruct2();
+      case GenPackage.PRIMARY_INNER__FEATURE:
+        return getFeature();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,6 +297,9 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return;
       case GenPackage.PRIMARY_INNER__CONSTRUCT2:
         setConstruct2((String)newValue);
+        return;
+      case GenPackage.PRIMARY_INNER__FEATURE:
+        setFeature((MultString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,6 +324,9 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
       case GenPackage.PRIMARY_INNER__CONSTRUCT2:
         setConstruct2(CONSTRUCT2_EDEFAULT);
         return;
+      case GenPackage.PRIMARY_INNER__FEATURE:
+        setFeature((MultString)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -261,6 +347,8 @@ public class PrimaryInnerImpl extends MinimalEObjectImpl.Container implements Pr
         return CONSTRUCT_EDEFAULT == null ? construct != null : !CONSTRUCT_EDEFAULT.equals(construct);
       case GenPackage.PRIMARY_INNER__CONSTRUCT2:
         return CONSTRUCT2_EDEFAULT == null ? construct2 != null : !CONSTRUCT2_EDEFAULT.equals(construct2);
+      case GenPackage.PRIMARY_INNER__FEATURE:
+        return feature != null;
     }
     return super.eIsSet(featureID);
   }

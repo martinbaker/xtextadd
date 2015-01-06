@@ -226,6 +226,7 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_3_1(), "rule__PrimaryInner__ConstructAssignment_3_1");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_4_0(), "rule__PrimaryInner__PrimarytypAssignment_4_0");
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_4_1(), "rule__PrimaryInner__ConstructAssignment_4_1");
+					put(grammarAccess.getPrimaryInnerAccess().getFeatureAssignment_4_2(), "rule__PrimaryInner__FeatureAssignment_4_2");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_5_0(), "rule__PrimaryInner__PrimarytypAssignment_5_0");
 					put(grammarAccess.getPrimaryInnerAccess().getConstructAssignment_5_1(), "rule__PrimaryInner__ConstructAssignment_5_1");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_6_0(), "rule__PrimaryInner__PrimarytypAssignment_6_0");

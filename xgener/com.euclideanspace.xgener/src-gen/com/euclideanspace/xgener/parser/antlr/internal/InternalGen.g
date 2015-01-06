@@ -2372,27 +2372,45 @@ rulePrimaryInner returns [EObject current=null]
 	    }
 
 )
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPrimaryInnerAccess().getFeatureMultStringParserRuleCall_4_2_0()); 
+	    }
+		lv_feature_11_0=ruleMultString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPrimaryInnerRule());
+	        }
+       		set(
+       			$current, 
+       			"feature",
+        		lv_feature_11_0, 
+        		"MultString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 ))
     |((
 (
-		lv_primarytyp_11_0=	'IFEXPRESSION' 
+		lv_primarytyp_12_0=	'IFEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_11_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypIFEXPRESSIONKeyword_5_0_0());
+        newLeafNode(lv_primarytyp_12_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypIFEXPRESSIONKeyword_5_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_11_0, "IFEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_12_0, "IFEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_12_0=RULE_ID
+		lv_construct_13_0=RULE_ID
 		{
-			newLeafNode(lv_construct_12_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_5_1_0()); 
+			newLeafNode(lv_construct_13_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_5_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2401,7 +2419,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_12_0, 
+        		lv_construct_13_0, 
         		"ID");
 	    }
 
@@ -2409,24 +2427,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_13_0=	'FOREXPRESSION' 
+		lv_primarytyp_14_0=	'FOREXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_13_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypFOREXPRESSIONKeyword_6_0_0());
+        newLeafNode(lv_primarytyp_14_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypFOREXPRESSIONKeyword_6_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_13_0, "FOREXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_14_0, "FOREXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_14_0=RULE_ID
+		lv_construct_15_0=RULE_ID
 		{
-			newLeafNode(lv_construct_14_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_6_1_0()); 
+			newLeafNode(lv_construct_15_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_6_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2435,7 +2453,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_14_0, 
+        		lv_construct_15_0, 
         		"ID");
 	    }
 
@@ -2443,24 +2461,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_15_0=	'BASICFORLOOPEXPRESSION' 
+		lv_primarytyp_16_0=	'BASICFORLOOPEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_15_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypBASICFORLOOPEXPRESSIONKeyword_7_0_0());
+        newLeafNode(lv_primarytyp_16_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypBASICFORLOOPEXPRESSIONKeyword_7_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_15_0, "BASICFORLOOPEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_16_0, "BASICFORLOOPEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_16_0=RULE_ID
+		lv_construct_17_0=RULE_ID
 		{
-			newLeafNode(lv_construct_16_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_7_1_0()); 
+			newLeafNode(lv_construct_17_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_7_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2469,7 +2487,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_16_0, 
+        		lv_construct_17_0, 
         		"ID");
 	    }
 
@@ -2477,24 +2495,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_17_0=	'WHILEEXPRESSION' 
+		lv_primarytyp_18_0=	'WHILEEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_17_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypWHILEEXPRESSIONKeyword_8_0_0());
+        newLeafNode(lv_primarytyp_18_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypWHILEEXPRESSIONKeyword_8_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_17_0, "WHILEEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_18_0, "WHILEEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_18_0=RULE_ID
+		lv_construct_19_0=RULE_ID
 		{
-			newLeafNode(lv_construct_18_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_8_1_0()); 
+			newLeafNode(lv_construct_19_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_8_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2503,7 +2521,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_18_0, 
+        		lv_construct_19_0, 
         		"ID");
 	    }
 
@@ -2511,24 +2529,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_19_0=	'DOWHILEEXPRESSION' 
+		lv_primarytyp_20_0=	'DOWHILEEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_19_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypDOWHILEEXPRESSIONKeyword_9_0_0());
+        newLeafNode(lv_primarytyp_20_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypDOWHILEEXPRESSIONKeyword_9_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_19_0, "DOWHILEEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_20_0, "DOWHILEEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_20_0=RULE_ID
+		lv_construct_21_0=RULE_ID
 		{
-			newLeafNode(lv_construct_20_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_9_1_0()); 
+			newLeafNode(lv_construct_21_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_9_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2537,7 +2555,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_20_0, 
+        		lv_construct_21_0, 
         		"ID");
 	    }
 
@@ -2545,24 +2563,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_21_0=	'THROWEXPRESSION' 
+		lv_primarytyp_22_0=	'THROWEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_21_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTHROWEXPRESSIONKeyword_10_0_0());
+        newLeafNode(lv_primarytyp_22_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTHROWEXPRESSIONKeyword_10_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_21_0, "THROWEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_22_0, "THROWEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_22_0=RULE_ID
+		lv_construct_23_0=RULE_ID
 		{
-			newLeafNode(lv_construct_22_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_10_1_0()); 
+			newLeafNode(lv_construct_23_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_10_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2571,7 +2589,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_22_0, 
+        		lv_construct_23_0, 
         		"ID");
 	    }
 
@@ -2579,24 +2597,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_23_0=	'RETURNEXPRESSION' 
+		lv_primarytyp_24_0=	'RETURNEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_23_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypRETURNEXPRESSIONKeyword_11_0_0());
+        newLeafNode(lv_primarytyp_24_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypRETURNEXPRESSIONKeyword_11_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_23_0, "RETURNEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_24_0, "RETURNEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_24_0=RULE_ID
+		lv_construct_25_0=RULE_ID
 		{
-			newLeafNode(lv_construct_24_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_11_1_0()); 
+			newLeafNode(lv_construct_25_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_11_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2605,7 +2623,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_24_0, 
+        		lv_construct_25_0, 
         		"ID");
 	    }
 
@@ -2613,24 +2631,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_25_0=	'TRYCATCHFINALYEXPRESSION' 
+		lv_primarytyp_26_0=	'TRYCATCHFINALYEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_25_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_12_0_0());
+        newLeafNode(lv_primarytyp_26_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypTRYCATCHFINALYEXPRESSIONKeyword_12_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_25_0, "TRYCATCHFINALYEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_26_0, "TRYCATCHFINALYEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_26_0=RULE_ID
+		lv_construct_27_0=RULE_ID
 		{
-			newLeafNode(lv_construct_26_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_12_1_0()); 
+			newLeafNode(lv_construct_27_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_12_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2639,7 +2657,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_26_0, 
+        		lv_construct_27_0, 
         		"ID");
 	    }
 
@@ -2647,24 +2665,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_27_0=	'PARENTHESIZEDEXPRESSION' 
+		lv_primarytyp_28_0=	'PARENTHESIZEDEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_27_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypPARENTHESIZEDEXPRESSIONKeyword_13_0_0());
+        newLeafNode(lv_primarytyp_28_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypPARENTHESIZEDEXPRESSIONKeyword_13_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_27_0, "PARENTHESIZEDEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_28_0, "PARENTHESIZEDEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_28_0=RULE_ID
+		lv_construct_29_0=RULE_ID
 		{
-			newLeafNode(lv_construct_28_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_13_1_0()); 
+			newLeafNode(lv_construct_29_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_13_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2673,7 +2691,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_28_0, 
+        		lv_construct_29_0, 
         		"ID");
 	    }
 
@@ -2681,24 +2699,24 @@ rulePrimaryInner returns [EObject current=null]
 ))
     |((
 (
-		lv_primarytyp_29_0=	'LITERALEXPRESSION' 
+		lv_primarytyp_30_0=	'LITERALEXPRESSION' 
     {
-        newLeafNode(lv_primarytyp_29_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypLITERALEXPRESSIONKeyword_14_0_0());
+        newLeafNode(lv_primarytyp_30_0, grammarAccess.getPrimaryInnerAccess().getPrimarytypLITERALEXPRESSIONKeyword_14_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPrimaryInnerRule());
 	        }
-       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_29_0, "LITERALEXPRESSION");
+       		setWithLastConsumed($current, "primarytyp", lv_primarytyp_30_0, "LITERALEXPRESSION");
 	    }
 
 )
 )(
 (
-		lv_construct_30_0=RULE_ID
+		lv_construct_31_0=RULE_ID
 		{
-			newLeafNode(lv_construct_30_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_14_1_0()); 
+			newLeafNode(lv_construct_31_0, grammarAccess.getPrimaryInnerAccess().getConstructIDTerminalRuleCall_14_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2707,7 +2725,7 @@ rulePrimaryInner returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"construct",
-        		lv_construct_30_0, 
+        		lv_construct_31_0, 
         		"ID");
 	    }
 

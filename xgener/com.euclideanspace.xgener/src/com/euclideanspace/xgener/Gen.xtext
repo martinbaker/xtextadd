@@ -34,7 +34,6 @@ Precedence:
     | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='OUTER' rule=ID (feature1=ID '=')? par1=ID inner+=InnerPrecedence+)
     | (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID)
-//    | (ruletyp='LITERAL' rule=ID literal=('INT'|'STRING'|'BOOL'|'FLOAT'))
     | (ruletyp='BRACKET' rule=ID bracket=ID)
     | (ruletyp='BRACES' rule=ID braces=ID)
     | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
@@ -67,8 +66,7 @@ PrimaryInner:
   (primarytyp='BLOCK' construct=ID) |
   (primarytyp='SWITCH' construct=ID construct2=ID) |
   (primarytyp='SYNCHRONIZED' construct=ID) |
-  (primarytyp='FEATURECALL' construct=ID) |
-//  (primarytyp='LITERAL' construct=ID) |
+  (primarytyp='FEATURECALL' construct=ID feature=MultString) |
   (primarytyp='IFEXPRESSION' construct=ID) |
   (primarytyp='FOREXPRESSION' construct=ID) |
   (primarytyp='BASICFORLOOPEXPRESSION' construct=ID) |

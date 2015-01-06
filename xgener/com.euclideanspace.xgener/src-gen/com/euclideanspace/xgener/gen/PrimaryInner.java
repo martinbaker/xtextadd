@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getPrimarytyp <em>Primarytyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct <em>Construct</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getConstruct2 <em>Construct2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.PrimaryInner#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,5 +102,31 @@ public interface PrimaryInner extends EObject
    * @generated
    */
   void setConstruct2(String value);
+
+  /**
+   * Returns the value of the '<em><b>Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Feature</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Feature</em>' containment reference.
+   * @see #setFeature(MultString)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrimaryInner_Feature()
+   * @model containment="true"
+   * @generated
+   */
+  MultString getFeature();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.PrimaryInner#getFeature <em>Feature</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Feature</em>' containment reference.
+   * @see #getFeature()
+   * @generated
+   */
+  void setFeature(MultString value);
 
 } // PrimaryInner

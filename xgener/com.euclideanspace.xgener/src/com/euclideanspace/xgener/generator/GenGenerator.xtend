@@ -272,14 +272,6 @@ XPrimaryExpression returns «p.name» hidden(SL_COMMENT,WS):
   «FOR x:p.inner SEPARATOR ' |'»
     «IF x.construct != null»«x.construct»«ENDIF»
   «ENDFOR»;
-    
-FeatureCallID:
-  ValidID | 'extends' | 'static' | 'import' | 'extension'
-;
-
-IdOrSuper :
-  FeatureCallID | 'super'
-;
 
 XExpressionOrVarDeclaration returns «p.name» hidden(SL_COMMENT,WS):
   XVariableDeclaration | «p.name»;
@@ -354,7 +346,7 @@ def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {«pi.construct»}
   ('<' typeArguments+=ID (',' typeArguments+=ID)* '>')?
-  feature=IdOrSuper
+  feature=«IF pi.feature != null»«compile(pi.feature)»«ENDIF»
   (=>explicitOperationCall?='('
   (
   featureCallArguments+=XShortClosure
@@ -377,7 +369,7 @@ def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
   (=>'else' else=«getParentExpression(pi)»)?;
 «ENDIF»
 «IF pi.primarytyp=='FOREXPRESSION'»
-/* modern form of 'for' expression using itererators
+/* modern form of 'for' expression using iterators
 */
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({«pi.construct»}
@@ -442,7 +434,7 @@ XCatchClause hidden(SL_COMMENT,WS):
   =>'catch' '(' declaredParam=ID ')' expression=XExpression;
 «ENDIF»
 «IF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
-/* code inside parenthasis: '( ... )'
+/* code inside parenthesis: '( ... )'
 */
 «pi.construct» returns «pi.construct» hidden(SL_COMMENT,WS):
   '(' «pi.construct» ')';
@@ -467,6 +459,8 @@ XLiteral returns XExpression hidden(SL_COMMENT,WS):
 /* Inner Literal */
 def CharSequence compile(com.euclideanspace.xgener.gen.LiteralInner pi) '''
 «IF pi.primarytyp=='COLLECTIONLITERAL'»
+/* a set or list
+*/
 XCollectionLiteral hidden(SL_COMMENT,WS):
   XSetLiteral | XListLiteral
 ;
@@ -480,6 +474,8 @@ XListLiteral hidden(SL_COMMENT,WS):
 ;
 «ENDIF»
 «IF pi.primarytyp=='CLOSURE'»
+/* as defined in xtend language
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   =>({«pi.construct»}
   '[')
@@ -497,22 +493,32 @@ XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
        (',' declaredFormalParameters+=ID)*)? explicitSyntax?='|') expression=«getParentExpression(pi)»;
 «ENDIF»
 «IF pi.primarytyp=='BOOLEANLITERAL'»
+/* true or false
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XBooleanLiteral} ('false' | isTrue?='true');
 «ENDIF»
 «IF pi.primarytyp=='NUMBERLITERAL'»
+/* a positive integer or floating point (using decimal point but not exponential form) 
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XNumberLiteral} value=Number;
 «ENDIF»
 «IF pi.primarytyp=='NULLLITERAL'»
+/* the word 'null'
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XNullLiteral} 'null';
 «ENDIF»
 «IF pi.primarytyp=='STRINGLITERAL'»
+/* string inside double quotes "..." 
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XStringLiteral} value=STRING;
 «ENDIF»
 «IF pi.primarytyp=='TYPELITERAL'»
+/* 'typeof' keyword followed by ID in parenthesis. 
+*/
 «pi.construct» returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
   {XTypeLiteral} 'typeof' '(' type=ID (arrayDimensions+=ArrayBrackets)* ')'
 ;
@@ -555,9 +561,10 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
      ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
      IF p.infix != null»«compile(p.infix)»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*;
-  «ELSEIF p.ruletyp=='OUTER'»«p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
-    /* Allows multiple entries with the same precidence. 
+  «ELSEIF p.ruletyp=='OUTER'»
+    /* Allows multiple entries with the same precedence. 
     */
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
     «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;
   «ELSEIF p.ruletyp=='CALLER'»

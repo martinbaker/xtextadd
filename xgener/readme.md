@@ -46,7 +46,7 @@ PRIMARY XExpression
   BLOCK XBlockExpression
   SWITCH XSwitchExpression XCasePart
   SYNCHRONIZED XSynchronizedExpression
-  FEATURECALL XFeatureCall
+  FEATURECALL XFeatureCall ["super" "ValidID" "extends" "static" "import" "extension"]
   IFEXPRESSION XIfExpression
   FOREXPRESSION XForLoopExpression
   BASICFORLOOPEXPRESSION XBasicForLoopExpression
@@ -82,7 +82,7 @@ LITERAL XExpression
   <li>INFIX Binary functions typically have the operation symbol (such as '+' or '*') between the two operands </li>
   <li>INFIXLEFT Same as INFIX but associates on left, that is a*b*c = (a*b)*c instead of a*(b*c)</li>
   <li>PREFIX Operator comes before single operand (such as -3). </li>
-  <li>SUFFIX Operator comes after single operand </li>
+  <li>SUFFIX Operator comes after single operand  (such as x++)</li>
   <li>CALLER Sets what EObject is returned if match is found, Applies to all following entries until it is changed. </li>
   <li>OUTER Allows multiple entries with the same precidence. </li>
   <li>BRACKET an entry inside brackets '[ ... ]' </li>
@@ -104,7 +104,7 @@ LITERAL XExpression
   <li>FOREXPRESSION modern form of 'for' expression using itererators </li>
   <li>BASICFORLOOPEXPRESSION original 'for' expression in java </li>
   <li>WHILEEXPRESSION while (...) ...  construct</li>
-  <li>DOWHILEEXPRESSION try ... catch ... finally ... construct</li>
+  <li>DOWHILEEXPRESSION do ... while(...)</li>
   <li>THROWEXPRESSION throw an error </li>
   <li>RETURNEXPRESSION return from procedure </li>
   <li>TRYCATCHFINALYEXPRESSION try ... catch ... finally ... construct </li>
@@ -115,13 +115,13 @@ LITERAL XExpression
 <p>The entries here represent literal values in our DSL such as numbers or strings. </p>
 <p>Entries may be of the following types: </p>
 <ul>
-  <li>COLLECTIONLITERAL</li>
-  <li>CLOSURE</li>
+  <li>COLLECTIONLITERAL a set or list </li>
+  <li>CLOSURE as defined in xtend language </li>
   <li>BOOLEANLITERAL true or false </li>
-  <li>NUMBERLITERAL</li>
+  <li>NUMBERLITERAL a positive integer or floating point (using decimal point but not exponetial form) </li>
   <li>NULLLITERAL the word 'null' </li>
-  <li>STRINGLITERAL string inside doubl quotes &quot;...&quot; </li>
-  <li>TYPELITERAL</li>
+  <li>STRINGLITERAL string inside double quotes &quot;...&quot; </li>
+  <li>TYPELITERAL 'typeof' keyword followed by ID in parenthasis. </li>
 </ul>
 <h4>PROCEDURE</h4>
 <p>The procedure (method) section defines the syntax of procedure/method/function definitions in your DSL. </p>

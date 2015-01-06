@@ -706,13 +706,22 @@ public interface GenPackage extends EPackage
   int PRIMARY_INNER__CONSTRUCT2 = 2;
 
   /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_INNER__FEATURE = 3;
+
+  /**
    * The number of structural features of the '<em>Primary Inner</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRIMARY_INNER_FEATURE_COUNT = 3;
+  int PRIMARY_INNER_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.LiteralImpl <em>Literal</em>}' class.
@@ -1462,6 +1471,17 @@ public interface GenPackage extends EPackage
   EAttribute getPrimaryInner_Construct2();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.PrimaryInner#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Feature</em>'.
+   * @see com.euclideanspace.xgener.gen.PrimaryInner#getFeature()
+   * @see #getPrimaryInner()
+   * @generated
+   */
+  EReference getPrimaryInner_Feature();
+
+  /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Literal <em>Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2063,6 +2083,14 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute PRIMARY_INNER__CONSTRUCT2 = eINSTANCE.getPrimaryInner_Construct2();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRIMARY_INNER__FEATURE = eINSTANCE.getPrimaryInner_Feature();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.LiteralImpl <em>Literal</em>}' class.
