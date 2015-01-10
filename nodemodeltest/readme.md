@@ -1,8 +1,8 @@
 <p>In order to check some issues I am discussing with Sebastian Zarnekow <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">on bugzilla here</a>, I have setup this test program.</p>
 <p>The aim is to find what happens to the node model when phantom tokens are used.</p>
-<p>In order to keep things simple I used a very simple grammar (see here). This grammar allows an ID to be nested in curly brackets.</p>
-<p>I also  set it to create semicolon tokens as a PhantomToken after every closing brace (see code here).</p>
-<p>In order to see what is going I added some code  to run after 'compressAndReturnParent' gets called on the root node. This code does the following:</p>
+<p>In order to keep things simple I used a very simple grammar (<a href="https://github.com/martinbaker/xtextadd/blob/master/nodemodeltest/com.euclideanspace.phantom1/src/com/euclideanspace/phantom1/Test1.xtext">see here</a>). This grammar allows an ID to be nested in curly brackets.</p>
+<p>I also  set it to create semicolon tokens as a PhantomToken after every closing brace (<a href="https://github.com/martinbaker/xtextadd/blob/master/nodemodeltest/com.euclideanspace.phantom1/src/com/euclideanspace/phantom1/Test1TokenSource.java">see code here</a>).</p>
+<p>In order to see what is going I added some code  to run after '<a href="https://github.com/martinbaker/xtextadd/blob/master/nodemodeltest/com.euclideanspace.phantom1/src/com/euclideanspace/phantom1/Test1NodeModelBuilder.java">compressAndReturnParent</a>' gets called on the root node. This code does the following:</p>
 <ul>
   <li>Uses InvariantChecker on the root node.</li>
   <li>Outputs a textual representation of the node model.  </li>
