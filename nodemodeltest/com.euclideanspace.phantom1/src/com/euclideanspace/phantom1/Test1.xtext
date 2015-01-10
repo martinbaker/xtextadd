@@ -1,0 +1,15 @@
+grammar com.euclideanspace.phantom1.Test1 with org.eclipse.xtext.common.Terminals
+
+generate test1 "http://www.euclideanspace.com/phantom1/Test1"
+
+Model:
+  contents+=Recurse*;
+	
+terminal KW_OCURLY: '{';
+terminal KW_CCURLY: '}';
+terminal KW_SEMICOLON: ';';
+
+Recurse:
+  n=ID |
+  (KW_OCURLY r=Recurse KW_CCURLY KW_SEMICOLON?)
+;

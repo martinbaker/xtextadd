@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.euclideanspace.com/phantom1/Test1" 
+       class = "com.euclideanspace.phantom1.test1.Test1Package"
+       genModel = "model/generated/Test1.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>
