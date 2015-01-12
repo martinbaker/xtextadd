@@ -41,7 +41,7 @@
     [LeafNode  txt=} gram=[RuleCallImpl=-4 cardinality=? ele-name=KW_SEMICOLON] lin=1 len=1 off=6:7 tot-off=6:7]</pre></td>
   </tr>
 </table>
-<p>In the above case the PhantomToken sets the start and stop index to the same value, this results in a PhantomToken of length 1. In order to correct this I changed PhantomToken to set the start value to be one more than the start value, this works and now passes InvariantChecker:</p>
+<p>In the above case the PhantomToken sets the start and stop index to the same value, this results in a PhantomToken of length 1. In order to correct this I changed PhantomToken to set the start value to be one more than the stop value, this works and now passes InvariantChecker:</p>
 
 <p>It now gives the correct lengths: </p>
 <table border="1">
