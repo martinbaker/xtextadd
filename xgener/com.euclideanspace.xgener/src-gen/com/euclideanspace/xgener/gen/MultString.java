@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.MultString#getCs <em>Cs</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,19 +26,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface MultString extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Ms</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Ms</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ms</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Ms</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ms</em>' attribute list.
+   * @return the value of the '<em>Ms</em>' attribute.
+   * @see #setMs(String)
    * @see com.euclideanspace.xgener.gen.GenPackage#getMultString_Ms()
-   * @model unique="false"
+   * @model
    * @generated
    */
-  EList<String> getMs();
+  String getMs();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ms</em>' attribute.
+   * @see #getMs()
+   * @generated
+   */
+  void setMs(String value);
+
+  /**
+   * Returns the value of the '<em><b>Cs</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.ComboString}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Cs</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Cs</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getMultString_Cs()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ComboString> getCs();
 
 } // MultString

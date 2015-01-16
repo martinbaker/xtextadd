@@ -95,6 +95,15 @@ public interface GenFactory extends EFactory
   MultString createMultString();
 
   /**
+   * Returns a new object of class '<em>Combo String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Combo String</em>'.
+   * @generated
+   */
+  ComboString createComboString();
+
+  /**
    * Returns a new object of class '<em>Primary</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

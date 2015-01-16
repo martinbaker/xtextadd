@@ -2068,7 +2068,7 @@ ruleMultString returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getMultStringRule());
 	        }
-       		addWithLastConsumed(
+       		setWithLastConsumed(
        			$current, 
        			"ms",
         		lv_ms_1_0, 
@@ -2083,27 +2083,94 @@ ruleMultString returns [EObject current=null]
     }
 (
 (
-		lv_ms_3_0=RULE_STRING
+		{ 
+	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_1_0()); 
+	    }
+		lv_cs_3_0=ruleComboString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMultStringRule());
+	        }
+       		add(
+       			$current, 
+       			"cs",
+        		lv_cs_3_0, 
+        		"ComboString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_4='|' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMultStringAccess().getVerticalLineKeyword_1_1_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_2_1_0()); 
+	    }
+		lv_cs_5_0=ruleComboString		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMultStringRule());
+	        }
+       		add(
+       			$current, 
+       			"cs",
+        		lv_cs_5_0, 
+        		"ComboString");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_6=']' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_3());
+    }
+)))
+;
+
+
+
+
+
+// Entry rule entryRuleComboString
+entryRuleComboString returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getComboStringRule()); }
+	 iv_ruleComboString=ruleComboString 
+	 { $current=$iv_ruleComboString.current; } 
+	 EOF 
+;
+
+// Rule ComboString
+ruleComboString returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getComboStringAccess().getComboStringAction_0(),
+            $current);
+    }
+)(
+(
+		lv_inner_1_0=RULE_STRING
 		{
-			newLeafNode(lv_ms_3_0, grammarAccess.getMultStringAccess().getMsSTRINGTerminalRuleCall_1_1_1_0()); 
+			newLeafNode(lv_inner_1_0, grammarAccess.getComboStringAccess().getInnerSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMultStringRule());
+	            $current = createModelElement(grammarAccess.getComboStringRule());
 	        }
        		addWithLastConsumed(
        			$current, 
-       			"ms",
-        		lv_ms_3_0, 
+       			"inner",
+        		lv_inner_1_0, 
         		"STRING");
 	    }
 
 )
-)*	otherlv_4=']' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_2());
-    }
-)))
+)*)
 ;
 
 

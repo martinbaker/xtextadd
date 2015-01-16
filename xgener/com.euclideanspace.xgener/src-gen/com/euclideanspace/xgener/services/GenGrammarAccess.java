@@ -1182,43 +1182,83 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMsSTRINGTerminalRuleCall_1_0_0 = (RuleCall)cMsAssignment_1_0.eContents().get(0);
 		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Assignment cMsAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
-		private final RuleCall cMsSTRINGTerminalRuleCall_1_1_1_0 = (RuleCall)cMsAssignment_1_1_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
+		private final Assignment cCsAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cCsComboStringParserRuleCall_1_1_1_0 = (RuleCall)cCsAssignment_1_1_1.eContents().get(0);
+		private final Group cGroup_1_1_2 = (Group)cGroup_1_1.eContents().get(2);
+		private final Keyword cVerticalLineKeyword_1_1_2_0 = (Keyword)cGroup_1_1_2.eContents().get(0);
+		private final Assignment cCsAssignment_1_1_2_1 = (Assignment)cGroup_1_1_2.eContents().get(1);
+		private final RuleCall cCsComboStringParserRuleCall_1_1_2_1_0 = (RuleCall)cCsAssignment_1_1_2_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
 		
 		//MultString:
-		//	{MultString} (ms+=STRING | "[" ms+=STRING* "]");
+		//	{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]");
 		public ParserRule getRule() { return rule; }
 
-		//{MultString} (ms+=STRING | "[" ms+=STRING* "]")
+		//{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]")
 		public Group getGroup() { return cGroup; }
 
 		//{MultString}
 		public Action getMultStringAction_0() { return cMultStringAction_0; }
 
-		//ms+=STRING | "[" ms+=STRING* "]"
+		//ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]"
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//ms+=STRING
+		//ms=STRING
 		public Assignment getMsAssignment_1_0() { return cMsAssignment_1_0; }
 
 		//STRING
 		public RuleCall getMsSTRINGTerminalRuleCall_1_0_0() { return cMsSTRINGTerminalRuleCall_1_0_0; }
 
-		//"[" ms+=STRING* "]"
+		//"[" cs+=ComboString ("|" cs+=ComboString)* "]"
 		public Group getGroup_1_1() { return cGroup_1_1; }
 
 		//"["
 		public Keyword getLeftSquareBracketKeyword_1_1_0() { return cLeftSquareBracketKeyword_1_1_0; }
 
-		//ms+=STRING*
-		public Assignment getMsAssignment_1_1_1() { return cMsAssignment_1_1_1; }
+		//cs+=ComboString
+		public Assignment getCsAssignment_1_1_1() { return cCsAssignment_1_1_1; }
 
-		//STRING
-		public RuleCall getMsSTRINGTerminalRuleCall_1_1_1_0() { return cMsSTRINGTerminalRuleCall_1_1_1_0; }
+		//ComboString
+		public RuleCall getCsComboStringParserRuleCall_1_1_1_0() { return cCsComboStringParserRuleCall_1_1_1_0; }
+
+		//("|" cs+=ComboString)*
+		public Group getGroup_1_1_2() { return cGroup_1_1_2; }
+
+		//"|"
+		public Keyword getVerticalLineKeyword_1_1_2_0() { return cVerticalLineKeyword_1_1_2_0; }
+
+		//cs+=ComboString
+		public Assignment getCsAssignment_1_1_2_1() { return cCsAssignment_1_1_2_1; }
+
+		//ComboString
+		public RuleCall getCsComboStringParserRuleCall_1_1_2_1_0() { return cCsComboStringParserRuleCall_1_1_2_1_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_1_1_2() { return cRightSquareBracketKeyword_1_1_2; }
+		public Keyword getRightSquareBracketKeyword_1_1_3() { return cRightSquareBracketKeyword_1_1_3; }
+	}
+
+	public class ComboStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComboString");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cComboStringAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cInnerAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInnerSTRINGTerminalRuleCall_1_0 = (RuleCall)cInnerAssignment_1.eContents().get(0);
+		
+		//ComboString:
+		//	{ComboString} inner+=STRING*;
+		public ParserRule getRule() { return rule; }
+
+		//{ComboString} inner+=STRING*
+		public Group getGroup() { return cGroup; }
+
+		//{ComboString}
+		public Action getComboStringAction_0() { return cComboStringAction_0; }
+
+		//inner+=STRING*
+		public Assignment getInnerAssignment_1() { return cInnerAssignment_1; }
+
+		//STRING
+		public RuleCall getInnerSTRINGTerminalRuleCall_1_0() { return cInnerSTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class PrimaryElements extends AbstractParserRuleElementFinder {
@@ -1790,6 +1830,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	private final InnerPrecedenceElements pInnerPrecedence;
 	private final MultIDElements pMultID;
 	private final MultStringElements pMultString;
+	private final ComboStringElements pComboString;
 	private final PrimaryElements pPrimary;
 	private final PrimaryInnerElements pPrimaryInner;
 	private final LiteralElements pLiteral;
@@ -1812,6 +1853,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		this.pInnerPrecedence = new InnerPrecedenceElements();
 		this.pMultID = new MultIDElements();
 		this.pMultString = new MultStringElements();
+		this.pComboString = new ComboStringElements();
 		this.pPrimary = new PrimaryElements();
 		this.pPrimaryInner = new PrimaryInnerElements();
 		this.pLiteral = new LiteralElements();
@@ -1930,13 +1972,23 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultString:
-	//	{MultString} (ms+=STRING | "[" ms+=STRING* "]");
+	//	{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]");
 	public MultStringElements getMultStringAccess() {
 		return pMultString;
 	}
 	
 	public ParserRule getMultStringRule() {
 		return getMultStringAccess().getRule();
+	}
+
+	//ComboString:
+	//	{ComboString} inner+=STRING*;
+	public ComboStringElements getComboStringAccess() {
+		return pComboString;
+	}
+	
+	public ParserRule getComboStringRule() {
+		return getComboStringAccess().getRule();
 	}
 
 	//Primary:

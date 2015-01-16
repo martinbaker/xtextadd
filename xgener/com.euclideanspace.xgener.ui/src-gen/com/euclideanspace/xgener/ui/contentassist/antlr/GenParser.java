@@ -92,6 +92,8 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultIDAccess().getGroup_1_1(), "rule__MultID__Group_1_1__0");
 					put(grammarAccess.getMultStringAccess().getGroup(), "rule__MultString__Group__0");
 					put(grammarAccess.getMultStringAccess().getGroup_1_1(), "rule__MultString__Group_1_1__0");
+					put(grammarAccess.getMultStringAccess().getGroup_1_1_2(), "rule__MultString__Group_1_1_2__0");
+					put(grammarAccess.getComboStringAccess().getGroup(), "rule__ComboString__Group__0");
 					put(grammarAccess.getPrimaryAccess().getGroup(), "rule__Primary__Group__0");
 					put(grammarAccess.getPrimaryInnerAccess().getGroup_0(), "rule__PrimaryInner__Group_0__0");
 					put(grammarAccess.getPrimaryInnerAccess().getGroup_1(), "rule__PrimaryInner__Group_1__0");
@@ -212,7 +214,9 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultIDAccess().getMiAssignment_1_0(), "rule__MultID__MiAssignment_1_0");
 					put(grammarAccess.getMultIDAccess().getMiAssignment_1_1_1(), "rule__MultID__MiAssignment_1_1_1");
 					put(grammarAccess.getMultStringAccess().getMsAssignment_1_0(), "rule__MultString__MsAssignment_1_0");
-					put(grammarAccess.getMultStringAccess().getMsAssignment_1_1_1(), "rule__MultString__MsAssignment_1_1_1");
+					put(grammarAccess.getMultStringAccess().getCsAssignment_1_1_1(), "rule__MultString__CsAssignment_1_1_1");
+					put(grammarAccess.getMultStringAccess().getCsAssignment_1_1_2_1(), "rule__MultString__CsAssignment_1_1_2_1");
+					put(grammarAccess.getComboStringAccess().getInnerAssignment_1(), "rule__ComboString__InnerAssignment_1");
 					put(grammarAccess.getPrimaryAccess().getNameAssignment_1(), "rule__Primary__NameAssignment_1");
 					put(grammarAccess.getPrimaryAccess().getInnerAssignment_2(), "rule__Primary__InnerAssignment_2");
 					put(grammarAccess.getPrimaryInnerAccess().getPrimarytypAssignment_0_0(), "rule__PrimaryInner__PrimarytypAssignment_0_0");

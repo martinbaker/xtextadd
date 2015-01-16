@@ -614,7 +614,7 @@ public interface GenPackage extends EPackage
   int MULT_STRING = 7;
 
   /**
-   * The feature id for the '<em><b>Ms</b></em>' attribute list.
+   * The feature id for the '<em><b>Ms</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -623,13 +623,50 @@ public interface GenPackage extends EPackage
   int MULT_STRING__MS = 0;
 
   /**
+   * The feature id for the '<em><b>Cs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING__CS = 1;
+
+  /**
    * The number of structural features of the '<em>Mult String</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULT_STRING_FEATURE_COUNT = 1;
+  int MULT_STRING_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ComboStringImpl <em>Combo String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.ComboStringImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getComboString()
+   * @generated
+   */
+  int COMBO_STRING = 8;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMBO_STRING__INNER = 0;
+
+  /**
+   * The number of structural features of the '<em>Combo String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMBO_STRING_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryImpl <em>Primary</em>}' class.
@@ -639,7 +676,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
    * @generated
    */
-  int PRIMARY = 8;
+  int PRIMARY = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -676,7 +713,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
    * @generated
    */
-  int PRIMARY_INNER = 9;
+  int PRIMARY_INNER = 10;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -731,7 +768,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 10;
+  int LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -768,7 +805,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
    * @generated
    */
-  int LITERAL_INNER = 11;
+  int LITERAL_INNER = 12;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -1385,15 +1422,47 @@ public interface GenPackage extends EPackage
   EClass getMultString();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}'.
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Ms</em>'.
+   * @return the meta object for the attribute '<em>Ms</em>'.
    * @see com.euclideanspace.xgener.gen.MultString#getMs()
    * @see #getMultString()
    * @generated
    */
   EAttribute getMultString_Ms();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.MultString#getCs <em>Cs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Cs</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString#getCs()
+   * @see #getMultString()
+   * @generated
+   */
+  EReference getMultString_Cs();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.ComboString <em>Combo String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Combo String</em>'.
+   * @see com.euclideanspace.xgener.gen.ComboString
+   * @generated
+   */
+  EClass getComboString();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.ComboString#getInner <em>Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Inner</em>'.
+   * @see com.euclideanspace.xgener.gen.ComboString#getInner()
+   * @see #getComboString()
+   * @generated
+   */
+  EAttribute getComboString_Inner();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Primary <em>Primary</em>}'.
@@ -2017,12 +2086,38 @@ public interface GenPackage extends EPackage
     EClass MULT_STRING = eINSTANCE.getMultString();
 
     /**
-     * The meta object literal for the '<em><b>Ms</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Ms</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
+
+    /**
+     * The meta object literal for the '<em><b>Cs</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULT_STRING__CS = eINSTANCE.getMultString_Cs();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.ComboStringImpl <em>Combo String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.ComboStringImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getComboString()
+     * @generated
+     */
+    EClass COMBO_STRING = eINSTANCE.getComboString();
+
+    /**
+     * The meta object literal for the '<em><b>Inner</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMBO_STRING__INNER = eINSTANCE.getComboString_Inner();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryImpl <em>Primary</em>}' class.

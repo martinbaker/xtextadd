@@ -3,6 +3,7 @@
 package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.ClassType;
+import com.euclideanspace.xgener.gen.ComboString;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenFactory;
 import com.euclideanspace.xgener.gen.GenPackage;
@@ -87,6 +88,13 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * @generated
    */
   private EClass multStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass comboStringEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -734,6 +742,36 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMultString_Cs()
+  {
+    return (EReference)multStringEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getComboString()
+  {
+    return comboStringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComboString_Inner()
+  {
+    return (EAttribute)comboStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPrimary()
   {
     return primaryEClass;
@@ -961,6 +999,10 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     multStringEClass = createEClass(MULT_STRING);
     createEAttribute(multStringEClass, MULT_STRING__MS);
+    createEReference(multStringEClass, MULT_STRING__CS);
+
+    comboStringEClass = createEClass(COMBO_STRING);
+    createEAttribute(comboStringEClass, COMBO_STRING__INNER);
 
     primaryEClass = createEClass(PRIMARY);
     createEAttribute(primaryEClass, PRIMARY__NAME);
@@ -1073,7 +1115,11 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     initEAttribute(getMultID_Mi(), ecorePackage.getEString(), "mi", null, 0, -1, MultID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multStringEClass, MultString.class, "MultString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMultString_Ms(), ecorePackage.getEString(), "ms", null, 0, -1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultString_Ms(), ecorePackage.getEString(), "ms", null, 0, 1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultString_Cs(), this.getComboString(), null, "cs", null, 0, -1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(comboStringEClass, ComboString.class, "ComboString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComboString_Inner(), ecorePackage.getEString(), "inner", null, 0, -1, ComboString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(primaryEClass, Primary.class, "Primary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrimary_Name(), ecorePackage.getEString(), "name", null, 0, 1, Primary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

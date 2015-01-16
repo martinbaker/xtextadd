@@ -115,6 +115,11 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createMultStringAdapter();
       }
       @Override
+      public Adapter caseComboString(ComboString object)
+      {
+        return createComboStringAdapter();
+      }
+      @Override
       public Adapter casePrimary(Primary object)
       {
         return createPrimaryAdapter();
@@ -272,6 +277,21 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMultStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.ComboString <em>Combo String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.ComboString
+   * @generated
+   */
+  public Adapter createComboStringAdapter()
   {
     return null;
   }

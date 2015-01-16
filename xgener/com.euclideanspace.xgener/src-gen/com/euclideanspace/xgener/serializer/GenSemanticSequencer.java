@@ -1,6 +1,7 @@
 package com.euclideanspace.xgener.serializer;
 
 import com.euclideanspace.xgener.gen.ClassType;
+import com.euclideanspace.xgener.gen.ComboString;
 import com.euclideanspace.xgener.gen.Expression;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.InnerPrecedence;
@@ -36,6 +37,12 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GenPackage.CLASS_TYPE:
 				if(context == grammarAccess.getClassTypeRule()) {
 					sequence_ClassType(context, (ClassType) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.COMBO_STRING:
+				if(context == grammarAccess.getComboStringRule()) {
+					sequence_ComboString(context, (ComboString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -120,6 +127,15 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (inner+=STRING*)
+	 */
+	protected void sequence_ComboString(EObject context, ComboString semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID prec+=Precedence*)
 	 */
 	protected void sequence_Expression(EObject context, Expression semanticObject) {
@@ -191,7 +207,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (ms+=STRING | ms+=STRING*)
+	 *     (ms=STRING | (cs+=ComboString cs+=ComboString*))
 	 */
 	protected void sequence_MultString(EObject context, MultString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

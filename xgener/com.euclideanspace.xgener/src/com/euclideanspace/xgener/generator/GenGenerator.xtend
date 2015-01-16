@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject
 import com.euclideanspace.xgener.gen.Precedence
 import com.euclideanspace.xgener.gen.Primary
 import com.euclideanspace.xgener.gen.Literal
+import com.euclideanspace.xgener.gen.ComboString
 
 /**
  * Generates code from your model files on save.
@@ -559,8 +560,13 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
      ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
-     IF p.infix != null»«compile(p.infix)»«ENDIF»)
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*;
+    «IF opRuleRequired(p.infix)»
+    
+    op«p.rule» hidden(SL_COMMENT,WS):
+    «compile(p.infix)»;
+    «ENDIF»
   «ELSEIF p.ruletyp=='OUTER'»
     /* Allows multiple entries with the same precedence. 
     */
@@ -630,14 +636,36 @@ def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
   «ENDIF»
 '''
 
+/** If we are putting multiple operators in an expression rule and they are complicated then
+ * we need to move the operators out into a separate rule.
+ * This function tests if that is required.
+ */
+def boolean opRuleRequired(com.euclideanspace.xgener.gen.MultString m){
+	if (m.ms != null) return false;
+	for (ComboString x:m.cs) {
+		if (x.inner != null){
+			if (x.inner.length > 1) return true;
+		}
+	}
+	return false;
+}
+
 /**
  * MultString
  */
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
-  IF m.ms == null»«
-  ELSEIF m.ms.length==1»'«m.ms.get(0)»'«
+  IF m.ms != null»'«m.ms»'«
   ELSE
-    »«FOR x:m.ms BEFORE '(' SEPARATOR '|' AFTER ')'»'«x»'«ENDFOR»«
+    »«FOR x:m.cs BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»«
+  ENDIF»'''
+  
+/**
+ * ComboString
+ */
+def CharSequence compile(com.euclideanspace.xgener.gen.ComboString c) '''«
+  IF c.inner == null»'empty'«
+  ELSE
+    »«FOR x:c.inner  SEPARATOR ' '»'«x»'«ENDFOR»«
   ENDIF»'''
 
 /**

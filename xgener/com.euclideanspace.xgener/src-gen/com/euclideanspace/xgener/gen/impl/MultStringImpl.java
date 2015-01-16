@@ -2,18 +2,25 @@
  */
 package com.euclideanspace.xgener.gen.impl;
 
+import com.euclideanspace.xgener.gen.ComboString;
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.MultString;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +30,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getMs <em>Ms</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getCs <em>Cs</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,14 +39,34 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 public class MultStringImpl extends MinimalEObjectImpl.Container implements MultString
 {
   /**
-   * The cached value of the '{@link #getMs() <em>Ms</em>}' attribute list.
+   * The default value of the '{@link #getMs() <em>Ms</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getMs()
    * @generated
    * @ordered
    */
-  protected EList<String> ms;
+  protected static final String MS_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMs() <em>Ms</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMs()
+   * @generated
+   * @ordered
+   */
+  protected String ms = MS_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getCs() <em>Cs</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCs()
+   * @generated
+   * @ordered
+   */
+  protected EList<ComboString> cs;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,13 +94,52 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getMs()
+  public String getMs()
   {
-    if (ms == null)
-    {
-      ms = new EDataTypeEList<String>(String.class, this, GenPackage.MULT_STRING__MS);
-    }
     return ms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMs(String newMs)
+  {
+    String oldMs = ms;
+    ms = newMs;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.MULT_STRING__MS, oldMs, ms));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<ComboString> getCs()
+  {
+    if (cs == null)
+    {
+      cs = new EObjectContainmentEList<ComboString>(ComboString.class, this, GenPackage.MULT_STRING__CS);
+    }
+    return cs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GenPackage.MULT_STRING__CS:
+        return ((InternalEList<?>)getCs()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -87,6 +154,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         return getMs();
+      case GenPackage.MULT_STRING__CS:
+        return getCs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -103,8 +172,11 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     switch (featureID)
     {
       case GenPackage.MULT_STRING__MS:
-        getMs().clear();
-        getMs().addAll((Collection<? extends String>)newValue);
+        setMs((String)newValue);
+        return;
+      case GenPackage.MULT_STRING__CS:
+        getCs().clear();
+        getCs().addAll((Collection<? extends ComboString>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -121,7 +193,10 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     switch (featureID)
     {
       case GenPackage.MULT_STRING__MS:
-        getMs().clear();
+        setMs(MS_EDEFAULT);
+        return;
+      case GenPackage.MULT_STRING__CS:
+        getCs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -138,7 +213,9 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     switch (featureID)
     {
       case GenPackage.MULT_STRING__MS:
-        return ms != null && !ms.isEmpty();
+        return MS_EDEFAULT == null ? ms != null : !MS_EDEFAULT.equals(ms);
+      case GenPackage.MULT_STRING__CS:
+        return cs != null && !cs.isEmpty();
     }
     return super.eIsSet(featureID);
   }
