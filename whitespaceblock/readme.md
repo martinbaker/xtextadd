@@ -1,5 +1,10 @@
 <p>This contains some proposed additions to <a href="https://github.com/eclipse/xtext">Xtext</a>.</p>
 <p>Xtext is a very powerful way to create a project IDE from a grammar but I would like some additional capabilities. I will put some small demonstrator projects here in the hope of persuading the Xtext team to include these capabilities into Xtext. </p>
+<table border="1" bgcolor="#99FFFF">
+  <tr>
+    <td><p>Note:  Sebastian Zarnekow from the Xtext team has adapted this and incorporated this into Xtext. This will be available in xtext v2.8,  it will come with example language and documentation . It will be based around <a href="https://github.com/eclipse/xtext/blob/master/plugins/org.eclipse.xtext/src/org/eclipse/xtext/parser/antlr/AbstractIndentationTokenSource.java">this class</a>. Unfortunately they won't add a second terminals grammar with special python-like syntax for comments and continuation. (more info about this on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">this thread</a>).</p></td>
+  </tr>
+</table>
 <p>These pages are looking at the possibilities for customising between the lexer and the parser. Examples or the need for this include:</p>
 <ul>
   <li>When we are adapting an existing grammar to use with xtext (for example in one of my projects I need virtual semicolons inserted after some closing braces).</li>

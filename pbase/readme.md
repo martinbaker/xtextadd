@@ -1,5 +1,10 @@
 <h2>Tutorial for Implementing a Python-like Syntax using Xtext </h2>
 <p>Here we have a tutorial, with code, for the whitespaceblock project which is <a href="https://github.com/martinbaker/xtextadd/tree/master/whitespaceblock">on github here</a>. </p>
+<table border="1" bgcolor="#99FFFF">
+  <tr>
+    <td><p>Note:  Sebastian Zarnekow from the Xtext team has adapted this and incorporated this into Xtext. This will be available in xtext v2.8,  it will come with example language and documentation . It will be based around <a href="https://github.com/eclipse/xtext/blob/master/plugins/org.eclipse.xtext/src/org/eclipse/xtext/parser/antlr/AbstractIndentationTokenSource.java">this class</a>. Unfortunately they won't add a second terminals grammar with special python-like syntax for comments and continuation. (more info about this on <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">this thread</a>).</p></td>
+  </tr>
+</table>
 <h3>Why Python-like Syntax </h3>
 <p>In this tutorial we discuss how to use Xtext to implement a DSL which may have syntax constructs similar to that used by the Python language, in particular, how to implement a syntax that depends on whitespace.</p>
 <p>When writing DSLs using Xtext we may tend to base the syntax of our DSL on the Java language. If we are writing our DSL from scratch this may possibly be the best thing to do, there are many advantages to the java syntax.  However this is Xtext and we can change the syntax however we want, you may decide that for your DSL, a more Python-like syntax is better. Reasons for this may be:</p>
