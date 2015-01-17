@@ -86,12 +86,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultString">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="synpred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cs" upperBound="-1" eType="#//ComboString"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComboString">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inner" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inner" upperBound="-1"
+        eType="#//MultString" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Primary">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

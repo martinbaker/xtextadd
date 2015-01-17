@@ -623,13 +623,22 @@ public interface GenPackage extends EPackage
   int MULT_STRING__MS = 0;
 
   /**
+   * The feature id for the '<em><b>Synpred</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING__SYNPRED = 1;
+
+  /**
    * The feature id for the '<em><b>Cs</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULT_STRING__CS = 1;
+  int MULT_STRING__CS = 2;
 
   /**
    * The number of structural features of the '<em>Mult String</em>' class.
@@ -638,7 +647,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING_FEATURE_COUNT = 2;
+  int MULT_STRING_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ComboStringImpl <em>Combo String</em>}' class.
@@ -651,7 +660,7 @@ public interface GenPackage extends EPackage
   int COMBO_STRING = 8;
 
   /**
-   * The feature id for the '<em><b>Inner</b></em>' attribute list.
+   * The feature id for the '<em><b>Inner</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1433,6 +1442,17 @@ public interface GenPackage extends EPackage
   EAttribute getMultString_Ms();
 
   /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#getSynpred <em>Synpred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Synpred</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString#getSynpred()
+   * @see #getMultString()
+   * @generated
+   */
+  EAttribute getMultString_Synpred();
+
+  /**
    * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.MultString#getCs <em>Cs</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1454,15 +1474,15 @@ public interface GenPackage extends EPackage
   EClass getComboString();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.ComboString#getInner <em>Inner</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.ComboString#getInner <em>Inner</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Inner</em>'.
+   * @return the meta object for the containment reference list '<em>Inner</em>'.
    * @see com.euclideanspace.xgener.gen.ComboString#getInner()
    * @see #getComboString()
    * @generated
    */
-  EAttribute getComboString_Inner();
+  EReference getComboString_Inner();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Primary <em>Primary</em>}'.
@@ -2094,6 +2114,14 @@ public interface GenPackage extends EPackage
     EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
 
     /**
+     * The meta object literal for the '<em><b>Synpred</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULT_STRING__SYNPRED = eINSTANCE.getMultString_Synpred();
+
+    /**
      * The meta object literal for the '<em><b>Cs</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2112,12 +2140,12 @@ public interface GenPackage extends EPackage
     EClass COMBO_STRING = eINSTANCE.getComboString();
 
     /**
-     * The meta object literal for the '<em><b>Inner</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Inner</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMBO_STRING__INNER = eINSTANCE.getComboString_Inner();
+    EReference COMBO_STRING__INNER = eINSTANCE.getComboString_Inner();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.PrimaryImpl <em>Primary</em>}' class.

@@ -28,25 +28,25 @@ EXPRESSION XExpression
   CALLER XBinaryOperation
   INFIX XOrExpression XAndExpression "||" XAndExpression
   INFIX XAndExpression XEqualityExpression "&&" XEqualityExpression
-  INFIX XEqualityExpression XRelationalExpression ["==" "!=" "===" "!=="] XRelationalExpression
+  INFIX XEqualityExpression XRelationalExpression ("==" | "!=" | "===" | "!==") XRelationalExpression
   CALLER XInstanceOfExpression.expression
   OUTER XRelationalExpression XOtherOperatorExpression
     INNERINFIX 'instanceof' type=ID
-    INNERINFIX CALLER XBinaryOperation [">=" "<" "=" ">" "<"] XOtherOperatorExpression
-  INFIX XOtherOperatorExpression XAdditiveExpression ["->" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression
-  INFIX XAdditiveExpression XMultiplicativeExpression ["+" "-"] XMultiplicativeExpression
-  INFIX XMultiplicativeExpression XUnaryOperation ["*" "**" "/" "%"] XUnaryOperation
-  PREFIX XUnaryOperation ["!" "-" "+"] XCastedExpression
+    INNERINFIX CALLER XBinaryOperation (">=" | "<" "=" | ">" | "<") XOtherOperatorExpression
+  INFIX XOtherOperatorExpression XAdditiveExpression ("->" | "..<" | ">" ".." | ".." | "=>" | ">" (=>(">" ">") | ">") | "<" (=>("<" "<") | "<" | "=>") |"<>"| "?:") XAdditiveExpression
+  INFIX XAdditiveExpression XMultiplicativeExpression ("+" | "-") XMultiplicativeExpression
+  INFIX XMultiplicativeExpression XUnaryOperation ("*" | "**" | "/" | "%") XUnaryOperation
+  PREFIX XUnaryOperation ("!" | "-" | "+") XCastedExpression
   INFIX XCastedExpression XPostfixOperation "as" type=ID
-  SUFFIX XPostfixOperation XMemberFeatureCall ["++" "--"]
-  MEMBERFEATURE XMemberFeatureCall XPrimaryExpression ["super" "..<" ">" ".." ".." "=>" ">" "<" "<>" "?:"] XAdditiveExpression
+  SUFFIX XPostfixOperation XMemberFeatureCall ("++" | "--")
+  MEMBERFEATURE XMemberFeatureCall XPrimaryExpression ("super" | "..<" | ">" ".." | ".." | "=>" | ">" "<" | "<>" | "?:") XAdditiveExpression
 
 PRIMARY XExpression
   CONSTRUCTOR XConstructorCall
   BLOCK XBlockExpression
   SWITCH XSwitchExpression XCasePart
   SYNCHRONIZED XSynchronizedExpression
-  FEATURECALL XFeatureCall ["super" "ValidID" "extends" "static" "import" "extension"]
+  FEATURECALL XFeatureCall ("super" | "ValidID" | "extends" | "static" | "import" | "extension")
   IFEXPRESSION XIfExpression
   FOREXPRESSION XForLoopExpression
   BASICFORLOOPEXPRESSION XBasicForLoopExpression

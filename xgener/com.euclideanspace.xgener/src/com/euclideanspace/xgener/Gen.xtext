@@ -54,9 +54,9 @@ InnerPrecedence:
 
 MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 
-MultString: {MultString} (ms=STRING | ('[' cs+=ComboString ('|' cs+=ComboString)* ']'));
+MultString: {MultString} (ms=STRING | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
 
-ComboString: {ComboString} (inner+=STRING*);
+ComboString: {ComboString} (inner+=MultString*);
 
 Primary:
 	'PRIMARY' name=ID

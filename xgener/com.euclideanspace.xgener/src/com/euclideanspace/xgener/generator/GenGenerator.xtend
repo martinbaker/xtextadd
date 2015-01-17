@@ -70,6 +70,11 @@ class GenGenerator implements IGenerator {
     }
     
     /**
+     * used for InnerPrecidence if we need to 
+     */
+    var CharSequence helpOpRule=null;
+    
+    /**
      * gets the name of the container
      */
     def String getParentExpression(EObject child) {
@@ -251,8 +256,8 @@ XAssignment returns XExpression hidden(SL_COMMENT,WS):
 
 OpMultiAssign hidden(SL_COMMENT,WS):
   '+=' | '-=' | '*=' | '/=' | '%=' |
-  '<' | '<' | '=' |
-  '>' | '>'? | '>=';
+  '<' '<' '=' |
+  '>' '>'? '>=';
 
 «FOR x:e.prec SEPARATOR '\n'»
   «IF x.rule != null»
@@ -572,7 +577,7 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
-    «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;
+    «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;«getRule()»
   «ELSEIF p.ruletyp=='CALLER'»
     «IF p.rule != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
   «ELSEIF p.ruletyp=='ANGLE'»
@@ -611,6 +616,23 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
   «ENDIF»
 '''
 
+def void storeRule(String rule,com.euclideanspace.xgener.gen.MultString infix){
+	helpOpRule='''
+	
+	op«rule» hidden(SL_COMMENT,WS):
+    «compile(infix)»;
+	'''
+}
+
+def String getRule(){
+	var String result="";
+	if (helpOpRule!=null){
+		result=helpOpRule.toString;
+	}
+	helpOpRule=null;
+	return result; 
+}
+
 def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
   «IF p.ruletyp=='INNERPREFIX'»
       =>({Lastrule.leftOperand=current} feature=«
@@ -623,8 +645,9 @@ def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
   «ELSEIF p.ruletyp=='INNERINFIX'»
      «IF p.mod != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
      =>({«getCallingRule()»=current} feature=«
-     IF p.infix != null»«compile(p.infix)»«ENDIF»)
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»
+    «IF opRuleRequired(p.infix)»«storeRule(p.rule,p.infix)»«ENDIF»
   «ELSEIF p.ruletyp=='INNERANGLE'»
     ('<'«IF p.angle != null»«p.angle»+=ID (',' «p.angle»+=ID)* «ENDIF»'>')
   «ELSEIF p.ruletyp=='INNERBRACKET'»
@@ -642,9 +665,13 @@ def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
  */
 def boolean opRuleRequired(com.euclideanspace.xgener.gen.MultString m){
 	if (m.ms != null) return false;
+	if (m.synpred != null) return true;
 	for (ComboString x:m.cs) {
 		if (x.inner != null){
 			if (x.inner.length > 1) return true;
+			for (com.euclideanspace.xgener.gen.MultString y:x.inner) {
+				if (y.ms == null) return true;
+			}
 		}
 	}
 	return false;
@@ -656,7 +683,7 @@ def boolean opRuleRequired(com.euclideanspace.xgener.gen.MultString m){
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
   IF m.ms != null»'«m.ms»'«
   ELSE
-    »«FOR x:m.cs BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»«
+    »«IF m.synpred!=null»=>«ENDIF»«FOR x:m.cs BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»«
   ENDIF»'''
   
 /**
@@ -665,7 +692,7 @@ def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
 def CharSequence compile(com.euclideanspace.xgener.gen.ComboString c) '''«
   IF c.inner == null»'empty'«
   ELSE
-    »«FOR x:c.inner  SEPARATOR ' '»'«x»'«ENDFOR»«
+    »«FOR x:c.inner  SEPARATOR ' '»«compile(x)»«ENDFOR»«
   ENDIF»'''
 
 /**

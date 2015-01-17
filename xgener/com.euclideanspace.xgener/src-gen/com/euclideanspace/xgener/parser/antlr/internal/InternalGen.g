@@ -2077,53 +2077,68 @@ ruleMultString returns [EObject current=null]
 
 )
 )
-    |(	otherlv_2='[' 
+    |((
+(
+		lv_synpred_2_0=	'=>' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getMultStringAccess().getLeftSquareBracketKeyword_1_1_0());
+        newLeafNode(lv_synpred_2_0, grammarAccess.getMultStringAccess().getSynpredEqualsSignGreaterThanSignKeyword_1_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultStringRule());
+	        }
+       		setWithLastConsumed($current, "synpred", lv_synpred_2_0, "=>");
+	    }
+
+)
+)?	otherlv_3='(' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getMultStringAccess().getLeftParenthesisKeyword_1_1_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_1_0()); 
+	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_2_0()); 
 	    }
-		lv_cs_3_0=ruleComboString		{
+		lv_cs_4_0=ruleComboString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultStringRule());
 	        }
        		add(
        			$current, 
        			"cs",
-        		lv_cs_3_0, 
+        		lv_cs_4_0, 
         		"ComboString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_4='|' 
+)(	otherlv_5='|' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getMultStringAccess().getVerticalLineKeyword_1_1_2_0());
+    	newLeafNode(otherlv_5, grammarAccess.getMultStringAccess().getVerticalLineKeyword_1_1_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_2_1_0()); 
+	        newCompositeNode(grammarAccess.getMultStringAccess().getCsComboStringParserRuleCall_1_1_3_1_0()); 
 	    }
-		lv_cs_5_0=ruleComboString		{
+		lv_cs_6_0=ruleComboString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultStringRule());
 	        }
        		add(
        			$current, 
        			"cs",
-        		lv_cs_5_0, 
+        		lv_cs_6_0, 
         		"ComboString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_6=']' 
+))*	otherlv_7=')' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getMultStringAccess().getRightSquareBracketKeyword_1_1_3());
+    	newLeafNode(otherlv_7, grammarAccess.getMultStringAccess().getRightParenthesisKeyword_1_1_4());
     }
 )))
 ;
@@ -2154,19 +2169,19 @@ ruleComboString returns [EObject current=null]
     }
 )(
 (
-		lv_inner_1_0=RULE_STRING
-		{
-			newLeafNode(lv_inner_1_0, grammarAccess.getComboStringAccess().getInnerSTRINGTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getComboStringAccess().getInnerMultStringParserRuleCall_1_0()); 
+	    }
+		lv_inner_1_0=ruleMultString		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getComboStringRule());
+	            $current = createModelElementForParent(grammarAccess.getComboStringRule());
 	        }
-       		addWithLastConsumed(
+       		add(
        			$current, 
        			"inner",
         		lv_inner_1_0, 
-        		"STRING");
+        		"MultString");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )

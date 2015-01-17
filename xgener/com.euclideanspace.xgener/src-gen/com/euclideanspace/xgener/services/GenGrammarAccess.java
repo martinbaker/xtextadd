@@ -1181,26 +1181,28 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cMsAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
 		private final RuleCall cMsSTRINGTerminalRuleCall_1_0_0 = (RuleCall)cMsAssignment_1_0.eContents().get(0);
 		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Assignment cCsAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
-		private final RuleCall cCsComboStringParserRuleCall_1_1_1_0 = (RuleCall)cCsAssignment_1_1_1.eContents().get(0);
-		private final Group cGroup_1_1_2 = (Group)cGroup_1_1.eContents().get(2);
-		private final Keyword cVerticalLineKeyword_1_1_2_0 = (Keyword)cGroup_1_1_2.eContents().get(0);
-		private final Assignment cCsAssignment_1_1_2_1 = (Assignment)cGroup_1_1_2.eContents().get(1);
-		private final RuleCall cCsComboStringParserRuleCall_1_1_2_1_0 = (RuleCall)cCsAssignment_1_1_2_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
+		private final Assignment cSynpredAssignment_1_1_0 = (Assignment)cGroup_1_1.eContents().get(0);
+		private final Keyword cSynpredEqualsSignGreaterThanSignKeyword_1_1_0_0 = (Keyword)cSynpredAssignment_1_1_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1_1_1 = (Keyword)cGroup_1_1.eContents().get(1);
+		private final Assignment cCsAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
+		private final RuleCall cCsComboStringParserRuleCall_1_1_2_0 = (RuleCall)cCsAssignment_1_1_2.eContents().get(0);
+		private final Group cGroup_1_1_3 = (Group)cGroup_1_1.eContents().get(3);
+		private final Keyword cVerticalLineKeyword_1_1_3_0 = (Keyword)cGroup_1_1_3.eContents().get(0);
+		private final Assignment cCsAssignment_1_1_3_1 = (Assignment)cGroup_1_1_3.eContents().get(1);
+		private final RuleCall cCsComboStringParserRuleCall_1_1_3_1_0 = (RuleCall)cCsAssignment_1_1_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_1_1_4 = (Keyword)cGroup_1_1.eContents().get(4);
 		
 		//MultString:
-		//	{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]");
+		//	{MultString} (ms=STRING | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")");
 		public ParserRule getRule() { return rule; }
 
-		//{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]")
+		//{MultString} (ms=STRING | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")")
 		public Group getGroup() { return cGroup; }
 
 		//{MultString}
 		public Action getMultStringAction_0() { return cMultStringAction_0; }
 
-		//ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]"
+		//ms=STRING | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")"
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//ms=STRING
@@ -1209,32 +1211,38 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getMsSTRINGTerminalRuleCall_1_0_0() { return cMsSTRINGTerminalRuleCall_1_0_0; }
 
-		//"[" cs+=ComboString ("|" cs+=ComboString)* "]"
+		//synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")"
 		public Group getGroup_1_1() { return cGroup_1_1; }
 
-		//"["
-		public Keyword getLeftSquareBracketKeyword_1_1_0() { return cLeftSquareBracketKeyword_1_1_0; }
+		//synpred="=>"?
+		public Assignment getSynpredAssignment_1_1_0() { return cSynpredAssignment_1_1_0; }
+
+		//"=>"
+		public Keyword getSynpredEqualsSignGreaterThanSignKeyword_1_1_0_0() { return cSynpredEqualsSignGreaterThanSignKeyword_1_1_0_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_1_1() { return cLeftParenthesisKeyword_1_1_1; }
 
 		//cs+=ComboString
-		public Assignment getCsAssignment_1_1_1() { return cCsAssignment_1_1_1; }
+		public Assignment getCsAssignment_1_1_2() { return cCsAssignment_1_1_2; }
 
 		//ComboString
-		public RuleCall getCsComboStringParserRuleCall_1_1_1_0() { return cCsComboStringParserRuleCall_1_1_1_0; }
+		public RuleCall getCsComboStringParserRuleCall_1_1_2_0() { return cCsComboStringParserRuleCall_1_1_2_0; }
 
 		//("|" cs+=ComboString)*
-		public Group getGroup_1_1_2() { return cGroup_1_1_2; }
+		public Group getGroup_1_1_3() { return cGroup_1_1_3; }
 
 		//"|"
-		public Keyword getVerticalLineKeyword_1_1_2_0() { return cVerticalLineKeyword_1_1_2_0; }
+		public Keyword getVerticalLineKeyword_1_1_3_0() { return cVerticalLineKeyword_1_1_3_0; }
 
 		//cs+=ComboString
-		public Assignment getCsAssignment_1_1_2_1() { return cCsAssignment_1_1_2_1; }
+		public Assignment getCsAssignment_1_1_3_1() { return cCsAssignment_1_1_3_1; }
 
 		//ComboString
-		public RuleCall getCsComboStringParserRuleCall_1_1_2_1_0() { return cCsComboStringParserRuleCall_1_1_2_1_0; }
+		public RuleCall getCsComboStringParserRuleCall_1_1_3_1_0() { return cCsComboStringParserRuleCall_1_1_3_1_0; }
 
-		//"]"
-		public Keyword getRightSquareBracketKeyword_1_1_3() { return cRightSquareBracketKeyword_1_1_3; }
+		//")"
+		public Keyword getRightParenthesisKeyword_1_1_4() { return cRightParenthesisKeyword_1_1_4; }
 	}
 
 	public class ComboStringElements extends AbstractParserRuleElementFinder {
@@ -1242,23 +1250,23 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cComboStringAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cInnerAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInnerSTRINGTerminalRuleCall_1_0 = (RuleCall)cInnerAssignment_1.eContents().get(0);
+		private final RuleCall cInnerMultStringParserRuleCall_1_0 = (RuleCall)cInnerAssignment_1.eContents().get(0);
 		
 		//ComboString:
-		//	{ComboString} inner+=STRING*;
+		//	{ComboString} inner+=MultString*;
 		public ParserRule getRule() { return rule; }
 
-		//{ComboString} inner+=STRING*
+		//{ComboString} inner+=MultString*
 		public Group getGroup() { return cGroup; }
 
 		//{ComboString}
 		public Action getComboStringAction_0() { return cComboStringAction_0; }
 
-		//inner+=STRING*
+		//inner+=MultString*
 		public Assignment getInnerAssignment_1() { return cInnerAssignment_1; }
 
-		//STRING
-		public RuleCall getInnerSTRINGTerminalRuleCall_1_0() { return cInnerSTRINGTerminalRuleCall_1_0; }
+		//MultString
+		public RuleCall getInnerMultStringParserRuleCall_1_0() { return cInnerMultStringParserRuleCall_1_0; }
 	}
 
 	public class PrimaryElements extends AbstractParserRuleElementFinder {
@@ -1972,7 +1980,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultString:
-	//	{MultString} (ms=STRING | "[" cs+=ComboString ("|" cs+=ComboString)* "]");
+	//	{MultString} (ms=STRING | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")");
 	public MultStringElements getMultStringAccess() {
 		return pMultString;
 	}
@@ -1982,7 +1990,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ComboString:
-	//	{ComboString} inner+=STRING*;
+	//	{ComboString} inner+=MultString*;
 	public ComboStringElements getComboStringAccess() {
 		return pComboString;
 	}

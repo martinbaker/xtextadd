@@ -69,10 +69,11 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//MultString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/synpred"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//MultString/cs"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//ComboString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ComboString/inner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//ComboString/inner"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Primary">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Primary/name"/>

@@ -25,19 +25,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface ComboString extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Inner</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Inner</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultString}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Inner</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Inner</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Inner</em>' attribute list.
+   * @return the value of the '<em>Inner</em>' containment reference list.
    * @see com.euclideanspace.xgener.gen.GenPackage#getComboString_Inner()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getInner();
+  EList<MultString> getInner();
 
 } // ComboString

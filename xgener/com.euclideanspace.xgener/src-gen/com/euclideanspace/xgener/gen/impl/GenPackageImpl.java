@@ -742,9 +742,19 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMultString_Synpred()
+  {
+    return (EAttribute)multStringEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMultString_Cs()
   {
-    return (EReference)multStringEClass.getEStructuralFeatures().get(1);
+    return (EReference)multStringEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -762,9 +772,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getComboString_Inner()
+  public EReference getComboString_Inner()
   {
-    return (EAttribute)comboStringEClass.getEStructuralFeatures().get(0);
+    return (EReference)comboStringEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -999,10 +1009,11 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     multStringEClass = createEClass(MULT_STRING);
     createEAttribute(multStringEClass, MULT_STRING__MS);
+    createEAttribute(multStringEClass, MULT_STRING__SYNPRED);
     createEReference(multStringEClass, MULT_STRING__CS);
 
     comboStringEClass = createEClass(COMBO_STRING);
-    createEAttribute(comboStringEClass, COMBO_STRING__INNER);
+    createEReference(comboStringEClass, COMBO_STRING__INNER);
 
     primaryEClass = createEClass(PRIMARY);
     createEAttribute(primaryEClass, PRIMARY__NAME);
@@ -1116,10 +1127,11 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     initEClass(multStringEClass, MultString.class, "MultString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultString_Ms(), ecorePackage.getEString(), "ms", null, 0, 1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultString_Synpred(), ecorePackage.getEString(), "synpred", null, 0, 1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMultString_Cs(), this.getComboString(), null, "cs", null, 0, -1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(comboStringEClass, ComboString.class, "ComboString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getComboString_Inner(), ecorePackage.getEString(), "inner", null, 0, -1, ComboString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComboString_Inner(), this.getMultString(), null, "inner", null, 0, -1, ComboString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(primaryEClass, Primary.class, "Primary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPrimary_Name(), ecorePackage.getEString(), "name", null, 0, 1, Primary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

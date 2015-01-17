@@ -127,7 +127,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (inner+=STRING*)
+	 *     (inner+=MultString*)
 	 */
 	protected void sequence_ComboString(EObject context, ComboString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -207,7 +207,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (ms=STRING | (cs+=ComboString cs+=ComboString*))
+	 *     (ms=STRING | (synpred='=>'? cs+=ComboString cs+=ComboString*))
 	 */
 	protected void sequence_MultString(EObject context, MultString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
