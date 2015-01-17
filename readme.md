@@ -137,7 +137,14 @@ e a b c</pre></td>
 <h4>PhantomToken</h4>
 <p>There is not an explicit mechanism for tokens which need to be used in the parser and will affect the EMF, but do not exist anywhere in the editor, such as the inserted curly brackets in the Python-like example above.</p>
 <p>However we can cheat by making the start and stop indexes the same, this means that the token has little effect on the  NodeModel. It is still important that the index values are contiguous with the tokens before and after it.</p>
-<p>The best way to understand the indexes into the text stream is to think of the indexes as representing the spaces between the characters, not the characters, like this:  </p>
+<p>Regarding the node model and indexes into the character stream. There is a lot of scope for confusion in the way the 
+node model (xtext code) and CommonToken (Antlr code) use different conventions for these indexes, neither is properly documented and to work on this code you need to understand both. </p>
+<p>With all the potential for confusion (well it definitely confused me) I think this needs more explanation. My understanding is:</p>
+<ul>
+  <li>Stop index for CommonToken is zero-index of last character in this token.</li>
+  <li>Stop index for node model is zero-index of first character in <strong>next</strong> token. Internally it is stored as start and length but getEndOffset() method is provided.</li>
+</ul>
+<p>For me, it helps to visualise it by thinking of the indexes as being between the characters, it is then very clear how compound nodes are calculated. For me, I find it easiest to understand the indexes into the text stream  as representing the spaces between the characters, not the characters, like this:  </p>
 <table>
   <tr>
     <td>Index:</td>
