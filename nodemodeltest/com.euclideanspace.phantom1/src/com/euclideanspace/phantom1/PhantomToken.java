@@ -117,7 +117,7 @@ public class PhantomToken extends CommonToken {
 		super(template.getInputStream(),			
 			template.getType(),
 			previousToken.getChannel(),
-			previousToken.getStopIndex(), // start index set to STOP index of previous
+			previousToken.getStopIndex()+1, // start index set to STOP index of previous
 			previousToken.getStopIndex()); // stop index also set to stop index of previous
 		String t=template.getText();
 		/* We must set the text to an empty string rather than leaving it null. This is

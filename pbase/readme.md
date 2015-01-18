@@ -333,28 +333,5 @@ where:
 <p>Inline comments have an implicit new-line (which is a significant part of the syntax) so we must make sure that they are treated in the same way as new lines in the grammar. </p>
 <h4>Block Comments</h4>
 <p>Block comments are multi-line comments (equivalent to /* comment*/ in Java). Each line of a block comment starts with a # and a single space, I cant see any reason why this should not be parsed as if it were multiple single-line comments.</p>
-<h2>Known Problems</h2>
-<p>I sometimes get the <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md#XtextReconcilerJob">this error</a> (<em>An internal error occurred during: &quot;XtextReconcilerJob&quot;</em>) when editing the DSL source code. Although the editor continues to work, getting random error messages is confusing for the user, so  this needs to be sorted out.  I have reported this bug to Xtext <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908">here</a> . There is a workaround as follows:</p>
-<h4>Cause</h4>
-<p>This is because the method: insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegion region)</p>
-<p>in class: org.eclipse.xtext.parser.impl.PartialParsingHelper</p>
-<p>Sometimes gets called with the parameter 'rootNode' not set to root node but to a CompositeNode inside the root node.</p>
-<h4>Fix</h4>
-<p>Changing the insertChangeIntoReplaceRegion method as follows fixes the problem:
-</p>
-<pre>/**
- * @author Martin Baker - fix for reconciler error.
- * This is being called with the parameter 'rootNode' not set to root node
- * I have therefore added getRootNode() call.
- */
-public String insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegion region) {
-  ICompositeNode reallyrootNode = rootNode.getRootNode();
-  final StringBuilder builder = new StringBuilder(reallyrootNode.getText());
-  region.shiftBy(0-reallyrootNode.getTotalOffset()).applyTo(builder);
-  return builder.toString();
-}
-</pre>
-<p>I have put the code for this <a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialPartialParsingHelper.java">here</a>. We need to bind this code in TutorialRuntimeModule<a href="https://github.com/martinbaker/xtextadd/blob/master/pbase/com.euclideanspace.pbase/src/com/euclideanspace/pbase/TutorialRuntimeModule.java"> here</a>. </p>
-<p>So include this in the project. </p>
 <h2>Future Enhancements</h2>
 <p>Xtext provides a fair degree of decoupling between the syntax and the semantics. It would be really good if, in the future, a chunk of code such as Xbase could have the ability to plug in different syntax such as a Java-like syntax and a Python-like syntax where both would have exactly the same functionality.  </p>

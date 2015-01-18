@@ -22,8 +22,9 @@ public class TutorialRuntimeModule extends com.euclideanspace.pbase.AbstractTuto
 	/**
 	 * This is a fix for this bug:
 	 * https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908
+	 * Not required anymore because Phantom token is now properly 0 length
 	 */
-	public Class<? extends org.eclipse.xtext.parser.antlr.IPartialParsingHelper> bindIPartialParserHelper() {
-      return TutorialPartialParsingHelper.class;
-    }
+	//public Class<? extends org.eclipse.xtext.parser.antlr.IPartialParsingHelper> bindIPartialParserHelper() {
+    //  return TutorialPartialParsingHelper.class;
+    //}
 }
