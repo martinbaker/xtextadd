@@ -5,9 +5,11 @@
 <p>I would like better support to help DSLs that contain macros.</p>
 <table border="1">
   <tr>
-    <td><pre>Note: When Sebastian was working on the Python-like use of indents (whitespace) to indicate blocks I asked if if he would consider including macros in that work, his initial responce was: "Macros are out of scope for this bug and will unlikely produce a valid node model. I suspect that won't work in general. We don't have plans to support macros on the syntax level right now."</pre></td>
+    <td><p>Note: When Sebastian was working  on the Python-like use of indents (whitespace) to indicate blocks I asked if if he would consider including macros in that work, his initial responce was: "Macros are out of scope for this bug and will unlikely produce a valid node model. I suspect that won't work in general. We don't have plans to support macros on the syntax level right now."</p>
+    </td>
   </tr>
 </table>
+<p>Despite this I still need to use macros in languages so I continue to look for a solution. </p>
 <p>Note: I had a look at <a href="https://github.com/eclipse/xtext/tree/master/plugins/org.eclipse.xtend.lib.macro">xtend implementation of macros</a> and it looks very complicated, I am looking for something very simple which can be customised for different DSLs.</p>
 <p>I have drafted an implementation <a href="https://github.com/martinbaker/xtextadd/tree/master/macro">here</a>, which partly works, but there are some issues which I think need some changes to Xtext. </p>
 <p>This code runs between the lexer and the parser, this is similar to the <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=451838">support for Python-like syntax request</a>, so I think it is worth at least considering this at the same time.</p>
