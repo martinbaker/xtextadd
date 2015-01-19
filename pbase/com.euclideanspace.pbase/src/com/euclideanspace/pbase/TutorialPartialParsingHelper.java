@@ -15,8 +15,6 @@ public class TutorialPartialParsingHelper extends PartialParsingHelper {
  * 
  * More information about this bug here:
  * https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md
- * I have reported it to Xtext here:
- * https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908
  */
 @Override
 public String insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegion region) {

@@ -7,7 +7,8 @@
   <li><a href="#IllegalArgumentException">java.lang.IllegalArgumentException: length -1 is &lt; 0 in TextRegion</a></li>
 </ul>
 <h3><a name="XtextReconcilerJob" id="XtextReconcilerJob"></a>XtextReconcilerJob</h3>
-<p>I sometimes get the following error when editing the DSL source code. Although the editor continues to work this needs to be sorted out. I have reported this bug to Xtext <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908">here</a>. </p>
+<p>This error happens if the PhantomToken is not zero length. </p>
+<p>Error when editing the DSL source code, although the editor continues to work.</p>
 <table border="1">
   <tr>
     <td><pre>!MESSAGE An internal error occurred during: "XtextReconcilerJob".
@@ -34,27 +35,42 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 140
 </pre></td>
   </tr>
 </table>
-<p>See <a href="https://github.com/martinbaker/xtextadd/issues/1">https://github.com/martinbaker/xtextadd/issues/1</a></p>
 <p>For more information about Eclipse reconcilers see<a href="https://wiki.eclipse.org/FAQ_How_do_I_use_a_model_reconciler%3F"> this page</a>. </p>
 <h4>Cause</h4>
 <p>This is because the method:</p>
 <p>insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegion region)</p>
 <p>in class:</p>
 <p>org.eclipse.xtext.parser.impl.PartialParsingHelper</p>
-<p>Sometimes gets called with the parameter 'rootNode' not set to root node but to a CompositeNode inside the root node.</p>
+<p>Sometimes gets called with the wrong parameters ('rootNode' may be set to a CompositeNode inside the root node).</p>
 <h4>Fix</h4>
-<p>Changing the insertChangeIntoReplaceRegion method as follows fixes the problem:</p>
-<pre>
+<p>Make sure PhantomToken is zero length. Otherwise changing the insertChangeIntoReplaceRegion method as follows fixes the problem:</p>
+<p>I created a class called 'TutorialPartialParsingHelper.java' as follows:</p>
+<pre>import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.parser.impl.PartialParsingHelper;
+import org.eclipse.xtext.util.ReplaceRegion;
+
+public class TutorialPartialParsingHelper extends PartialParsingHelper {
+	
 /**
  * @author Martin Baker - fix for reconciler error.
  * This is being called with the parameter 'rootNode' not set to root node
  * I have therefore added getRootNode() call.
+ * 
+ * More information about this bug here:
+ * https://github.com/martinbaker/xtextadd/blob/master/pbase/notes/troubleshooting.md
  */
+@Override
 public String insertChangeIntoReplaceRegion(ICompositeNode rootNode, ReplaceRegion region) {
   ICompositeNode reallyrootNode = rootNode.getRootNode();
   final StringBuilder builder = new StringBuilder(reallyrootNode.getText());
   region.shiftBy(0-reallyrootNode.getTotalOffset()).applyTo(builder);
   return builder.toString();
+}
+
+}</pre>
+<p>I then added the following to TutorialRuntimeModule.java:</p>
+<pre>public Class&lt;? extends org.eclipse.xtext.parser.antlr.IPartialParsingHelper&gt; bindIPartialParserHelper() {
+    return TutorialPartialParsingHelper.class;
 }</pre>
 <h3><a name="ParsingInReconcilerFailed" id="ParsingInReconcilerFailed"></a>Parsing in reconciler failed</h3>
 <p>This message sometimes happens at the same time as the &quot;XtextReconcilerJob&quot; error above. As with the error above the editor continues to work, but we need to get rid of the error.  I have reported this bug to Xtext <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=455908">here</a>. </p>
