@@ -40,7 +40,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInner <em>Inner</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInfixleft <em>Infixleft</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
@@ -211,16 +210,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * @ordered
    */
   protected EList<InnerPrecedence> inner;
-
-  /**
-   * The cached value of the '{@link #getInfixleft() <em>Infixleft</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInfixleft()
-   * @generated
-   * @ordered
-   */
-  protected MultString infixleft;
 
   /**
    * The default value of the '{@link #getBracket() <em>Bracket</em>}' attribute.
@@ -624,54 +613,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * <!-- end-user-doc -->
    * @generated
    */
-  public MultString getInfixleft()
-  {
-    return infixleft;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetInfixleft(MultString newInfixleft, NotificationChain msgs)
-  {
-    MultString oldInfixleft = infixleft;
-    infixleft = newInfixleft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIXLEFT, oldInfixleft, newInfixleft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setInfixleft(MultString newInfixleft)
-  {
-    if (newInfixleft != infixleft)
-    {
-      NotificationChain msgs = null;
-      if (infixleft != null)
-        msgs = ((InternalEObject)infixleft).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIXLEFT, null, msgs);
-      if (newInfixleft != null)
-        msgs = ((InternalEObject)newInfixleft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.PRECEDENCE__INFIXLEFT, null, msgs);
-      msgs = basicSetInfixleft(newInfixleft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__INFIXLEFT, newInfixleft, newInfixleft));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getBracket()
   {
     return bracket;
@@ -777,8 +718,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return basicSetInfix(null, msgs);
       case GenPackage.PRECEDENCE__INNER:
         return ((InternalEList<?>)getInner()).basicRemove(otherEnd, msgs);
-      case GenPackage.PRECEDENCE__INFIXLEFT:
-        return basicSetInfixleft(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -813,8 +752,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getPar2();
       case GenPackage.PRECEDENCE__INNER:
         return getInner();
-      case GenPackage.PRECEDENCE__INFIXLEFT:
-        return getInfixleft();
       case GenPackage.PRECEDENCE__BRACKET:
         return getBracket();
       case GenPackage.PRECEDENCE__BRACES:
@@ -868,9 +805,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__INNER:
         getInner().clear();
         getInner().addAll((Collection<? extends InnerPrecedence>)newValue);
-        return;
-      case GenPackage.PRECEDENCE__INFIXLEFT:
-        setInfixleft((MultString)newValue);
         return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket((String)newValue);
@@ -928,9 +862,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__INNER:
         getInner().clear();
         return;
-      case GenPackage.PRECEDENCE__INFIXLEFT:
-        setInfixleft((MultString)null);
-        return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket(BRACKET_EDEFAULT);
         return;
@@ -977,8 +908,6 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return PAR2_EDEFAULT == null ? par2 != null : !PAR2_EDEFAULT.equals(par2);
       case GenPackage.PRECEDENCE__INNER:
         return inner != null && !inner.isEmpty();
-      case GenPackage.PRECEDENCE__INFIXLEFT:
-        return infixleft != null;
       case GenPackage.PRECEDENCE__BRACKET:
         return BRACKET_EDEFAULT == null ? bracket != null : !BRACKET_EDEFAULT.equals(bracket);
       case GenPackage.PRECEDENCE__BRACES:

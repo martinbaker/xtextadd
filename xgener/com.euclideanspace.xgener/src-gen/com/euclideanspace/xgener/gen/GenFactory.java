@@ -77,15 +77,6 @@ public interface GenFactory extends EFactory
   InnerPrecedence createInnerPrecedence();
 
   /**
-   * Returns a new object of class '<em>Mult ID</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mult ID</em>'.
-   * @generated
-   */
-  MultID createMultID();
-
-  /**
    * Returns a new object of class '<em>Mult String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

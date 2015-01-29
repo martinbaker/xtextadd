@@ -4,7 +4,7 @@ package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.ClassType;
 import com.euclideanspace.xgener.gen.GenPackage;
-import com.euclideanspace.xgener.gen.MultID;
+import com.euclideanspace.xgener.gen.MultString;
 
 import java.util.Collection;
 
@@ -80,7 +80,7 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * @generated
    * @ordered
    */
-  protected EList<MultID> prefix;
+  protected EList<MultString> prefix;
 
   /**
    * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' containment reference list.
@@ -90,7 +90,7 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * @generated
    * @ordered
    */
-  protected EList<MultID> suffix;
+  protected EList<MultString> suffix;
 
   /**
    * The cached value of the '{@link #getBlocking() <em>Blocking</em>}' attribute list.
@@ -165,11 +165,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MultID> getPrefix()
+  public EList<MultString> getPrefix()
   {
     if (prefix == null)
     {
-      prefix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.CLASS_TYPE__PREFIX);
+      prefix = new EObjectContainmentEList<MultString>(MultString.class, this, GenPackage.CLASS_TYPE__PREFIX);
     }
     return prefix;
   }
@@ -179,11 +179,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MultID> getSuffix()
+  public EList<MultString> getSuffix()
   {
     if (suffix == null)
     {
-      suffix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.CLASS_TYPE__SUFFIX);
+      suffix = new EObjectContainmentEList<MultString>(MultString.class, this, GenPackage.CLASS_TYPE__SUFFIX);
     }
     return suffix;
   }
@@ -264,11 +264,11 @@ public class ClassTypeImpl extends MinimalEObjectImpl.Container implements Class
         return;
       case GenPackage.CLASS_TYPE__PREFIX:
         getPrefix().clear();
-        getPrefix().addAll((Collection<? extends MultID>)newValue);
+        getPrefix().addAll((Collection<? extends MultString>)newValue);
         return;
       case GenPackage.CLASS_TYPE__SUFFIX:
         getSuffix().clear();
-        getSuffix().addAll((Collection<? extends MultID>)newValue);
+        getSuffix().addAll((Collection<? extends MultString>)newValue);
         return;
       case GenPackage.CLASS_TYPE__BLOCKING:
         getBlocking().clear();

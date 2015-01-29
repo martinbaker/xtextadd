@@ -8,7 +8,6 @@ import com.euclideanspace.xgener.gen.InnerPrecedence;
 import com.euclideanspace.xgener.gen.Literal;
 import com.euclideanspace.xgener.gen.LiteralInner;
 import com.euclideanspace.xgener.gen.Model;
-import com.euclideanspace.xgener.gen.MultID;
 import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.Precedence;
 import com.euclideanspace.xgener.gen.Primary;
@@ -76,12 +75,6 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case GenPackage.MULT_ID:
-				if(context == grammarAccess.getMultIDRule()) {
-					sequence_MultID(context, (MultID) semanticObject); 
-					return; 
-				}
-				else break;
 			case GenPackage.MULT_STRING:
 				if(context == grammarAccess.getMultStringRule()) {
 					sequence_MultString(context, (MultString) semanticObject); 
@@ -118,7 +111,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (noclass+='NOCLASS' | prefix+=MultID | suffix+=MultID | blocking+='BRACES' | blocking+='INDENT')*)
+	 *     (name=ID (noclass+='NOCLASS' | prefix+=MultString | suffix+=MultString | blocking+='BRACES' | blocking+='INDENT')*)
 	 */
 	protected void sequence_ClassType(EObject context, ClassType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -149,7 +142,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (ruletyp='INNERPREFIX' prefix=MultString feature1=ID? par2=ID) | 
 	 *         (ruletyp='INNERSUFFIX' suffix=MultString) | 
 	 *         (ruletyp='INNERINFIX' (mod='CALLER' rule=ID feature1=ID?)? infix=MultString feature2=ID? par2=ID) | 
-	 *         (ruletyp='INNERINFIXLEFT' infixleft=MultString par2=ID) | 
+	 *         (ruletyp='INNERINFIXLEFT' (mod='CALLER' rule=ID feature1=ID?)? infix=MultString feature2=ID? par2=ID) | 
 	 *         (ruletyp='INNERBRACKET' rule=ID bracket=ID) | 
 	 *         (ruletyp='INNERBRACES' rule=ID braces=ID) | 
 	 *         (ruletyp='INNERPARENTHESIS' rule=ID parenthesis=ID) | 
@@ -198,16 +191,7 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (mi+=ID | mi+=ID*)
-	 */
-	protected void sequence_MultID(EObject context, MultID semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (ms=STRING | (synpred='=>'? cs+=ComboString cs+=ComboString*))
+	 *     (ms=STRING | mi=ID | (synpred='=>'? cs+=ComboString cs+=ComboString*))
 	 */
 	protected void sequence_MultString(EObject context, MultString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -229,8 +213,16 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             feature2=ID? 
 	 *             par2=ID
 	 *         ) | 
+	 *         (
+	 *             ruletyp='INFIXLEFT' 
+	 *             rule=ID 
+	 *             feature1=ID? 
+	 *             par1=ID 
+	 *             infix=MultString 
+	 *             feature2=ID? 
+	 *             par2=ID
+	 *         ) | 
 	 *         (ruletyp='OUTER' rule=ID feature1=ID? par1=ID inner+=InnerPrecedence+) | 
-	 *         (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID) | 
 	 *         (ruletyp='BRACKET' rule=ID bracket=ID) | 
 	 *         (ruletyp='BRACES' rule=ID braces=ID) | 
 	 *         (ruletyp='PARENTHESIS' rule=ID parenthesis=ID) | 
@@ -290,8 +282,8 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         (
-	 *             prefix+=MultID | 
-	 *             suffix+=MultID | 
+	 *             prefix+=MultString | 
+	 *             suffix+=MultString | 
 	 *             types+='COLONSEPERATED' | 
 	 *             types+='SPACESEPERATED' | 
 	 *             types+='INHEADER' | 

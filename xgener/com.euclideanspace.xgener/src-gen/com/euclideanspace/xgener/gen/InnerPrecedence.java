@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getRule <em>Rule</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfix <em>Infix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getFeature2 <em>Feature2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfixleft <em>Infixleft</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getParenthesis <em>Parenthesis</em>}</li>
@@ -268,32 +267,6 @@ public interface InnerPrecedence extends EObject
    * @generated
    */
   void setFeature2(String value);
-
-  /**
-   * Returns the value of the '<em><b>Infixleft</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Infixleft</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Infixleft</em>' containment reference.
-   * @see #setInfixleft(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Infixleft()
-   * @model containment="true"
-   * @generated
-   */
-  MultString getInfixleft();
-
-  /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfixleft <em>Infixleft</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Infixleft</em>' containment reference.
-   * @see #getInfixleft()
-   * @generated
-   */
-  void setInfixleft(MultString value);
 
   /**
    * Returns the value of the '<em><b>Bracket</b></em>' attribute.

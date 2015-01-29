@@ -72,7 +72,7 @@ public interface ClassType extends EObject
 
   /**
    * Returns the value of the '<em><b>Prefix</b></em>' containment reference list.
-   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultID}.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultString}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Prefix</em>' containment reference list isn't clear,
@@ -84,11 +84,11 @@ public interface ClassType extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<MultID> getPrefix();
+  EList<MultString> getPrefix();
 
   /**
    * Returns the value of the '<em><b>Suffix</b></em>' containment reference list.
-   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultID}.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.MultString}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Suffix</em>' containment reference list isn't clear,
@@ -100,7 +100,7 @@ public interface ClassType extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<MultID> getSuffix();
+  EList<MultString> getSuffix();
 
   /**
    * Returns the value of the '<em><b>Blocking</b></em>' attribute list.

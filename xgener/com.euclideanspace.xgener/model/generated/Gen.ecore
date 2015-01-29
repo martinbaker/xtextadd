@@ -18,18 +18,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="noclass" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prefix" upperBound="-1"
-        eType="#//MultID" containment="true"/>
+        eType="#//MultString" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="suffix" upperBound="-1"
-        eType="#//MultID" containment="true"/>
+        eType="#//MultString" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="blocking" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Procedure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prefix" upperBound="-1"
-        eType="#//MultID" containment="true"/>
+        eType="#//MultString" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="suffix" upperBound="-1"
-        eType="#//MultID" containment="true"/>
+        eType="#//MultString" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="types" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -53,8 +53,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="par2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inner" upperBound="-1"
         eType="#//InnerPrecedence" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="infixleft" eType="#//MultString"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bracket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="braces" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parenthesis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -73,19 +71,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="infix" eType="#//MultString"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="infixleft" eType="#//MultString"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bracket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="braces" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parenthesis" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MultID">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mi" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultString">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ms" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="synpred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cs" upperBound="-1" eType="#//ComboString"
         containment="true"/>

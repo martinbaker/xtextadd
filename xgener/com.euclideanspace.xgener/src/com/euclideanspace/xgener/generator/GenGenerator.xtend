@@ -572,6 +572,19 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     op«p.rule» hidden(SL_COMMENT,WS):
     «compile(p.infix)»;
     «ENDIF»
+    «ELSEIF p.ruletyp=='INFIXLEFT'»
+    /* A binary function which associates to the left
+    */
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
+     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.rule»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)?;
+    «IF opRuleRequired(p.infix)»
+
+    op«p.rule» hidden(SL_COMMENT,WS):
+    «compile(p.infix)»;
+    «ENDIF»
   «ELSEIF p.ruletyp=='OUTER'»
     /* Allows multiple entries with the same precedence. 
     */
@@ -682,6 +695,7 @@ def boolean opRuleRequired(com.euclideanspace.xgener.gen.MultString m){
  */
 def CharSequence compile(com.euclideanspace.xgener.gen.MultString m) '''«
   IF m.ms != null»'«m.ms»'«
+  ELSEIF m.mi != null»«m.mi»«
   ELSE
     »«IF m.synpred!=null»=>«ENDIF»«FOR x:m.cs BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»«
   ENDIF»'''
@@ -697,12 +711,12 @@ def CharSequence compile(com.euclideanspace.xgener.gen.ComboString c) '''«
 
 /**
  * multi ID
- */
 def CharSequence compile(com.euclideanspace.xgener.gen.MultID m) '''«
   IF m.mi == null»«
   ELSEIF m.mi.length==1»«m.mi.get(0)»«
   ELSE
     »«FOR x:m.mi BEFORE '(' SEPARATOR '|' AFTER ')'»«x»«ENDFOR»«
   ENDIF»
-'''
+'''*/
 }
+

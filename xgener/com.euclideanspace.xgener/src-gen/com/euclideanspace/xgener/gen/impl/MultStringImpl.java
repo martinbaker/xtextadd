@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getMs <em>Ms</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getMi <em>Mi</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getSynpred <em>Synpred</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getCs <em>Cs</em>}</li>
  * </ul>
@@ -58,6 +59,26 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
    * @ordered
    */
   protected String ms = MS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMi() <em>Mi</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMi()
+   * @generated
+   * @ordered
+   */
+  protected static final String MI_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMi() <em>Mi</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMi()
+   * @generated
+   * @ordered
+   */
+  protected String mi = MI_EDEFAULT;
 
   /**
    * The default value of the '{@link #getSynpred() <em>Synpred</em>}' attribute.
@@ -138,6 +159,29 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getMi()
+  {
+    return mi;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMi(String newMi)
+  {
+    String oldMi = mi;
+    mi = newMi;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.MULT_STRING__MI, oldMi, mi));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getSynpred()
   {
     return synpred;
@@ -198,6 +242,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         return getMs();
+      case GenPackage.MULT_STRING__MI:
+        return getMi();
       case GenPackage.MULT_STRING__SYNPRED:
         return getSynpred();
       case GenPackage.MULT_STRING__CS:
@@ -219,6 +265,9 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         setMs((String)newValue);
+        return;
+      case GenPackage.MULT_STRING__MI:
+        setMi((String)newValue);
         return;
       case GenPackage.MULT_STRING__SYNPRED:
         setSynpred((String)newValue);
@@ -244,6 +293,9 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
       case GenPackage.MULT_STRING__MS:
         setMs(MS_EDEFAULT);
         return;
+      case GenPackage.MULT_STRING__MI:
+        setMi(MI_EDEFAULT);
+        return;
       case GenPackage.MULT_STRING__SYNPRED:
         setSynpred(SYNPRED_EDEFAULT);
         return;
@@ -266,6 +318,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         return MS_EDEFAULT == null ? ms != null : !MS_EDEFAULT.equals(ms);
+      case GenPackage.MULT_STRING__MI:
+        return MI_EDEFAULT == null ? mi != null : !MI_EDEFAULT.equals(mi);
       case GenPackage.MULT_STRING__SYNPRED:
         return SYNPRED_EDEFAULT == null ? synpred != null : !SYNPRED_EDEFAULT.equals(synpred);
       case GenPackage.MULT_STRING__CS:
@@ -287,6 +341,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (ms: ");
     result.append(ms);
+    result.append(", mi: ");
+    result.append(mi);
     result.append(", synpred: ");
     result.append(synpred);
     result.append(')');

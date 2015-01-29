@@ -46,7 +46,7 @@ PRIMARY XExpression
   BLOCK XBlockExpression
   SWITCH XSwitchExpression XCasePart
   SYNCHRONIZED XSynchronizedExpression
-  FEATURECALL XFeatureCall ("super" | "ValidID" | "extends" | "static" | "import" | "extension")
+  FEATURECALL XFeatureCall ("super" | ValidID | "extends" | "static" | "import" | "extension")
   IFEXPRESSION XIfExpression
   FOREXPRESSION XForLoopExpression
   BASICFORLOOPEXPRESSION XBasicForLoopExpression

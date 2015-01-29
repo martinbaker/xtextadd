@@ -42,7 +42,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/feature2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/inner"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/infixleft"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/bracket"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/parenthesis"/>
@@ -58,17 +57,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/rule"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//InnerPrecedence/infix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/feature2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//InnerPrecedence/infixleft"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/bracket"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/parenthesis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/angle"/>
     </genClasses>
-    <genClasses ecoreClass="Gen.ecore#//MultID">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultID/mi"/>
-    </genClasses>
     <genClasses ecoreClass="Gen.ecore#//MultString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/mi"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/synpred"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//MultString/cs"/>
     </genClasses>

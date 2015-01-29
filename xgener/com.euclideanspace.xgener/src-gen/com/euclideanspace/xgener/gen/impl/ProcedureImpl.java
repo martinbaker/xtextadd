@@ -3,7 +3,7 @@
 package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
-import com.euclideanspace.xgener.gen.MultID;
+import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.Procedure;
 
 import java.util.Collection;
@@ -69,7 +69,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * @generated
    * @ordered
    */
-  protected EList<MultID> prefix;
+  protected EList<MultString> prefix;
 
   /**
    * The cached value of the '{@link #getSuffix() <em>Suffix</em>}' containment reference list.
@@ -79,7 +79,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * @generated
    * @ordered
    */
-  protected EList<MultID> suffix;
+  protected EList<MultString> suffix;
 
   /**
    * The cached value of the '{@link #getTypes() <em>Types</em>}' attribute list.
@@ -140,11 +140,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MultID> getPrefix()
+  public EList<MultString> getPrefix()
   {
     if (prefix == null)
     {
-      prefix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.PROCEDURE__PREFIX);
+      prefix = new EObjectContainmentEList<MultString>(MultString.class, this, GenPackage.PROCEDURE__PREFIX);
     }
     return prefix;
   }
@@ -154,11 +154,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MultID> getSuffix()
+  public EList<MultString> getSuffix()
   {
     if (suffix == null)
     {
-      suffix = new EObjectContainmentEList<MultID>(MultID.class, this, GenPackage.PROCEDURE__SUFFIX);
+      suffix = new EObjectContainmentEList<MultString>(MultString.class, this, GenPackage.PROCEDURE__SUFFIX);
     }
     return suffix;
   }
@@ -233,11 +233,11 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
         return;
       case GenPackage.PROCEDURE__PREFIX:
         getPrefix().clear();
-        getPrefix().addAll((Collection<? extends MultID>)newValue);
+        getPrefix().addAll((Collection<? extends MultString>)newValue);
         return;
       case GenPackage.PROCEDURE__SUFFIX:
         getSuffix().clear();
-        getSuffix().addAll((Collection<? extends MultID>)newValue);
+        getSuffix().addAll((Collection<? extends MultString>)newValue);
         return;
       case GenPackage.PROCEDURE__TYPES:
         getTypes().clear();

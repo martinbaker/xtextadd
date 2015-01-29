@@ -105,11 +105,6 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createInnerPrecedenceAdapter();
       }
       @Override
-      public Adapter caseMultID(MultID object)
-      {
-        return createMultIDAdapter();
-      }
-      @Override
       public Adapter caseMultString(MultString object)
       {
         return createMultStringAdapter();
@@ -247,21 +242,6 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInnerPrecedenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.MultID <em>Mult ID</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.euclideanspace.xgener.gen.MultID
-   * @generated
-   */
-  public Adapter createMultIDAdapter()
   {
     return null;
   }

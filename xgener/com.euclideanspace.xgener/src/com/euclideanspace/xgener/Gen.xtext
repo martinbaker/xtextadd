@@ -8,15 +8,15 @@ Model:
 ClassType:
 	'CLASS' name=ID
     ( noclass+='NOCLASS' 
-    | ('PREFIX' prefix += MultID)
-    | ('SUFFIX' suffix += MultID)
+    | ('PREFIX' prefix += MultString)
+    | ('SUFFIX' suffix += MultString)
     | ('BLOCKING' blocking+=('BRACES'|'INDENT'))
     )*;
 
 Procedure:
 	'PROCEDURE' name=ID
-    (('PREFIX' prefix += MultID)
-    | ('SUFFIX' suffix += MultID)
+    (('PREFIX' prefix += MultString)
+    | ('SUFFIX' suffix += MultString)
     | ('TYPES' types+=('COLONSEPERATED'|'SPACESEPERATED'|'INHEADER'|'INFERRED'|'UNTYPED'))
     )*;
 
@@ -32,8 +32,8 @@ Precedence:
 	| (ruletyp='PREFIX' rule=ID prefix=MultString (feature1=ID '=')? par1=ID)
     | (ruletyp='SUFFIX' rule=ID (feature1=ID '=')? par1=ID suffix=MultString)
     | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='INFIXLEFT' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='OUTER' rule=ID (feature1=ID '=')? par1=ID inner+=InnerPrecedence+)
-    | (ruletyp='INFIXLEFT' rule=ID par1=ID infixleft=MultString par2=ID)
     | (ruletyp='BRACKET' rule=ID bracket=ID)
     | (ruletyp='BRACES' rule=ID braces=ID)
     | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
@@ -45,16 +45,16 @@ InnerPrecedence:
 	 (ruletyp='INNERPREFIX' prefix=MultString (feature1=ID '=')? par2=ID)
     | (ruletyp='INNERSUFFIX' suffix=MultString)
     | (ruletyp='INNERINFIX' (mod='CALLER' rule=ID ('.' feature1=ID)?)? infix=MultString (feature2=ID '=')? par2=ID)
-    | (ruletyp='INNERINFIXLEFT' infixleft=MultString par2=ID)
+    | (ruletyp='INNERINFIXLEFT' (mod='CALLER' rule=ID ('.' feature1=ID)?)? infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='INNERBRACKET' rule=ID bracket=ID)
     | (ruletyp='INNERBRACES' rule=ID braces=ID)
     | (ruletyp='INNERPARENTHESIS' rule=ID parenthesis=ID)
     | (ruletyp='INNERANGLE' rule=ID angle=ID)
 ;
 
-MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
+//MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 
-MultString: {MultString} (ms=STRING | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
+MultString: {MultString} (ms=STRING | mi=ID | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
 
 ComboString: {ComboString} (inner+=MultString*);
 

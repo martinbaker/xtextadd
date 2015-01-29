@@ -377,22 +377,13 @@ public interface GenPackage extends EPackage
   int PRECEDENCE__INNER = 9;
 
   /**
-   * The feature id for the '<em><b>Infixleft</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PRECEDENCE__INFIXLEFT = 10;
-
-  /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACKET = 11;
+  int PRECEDENCE__BRACKET = 10;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -401,7 +392,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACES = 12;
+  int PRECEDENCE__BRACES = 11;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -410,7 +401,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PARENTHESIS = 13;
+  int PRECEDENCE__PARENTHESIS = 12;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -419,7 +410,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__ANGLE = 14;
+  int PRECEDENCE__ANGLE = 13;
 
   /**
    * The number of structural features of the '<em>Precedence</em>' class.
@@ -428,7 +419,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE_FEATURE_COUNT = 15;
+  int PRECEDENCE_FEATURE_COUNT = 14;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl <em>Inner Precedence</em>}' class.
@@ -522,22 +513,13 @@ public interface GenPackage extends EPackage
   int INNER_PRECEDENCE__FEATURE2 = 8;
 
   /**
-   * The feature id for the '<em><b>Infixleft</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INNER_PRECEDENCE__INFIXLEFT = 9;
-
-  /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__BRACKET = 10;
+  int INNER_PRECEDENCE__BRACKET = 9;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -546,7 +528,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__BRACES = 11;
+  int INNER_PRECEDENCE__BRACES = 10;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -555,7 +537,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__PARENTHESIS = 12;
+  int INNER_PRECEDENCE__PARENTHESIS = 11;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -564,7 +546,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__ANGLE = 13;
+  int INNER_PRECEDENCE__ANGLE = 12;
 
   /**
    * The number of structural features of the '<em>Inner Precedence</em>' class.
@@ -573,35 +555,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE_FEATURE_COUNT = 14;
-
-  /**
-   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.euclideanspace.xgener.gen.impl.MultIDImpl
-   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultID()
-   * @generated
-   */
-  int MULT_ID = 6;
-
-  /**
-   * The feature id for the '<em><b>Mi</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULT_ID__MI = 0;
-
-  /**
-   * The number of structural features of the '<em>Mult ID</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULT_ID_FEATURE_COUNT = 1;
+  int INNER_PRECEDENCE_FEATURE_COUNT = 13;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
@@ -611,7 +565,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
    * @generated
    */
-  int MULT_STRING = 7;
+  int MULT_STRING = 6;
 
   /**
    * The feature id for the '<em><b>Ms</b></em>' attribute.
@@ -623,13 +577,22 @@ public interface GenPackage extends EPackage
   int MULT_STRING__MS = 0;
 
   /**
+   * The feature id for the '<em><b>Mi</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING__MI = 1;
+
+  /**
    * The feature id for the '<em><b>Synpred</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULT_STRING__SYNPRED = 1;
+  int MULT_STRING__SYNPRED = 2;
 
   /**
    * The feature id for the '<em><b>Cs</b></em>' containment reference list.
@@ -638,7 +601,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING__CS = 2;
+  int MULT_STRING__CS = 3;
 
   /**
    * The number of structural features of the '<em>Mult String</em>' class.
@@ -647,7 +610,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING_FEATURE_COUNT = 3;
+  int MULT_STRING_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ComboStringImpl <em>Combo String</em>}' class.
@@ -657,7 +620,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getComboString()
    * @generated
    */
-  int COMBO_STRING = 8;
+  int COMBO_STRING = 7;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' containment reference list.
@@ -685,7 +648,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
    * @generated
    */
-  int PRIMARY = 9;
+  int PRIMARY = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -722,7 +685,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
    * @generated
    */
-  int PRIMARY_INNER = 10;
+  int PRIMARY_INNER = 9;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -777,7 +740,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 11;
+  int LITERAL = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -814,7 +777,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
    * @generated
    */
-  int LITERAL_INNER = 12;
+  int LITERAL_INNER = 11;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -1181,17 +1144,6 @@ public interface GenPackage extends EPackage
   EReference getPrecedence_Inner();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getInfixleft <em>Infixleft</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Infixleft</em>'.
-   * @see com.euclideanspace.xgener.gen.Precedence#getInfixleft()
-   * @see #getPrecedence()
-   * @generated
-   */
-  EReference getPrecedence_Infixleft();
-
-  /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1345,17 +1297,6 @@ public interface GenPackage extends EPackage
   EAttribute getInnerPrecedence_Feature2();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfixleft <em>Infixleft</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Infixleft</em>'.
-   * @see com.euclideanspace.xgener.gen.InnerPrecedence#getInfixleft()
-   * @see #getInnerPrecedence()
-   * @generated
-   */
-  EReference getInnerPrecedence_Infixleft();
-
-  /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBracket <em>Bracket</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1400,27 +1341,6 @@ public interface GenPackage extends EPackage
   EAttribute getInnerPrecedence_Angle();
 
   /**
-   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultID <em>Mult ID</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mult ID</em>'.
-   * @see com.euclideanspace.xgener.gen.MultID
-   * @generated
-   */
-  EClass getMultID();
-
-  /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.MultID#getMi <em>Mi</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Mi</em>'.
-   * @see com.euclideanspace.xgener.gen.MultID#getMi()
-   * @see #getMultID()
-   * @generated
-   */
-  EAttribute getMultID_Mi();
-
-  /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultString <em>Mult String</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1440,6 +1360,17 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getMultString_Ms();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#getMi <em>Mi</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Mi</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString#getMi()
+   * @see #getMultString()
+   * @generated
+   */
+  EAttribute getMultString_Mi();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#getSynpred <em>Synpred</em>}'.
@@ -1916,14 +1847,6 @@ public interface GenPackage extends EPackage
     EReference PRECEDENCE__INNER = eINSTANCE.getPrecedence_Inner();
 
     /**
-     * The meta object literal for the '<em><b>Infixleft</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PRECEDENCE__INFIXLEFT = eINSTANCE.getPrecedence_Infixleft();
-
-    /**
      * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2038,14 +1961,6 @@ public interface GenPackage extends EPackage
     EAttribute INNER_PRECEDENCE__FEATURE2 = eINSTANCE.getInnerPrecedence_Feature2();
 
     /**
-     * The meta object literal for the '<em><b>Infixleft</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INNER_PRECEDENCE__INFIXLEFT = eINSTANCE.getInnerPrecedence_Infixleft();
-
-    /**
      * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2078,24 +1993,6 @@ public interface GenPackage extends EPackage
     EAttribute INNER_PRECEDENCE__ANGLE = eINSTANCE.getInnerPrecedence_Angle();
 
     /**
-     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultIDImpl <em>Mult ID</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.euclideanspace.xgener.gen.impl.MultIDImpl
-     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultID()
-     * @generated
-     */
-    EClass MULT_ID = eINSTANCE.getMultID();
-
-    /**
-     * The meta object literal for the '<em><b>Mi</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULT_ID__MI = eINSTANCE.getMultID_Mi();
-
-    /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2112,6 +2009,14 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
+
+    /**
+     * The meta object literal for the '<em><b>Mi</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULT_STRING__MI = eINSTANCE.getMultString_Mi();
 
     /**
      * The meta object literal for the '<em><b>Synpred</b></em>' attribute feature.
