@@ -753,7 +753,7 @@ XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
  * 'prefix' ID prefix=MultString par1=ID
  * 'suffix' ID par1=ID suffix=MultString
  * 'infix' ID par1=ID infix=MultString par2=ID
- * 'infixleft' ID par1=ID infixleft=MultString par2=ID
+ * 'INFIXRIGHT' ID par1=ID INFIXRIGHT=MultString par2=ID
  * 'literal' ID literal=('int'|'string'|'bool'|'float')
  * 'bracket' ID bracket=ID
  * 'braces' ID braces=ID
@@ -788,14 +788,15 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     op«p.rule» hidden(SL_COMMENT,WS):
     «compile(p.infix)»;
     «ENDIF»
-    «ELSEIF p.ruletyp=='INFIXLEFT'»
+    «ELSEIF p.ruletyp=='INFIXRIGHT'»
     /* A binary function which associates to the left
+    * An example is assignment where: b=a=2 is b=(a=2)
     */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
      ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
      IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
-    «IF p.par2 != null»«IF p.feature2 != null»«p.rule»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)?;
+    «IF p.par2 != null»«IF p.feature2 != null»«p.rule»«ELSE»rightOperand«ENDIF»=«p.rule»«ENDIF»)?;
     «IF opRuleRequired(p.infix)»
 
     op«p.rule» hidden(SL_COMMENT,WS):

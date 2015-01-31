@@ -80,7 +80,7 @@ LITERAL XExpression
 <p>Entries may be of the following types:</p>
 <ul>
   <li>INFIX Binary functions typically have the operation symbol (such as '+' or '*') between the two operands </li>
-  <li>INFIXLEFT Same as INFIX but associates on left, that is a*b*c = (a*b)*c instead of a*(b*c)</li>
+  <li>INFIXRIGHT Same as INFIX but associates on right. This is used, for example, with assignment operator, that is: a=b=2 is a=(b=2) instead of (a=b)=2</li>
   <li>PREFIX Operator comes before single operand (such as -3). </li>
   <li>SUFFIX Operator comes after single operand  (such as x++)</li>
   <li>CALLER Sets what EObject is returned if match is found, Applies to all following entries until it is changed. </li>
