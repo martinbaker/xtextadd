@@ -18,7 +18,11 @@
 <p>In Eclipse, in a xgener project, I created a file called 'test.xgener' with the following contents: </p>
 <table border="1">
   <tr>
-    <td><pre>CLASS Cl
+    <td><pre>PROJECT generBase
+  PROJECTNAME "www.euclideanspace.com/xgenerdemo/Demo"
+  NAME "com.euclideanspace.xgenerdemo.Demo"
+
+CLASS Cl
   NOCLASS
 
 PROCEDURE Proc
@@ -26,6 +30,10 @@ PROCEDURE Proc
 
 EXPRESSION XExpression
   CALLER XBinaryOperation
+  COMPOUND XAssignment (
+    SUBRULE "{XAssignment} feature=ID '=' value=XAssignment"
+    SUBINFIXRIGHT XOrExpression ("+=" | "-=" | "*=" | "/=" | "%=" | "<" "<" "=" |">" ">"? ">=") XOrExpression    
+  )
   INFIX XOrExpression XAndExpression "||" XAndExpression
   INFIX XAndExpression XEqualityExpression "&&" XEqualityExpression
   INFIX XEqualityExpression XRelationalExpression ("==" | "!=" | "===" | "!==") XRelationalExpression
@@ -75,8 +83,14 @@ LITERAL XExpression
 <h2>Reference</h2>
 <p>Here is some reference information about the format of the input (source file) to Xgener.</p>
 <p>This source file needs to contain a number of sections formatted as described below.  The keywords are uppercase in Xgener to try to avoid clashes with the target language. </p>
+<h4>PROJECT</h4>
+<p>This holds information that applies to the whole project, for example path information: </p>
+<ul>
+  <li> PROJECTNAME for example: &quot;www.euclideanspace.com/xgenerdemo/Demo&quot;</li>
+  <li> NAME for example: &quot;com.euclideanspace.xgenerdemo.Demo&quot;</li>
+</ul>
 <h4>EXPRESSION</h4>
-<p>The expression section contains a list of entries in (low to high) precidence order. So in the example above XMultiplicativeExpression is below XAdditiveExpression because multiplicatation has a higher precidence (binds more tightly) than addition.</p>
+<p>The expression section contains a list of entries in (low to high) precedence order. So in the example above XMultiplicativeExpression is below XAdditiveExpression because multiplication has a higher precedence (binds more tightly) than addition.</p>
 <p>Entries may be of the following types:</p>
 <ul>
   <li>INFIX Binary functions typically have the operation symbol (such as '+' or '*') between the two operands </li>
@@ -84,12 +98,12 @@ LITERAL XExpression
   <li>PREFIX Operator comes before single operand (such as -3). </li>
   <li>SUFFIX Operator comes after single operand  (such as x++)</li>
   <li>CALLER Sets what EObject is returned if match is found, Applies to all following entries until it is changed. </li>
-  <li>OUTER Allows multiple entries with the same precidence. </li>
+  <li>OUTER Allows multiple entries with the same precedence. </li>
   <li>BRACKET an entry inside brackets '[ ... ]' </li>
   <li>BRACES an entry inside curly brackets '{ ... }' </li>
   <li>PARENTHESIS an entry inside parenthesis '( ... )' </li>
   <li>ANGLE an entry inside angle brackets '&lt; ... &gt;' </li>
-  <li>MEMBERFEATURE object name: identities seperated by '.', '?.' or '::' </li>
+  <li>MEMBERFEATURE object name: identities separated by '.', '?.' or '::' </li>
 </ul>
 <h4>PRIMARY</h4>
 <p>The entries in this section can be in any order. Each entry represents a type of statement in the language. Note our language need not make a distinction between a 'statement' and an 'expression' if they both return the same type. </p>
@@ -108,7 +122,7 @@ LITERAL XExpression
   <li>THROWEXPRESSION throw an error </li>
   <li>RETURNEXPRESSION return from procedure </li>
   <li>TRYCATCHFINALYEXPRESSION try ... catch ... finally ... construct </li>
-  <li>PARENTHESIZEDEXPRESSION code inside parenthasis: '( ... )'</li>
+  <li>PARENTHESIZEDEXPRESSION code inside parenthesis: '( ... )'</li>
   <li>LITERALEXPRESSION defined by Literal section, see below. </li>
 </ul>
 <h4>LITERAL</h4>
@@ -118,14 +132,14 @@ LITERAL XExpression
   <li>COLLECTIONLITERAL a set or list </li>
   <li>CLOSURE as defined in xtend language </li>
   <li>BOOLEANLITERAL true or false </li>
-  <li>NUMBERLITERAL a positive integer or floating point (using decimal point but not exponetial form) </li>
+  <li>NUMBERLITERAL a positive integer or floating point (using decimal point but not exponential form) </li>
   <li>NULLLITERAL the word 'null' </li>
   <li>STRINGLITERAL string inside double quotes &quot;...&quot; </li>
-  <li>TYPELITERAL 'typeof' keyword followed by ID in parenthasis. </li>
+  <li>TYPELITERAL 'typeof' keyword followed by ID in parenthesis. </li>
 </ul>
 <h4>PROCEDURE</h4>
 <p>The procedure (method) section defines the syntax of procedure/method/function definitions in your DSL. </p>
 <h4>CLASS</h4>
-<p>This holds (optional) top level entities in your language such as a class. This does not constrain your language to be object oriented, this is upto you. </p>
+<p>This holds (optional) top level entities in your language such as a class. This does not constrain your language to be object oriented, this is up to you. </p>
 <h2>Other Projects</h2>
 <p>I have some other projects related to this, see <a href="https://github.com/martinbaker/xtextadd">this page</a>. </p>

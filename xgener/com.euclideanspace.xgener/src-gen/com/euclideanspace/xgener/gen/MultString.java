@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.MultString#getMs <em>Ms</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.MultString#isOpt <em>Opt</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.MultString#getMi <em>Mi</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.MultString#getSynpred <em>Synpred</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.MultString#getCs <em>Cs</em>}</li>
@@ -52,6 +53,32 @@ public interface MultString extends EObject
    * @generated
    */
   void setMs(String value);
+
+  /**
+   * Returns the value of the '<em><b>Opt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Opt</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Opt</em>' attribute.
+   * @see #setOpt(boolean)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getMultString_Opt()
+   * @model
+   * @generated
+   */
+  boolean isOpt();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.MultString#isOpt <em>Opt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Opt</em>' attribute.
+   * @see #isOpt()
+   * @generated
+   */
+  void setOpt(boolean value);
 
   /**
    * Returns the value of the '<em><b>Mi</b></em>' attribute.

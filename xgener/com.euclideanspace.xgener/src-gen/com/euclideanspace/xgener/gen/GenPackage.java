@@ -67,13 +67,22 @@ public interface GenPackage extends EPackage
   int MODEL = 0;
 
   /**
+   * The feature id for the '<em><b>Proj</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__PROJ = 0;
+
+  /**
    * The feature id for the '<em><b>Clas</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__CLAS = 0;
+  int MODEL__CLAS = 1;
 
   /**
    * The feature id for the '<em><b>Proc</b></em>' containment reference list.
@@ -82,7 +91,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PROC = 1;
+  int MODEL__PROC = 2;
 
   /**
    * The feature id for the '<em><b>Prim</b></em>' containment reference list.
@@ -91,7 +100,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__PRIM = 2;
+  int MODEL__PRIM = 3;
 
   /**
    * The feature id for the '<em><b>Lit</b></em>' containment reference list.
@@ -100,7 +109,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__LIT = 3;
+  int MODEL__LIT = 4;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -109,7 +118,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__EXP = 4;
+  int MODEL__EXP = 5;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -118,7 +127,53 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 5;
+  int MODEL_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ProjectImpl <em>Project</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.ProjectImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getProject()
+   * @generated
+   */
+  int PROJECT = 1;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Proj</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT__PROJ = 1;
+
+  /**
+   * The feature id for the '<em><b>Nam</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT__NAM = 2;
+
+  /**
+   * The number of structural features of the '<em>Project</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ClassTypeImpl <em>Class Type</em>}' class.
@@ -128,7 +183,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getClassType()
    * @generated
    */
-  int CLASS_TYPE = 1;
+  int CLASS_TYPE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -192,7 +247,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getProcedure()
    * @generated
    */
-  int PROCEDURE = 2;
+  int PROCEDURE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -247,7 +302,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 3;
+  int EXPRESSION = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -284,7 +339,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrecedence()
    * @generated
    */
-  int PRECEDENCE = 4;
+  int PRECEDENCE = 5;
 
   /**
    * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
@@ -314,13 +369,22 @@ public interface GenPackage extends EPackage
   int PRECEDENCE__FEATURE1 = 2;
 
   /**
+   * The feature id for the '<em><b>Customrule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECEDENCE__CUSTOMRULE = 3;
+
+  /**
    * The feature id for the '<em><b>Prefix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PREFIX = 3;
+  int PRECEDENCE__PREFIX = 4;
 
   /**
    * The feature id for the '<em><b>Par1</b></em>' attribute.
@@ -329,7 +393,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PAR1 = 4;
+  int PRECEDENCE__PAR1 = 5;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' containment reference.
@@ -338,7 +402,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__SUFFIX = 5;
+  int PRECEDENCE__SUFFIX = 6;
 
   /**
    * The feature id for the '<em><b>Infix</b></em>' containment reference.
@@ -347,7 +411,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__INFIX = 6;
+  int PRECEDENCE__INFIX = 7;
 
   /**
    * The feature id for the '<em><b>Feature2</b></em>' attribute.
@@ -356,7 +420,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__FEATURE2 = 7;
+  int PRECEDENCE__FEATURE2 = 8;
 
   /**
    * The feature id for the '<em><b>Par2</b></em>' attribute.
@@ -365,7 +429,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PAR2 = 8;
+  int PRECEDENCE__PAR2 = 9;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' containment reference list.
@@ -374,7 +438,16 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__INNER = 9;
+  int PRECEDENCE__INNER = 10;
+
+  /**
+   * The feature id for the '<em><b>Prec</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECEDENCE__PREC = 11;
 
   /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
@@ -383,7 +456,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACKET = 10;
+  int PRECEDENCE__BRACKET = 12;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -392,7 +465,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__BRACES = 11;
+  int PRECEDENCE__BRACES = 13;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -401,7 +474,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__PARENTHESIS = 12;
+  int PRECEDENCE__PARENTHESIS = 14;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -410,7 +483,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE__ANGLE = 13;
+  int PRECEDENCE__ANGLE = 15;
 
   /**
    * The number of structural features of the '<em>Precedence</em>' class.
@@ -419,7 +492,152 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRECEDENCE_FEATURE_COUNT = 14;
+  int PRECEDENCE_FEATURE_COUNT = 16;
+
+  /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl <em>Sub Precedence</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getSubPrecedence()
+   * @generated
+   */
+  int SUB_PRECEDENCE = 6;
+
+  /**
+   * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__RULETYP = 0;
+
+  /**
+   * The feature id for the '<em><b>Customrule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__CUSTOMRULE = 1;
+
+  /**
+   * The feature id for the '<em><b>Prefix</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__PREFIX = 2;
+
+  /**
+   * The feature id for the '<em><b>Feature1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__FEATURE1 = 3;
+
+  /**
+   * The feature id for the '<em><b>Par2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__PAR2 = 4;
+
+  /**
+   * The feature id for the '<em><b>Suffix</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__SUFFIX = 5;
+
+  /**
+   * The feature id for the '<em><b>Par1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__PAR1 = 6;
+
+  /**
+   * The feature id for the '<em><b>Infix</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__INFIX = 7;
+
+  /**
+   * The feature id for the '<em><b>Feature2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__FEATURE2 = 8;
+
+  /**
+   * The feature id for the '<em><b>Rule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__RULE = 9;
+
+  /**
+   * The feature id for the '<em><b>Bracket</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__BRACKET = 10;
+
+  /**
+   * The feature id for the '<em><b>Braces</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__BRACES = 11;
+
+  /**
+   * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__PARENTHESIS = 12;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE__ANGLE = 13;
+
+  /**
+   * The number of structural features of the '<em>Sub Precedence</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRECEDENCE_FEATURE_COUNT = 14;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl <em>Inner Precedence</em>}' class.
@@ -429,7 +647,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getInnerPrecedence()
    * @generated
    */
-  int INNER_PRECEDENCE = 5;
+  int INNER_PRECEDENCE = 7;
 
   /**
    * The feature id for the '<em><b>Ruletyp</b></em>' attribute.
@@ -441,13 +659,22 @@ public interface GenPackage extends EPackage
   int INNER_PRECEDENCE__RULETYP = 0;
 
   /**
+   * The feature id for the '<em><b>Customrule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_PRECEDENCE__CUSTOMRULE = 1;
+
+  /**
    * The feature id for the '<em><b>Prefix</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__PREFIX = 1;
+  int INNER_PRECEDENCE__PREFIX = 2;
 
   /**
    * The feature id for the '<em><b>Feature1</b></em>' attribute.
@@ -456,7 +683,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__FEATURE1 = 2;
+  int INNER_PRECEDENCE__FEATURE1 = 3;
 
   /**
    * The feature id for the '<em><b>Par2</b></em>' attribute.
@@ -465,7 +692,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__PAR2 = 3;
+  int INNER_PRECEDENCE__PAR2 = 4;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' containment reference.
@@ -474,7 +701,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__SUFFIX = 4;
+  int INNER_PRECEDENCE__SUFFIX = 5;
 
   /**
    * The feature id for the '<em><b>Mod</b></em>' attribute.
@@ -483,7 +710,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__MOD = 5;
+  int INNER_PRECEDENCE__MOD = 6;
 
   /**
    * The feature id for the '<em><b>Rule</b></em>' attribute.
@@ -492,7 +719,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__RULE = 6;
+  int INNER_PRECEDENCE__RULE = 7;
 
   /**
    * The feature id for the '<em><b>Infix</b></em>' containment reference.
@@ -501,7 +728,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__INFIX = 7;
+  int INNER_PRECEDENCE__INFIX = 8;
 
   /**
    * The feature id for the '<em><b>Feature2</b></em>' attribute.
@@ -510,7 +737,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__FEATURE2 = 8;
+  int INNER_PRECEDENCE__FEATURE2 = 9;
 
   /**
    * The feature id for the '<em><b>Bracket</b></em>' attribute.
@@ -519,7 +746,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__BRACKET = 9;
+  int INNER_PRECEDENCE__BRACKET = 10;
 
   /**
    * The feature id for the '<em><b>Braces</b></em>' attribute.
@@ -528,7 +755,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__BRACES = 10;
+  int INNER_PRECEDENCE__BRACES = 11;
 
   /**
    * The feature id for the '<em><b>Parenthesis</b></em>' attribute.
@@ -537,7 +764,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__PARENTHESIS = 11;
+  int INNER_PRECEDENCE__PARENTHESIS = 12;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -546,7 +773,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE__ANGLE = 12;
+  int INNER_PRECEDENCE__ANGLE = 13;
 
   /**
    * The number of structural features of the '<em>Inner Precedence</em>' class.
@@ -555,7 +782,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_PRECEDENCE_FEATURE_COUNT = 13;
+  int INNER_PRECEDENCE_FEATURE_COUNT = 14;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
@@ -565,7 +792,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
    * @generated
    */
-  int MULT_STRING = 6;
+  int MULT_STRING = 8;
 
   /**
    * The feature id for the '<em><b>Ms</b></em>' attribute.
@@ -577,13 +804,22 @@ public interface GenPackage extends EPackage
   int MULT_STRING__MS = 0;
 
   /**
+   * The feature id for the '<em><b>Opt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULT_STRING__OPT = 1;
+
+  /**
    * The feature id for the '<em><b>Mi</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULT_STRING__MI = 1;
+  int MULT_STRING__MI = 2;
 
   /**
    * The feature id for the '<em><b>Synpred</b></em>' attribute.
@@ -592,7 +828,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING__SYNPRED = 2;
+  int MULT_STRING__SYNPRED = 3;
 
   /**
    * The feature id for the '<em><b>Cs</b></em>' containment reference list.
@@ -601,7 +837,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING__CS = 3;
+  int MULT_STRING__CS = 4;
 
   /**
    * The number of structural features of the '<em>Mult String</em>' class.
@@ -610,7 +846,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULT_STRING_FEATURE_COUNT = 4;
+  int MULT_STRING_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ComboStringImpl <em>Combo String</em>}' class.
@@ -620,7 +856,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getComboString()
    * @generated
    */
-  int COMBO_STRING = 7;
+  int COMBO_STRING = 9;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' containment reference list.
@@ -648,7 +884,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
    * @generated
    */
-  int PRIMARY = 8;
+  int PRIMARY = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -685,7 +921,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
    * @generated
    */
-  int PRIMARY_INNER = 9;
+  int PRIMARY_INNER = 11;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -740,7 +976,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 10;
+  int LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -777,7 +1013,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
    * @generated
    */
-  int LITERAL_INNER = 11;
+  int LITERAL_INNER = 13;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -816,6 +1052,17 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EClass getModel();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getProj <em>Proj</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Proj</em>'.
+   * @see com.euclideanspace.xgener.gen.Model#getProj()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Proj();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Model#getClas <em>Clas</em>}'.
@@ -871,6 +1118,49 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EReference getModel_Exp();
+
+  /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.Project <em>Project</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Project</em>'.
+   * @see com.euclideanspace.xgener.gen.Project
+   * @generated
+   */
+  EClass getProject();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Project#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.euclideanspace.xgener.gen.Project#getName()
+   * @see #getProject()
+   * @generated
+   */
+  EAttribute getProject_Name();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Project#getProj <em>Proj</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Proj</em>'.
+   * @see com.euclideanspace.xgener.gen.Project#getProj()
+   * @see #getProject()
+   * @generated
+   */
+  EAttribute getProject_Proj();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Project#getNam <em>Nam</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Nam</em>'.
+   * @see com.euclideanspace.xgener.gen.Project#getNam()
+   * @see #getProject()
+   * @generated
+   */
+  EAttribute getProject_Nam();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.ClassType <em>Class Type</em>}'.
@@ -1067,6 +1357,17 @@ public interface GenPackage extends EPackage
   EAttribute getPrecedence_Feature1();
 
   /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getCustomrule <em>Customrule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Customrule</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence#getCustomrule()
+   * @see #getPrecedence()
+   * @generated
+   */
+  EAttribute getPrecedence_Customrule();
+
+  /**
    * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1144,6 +1445,17 @@ public interface GenPackage extends EPackage
   EReference getPrecedence_Inner();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Precedence#getPrec <em>Prec</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Prec</em>'.
+   * @see com.euclideanspace.xgener.gen.Precedence#getPrec()
+   * @see #getPrecedence()
+   * @generated
+   */
+  EReference getPrecedence_Prec();
+
+  /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1188,6 +1500,170 @@ public interface GenPackage extends EPackage
   EAttribute getPrecedence_Angle();
 
   /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.SubPrecedence <em>Sub Precedence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sub Precedence</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence
+   * @generated
+   */
+  EClass getSubPrecedence();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getRuletyp <em>Ruletyp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ruletyp</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getRuletyp()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Ruletyp();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getCustomrule <em>Customrule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Customrule</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getCustomrule()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Customrule();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPrefix <em>Prefix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Prefix</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getPrefix()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EReference getSubPrecedence_Prefix();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature1 <em>Feature1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature1</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getFeature1()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Feature1();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar2 <em>Par2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Par2</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getPar2()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Par2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.SubPrecedence#getSuffix <em>Suffix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Suffix</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getSuffix()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EReference getSubPrecedence_Suffix();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar1 <em>Par1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Par1</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getPar1()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Par1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.SubPrecedence#getInfix <em>Infix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Infix</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getInfix()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EReference getSubPrecedence_Infix();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature2 <em>Feature2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature2</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getFeature2()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Feature2();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getRule <em>Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Rule</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getRule()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Rule();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getBracket <em>Bracket</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Bracket</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getBracket()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Bracket();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getBraces <em>Braces</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Braces</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getBraces()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Braces();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getParenthesis <em>Parenthesis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Parenthesis</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getParenthesis()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Parenthesis();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.SubPrecedence#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Angle</em>'.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence#getAngle()
+   * @see #getSubPrecedence()
+   * @generated
+   */
+  EAttribute getSubPrecedence_Angle();
+
+  /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.InnerPrecedence <em>Inner Precedence</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1207,6 +1683,17 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getInnerPrecedence_Ruletyp();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getCustomrule <em>Customrule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Customrule</em>'.
+   * @see com.euclideanspace.xgener.gen.InnerPrecedence#getCustomrule()
+   * @see #getInnerPrecedence()
+   * @generated
+   */
+  EAttribute getInnerPrecedence_Customrule();
 
   /**
    * Returns the meta object for the containment reference '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getPrefix <em>Prefix</em>}'.
@@ -1360,6 +1847,17 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getMultString_Ms();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#isOpt <em>Opt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Opt</em>'.
+   * @see com.euclideanspace.xgener.gen.MultString#isOpt()
+   * @see #getMultString()
+   * @generated
+   */
+  EAttribute getMultString_Opt();
 
   /**
    * Returns the meta object for the attribute '{@link com.euclideanspace.xgener.gen.MultString#getMi <em>Mi</em>}'.
@@ -1599,6 +2097,14 @@ public interface GenPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
+     * The meta object literal for the '<em><b>Proj</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__PROJ = eINSTANCE.getModel_Proj();
+
+    /**
      * The meta object literal for the '<em><b>Clas</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1637,6 +2143,40 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EReference MODEL__EXP = eINSTANCE.getModel_Exp();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.ProjectImpl <em>Project</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.ProjectImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getProject()
+     * @generated
+     */
+    EClass PROJECT = eINSTANCE.getProject();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT__NAME = eINSTANCE.getProject_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Proj</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT__PROJ = eINSTANCE.getProject_Proj();
+
+    /**
+     * The meta object literal for the '<em><b>Nam</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT__NAM = eINSTANCE.getProject_Nam();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.ClassTypeImpl <em>Class Type</em>}' class.
@@ -1791,6 +2331,14 @@ public interface GenPackage extends EPackage
     EAttribute PRECEDENCE__FEATURE1 = eINSTANCE.getPrecedence_Feature1();
 
     /**
+     * The meta object literal for the '<em><b>Customrule</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRECEDENCE__CUSTOMRULE = eINSTANCE.getPrecedence_Customrule();
+
+    /**
      * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1847,6 +2395,14 @@ public interface GenPackage extends EPackage
     EReference PRECEDENCE__INNER = eINSTANCE.getPrecedence_Inner();
 
     /**
+     * The meta object literal for the '<em><b>Prec</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRECEDENCE__PREC = eINSTANCE.getPrecedence_Prec();
+
+    /**
      * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1879,6 +2435,128 @@ public interface GenPackage extends EPackage
     EAttribute PRECEDENCE__ANGLE = eINSTANCE.getPrecedence_Angle();
 
     /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl <em>Sub Precedence</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getSubPrecedence()
+     * @generated
+     */
+    EClass SUB_PRECEDENCE = eINSTANCE.getSubPrecedence();
+
+    /**
+     * The meta object literal for the '<em><b>Ruletyp</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__RULETYP = eINSTANCE.getSubPrecedence_Ruletyp();
+
+    /**
+     * The meta object literal for the '<em><b>Customrule</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__CUSTOMRULE = eINSTANCE.getSubPrecedence_Customrule();
+
+    /**
+     * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUB_PRECEDENCE__PREFIX = eINSTANCE.getSubPrecedence_Prefix();
+
+    /**
+     * The meta object literal for the '<em><b>Feature1</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__FEATURE1 = eINSTANCE.getSubPrecedence_Feature1();
+
+    /**
+     * The meta object literal for the '<em><b>Par2</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__PAR2 = eINSTANCE.getSubPrecedence_Par2();
+
+    /**
+     * The meta object literal for the '<em><b>Suffix</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUB_PRECEDENCE__SUFFIX = eINSTANCE.getSubPrecedence_Suffix();
+
+    /**
+     * The meta object literal for the '<em><b>Par1</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__PAR1 = eINSTANCE.getSubPrecedence_Par1();
+
+    /**
+     * The meta object literal for the '<em><b>Infix</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUB_PRECEDENCE__INFIX = eINSTANCE.getSubPrecedence_Infix();
+
+    /**
+     * The meta object literal for the '<em><b>Feature2</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__FEATURE2 = eINSTANCE.getSubPrecedence_Feature2();
+
+    /**
+     * The meta object literal for the '<em><b>Rule</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__RULE = eINSTANCE.getSubPrecedence_Rule();
+
+    /**
+     * The meta object literal for the '<em><b>Bracket</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__BRACKET = eINSTANCE.getSubPrecedence_Bracket();
+
+    /**
+     * The meta object literal for the '<em><b>Braces</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__BRACES = eINSTANCE.getSubPrecedence_Braces();
+
+    /**
+     * The meta object literal for the '<em><b>Parenthesis</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__PARENTHESIS = eINSTANCE.getSubPrecedence_Parenthesis();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PRECEDENCE__ANGLE = eINSTANCE.getSubPrecedence_Angle();
+
+    /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl <em>Inner Precedence</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1895,6 +2573,14 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute INNER_PRECEDENCE__RULETYP = eINSTANCE.getInnerPrecedence_Ruletyp();
+
+    /**
+     * The meta object literal for the '<em><b>Customrule</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INNER_PRECEDENCE__CUSTOMRULE = eINSTANCE.getInnerPrecedence_Customrule();
 
     /**
      * The meta object literal for the '<em><b>Prefix</b></em>' containment reference feature.
@@ -2009,6 +2695,14 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute MULT_STRING__MS = eINSTANCE.getMultString_Ms();
+
+    /**
+     * The meta object literal for the '<em><b>Opt</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULT_STRING__OPT = eINSTANCE.getMultString_Opt();
 
     /**
      * The meta object literal for the '<em><b>Mi</b></em>' attribute feature.

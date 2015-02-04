@@ -79,6 +79,13 @@ public class GenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GenPackage.PROJECT:
+      {
+        Project project = (Project)theEObject;
+        T result = caseProject(project);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GenPackage.CLASS_TYPE:
       {
         ClassType classType = (ClassType)theEObject;
@@ -104,6 +111,13 @@ public class GenSwitch<T> extends Switch<T>
       {
         Precedence precedence = (Precedence)theEObject;
         T result = casePrecedence(precedence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GenPackage.SUB_PRECEDENCE:
+      {
+        SubPrecedence subPrecedence = (SubPrecedence)theEObject;
+        T result = caseSubPrecedence(subPrecedence);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -177,6 +191,22 @@ public class GenSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Project</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Project</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProject(Project object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Class Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -236,6 +266,22 @@ public class GenSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePrecedence(Precedence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Precedence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Precedence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubPrecedence(SubPrecedence object)
   {
     return null;
   }

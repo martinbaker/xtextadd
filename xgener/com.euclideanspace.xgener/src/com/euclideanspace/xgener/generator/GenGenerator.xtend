@@ -14,6 +14,8 @@ import com.euclideanspace.xgener.gen.Primary
 import com.euclideanspace.xgener.gen.Literal
 import com.euclideanspace.xgener.gen.ComboString
 import org.eclipse.emf.common.util.URI
+import com.euclideanspace.xgener.gen.Project
+import java.util.ArrayList
 
 /**
  * Generates code from your model files on save.
@@ -40,6 +42,26 @@ class GenGenerator implements IGenerator {
     }*/
     
     var String callingRule =null;
+
+    val ArrayList<String> labelRules = new ArrayList<String>();
+    var String labelRule = null;
+    
+    def void setLabelRule(String s) {
+    	labelRule = s;
+    }
+    
+    def String getLabelRule() {
+    	return labelRule;
+    }
+    
+    def boolean isLabelRule(String s) {
+    	val boolean c=labelRules.contains(s);
+    	if (!labelRules.contains(s)){
+    		labelRules.add(s);
+    	}
+    	return c;
+    }
+    
     
     def void setCallingRule(String s,String feature) {
     	callingRule =s+".leftOperand";
@@ -65,7 +87,7 @@ class GenGenerator implements IGenerator {
     }
     
     /**
-     * used for InnerPrecidence if we need to 
+     * used for Innerprecedence if we need to 
      */
     var CharSequence helpOpRule=null;
     
@@ -73,10 +95,13 @@ class GenGenerator implements IGenerator {
      * gets the name of the container
      */
     def String getParentExpression(EObject child) {
-      var String s="gen_error";
+      var String s="gen_error"+child.eContainer();
       if (child.eContainer() instanceof Expression) {
         val Expression e= child.eContainer() as Expression;
         s=e.name;
+      } else if (child.eContainer() instanceof Precedence) {
+        val Precedence f= child.eContainer() as Precedence;
+        s=f.rule;
       } else if (child.eContainer() instanceof Primary) {
         val Primary f= child.eContainer() as Primary;
         s=f.name;
@@ -168,6 +193,8 @@ class DemoLabelProvider extends org.eclipse.xtext.ui.label.DefaultEObjectLabelPr
     super(delegate);
   }
 
+«FOR x:model.proj»«IF x.name != null»«compileLabel(x)»«ENDIF»
+«ENDFOR»
 «FOR x:model.clas»«IF x.name != null»«compileLabel(x)»«ENDIF»
 «ENDFOR»
 «FOR x:model.proc»«IF x.name != null»«compileLabel(x)»«ENDIF»
@@ -179,6 +206,13 @@ class DemoLabelProvider extends org.eclipse.xtext.ui.label.DefaultEObjectLabelPr
 «FOR x:model.lit»«IF x.name != null»«compileLabel(x)»«ENDIF»
 «ENDFOR»
 }
+'''
+
+/* global project info */
+def CharSequence compileLabel(com.euclideanspace.xgener.gen.Project c) '''
+/** Label for overall project */
+// projectName = «FOR x:c.proj»«IF x != null»«x»«ENDIF»«ENDFOR»
+// name = «FOR x:c.nam»«IF x != null»«x»«ENDIF»«ENDFOR»
 '''
 
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.ClassType c) '''
@@ -198,48 +232,13 @@ def String text(GenerParameter ele) {
 }
 '''
 
-/* «FOR x:e.prec SEPARATOR '\n'»
-  «IF x.rule != null»
-    «compileLabel(x)»
-  «ENDIF»
-«ENDFOR»*/
+/*
+ * Expression
+ */
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.Expression e) '''
+// Expression rules
 def String text(XExpression ele) {
 	return "XExpression";
-}
-
-def String text(XBinaryOperation ele) {
-	var res= "XBinaryOperation "+ele.feature
-    if (ele.type !=null) res=res+" type="+ele.type;
-	return res;
-}
-
-def String text(XUnaryOperation ele) {
-	return "XUnaryOperation "+ele.feature;
-}
-
-def String text(XAssignment ele) {
-	return "XAssignment "+ele.feature;
-}
-
-def String text(XCasePart ele) {
-	return "XCasePart "+ele;
-}
-
-def String text(XCatchClause ele) {
-	return "XCatchClause "+ele;
-}
-
-def String text(XSetLiteral ele) {
-	return "XSetLiteral "+ele;
-}
-
-def String text(XListLiteral ele) {
-	return "XListLiteral "+ele;
-}
-
-def String text(XInstanceOfExpression ele) {
-	return "XInstanceOfExpression ";
 }
 
 def String text(XVariableDeclaration ele) {
@@ -247,41 +246,231 @@ def String text(XVariableDeclaration ele) {
 	return "XVariableDeclaration "+ ele.name;
 }
 
-def String text(XMemberFeatureCall ele) {
-	if (ele==null) return "XMemberFeatureCall null";
-	return "XMemberFeatureCall "+ele.feature;
-}
+/* start of precedence rules */
 
-/* start of precidence rules */
-/* end of precidence rules */
+«FOR x:e.prec SEPARATOR '\n'»
+  «IF x.rule != null»
+    «compileLabel(x)»
+  «ENDIF»
+«ENDFOR»
+
+/* end of precedence rules */
 '''
 
+/*
+ * Rules in expression
+ */
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.Precedence p) '''
-/* precedence «p.rule»
+  «IF p.ruletyp=='PREFIX'»
+/* precedence prefix «p.rule»
+*/
+«IF !isLabelRule(getLabelRule())»
+def String text(«getLabelRule()» ele) {
+	return "«getLabelRule()»"+ele.feature;
+}
+«ENDIF»
+  «ELSEIF p.ruletyp=='SUFFIX'»
+/* precedence suffix «p.rule»
+*/
+«IF !isLabelRule(getLabelRule())»
+def String text(«getLabelRule()» ele) {
+	return "«getLabelRule()»";
+}
+«ENDIF»
+  «ELSEIF p.ruletyp=='INFIX'»
+/* precedence infix «p.rule»
+*/
+«IF !isLabelRule(getLabelRule())»
+def String text(«getLabelRule()» ele) {
+	var res= "«getLabelRule()» "+ele.feature
+    if (ele.type !=null) res=res+" type="+ele.type;
+	return res;
+	
+}
+«ENDIF»
+  «ELSEIF p.ruletyp=='INFIXRIGHT'»
+/* precedence infixRight «p.rule»
+*/
+«IF !isLabelRule(getLabelRule())»
+def String text(«getLabelRule()» ele) {
+	var res= "«getLabelRule()» "+ele.feature
+    if (ele.type !=null) res=res+" type="+ele.type;
+	return res;
+	
+}
+«ENDIF»
+  «ELSEIF p.ruletyp=='OUTER'»
+«FOR x:p.inner»«compileLabel(x)»«ENDFOR»
+  «ELSEIF p.ruletyp=='COMPOUND'»
+
+«FOR x:p.prec»«compileLabel(x)»«ENDFOR»
+  «ELSEIF p.ruletyp=='CALLER'»
+«IF p.rule != null»«setLabelRule(p.rule)»«ENDIF»
+  «ELSEIF p.ruletyp=='ANGLE'»
+/* precedence angle «p.rule»
 */
 def String text(«p.rule» ele) {
 	return "«p.rule»";
 }
+  «ELSEIF p.ruletyp=='BRACKET'»
+/* precedence bracket «p.rule»
+*/
+def String text(«p.rule» ele) {
+	return "«p.rule»";
+}
+  «ELSEIF p.ruletyp=='BRACES'»
+/* precedence braces «p.rule»
+*/
+def String text(«p.rule» ele) {
+	return "«p.rule»";
+}
+  «ELSEIF p.ruletyp=='PARENTHESIS'»
+/* precedence parenthesis «p.rule»
+*/
+def String text(«p.rule» ele) {
+	return "«p.rule»";
+}
+  «ELSEIF p.ruletyp=='MEMBERFEATURE'»
+/* precedence memberfeature «p.rule»
+*/
+def String text(«p.rule» ele) {
+	if (ele==null) return "«p.rule» null";
+	return "«p.rule» "+ele.feature;
+}
+  «ENDIF»
 '''
 
+def CharSequence compileLabel(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
+  «IF p.ruletyp=='INNERRULE'»
+      // inner rule
+  «ELSEIF p.ruletyp=='INNERPREFIX'»
+      // inner prefix
+  «ELSEIF p.ruletyp=='INNERSUFFIX'»
+      // inner sufix
+  «ELSEIF p.ruletyp=='INNERINFIX'»
+     // inner infix
+  «ELSEIF p.ruletyp=='INNERINFIXRIGHT'»
+     // inner infix right
+  «ELSEIF p.ruletyp=='INNERANGLE'»
+    // inner angle
+  «ELSEIF p.ruletyp=='INNERBRACKET'»
+    // inner bracket
+  «ELSEIF p.ruletyp=='INNERBRACES'»
+    // inner braces
+  «ELSEIF p.ruletyp=='INNERPARENTHESIS'»
+    // inner parenththesis
+  «ENDIF»
+'''
+
+def CharSequence compileLabel(com.euclideanspace.xgener.gen.SubPrecedence p) '''
+  «IF p.ruletyp=='SUBRULE'»
+      // sub rule
+  «ELSEIF p.ruletyp=='SUBPREFIX'»
+      // sub prefix
+  «ELSEIF p.ruletyp=='SUBSUFFIX'»
+      // sub sufix
+  «ELSEIF p.ruletyp=='SUBINFIX'»
+     // sub infix
+  «ELSEIF p.ruletyp=='SUBINFIXRIGHT'»
+/* precedence compound sub infix right«p.rule»
+     */
+     def String text(«getParentExpression(p)» ele) {
+	   return "«getParentExpression(p)»+ele.feature";
+     }
+  «ELSEIF p.ruletyp=='SUBANGLE'»
+    // sub angle
+  «ELSEIF p.ruletyp=='SUBBRACKET'»
+    // sub bracket
+  «ELSEIF p.ruletyp=='SUBBRACES'»
+    // sub braces
+  «ELSEIF p.ruletyp=='SUBPARENTHESIS'»
+    // sub parenththesis
+  «ENDIF»
+'''
+
+/* Primary - If, For and so on.*/
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.Primary p) '''
 /* primary start */
 
   «FOR x:p.inner SEPARATOR '\n'»
     «compileLabel(x)»
   «ENDFOR»
+  
 /* primary end */
 ''' 
 
+/*
+ * PrimaryInner is one of these: CONSTRUCTOR,BLOCK,SWITCH,SYNCHRONIZED,FEATURECALL
+ *                               IFEXPRESSION,FOREXPRESSION,BASICFORLOOPEXPRESSION
+ *                               WHILEEXPRESSION,DOWHILEEXPRESSION,THROWEXPRESSION
+ *                               RETURNEXPRESSION,TRYCATCHFINALYEXPRESSION,PARENTHESIZEDEXPRESSION
+ *                               LITERALEXPRESSION.
+ */
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
 /* primaryInner «pi.construct» */
-«IF pi.primarytyp=='FEATURECALL'»
+«IF pi.primarytyp=='CONSTRUCTOR'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='BLOCK'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='SWITCH'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+
+def String text(XCasePart ele) {
+	return "XCasePart "+ele;
+}
+«ELSEIF pi.primarytyp=='SYNCHRONIZED'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='FEATURECALL'»
 def String text(XFeatureCall ele) {
 	if (ele==null) return "XFeatureCall null";
 	return "XFeatureCall "+ele.feature;
 }
 «ELSEIF pi.primarytyp=='LITERALEXPRESSION'»
-«ELSE»
+«ELSEIF pi.primarytyp=='IFEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='FOREXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='BASICFORLOOPEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='WHILEEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='DOWHILEEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='THROWEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='RETURNEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+«ELSEIF pi.primarytyp=='TRYCATCHFINALYEXPRESSION'»
+def String text(«pi.construct» ele) {
+	return "«pi.construct»";
+}
+
+def String text(XCatchClause ele) {
+	return "XCatchClause "+ele;
+}
+«ELSEIF pi.primarytyp=='PARENTHESIZEDEXPRESSION'»
 def String text(«pi.construct» ele) {
 	return "«pi.construct»";
 }
@@ -323,6 +512,14 @@ def String text(XTypeLiteral p) {
 	return "XTypeLiteral "+p.type;
 }
 
+def String text(XSetLiteral ele) {
+	return "XSetLiteral "+ele;
+}
+
+def String text(XListLiteral ele) {
+	return "XListLiteral "+ele;
+}
+
 /* end of literals */
 '''
 
@@ -345,10 +542,14 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Model model) '''
           «IF model.eContainer != null»
 package «model.eResource.className»;
           «ENDIF»
-grammar com.euclideanspace.xgener.Tutorial
-generate demo "http://www.euclideanspace.com/xgener/Tutorial"
+grammar «FOR x:model.proj»«getName(x)»«ENDFOR»
+generate demo "http://«FOR x:model.proj»«getProjectName(x)»«ENDFOR»"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+// className=«model.eResource.className»
+«FOR x:model.proj»«IF x.name != null»«compile(x)»«ENDIF»
+«ENDFOR»
 
 Model hidden(SL_COMMENT,WS):
   m+=Member*
@@ -403,6 +604,21 @@ terminal WS : (' '|'\t'|'\r'|'\n')+;
 terminal ANY_OTHER: .;
         «ENDIF»
 '''
+
+/* global project info */
+def CharSequence compile(com.euclideanspace.xgener.gen.Project c) '''
+/** Label for overall project */
+// projectName = «FOR x:c.proj»«IF x != null»«x»«ENDIF»«ENDFOR»
+// name = «FOR x:c.nam»«IF x != null»«x»«ENDIF»«ENDFOR»
+'''
+
+def CharSequence getProjectName(com.euclideanspace.xgener.gen.Project c) '''«
+FOR x:c.proj»«IF x != null»«x»«ENDIF»«ENDFOR
+»'''
+
+def CharSequence getName(com.euclideanspace.xgener.gen.Project c) '''«
+FOR x:c.nam»«IF x != null»«x»«ENDIF»«ENDFOR
+»'''
 
     /* Class */
     def CharSequence compile(com.euclideanspace.xgener.gen.ClassType c) '''
@@ -464,17 +680,6 @@ Parameter returns GenerParameter:
 /* Expression */
 def CharSequence compile(com.euclideanspace.xgener.gen.Expression e) '''
 // start of rules for Expression=«e.name»
-XAssignment returns XExpression hidden(SL_COMMENT,WS):
-  {XAssignment} feature=ID '=' value=XAssignment |
-  XOrExpression (
-  =>({XBinaryOperation.leftOperand=current} feature=OpMultiAssign) rightOperand=XAssignment
-  )?;
-
-OpMultiAssign hidden(SL_COMMENT,WS):
-  '+=' | '-=' | '*=' | '/=' | '%=' |
-  '<' '<' '=' |
-  '>' '>'? '>=';
-
 «FOR x:e.prec SEPARATOR '\n'»
   «IF x.rule != null»
     «compile(x)»
@@ -483,7 +688,7 @@ OpMultiAssign hidden(SL_COMMENT,WS):
 // start of rules for Expression=«e.name»
 '''
 
-/* Primary */
+/* Primary - If, For and so on.*/
 def CharSequence compile(com.euclideanspace.xgener.gen.Primary p) '''
 // start of rules for Primary=«p.name»
 
@@ -511,7 +716,13 @@ XVariableDeclaration returns «p.name» hidden(SL_COMMENT,WS):
 // end of rules for Primary=«p.name»
 '''
     
-/* Inner Primary */
+/*
+ * PrimaryInner is one of these: CONSTRUCTOR,BLOCK,SWITCH,SYNCHRONIZED,FEATURECALL
+ *                               IFEXPRESSION,FOREXPRESSION,BASICFORLOOPEXPRESSION
+ *                               WHILEEXPRESSION,DOWHILEEXPRESSION,THROWEXPRESSION
+ *                               RETURNEXPRESSION,TRYCATCHFINALYEXPRESSION,PARENTHESIZEDEXPRESSION
+ *                               LITERALEXPRESSION.
+ */
 def CharSequence compile(com.euclideanspace.xgener.gen.PrimaryInner pi) '''
 «IF pi.primarytyp=='CONSTRUCTOR'»
 /* 'new' keyword followed by specification of object to be constructed.
@@ -760,7 +971,12 @@ XShortClosure returns «getParentExpression(pi)» hidden(SL_COMMENT,WS):
  * 'parenthesis' ID parenthesis=ID
  */
 def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
-    «IF p.ruletyp=='PREFIX'»
+    «IF p.ruletyp=='RULE'»
+      /* Custom Rule
+      */
+      «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+      «p.customrule»;
+  «ELSEIF p.ruletyp=='PREFIX'»
       /* Operator comes before single operand (such as -3). 
       */
       «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
@@ -803,11 +1019,16 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Precedence p) '''
     «compile(p.infix)»;
     «ENDIF»
   «ELSEIF p.ruletyp=='OUTER'»
-    /* Allows multiple entries with the same precedence. 
+    /* OUTER - Allows multiple entries with the same precedence. 
     */
     «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
     «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«ENDIF»
     «FOR x:p.inner BEFORE '(' SEPARATOR '|' AFTER ')'»«compile(x)»«ENDFOR»*;«getRule()»
+  «ELSEIF p.ruletyp=='COMPOUND'»
+    /* COMPOUND - Allows other rules to be mixed in. 
+    */
+    «p.rule» returns «getParentExpression(p)» hidden(SL_COMMENT,WS):
+    «FOR x:p.prec BEFORE '(' SEPARATOR ')|\n(' AFTER ')'»«compile(x)»«ENDFOR»;«getRule()»
   «ELSEIF p.ruletyp=='CALLER'»
     «IF p.rule != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
   «ELSEIF p.ruletyp=='ANGLE'»
@@ -864,7 +1085,9 @@ def String getRule(){
 }
 
 def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
-  «IF p.ruletyp=='INNERPREFIX'»
+  «IF p.ruletyp=='INNERRULE'»
+      «p.customrule»
+  «ELSEIF p.ruletyp=='INNERPREFIX'»
       =>({Lastrule.leftOperand=current} feature=«
       IF p.prefix != null»«compile(p.prefix)»«ENDIF»)
       «IF p.par2 != null»«p.par2»«ENDIF»
@@ -878,6 +1101,12 @@ def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
      IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
     «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»
     «IF opRuleRequired(p.infix)»«storeRule(p.rule,p.infix)»«ENDIF»
+  «ELSEIF p.ruletyp=='INNERINFIXRIGHT'»
+     «IF p.mod != null»«setCallingRule(p.rule,p.feature1)»«ENDIF»
+     =>({«getCallingRule()»=current} feature=«
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.rule»«ENDIF»
+    «IF opRuleRequired(p.infix)»«storeRule(p.rule,p.infix)»«ENDIF»
   «ELSEIF p.ruletyp=='INNERANGLE'»
     ('<'«IF p.angle != null»«p.angle»+=ID (',' «p.angle»+=ID)* «ENDIF»'>')
   «ELSEIF p.ruletyp=='INNERBRACKET'»
@@ -886,6 +1115,39 @@ def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
     ('{'«IF p.braces != null»«p.angle»+=ID (',' «p.braces»+=ID)* «ENDIF»'}')
   «ELSEIF p.ruletyp=='INNERPARENTHESIS'»
     ('('«IF p.parenthesis != null»«p.angle»+=ID (',' «p.parenthesis»+=ID)* «ENDIF»')')
+  «ENDIF»
+'''
+
+/*
+ * sub precedence
+ */
+def CharSequence compile(com.euclideanspace.xgener.gen.SubPrecedence p) '''
+  «IF p.ruletyp=='SUBRULE'»
+      «p.customrule»
+  «ELSEIF p.ruletyp=='SUBPREFIX'»
+      // sub prefix
+  «ELSEIF p.ruletyp=='SUBSUFFIX'»
+      // sub sufix
+  «ELSEIF p.ruletyp=='SUBINFIX'»
+    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
+     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«p.rule»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
+    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)*
+    «IF opRuleRequired(p.infix)»«storeRule(p.rule,p.infix)»«ENDIF»
+  «ELSEIF p.ruletyp=='SUBINFIXRIGHT'»
+   «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
+     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
+     IF p.infix != null»«IF opRuleRequired(p.infix)»op«getParentExpression(p)»«ELSE»«compile(p.infix)»«ENDIF»«ENDIF»)
+   «IF p.par2 != null»«IF p.feature2 != null»«p.rule»«ELSE»rightOperand«ENDIF»=«getParentExpression(p)»«ENDIF»)?
+    «IF opRuleRequired(p.infix)»«storeRule(getParentExpression(p),p.infix)»«ENDIF»
+  «ELSEIF p.ruletyp=='SUBANGLE'»
+    // sub angle
+  «ELSEIF p.ruletyp=='SUBBRACKET'»
+    // sub bracket
+  «ELSEIF p.ruletyp=='SUBBRACES'»
+    // sub braces
+  «ELSEIF p.ruletyp=='SUBPARENTHESIS'»
+    // sub parenththesis
   «ENDIF»
 '''
 

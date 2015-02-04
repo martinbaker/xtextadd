@@ -6,6 +6,7 @@ import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.InnerPrecedence;
 import com.euclideanspace.xgener.gen.MultString;
 import com.euclideanspace.xgener.gen.Precedence;
+import com.euclideanspace.xgener.gen.SubPrecedence;
 
 import java.util.Collection;
 
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRuletyp <em>Ruletyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getRule <em>Rule</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getFeature1 <em>Feature1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getCustomrule <em>Customrule</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar1 <em>Par1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getSuffix <em>Suffix</em>}</li>
@@ -40,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getInner <em>Inner</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getPrec <em>Prec</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.PrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
@@ -110,6 +113,26 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * @ordered
    */
   protected String feature1 = FEATURE1_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCustomrule() <em>Customrule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCustomrule()
+   * @generated
+   * @ordered
+   */
+  protected static final String CUSTOMRULE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCustomrule() <em>Customrule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCustomrule()
+   * @generated
+   * @ordered
+   */
+  protected String customrule = CUSTOMRULE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' containment reference.
@@ -210,6 +233,16 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * @ordered
    */
   protected EList<InnerPrecedence> inner;
+
+  /**
+   * The cached value of the '{@link #getPrec() <em>Prec</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPrec()
+   * @generated
+   * @ordered
+   */
+  protected EList<SubPrecedence> prec;
 
   /**
    * The default value of the '{@link #getBracket() <em>Bracket</em>}' attribute.
@@ -379,6 +412,29 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
     feature1 = newFeature1;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__FEATURE1, oldFeature1, feature1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getCustomrule()
+  {
+    return customrule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCustomrule(String newCustomrule)
+  {
+    String oldCustomrule = customrule;
+    customrule = newCustomrule;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.PRECEDENCE__CUSTOMRULE, oldCustomrule, customrule));
   }
 
   /**
@@ -613,6 +669,20 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<SubPrecedence> getPrec()
+  {
+    if (prec == null)
+    {
+      prec = new EObjectContainmentEList<SubPrecedence>(SubPrecedence.class, this, GenPackage.PRECEDENCE__PREC);
+    }
+    return prec;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getBracket()
   {
     return bracket;
@@ -718,6 +788,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return basicSetInfix(null, msgs);
       case GenPackage.PRECEDENCE__INNER:
         return ((InternalEList<?>)getInner()).basicRemove(otherEnd, msgs);
+      case GenPackage.PRECEDENCE__PREC:
+        return ((InternalEList<?>)getPrec()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -738,6 +810,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getRule();
       case GenPackage.PRECEDENCE__FEATURE1:
         return getFeature1();
+      case GenPackage.PRECEDENCE__CUSTOMRULE:
+        return getCustomrule();
       case GenPackage.PRECEDENCE__PREFIX:
         return getPrefix();
       case GenPackage.PRECEDENCE__PAR1:
@@ -752,6 +826,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return getPar2();
       case GenPackage.PRECEDENCE__INNER:
         return getInner();
+      case GenPackage.PRECEDENCE__PREC:
+        return getPrec();
       case GenPackage.PRECEDENCE__BRACKET:
         return getBracket();
       case GenPackage.PRECEDENCE__BRACES:
@@ -784,6 +860,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__FEATURE1:
         setFeature1((String)newValue);
         return;
+      case GenPackage.PRECEDENCE__CUSTOMRULE:
+        setCustomrule((String)newValue);
+        return;
       case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)newValue);
         return;
@@ -805,6 +884,10 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__INNER:
         getInner().clear();
         getInner().addAll((Collection<? extends InnerPrecedence>)newValue);
+        return;
+      case GenPackage.PRECEDENCE__PREC:
+        getPrec().clear();
+        getPrec().addAll((Collection<? extends SubPrecedence>)newValue);
         return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket((String)newValue);
@@ -841,6 +924,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
       case GenPackage.PRECEDENCE__FEATURE1:
         setFeature1(FEATURE1_EDEFAULT);
         return;
+      case GenPackage.PRECEDENCE__CUSTOMRULE:
+        setCustomrule(CUSTOMRULE_EDEFAULT);
+        return;
       case GenPackage.PRECEDENCE__PREFIX:
         setPrefix((MultString)null);
         return;
@@ -861,6 +947,9 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return;
       case GenPackage.PRECEDENCE__INNER:
         getInner().clear();
+        return;
+      case GenPackage.PRECEDENCE__PREC:
+        getPrec().clear();
         return;
       case GenPackage.PRECEDENCE__BRACKET:
         setBracket(BRACKET_EDEFAULT);
@@ -894,6 +983,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return RULE_EDEFAULT == null ? rule != null : !RULE_EDEFAULT.equals(rule);
       case GenPackage.PRECEDENCE__FEATURE1:
         return FEATURE1_EDEFAULT == null ? feature1 != null : !FEATURE1_EDEFAULT.equals(feature1);
+      case GenPackage.PRECEDENCE__CUSTOMRULE:
+        return CUSTOMRULE_EDEFAULT == null ? customrule != null : !CUSTOMRULE_EDEFAULT.equals(customrule);
       case GenPackage.PRECEDENCE__PREFIX:
         return prefix != null;
       case GenPackage.PRECEDENCE__PAR1:
@@ -908,6 +999,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
         return PAR2_EDEFAULT == null ? par2 != null : !PAR2_EDEFAULT.equals(par2);
       case GenPackage.PRECEDENCE__INNER:
         return inner != null && !inner.isEmpty();
+      case GenPackage.PRECEDENCE__PREC:
+        return prec != null && !prec.isEmpty();
       case GenPackage.PRECEDENCE__BRACKET:
         return BRACKET_EDEFAULT == null ? bracket != null : !BRACKET_EDEFAULT.equals(bracket);
       case GenPackage.PRECEDENCE__BRACES:
@@ -937,6 +1030,8 @@ public class PrecedenceImpl extends MinimalEObjectImpl.Container implements Prec
     result.append(rule);
     result.append(", feature1: ");
     result.append(feature1);
+    result.append(", customrule: ");
+    result.append(customrule);
     result.append(", par1: ");
     result.append(par1);
     result.append(", feature2: ");

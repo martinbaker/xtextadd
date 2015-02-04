@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.euclideanspace.xgener.gen.Model#getProj <em>Proj</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getClas <em>Clas</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getProc <em>Proc</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Model#getPrim <em>Prim</em>}</li>
@@ -28,6 +29,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Model extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Proj</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.Project}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Proj</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Proj</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getModel_Proj()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Project> getProj();
+
   /**
    * Returns the value of the '<em><b>Clas</b></em>' containment reference list.
    * The list contents are of type {@link com.euclideanspace.xgener.gen.ClassType}.

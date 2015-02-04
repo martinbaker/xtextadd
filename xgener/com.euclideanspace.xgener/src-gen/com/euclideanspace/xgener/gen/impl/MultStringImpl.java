@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getMs <em>Ms</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#isOpt <em>Opt</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getMi <em>Mi</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getSynpred <em>Synpred</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.MultStringImpl#getCs <em>Cs</em>}</li>
@@ -59,6 +60,26 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
    * @ordered
    */
   protected String ms = MS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isOpt() <em>Opt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOpt()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean OPT_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isOpt() <em>Opt</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOpt()
+   * @generated
+   * @ordered
+   */
+  protected boolean opt = OPT_EDEFAULT;
 
   /**
    * The default value of the '{@link #getMi() <em>Mi</em>}' attribute.
@@ -159,6 +180,29 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isOpt()
+  {
+    return opt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOpt(boolean newOpt)
+  {
+    boolean oldOpt = opt;
+    opt = newOpt;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.MULT_STRING__OPT, oldOpt, opt));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getMi()
   {
     return mi;
@@ -242,6 +286,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         return getMs();
+      case GenPackage.MULT_STRING__OPT:
+        return isOpt();
       case GenPackage.MULT_STRING__MI:
         return getMi();
       case GenPackage.MULT_STRING__SYNPRED:
@@ -265,6 +311,9 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         setMs((String)newValue);
+        return;
+      case GenPackage.MULT_STRING__OPT:
+        setOpt((Boolean)newValue);
         return;
       case GenPackage.MULT_STRING__MI:
         setMi((String)newValue);
@@ -293,6 +342,9 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
       case GenPackage.MULT_STRING__MS:
         setMs(MS_EDEFAULT);
         return;
+      case GenPackage.MULT_STRING__OPT:
+        setOpt(OPT_EDEFAULT);
+        return;
       case GenPackage.MULT_STRING__MI:
         setMi(MI_EDEFAULT);
         return;
@@ -318,6 +370,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     {
       case GenPackage.MULT_STRING__MS:
         return MS_EDEFAULT == null ? ms != null : !MS_EDEFAULT.equals(ms);
+      case GenPackage.MULT_STRING__OPT:
+        return opt != OPT_EDEFAULT;
       case GenPackage.MULT_STRING__MI:
         return MI_EDEFAULT == null ? mi != null : !MI_EDEFAULT.equals(mi);
       case GenPackage.MULT_STRING__SYNPRED:
@@ -341,6 +395,8 @@ public class MultStringImpl extends MinimalEObjectImpl.Container implements Mult
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (ms: ");
     result.append(ms);
+    result.append(", opt: ");
+    result.append(opt);
     result.append(", mi: ");
     result.append(mi);
     result.append(", synpred: ");

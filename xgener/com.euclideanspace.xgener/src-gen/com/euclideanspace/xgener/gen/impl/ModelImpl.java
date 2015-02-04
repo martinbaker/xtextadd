@@ -9,6 +9,7 @@ import com.euclideanspace.xgener.gen.Literal;
 import com.euclideanspace.xgener.gen.Model;
 import com.euclideanspace.xgener.gen.Primary;
 import com.euclideanspace.xgener.gen.Procedure;
+import com.euclideanspace.xgener.gen.Project;
 
 import java.util.Collection;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getProj <em>Proj</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getClas <em>Clas</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getProc <em>Proc</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ModelImpl#getPrim <em>Prim</em>}</li>
@@ -43,6 +45,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
+  /**
+   * The cached value of the '{@link #getProj() <em>Proj</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProj()
+   * @generated
+   * @ordered
+   */
+  protected EList<Project> proj;
+
   /**
    * The cached value of the '{@link #getClas() <em>Clas</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -112,6 +124,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EClass eStaticClass()
   {
     return GenPackage.Literals.MODEL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Project> getProj()
+  {
+    if (proj == null)
+    {
+      proj = new EObjectContainmentEList<Project>(Project.class, this, GenPackage.MODEL__PROJ);
+    }
+    return proj;
   }
 
   /**
@@ -194,6 +220,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case GenPackage.MODEL__PROJ:
+        return ((InternalEList<?>)getProj()).basicRemove(otherEnd, msgs);
       case GenPackage.MODEL__CLAS:
         return ((InternalEList<?>)getClas()).basicRemove(otherEnd, msgs);
       case GenPackage.MODEL__PROC:
@@ -218,6 +246,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case GenPackage.MODEL__PROJ:
+        return getProj();
       case GenPackage.MODEL__CLAS:
         return getClas();
       case GenPackage.MODEL__PROC:
@@ -243,6 +273,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case GenPackage.MODEL__PROJ:
+        getProj().clear();
+        getProj().addAll((Collection<? extends Project>)newValue);
+        return;
       case GenPackage.MODEL__CLAS:
         getClas().clear();
         getClas().addAll((Collection<? extends ClassType>)newValue);
@@ -277,6 +311,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case GenPackage.MODEL__PROJ:
+        getProj().clear();
+        return;
       case GenPackage.MODEL__CLAS:
         getClas().clear();
         return;
@@ -306,6 +343,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case GenPackage.MODEL__PROJ:
+        return proj != null && !proj.isEmpty();
       case GenPackage.MODEL__CLAS:
         return clas != null && !clas.isEmpty();
       case GenPackage.MODEL__PROC:

@@ -65,10 +65,12 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
     switch (eClass.getClassifierID())
     {
       case GenPackage.MODEL: return createModel();
+      case GenPackage.PROJECT: return createProject();
       case GenPackage.CLASS_TYPE: return createClassType();
       case GenPackage.PROCEDURE: return createProcedure();
       case GenPackage.EXPRESSION: return createExpression();
       case GenPackage.PRECEDENCE: return createPrecedence();
+      case GenPackage.SUB_PRECEDENCE: return createSubPrecedence();
       case GenPackage.INNER_PRECEDENCE: return createInnerPrecedence();
       case GenPackage.MULT_STRING: return createMultString();
       case GenPackage.COMBO_STRING: return createComboString();
@@ -90,6 +92,17 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Project createProject()
+  {
+    ProjectImpl project = new ProjectImpl();
+    return project;
   }
 
   /**
@@ -134,6 +147,17 @@ public class GenFactoryImpl extends EFactoryImpl implements GenFactory
   {
     PrecedenceImpl precedence = new PrecedenceImpl();
     return precedence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubPrecedence createSubPrecedence()
+  {
+    SubPrecedenceImpl subPrecedence = new SubPrecedenceImpl();
+    return subPrecedence;
   }
 
   /**

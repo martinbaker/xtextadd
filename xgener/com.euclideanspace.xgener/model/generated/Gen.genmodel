@@ -8,11 +8,17 @@
   <genPackages prefix="Gen" basePackage="com.euclideanspace.xgener" disposableProviderFactory="true"
       fileExtensions="xgener" ecorePackage="Gen.ecore#/">
     <genClasses ecoreClass="Gen.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/proj"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/clas"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/proc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/prim"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/lit"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Model/exp"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/proj"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/nam"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//ClassType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/name"/>
@@ -35,6 +41,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/ruletyp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/rule"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/feature1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/customrule"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/prefix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/suffix"/>
@@ -42,13 +49,31 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/feature2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/par2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/inner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Precedence/prec"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/bracket"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/parenthesis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Precedence/angle"/>
     </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//SubPrecedence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/ruletyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/customrule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//SubPrecedence/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/feature1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/par2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//SubPrecedence/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/par1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//SubPrecedence/infix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/feature2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/rule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/bracket"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/braces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/parenthesis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//SubPrecedence/angle"/>
+    </genClasses>
     <genClasses ecoreClass="Gen.ecore#//InnerPrecedence">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/ruletyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/customrule"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//InnerPrecedence/prefix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/feature1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/par2"/>
@@ -64,6 +89,7 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//MultString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/opt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/mi"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/synpred"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//MultString/cs"/>

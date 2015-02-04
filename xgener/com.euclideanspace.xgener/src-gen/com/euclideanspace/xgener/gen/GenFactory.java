@@ -32,6 +32,15 @@ public interface GenFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Project</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Project</em>'.
+   * @generated
+   */
+  Project createProject();
+
+  /**
    * Returns a new object of class '<em>Class Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,6 +75,15 @@ public interface GenFactory extends EFactory
    * @generated
    */
   Precedence createPrecedence();
+
+  /**
+   * Returns a new object of class '<em>Sub Precedence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Precedence</em>'.
+   * @generated
+   */
+  SubPrecedence createSubPrecedence();
 
   /**
    * Returns a new object of class '<em>Inner Precedence</em>'.

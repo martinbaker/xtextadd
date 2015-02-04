@@ -6,34 +6,34 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Inner Precedence</b></em>'.
+ * A representation of the model object '<em><b>Sub Precedence</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getRuletyp <em>Ruletyp</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getCustomrule <em>Customrule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getPrefix <em>Prefix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getFeature1 <em>Feature1</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getPar2 <em>Par2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getSuffix <em>Suffix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getMod <em>Mod</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getRule <em>Rule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfix <em>Infix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getFeature2 <em>Feature2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBracket <em>Bracket</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBraces <em>Braces</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getParenthesis <em>Parenthesis</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.InnerPrecedence#getAngle <em>Angle</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getRuletyp <em>Ruletyp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getCustomrule <em>Customrule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getPrefix <em>Prefix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature1 <em>Feature1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar2 <em>Par2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getSuffix <em>Suffix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar1 <em>Par1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature2 <em>Feature2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getBracket <em>Bracket</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getBraces <em>Braces</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getParenthesis <em>Parenthesis</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.SubPrecedence#getAngle <em>Angle</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence()
+ * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence()
  * @model
  * @generated
  */
-public interface InnerPrecedence extends EObject
+public interface SubPrecedence extends EObject
 {
   /**
    * Returns the value of the '<em><b>Ruletyp</b></em>' attribute.
@@ -45,14 +45,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ruletyp</em>' attribute.
    * @see #setRuletyp(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Ruletyp()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Ruletyp()
    * @model
    * @generated
    */
   String getRuletyp();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getRuletyp <em>Ruletyp</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getRuletyp <em>Ruletyp</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Ruletyp</em>' attribute.
@@ -71,14 +71,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Customrule</em>' attribute.
    * @see #setCustomrule(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Customrule()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Customrule()
    * @model
    * @generated
    */
   String getCustomrule();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getCustomrule <em>Customrule</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getCustomrule <em>Customrule</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Customrule</em>' attribute.
@@ -97,14 +97,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Prefix</em>' containment reference.
    * @see #setPrefix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Prefix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Prefix()
    * @model containment="true"
    * @generated
    */
   MultString getPrefix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getPrefix <em>Prefix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPrefix <em>Prefix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Prefix</em>' containment reference.
@@ -123,14 +123,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Feature1</em>' attribute.
    * @see #setFeature1(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Feature1()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Feature1()
    * @model
    * @generated
    */
   String getFeature1();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getFeature1 <em>Feature1</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature1 <em>Feature1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Feature1</em>' attribute.
@@ -149,14 +149,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Par2</em>' attribute.
    * @see #setPar2(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Par2()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Par2()
    * @model
    * @generated
    */
   String getPar2();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getPar2 <em>Par2</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar2 <em>Par2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Par2</em>' attribute.
@@ -175,14 +175,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Suffix</em>' containment reference.
    * @see #setSuffix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Suffix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Suffix()
    * @model containment="true"
    * @generated
    */
   MultString getSuffix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getSuffix <em>Suffix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getSuffix <em>Suffix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Suffix</em>' containment reference.
@@ -192,56 +192,30 @@ public interface InnerPrecedence extends EObject
   void setSuffix(MultString value);
 
   /**
-   * Returns the value of the '<em><b>Mod</b></em>' attribute.
+   * Returns the value of the '<em><b>Par1</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Mod</em>' attribute isn't clear,
+   * If the meaning of the '<em>Par1</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Mod</em>' attribute.
-   * @see #setMod(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Mod()
+   * @return the value of the '<em>Par1</em>' attribute.
+   * @see #setPar1(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Par1()
    * @model
    * @generated
    */
-  String getMod();
+  String getPar1();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getMod <em>Mod</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getPar1 <em>Par1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Mod</em>' attribute.
-   * @see #getMod()
+   * @param value the new value of the '<em>Par1</em>' attribute.
+   * @see #getPar1()
    * @generated
    */
-  void setMod(String value);
-
-  /**
-   * Returns the value of the '<em><b>Rule</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Rule</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Rule</em>' attribute.
-   * @see #setRule(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Rule()
-   * @model
-   * @generated
-   */
-  String getRule();
-
-  /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getRule <em>Rule</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rule</em>' attribute.
-   * @see #getRule()
-   * @generated
-   */
-  void setRule(String value);
+  void setPar1(String value);
 
   /**
    * Returns the value of the '<em><b>Infix</b></em>' containment reference.
@@ -253,14 +227,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Infix</em>' containment reference.
    * @see #setInfix(MultString)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Infix()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Infix()
    * @model containment="true"
    * @generated
    */
   MultString getInfix();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getInfix <em>Infix</em>}' containment reference.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getInfix <em>Infix</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Infix</em>' containment reference.
@@ -279,14 +253,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Feature2</em>' attribute.
    * @see #setFeature2(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Feature2()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Feature2()
    * @model
    * @generated
    */
   String getFeature2();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getFeature2 <em>Feature2</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getFeature2 <em>Feature2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Feature2</em>' attribute.
@@ -294,6 +268,32 @@ public interface InnerPrecedence extends EObject
    * @generated
    */
   void setFeature2(String value);
+
+  /**
+   * Returns the value of the '<em><b>Rule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Rule</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Rule</em>' attribute.
+   * @see #setRule(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Rule()
+   * @model
+   * @generated
+   */
+  String getRule();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getRule <em>Rule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Rule</em>' attribute.
+   * @see #getRule()
+   * @generated
+   */
+  void setRule(String value);
 
   /**
    * Returns the value of the '<em><b>Bracket</b></em>' attribute.
@@ -305,14 +305,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Bracket</em>' attribute.
    * @see #setBracket(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Bracket()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Bracket()
    * @model
    * @generated
    */
   String getBracket();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBracket <em>Bracket</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getBracket <em>Bracket</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Bracket</em>' attribute.
@@ -331,14 +331,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Braces</em>' attribute.
    * @see #setBraces(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Braces()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Braces()
    * @model
    * @generated
    */
   String getBraces();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getBraces <em>Braces</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getBraces <em>Braces</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Braces</em>' attribute.
@@ -357,14 +357,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parenthesis</em>' attribute.
    * @see #setParenthesis(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Parenthesis()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Parenthesis()
    * @model
    * @generated
    */
   String getParenthesis();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getParenthesis <em>Parenthesis</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getParenthesis <em>Parenthesis</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Parenthesis</em>' attribute.
@@ -383,14 +383,14 @@ public interface InnerPrecedence extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Angle</em>' attribute.
    * @see #setAngle(String)
-   * @see com.euclideanspace.xgener.gen.GenPackage#getInnerPrecedence_Angle()
+   * @see com.euclideanspace.xgener.gen.GenPackage#getSubPrecedence_Angle()
    * @model
    * @generated
    */
   String getAngle();
 
   /**
-   * Sets the value of the '{@link com.euclideanspace.xgener.gen.InnerPrecedence#getAngle <em>Angle</em>}' attribute.
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.SubPrecedence#getAngle <em>Angle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Angle</em>' attribute.
@@ -399,4 +399,4 @@ public interface InnerPrecedence extends EObject
    */
   void setAngle(String value);
 
-} // InnerPrecedence
+} // SubPrecedence

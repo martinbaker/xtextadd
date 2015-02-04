@@ -80,6 +80,11 @@ public class GenAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseProject(Project object)
+      {
+        return createProjectAdapter();
+      }
+      @Override
       public Adapter caseClassType(ClassType object)
       {
         return createClassTypeAdapter();
@@ -98,6 +103,11 @@ public class GenAdapterFactory extends AdapterFactoryImpl
       public Adapter casePrecedence(Precedence object)
       {
         return createPrecedenceAdapter();
+      }
+      @Override
+      public Adapter caseSubPrecedence(SubPrecedence object)
+      {
+        return createSubPrecedenceAdapter();
       }
       @Override
       public Adapter caseInnerPrecedence(InnerPrecedence object)
@@ -172,6 +182,21 @@ public class GenAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.Project <em>Project</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.Project
+   * @generated
+   */
+  public Adapter createProjectAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.ClassType <em>Class Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -227,6 +252,21 @@ public class GenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPrecedenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.euclideanspace.xgener.gen.SubPrecedence <em>Sub Precedence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.euclideanspace.xgener.gen.SubPrecedence
+   * @generated
+   */
+  public Adapter createSubPrecedenceAdapter()
   {
     return null;
   }

@@ -3,8 +3,8 @@
 package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
-import com.euclideanspace.xgener.gen.InnerPrecedence;
 import com.euclideanspace.xgener.gen.MultString;
+import com.euclideanspace.xgener.gen.SubPrecedence;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,31 +17,31 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Inner Precedence</b></em>'.
+ * An implementation of the model object '<em><b>Sub Precedence</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getRuletyp <em>Ruletyp</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getCustomrule <em>Customrule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getPrefix <em>Prefix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getFeature1 <em>Feature1</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getPar2 <em>Par2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getSuffix <em>Suffix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getMod <em>Mod</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getRule <em>Rule</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getInfix <em>Infix</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getFeature2 <em>Feature2</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getBracket <em>Bracket</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getBraces <em>Braces</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
- *   <li>{@link com.euclideanspace.xgener.gen.impl.InnerPrecedenceImpl#getAngle <em>Angle</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getRuletyp <em>Ruletyp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getCustomrule <em>Customrule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getPrefix <em>Prefix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getFeature1 <em>Feature1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getPar2 <em>Par2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getSuffix <em>Suffix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getPar1 <em>Par1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getInfix <em>Infix</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getFeature2 <em>Feature2</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getRule <em>Rule</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getBracket <em>Bracket</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getBraces <em>Braces</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getParenthesis <em>Parenthesis</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.SubPrecedenceImpl#getAngle <em>Angle</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements InnerPrecedence
+public class SubPrecedenceImpl extends MinimalEObjectImpl.Container implements SubPrecedence
 {
   /**
    * The default value of the '{@link #getRuletyp() <em>Ruletyp</em>}' attribute.
@@ -144,44 +144,24 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   protected MultString suffix;
 
   /**
-   * The default value of the '{@link #getMod() <em>Mod</em>}' attribute.
+   * The default value of the '{@link #getPar1() <em>Par1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMod()
+   * @see #getPar1()
    * @generated
    * @ordered
    */
-  protected static final String MOD_EDEFAULT = null;
+  protected static final String PAR1_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getMod() <em>Mod</em>}' attribute.
+   * The cached value of the '{@link #getPar1() <em>Par1</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMod()
+   * @see #getPar1()
    * @generated
    * @ordered
    */
-  protected String mod = MOD_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getRule() <em>Rule</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRule()
-   * @generated
-   * @ordered
-   */
-  protected static final String RULE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getRule() <em>Rule</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRule()
-   * @generated
-   * @ordered
-   */
-  protected String rule = RULE_EDEFAULT;
+  protected String par1 = PAR1_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getInfix() <em>Infix</em>}' containment reference.
@@ -212,6 +192,26 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected String feature2 = FEATURE2_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRule() <em>Rule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRule()
+   * @generated
+   * @ordered
+   */
+  protected static final String RULE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRule() <em>Rule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRule()
+   * @generated
+   * @ordered
+   */
+  protected String rule = RULE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getBracket() <em>Bracket</em>}' attribute.
@@ -298,7 +298,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  protected InnerPrecedenceImpl()
+  protected SubPrecedenceImpl()
   {
     super();
   }
@@ -311,7 +311,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return GenPackage.Literals.INNER_PRECEDENCE;
+    return GenPackage.Literals.SUB_PRECEDENCE;
   }
 
   /**
@@ -334,7 +334,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldRuletyp = ruletyp;
     ruletyp = newRuletyp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__RULETYP, oldRuletyp, ruletyp));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__RULETYP, oldRuletyp, ruletyp));
   }
 
   /**
@@ -357,7 +357,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldCustomrule = customrule;
     customrule = newCustomrule;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__CUSTOMRULE, oldCustomrule, customrule));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__CUSTOMRULE, oldCustomrule, customrule));
   }
 
   /**
@@ -381,7 +381,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     prefix = newPrefix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__PREFIX, oldPrefix, newPrefix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__PREFIX, oldPrefix, newPrefix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -398,14 +398,14 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     {
       NotificationChain msgs = null;
       if (prefix != null)
-        msgs = ((InternalEObject)prefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__PREFIX, null, msgs);
+        msgs = ((InternalEObject)prefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__PREFIX, null, msgs);
       if (newPrefix != null)
-        msgs = ((InternalEObject)newPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__PREFIX, null, msgs);
+        msgs = ((InternalEObject)newPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__PREFIX, null, msgs);
       msgs = basicSetPrefix(newPrefix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__PREFIX, newPrefix, newPrefix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__PREFIX, newPrefix, newPrefix));
   }
 
   /**
@@ -428,7 +428,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldFeature1 = feature1;
     feature1 = newFeature1;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__FEATURE1, oldFeature1, feature1));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__FEATURE1, oldFeature1, feature1));
   }
 
   /**
@@ -451,7 +451,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldPar2 = par2;
     par2 = newPar2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__PAR2, oldPar2, par2));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__PAR2, oldPar2, par2));
   }
 
   /**
@@ -475,7 +475,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     suffix = newSuffix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__SUFFIX, oldSuffix, newSuffix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__SUFFIX, oldSuffix, newSuffix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -492,14 +492,14 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     {
       NotificationChain msgs = null;
       if (suffix != null)
-        msgs = ((InternalEObject)suffix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__SUFFIX, null, msgs);
+        msgs = ((InternalEObject)suffix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__SUFFIX, null, msgs);
       if (newSuffix != null)
-        msgs = ((InternalEObject)newSuffix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__SUFFIX, null, msgs);
+        msgs = ((InternalEObject)newSuffix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__SUFFIX, null, msgs);
       msgs = basicSetSuffix(newSuffix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__SUFFIX, newSuffix, newSuffix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__SUFFIX, newSuffix, newSuffix));
   }
 
   /**
@@ -507,9 +507,9 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getMod()
+  public String getPar1()
   {
-    return mod;
+    return par1;
   }
 
   /**
@@ -517,35 +517,12 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMod(String newMod)
+  public void setPar1(String newPar1)
   {
-    String oldMod = mod;
-    mod = newMod;
+    String oldPar1 = par1;
+    par1 = newPar1;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__MOD, oldMod, mod));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getRule()
-  {
-    return rule;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRule(String newRule)
-  {
-    String oldRule = rule;
-    rule = newRule;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__RULE, oldRule, rule));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__PAR1, oldPar1, par1));
   }
 
   /**
@@ -569,7 +546,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     infix = newInfix;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__INFIX, oldInfix, newInfix);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__INFIX, oldInfix, newInfix);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -586,14 +563,14 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     {
       NotificationChain msgs = null;
       if (infix != null)
-        msgs = ((InternalEObject)infix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__INFIX, null, msgs);
+        msgs = ((InternalEObject)infix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__INFIX, null, msgs);
       if (newInfix != null)
-        msgs = ((InternalEObject)newInfix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.INNER_PRECEDENCE__INFIX, null, msgs);
+        msgs = ((InternalEObject)newInfix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GenPackage.SUB_PRECEDENCE__INFIX, null, msgs);
       msgs = basicSetInfix(newInfix, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__INFIX, newInfix, newInfix));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__INFIX, newInfix, newInfix));
   }
 
   /**
@@ -616,7 +593,30 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldFeature2 = feature2;
     feature2 = newFeature2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__FEATURE2, oldFeature2, feature2));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__FEATURE2, oldFeature2, feature2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRule()
+  {
+    return rule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRule(String newRule)
+  {
+    String oldRule = rule;
+    rule = newRule;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__RULE, oldRule, rule));
   }
 
   /**
@@ -639,7 +639,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldBracket = bracket;
     bracket = newBracket;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__BRACKET, oldBracket, bracket));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__BRACKET, oldBracket, bracket));
   }
 
   /**
@@ -662,7 +662,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldBraces = braces;
     braces = newBraces;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__BRACES, oldBraces, braces));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__BRACES, oldBraces, braces));
   }
 
   /**
@@ -685,7 +685,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldParenthesis = parenthesis;
     parenthesis = newParenthesis;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__PARENTHESIS, oldParenthesis, parenthesis));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__PARENTHESIS, oldParenthesis, parenthesis));
   }
 
   /**
@@ -708,7 +708,7 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     String oldAngle = angle;
     angle = newAngle;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.INNER_PRECEDENCE__ANGLE, oldAngle, angle));
+      eNotify(new ENotificationImpl(this, Notification.SET, GenPackage.SUB_PRECEDENCE__ANGLE, oldAngle, angle));
   }
 
   /**
@@ -721,11 +721,11 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case GenPackage.INNER_PRECEDENCE__PREFIX:
+      case GenPackage.SUB_PRECEDENCE__PREFIX:
         return basicSetPrefix(null, msgs);
-      case GenPackage.INNER_PRECEDENCE__SUFFIX:
+      case GenPackage.SUB_PRECEDENCE__SUFFIX:
         return basicSetSuffix(null, msgs);
-      case GenPackage.INNER_PRECEDENCE__INFIX:
+      case GenPackage.SUB_PRECEDENCE__INFIX:
         return basicSetInfix(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -741,33 +741,33 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case GenPackage.INNER_PRECEDENCE__RULETYP:
+      case GenPackage.SUB_PRECEDENCE__RULETYP:
         return getRuletyp();
-      case GenPackage.INNER_PRECEDENCE__CUSTOMRULE:
+      case GenPackage.SUB_PRECEDENCE__CUSTOMRULE:
         return getCustomrule();
-      case GenPackage.INNER_PRECEDENCE__PREFIX:
+      case GenPackage.SUB_PRECEDENCE__PREFIX:
         return getPrefix();
-      case GenPackage.INNER_PRECEDENCE__FEATURE1:
+      case GenPackage.SUB_PRECEDENCE__FEATURE1:
         return getFeature1();
-      case GenPackage.INNER_PRECEDENCE__PAR2:
+      case GenPackage.SUB_PRECEDENCE__PAR2:
         return getPar2();
-      case GenPackage.INNER_PRECEDENCE__SUFFIX:
+      case GenPackage.SUB_PRECEDENCE__SUFFIX:
         return getSuffix();
-      case GenPackage.INNER_PRECEDENCE__MOD:
-        return getMod();
-      case GenPackage.INNER_PRECEDENCE__RULE:
-        return getRule();
-      case GenPackage.INNER_PRECEDENCE__INFIX:
+      case GenPackage.SUB_PRECEDENCE__PAR1:
+        return getPar1();
+      case GenPackage.SUB_PRECEDENCE__INFIX:
         return getInfix();
-      case GenPackage.INNER_PRECEDENCE__FEATURE2:
+      case GenPackage.SUB_PRECEDENCE__FEATURE2:
         return getFeature2();
-      case GenPackage.INNER_PRECEDENCE__BRACKET:
+      case GenPackage.SUB_PRECEDENCE__RULE:
+        return getRule();
+      case GenPackage.SUB_PRECEDENCE__BRACKET:
         return getBracket();
-      case GenPackage.INNER_PRECEDENCE__BRACES:
+      case GenPackage.SUB_PRECEDENCE__BRACES:
         return getBraces();
-      case GenPackage.INNER_PRECEDENCE__PARENTHESIS:
+      case GenPackage.SUB_PRECEDENCE__PARENTHESIS:
         return getParenthesis();
-      case GenPackage.INNER_PRECEDENCE__ANGLE:
+      case GenPackage.SUB_PRECEDENCE__ANGLE:
         return getAngle();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -783,46 +783,46 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case GenPackage.INNER_PRECEDENCE__RULETYP:
+      case GenPackage.SUB_PRECEDENCE__RULETYP:
         setRuletyp((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__CUSTOMRULE:
+      case GenPackage.SUB_PRECEDENCE__CUSTOMRULE:
         setCustomrule((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__PREFIX:
+      case GenPackage.SUB_PRECEDENCE__PREFIX:
         setPrefix((MultString)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__FEATURE1:
+      case GenPackage.SUB_PRECEDENCE__FEATURE1:
         setFeature1((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__PAR2:
+      case GenPackage.SUB_PRECEDENCE__PAR2:
         setPar2((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__SUFFIX:
+      case GenPackage.SUB_PRECEDENCE__SUFFIX:
         setSuffix((MultString)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__MOD:
-        setMod((String)newValue);
+      case GenPackage.SUB_PRECEDENCE__PAR1:
+        setPar1((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__RULE:
-        setRule((String)newValue);
-        return;
-      case GenPackage.INNER_PRECEDENCE__INFIX:
+      case GenPackage.SUB_PRECEDENCE__INFIX:
         setInfix((MultString)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__FEATURE2:
+      case GenPackage.SUB_PRECEDENCE__FEATURE2:
         setFeature2((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__BRACKET:
+      case GenPackage.SUB_PRECEDENCE__RULE:
+        setRule((String)newValue);
+        return;
+      case GenPackage.SUB_PRECEDENCE__BRACKET:
         setBracket((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__BRACES:
+      case GenPackage.SUB_PRECEDENCE__BRACES:
         setBraces((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__PARENTHESIS:
+      case GenPackage.SUB_PRECEDENCE__PARENTHESIS:
         setParenthesis((String)newValue);
         return;
-      case GenPackage.INNER_PRECEDENCE__ANGLE:
+      case GenPackage.SUB_PRECEDENCE__ANGLE:
         setAngle((String)newValue);
         return;
     }
@@ -839,46 +839,46 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case GenPackage.INNER_PRECEDENCE__RULETYP:
+      case GenPackage.SUB_PRECEDENCE__RULETYP:
         setRuletyp(RULETYP_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__CUSTOMRULE:
+      case GenPackage.SUB_PRECEDENCE__CUSTOMRULE:
         setCustomrule(CUSTOMRULE_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__PREFIX:
+      case GenPackage.SUB_PRECEDENCE__PREFIX:
         setPrefix((MultString)null);
         return;
-      case GenPackage.INNER_PRECEDENCE__FEATURE1:
+      case GenPackage.SUB_PRECEDENCE__FEATURE1:
         setFeature1(FEATURE1_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__PAR2:
+      case GenPackage.SUB_PRECEDENCE__PAR2:
         setPar2(PAR2_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__SUFFIX:
+      case GenPackage.SUB_PRECEDENCE__SUFFIX:
         setSuffix((MultString)null);
         return;
-      case GenPackage.INNER_PRECEDENCE__MOD:
-        setMod(MOD_EDEFAULT);
+      case GenPackage.SUB_PRECEDENCE__PAR1:
+        setPar1(PAR1_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__RULE:
-        setRule(RULE_EDEFAULT);
-        return;
-      case GenPackage.INNER_PRECEDENCE__INFIX:
+      case GenPackage.SUB_PRECEDENCE__INFIX:
         setInfix((MultString)null);
         return;
-      case GenPackage.INNER_PRECEDENCE__FEATURE2:
+      case GenPackage.SUB_PRECEDENCE__FEATURE2:
         setFeature2(FEATURE2_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__BRACKET:
+      case GenPackage.SUB_PRECEDENCE__RULE:
+        setRule(RULE_EDEFAULT);
+        return;
+      case GenPackage.SUB_PRECEDENCE__BRACKET:
         setBracket(BRACKET_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__BRACES:
+      case GenPackage.SUB_PRECEDENCE__BRACES:
         setBraces(BRACES_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__PARENTHESIS:
+      case GenPackage.SUB_PRECEDENCE__PARENTHESIS:
         setParenthesis(PARENTHESIS_EDEFAULT);
         return;
-      case GenPackage.INNER_PRECEDENCE__ANGLE:
+      case GenPackage.SUB_PRECEDENCE__ANGLE:
         setAngle(ANGLE_EDEFAULT);
         return;
     }
@@ -895,33 +895,33 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case GenPackage.INNER_PRECEDENCE__RULETYP:
+      case GenPackage.SUB_PRECEDENCE__RULETYP:
         return RULETYP_EDEFAULT == null ? ruletyp != null : !RULETYP_EDEFAULT.equals(ruletyp);
-      case GenPackage.INNER_PRECEDENCE__CUSTOMRULE:
+      case GenPackage.SUB_PRECEDENCE__CUSTOMRULE:
         return CUSTOMRULE_EDEFAULT == null ? customrule != null : !CUSTOMRULE_EDEFAULT.equals(customrule);
-      case GenPackage.INNER_PRECEDENCE__PREFIX:
+      case GenPackage.SUB_PRECEDENCE__PREFIX:
         return prefix != null;
-      case GenPackage.INNER_PRECEDENCE__FEATURE1:
+      case GenPackage.SUB_PRECEDENCE__FEATURE1:
         return FEATURE1_EDEFAULT == null ? feature1 != null : !FEATURE1_EDEFAULT.equals(feature1);
-      case GenPackage.INNER_PRECEDENCE__PAR2:
+      case GenPackage.SUB_PRECEDENCE__PAR2:
         return PAR2_EDEFAULT == null ? par2 != null : !PAR2_EDEFAULT.equals(par2);
-      case GenPackage.INNER_PRECEDENCE__SUFFIX:
+      case GenPackage.SUB_PRECEDENCE__SUFFIX:
         return suffix != null;
-      case GenPackage.INNER_PRECEDENCE__MOD:
-        return MOD_EDEFAULT == null ? mod != null : !MOD_EDEFAULT.equals(mod);
-      case GenPackage.INNER_PRECEDENCE__RULE:
-        return RULE_EDEFAULT == null ? rule != null : !RULE_EDEFAULT.equals(rule);
-      case GenPackage.INNER_PRECEDENCE__INFIX:
+      case GenPackage.SUB_PRECEDENCE__PAR1:
+        return PAR1_EDEFAULT == null ? par1 != null : !PAR1_EDEFAULT.equals(par1);
+      case GenPackage.SUB_PRECEDENCE__INFIX:
         return infix != null;
-      case GenPackage.INNER_PRECEDENCE__FEATURE2:
+      case GenPackage.SUB_PRECEDENCE__FEATURE2:
         return FEATURE2_EDEFAULT == null ? feature2 != null : !FEATURE2_EDEFAULT.equals(feature2);
-      case GenPackage.INNER_PRECEDENCE__BRACKET:
+      case GenPackage.SUB_PRECEDENCE__RULE:
+        return RULE_EDEFAULT == null ? rule != null : !RULE_EDEFAULT.equals(rule);
+      case GenPackage.SUB_PRECEDENCE__BRACKET:
         return BRACKET_EDEFAULT == null ? bracket != null : !BRACKET_EDEFAULT.equals(bracket);
-      case GenPackage.INNER_PRECEDENCE__BRACES:
+      case GenPackage.SUB_PRECEDENCE__BRACES:
         return BRACES_EDEFAULT == null ? braces != null : !BRACES_EDEFAULT.equals(braces);
-      case GenPackage.INNER_PRECEDENCE__PARENTHESIS:
+      case GenPackage.SUB_PRECEDENCE__PARENTHESIS:
         return PARENTHESIS_EDEFAULT == null ? parenthesis != null : !PARENTHESIS_EDEFAULT.equals(parenthesis);
-      case GenPackage.INNER_PRECEDENCE__ANGLE:
+      case GenPackage.SUB_PRECEDENCE__ANGLE:
         return ANGLE_EDEFAULT == null ? angle != null : !ANGLE_EDEFAULT.equals(angle);
     }
     return super.eIsSet(featureID);
@@ -946,12 +946,12 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     result.append(feature1);
     result.append(", par2: ");
     result.append(par2);
-    result.append(", mod: ");
-    result.append(mod);
-    result.append(", rule: ");
-    result.append(rule);
+    result.append(", par1: ");
+    result.append(par1);
     result.append(", feature2: ");
     result.append(feature2);
+    result.append(", rule: ");
+    result.append(rule);
     result.append(", bracket: ");
     result.append(bracket);
     result.append(", braces: ");
@@ -964,4 +964,4 @@ public class InnerPrecedenceImpl extends MinimalEObjectImpl.Container implements
     return result.toString();
   }
 
-} //InnerPrecedenceImpl
+} //SubPrecedenceImpl

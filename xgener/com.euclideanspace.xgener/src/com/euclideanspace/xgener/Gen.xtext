@@ -3,8 +3,15 @@ grammar com.euclideanspace.xgener.Gen with org.eclipse.xtext.common.Terminals
 generate gen "http://www.euclideanspace.com/xgener/Gen"
 
 Model:
-	(clas+=ClassType |proc+=Procedure |prim+=Primary |lit+=Literal |exp+=Expression)*;
+	(proj+=Project|clas+=ClassType |proc+=Procedure |prim+=Primary |lit+=Literal |exp+=Expression)*;
 	
+Project:
+	'PROJECT' name=ID
+	( ('PROJECTNAME' proj += STRING)
+    | ('NAME' nam += STRING)
+    )*
+;
+
 ClassType:
 	'CLASS' name=ID
     ( noclass+='NOCLASS' 
@@ -29,11 +36,13 @@ Expression:
  */
 Precedence:
 	(ruletyp='CALLER' rule=ID ('.' feature1=ID)?)
+	| (ruletyp='RULE' rule=ID customrule=STRING)
 	| (ruletyp='PREFIX' rule=ID prefix=MultString (feature1=ID '=')? par1=ID)
     | (ruletyp='SUFFIX' rule=ID (feature1=ID '=')? par1=ID suffix=MultString)
     | (ruletyp='INFIX' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='INFIXRIGHT' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='OUTER' rule=ID (feature1=ID '=')? par1=ID inner+=InnerPrecedence+)
+    | (ruletyp='COMPOUND' rule=ID '(' prec+=SubPrecedence+ ')')
     | (ruletyp='BRACKET' rule=ID bracket=ID)
     | (ruletyp='BRACES' rule=ID braces=ID)
     | (ruletyp='PARENTHESIS' rule=ID parenthesis=ID)
@@ -41,8 +50,21 @@ Precedence:
     | (ruletyp='MEMBERFEATURE' rule=ID (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
 ;
 
+SubPrecedence:
+	 (ruletyp='SUBRULE' customrule=STRING)
+	| (ruletyp='SUBPREFIX' prefix=MultString (feature1=ID '=')? par2=ID)
+    | (ruletyp='SUBSUFFIX' suffix=MultString)
+    | (ruletyp='SUBINFIX' (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='SUBINFIXRIGHT' (feature1=ID '=')? par1=ID infix=MultString (feature2=ID '=')? par2=ID)
+    | (ruletyp='SUBBRACKET' rule=ID bracket=ID)
+    | (ruletyp='SUBBRACES' rule=ID braces=ID)
+    | (ruletyp='SUBPARENTHESIS' rule=ID parenthesis=ID)
+    | (ruletyp='SUBANGLE' rule=ID angle=ID)
+;
+
 InnerPrecedence:
-	 (ruletyp='INNERPREFIX' prefix=MultString (feature1=ID '=')? par2=ID)
+	 (ruletyp='INNERRULE' customrule=STRING)
+	| (ruletyp='INNERPREFIX' prefix=MultString (feature1=ID '=')? par2=ID)
     | (ruletyp='INNERSUFFIX' suffix=MultString)
     | (ruletyp='INNERINFIX' (mod='CALLER' rule=ID ('.' feature1=ID)?)? infix=MultString (feature2=ID '=')? par2=ID)
     | (ruletyp='INNERINFIXRIGHT' (mod='CALLER' rule=ID ('.' feature1=ID)?)? infix=MultString (feature2=ID '=')? par2=ID)
@@ -54,7 +76,7 @@ InnerPrecedence:
 
 //MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 
-MultString: {MultString} (ms=STRING | mi=ID | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
+MultString: {MultString} (ms=STRING opt?='?'?| mi=ID | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
 
 ComboString: {ComboString} (inner+=MultString*);
 

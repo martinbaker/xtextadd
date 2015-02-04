@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRuletyp <em>Ruletyp</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getRule <em>Rule</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getFeature1 <em>Feature1</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getCustomrule <em>Customrule</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar1 <em>Par1</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getSuffix <em>Suffix</em>}</li>
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getFeature2 <em>Feature2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPar2 <em>Par2</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getInner <em>Inner</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getPrec <em>Prec</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBracket <em>Bracket</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getBraces <em>Braces</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Precedence#getParenthesis <em>Parenthesis</em>}</li>
@@ -114,6 +116,32 @@ public interface Precedence extends EObject
    * @generated
    */
   void setFeature1(String value);
+
+  /**
+   * Returns the value of the '<em><b>Customrule</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Customrule</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Customrule</em>' attribute.
+   * @see #setCustomrule(String)
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Customrule()
+   * @model
+   * @generated
+   */
+  String getCustomrule();
+
+  /**
+   * Sets the value of the '{@link com.euclideanspace.xgener.gen.Precedence#getCustomrule <em>Customrule</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Customrule</em>' attribute.
+   * @see #getCustomrule()
+   * @generated
+   */
+  void setCustomrule(String value);
 
   /**
    * Returns the value of the '<em><b>Prefix</b></em>' containment reference.
@@ -286,6 +314,22 @@ public interface Precedence extends EObject
    * @generated
    */
   EList<InnerPrecedence> getInner();
+
+  /**
+   * Returns the value of the '<em><b>Prec</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.SubPrecedence}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Prec</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Prec</em>' containment reference list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getPrecedence_Prec()
+   * @model containment="true"
+   * @generated
+   */
+  EList<SubPrecedence> getPrec();
 
   /**
    * Returns the value of the '<em><b>Bracket</b></em>' attribute.
