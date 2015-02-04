@@ -16,6 +16,8 @@ import com.euclideanspace.xgener.gen.ComboString
 import org.eclipse.emf.common.util.URI
 import com.euclideanspace.xgener.gen.Project
 import java.util.ArrayList
+import com.euclideanspace.xgener.gen.ClassType
+import com.euclideanspace.xgener.gen.Procedure
 
 /**
  * Generates code from your model files on save.
@@ -41,8 +43,22 @@ class GenGenerator implements IGenerator {
     	return addHold;
     }*/
     
+    /**
+     * list of classes to include in labelProvider
+     */
+    val ArrayList<String> includes = new ArrayList<String>();
+
+    def void addIncludes(String s) {
+    	if (!includes.contains(s)){
+    		includes.add(s);
+    	}
+    }
+    
     var String callingRule =null;
 
+    /**
+     * keep list of rules in labelProvider so we can avoid duplicates
+     */
     val ArrayList<String> labelRules = new ArrayList<String>();
     var String labelRule = null;
     
@@ -130,8 +146,11 @@ class GenGenerator implements IGenerator {
     }
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+		// generate list of includes
+		compileIncludes(resource.contents.head as Model);
+		// generate .xtext file
 		fsa.generateFile(resource.className+".xtext", compile(resource.contents.head as Model))
-//		var URI labelResource = resource.getURI().trimSegments(1);
+		// generate LabelProvider file
 		fsa.generateFile("GenLabelProvider.xtend", compileLabel(resource.contents.head as Model))
 	}
 
@@ -139,6 +158,100 @@ class GenGenerator implements IGenerator {
 		var name = res.URI.lastSegment
 		return name.substring(0, name.indexOf('.'))
 	}
+
+/**
+ * gather list of classes that need to be included in labelProvider
+ */
+def void compileIncludes(com.euclideanspace.xgener.gen.Model model) {
+  for (Project x:model.proj) compileIncludes(x);
+  for (ClassType x:model.clas) compileIncludes(x);
+  for (Procedure x:model.proc) compileIncludes(x);
+  for (Expression x:model.exp) compileIncludes(x);
+  for (Primary x:model.prim) compileIncludes(x);
+  for (Literal x:model.lit) compileIncludes(x);
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Project c) {
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.ClassType c) {
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Procedure p) {
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Expression e) {
+  for(Precedence x:e.prec) {
+    if (x.rule != null) compileIncludes(x);
+  }
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Precedence p) {
+  if (p.ruletyp=='PREFIX') {
+  } else if (p.ruletyp=='SUFFIX') {
+  } else if ( p.ruletyp=='INFIX') {
+  } else if ( p.ruletyp=='INFIXRIGHT') {
+  } else if ( p.ruletyp=='OUTER') {
+  } else if ( p.ruletyp=='COMPOUND') {
+  } else if ( p.ruletyp=='CALLER') {
+  	addIncludes(p.rule);
+  } else if ( p.ruletyp=='ANGLE') {
+  } else if ( p.ruletyp=='BRACKET') {
+  } else if ( p.ruletyp=='BRACES') {
+  } else if ( p.ruletyp=='PARENTHESIS') {
+  } else if (p.ruletyp=='MEMBERFEATURE') {
+  }
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Primary p) {
+  for(com.euclideanspace.xgener.gen.PrimaryInner x:p.inner) {
+    compileIncludes(x);
+  }
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.PrimaryInner pi) {
+if(pi.primarytyp=='CONSTRUCTOR') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='BLOCK') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='SWITCH') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='SYNCHRONIZED') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='FEATURECALL') {
+  addIncludes("XFeatureCall");
+} else if (pi.primarytyp=='LITERALEXPRESSION') {
+} else if (pi.primarytyp=='IFEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='FOREXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='BASICFORLOOPEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='WHILEEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='DOWHILEEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='THROWEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='RETURNEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='TRYCATCHFINALYEXPRESSION') {
+  addIncludes(pi.construct);
+} else if (pi.primarytyp=='PARENTHESIZEDEXPRESSION') {
+  addIncludes(pi.construct);
+}
+}
+
+
+def void compileIncludes(com.euclideanspace.xgener.gen.Literal p) {
+  for(com.euclideanspace.xgener.gen.LiteralInner x:p.inner) {
+    compileIncludes(x);
+  }
+}
+
+def void compileIncludes(com.euclideanspace.xgener.gen.LiteralInner p) {
+	addIncludes(p.construct);
+}
 
 	def CharSequence compileLabel(com.euclideanspace.xgener.gen.Model model) '''
 package com.euclideanspace.xgenerdemo.ui.labeling;
@@ -149,38 +262,16 @@ import com.euclideanspace.xgenerdemo.demo.Model
 import com.euclideanspace.xgenerdemo.demo.GenerMember
 import com.euclideanspace.xgenerdemo.demo.GenerParameter
 import com.euclideanspace.xgenerdemo.demo.XExpression
-import com.euclideanspace.xgenerdemo.demo.XBinaryOperation
-import com.euclideanspace.xgenerdemo.demo.XCollectionLiteral
 import com.euclideanspace.xgenerdemo.demo.XMemberFeatureCall
-import com.euclideanspace.xgenerdemo.demo.XClosure
-import com.euclideanspace.xgenerdemo.demo.XBooleanLiteral
-import com.euclideanspace.xgenerdemo.demo.XNumberLiteral
-import com.euclideanspace.xgenerdemo.demo.XNullLiteral
-import com.euclideanspace.xgenerdemo.demo.XStringLiteral
-import com.euclideanspace.xgenerdemo.demo.XTypeLiteral
-import com.euclideanspace.xgenerdemo.demo.XConstructorCall
-import com.euclideanspace.xgenerdemo.demo.XBlockExpression
-import com.euclideanspace.xgenerdemo.demo.XSwitchExpression
-import com.euclideanspace.xgenerdemo.demo.XSynchronizedExpression
-import com.euclideanspace.xgenerdemo.demo.XFeatureCall
-import com.euclideanspace.xgenerdemo.demo.XIfExpression
-import com.euclideanspace.xgenerdemo.demo.XForLoopExpression
-import com.euclideanspace.xgenerdemo.demo.XBasicForLoopExpression
-import com.euclideanspace.xgenerdemo.demo.XWhileExpression
-import com.euclideanspace.xgenerdemo.demo.XDoWhileExpression
-import com.euclideanspace.xgenerdemo.demo.XThrowExpression
-import com.euclideanspace.xgenerdemo.demo.XReturnExpression
-import com.euclideanspace.xgenerdemo.demo.XTryCatchFinallyExpression
-import com.euclideanspace.xgenerdemo.demo.XParenthesizedExpression
 import com.euclideanspace.xgenerdemo.demo.XAssignment
 import com.euclideanspace.xgenerdemo.demo.XCasePart
 import com.euclideanspace.xgenerdemo.demo.XCatchClause
 import com.euclideanspace.xgenerdemo.demo.XSetLiteral
 import com.euclideanspace.xgenerdemo.demo.XListLiteral
-import com.euclideanspace.xgenerdemo.demo.XInstanceOfExpression
 import com.euclideanspace.xgenerdemo.demo.XUnaryOperation
 import com.euclideanspace.xgenerdemo.demo.XVariableDeclaration
 
+«FOR x:includes SEPARATOR '\n'»import com.euclideanspace.xgenerdemo.demo.«x»«ENDFOR»
     /*
     * Provides labels for a EObjects.
     * Generated by Xgener
@@ -258,7 +349,7 @@ def String text(XVariableDeclaration ele) {
 '''
 
 /*
- * Rules in expression
+ * Precedence - rules in expression
  */
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.Precedence p) '''
   «IF p.ruletyp=='PREFIX'»
@@ -302,7 +393,6 @@ def String text(«getLabelRule()» ele) {
   «ELSEIF p.ruletyp=='OUTER'»
 «FOR x:p.inner»«compileLabel(x)»«ENDFOR»
   «ELSEIF p.ruletyp=='COMPOUND'»
-
 «FOR x:p.prec»«compileLabel(x)»«ENDFOR»
   «ELSEIF p.ruletyp=='CALLER'»
 «IF p.rule != null»«setLabelRule(p.rule)»«ENDIF»
@@ -349,8 +439,10 @@ def CharSequence compileLabel(com.euclideanspace.xgener.gen.InnerPrecedence p) '
       // inner sufix
   «ELSEIF p.ruletyp=='INNERINFIX'»
      // inner infix
+     «IF p.mod != null»«setLabelRule(p.rule)»«ENDIF»     
   «ELSEIF p.ruletyp=='INNERINFIXRIGHT'»
      // inner infix right
+     «IF p.mod != null»«setLabelRule(p.rule)»«ENDIF»     
   «ELSEIF p.ruletyp=='INNERANGLE'»
     // inner angle
   «ELSEIF p.ruletyp=='INNERBRACKET'»
@@ -486,30 +578,17 @@ def String text(«x.construct» ele) {
  */
 def CharSequence compileLabel(com.euclideanspace.xgener.gen.Literal p) '''
 /* start of literals */
+«FOR x:p.inner SEPARATOR '\n'»
+«compileLabel(x)»
+«ENDFOR»
+/* end of literals */
+'''
 
-def String text(XBooleanLiteral p) {
-	if (p == null) return "XBooleanLiteral null"
-	if (p.isTrue) return "XBooleanLiteral true"
-	return "XBooleanLiteral false";
-}
-
-def String text(XNumberLiteral p) {
-	if (p == null) return "XNumberLiteral null"
-	return "XNumberLiteral "+p.value;
-}
-
-def String text(XNullLiteral p) {
-	return "XNullLiteral";
-}
-
-def String text(XStringLiteral p) {
-	if (p == null) return "XStringLiteral null"
-	return "XStringLiteral "+p.value;
-}
-
-def String text(XTypeLiteral p) {
-	if (p == null) return "XTypeLiteral null"
-	return "XTypeLiteral "+p.type;
+def CharSequence compileLabel(com.euclideanspace.xgener.gen.LiteralInner p) '''
+/* literal «p.construct»*/
+«IF p.primarytyp=='COLLECTIONLITERAL'»
+def String text(«p.construct» ele) {
+	return "«p.construct»";
 }
 
 def String text(XSetLiteral ele) {
@@ -519,16 +598,41 @@ def String text(XSetLiteral ele) {
 def String text(XListLiteral ele) {
 	return "XListLiteral "+ele;
 }
-
-/* end of literals */
-'''
-
-def CharSequence compileLabel(com.euclideanspace.xgener.gen.LiteralInner p) '''
-/* literal «p.construct»*/
+«ELSEIF p.primarytyp=='CLOSURE'»
 def String text(«p.construct» ele) {
-	return "«p.construct»"+ele.value;
+	return "«p.construct»";
 }
+«ELSEIF p.primarytyp=='BOOLEANLITERAL'»
+def String text(«p.construct» p) {
+	if (p == null) return "«p.construct» null"
+	if (p.isTrue) return "«p.construct» true"
+	return "«p.construct» false";
+}
+«ELSEIF p.primarytyp=='NUMBERLITERAL'»
+def String text(«p.construct» p) {
+	if (p == null) return "«p.construct» null"
+	return "«p.construct» "+p.value;
+}
+«ELSEIF p.primarytyp=='NULLLITERAL'»
+def String text(«p.construct» ele) {
+	return "«p.construct»";
+}
+«ELSEIF p.primarytyp=='STRINGLITERAL'»
+def String text(«p.construct» p) {
+	if (p == null) return "«p.construct» null"
+	return "«p.construct» "+p.value;
+}
+«ELSEIF p.primarytyp=='TYPELITERAL'»
+def String text(«p.construct» p) {
+	if (p == null) return "«p.construct» null"
+	return "«p.construct» "+p.type;
+}
+
+«ENDIF»
 '''
+
+
+
 
 /*def CharSequence compileLabel(XBooleanLiteral p) '''
 // literal «p.construct»
@@ -1084,6 +1188,9 @@ def String getRule(){
 	return result; 
 }
 
+/*
+ * InnerPrecedence - called from outer
+ */
 def CharSequence compile(com.euclideanspace.xgener.gen.InnerPrecedence p) '''
   «IF p.ruletyp=='INNERRULE'»
       «p.customrule»
