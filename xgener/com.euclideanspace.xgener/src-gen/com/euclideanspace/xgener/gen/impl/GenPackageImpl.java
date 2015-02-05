@@ -17,6 +17,7 @@ import com.euclideanspace.xgener.gen.Primary;
 import com.euclideanspace.xgener.gen.PrimaryInner;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Project;
+import com.euclideanspace.xgener.gen.QualifiedName;
 import com.euclideanspace.xgener.gen.SubPrecedence;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -89,6 +90,13 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * @generated
    */
   private EClass innerPrecedenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qualifiedNameEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -290,9 +298,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProject_Proj()
+  public EReference getProject_Proj()
   {
-    return (EAttribute)projectEClass.getEStructuralFeatures().get(1);
+    return (EReference)projectEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -300,9 +308,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getProject_Nam()
+  public EReference getProject_Nam()
   {
-    return (EAttribute)projectEClass.getEStructuralFeatures().get(2);
+    return (EReference)projectEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -920,6 +928,26 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getQualifiedName()
+  {
+    return qualifiedNameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getQualifiedName_Qn()
+  {
+    return (EAttribute)qualifiedNameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMultString()
   {
     return multStringEClass;
@@ -1175,8 +1203,8 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     projectEClass = createEClass(PROJECT);
     createEAttribute(projectEClass, PROJECT__NAME);
-    createEAttribute(projectEClass, PROJECT__PROJ);
-    createEAttribute(projectEClass, PROJECT__NAM);
+    createEReference(projectEClass, PROJECT__PROJ);
+    createEReference(projectEClass, PROJECT__NAM);
 
     classTypeEClass = createEClass(CLASS_TYPE);
     createEAttribute(classTypeEClass, CLASS_TYPE__NAME);
@@ -1244,6 +1272,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     createEAttribute(innerPrecedenceEClass, INNER_PRECEDENCE__BRACES);
     createEAttribute(innerPrecedenceEClass, INNER_PRECEDENCE__PARENTHESIS);
     createEAttribute(innerPrecedenceEClass, INNER_PRECEDENCE__ANGLE);
+
+    qualifiedNameEClass = createEClass(QUALIFIED_NAME);
+    createEAttribute(qualifiedNameEClass, QUALIFIED_NAME__QN);
 
     multStringEClass = createEClass(MULT_STRING);
     createEAttribute(multStringEClass, MULT_STRING__MS);
@@ -1315,8 +1346,8 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProject_Proj(), ecorePackage.getEString(), "proj", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProject_Nam(), ecorePackage.getEString(), "nam", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProject_Proj(), this.getQualifiedName(), null, "proj", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProject_Nam(), this.getQualifiedName(), null, "nam", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(classTypeEClass, ClassType.class, "ClassType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getClassType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClassType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1384,6 +1415,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
     initEAttribute(getInnerPrecedence_Braces(), ecorePackage.getEString(), "braces", null, 0, 1, InnerPrecedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInnerPrecedence_Parenthesis(), ecorePackage.getEString(), "parenthesis", null, 0, 1, InnerPrecedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInnerPrecedence_Angle(), ecorePackage.getEString(), "angle", null, 0, 1, InnerPrecedence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(qualifiedNameEClass, QualifiedName.class, "QualifiedName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getQualifiedName_Qn(), ecorePackage.getEString(), "qn", null, 0, -1, QualifiedName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multStringEClass, MultString.class, "MultString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultString_Ms(), ecorePackage.getEString(), "ms", null, 0, 1, MultString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

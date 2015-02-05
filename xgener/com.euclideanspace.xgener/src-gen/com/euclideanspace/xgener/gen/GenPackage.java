@@ -149,7 +149,7 @@ public interface GenPackage extends EPackage
   int PROJECT__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Proj</b></em>' attribute list.
+   * The feature id for the '<em><b>Proj</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -158,7 +158,7 @@ public interface GenPackage extends EPackage
   int PROJECT__PROJ = 1;
 
   /**
-   * The feature id for the '<em><b>Nam</b></em>' attribute list.
+   * The feature id for the '<em><b>Nam</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -785,6 +785,34 @@ public interface GenPackage extends EPackage
   int INNER_PRECEDENCE_FEATURE_COUNT = 14;
 
   /**
+   * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.QualifiedNameImpl <em>Qualified Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.euclideanspace.xgener.gen.impl.QualifiedNameImpl
+   * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getQualifiedName()
+   * @generated
+   */
+  int QUALIFIED_NAME = 8;
+
+  /**
+   * The feature id for the '<em><b>Qn</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALIFIED_NAME__QN = 0;
+
+  /**
+   * The number of structural features of the '<em>Qualified Name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALIFIED_NAME_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -792,7 +820,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getMultString()
    * @generated
    */
-  int MULT_STRING = 8;
+  int MULT_STRING = 9;
 
   /**
    * The feature id for the '<em><b>Ms</b></em>' attribute.
@@ -856,7 +884,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getComboString()
    * @generated
    */
-  int COMBO_STRING = 9;
+  int COMBO_STRING = 10;
 
   /**
    * The feature id for the '<em><b>Inner</b></em>' containment reference list.
@@ -884,7 +912,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimary()
    * @generated
    */
-  int PRIMARY = 10;
+  int PRIMARY = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -921,7 +949,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getPrimaryInner()
    * @generated
    */
-  int PRIMARY_INNER = 11;
+  int PRIMARY_INNER = 12;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -976,7 +1004,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 12;
+  int LITERAL = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1013,7 +1041,7 @@ public interface GenPackage extends EPackage
    * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getLiteralInner()
    * @generated
    */
-  int LITERAL_INNER = 13;
+  int LITERAL_INNER = 14;
 
   /**
    * The feature id for the '<em><b>Primarytyp</b></em>' attribute.
@@ -1141,26 +1169,26 @@ public interface GenPackage extends EPackage
   EAttribute getProject_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Project#getProj <em>Proj</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Project#getProj <em>Proj</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Proj</em>'.
+   * @return the meta object for the containment reference list '<em>Proj</em>'.
    * @see com.euclideanspace.xgener.gen.Project#getProj()
    * @see #getProject()
    * @generated
    */
-  EAttribute getProject_Proj();
+  EReference getProject_Proj();
 
   /**
-   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Project#getNam <em>Nam</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Project#getNam <em>Nam</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Nam</em>'.
+   * @return the meta object for the containment reference list '<em>Nam</em>'.
    * @see com.euclideanspace.xgener.gen.Project#getNam()
    * @see #getProject()
    * @generated
    */
-  EAttribute getProject_Nam();
+  EReference getProject_Nam();
 
   /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.ClassType <em>Class Type</em>}'.
@@ -1828,6 +1856,27 @@ public interface GenPackage extends EPackage
   EAttribute getInnerPrecedence_Angle();
 
   /**
+   * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.QualifiedName <em>Qualified Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qualified Name</em>'.
+   * @see com.euclideanspace.xgener.gen.QualifiedName
+   * @generated
+   */
+  EClass getQualifiedName();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.QualifiedName#getQn <em>Qn</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Qn</em>'.
+   * @see com.euclideanspace.xgener.gen.QualifiedName#getQn()
+   * @see #getQualifiedName()
+   * @generated
+   */
+  EAttribute getQualifiedName_Qn();
+
+  /**
    * Returns the meta object for class '{@link com.euclideanspace.xgener.gen.MultString <em>Mult String</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2163,20 +2212,20 @@ public interface GenPackage extends EPackage
     EAttribute PROJECT__NAME = eINSTANCE.getProject_Name();
 
     /**
-     * The meta object literal for the '<em><b>Proj</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Proj</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROJECT__PROJ = eINSTANCE.getProject_Proj();
+    EReference PROJECT__PROJ = eINSTANCE.getProject_Proj();
 
     /**
-     * The meta object literal for the '<em><b>Nam</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Nam</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROJECT__NAM = eINSTANCE.getProject_Nam();
+    EReference PROJECT__NAM = eINSTANCE.getProject_Nam();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.ClassTypeImpl <em>Class Type</em>}' class.
@@ -2677,6 +2726,24 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute INNER_PRECEDENCE__ANGLE = eINSTANCE.getInnerPrecedence_Angle();
+
+    /**
+     * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.QualifiedNameImpl <em>Qualified Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.euclideanspace.xgener.gen.impl.QualifiedNameImpl
+     * @see com.euclideanspace.xgener.gen.impl.GenPackageImpl#getQualifiedName()
+     * @generated
+     */
+    EClass QUALIFIED_NAME = eINSTANCE.getQualifiedName();
+
+    /**
+     * The meta object literal for the '<em><b>Qn</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QUALIFIED_NAME__QN = eINSTANCE.getQualifiedName_Qn();
 
     /**
      * The meta object literal for the '{@link com.euclideanspace.xgener.gen.impl.MultStringImpl <em>Mult String</em>}' class.

@@ -88,17 +88,17 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
 		private final Keyword cPROJECTNAMEKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
 		private final Assignment cProjAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final RuleCall cProjSTRINGTerminalRuleCall_2_0_1_0 = (RuleCall)cProjAssignment_2_0_1.eContents().get(0);
+		private final RuleCall cProjQualifiedNameParserRuleCall_2_0_1_0 = (RuleCall)cProjAssignment_2_0_1.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cNAMEKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cNamAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final RuleCall cNamSTRINGTerminalRuleCall_2_1_1_0 = (RuleCall)cNamAssignment_2_1_1.eContents().get(0);
+		private final RuleCall cNamQualifiedNameParserRuleCall_2_1_1_0 = (RuleCall)cNamAssignment_2_1_1.eContents().get(0);
 		
 		//Project:
-		//	"PROJECT" name=ID ("PROJECTNAME" proj+=STRING | "NAME" nam+=STRING)*;
+		//	"PROJECT" name=ID ("PROJECTNAME" proj+=QualifiedName | "NAME" nam+=QualifiedName)*;
 		public ParserRule getRule() { return rule; }
 
-		//"PROJECT" name=ID ("PROJECTNAME" proj+=STRING | "NAME" nam+=STRING)*
+		//"PROJECT" name=ID ("PROJECTNAME" proj+=QualifiedName | "NAME" nam+=QualifiedName)*
 		public Group getGroup() { return cGroup; }
 
 		//"PROJECT"
@@ -110,32 +110,32 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("PROJECTNAME" proj+=STRING | "NAME" nam+=STRING)*
+		//("PROJECTNAME" proj+=QualifiedName | "NAME" nam+=QualifiedName)*
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//"PROJECTNAME" proj+=STRING
+		//"PROJECTNAME" proj+=QualifiedName
 		public Group getGroup_2_0() { return cGroup_2_0; }
 
 		//"PROJECTNAME"
 		public Keyword getPROJECTNAMEKeyword_2_0_0() { return cPROJECTNAMEKeyword_2_0_0; }
 
-		//proj+=STRING
+		//proj+=QualifiedName
 		public Assignment getProjAssignment_2_0_1() { return cProjAssignment_2_0_1; }
 
-		//STRING
-		public RuleCall getProjSTRINGTerminalRuleCall_2_0_1_0() { return cProjSTRINGTerminalRuleCall_2_0_1_0; }
+		//QualifiedName
+		public RuleCall getProjQualifiedNameParserRuleCall_2_0_1_0() { return cProjQualifiedNameParserRuleCall_2_0_1_0; }
 
-		//"NAME" nam+=STRING
+		//"NAME" nam+=QualifiedName
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//"NAME"
 		public Keyword getNAMEKeyword_2_1_0() { return cNAMEKeyword_2_1_0; }
 
-		//nam+=STRING
+		//nam+=QualifiedName
 		public Assignment getNamAssignment_2_1_1() { return cNamAssignment_2_1_1; }
 
-		//STRING
-		public RuleCall getNamSTRINGTerminalRuleCall_2_1_1_0() { return cNamSTRINGTerminalRuleCall_2_1_1_0; }
+		//QualifiedName
+		public RuleCall getNamQualifiedNameParserRuleCall_2_1_1_0() { return cNamQualifiedNameParserRuleCall_2_1_1_0; }
 	}
 
 	public class ClassTypeElements extends AbstractParserRuleElementFinder {
@@ -1716,6 +1716,42 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getAngleIDTerminalRuleCall_8_2_0() { return cAngleIDTerminalRuleCall_8_2_0; }
 	}
 
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cQnAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cQnIDTerminalRuleCall_0_0 = (RuleCall)cQnAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cQnAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cQnIDTerminalRuleCall_1_1_0 = (RuleCall)cQnAssignment_1_1.eContents().get(0);
+		
+		//QualifiedName:
+		//	qn+=ID ("." qn+=ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//qn+=ID ("." qn+=ID)*
+		public Group getGroup() { return cGroup; }
+
+		//qn+=ID
+		public Assignment getQnAssignment_0() { return cQnAssignment_0; }
+
+		//ID
+		public RuleCall getQnIDTerminalRuleCall_0_0() { return cQnIDTerminalRuleCall_0_0; }
+
+		//("." qn+=ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//qn+=ID
+		public Assignment getQnAssignment_1_1() { return cQnAssignment_1_1; }
+
+		//ID
+		public RuleCall getQnIDTerminalRuleCall_1_1_0() { return cQnIDTerminalRuleCall_1_1_0; }
+	}
+
 	public class MultStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultString");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1740,7 +1776,6 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCsComboStringParserRuleCall_1_2_3_1_0 = (RuleCall)cCsAssignment_1_2_3_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_1_2_4 = (Keyword)cGroup_1_2.eContents().get(4);
 		
-		////MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
 		//MultString:
 		//	{MultString} (ms=STRING opt?="?"? | mi=ID | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")");
 		public ParserRule getRule() { return rule; }
@@ -2402,6 +2437,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	private final PrecedenceElements pPrecedence;
 	private final SubPrecedenceElements pSubPrecedence;
 	private final InnerPrecedenceElements pInnerPrecedence;
+	private final QualifiedNameElements pQualifiedName;
 	private final MultStringElements pMultString;
 	private final ComboStringElements pComboString;
 	private final PrimaryElements pPrimary;
@@ -2426,6 +2462,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		this.pPrecedence = new PrecedenceElements();
 		this.pSubPrecedence = new SubPrecedenceElements();
 		this.pInnerPrecedence = new InnerPrecedenceElements();
+		this.pQualifiedName = new QualifiedNameElements();
 		this.pMultString = new MultStringElements();
 		this.pComboString = new ComboStringElements();
 		this.pPrimary = new PrimaryElements();
@@ -2472,7 +2509,7 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Project:
-	//	"PROJECT" name=ID ("PROJECTNAME" proj+=STRING | "NAME" nam+=STRING)*;
+	//	"PROJECT" name=ID ("PROJECTNAME" proj+=QualifiedName | "NAME" nam+=QualifiedName)*;
 	public ProjectElements getProjectAccess() {
 		return pProject;
 	}
@@ -2560,7 +2597,16 @@ public class GenGrammarAccess extends AbstractGrammarElementFinder {
 		return getInnerPrecedenceAccess().getRule();
 	}
 
-	////MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
+	//QualifiedName:
+	//	qn+=ID ("." qn+=ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return pQualifiedName;
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
+	}
+
 	//MultString:
 	//	{MultString} (ms=STRING opt?="?"? | mi=ID | synpred="=>"? "(" cs+=ComboString ("|" cs+=ComboString)* ")");
 	public MultStringElements getMultStringAccess() {

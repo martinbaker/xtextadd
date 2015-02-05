@@ -14,6 +14,7 @@ import com.euclideanspace.xgener.gen.Primary;
 import com.euclideanspace.xgener.gen.PrimaryInner;
 import com.euclideanspace.xgener.gen.Procedure;
 import com.euclideanspace.xgener.gen.Project;
+import com.euclideanspace.xgener.gen.QualifiedName;
 import com.euclideanspace.xgener.gen.SubPrecedence;
 import com.euclideanspace.xgener.services.GenGrammarAccess;
 import com.google.inject.Inject;
@@ -110,6 +111,12 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GenPackage.PROJECT:
 				if(context == grammarAccess.getProjectRule()) {
 					sequence_Project(context, (Project) semanticObject); 
+					return; 
+				}
+				else break;
+			case GenPackage.QUALIFIED_NAME:
+				if(context == grammarAccess.getQualifiedNameRule()) {
+					sequence_QualifiedName(context, (QualifiedName) semanticObject); 
 					return; 
 				}
 				else break;
@@ -323,9 +330,18 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (proj+=STRING | nam+=STRING)*)
+	 *     (name=ID (proj+=QualifiedName | nam+=QualifiedName)*)
 	 */
 	protected void sequence_Project(EObject context, Project semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (qn+=ID qn+=ID*)
+	 */
+	protected void sequence_QualifiedName(EObject context, QualifiedName semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

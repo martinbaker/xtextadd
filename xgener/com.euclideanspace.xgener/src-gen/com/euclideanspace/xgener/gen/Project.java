@@ -53,35 +53,35 @@ public interface Project extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Proj</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Proj</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.QualifiedName}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Proj</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Proj</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Proj</em>' attribute list.
+   * @return the value of the '<em>Proj</em>' containment reference list.
    * @see com.euclideanspace.xgener.gen.GenPackage#getProject_Proj()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getProj();
+  EList<QualifiedName> getProj();
 
   /**
-   * Returns the value of the '<em><b>Nam</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Nam</b></em>' containment reference list.
+   * The list contents are of type {@link com.euclideanspace.xgener.gen.QualifiedName}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nam</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Nam</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nam</em>' attribute list.
+   * @return the value of the '<em>Nam</em>' containment reference list.
    * @see com.euclideanspace.xgener.gen.GenPackage#getProject_Nam()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getNam();
+  EList<QualifiedName> getNam();
 
 } // Project

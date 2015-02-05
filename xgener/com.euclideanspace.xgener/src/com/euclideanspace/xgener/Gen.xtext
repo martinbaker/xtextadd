@@ -7,8 +7,8 @@ Model:
 	
 Project:
 	'PROJECT' name=ID
-	( ('PROJECTNAME' proj += STRING)
-    | ('NAME' nam += STRING)
+	( ('PROJECTNAME' proj += QualifiedName)
+    | ('NAME' nam += QualifiedName)
     )*
 ;
 
@@ -74,7 +74,7 @@ InnerPrecedence:
     | (ruletyp='INNERANGLE' rule=ID angle=ID)
 ;
 
-//MultID: {MultID} (mi+=ID | ('[' mi+=ID* ']'));
+QualifiedName: qn+=ID ('.' qn+=ID)*;
 
 MultString: {MultString} (ms=STRING opt?='?'?| mi=ID | ( synpred='=>'? '(' cs+=ComboString ('|' cs+=ComboString)* ')'));
 

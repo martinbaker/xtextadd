@@ -17,8 +17,8 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Project">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/proj"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Project/nam"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Project/proj"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Project/nam"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//ClassType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//ClassType/name"/>
@@ -86,6 +86,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/braces"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/parenthesis"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//InnerPrecedence/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="Gen.ecore#//QualifiedName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//QualifiedName/qn"/>
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//MultString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//MultString/ms"/>

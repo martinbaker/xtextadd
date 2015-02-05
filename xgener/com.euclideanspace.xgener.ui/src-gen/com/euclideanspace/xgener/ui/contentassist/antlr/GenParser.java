@@ -114,6 +114,8 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInnerPrecedenceAccess().getGroup_6(), "rule__InnerPrecedence__Group_6__0");
 					put(grammarAccess.getInnerPrecedenceAccess().getGroup_7(), "rule__InnerPrecedence__Group_7__0");
 					put(grammarAccess.getInnerPrecedenceAccess().getGroup_8(), "rule__InnerPrecedence__Group_8__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getMultStringAccess().getGroup(), "rule__MultString__Group__0");
 					put(grammarAccess.getMultStringAccess().getGroup_1_0(), "rule__MultString__Group_1_0__0");
 					put(grammarAccess.getMultStringAccess().getGroup_1_2(), "rule__MultString__Group_1_2__0");
@@ -286,6 +288,8 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInnerPrecedenceAccess().getRuletypAssignment_8_0(), "rule__InnerPrecedence__RuletypAssignment_8_0");
 					put(grammarAccess.getInnerPrecedenceAccess().getRuleAssignment_8_1(), "rule__InnerPrecedence__RuleAssignment_8_1");
 					put(grammarAccess.getInnerPrecedenceAccess().getAngleAssignment_8_2(), "rule__InnerPrecedence__AngleAssignment_8_2");
+					put(grammarAccess.getQualifiedNameAccess().getQnAssignment_0(), "rule__QualifiedName__QnAssignment_0");
+					put(grammarAccess.getQualifiedNameAccess().getQnAssignment_1_1(), "rule__QualifiedName__QnAssignment_1_1");
 					put(grammarAccess.getMultStringAccess().getMsAssignment_1_0_0(), "rule__MultString__MsAssignment_1_0_0");
 					put(grammarAccess.getMultStringAccess().getOptAssignment_1_0_1(), "rule__MultString__OptAssignment_1_0_1");
 					put(grammarAccess.getMultStringAccess().getMiAssignment_1_1(), "rule__MultString__MiAssignment_1_1");

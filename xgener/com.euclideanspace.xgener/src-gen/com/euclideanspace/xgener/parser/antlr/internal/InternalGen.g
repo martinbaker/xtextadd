@@ -239,19 +239,19 @@ ruleProject returns [EObject current=null]
     }
 (
 (
-		lv_proj_3_0=RULE_STRING
-		{
-			newLeafNode(lv_proj_3_0, grammarAccess.getProjectAccess().getProjSTRINGTerminalRuleCall_2_0_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getProjectAccess().getProjQualifiedNameParserRuleCall_2_0_1_0()); 
+	    }
+		lv_proj_3_0=ruleQualifiedName		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getProjectRule());
+	            $current = createModelElementForParent(grammarAccess.getProjectRule());
 	        }
-       		addWithLastConsumed(
+       		add(
        			$current, 
        			"proj",
         		lv_proj_3_0, 
-        		"STRING");
+        		"QualifiedName");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -262,19 +262,19 @@ ruleProject returns [EObject current=null]
     }
 (
 (
-		lv_nam_5_0=RULE_STRING
-		{
-			newLeafNode(lv_nam_5_0, grammarAccess.getProjectAccess().getNamSTRINGTerminalRuleCall_2_1_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getProjectAccess().getNamQualifiedNameParserRuleCall_2_1_1_0()); 
+	    }
+		lv_nam_5_0=ruleQualifiedName		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getProjectRule());
+	            $current = createModelElementForParent(grammarAccess.getProjectRule());
 	        }
-       		addWithLastConsumed(
+       		add(
        			$current, 
        			"nam",
         		lv_nam_5_0, 
-        		"STRING");
+        		"QualifiedName");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -2932,6 +2932,67 @@ ruleInnerPrecedence returns [EObject current=null]
 
 )
 )))
+;
+
+
+
+
+
+// Entry rule entryRuleQualifiedName
+entryRuleQualifiedName returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getQualifiedNameRule()); }
+	 iv_ruleQualifiedName=ruleQualifiedName 
+	 { $current=$iv_ruleQualifiedName.current; } 
+	 EOF 
+;
+
+// Rule QualifiedName
+ruleQualifiedName returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_qn_0_0=RULE_ID
+		{
+			newLeafNode(lv_qn_0_0, grammarAccess.getQualifiedNameAccess().getQnIDTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getQualifiedNameRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"qn",
+        		lv_qn_0_0, 
+        		"ID");
+	    }
+
+)
+)(	otherlv_1='.' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
+    }
+(
+(
+		lv_qn_2_0=RULE_ID
+		{
+			newLeafNode(lv_qn_2_0, grammarAccess.getQualifiedNameAccess().getQnIDTerminalRuleCall_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getQualifiedNameRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"qn",
+        		lv_qn_2_0, 
+        		"ID");
+	    }
+
+)
+))*)
 ;
 
 

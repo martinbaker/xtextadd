@@ -4,19 +4,23 @@ package com.euclideanspace.xgener.gen.impl;
 
 import com.euclideanspace.xgener.gen.GenPackage;
 import com.euclideanspace.xgener.gen.Project;
+import com.euclideanspace.xgener.gen.QualifiedName;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,24 +60,24 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getProj() <em>Proj</em>}' attribute list.
+   * The cached value of the '{@link #getProj() <em>Proj</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getProj()
    * @generated
    * @ordered
    */
-  protected EList<String> proj;
+  protected EList<QualifiedName> proj;
 
   /**
-   * The cached value of the '{@link #getNam() <em>Nam</em>}' attribute list.
+   * The cached value of the '{@link #getNam() <em>Nam</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNam()
    * @generated
    * @ordered
    */
-  protected EList<String> nam;
+  protected EList<QualifiedName> nam;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,11 +128,11 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getProj()
+  public EList<QualifiedName> getProj()
   {
     if (proj == null)
     {
-      proj = new EDataTypeEList<String>(String.class, this, GenPackage.PROJECT__PROJ);
+      proj = new EObjectContainmentEList<QualifiedName>(QualifiedName.class, this, GenPackage.PROJECT__PROJ);
     }
     return proj;
   }
@@ -138,13 +142,31 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getNam()
+  public EList<QualifiedName> getNam()
   {
     if (nam == null)
     {
-      nam = new EDataTypeEList<String>(String.class, this, GenPackage.PROJECT__NAM);
+      nam = new EObjectContainmentEList<QualifiedName>(QualifiedName.class, this, GenPackage.PROJECT__NAM);
     }
     return nam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GenPackage.PROJECT__PROJ:
+        return ((InternalEList<?>)getProj()).basicRemove(otherEnd, msgs);
+      case GenPackage.PROJECT__NAM:
+        return ((InternalEList<?>)getNam()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -183,11 +205,11 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
         return;
       case GenPackage.PROJECT__PROJ:
         getProj().clear();
-        getProj().addAll((Collection<? extends String>)newValue);
+        getProj().addAll((Collection<? extends QualifiedName>)newValue);
         return;
       case GenPackage.PROJECT__NAM:
         getNam().clear();
-        getNam().addAll((Collection<? extends String>)newValue);
+        getNam().addAll((Collection<? extends QualifiedName>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -249,10 +271,6 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", proj: ");
-    result.append(proj);
-    result.append(", nam: ");
-    result.append(nam);
     result.append(')');
     return result.toString();
   }

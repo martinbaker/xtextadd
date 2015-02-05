@@ -18,6 +18,7 @@ import com.euclideanspace.xgener.gen.Project
 import java.util.ArrayList
 import com.euclideanspace.xgener.gen.ClassType
 import com.euclideanspace.xgener.gen.Procedure
+import org.eclipse.emf.common.util.EList
 
 /**
  * Generates code from your model files on save.
@@ -25,24 +26,63 @@ import com.euclideanspace.xgener.gen.Procedure
  * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
 class GenGenerator implements IGenerator {
-	
-
-
-/*     var CharSequence addInfix=null;
     
-    def void readAddInfix(com.euclideanspace.xgener.gen.Precedence p){
-    	addInfix = '''    «IF p.par1 != null»«IF p.feature1 != null»«p.feature1»=«ENDIF»«p.par1»«
-     ENDIF» (=>({«getCallingRule(p.rule)»=current} feature=«
-     IF p.infix != null»«compile(p.infix)»«ENDIF»)
-    «IF p.par2 != null»«IF p.feature2 != null»«p.feature2»«ELSE»rightOperand«ENDIF»=«p.par2»«ENDIF»)|'''
-    }
+var Resource resource;
 
-    def CharSequence getAddInfix(){
-    	var CharSequence addHold=addInfix;
-    	addInfix=null;
-    	return addHold;
-    }*/
-    
+/**
+ * Get project web address as used in 'generate' statement in
+ * xtext file. Like this:
+ * generate gen "http://www.euclideanspace.com/xgenerdemo/Demo"
+ */
+def CharSequence getProjectWebAdr() {
+  val Model m = resource.contents.head as Model;
+  val EList<com.euclideanspace.xgener.gen.Project> p=m.proj;
+  return '''«
+FOR y:p»«
+FOR x:y.nam»«IF x != null»www.«x.qn.get(1)».«x.qn.get(0)»/«x.qn.get(2)»/«x.qn.get(3)»«ENDIF»«ENDFOR
+»«ENDFOR
+»'''
+}
+
+def CharSequence getName() {
+  val Model m = resource.contents.head as Model;
+  val EList<com.euclideanspace.xgener.gen.Project> p=m.proj;
+  return '''«
+FOR c:p»«
+FOR x:c.nam»«IF x != null»«FOR y:x.qn SEPARATOR '.'»«y»«ENDFOR»«ENDIF»«ENDFOR
+»«ENDFOR
+»'''
+}
+
+/**
+ * returns qualified name as stored in project such as:
+ * com.euclideanspace.xgenerdemo
+ */
+def CharSequence getPath() {
+  val Model m = resource.contents.head as Model;
+  val EList<com.euclideanspace.xgener.gen.Project> p=m.proj;
+  return '''«
+FOR y:p»«
+FOR x:y.proj»«IF x != null»«x.qn.get(0)».«x.qn.get(1)».«x.qn.get(2)»«ENDIF»«ENDFOR
+»«ENDFOR
+»'''
+}
+
+/**
+ * returns qualified name as stored in project such as:
+ * com.euclideanspace.xgenerdemo.Demo
+ * The name will be converted to lower case.
+ */
+def CharSequence getDemoPath() {
+  val Model m = resource.contents.head as Model;
+  val EList<com.euclideanspace.xgener.gen.Project> p=m.proj;
+  return '''«
+FOR y:p»«
+FOR x:y.nam»«IF x != null»«x.qn.get(0)».«x.qn.get(1)».«x.qn.get(2)».«x.qn.get(3).toLowerCase()»«ENDIF»«ENDFOR
+»«ENDFOR
+»'''
+}
+ 
     /**
      * list of classes to include in labelProvider
      */
@@ -145,7 +185,8 @@ class GenGenerator implements IGenerator {
       return s;
     }
 
-	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+	override void doGenerate(Resource res, IFileSystemAccess fsa) {
+		resource = res;
 		// generate list of includes
 		compileIncludes(resource.contents.head as Model);
 		// generate .xtext file
@@ -163,6 +204,7 @@ class GenGenerator implements IGenerator {
  * gather list of classes that need to be included in labelProvider
  */
 def void compileIncludes(com.euclideanspace.xgener.gen.Model model) {
+  addIncludes("Model");
   for (Project x:model.proj) compileIncludes(x);
   for (ClassType x:model.clas) compileIncludes(x);
   for (Procedure x:model.proc) compileIncludes(x);
@@ -178,9 +220,13 @@ def void compileIncludes(com.euclideanspace.xgener.gen.ClassType c) {
 }
 
 def void compileIncludes(com.euclideanspace.xgener.gen.Procedure p) {
+	addIncludes("GenerMember");
+	addIncludes("GenerParameter");
 }
 
 def void compileIncludes(com.euclideanspace.xgener.gen.Expression e) {
+  addIncludes("XExpression");
+  addIncludes("XVariableDeclaration");
   for(Precedence x:e.prec) {
     if (x.rule != null) compileIncludes(x);
   }
@@ -200,10 +246,13 @@ def void compileIncludes(com.euclideanspace.xgener.gen.Precedence p) {
   } else if ( p.ruletyp=='BRACES') {
   } else if ( p.ruletyp=='PARENTHESIS') {
   } else if (p.ruletyp=='MEMBERFEATURE') {
+  	addIncludes("XMemberFeatureCall");
+  	addIncludes("XAssignment");
   }
 }
 
 def void compileIncludes(com.euclideanspace.xgener.gen.Primary p) {
+  addIncludes("XAssignment");
   for(com.euclideanspace.xgener.gen.PrimaryInner x:p.inner) {
     compileIncludes(x);
   }
@@ -216,6 +265,7 @@ if(pi.primarytyp=='CONSTRUCTOR') {
   addIncludes(pi.construct);
 } else if (pi.primarytyp=='SWITCH') {
   addIncludes(pi.construct);
+  addIncludes("XCasePart");
 } else if (pi.primarytyp=='SYNCHRONIZED') {
   addIncludes(pi.construct);
 } else if (pi.primarytyp=='FEATURECALL') {
@@ -237,6 +287,7 @@ if(pi.primarytyp=='CONSTRUCTOR') {
   addIncludes(pi.construct);
 } else if (pi.primarytyp=='TRYCATCHFINALYEXPRESSION') {
   addIncludes(pi.construct);
+  addIncludes("XCatchClause");
 } else if (pi.primarytyp=='PARENTHESIZEDEXPRESSION') {
   addIncludes(pi.construct);
 }
@@ -251,27 +302,18 @@ def void compileIncludes(com.euclideanspace.xgener.gen.Literal p) {
 
 def void compileIncludes(com.euclideanspace.xgener.gen.LiteralInner p) {
 	addIncludes(p.construct);
+	if (p.primarytyp=='COLLECTIONLITERAL'){
+	  addIncludes("XSetLiteral");
+	  addIncludes("XListLiteral");
+	}
 }
 
 	def CharSequence compileLabel(com.euclideanspace.xgener.gen.Model model) '''
-package com.euclideanspace.xgenerdemo.ui.labeling;
+package «getPath()».ui.labeling;
 
 import com.google.inject.Inject
   /* the following imports are interfaces for model elements */
-import com.euclideanspace.xgenerdemo.demo.Model
-import com.euclideanspace.xgenerdemo.demo.GenerMember
-import com.euclideanspace.xgenerdemo.demo.GenerParameter
-import com.euclideanspace.xgenerdemo.demo.XExpression
-import com.euclideanspace.xgenerdemo.demo.XMemberFeatureCall
-import com.euclideanspace.xgenerdemo.demo.XAssignment
-import com.euclideanspace.xgenerdemo.demo.XCasePart
-import com.euclideanspace.xgenerdemo.demo.XCatchClause
-import com.euclideanspace.xgenerdemo.demo.XSetLiteral
-import com.euclideanspace.xgenerdemo.demo.XListLiteral
-import com.euclideanspace.xgenerdemo.demo.XUnaryOperation
-import com.euclideanspace.xgenerdemo.demo.XVariableDeclaration
-
-«FOR x:includes SEPARATOR '\n'»import com.euclideanspace.xgenerdemo.demo.«x»«ENDFOR»
+«FOR x:includes SEPARATOR '\n'»import «getDemoPath()».«x»«ENDFOR»
     /*
     * Provides labels for a EObjects.
     * Generated by Xgener
@@ -357,7 +399,7 @@ def CharSequence compileLabel(com.euclideanspace.xgener.gen.Precedence p) '''
 */
 «IF !isLabelRule(getLabelRule())»
 def String text(«getLabelRule()» ele) {
-	return "«getLabelRule()»"+ele.feature;
+	return "«getLabelRule()» "+ele.feature;
 }
 «ENDIF»
   «ELSEIF p.ruletyp=='SUFFIX'»
@@ -467,7 +509,7 @@ def CharSequence compileLabel(com.euclideanspace.xgener.gen.SubPrecedence p) '''
 /* precedence compound sub infix right«p.rule»
      */
      def String text(«getParentExpression(p)» ele) {
-	   return "«getParentExpression(p)»+ele.feature";
+	   return "«getParentExpression(p)» "+ele.feature;
      }
   «ELSEIF p.ruletyp=='SUBANGLE'»
     // sub angle
@@ -646,8 +688,8 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Model model) '''
           «IF model.eContainer != null»
 package «model.eResource.className»;
           «ENDIF»
-grammar «FOR x:model.proj»«getName(x)»«ENDFOR»
-generate demo "http://«FOR x:model.proj»«getProjectName(x)»«ENDFOR»"
+grammar «FOR x:model.proj»«getName()»«ENDFOR»
+generate demo "http://«getProjectWebAdr()»"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
@@ -715,14 +757,6 @@ def CharSequence compile(com.euclideanspace.xgener.gen.Project c) '''
 // projectName = «FOR x:c.proj»«IF x != null»«x»«ENDIF»«ENDFOR»
 // name = «FOR x:c.nam»«IF x != null»«x»«ENDIF»«ENDFOR»
 '''
-
-def CharSequence getProjectName(com.euclideanspace.xgener.gen.Project c) '''«
-FOR x:c.proj»«IF x != null»«x»«ENDIF»«ENDFOR
-»'''
-
-def CharSequence getName(com.euclideanspace.xgener.gen.Project c) '''«
-FOR x:c.nam»«IF x != null»«x»«ENDIF»«ENDFOR
-»'''
 
     /* Class */
     def CharSequence compile(com.euclideanspace.xgener.gen.ClassType c) '''

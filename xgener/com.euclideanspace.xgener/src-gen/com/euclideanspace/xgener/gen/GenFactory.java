@@ -95,6 +95,15 @@ public interface GenFactory extends EFactory
   InnerPrecedence createInnerPrecedence();
 
   /**
+   * Returns a new object of class '<em>Qualified Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qualified Name</em>'.
+   * @generated
+   */
+  QualifiedName createQualifiedName();
+
+  /**
    * Returns a new object of class '<em>Mult String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

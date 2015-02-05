@@ -19,8 +19,8 @@
 <table border="1">
   <tr>
     <td><pre>PROJECT generBase
-  PROJECTNAME "www.euclideanspace.com/xgenerdemo/Demo"
-  NAME "com.euclideanspace.xgenerdemo.Demo"
+  PROJECTNAME com.euclideanspace.xgenerdemo
+  NAME com.euclideanspace.xgenerdemo.Demo 
 
 CLASS Cl
   NOCLASS
@@ -86,9 +86,10 @@ LITERAL XExpression
 <h4>PROJECT</h4>
 <p>This holds information that applies to the whole project, for example path information: </p>
 <ul>
-  <li> PROJECTNAME for example: &quot;www.euclideanspace.com/xgenerdemo/Demo&quot;</li>
-  <li> NAME for example: &quot;com.euclideanspace.xgenerdemo.Demo&quot;</li>
+  <li> PROJECTNAME for example: com.euclideanspace.xgenerdemo</li>
+  <li> NAME for example: com.euclideanspace.xgenerdemo.Demo</li>
 </ul>
+<p>The above two fields would normally be the same as the 'project name' and 'name' entries that you will use to create the project in the 'new xtext project' wizard. They are used to create the path values in the 'import' and 'generate' lines for example. </p>
 <h4>EXPRESSION</h4>
 <p>The expression section contains a list of entries in (low to high) precedence order. So in the example above XMultiplicativeExpression is below XAdditiveExpression because multiplication has a higher precedence (binds more tightly) than addition.</p>
 <p>Entries may be of the following types:</p>
