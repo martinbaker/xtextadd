@@ -13,7 +13,6 @@ import com.euclideanspace.xgener.gen.Precedence
 import com.euclideanspace.xgener.gen.Primary
 import com.euclideanspace.xgener.gen.Literal
 import com.euclideanspace.xgener.gen.ComboString
-import org.eclipse.emf.common.util.URI
 import com.euclideanspace.xgener.gen.Project
 import java.util.ArrayList
 import com.euclideanspace.xgener.gen.ClassType
