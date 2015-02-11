@@ -22,7 +22,9 @@ ClassType:
 
 Procedure:
 	'PROCEDURE' name=ID
-    (('PREFIX' prefix += MultString)
+    (('GENERMEMBER' expression+=ID blockexp+=ID)
+    |('GENERPARAM' annot+=ID)
+    |('PREFIX' prefix += MultString)
     | ('SUFFIX' suffix += MultString)
     | ('TYPES' types+=('COLONSEPERATED'|'SPACESEPERATED'|'INHEADER'|'INFERRED'|'UNTYPED'))
     )*;

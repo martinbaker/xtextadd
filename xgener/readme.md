@@ -26,6 +26,8 @@ CLASS Cl
   NOCLASS
 
 PROCEDURE Proc
+  GENERMEMBER XExpression XBlockExpression
+  GENERPARAM XAnnotation
   TYPES COLONSEPERATED
 
 EXPRESSION XExpression

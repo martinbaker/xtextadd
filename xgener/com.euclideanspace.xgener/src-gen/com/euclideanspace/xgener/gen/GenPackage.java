@@ -259,13 +259,40 @@ public interface GenPackage extends EPackage
   int PROCEDURE__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROCEDURE__EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Blockexp</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROCEDURE__BLOCKEXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Annot</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROCEDURE__ANNOT = 3;
+
+  /**
    * The feature id for the '<em><b>Prefix</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROCEDURE__PREFIX = 1;
+  int PROCEDURE__PREFIX = 4;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' containment reference list.
@@ -274,7 +301,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE__SUFFIX = 2;
+  int PROCEDURE__SUFFIX = 5;
 
   /**
    * The feature id for the '<em><b>Types</b></em>' attribute list.
@@ -283,7 +310,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE__TYPES = 3;
+  int PROCEDURE__TYPES = 6;
 
   /**
    * The number of structural features of the '<em>Procedure</em>' class.
@@ -292,7 +319,7 @@ public interface GenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_FEATURE_COUNT = 4;
+  int PROCEDURE_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link com.euclideanspace.xgener.gen.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -1275,6 +1302,39 @@ public interface GenPackage extends EPackage
    * @generated
    */
   EAttribute getProcedure_Name();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see com.euclideanspace.xgener.gen.Procedure#getExpression()
+   * @see #getProcedure()
+   * @generated
+   */
+  EAttribute getProcedure_Expression();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getBlockexp <em>Blockexp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Blockexp</em>'.
+   * @see com.euclideanspace.xgener.gen.Procedure#getBlockexp()
+   * @see #getProcedure()
+   * @generated
+   */
+  EAttribute getProcedure_Blockexp();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.euclideanspace.xgener.gen.Procedure#getAnnot <em>Annot</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Annot</em>'.
+   * @see com.euclideanspace.xgener.gen.Procedure#getAnnot()
+   * @see #getProcedure()
+   * @generated
+   */
+  EAttribute getProcedure_Annot();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.euclideanspace.xgener.gen.Procedure#getPrefix <em>Prefix</em>}'.
@@ -2294,6 +2354,30 @@ public interface GenPackage extends EPackage
      * @generated
      */
     EAttribute PROCEDURE__NAME = eINSTANCE.getProcedure_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROCEDURE__EXPRESSION = eINSTANCE.getProcedure_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Blockexp</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROCEDURE__BLOCKEXP = eINSTANCE.getProcedure_Blockexp();
+
+    /**
+     * The meta object literal for the '<em><b>Annot</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROCEDURE__ANNOT = eINSTANCE.getProcedure_Annot();
 
     /**
      * The meta object literal for the '<em><b>Prefix</b></em>' containment reference list feature.

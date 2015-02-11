@@ -15,6 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getName <em>Name</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getExpression <em>Expression</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getBlockexp <em>Blockexp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getAnnot <em>Annot</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getSuffix <em>Suffix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.Procedure#getTypes <em>Types</em>}</li>
@@ -52,6 +55,54 @@ public interface Procedure extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Expression</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Expression</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expression</em>' attribute list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getProcedure_Expression()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getExpression();
+
+  /**
+   * Returns the value of the '<em><b>Blockexp</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Blockexp</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Blockexp</em>' attribute list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getProcedure_Blockexp()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getBlockexp();
+
+  /**
+   * Returns the value of the '<em><b>Annot</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Annot</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Annot</em>' attribute list.
+   * @see com.euclideanspace.xgener.gen.GenPackage#getProcedure_Annot()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getAnnot();
 
   /**
    * Returns the value of the '<em><b>Prefix</b></em>' containment reference list.

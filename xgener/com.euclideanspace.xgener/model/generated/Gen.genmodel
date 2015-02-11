@@ -29,6 +29,9 @@
     </genClasses>
     <genClasses ecoreClass="Gen.ecore#//Procedure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/blockexp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/annot"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/prefix"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gen.ecore#//Procedure/suffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gen.ecore#//Procedure/types"/>

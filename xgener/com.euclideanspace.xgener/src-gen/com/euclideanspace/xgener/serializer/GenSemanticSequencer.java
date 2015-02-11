@@ -313,6 +313,8 @@ public class GenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         (
+	 *             (expression+=ID blockexp+=ID) | 
+	 *             annot+=ID | 
 	 *             prefix+=MultString | 
 	 *             suffix+=MultString | 
 	 *             types+='COLONSEPERATED' | 

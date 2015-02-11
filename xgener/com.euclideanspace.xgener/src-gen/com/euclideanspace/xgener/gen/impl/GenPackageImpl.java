@@ -398,9 +398,39 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getProcedure_Expression()
+  {
+    return (EAttribute)procedureEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProcedure_Blockexp()
+  {
+    return (EAttribute)procedureEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProcedure_Annot()
+  {
+    return (EAttribute)procedureEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getProcedure_Prefix()
   {
-    return (EReference)procedureEClass.getEStructuralFeatures().get(1);
+    return (EReference)procedureEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -410,7 +440,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EReference getProcedure_Suffix()
   {
-    return (EReference)procedureEClass.getEStructuralFeatures().get(2);
+    return (EReference)procedureEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -420,7 +450,7 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
    */
   public EAttribute getProcedure_Types()
   {
-    return (EAttribute)procedureEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)procedureEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1215,6 +1245,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     procedureEClass = createEClass(PROCEDURE);
     createEAttribute(procedureEClass, PROCEDURE__NAME);
+    createEAttribute(procedureEClass, PROCEDURE__EXPRESSION);
+    createEAttribute(procedureEClass, PROCEDURE__BLOCKEXP);
+    createEAttribute(procedureEClass, PROCEDURE__ANNOT);
     createEReference(procedureEClass, PROCEDURE__PREFIX);
     createEReference(procedureEClass, PROCEDURE__SUFFIX);
     createEAttribute(procedureEClass, PROCEDURE__TYPES);
@@ -1358,6 +1391,9 @@ public class GenPackageImpl extends EPackageImpl implements GenPackage
 
     initEClass(procedureEClass, Procedure.class, "Procedure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProcedure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProcedure_Expression(), ecorePackage.getEString(), "expression", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProcedure_Blockexp(), ecorePackage.getEString(), "blockexp", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProcedure_Annot(), ecorePackage.getEString(), "annot", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProcedure_Prefix(), this.getMultString(), null, "prefix", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProcedure_Suffix(), this.getMultString(), null, "suffix", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProcedure_Types(), ecorePackage.getEString(), "types", null, 0, -1, Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

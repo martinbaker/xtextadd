@@ -42,7 +42,7 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassTypeAccess().getAlternatives_2(), "rule__ClassType__Alternatives_2");
 					put(grammarAccess.getClassTypeAccess().getBlockingAlternatives_2_3_1_0(), "rule__ClassType__BlockingAlternatives_2_3_1_0");
 					put(grammarAccess.getProcedureAccess().getAlternatives_2(), "rule__Procedure__Alternatives_2");
-					put(grammarAccess.getProcedureAccess().getTypesAlternatives_2_2_1_0(), "rule__Procedure__TypesAlternatives_2_2_1_0");
+					put(grammarAccess.getProcedureAccess().getTypesAlternatives_2_4_1_0(), "rule__Procedure__TypesAlternatives_2_4_1_0");
 					put(grammarAccess.getPrecedenceAccess().getAlternatives(), "rule__Precedence__Alternatives");
 					put(grammarAccess.getSubPrecedenceAccess().getAlternatives(), "rule__SubPrecedence__Alternatives");
 					put(grammarAccess.getInnerPrecedenceAccess().getAlternatives(), "rule__InnerPrecedence__Alternatives");
@@ -60,6 +60,8 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProcedureAccess().getGroup_2_0(), "rule__Procedure__Group_2_0__0");
 					put(grammarAccess.getProcedureAccess().getGroup_2_1(), "rule__Procedure__Group_2_1__0");
 					put(grammarAccess.getProcedureAccess().getGroup_2_2(), "rule__Procedure__Group_2_2__0");
+					put(grammarAccess.getProcedureAccess().getGroup_2_3(), "rule__Procedure__Group_2_3__0");
+					put(grammarAccess.getProcedureAccess().getGroup_2_4(), "rule__Procedure__Group_2_4__0");
 					put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
 					put(grammarAccess.getPrecedenceAccess().getGroup_0(), "rule__Precedence__Group_0__0");
 					put(grammarAccess.getPrecedenceAccess().getGroup_0_2(), "rule__Precedence__Group_0_2__0");
@@ -160,9 +162,12 @@ public class GenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassTypeAccess().getSuffixAssignment_2_2_1(), "rule__ClassType__SuffixAssignment_2_2_1");
 					put(grammarAccess.getClassTypeAccess().getBlockingAssignment_2_3_1(), "rule__ClassType__BlockingAssignment_2_3_1");
 					put(grammarAccess.getProcedureAccess().getNameAssignment_1(), "rule__Procedure__NameAssignment_1");
-					put(grammarAccess.getProcedureAccess().getPrefixAssignment_2_0_1(), "rule__Procedure__PrefixAssignment_2_0_1");
-					put(grammarAccess.getProcedureAccess().getSuffixAssignment_2_1_1(), "rule__Procedure__SuffixAssignment_2_1_1");
-					put(grammarAccess.getProcedureAccess().getTypesAssignment_2_2_1(), "rule__Procedure__TypesAssignment_2_2_1");
+					put(grammarAccess.getProcedureAccess().getExpressionAssignment_2_0_1(), "rule__Procedure__ExpressionAssignment_2_0_1");
+					put(grammarAccess.getProcedureAccess().getBlockexpAssignment_2_0_2(), "rule__Procedure__BlockexpAssignment_2_0_2");
+					put(grammarAccess.getProcedureAccess().getAnnotAssignment_2_1_1(), "rule__Procedure__AnnotAssignment_2_1_1");
+					put(grammarAccess.getProcedureAccess().getPrefixAssignment_2_2_1(), "rule__Procedure__PrefixAssignment_2_2_1");
+					put(grammarAccess.getProcedureAccess().getSuffixAssignment_2_3_1(), "rule__Procedure__SuffixAssignment_2_3_1");
+					put(grammarAccess.getProcedureAccess().getTypesAssignment_2_4_1(), "rule__Procedure__TypesAssignment_2_4_1");
 					put(grammarAccess.getExpressionAccess().getNameAssignment_1(), "rule__Expression__NameAssignment_1");
 					put(grammarAccess.getExpressionAccess().getPrecAssignment_2(), "rule__Expression__PrecAssignment_2");
 					put(grammarAccess.getPrecedenceAccess().getRuletypAssignment_0_0(), "rule__Precedence__RuletypAssignment_0_0");

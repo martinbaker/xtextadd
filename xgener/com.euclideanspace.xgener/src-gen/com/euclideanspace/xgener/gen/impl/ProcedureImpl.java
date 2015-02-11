@@ -31,6 +31,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getBlockexp <em>Blockexp</em>}</li>
+ *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getAnnot <em>Annot</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getSuffix <em>Suffix</em>}</li>
  *   <li>{@link com.euclideanspace.xgener.gen.impl.ProcedureImpl#getTypes <em>Types</em>}</li>
@@ -60,6 +63,36 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> expression;
+
+  /**
+   * The cached value of the '{@link #getBlockexp() <em>Blockexp</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBlockexp()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> blockexp;
+
+  /**
+   * The cached value of the '{@link #getAnnot() <em>Annot</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAnnot()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> annot;
 
   /**
    * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' containment reference list.
@@ -140,6 +173,48 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getExpression()
+  {
+    if (expression == null)
+    {
+      expression = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__EXPRESSION);
+    }
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getBlockexp()
+  {
+    if (blockexp == null)
+    {
+      blockexp = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__BLOCKEXP);
+    }
+    return blockexp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getAnnot()
+  {
+    if (annot == null)
+    {
+      annot = new EDataTypeEList<String>(String.class, this, GenPackage.PROCEDURE__ANNOT);
+    }
+    return annot;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<MultString> getPrefix()
   {
     if (prefix == null)
@@ -207,6 +282,12 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
     {
       case GenPackage.PROCEDURE__NAME:
         return getName();
+      case GenPackage.PROCEDURE__EXPRESSION:
+        return getExpression();
+      case GenPackage.PROCEDURE__BLOCKEXP:
+        return getBlockexp();
+      case GenPackage.PROCEDURE__ANNOT:
+        return getAnnot();
       case GenPackage.PROCEDURE__PREFIX:
         return getPrefix();
       case GenPackage.PROCEDURE__SUFFIX:
@@ -230,6 +311,18 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
     {
       case GenPackage.PROCEDURE__NAME:
         setName((String)newValue);
+        return;
+      case GenPackage.PROCEDURE__EXPRESSION:
+        getExpression().clear();
+        getExpression().addAll((Collection<? extends String>)newValue);
+        return;
+      case GenPackage.PROCEDURE__BLOCKEXP:
+        getBlockexp().clear();
+        getBlockexp().addAll((Collection<? extends String>)newValue);
+        return;
+      case GenPackage.PROCEDURE__ANNOT:
+        getAnnot().clear();
+        getAnnot().addAll((Collection<? extends String>)newValue);
         return;
       case GenPackage.PROCEDURE__PREFIX:
         getPrefix().clear();
@@ -260,6 +353,15 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
       case GenPackage.PROCEDURE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case GenPackage.PROCEDURE__EXPRESSION:
+        getExpression().clear();
+        return;
+      case GenPackage.PROCEDURE__BLOCKEXP:
+        getBlockexp().clear();
+        return;
+      case GenPackage.PROCEDURE__ANNOT:
+        getAnnot().clear();
+        return;
       case GenPackage.PROCEDURE__PREFIX:
         getPrefix().clear();
         return;
@@ -285,6 +387,12 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
     {
       case GenPackage.PROCEDURE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GenPackage.PROCEDURE__EXPRESSION:
+        return expression != null && !expression.isEmpty();
+      case GenPackage.PROCEDURE__BLOCKEXP:
+        return blockexp != null && !blockexp.isEmpty();
+      case GenPackage.PROCEDURE__ANNOT:
+        return annot != null && !annot.isEmpty();
       case GenPackage.PROCEDURE__PREFIX:
         return prefix != null && !prefix.isEmpty();
       case GenPackage.PROCEDURE__SUFFIX:
@@ -308,6 +416,12 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", expression: ");
+    result.append(expression);
+    result.append(", blockexp: ");
+    result.append(blockexp);
+    result.append(", annot: ");
+    result.append(annot);
     result.append(", types: ");
     result.append(types);
     result.append(')');

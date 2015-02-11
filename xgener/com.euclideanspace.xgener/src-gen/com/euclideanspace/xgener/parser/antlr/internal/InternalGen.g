@@ -460,117 +460,181 @@ ruleProcedure returns [EObject current=null]
 	    }
 
 )
-)((	otherlv_2='PREFIX' 
+)((	otherlv_2='GENERMEMBER' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getProcedureAccess().getPREFIXKeyword_2_0_0());
+    	newLeafNode(otherlv_2, grammarAccess.getProcedureAccess().getGENERMEMBERKeyword_2_0_0());
+    }
+(
+(
+		lv_expression_3_0=RULE_ID
+		{
+			newLeafNode(lv_expression_3_0, grammarAccess.getProcedureAccess().getExpressionIDTerminalRuleCall_2_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcedureRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"expression",
+        		lv_expression_3_0, 
+        		"ID");
+	    }
+
+)
+)(
+(
+		lv_blockexp_4_0=RULE_ID
+		{
+			newLeafNode(lv_blockexp_4_0, grammarAccess.getProcedureAccess().getBlockexpIDTerminalRuleCall_2_0_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcedureRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"blockexp",
+        		lv_blockexp_4_0, 
+        		"ID");
+	    }
+
+)
+))
+    |(	otherlv_5='GENERPARAM' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getProcedureAccess().getGENERPARAMKeyword_2_1_0());
+    }
+(
+(
+		lv_annot_6_0=RULE_ID
+		{
+			newLeafNode(lv_annot_6_0, grammarAccess.getProcedureAccess().getAnnotIDTerminalRuleCall_2_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcedureRule());
+	        }
+       		addWithLastConsumed(
+       			$current, 
+       			"annot",
+        		lv_annot_6_0, 
+        		"ID");
+	    }
+
+)
+))
+    |(	otherlv_7='PREFIX' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getProcedureAccess().getPREFIXKeyword_2_2_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getProcedureAccess().getPrefixMultStringParserRuleCall_2_0_1_0()); 
+	        newCompositeNode(grammarAccess.getProcedureAccess().getPrefixMultStringParserRuleCall_2_2_1_0()); 
 	    }
-		lv_prefix_3_0=ruleMultString		{
+		lv_prefix_8_0=ruleMultString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getProcedureRule());
 	        }
        		add(
        			$current, 
        			"prefix",
-        		lv_prefix_3_0, 
+        		lv_prefix_8_0, 
         		"MultString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 ))
-    |(	otherlv_4='SUFFIX' 
+    |(	otherlv_9='SUFFIX' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getProcedureAccess().getSUFFIXKeyword_2_1_0());
+    	newLeafNode(otherlv_9, grammarAccess.getProcedureAccess().getSUFFIXKeyword_2_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getProcedureAccess().getSuffixMultStringParserRuleCall_2_1_1_0()); 
+	        newCompositeNode(grammarAccess.getProcedureAccess().getSuffixMultStringParserRuleCall_2_3_1_0()); 
 	    }
-		lv_suffix_5_0=ruleMultString		{
+		lv_suffix_10_0=ruleMultString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getProcedureRule());
 	        }
        		add(
        			$current, 
        			"suffix",
-        		lv_suffix_5_0, 
+        		lv_suffix_10_0, 
         		"MultString");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 ))
-    |(	otherlv_6='TYPES' 
+    |(	otherlv_11='TYPES' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getProcedureAccess().getTYPESKeyword_2_2_0());
+    	newLeafNode(otherlv_11, grammarAccess.getProcedureAccess().getTYPESKeyword_2_4_0());
     }
 (
 (
 (
-		lv_types_7_1=	'COLONSEPERATED' 
+		lv_types_12_1=	'COLONSEPERATED' 
     {
-        newLeafNode(lv_types_7_1, grammarAccess.getProcedureAccess().getTypesCOLONSEPERATEDKeyword_2_2_1_0_0());
+        newLeafNode(lv_types_12_1, grammarAccess.getProcedureAccess().getTypesCOLONSEPERATEDKeyword_2_4_1_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcedureRule());
 	        }
-       		addWithLastConsumed($current, "types", lv_types_7_1, null);
+       		addWithLastConsumed($current, "types", lv_types_12_1, null);
 	    }
 
-    |		lv_types_7_2=	'SPACESEPERATED' 
+    |		lv_types_12_2=	'SPACESEPERATED' 
     {
-        newLeafNode(lv_types_7_2, grammarAccess.getProcedureAccess().getTypesSPACESEPERATEDKeyword_2_2_1_0_1());
+        newLeafNode(lv_types_12_2, grammarAccess.getProcedureAccess().getTypesSPACESEPERATEDKeyword_2_4_1_0_1());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcedureRule());
 	        }
-       		addWithLastConsumed($current, "types", lv_types_7_2, null);
+       		addWithLastConsumed($current, "types", lv_types_12_2, null);
 	    }
 
-    |		lv_types_7_3=	'INHEADER' 
+    |		lv_types_12_3=	'INHEADER' 
     {
-        newLeafNode(lv_types_7_3, grammarAccess.getProcedureAccess().getTypesINHEADERKeyword_2_2_1_0_2());
+        newLeafNode(lv_types_12_3, grammarAccess.getProcedureAccess().getTypesINHEADERKeyword_2_4_1_0_2());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcedureRule());
 	        }
-       		addWithLastConsumed($current, "types", lv_types_7_3, null);
+       		addWithLastConsumed($current, "types", lv_types_12_3, null);
 	    }
 
-    |		lv_types_7_4=	'INFERRED' 
+    |		lv_types_12_4=	'INFERRED' 
     {
-        newLeafNode(lv_types_7_4, grammarAccess.getProcedureAccess().getTypesINFERREDKeyword_2_2_1_0_3());
+        newLeafNode(lv_types_12_4, grammarAccess.getProcedureAccess().getTypesINFERREDKeyword_2_4_1_0_3());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcedureRule());
 	        }
-       		addWithLastConsumed($current, "types", lv_types_7_4, null);
+       		addWithLastConsumed($current, "types", lv_types_12_4, null);
 	    }
 
-    |		lv_types_7_5=	'UNTYPED' 
+    |		lv_types_12_5=	'UNTYPED' 
     {
-        newLeafNode(lv_types_7_5, grammarAccess.getProcedureAccess().getTypesUNTYPEDKeyword_2_2_1_0_4());
+        newLeafNode(lv_types_12_5, grammarAccess.getProcedureAccess().getTypesUNTYPEDKeyword_2_4_1_0_4());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcedureRule());
 	        }
-       		addWithLastConsumed($current, "types", lv_types_7_5, null);
+       		addWithLastConsumed($current, "types", lv_types_12_5, null);
 	    }
 
 )
